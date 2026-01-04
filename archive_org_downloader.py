@@ -6,6 +6,7 @@ Downloads and organizes content from Internet Archive for game development
 import os
 import requests
 import json
+import time
 from pathlib import Path
 from typing import List, Dict, Optional
 import argparse
@@ -19,9 +20,14 @@ class ArchiveOrgDownloader:
     METADATA_API = f"{BASE_URL}/metadata"
     DOWNLOAD_API = f"{BASE_URL}/download"
     
-    def __init__(self, output_dir: str = "archive_downloads"):
+    def __init__(self, output_dir: str = "archive_downloads", polite_delay: float = 1.0):
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
+        self.polite_delay = polite_delay  # Delay between requests in seconds
+        self.session = requests.Session()
+        self.session.headers.update({
+            'User-Agent': 'GameDevDataPipeline/1.0 (Educational/Research; +https://github.com/zagarth/main)'
+        })
     
     def search_collection(self, query: str, collection: Optional[str] = None, 
                          mediatype: Optional[str] = None, max_results: int = 100) -> List[Dict]:
@@ -46,8 +52,9 @@ class ArchiveOrgDownloader:
         
         print(f"Searching: {params['q']}")
         
-        response = requests.get(self.SEARCH_API, params=params)
+        response = self.session.get(self.SEARCH_API, params=params)
         response.raise_for_status()
+        time.sleep(self.polite_delay)  # Be polite
         
         data = response.json()
         docs = data.get('response', {}).get('docs', [])
@@ -58,8 +65,9 @@ class ArchiveOrgDownloader:
     def get_item_metadata(self, identifier: str) -> Dict:
         """Get detailed metadata for an item"""
         url = f"{self.METADATA_API}/{identifier}"
-        response = requests.get(url)
+        response = self.session.get(url)
         response.raise_for_status()
+        time.sleep(self.polite_delay)  # Be polite
         return response.json()
     
     def get_item_files(self, identifier: str) -> List[Dict]:
@@ -80,7 +88,7 @@ class ArchiveOrgDownloader:
         
         url = f"{self.DOWNLOAD_API}/{identifier}/{quote(filename)}"
         print(f"Downloading: {filename}")
-        
+        self.session
         response = requests.get(url, stream=True)
         response.raise_for_status()
         
@@ -96,6 +104,7 @@ class ArchiveOrgDownloader:
                         percent = downloaded / total * 100
                         print(f"\r  Progress: {percent:.1f}%", end="")
         
+        time.sleep(self.polite_delay)  # Be polite between downloads
         print(f"\n  Saved: {output_path}")
     
     def download_item(self, identifier: str, file_formats: Optional[List[str]] = None,
@@ -170,8 +179,9 @@ def print_menu():
     print("│ 1. Browse Popular Collections           │")
     print("│ 2. Search by Keyword                    │")
     print("│ 3. Search Specific Collection           │")
-    print("│ 4. Advanced Search                      │")
-    print("│ 5. Exit                                 │")
+    print("│ 4. Bulk Download Entire Collection      │")
+    print("│ 5. Advanced Search                      │")
+    print("│ 6. Exit                                 │")
     print("└─────────────────────────────────────────┘")
 
 
@@ -262,40 +272,48 @@ def get_search_params():
     }
 
 
-def display_results(results: List[Dict]):
+def display_results(results: List[Dict], show_full: bool = False):
     """Display search results in elegant format"""
     print("\n" + "="*70)
-    print(f"  FOUND {len(results)} ITEMS")
+    print(f"  FOUND {len(results)} ITEMS - Starting download...")
     print("="*70)
     
-    for i, item in enumerate(results, 1):
-        title = item.get('title', 'Unknown')[:55]
-        item_id = item.get('identifier', 'unknown')
-        mediatype = item.get('mediatype', 'unknown')
-        
-        print(f"\n┌─ [{i}] {title}")
-        print(f"│  🆔 {item_id}")
-        print(f"│  📁 {mediatype}")
-        
-        if 'description' in item:
-            desc = item['description']
-            if isinstance(desc, str):
-                desc = desc[:100] + "..." if len(desc) > 100 else desc
-                print(f"│  📝 {desc}")
-        
-        print("└" + "─"*68)
+    if show_full:
+        for i, item in enumerate(results, 1):
+            title = item.get('title', 'Unknown')[:55]
+            item_id = item.get('identifier', 'unknown')
+            mediatype = item.get('mediatype', 'unknown')
+            
+            print(f"\n┌─ [{i}] {title}")
+            print(f"│  🆔 {item_id}")
+            print(f"│  📁 {mediatype}")
+            
+            if 'description' in item:
+                desc = item['description']
+                if isinstance(desc, str):
+                    desc = desc[:100] + "..." if len(desc) > 100 else desc
+                    print(f"│  📝 {desc}")
+            
+            print("└" + "─"*68)
+    else:
+        # Just show titles in compact format
+        for i, item in enumerate(results, 1):
+            title = item.get('title', 'Unknown')[:60]
+            print(f"  [{i}] {title}")
     
     print()
 
 
-def confirm_download(count: int) -> bool:
-    """Elegant download confirmation"""
-    print("\n" + "─"*70)
-    print(f"  ⬇️  Ready to download {count} items")
-    print("─"*70)
+def confirm_collection_download(query: str, collection: str, count: int) -> bool:
+    """Single confirmation for entire collection download"""
+    print("\n" + "="*70)
+    print(f"  📦 COLLECTION: {collection or 'General'}")
+    print(f"  🔍 QUERY: {query}")
+    print(f"  📊 ITEMS: {count}")
+    print("="*70)
     
     while True:
-        response = input("\n  Proceed with download? (y/n): ").strip().lower()
+        response = input("\n  Download this entire collection? (y/n): ").strip().lower()
         if response in ['y', 'yes']:
             return True
         elif response in ['n', 'no']:
@@ -314,9 +332,9 @@ def interactive_mode():
     
     while True:
         print_menu()
-        choice = input("\n➤ Select option (1-5): ").strip()
+        choice = input("\n➤ Select option (1-6): ").strip()
         
-        if choice == '5':
+        if choice == '6':
             print("\n✨ Thank you for using Archive.org Downloader!\n")
             break
         
@@ -348,8 +366,8 @@ def interactive_mode():
             results = downloader.search_collection(query, collection=collection_id, max_results=max_results)
             
             if results:
-                display_results(results)
-                if confirm_download(len(results)):
+                if confirm_collection_download(query, collection_id, len(results)):
+                    display_results(results, show_full=False)
                     downloader.download_collection_items(query, collection=collection_id, max_items=len(results))
                     print("\n✅ Download complete!")
             else:
@@ -368,8 +386,8 @@ def interactive_mode():
             )
             
             if results:
-                display_results(results)
-                if confirm_download(len(results)):
+                if confirm_collection_download(params['query'], params.get('mediatype', 'All'), len(results)):
+                    display_results(results, show_full=False)
                     downloader.download_collection_items(
                         params['query'],
                         mediatype=params['mediatype'],
@@ -395,8 +413,8 @@ def interactive_mode():
             )
             
             if results:
-                display_results(results)
-                if confirm_download(len(results)):
+                if confirm_collection_download(params['query'], collection, len(results)):
+                    display_results(results, show_full=False)
                     downloader.download_collection_items(
                         params['query'],
                         collection=collection,
@@ -409,14 +427,62 @@ def interactive_mode():
                 print("\n❌ No results found!")
         
         elif choice == '4':
+            # Bulk download entire collection
+            print("\n" + "="*70)
+            print("  📦 BULK COLLECTION DOWNLOAD")
+            print("="*70)
+            
+            collections_dict = show_collections()
+            coll_choice = input("\n➤ Select collection (0-12): ").strip()
+            
+            if coll_choice == '0':
+                continue
+            
+            # Find collection
+            collection_id = None
+            for category, items in collections_dict.items():
+                if coll_choice in items:
+                    collection_id = items[coll_choice][0]
+                    break
+            
+            if not collection_id:
+                print("❌ Invalid selection!")
+                continue
+            
+            max_items = input("\n📊 Maximum items to download (or 'all' for everything): ").strip()
+            if max_items.lower() == 'all':
+                max_items = 10000  # Large number
+            else:
+                max_items = int(max_items) if max_items.isdigit() else 1000
+            
+            print("\n📄 File formats (optional, press Enter for all):")
+            print("  Examples: pdf txt epub mp3 jpg png")
+            formats_input = input("Formats (space-separated): ").strip()
+            formats = formats_input.split() if formats_input else None
+            
+            print(f"\n⚠️  This will download up to {max_items} items from '{collection_id}'")
+            if input("Continue? (y/n): ").strip().lower() == 'y':
+                print("\n🔍 Scanning collection...")
+                results = downloader.search_collection('*', collection=collection_id, max_results=max_items)
+                
+                if results:
+                    print(f"\n✅ Found {len(results)} items in collection")
+                    if confirm_collection_download('*', collection_id, len(results)):
+                        downloader.download_collection_items('*', collection=collection_id, 
+                                                            max_items=len(results), file_formats=formats)
+                        print("\n✅ Bulk download complete!")
+                else:
+                    print("\n❌ No items found in collection!")
+        
+        elif choice == '5':
             # Advanced search
             print("\n🔧 Advanced Search - Manual Query")
             query = input("Full query string: ").strip()
             if query:
                 results = downloader.search_collection(query, max_results=50)
                 if results:
-                    display_results(results)
-                    if confirm_download(len(results)):
+                    if confirm_collection_download(query, 'Advanced', len(results)):
+                        display_results(results, show_full=False)
                         downloader.download_collection_items(query, max_items=len(results))
                         print("\n✅ Download complete!")
         
@@ -458,9 +524,10 @@ def main():
         return
     
     downloader.save_search_results(results)
-    display_results(results)
+    display_results(results, show_full=True)
     
-    if confirm_download(len(results)):
+    if confirm_collection_download(args.query, args.collection or 'General', len(results)):
+        print("\nStarting download...")
         downloader.download_collection_items(
             args.query,
             args.collection,
