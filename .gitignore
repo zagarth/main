@@ -39,3 +39,41 @@ desktop.ini
 # Test files
 test_*.py
 *_test.py
+
+# ESP32 Projects
+ESP32_1.75_inch/
+ESP32_Control_Center/
+ESP32_Demo/
+ESP32_IDF_Project/
+S3/
+esp32_menu_projectold/
+BINmedia/
+
+# ESP32 Build artifacts and binaries
+*.bin
+*.elf
+*.map
+
+# Project files
+cockblock.code-workspace
+workspace.code-workspace
+
+# Python scripts (ESP32 tools)
+convert_to_bin.py
+correct_pins_qspi.py
+display_test_v2.py
+display_test.py
+menu_system.py
+menu_with_touch.py
+pin_finder.py
+pin_mode_image_uploader.py
+
+# Media/Assets
+*.gif
+pika_fixed_*.bin
+pika_fixed_info.txt
+
+# Documentation
+micropython_page.html
+resume.txt
+schematic.pdf
