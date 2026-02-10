@@ -10,6 +10,95 @@ Transform public domain content (Wikipedia, Archive.org) into game-ready data fo
 - **In-Game Encyclopedia** - Searchable content database
 - **Procedural Generation** - Names, descriptions, lore
 
+## 🎨 ESP32 Image Tools
+
+### Pin Mode Image Uploader
+**File:** `pin_mode_image_uploader.py`  
+**Location:** `E:\Scratch\Home_workspace\`
+
+GUI tool for converting PNG images to RGB565 binary format for ESP32 displays.
+
+**Features:**
+- Drag & drop or file browser interface
+- Real-time preview with zoom controls
+- Automatic aspect ratio preservation
+- Transparency handling (composite on black/white background)
+- RGB565 format with big-endian byte order
+- Direct serial upload to ESP32 device
+- Support for 256x256 pixel images (128 KB output)
+
+**Color Format for C Arrays:**
+```python
+# RGB565 format: 5 bits Red, 6 bits Green, 5 bits Blue
+r5 = (r >> 3) & 0x1F  # 8-bit to 5-bit
+g6 = (g >> 2) & 0x3F  # 8-bit to 6-bit
+b5 = (b >> 3) & 0x1F  # 8-bit to 5-bit
+
+# Pack as RGB565 (big-endian for C arrays)
+rgb565 = (r5 << 11) | (g6 << 5) | b5
+bytes = struct.pack('>H', rgb565)  # Big-endian 16-bit
+```
+
+```powershell
+python pin_mode_image_uploader.py
+```
+
+### GIF Animation Converter (GUI)
+**File:** `gif_converter_gui.py`  
+**Location:** `E:\Scratch\Home_workspace\ESP32_IDF_Project\`
+
+GUI tool for converting animated GIFs to sequential RGB565 binary frames for ESP32 animated displays.
+
+**Features:**
+- Browse and select GIF files
+- Preview animation with frame-by-frame controls
+- Play/pause animation preview
+- Automatic frame extraction (all frames)
+- Aspect ratio preservation and centering
+- Transparency handling (composite on black background)
+- RGB565 format (BGR565 byte order for ESP32)
+- Batch conversion with progress tracking
+- Creates info file with frame timing data
+- Output: `prefix_000.bin`, `prefix_001.bin`, etc. (128 KB per frame)
+
+**Color Format for Binary Files (ESP32 Display):**
+```python
+# RGB565 format: 5 bits Red, 6 bits Green, 5 bits Blue
+r5 = (r >> 3) & 0x1F  # 8-bit to 5-bit
+g6 = (g >> 2) & 0x3F  # 8-bit to 6-bit
+b5 = (b >> 3) & 0x1F  # 8-bit to 5-bit
+
+# Pack as BGR565 (little-endian for ESP32 display controller)
+rgb565 = (b5 << 11) | (g6 << 5) | r5  # BGR order
+bytes = struct.pack('<H', rgb565)  # Little-endian 16-bit
+**Color Format:** Same as GUI version (BGR565 little-endian for ESP32)
+
+```powershell
+python ESP32_IDF_Project\convert_gif_to_bin.py animation.gif output_prefix
+# Creates: output_prefix_000.bin, output_prefix_001.bin, etc.
+```
+
+---
+
+**📝 Color Format Summary:**
+| Tool | Format | Byte Order | Use Case |
+|------|--------|------------|----------|
+| pin_mode_image_uploader.py | RGB565 | Big-endian ('>H') | C arrays, static images |
+| gif_converter_gui.py | BGR565 | Little-endian ('<H') | Binary files, ESP32 display |
+| convert_gif_to_bin.py | BGR565 | Little-endian ('<H') | Binary files, ESP32 display |hon ESP32_IDF_Project\gif_converter_gui.py
+```
+
+### GIF Animation Converter (CLI)
+**File:** `convert_gif_to_bin.py`  
+**Location:** `E:\Scratch\Home_workspace\ESP32_IDF_Project\`
+
+Command-line tool for converting GIF animations to RGB565 frames.
+
+```powershell
+python ESP32_IDF_Project\convert_gif_to_bin.py animation.gif output_prefix
+# Creates: output_prefix_000.bin, output_prefix_001.bin, etc.
+```
+
 ## 📦 Tools
 
 ### 1. Wikipedia Dump Processor

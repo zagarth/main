@@ -1,0 +1,39 @@
+dependencies:
+  chmorgan/esp-audio-player:
+    component_hash: null
+    source:
+      path: E:\Scratch\Home_workspace\ESP32_IDF_Project\components\chmorgan__esp-audio-player
+      type: local
+    version: 1.0.7
+  chmorgan/esp-libhelix-mp3:
+    component_hash: null
+    source:
+      path: E:\Scratch\Home_workspace\ESP32_IDF_Project\components\chmorgan__esp-libhelix-mp3
+      type: local
+    version: 1.0.3
+  espressif/esp-dsp:
+    component_hash: null
+    source:
+      path: E:\Scratch\Home_workspace\ESP32_IDF_Project\components\espressif__esp-dsp
+      type: local
+    version: 1.4.12
+  espressif/esp-sr:
+    component_hash: null
+    source:
+      path: E:\Scratch\Home_workspace\ESP32_IDF_Project\components\espressif__esp-sr
+      type: local
+    version: 1.9.4
+  idf:
+    component_hash: null
+    source:
+      type: idf
+    version: 5.3.0
+  lvgl/lvgl:
+    component_hash: null
+    source:
+      path: E:\Scratch\Home_workspace\ESP32_IDF_Project\components\lvgl__lvgl
+      type: local
+    version: 8.3.11
+manifest_hash: 1dc2db61e1063d4a87280a732eec60f6cf4c10f1994514be4ffca382cf609d51
+target: esp32s3
+version: 1.0.0

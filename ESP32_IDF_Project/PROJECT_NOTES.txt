@@ -1,0 +1,767 @@
+
+================================================================================
+ESP32-S3 QSPI DISPLAY PROJECT - SYSTEM NOTES & SPECIFICATIONS
+================================================================================
+Last Updated: January 31, 2026
+
+================================================================================
+HARDWARE SPECIFICATIONS
+================================================================================
+
+Microcontroller:
+- Model: ESP32-S3-DevKitC-1
+- CPU: Dual-core Xtensa LX7 @ 240MHz
+- RAM: 320KB SRAM (35.6% used = ~114KB)
+- Flash: 8MB (19.1% used = ~1.6MB)
+- PSRAM: 16MB external SPIRAM
+
+Display:
+- Controller: SPD2010
+- Resolution: 412x412 pixels
+- Interface: QSPI (Quad-SPI)
+- Clock Speed: 30MHz
+- Transfer Size: 4120 bytes (5-line strips)
+- Color Format: RGB565
+
+Audio Hardware:
+- Microphone: I2S_NUM_1 (I2S RX)
+- Sample Rate: 16kHz
+- Bit Depth: 16-bit PCM
+- Format: WAV with proper header
+
+Storage:
+- SD Card: FAT filesystem
+- Voice memos stored at: /sdcard/voice_memos/
+- Filename format: voice_YYYYMMDD_HHMMSS.wav
+
+Wireless:
+- BLE: Bluetooth Low Energy (disabled at boot, on-demand)
+- WiFi: Available but not currently used
+- Classic Bluetooth: Not yet implemented (planned for A2DP audio)
+
+================================================================================
+SOFTWARE CONFIGURATION
+================================================================================
+
+Framework:
+- Platform: ESP-IDF v5.3.0
+- Build System: PlatformIO
+- RTOS: FreeRTOS
+
+Graphics Library:
+- LVGL: Version 8.x
+- Buffer Mode: Dual-buffer in SPIRAM
+- Buffer Size: 412 * 412 / 20 = 8,483 pixels per buffer
+- Render Delay: 5ms per lv_timer_handler() loop
+
+Key Components:
+- Custom_Menu.c: Main UI system (1,112 lines)
+  - 3-button main menu (Brightness, System Info, Voice Memo)
+  - Temperature display in System Info
+  - Bluetooth button in System Info (BLE on-demand)
+  - Voice memo recording with scrollable list
+  
+- Display_SPD2010.c: Display driver
+  - QSPI communication
+  - 5-line strip clearing (with 1ms delays)
+  - Display on/off control function
+  
+- Wireless.c: Connectivity
+  - BLE_Init task commented out (lines 27-35)
+  - BLE loads on-demand only (prevents display interference)
+  
+- Voice_Recorder.c: Audio recording
+  - I2S microphone input
+  - WAV file generation with proper headers
+  - Filename with timestamp
+
+Memory Usage:
+- Total RAM: 320KB
+- Used RAM: 114KB (35.6%)
+- Free RAM: ~206KB
+- Flash Used: 1.6MB / 8MB (19.1%)
+
+================================================================================
+USER INTERFACE STRUCTURE
+================================================================================
+
+Main Menu (3 Buttons):
+1. Brightness Control
+   - Slider for backlight adjustment (0-100%)
+   - Always On mode
+   - 30-second timeout mode
+   
+2. System Info
+   - Battery level (animated ring indicator)
+   - Temperature reading
+   - SD card size
+   - Bluetooth button (starts BLE on-demand)
+   
+3. Voice Memo
+   - Record button (starts/stops recording)
+   - Recording status indicator (green/red)
+   - Timer display (MM:SS format)
+   - Scrollable list of recordings (370x140px)
+   - List positioned at TOP_MID, y=185
+
+All Screens:
+- Back button returns to main menu
+- Consistent color scheme (dark theme)
+- Battery ring indicator updates every 5 seconds
+
+================================================================================
+CRITICAL FIXES & SOLUTIONS
+================================================================================
+
+Issue #1: Display Artifacts (SOLVED)
+- Problem: Horizontal black lines and distortion across display
+- Symptom: Appeared after adding Bluetooth functionality
+- Root Cause: BLE_Init task at boot interfering with QSPI display timing
+- Solution: Disabled BLE auto-initialization in Wireless.c
+  * Commented out xTaskCreatePinnedToCore(BLE_Init, ...) at lines 27-35
+  * BLE now loads on-demand when Bluetooth button pressed
+- Result: Display boots cleanly, no artifacts
+- RAM Saved: 1,284 bytes (36.0% → 35.6%)
+- Flash Saved: 89KB (20.2% → 19.1%)
+
+Issue #2: Voice Memo List Memory Leak (SOLVED)
+- Problem: Display artifacts appearing during voice memo screen use
+- Root Cause: refresh_voice_list() not freeing malloc'd user_data strings
+- Solution: Free all user_data before lv_obj_clean(list)
+- Location: Custom_Menu.c, refresh_voice_list() function
+
+Issue #3: Voice List Not Refreshing After Recording (SOLVED)
+- Problem: New recordings didn't appear in list until app restart
+- Solution: Call refresh_voice_list() directly after stopping recording
+- Location: Custom_Menu.c, stop recording callback
+
+Issue #4: Voice List Items Displaying in Wrong Location (SOLVED)
+- Problem: Recordings appeared "at end of page" instead of in list box
+- Root Cause: Using lv_obj_get_child(lv_scr_act(), -1) got Back button, not list
+- Solution: Store list pointer in static variable voice_memo_list
+  * Set when creating voice memo screen
+  * Use stored pointer when refreshing after recording
+  * Clear pointer when leaving screen
+- Location: Custom_Menu.c, lines ~25 (declaration), ~880 (usage), ~1090 (creation)
+
+================================================================================
+IMPORTANT CONSIDERATIONS
+================================================================================
+
+Display Timing:
+- QSPI display is sensitive to background task interference
+- Keep BLE/WiFi initialization separate from display init
+- Avoid running heavy tasks during display refresh
+- 5-line strip clearing with delays prevents buffer issues
+
+Memory Management:
+- Always free malloc'd memory in LVGL user_data
+- Call free() before lv_obj_clean() to prevent leaks
+- Static pointers must be cleared when screens change
+- SPIRAM used for LVGL buffers (slower but saves internal RAM)
+
+Audio System:
+- I2S_NUM_1 reserved for microphone
+- I2S_NUM_0 available for future speaker output
+- WAV files must have proper 44-byte header
+- Recording must stop cleanly to write final file size
+
+BLE/Bluetooth:
+- BLE stack disabled at boot (prevents display interference)
+- On-demand loading when Bluetooth button pressed
+- Classic Bluetooth not yet implemented
+- Future A2DP will require ~70-100KB additional RAM
+
+================================================================================
+PLANNED FEATURES (NOT YET IMPLEMENTED)
+================================================================================
+
+Bluetooth Audio Streaming (A2DP):
+- Conservative implementation: 22.05kHz mono
+- Voice memo playback only (no live streaming)
+- On-demand activation (Bluetooth off by default)
+- Reuse I2S channels (recording and playback shared)
+- Play button on voice memo list items
+- Route: SD card → SBC encoder → Bluetooth speaker
+- Estimated resources: ~70-100KB RAM, ~10-15% CPU
+
+Additional Considerations:
+- Classic Bluetooth required (not just BLE)
+- ESP-IDF has built-in A2DP source profile
+- Implementation time: ~2-3 hours
+
+================================================================================
+FILE STRUCTURE
+================================================================================
+
+ESP32_IDF_Project/
+├── platformio.ini           - PlatformIO configuration
+├── sdkconfig               - ESP-IDF SDK configuration
+├── PROJECT_NOTES.txt       - This file
+│
+├── src/
+│   ├── main.c              - Application entry point
+│   ├── Custom_Menu/
+│   │   └── Custom_Menu.c   - UI system (1,112 lines)
+│   ├── Display_Driver/
+│   │   └── Display_SPD2010.c - QSPI display driver
+│   ├── LVGL_Driver/
+│   │   ├── LVGL_Driver.c   - LVGL initialization
+│   │   └── LVGL_Driver.h   - Buffer configuration
+│   ├── Wireless/
+│   │   └── Wireless.c      - BLE/WiFi (BLE disabled at boot)
+│   └── Voice_Recorder/
+│       └── Voice_Recorder.c - Audio recording
+│
+└── include/
+    └── *.h                 - Header files
+
+================================================================================
+BUILD & UPLOAD COMMANDS
+================================================================================
+
+Compile Only:
+cd E:\Scratch\Home_workspace\ESP32_IDF_Project
+~/.platformio/penv/Scripts/platformio.exe run
+
+Build & Upload:
+cd E:\Scratch\Home_workspace\ESP32_IDF_Project
+~/.platformio/penv/Scripts/platformio.exe run --target upload
+
+Clean Build:
+cd E:\Scratch\Home_workspace\ESP32_IDF_Project
+~/.platformio/penv/Scripts/platformio.exe run --target clean
+
+Serial Monitor:
+cd E:\Scratch\Home_workspace\ESP32_IDF_Project
+~/.platformio/penv/Scripts/platformio.exe device monitor
+
+Upload Port: COM4
+Upload Speed: 921600 baud
+
+================================================================================
+DEBUGGING TIPS
+================================================================================
+
+Display Issues:
+- Check QSPI clock speed (30MHz max for stability)
+- Ensure no heavy tasks run during display init
+- Verify backlight control is clean (no rapid toggling)
+- Monitor for memory leaks in LVGL objects
+
+Memory Leaks:
+- Use ESP_LOGI to track allocations
+- Check user_data in LVGL objects is freed
+- Monitor heap with esp_get_free_heap_size()
+- Watch for increasing RAM usage over time
+
+Voice Recording:
+- Verify SD card is mounted before recording
+- Check I2S is not claimed by another task
+- Ensure WAV header is written correctly
+- Close file properly on stop (writes final size)
+
+BLE/Wireless:
+- Keep BLE disabled until needed
+- Don't initialize BLE during display setup
+- Monitor task priorities (BLE vs display)
+- Check for radio interference on QSPI bus
+
+================================================================================
+KNOWN WORKING CONFIGURATIONS
+================================================================================
+
+✓ Display: 30MHz QSPI, 5-line strips, 1ms delays
+✓ LVGL: /20 buffer divisor, 5ms render loop
+✓ BLE: On-demand only, not at boot
+✓ Voice Recording: 16kHz, 16-bit, mono WAV
+✓ Backlight: PWM control, always-on or 30s timeout
+✓ Battery: Animated ring, 5-second update interval
+
+================================================================================
+IMPORTANT CODE LOCATIONS
+================================================================================
+
+BLE Auto-Init Disabled:
+- File: src/Wireless/Wireless.c
+- Lines: 27-35
+- Code: xTaskCreatePinnedToCore(BLE_Init, ...) commented out
+
+Voice Memo List Pointer:
+- File: src/Custom_Menu/Custom_Menu.c
+- Declaration: Line ~25 (static lv_obj_t *voice_memo_list)
+- Set: Line ~1092 (voice_memo_list = lv_list_create)
+- Used: Line ~878 (refresh_voice_list(voice_memo_list))
+- Clear: Line ~1105 (voice_memo_list = NULL)
+
+LVGL Buffer Size:
+- File: include/LVGL_Driver/LVGL_Driver.h
+- Line: #define LVGL_BUF_LEN (412 * 412 / 20)
+
+Display Clear Routine:
+- File: src/Display_Driver/Display_SPD2010.c
+- Lines: 99-108
+- Method: 5-line strips with 1ms vTaskDelay between strips
+
+================================================================================
+FEATURE: PIN MODE (IMPLEMENTED - January 31, 2026)
+================================================================================
+
+Overview:
+- Boots to custom static image instead of menu system
+- Double-tap to access menu (1.5 second window)
+- Toggle on/off in settings
+- Smart battery ring visibility
+
+Implementation Details:
+
+Image Source:
+- Embedded as C array in flash memory (home_icon.c, 131KB)
+- Format: 256x256 RGB565, byte-swapped for ESP32 little-endian
+- Transparency: Composited onto black background
+- Zoom: 161% (412 scale factor) to fill 412x412 circular display
+- Script: convert_icon_to_c.py handles PNG → C array conversion
+
+User Interface:
+- Pin Mode settings button added to main menu (4th button, purple)
+- Settings screen shows 50% preview of icon
+- Toggle switch persists state to NVS (namespace: "storage", key: "pin_mode")
+- Debug label shows: "Embedded Icon: 256x256, State: ON/OFF"
+
+Touch Detection:
+- Image object set with LV_OBJ_FLAG_CLICKABLE
+- Event callback: home_image_tap_cb() handles LV_EVENT_CLICKED
+- Double-tap timing: 1500ms window using lv_tick_get()
+- Z-index: Image at 96, battery ring at 95 (prevents touch blocking)
+
+Double-Tap Logic:
+- First tap: Records timestamp in last_tap_time
+- Second tap within 1500ms: Triggers Custom_Menu_Init()
+- skip_pin_mode_once flag bypasses Pin Mode check after double-tap
+- Returns directly to menu buttons (doesn't reload Pin Mode image)
+
+Battery Ring Behavior:
+- Normal Menu: Always visible with voltage-based colors
+  * Green (> 4.0V): Full charge
+  * Yellow (3.7-4.0V): Getting low  
+  * Orange (3.4-3.7V): Low
+  * Red (< 3.4V): Critical
+  
+- Pin Mode: Conditional visibility
+  * Hidden when battery > 3.7V (good charge)
+  * Appears yellow/orange/red when battery drops below 3.7V
+  * Uses pin_mode_bat_timer_cb() with update_battery_ring_ex(true)
+
+Memory Management:
+- Battery timer properly deleted before creating new one (prevents leaks)
+- Separate timer callbacks for menu vs Pin Mode
+- Battery voltage logging: Only logs on 0.05V change (reduces spam)
+
+Build System:
+- home_icon.c added to src/CMakeLists.txt line 20 (parent overrides component)
+- Build: 1,747,532 bytes (20.8% flash), 116,836 bytes RAM (35.7%)
+
+Critical Code Locations:
+- home_image_tap_cb(): Custom_Menu.c lines 168-191
+- Pin Mode setup: Custom_Menu.c lines 223-289
+- Battery ring visibility: Custom_Menu.c update_battery_ring_ex() function
+- Pin Mode timer: Custom_Menu.c pin_mode_bat_timer_cb()
+- NVS persistence: Custom_Menu.c pin_mode_toggle_cb() lines 1240-1265
+- Image conversion: convert_icon_to_c.py (workspace root)
+
+Known Issues & Solutions:
+- Issue: Battery ring floating flag blocked touch events
+  Solution: Removed LV_OBJ_FLAG_FLOATING, used z-index instead
+  
+- Issue: Lambda callbacks don't work in C
+  Solution: Created proper callback functions (pin_mode_bat_timer_cb)
+  
+- Issue: Color format wrong (pink/blue instead of black/yellow)
+  Solution: Byte-swapped RGB565 in conversion script
+  
+- Issue: White background instead of transparency
+  Solution: Composite RGBA onto black using alpha mask
+  
+- Issue: Double-tap returned to Pin Mode image
+  Solution: Added skip_pin_mode_once flag to bypass check
+
+Testing Notes:
+- Double-tap detection confirmed working (318ms-1686ms tap intervals logged)
+- Battery ring hides properly in Pin Mode when charge > 3.7V
+- Battery ring shows correct colors (green at 4.15V)
+- NVS persistence works across reboots
+- Touch events properly reach callback (z-index fix successful)
+
+Future Enhancements:
+- Adjustable double-tap timing (slider in settings)
+- Multiple pin images (user-selectable)
+- Triple-tap or long-press for different actions
+- Haptic feedback on double-tap
+
+================================================================================
+FEATURE: SD CARD PIN MODE IMAGES (IMPLEMENTED - February 7, 2026)
+================================================================================
+
+Overview:
+- Pin Mode images can now load from SD card instead of just embedded flash
+- Dropdown selector to choose between Default (Embedded) and SD card images
+- Live preview updates when selecting different images
+- Persists selected image to NVS
+- Dramatically reduces flash usage (embedded icon removed after testing)
+
+Implementation Details:
+
+SD Card Image Format:
+- Format: Raw RGB565 binary data (no header)
+- Size: 256x256 pixels = 131,072 bytes (128KB per image)
+- Location: /sdcard/*.bin (any .bin file in root directory)
+- Byte Order: Little-endian (ESP32 native format)
+
+Image Loading System:
+- Function: load_pin_mode_image() in Custom_Menu.c
+- Priority: SD card first, fallback to embedded icon
+- Dynamic memory allocation using heap_caps_malloc(MALLOC_CAP_SPIRAM)
+- 128KB buffer allocated in SPIRAM (not internal RAM)
+- Proper cleanup: Free buffer when switching screens or rebooting
+
+Conversion Tool:
+- Script: convert_to_bin.py (workspace root)
+- Usage: python convert_to_bin.py input.png output.bin
+- Features:
+  * Automatic resize to 256x256
+  * Handles transparency (composites onto black)
+  * RGB565 conversion with proper byte order
+  * File size validation (must be exactly 131,072 bytes)
+
+Pin Mode Settings Screen:
+- Circular preview container (200x200px) showing selected image at 50% zoom
+- Dropdown menu lists all .bin files from SD card
+- "Default (Embedded)" option always available as fallback
+- Selected image persists to NVS (key: "pin_image", string value)
+- Live preview updates when dropdown selection changes
+
+File Scanning:
+- Scans /sdcard/*.bin at settings screen load
+- Maximum 20 images displayed in dropdown
+- Dropdown opens UPWARD (LV_DIR_TOP) to avoid covering back button
+- List height limited to 150px with scrolling
+
+Memory Management:
+- SD buffer: 131,072 bytes allocated in SPIRAM
+- Buffer freed on screen exit or reboot
+- using_sd_image flag tracks buffer state
+- Proper cleanup in Custom_Menu_Init() before loading new image
+
+NVS Persistence:
+- Key: "pin_image"
+- Type: String (up to 63 characters)
+- Default: "home_icon.bin" (embedded fallback name)
+- Loaded at boot before Pin Mode display
+
+Critical Code Locations:
+- load_pin_mode_image(): Custom_Menu.c lines 147-213
+- SD cleanup logic: Custom_Menu.c lines 395-402
+- Dropdown callback: dd_pin_image_cb() lines 1331-1381
+- Pin Mode settings screen: btn_pinmode_cb() lines 1520-1630
+- Image conversion script: convert_to_bin.py (workspace root)
+
+Build Impact:
+- Before (with embedded icon): 1,747,532 bytes flash (20.8%)
+- After (SD images only): 1,609,904 bytes flash (19.2%)
+- Flash savings: 137,628 bytes (~134KB)
+- RAM usage: Unchanged (SPIRAM buffer doesn't affect internal RAM)
+
+Known Issues & Solutions:
+- Issue: SD images displayed pink/blue colors
+  Solution: Match byte order in convert_to_bin.py to embedded icon format
+  
+- Issue: Memory leak when switching images
+  Solution: Free sd_image_buffer before allocating new one
+  
+- Issue: Preview not updating after dropdown selection
+  Solution: Reload selected image and update preview in callback
+  
+- Issue: Dropdown covering back button
+  Solution: Set LV_DIR_TOP and position at y=-65 (above back button)
+
+Testing Notes:
+- Multiple .bin files successfully listed in dropdown
+- Image switching works without reboot (live preview)
+- SD card fallback to embedded icon works when .bin file missing
+- Memory properly freed on screen transitions
+- NVS persistence confirmed across reboots
+
+Future Enhancements:
+- Image upload via WiFi/BLE file transfer
+- Animated GIF support (see GIF converter below)
+- Image metadata (name, size, date) in info file
+- Thumbnail preview in dropdown (32x32 icons)
+- Image rotation/brightness adjustment
+- Multiple image folders for organization
+
+================================================================================
+FEATURE: GIF ANIMATION SUPPORT (TOOLS READY - February 7, 2026)
+================================================================================
+
+Overview:
+- Tool created to convert animated GIFs to RGB565 frame sequences
+- Each frame becomes a separate .bin file
+- Timing information preserved for proper animation playback
+- Compatible with existing SD card image loading system
+
+Conversion Tool:
+- Script: convert_gif_to_bin.py
+- Usage: python convert_gif_to_bin.py input.gif output_prefix
+- Example: python convert_gif_to_bin.py animation.gif /sdcard/anim
+- Creates:
+  * anim_000.bin, anim_001.bin, anim_002.bin, ... (frame files)
+  * anim_info.txt (frame timing and metadata)
+
+Output Format:
+- Frame size: 256x256 pixels
+- Color format: RGB565 (16-bit)
+- File size: 128KB per frame (131,072 bytes)
+- Naming: Sequential with zero-padded numbers (000, 001, 002...)
+
+Info File Contents:
+- Total frame count
+- Frame dimensions and color format
+- Frame timing in milliseconds
+- List of all frame files created
+
+Features:
+- Automatically extracts all GIF frames
+- Handles transparency (composites onto black background)
+- Preserves original GIF frame timing/delays
+- Resizes frames to 256x256 automatically
+- Proper RGB565 little-endian byte order
+
+ESP32 Implementation (Planned):
+- Load frame sequence into array of lv_img_dsc_t
+- Use lv_timer for frame advancement
+- Read timing from info file or use fixed interval
+- Option to loop animation continuously
+- Pause/resume on user interaction
+
+Memory Considerations:
+- Each frame: 128KB in SPIRAM
+- Example: 10-frame animation = 1.28MB SPIRAM
+- Consider loading frames on-demand for longer animations
+- Keep max 2-3 frames in memory, stream rest from SD
+
+Animation Playback Strategies:
+1. Full preload: All frames in SPIRAM (best for short loops)
+2. Streaming: Load next frame while displaying current
+3. Ping-pong buffer: Two frame buffers, alternate loading
+
+Code Location:
+- Tool: convert_gif_to_bin.py (workspace root)
+- Documentation: README_GIF_CONVERTER.md
+
+Next Steps for Implementation:
+1. Create animation player module
+2. Add "Play Animation" option to Pin Mode settings
+3. Implement frame timer with configurable FPS
+4. Add animation controls (play/pause/stop)
+5. Support both static images and animations in Pin Mode
+
+================================================================================
+FEATURE: VOLUME MODE REMOVED (February 7, 2026)
+================================================================================
+
+Overview:
+- Volume/decibel monitoring mode removed after 5 hours of failed calibration
+- Attempted to create waveform visualization with 12 vertical bars
+- Fundamentally incompatible with hardware microphone characteristics
+
+Why It Failed:
+- Microphone produces RMS values in range of 400M-1.7B (millions/billions)
+- Simple threshold-based visualization didn't match audio characteristics
+- 15+ calibration iterations couldn't achieve working sensitivity
+- Serial monitor debugging revealed scale mismatch but fixing didn't help
+- Feature never displayed meaningful audio levels despite extensive tuning
+
+Code Removed:
+- MIC_Decibel.c/h files (272 lines) - orphaned, can be deleted
+- ~330 lines from Custom_Menu.c:
+  * 9 static variables (db_mode_enabled, db_timer, waveform_bars[], etc.)
+  * 5 forward declarations for decibel callbacks
+  * ~160 lines of callback functions and UI update logic
+  * ~85 lines of waveform display creation
+  * ~45 lines of NVS loading and initialization
+  * System menu toggles for "Decibel Monitor" and "95dB Warning"
+  * Mode priority enforcement logic
+  * Double-tap skip logic for decibel mode
+
+Compilation Impact:
+- Before removal: Compilation errors due to undefined references
+- After removal: Clean compile, no errors
+- Flash savings: ~50KB
+- RAM savings: ~10KB
+
+Lessons Learned:
+- Hardware testing needed before extensive UI development
+- Microphone sensitivity characteristics vary widely by model
+- Simple RMS calculations insufficient for audio visualization
+- Consider using existing audio analysis libraries for future audio features
+
+Remaining Audio Functionality:
+- Voice memo recording still works perfectly (I2S_NUM_1)
+- 16kHz, 16-bit PCM recording to WAV files
+- Audio playback capability available (not yet implemented)
+
+================================================================================
+STAGE 3: GOOGLE SPEECH-TO-TEXT INTEGRATION (February 8, 2026)
+================================================================================
+
+Current Status: 95% Complete - Infrastructure working, debugging 400 error
+
+Implementation Complete:
+----------------------
+✅ WiFi Connectivity:
+   - Real esp_wifi API implementation (no placeholder)
+   - Event handlers for WIFI_EVENT and IP_EVENT
+   - Successfully connects and gets DHCP IP (confirmed: 10.0.0.13)
+   - Enhanced logging for connection status and failures
+   - 10-second timeout with connection retry logic
+
+✅ Voice Recording System:
+   - 3-second audio capture via I2S microphone (I2S_NUM_1)
+   - 16kHz sample rate, 16-bit PCM, mono channel
+   - WAV format with proper 44-byte header
+   - Auto-stop timer at 3 seconds
+   - File size: ~92KB per recording
+   - Saves to SD card: /sdcard/maps_origin.wav or maps_destination.wav
+
+✅ Memory Optimizations:
+   - SD-based streaming base64 encoding (3KB chunks)
+   - heap_caps_malloc() for accessing 8MB SPIRAM
+   - Separate FreeRTOS task for HTTPS/TLS (16KB stack)
+   - Prevents stack overflow during SSL handshake
+   - Free heap maintained: ~8.3MB available during operations
+
+✅ API Security:
+   - XOR encryption with key "ESP32_SECURE_2026"
+   - 40-byte obfuscated array in maps_config.h
+   - decode_api_key() performs runtime decryption
+   - API key restricted to external IP address
+   - API restrictions: only enabled APIs allowed
+   - $0 budget with spending alerts
+   - 900 requests/month quota (30/day limit)
+
+✅ Base64 Encoding:
+   - Skips 44-byte WAV header correctly
+   - Encodes raw PCM audio data only
+   - Streams 3KB chunks to temp file: /sdcard/temp_audio.b64
+   - Output size: ~124KB base64 string
+   - Minimal RAM usage during encoding
+
+✅ HTTPS/TLS Stack:
+   - Endpoint: speech.googleapis.com/v1/speech:recognize
+   - POST request with JSON body
+   - Content-Type: application/json
+   - esp_crt_bundle_attach for certificate validation
+   - 10-second timeout for API calls
+
+✅ JSON Request Format:
+   {
+     "config": {
+       "encoding": "LINEAR16",
+       "sampleRateHertz": 16000,
+       "languageCode": "en-US"
+     },
+     "audio": {
+       "content": "<base64_encoded_audio>"
+     }
+   }
+
+Current Issue:
+-------------
+❌ HTTP 400 Bad Request from Google API
+   - API is enabled and receiving requests (403 resolved)
+   - Request format may have issue with:
+     * Audio encoding (LINEAR16 PCM)
+     * Sample rate (16000 Hz)
+     * Base64 encoding integrity
+     * JSON structure
+   - Added debug logging to capture Google's error response
+   - Next step: Upload firmware and read exact error message
+
+Google Cloud APIs Enabled (25 total):
+-------------------------------------
+Maps & Location Services:
+- Directions API
+- Distance Matrix API
+- Geolocation API
+- Maps Elevation API
+- Roads API
+- Routes API
+- Time Zone API
+
+Speech & AI:
+- Cloud Speech-to-Text API (primary for voice recognition)
+
+Environmental Data:
+- Air Quality API
+- Pollen API
+- Weather API
+
+Security:
+- reCAPTCHA Enterprise API
+
+Cloud Infrastructure:
+- BigQuery API
+- BigQuery Migration API
+- BigQuery Storage API
+- Cloud Datastore API
+- Cloud Logging API
+- Cloud Monitoring API
+- Cloud SQL Admin API
+- Cloud Storage API (JSON)
+- Cloud Trace API
+- Google Cloud APIs (general)
+- Service Management API
+- Service Usage API
+
+Security Configuration:
+----------------------
+API Key Protection:
+- XOR obfuscation prevents casual code inspection
+- IP address restriction (user's external IP only)
+- API restriction (only listed 25 APIs callable)
+- Keys never stored in plaintext
+
+Budget Protection:
+- $0 budget configured (blocks all charges)
+- Free tier limits: 60 minutes/month = 1,200 3-second requests
+- Quota limit: 900 requests/month (within free tier)
+- Budget alerts at $0.01 (unreachable in free tier)
+- Use case: 2 ESP32 badges × 15 queries/day = 900/month
+
+Compilation Stats:
+-----------------
+RAM: 36.4% (119,348 / 327,680 bytes)
+Flash: 23.5% (1,975,384 / 8,388,608 bytes)
+Firmware Size: 1,975,760 bytes (compressed: 1,147,965 bytes)
+Upload Time: 18.3 seconds @ 864.5 kbit/s
+
+Code Locations:
+--------------
+- components/maps/maps_config.h: XOR encrypted API key
+- src/Custom_Menu/Custom_Menu.c: Lines 1272-1570 (maps_send_to_stt_api)
+- WiFi event handler: Lines 647-664
+- WiFi initialization: Lines 680-688
+- Voice recording: Lines 1150-1268
+- Task creation: Lines 1247-1266
+
+Next Steps:
+----------
+1. Upload firmware with enhanced error logging
+2. Test voice recognition and capture Google's error response
+3. Fix 400 error based on exact error message
+4. Complete Stage 3 validation
+5. Begin Stage 4: Google Directions API implementation
+
+================================================================================
+END OF SYSTEM NOTES
+================================================================================

@@ -1,0 +1,397 @@
+# GIF Animation Info
+# Source: laughingmangits.gif
+# Frames: 192
+# Format: RGB565 (256x256)
+
+Total frames: 192
+Frame size: 256x256 pixels
+Color format: RGB565 (16-bit)
+File size per frame: 131,072 bytes (128 KB)
+
+Frame timing (milliseconds):
+Frame 000: 40 ms
+Frame 001: 40 ms
+Frame 002: 40 ms
+Frame 003: 40 ms
+Frame 004: 40 ms
+Frame 005: 40 ms
+Frame 006: 40 ms
+Frame 007: 40 ms
+Frame 008: 40 ms
+Frame 009: 40 ms
+Frame 010: 40 ms
+Frame 011: 40 ms
+Frame 012: 40 ms
+Frame 013: 40 ms
+Frame 014: 40 ms
+Frame 015: 40 ms
+Frame 016: 40 ms
+Frame 017: 40 ms
+Frame 018: 40 ms
+Frame 019: 40 ms
+Frame 020: 40 ms
+Frame 021: 40 ms
+Frame 022: 40 ms
+Frame 023: 40 ms
+Frame 024: 40 ms
+Frame 025: 40 ms
+Frame 026: 40 ms
+Frame 027: 40 ms
+Frame 028: 40 ms
+Frame 029: 40 ms
+Frame 030: 40 ms
+Frame 031: 40 ms
+Frame 032: 40 ms
+Frame 033: 40 ms
+Frame 034: 40 ms
+Frame 035: 40 ms
+Frame 036: 40 ms
+Frame 037: 40 ms
+Frame 038: 40 ms
+Frame 039: 40 ms
+Frame 040: 40 ms
+Frame 041: 40 ms
+Frame 042: 40 ms
+Frame 043: 40 ms
+Frame 044: 40 ms
+Frame 045: 40 ms
+Frame 046: 40 ms
+Frame 047: 40 ms
+Frame 048: 40 ms
+Frame 049: 40 ms
+Frame 050: 40 ms
+Frame 051: 40 ms
+Frame 052: 40 ms
+Frame 053: 40 ms
+Frame 054: 40 ms
+Frame 055: 40 ms
+Frame 056: 40 ms
+Frame 057: 40 ms
+Frame 058: 40 ms
+Frame 059: 40 ms
+Frame 060: 40 ms
+Frame 061: 40 ms
+Frame 062: 40 ms
+Frame 063: 40 ms
+Frame 064: 40 ms
+Frame 065: 40 ms
+Frame 066: 40 ms
+Frame 067: 40 ms
+Frame 068: 40 ms
+Frame 069: 40 ms
+Frame 070: 40 ms
+Frame 071: 40 ms
+Frame 072: 40 ms
+Frame 073: 40 ms
+Frame 074: 40 ms
+Frame 075: 40 ms
+Frame 076: 40 ms
+Frame 077: 40 ms
+Frame 078: 40 ms
+Frame 079: 40 ms
+Frame 080: 40 ms
+Frame 081: 40 ms
+Frame 082: 40 ms
+Frame 083: 40 ms
+Frame 084: 40 ms
+Frame 085: 40 ms
+Frame 086: 40 ms
+Frame 087: 40 ms
+Frame 088: 40 ms
+Frame 089: 40 ms
+Frame 090: 40 ms
+Frame 091: 40 ms
+Frame 092: 40 ms
+Frame 093: 40 ms
+Frame 094: 40 ms
+Frame 095: 40 ms
+Frame 096: 40 ms
+Frame 097: 40 ms
+Frame 098: 40 ms
+Frame 099: 40 ms
+Frame 100: 40 ms
+Frame 101: 40 ms
+Frame 102: 40 ms
+Frame 103: 40 ms
+Frame 104: 40 ms
+Frame 105: 40 ms
+Frame 106: 40 ms
+Frame 107: 40 ms
+Frame 108: 40 ms
+Frame 109: 40 ms
+Frame 110: 40 ms
+Frame 111: 40 ms
+Frame 112: 40 ms
+Frame 113: 40 ms
+Frame 114: 40 ms
+Frame 115: 40 ms
+Frame 116: 40 ms
+Frame 117: 40 ms
+Frame 118: 40 ms
+Frame 119: 40 ms
+Frame 120: 40 ms
+Frame 121: 40 ms
+Frame 122: 40 ms
+Frame 123: 40 ms
+Frame 124: 40 ms
+Frame 125: 40 ms
+Frame 126: 40 ms
+Frame 127: 40 ms
+Frame 128: 40 ms
+Frame 129: 40 ms
+Frame 130: 40 ms
+Frame 131: 40 ms
+Frame 132: 40 ms
+Frame 133: 40 ms
+Frame 134: 40 ms
+Frame 135: 40 ms
+Frame 136: 40 ms
+Frame 137: 40 ms
+Frame 138: 40 ms
+Frame 139: 40 ms
+Frame 140: 40 ms
+Frame 141: 40 ms
+Frame 142: 40 ms
+Frame 143: 40 ms
+Frame 144: 40 ms
+Frame 145: 40 ms
+Frame 146: 40 ms
+Frame 147: 40 ms
+Frame 148: 40 ms
+Frame 149: 40 ms
+Frame 150: 40 ms
+Frame 151: 40 ms
+Frame 152: 40 ms
+Frame 153: 40 ms
+Frame 154: 40 ms
+Frame 155: 40 ms
+Frame 156: 40 ms
+Frame 157: 40 ms
+Frame 158: 40 ms
+Frame 159: 40 ms
+Frame 160: 40 ms
+Frame 161: 40 ms
+Frame 162: 40 ms
+Frame 163: 40 ms
+Frame 164: 40 ms
+Frame 165: 40 ms
+Frame 166: 40 ms
+Frame 167: 40 ms
+Frame 168: 40 ms
+Frame 169: 40 ms
+Frame 170: 40 ms
+Frame 171: 40 ms
+Frame 172: 40 ms
+Frame 173: 40 ms
+Frame 174: 40 ms
+Frame 175: 40 ms
+Frame 176: 40 ms
+Frame 177: 40 ms
+Frame 178: 40 ms
+Frame 179: 40 ms
+Frame 180: 40 ms
+Frame 181: 40 ms
+Frame 182: 40 ms
+Frame 183: 40 ms
+Frame 184: 40 ms
+Frame 185: 40 ms
+Frame 186: 40 ms
+Frame 187: 40 ms
+Frame 188: 40 ms
+Frame 189: 40 ms
+Frame 190: 40 ms
+Frame 191: 40 ms
+
+Files created:
+  laughingman_cli_000.bin
+  laughingman_cli_001.bin
+  laughingman_cli_002.bin
+  laughingman_cli_003.bin
+  laughingman_cli_004.bin
+  laughingman_cli_005.bin
+  laughingman_cli_006.bin
+  laughingman_cli_007.bin
+  laughingman_cli_008.bin
+  laughingman_cli_009.bin
+  laughingman_cli_010.bin
+  laughingman_cli_011.bin
+  laughingman_cli_012.bin
+  laughingman_cli_013.bin
+  laughingman_cli_014.bin
+  laughingman_cli_015.bin
+  laughingman_cli_016.bin
+  laughingman_cli_017.bin
+  laughingman_cli_018.bin
+  laughingman_cli_019.bin
+  laughingman_cli_020.bin
+  laughingman_cli_021.bin
+  laughingman_cli_022.bin
+  laughingman_cli_023.bin
+  laughingman_cli_024.bin
+  laughingman_cli_025.bin
+  laughingman_cli_026.bin
+  laughingman_cli_027.bin
+  laughingman_cli_028.bin
+  laughingman_cli_029.bin
+  laughingman_cli_030.bin
+  laughingman_cli_031.bin
+  laughingman_cli_032.bin
+  laughingman_cli_033.bin
+  laughingman_cli_034.bin
+  laughingman_cli_035.bin
+  laughingman_cli_036.bin
+  laughingman_cli_037.bin
+  laughingman_cli_038.bin
+  laughingman_cli_039.bin
+  laughingman_cli_040.bin
+  laughingman_cli_041.bin
+  laughingman_cli_042.bin
+  laughingman_cli_043.bin
+  laughingman_cli_044.bin
+  laughingman_cli_045.bin
+  laughingman_cli_046.bin
+  laughingman_cli_047.bin
+  laughingman_cli_048.bin
+  laughingman_cli_049.bin
+  laughingman_cli_050.bin
+  laughingman_cli_051.bin
+  laughingman_cli_052.bin
+  laughingman_cli_053.bin
+  laughingman_cli_054.bin
+  laughingman_cli_055.bin
+  laughingman_cli_056.bin
+  laughingman_cli_057.bin
+  laughingman_cli_058.bin
+  laughingman_cli_059.bin
+  laughingman_cli_060.bin
+  laughingman_cli_061.bin
+  laughingman_cli_062.bin
+  laughingman_cli_063.bin
+  laughingman_cli_064.bin
+  laughingman_cli_065.bin
+  laughingman_cli_066.bin
+  laughingman_cli_067.bin
+  laughingman_cli_068.bin
+  laughingman_cli_069.bin
+  laughingman_cli_070.bin
+  laughingman_cli_071.bin
+  laughingman_cli_072.bin
+  laughingman_cli_073.bin
+  laughingman_cli_074.bin
+  laughingman_cli_075.bin
+  laughingman_cli_076.bin
+  laughingman_cli_077.bin
+  laughingman_cli_078.bin
+  laughingman_cli_079.bin
+  laughingman_cli_080.bin
+  laughingman_cli_081.bin
+  laughingman_cli_082.bin
+  laughingman_cli_083.bin
+  laughingman_cli_084.bin
+  laughingman_cli_085.bin
+  laughingman_cli_086.bin
+  laughingman_cli_087.bin
+  laughingman_cli_088.bin
+  laughingman_cli_089.bin
+  laughingman_cli_090.bin
+  laughingman_cli_091.bin
+  laughingman_cli_092.bin
+  laughingman_cli_093.bin
+  laughingman_cli_094.bin
+  laughingman_cli_095.bin
+  laughingman_cli_096.bin
+  laughingman_cli_097.bin
+  laughingman_cli_098.bin
+  laughingman_cli_099.bin
+  laughingman_cli_100.bin
+  laughingman_cli_101.bin
+  laughingman_cli_102.bin
+  laughingman_cli_103.bin
+  laughingman_cli_104.bin
+  laughingman_cli_105.bin
+  laughingman_cli_106.bin
+  laughingman_cli_107.bin
+  laughingman_cli_108.bin
+  laughingman_cli_109.bin
+  laughingman_cli_110.bin
+  laughingman_cli_111.bin
+  laughingman_cli_112.bin
+  laughingman_cli_113.bin
+  laughingman_cli_114.bin
+  laughingman_cli_115.bin
+  laughingman_cli_116.bin
+  laughingman_cli_117.bin
+  laughingman_cli_118.bin
+  laughingman_cli_119.bin
+  laughingman_cli_120.bin
+  laughingman_cli_121.bin
+  laughingman_cli_122.bin
+  laughingman_cli_123.bin
+  laughingman_cli_124.bin
+  laughingman_cli_125.bin
+  laughingman_cli_126.bin
+  laughingman_cli_127.bin
+  laughingman_cli_128.bin
+  laughingman_cli_129.bin
+  laughingman_cli_130.bin
+  laughingman_cli_131.bin
+  laughingman_cli_132.bin
+  laughingman_cli_133.bin
+  laughingman_cli_134.bin
+  laughingman_cli_135.bin
+  laughingman_cli_136.bin
+  laughingman_cli_137.bin
+  laughingman_cli_138.bin
+  laughingman_cli_139.bin
+  laughingman_cli_140.bin
+  laughingman_cli_141.bin
+  laughingman_cli_142.bin
+  laughingman_cli_143.bin
+  laughingman_cli_144.bin
+  laughingman_cli_145.bin
+  laughingman_cli_146.bin
+  laughingman_cli_147.bin
+  laughingman_cli_148.bin
+  laughingman_cli_149.bin
+  laughingman_cli_150.bin
+  laughingman_cli_151.bin
+  laughingman_cli_152.bin
+  laughingman_cli_153.bin
+  laughingman_cli_154.bin
+  laughingman_cli_155.bin
+  laughingman_cli_156.bin
+  laughingman_cli_157.bin
+  laughingman_cli_158.bin
+  laughingman_cli_159.bin
+  laughingman_cli_160.bin
+  laughingman_cli_161.bin
+  laughingman_cli_162.bin
+  laughingman_cli_163.bin
+  laughingman_cli_164.bin
+  laughingman_cli_165.bin
+  laughingman_cli_166.bin
+  laughingman_cli_167.bin
+  laughingman_cli_168.bin
+  laughingman_cli_169.bin
+  laughingman_cli_170.bin
+  laughingman_cli_171.bin
+  laughingman_cli_172.bin
+  laughingman_cli_173.bin
+  laughingman_cli_174.bin
+  laughingman_cli_175.bin
+  laughingman_cli_176.bin
+  laughingman_cli_177.bin
+  laughingman_cli_178.bin
+  laughingman_cli_179.bin
+  laughingman_cli_180.bin
+  laughingman_cli_181.bin
+  laughingman_cli_182.bin
+  laughingman_cli_183.bin
+  laughingman_cli_184.bin
+  laughingman_cli_185.bin
+  laughingman_cli_186.bin
+  laughingman_cli_187.bin
+  laughingman_cli_188.bin
+  laughingman_cli_189.bin
+  laughingman_cli_190.bin
+  laughingman_cli_191.bin

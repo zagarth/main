@@ -1,0 +1,4 @@
+https://github.com/espressif/esp-sr.git
+lvgl/lvgl@^8.3.10
+symlink://e:/Scratch/Home_workspace/ESP32_Demo/Arduino/libraries/ESP32-audioI2S-master
+bblanchon/ArduinoJson@^6.21.0

@@ -1,0 +1,40 @@
+[env:esp32-s3-devkitc-1]
+platform = espressif32@6.8.1
+board = esp32-s3-devkitc-1
+framework = arduino
+extra_scripts = pre:extra_script.py
+
+; Board configuration
+board_build.flash_mode = qio
+board_build.partitions = default_16MB.csv
+board_upload.flash_size = 16MB
+
+; Serial monitor
+monitor_speed = 115200
+monitor_port = COM4
+upload_port = COM4
+upload_speed = 921600
+
+; PSRAM configuration
+board_build.arduino.memory_type = qio_qspi
+board_build.arduino.psram_type = opi
+
+; Library dependencies
+lib_deps = 
+    lvgl/lvgl@^8.3.10
+    symlink://e:/Scratch/Home_workspace/ESP32_Demo/Arduino/libraries/ESP32-audioI2S-master
+    https://github.com/espressif/esp-sr.git
+    bblanchon/ArduinoJson@^6.21.0
+    
+lib_ldf_mode = deep+
+
+; Build flags
+build_flags = 
+    -DBOARD_HAS_PSRAM
+    -DARDUINO_USB_CDC_ON_BOOT=1
+    -DARDUINO_USB_MODE=1
+    -I.
+    -std=gnu++17
+
+build_unflags = 
+    -std=gnu++11
