@@ -1,0 +1,1457 @@
+
+<?php
+// Direct PDF Navigation System with Search & Index Functionality
+// Enhanced version with full catalog.php feature parity
+
+// Handle PDF support detection
+if (isset($_POST['action']) && $_POST['action'] === 'pdf_support_test') {
+    $supported = $_POST['supported'] ?? null;
+    
+    if ($supported === 'true') {
+        // Browser supports PDFs natively, continue with catalog_direct
+        header('Content-Type: application/json');
+        echo json_encode(['status' => 'supported', 'continue' => true]);
+        exit;
+    } elseif ($supported === 'false') {
+        // Browser doesn't support PDFs, redirect to catalog.php
+        header('Content-Type: application/json');
+        echo json_encode(['status' => 'unsupported', 'redirect' => 'catalog.php']);
+        exit;
+    } else {
+        // No response or invalid response - should not happen from user choice
+        header('Content-Type: application/json');
+        echo json_encode(['status' => 'error', 'message' => 'Invalid response']);
+        exit;
+    }
+}
+
+// Handle AJAX requests (same as original catalog.php)
+if (isset($_POST['action'])) {
+    if ($_POST['action'] === 'search') {
+        require_once __DIR__ . '/catalog_search_functions.php';
+        
+        header('Content-Type: application/json');
+        $searchTerm = $_POST['term'] ?? '';
+        
+        if (!empty($searchTerm)) {
+            $results = searchCatalogIntelligent($searchTerm);
+            echo json_encode($results);
+        } else {
+            echo json_encode([]);
+        }
+        exit;
+    } 
+    elseif ($_POST['action'] === 'get_catalog_structure') {
+        header('Content-Type: application/json');
+        
+        // Include catalog functions
+        function getCatalogStructureData() {
+            $catalogDir = './Cadman_catalog/';
+            $files = scandir($catalogDir);
+            $structure = [
+                'indexes' => [],
+                'content_pages' => [],
+                'other' => []
+            ];
+            
+            foreach ($files as $file) {
+                if (pathinfo($file, PATHINFO_EXTENSION) == 'pdf') {
+                    $fileName = pathinfo($file, PATHINFO_FILENAME);
+                    $filePath = $catalogDir . $file;
+                    
+                    // Get file metadata
+                    $fileSize = file_exists($filePath) ? filesize($filePath) : 0;
+                    $fileSizeFormatted = formatFileSize($fileSize);
+                    
+                    $fileData = [
+                        'filename' => $file,
+                        'size' => $fileSize,
+                        'sizeFormatted' => $fileSizeFormatted,
+                        'modified' => file_exists($filePath) ? filemtime($filePath) : 0
+                    ];
+                    
+                    // Check if it's an index file
+                    if (strpos($fileName, 'index') !== false) {
+                        $categoryName = str_replace(['index_page_', 'index_', '_'], [' ', ' ', ' '], $fileName);
+                        $categoryName = ucwords($categoryName);
+                        $structure['indexes'][$categoryName] = $fileData;
+                    }
+                    // Check if it's a numbered page (content)
+                    elseif (preg_match('/page_?(\d+[a-z]*)/', $fileName, $matches)) {
+                        $pageNum = $matches[1];
+                        $pageGroup = "Page " . strtoupper($pageNum);
+                        $structure['content_pages'][$pageGroup][] = $fileData;
+                    }
+                    // Everything else
+                    else {
+                        $structure['other'][$fileName] = $fileData;
+                    }
+                }
+            }
+            
+            // Sort content pages numerically
+            uksort($structure['content_pages'], function($a, $b) {
+                $numA = intval(preg_replace('/Page (\d+).*/', '$1', $a));
+                $numB = intval(preg_replace('/Page (\d+).*/', '$1', $b));
+                return $numA - $numB;
+            });
+            
+            return $structure;
+        }
+        
+        // Helper function to format file sizes
+        function formatFileSize($bytes) {
+            if ($bytes === 0) return '0 B';
+            
+            $sizes = ['B', 'KB', 'MB', 'GB'];
+            $factor = floor((strlen($bytes) - 1) / 3);
+            
+            return sprintf("%.1f", $bytes / pow(1024, $factor)) . ' ' . $sizes[$factor];
+        }
+        
+        $structure = getCatalogStructureData();
+        echo json_encode($structure);
+        exit;
+    }
+}
+
+// Get current section from URL parameter
+$currentSection = $_GET['section'] ?? 'main';
+
+// Define catalog sections in logical order
+function getCatalogSections() {
+    return [
+        // Title/Main pages
+        'main' => ['file' => 'index_main.pdf', 'title' => 'Main Catalog', 'category' => 'Index'],
+        'title' => ['file' => 'Title_page.pdf', 'title' => 'Title Page', 'category' => 'Index'],
+        'title2' => ['file' => 'Title_page-02.pdf', 'title' => 'Title Page 2', 'category' => 'Index'],
+        'wedding-title' => ['file' => 'title-wedding.pdf', 'title' => 'Wedding Collection', 'category' => 'Index'],
+        
+        // Content Pages (ordered logically)
+        '01a' => ['file' => 'page_01a.pdf', 'title' => 'Page 1A', 'category' => 'Main Catalog'],
+        '01b' => ['file' => 'page_01b.pdf', 'title' => 'Page 1B', 'category' => 'Main Catalog'],
+        '02a' => ['file' => 'page_02a.pdf', 'title' => 'Page 2A', 'category' => 'Main Catalog'],
+        '02b' => ['file' => 'page_02b.pdf', 'title' => 'Page 2B', 'category' => 'Main Catalog'],
+        '02c' => ['file' => 'page_02c.pdf', 'title' => 'Page 2C', 'category' => 'Main Catalog'],
+        '02d' => ['file' => 'page_02d.pdf', 'title' => 'Page 2D', 'category' => 'Main Catalog'],
+        
+        // Page 3 Series
+        '03' => ['file' => 'page_03.pdf', 'title' => 'Page 3', 'category' => 'Series 3'],
+        '03a' => ['file' => 'page_03a.pdf', 'title' => 'Page 3A', 'category' => 'Series 3'],
+        '03b' => ['file' => 'page_03b.pdf', 'title' => 'Page 3B', 'category' => 'Series 3'],
+        '03c' => ['file' => 'page_03c.pdf', 'title' => 'Page 3C', 'category' => 'Series 3'],
+        '03d' => ['file' => 'page_03d.pdf', 'title' => 'Page 3D', 'category' => 'Series 3'],
+        '03e' => ['file' => 'page_03e.pdf', 'title' => 'Page 3E', 'category' => 'Series 3'],
+        '03ee' => ['file' => 'page_03ee.pdf', 'title' => 'Page 3EE', 'category' => 'Series 3'],
+        '03eee' => ['file' => 'page_03eee.pdf', 'title' => 'Page 3EEE', 'category' => 'Series 3'],
+        '03g' => ['file' => 'page_03g.pdf', 'title' => 'Page 3G', 'category' => 'Series 3'],
+        '03h' => ['file' => 'page_03h.pdf', 'title' => 'Page 3H', 'category' => 'Series 3'],
+        '03i' => ['file' => 'page_03i.pdf', 'title' => 'Page 3I', 'category' => 'Series 3'],
+        '03j' => ['file' => 'page_03j.pdf', 'title' => 'Page 3J', 'category' => 'Series 3'],
+        
+        // Continue with other series...
+        '04a' => ['file' => 'page_04a.pdf', 'title' => 'Page 4A', 'category' => 'Series 4'],
+        '04b' => ['file' => 'page_04b.pdf', 'title' => 'Page 4B', 'category' => 'Series 4'],
+        '04c' => ['file' => 'page_04c.pdf', 'title' => 'Page 4C', 'category' => 'Series 4'],
+        
+        '05a' => ['file' => 'page_05a.pdf', 'title' => 'Page 5A', 'category' => 'Series 5'],
+        '05b' => ['file' => 'page_05b.pdf', 'title' => 'Page 5B', 'category' => 'Series 5'],
+        
+        // Page 6 Series
+        '06a' => ['file' => 'page_06a.pdf', 'title' => 'Page 6A', 'category' => 'Series 6'],
+        '06b' => ['file' => 'page_06b.pdf', 'title' => 'Page 6B', 'category' => 'Series 6'],
+        '06c' => ['file' => 'page_06c.pdf', 'title' => 'Page 6C', 'category' => 'Series 6'],
+        '06d' => ['file' => 'page_06d.pdf', 'title' => 'Page 6D', 'category' => 'Series 6'],
+        '06e' => ['file' => 'page_06e.pdf', 'title' => 'Page 6E', 'category' => 'Series 6'],
+        '06f' => ['file' => 'page_06f.pdf', 'title' => 'Page 6F', 'category' => 'Series 6'],
+        '06g' => ['file' => 'page_06g.pdf', 'title' => 'Page 6G', 'category' => 'Series 6'],
+        '06h' => ['file' => 'page_06h.pdf', 'title' => 'Page 6H', 'category' => 'Series 6'],
+        '06i' => ['file' => 'page_06i.pdf', 'title' => 'Page 6I', 'category' => 'Series 6'],
+        '06j' => ['file' => 'page_06j.pdf', 'title' => 'Page 6J', 'category' => 'Series 6'],
+        '06k' => ['file' => 'page_06k.pdf', 'title' => 'Page 6K', 'category' => 'Series 6'],
+        '06L' => ['file' => 'page_06L.pdf', 'title' => 'Page 6L', 'category' => 'Series 6'],
+        
+        // Add key sections - you can expand this
+        '07a' => ['file' => 'page_07a.pdf', 'title' => 'Page 7A', 'category' => 'Series 7'],
+        '10a' => ['file' => 'page_10a.pdf', 'title' => 'Page 10A', 'category' => 'Series 10'],
+        
+        // Product ID Index Pages
+        'crosses' => ['file' => 'index_page_10k-crosses_01.pdf', 'title' => '10K Crosses', 'category' => 'Categories'],
+        'lockets' => ['file' => 'index_page_10K-LOCKETS_01.pdf', 'title' => '10K Lockets', 'category' => 'Categories'],
+        'engagement' => ['file' => 'index_page_engagementsets_01.pdf', 'title' => 'Engagement Sets', 'category' => 'Categories'],
+        'wedding1' => ['file' => 'index_page_wedding_01.pdf', 'title' => 'Wedding Bands 1', 'category' => 'Categories'],
+    ];
+}
+
+// Get navigation data
+$catalogSections = getCatalogSections();
+$sectionKeys = array_keys($catalogSections);
+$currentIndex = array_search($currentSection, $sectionKeys);
+
+// Validate current section
+if ($currentIndex === false) {
+    $currentSection = 'main';
+    $currentIndex = 0;
+}
+
+$currentData = $catalogSections[$currentSection];
+$currentFile = $currentData['file'];
+
+// Calculate navigation
+$prevSection = $currentIndex > 0 ? $sectionKeys[$currentIndex - 1] : null;
+$nextSection = $currentIndex < count($sectionKeys) - 1 ? $sectionKeys[$currentIndex + 1] : null;
+
+// Get adjacent section data for preloading
+$prevData = $prevSection ? $catalogSections[$prevSection] : null;
+$nextData = $nextSection ? $catalogSections[$nextSection] : null;
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadman Manufacturing Catalog - <?= htmlspecialchars($currentData['title']) ?></title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #f8f9fa;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
+            color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            border-bottom: 3px solid #FFD700;
+        }
+        
+        .header h1 {
+            margin: 0;
+            color: #FFD700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-size: 2.5em;
+        }
+        
+        .subtitle {
+            color: #f8f9fa;
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+        
+        /* Navigation Styles */
+        .catalog-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
+            padding: 20px;
+            margin: 0;
+            border-bottom: 2px solid #FFD700;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .nav-btn {
+            padding: 12px 20px;
+            background: linear-gradient(145deg, #FFD700, #FFA500);
+            color: #000;
+            border: 2px solid #FFD700;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-align: center;
+            min-width: 120px;
+            cursor: pointer;
+        }
+        
+        .nav-btn:hover {
+            background: linear-gradient(145deg, #FFA500, #FF8C00);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255,215,0,0.4);
+            color: #000;
+        }
+        
+        .nav-btn:disabled {
+            background: #666;
+            color: #999;
+            border-color: #666;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .nav-btn small {
+            display: block;
+            font-size: 0.8em;
+            margin-top: 4px;
+            opacity: 0.8;
+        }
+        
+        .section-info {
+            text-align: center;
+            color: #f8f9fa;
+            flex: 1;
+            margin: 0 20px;
+        }
+        
+        .section-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #FFD700;
+            margin-bottom: 5px;
+        }
+        
+        .section-category {
+            font-size: 0.9em;
+            color: #f8f9fa;
+            margin-bottom: 5px;
+        }
+        
+        .section-counter {
+            font-size: 0.8em;
+            color: #aaa;
+        }
+        
+        /* Search Controls */
+        .search-controls {
+            background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
+            padding: 20px;
+            border-bottom: 1px solid #444;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 15px;
+            justify-content: space-between;
+        }
+        
+        .search-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .search-group label {
+            color: #FFD700;
+            font-weight: bold;
+        }
+        
+        .search-input {
+            padding: 10px 15px;
+            border: 2px solid #FFD700;
+            border-radius: 8px;
+            background: #1a1a1a;
+            color: #f8f9fa;
+            font-size: 14px;
+            width: 300px;
+            transition: all 0.3s ease;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+            border-color: #FFA500;
+        }
+        
+        .search-input::placeholder {
+            color: #aaa;
+        }
+        
+        /* Main Content Container */
+        #mainContainer {
+            background: linear-gradient(145deg, #ffffff, #f8f9fa);
+            margin: 20px;
+            border-radius: 15px;
+            border: 2px solid #FFD700;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            min-height: 500px;
+        }
+        
+        .pdf-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .secondary-btn {
+            padding: 12px 24px;
+            background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
+            color: #FFD700;
+            border: 2px solid #FFD700;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .secondary-btn:hover {
+            background: linear-gradient(145deg, #FFD700, #FFA500);
+            color: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255,215,0,0.4);
+        }
+        
+        .pdf-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+            color: #FFD700;
+        }
+        
+        .search-container {
+            margin: 30px auto;
+            max-width: 600px;
+            position: relative;
+        }
+        
+        .search-box {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 16px;
+            border: 2px solid #FFD700;
+            border-radius: 25px;
+            outline: none;
+            background: #2d2d2d;
+            color: #f8f9fa;
+            transition: all 0.3s ease;
+        }
+        
+        .search-box:focus {
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            border-color: #FFA500;
+        }
+        
+        .search-box::placeholder {
+            color: #aaa;
+        }
+        
+        .search-results {
+            background: linear-gradient(145deg, #ffffff, #f8f9fa);
+            border: 2px solid #FFD700;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        
+        .search-results h3 {
+            color: #FFD700;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .control-btn {
+            padding: 12px 24px;
+            background: linear-gradient(145deg, #FFD700, #FFA500);
+            color: #000;
+            border: 2px solid #FFD700;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .control-btn:hover {
+            background: linear-gradient(145deg, #FFA500, #FF8C00);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255,215,0,0.4);
+            color: #000;
+        }
+        
+        .control-btn.secondary {
+            background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
+            color: #FFD700;
+            border: 2px solid #FFD700;
+        }
+        
+        .control-btn.secondary:hover {
+            background: linear-gradient(145deg, #FFD700, #FFA500);
+            color: #000;
+        }
+        
+        .primary-btn {
+            padding: 15px 30px;
+            background: linear-gradient(145deg, #FFD700, #FFA500);
+            color: #000;
+            border: 2px solid #FFD700;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .primary-btn:hover {
+            background: linear-gradient(145deg, #FFA500, #FF8C00);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255,215,0,0.4);
+            color: #000;
+        }
+        
+        .catalog-welcome {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(145deg, #ffffff, #f8f9fa);
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            border: 2px solid #FFD700;
+        }
+        
+        .catalog-welcome h2 {
+            color: #FFD700;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            font-size: 2.2em;
+        }
+        
+        .catalog-welcome p {
+            color: #333;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+        
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .category-card {
+            background: linear-gradient(145deg, #ffffff, #f8f9fa);
+            border-radius: 12px;
+            padding: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid #FFD700;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(255,215,0,0.4);
+            border-color: #FFA500;
+        }
+        
+        .category-card h3 {
+            color: #FFD700;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .category-card p {
+            color: #333;
+            margin-bottom: 0;
+        }
+        
+        /* Page Preview Grid Styles */
+        .page-preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+            max-width: 1200px;
+        }
+        
+        .page-preview-card {
+            background: linear-gradient(145deg, #ffffff, #f8f9fa);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 2px solid #FFD700;
+        }
+        
+        .page-preview-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(255,215,0,0.4);
+            border-color: #FFA500;
+        }
+        
+        .preview-header {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #000;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .preview-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .preview-header h3 {
+            margin: 0;
+            font-size: 1.4em;
+            color: #000;
+            text-shadow: none;
+        }
+        
+        .preview-info {
+            padding: 20px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .file-name {
+            font-family: monospace;
+            font-size: 0.9em;
+            color: #666;
+            margin: 0 0 8px 0;
+            word-break: break-all;
+        }
+        
+        .file-size {
+            font-size: 0.8em;
+            color: #888;
+            margin: 0;
+        }
+        
+        .preview-actions {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .preview-btn {
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 0.9em;
+        }
+        
+        .preview-btn.primary {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #000;
+            border: 2px solid #FFD700;
+        }
+        
+        .preview-btn.primary:hover {
+            background: linear-gradient(135deg, #FFA500 0%, #FF8C00 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(255,215,0,0.3);
+        }
+        
+        .preview-btn.secondary {
+            background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
+            color: #FFD700;
+            border: 2px solid #FFD700;
+        }
+        
+        .preview-btn.secondary:hover {
+            background: linear-gradient(145deg, #FFD700, #FFA500);
+            color: #000;
+        }
+        
+        .pdf-viewer-container {
+            width: 100%;
+            height: calc(100vh - 160px);
+            background: linear-gradient(145deg, #ffffff, #f8f9fa);
+            border: 2px solid #FFD700;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .catalog-nav {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+            
+            .nav-btn {
+                min-width: auto;
+                padding: 10px 15px;
+                font-size: 0.9em;
+            }
+            
+            .section-info {
+                margin: 0;
+                order: -1;
+            }
+            
+            .section-title {
+                font-size: 1.2em;
+            }
+            
+            .search-controls {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            
+            .search-input {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .search-group {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            #mainContainer {
+                margin: 10px;
+            }
+            
+            .controls {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .category-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .page-preview-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .preview-actions {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            
+            .pdf-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>🏭 Cadman Manufacturing</h1>
+        <div class="subtitle">Premium Jewelry Catalog</div>
+    </header>
+    
+    <nav class="catalog-nav">
+        <?php if ($prevData): ?>
+            <a href="?section=<?= urlencode($prevSection) ?>" class="nav-btn">
+                ← Previous<br><small><?= htmlspecialchars($prevData['title']) ?></small>
+            </a>
+        <?php else: ?>
+            <button class="nav-btn" disabled>← Previous</button>
+        <?php endif; ?>
+        
+        <div class="section-info">
+            <div class="section-title"><?= htmlspecialchars($currentData['title']) ?></div>
+            <div class="section-category"><?= htmlspecialchars($currentData['category']) ?></div>
+            <div class="section-counter">Section <?= $currentIndex + 1 ?> of <?= count($sectionKeys) ?></div>
+        </div>
+        
+        <?php if ($nextData): ?>
+            <a href="?section=<?= urlencode($nextSection) ?>" class="nav-btn">
+                Next →<br><small><?= htmlspecialchars($nextData['title']) ?></small>
+            </a>
+        <?php else: ?>
+            <button class="nav-btn" disabled>Next →</button>
+        <?php endif; ?>
+    </nav>
+    
+    <!-- Search and Index Controls -->
+    <div class="search-controls">
+        <div class="search-group">
+            <label for="searchInput">Search:</label>
+            <input type="text" id="searchInput" class="search-input" placeholder="Search: page 3, wedding, rings, etc.">
+        </div>
+        <div class="search-group">
+            <button id="showAllPagesBtn" class="control-btn secondary">📄 All Pages</button>
+            <button id="showByCategoryBtn" class="control-btn secondary">🔍 Product IDs</button>
+            <button id="showCurrentBtn" class="control-btn">📖 Current Page</button>
+            <button id="backToMainBtn" class="control-btn secondary">🏠 Back to Main</button>
+            <button id="backToHomeBtn" class="control-btn secondary">🏡 Home</button>
+        </div>
+    </div>
+    
+    <!-- Main Content Container -->
+    <div id="mainContainer">
+        <!-- Content will be loaded dynamically here -->
+        <!-- Initial load shows current PDF if section specified -->
+        <?php if ($currentSection !== 'main'): ?>
+        <div class="pdf-viewer-container">
+            <?php
+            $pdfPath = "Cadman_catalog/" . $currentFile;
+            if (file_exists($pdfPath)):
+            ?>
+                <div class="pdf-preview">
+                    <div class="pdf-icon">📄</div>
+                    <h2><?= htmlspecialchars($currentData['title']) ?></h2>
+                    <p style="color: #666; margin-top: 10px;">
+                        <?= htmlspecialchars($currentData['category']) ?> • 
+                        <?= round(filesize($pdfPath) / 1024 / 1024, 1) ?>MB
+                    </p>
+                    <p style="margin-top: 20px; color: #555; line-height: 1.6;">
+                        View this catalog page in your browser's built-in PDF viewer or download for offline viewing.
+                    </p>
+                    
+                    <div class="pdf-actions">
+                        <a href="<?= htmlspecialchars($pdfPath) ?>" 
+                           class="primary-btn" 
+                           target="_blank">
+                           🔗 Open PDF
+                        </a>
+                        <a href="<?= htmlspecialchars($pdfPath) ?>" 
+                           class="secondary-btn" 
+                           download="<?= htmlspecialchars($currentData['title']) ?>.pdf">
+                           📥 Download
+                        </a>
+                    </div>
+                </div>
+            <?php else: ?>
+                <div class="pdf-preview">
+                    <div class="pdf-icon">⚠️</div>
+                    <h2>File Not Found</h2>
+                    <p style="color: #666; margin-top: 10px;">
+                        The requested catalog page could not be located.
+                    </p>
+                    <p style="opacity: 0.7; margin: 20px 0;">File: <?= htmlspecialchars($currentFile) ?></p>
+                    <a href="?section=main" class="primary-btn">Return to Main Catalog</a>
+                </div>
+            <?php endif; ?>
+        </div>
+        <?php else: ?>
+        <!-- Default welcome screen -->
+        <div class="catalog-welcome">
+            <h2>🏭 Welcome to the Cadman Catalog</h2>
+            <p>Use the search box above or browse Product ID indexes to find specific catalog pages with product images.</p>
+            <div class="pdf-actions">
+                <button class="primary-btn" onclick="showAllPages()">📄 Browse All Pages</button>
+                <button class="primary-btn" onclick="showByCategory()">� Browse Product ID Indexes</button>
+            </div>
+            
+            <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px; border: 1px solid #ddd;">
+                <h3 style="color: #8B4513; margin-bottom: 15px;">💡 Quick Search Tips</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; font-size: 14px; color: #6c757d;">
+                    <div><strong>"page 3"</strong> - Find Page 3 product images</div>
+                    <div><strong>"wedding"</strong> - Find wedding product catalog pages</div>
+                    <div><strong>"rings"</strong> - Find ring collection images</div>
+                    <div><strong>"engagement"</strong> - Find engagement product pages</div>
+                </div>
+            </div>
+        </div>
+        <?php endif; ?>
+    </div>
+    
+    <script>
+        // PDF Support Detection and Browser Compatibility Check
+        (function() {
+            // Function to test PDF support
+            function testPDFSupport() {
+                return new Promise((resolve) => {
+                    // Method 1: Check if PDF plugin/viewer is available
+                    let pdfSupported = false;
+                    
+                    // Check for PDF MIME type support
+                    if (navigator.mimeTypes && navigator.mimeTypes['application/pdf']) {
+                        pdfSupported = true;
+                    }
+                    
+                    // Check for PDF plugin (older browsers)
+                    if (navigator.plugins) {
+                        for (let i = 0; i < navigator.plugins.length; i++) {
+                            if (navigator.plugins[i].name.toLowerCase().indexOf('pdf') !== -1) {
+                                pdfSupported = true;
+                                break;
+                            }
+                        }
+                    }
+                    
+                    // Modern browser test - try to create object element
+                    const testObj = document.createElement('object');
+                    testObj.type = 'application/pdf';
+                    testObj.width = '1px';
+                    testObj.height = '1px';
+                    testObj.style.visibility = 'hidden';
+                    testObj.style.position = 'absolute';
+                    testObj.data = 'data:application/pdf;base64,JVBERi0xLjcKCjEgMCBvYmoKPDwKL1R5cGUgL0NhdGFsb2cKL1BhZ2VzIDIgMCBSCj4+CmVuZG9iagoKMiAwIG9iago8PAovVHlwZSAvUGFnZXMKL0tpZHMgWzMgMCBSXQovQ291bnQgMQo+PgplbmRvYmoKCjMgMCBvYmoKPDwKL1R5cGUgL1BhZ2UKL1BhcmVudCAyIDAgUgovTWVkaWFCb3ggWzAgMCA2MTIgNzkyXQo+PgplbmRvYmoKCnhyZWYKMCA0CjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDAxNSAwMDAwMCBuIAowMDAwMDAwMDY2IDAwMDAwIG4gCjAwMDAwMDAxMjMgMDAwMDAgbiAKdHJhaWxlcgo8PAovU2l6ZSA0Ci9Sb290IDEgMCBSCj4+CnN0YXJ0eHJlZgoyMDIKJSVFT0YK';
+                    
+                    document.body.appendChild(testObj);
+                    
+                    setTimeout(() => {
+                        // Check if object loaded properly
+                        const isWorking = testObj.contentDocument || 
+                                        testObj.getSVGDocument || 
+                                        (testObj.offsetWidth > 1 && testObj.offsetHeight > 1);
+                        
+                        if (isWorking) {
+                            pdfSupported = true;
+                        }
+                        
+                        document.body.removeChild(testObj);
+                        resolve(pdfSupported);
+                    }, 1000);
+                });
+            }
+            
+            // Function to send support test result to server
+            function sendSupportResult(supported) {
+                // Mark as tested to prevent re-asking
+                sessionStorage.setItem('pdf_support_tested', 'true');
+                sessionStorage.setItem('pdf_support_result', supported);
+                
+                fetch(window.location.pathname, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: 'action=pdf_support_test&supported=' + supported
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'unsupported' && data.redirect) {
+                        // Redirect to fallback catalog
+                        window.location.href = data.redirect + window.location.search;
+                    }
+                    // If supported or error, continue normally (do nothing)
+                })
+                .catch(error => {
+                    console.error('PDF support test failed:', error);
+                    // Don't call askUserDirectly here - user already chose
+                });
+            }
+            
+            // Function to ask user directly with alert box
+            function askUserDirectly() {
+                // Check if user has already been asked
+                if (sessionStorage.getItem('pdf_user_asked') === 'true') {
+                    return; // Don't ask again
+                }
+                
+                // Mark as asked to prevent multiple prompts
+                sessionStorage.setItem('pdf_user_asked', 'true');
+                
+                setTimeout(() => {
+                    const userChoice = confirm(
+                        "PDF Viewer Detection\n\n" +
+                        "We couldn't automatically detect your browser's PDF viewing capabilities.\n\n" +
+                        "Can your browser display PDF files directly?\n\n" +
+                        "• Click 'OK' if PDFs usually open in your browser\n" +
+                        "• Click 'Cancel' if PDFs download or you have issues viewing them\n\n" +
+                        "(We'll optimize the catalog experience based on your choice)"
+                    );
+                    
+                    if (userChoice) {
+                        // User says their browser supports PDFs
+                        sendSupportResult('true');
+                    } else {
+                        // User says their browser doesn't support PDFs well
+                        sendSupportResult('false');
+                    }
+                }, 100);
+            }
+            
+            // Run the test on page load
+            document.addEventListener('DOMContentLoaded', function() {
+                // Don't run test for AJAX requests or if already tested
+                if (sessionStorage.getItem('pdf_support_tested') === 'true') {
+                    // Check if we need to redirect based on previous result
+                    const previousResult = sessionStorage.getItem('pdf_support_result');
+                    if (previousResult === 'false') {
+                        window.location.href = 'catalog.php' + window.location.search;
+                    }
+                    return;
+                }
+                
+                testPDFSupport().then(function(supported) {
+                    if (supported === true) {
+                        sendSupportResult('true');
+                    } else if (supported === false) {
+                        sendSupportResult('false');
+                    } else {
+                        // Uncertain result, ask user
+                        askUserDirectly();
+                    }
+                }).catch(function(error) {
+                    console.error('PDF support detection error:', error);
+                    askUserDirectly();
+                });
+            });
+        })();
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+                if (!['input', 'textarea', 'select'].includes(e.target.tagName.toLowerCase())) {
+                    e.preventDefault();
+                    
+                    if (e.key === 'ArrowLeft') {
+                        <?php if ($prevSection): ?>
+                        window.location.href = '?section=<?= urlencode($prevSection) ?>';
+                        <?php endif; ?>
+                    } else {
+                        <?php if ($nextSection): ?>
+                        window.location.href = '?section=<?= urlencode($nextSection) ?>';
+                        <?php endif; ?>
+                    }
+                }
+            }
+        });
+        
+        // Get DOM elements
+        const searchInput = document.getElementById('searchInput');
+        const showAllPagesBtn = document.getElementById('showAllPagesBtn');
+        const showByCategoryBtn = document.getElementById('showByCategoryBtn');
+        const showCurrentBtn = document.getElementById('showCurrentBtn');
+        const backToMainBtn = document.getElementById('backToMainBtn');
+        const backToHomeBtn = document.getElementById('backToHomeBtn');
+        const mainContainer = document.getElementById('mainContainer');
+        
+        // Search functionality
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchCatalog(this.value);
+            }
+        });
+        
+        // Button event listeners
+        showAllPagesBtn.addEventListener('click', showAllPages);
+        showByCategoryBtn.addEventListener('click', showByCategory);
+        showCurrentBtn.addEventListener('click', showCurrentPage);
+        backToMainBtn.addEventListener('click', backToMain);
+        backToHomeBtn.addEventListener('click', backToHome);
+        
+        // Show all pages function
+        function showAllPages() {
+            fetch(window.location.pathname, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'action=get_catalog_structure'
+            })
+            .then(response => response.json())
+            .then(data => {
+                showContentWithData(data, 'all');
+            })
+            .catch(error => {
+                console.error('Error loading catalog data:', error);
+                showError('Failed to load catalog data');
+            });
+        }
+        
+        // Show Product ID indexes - helps users find specific catalog pages with product images
+        function showByCategory() {
+            fetch(window.location.pathname, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'action=get_catalog_structure'
+            })
+            .then(response => response.json())
+            .then(data => {
+                showContentWithData(data, 'category');
+            })
+            .catch(error => {
+                console.error('Error loading catalog data:', error);
+                showError('Failed to load catalog data');
+            });
+        }
+        
+        // Show current page
+        function showCurrentPage() {
+            window.location.reload();
+        }
+        
+        // Back to main page function
+        function backToMain() {
+            window.location.href = '?section=main';
+        }
+        
+        // Back to home page function
+        function backToHome() {
+            window.location.href = 'index.php';
+        }
+        
+        // Search catalog function
+        function searchCatalog(query) {
+            if (!query.trim()) return;
+            
+            const searchTerm = query.toLowerCase().trim();
+            
+            // Check if it's a numeric search (like "5", "3", "10")
+            if (/^\d+$/.test(searchTerm)) {
+                showPagePreviewArea(searchTerm);
+                return;
+            }
+            
+            fetch(window.location.pathname, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'action=search&term=' + encodeURIComponent(searchTerm)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.type === 'direct_page') {
+                    // Navigate to the first file from direct page results
+                    window.location.href = getUrlForFile(data.files[0]);
+                    
+                } else if (data.length > 0) {
+                    // Show search results
+                    showSearchResults(data, searchTerm);
+                } else {
+                    showError('No results found for "' + searchTerm + '"');
+                }
+            })
+            .catch(error => {
+                console.error('Search error:', error);
+                showError('Search failed. Please try again.');
+            });
+        }
+        
+        // Show page preview area for numeric searches
+        function showPagePreviewArea(pageNumber) {
+            fetch(window.location.pathname, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'action=get_catalog_structure'
+            })
+            .then(response => response.json())
+            .then(data => {
+                const matchingPages = [];
+                
+                // Find all pages that start with the page number
+                if (data.content_pages) {
+                    for (const [pageGroup, files] of Object.entries(data.content_pages)) {
+                        files.forEach(fileData => {
+                            const file = fileData.filename || fileData; // Handle both old and new format
+                            // Match patterns like page_05a.pdf, page_5b.pdf for search "5"
+                            const pageMatch = file.match(/page_0*(\d+)([a-z]*)/i);
+                            if (pageMatch && pageMatch[1] === pageNumber) {
+                                matchingPages.push({
+                                    file: file,
+                                    fileData: fileData,
+                                    pageLabel: `Page ${pageNumber.toUpperCase()}${pageMatch[2] ? pageMatch[2].toUpperCase() : ''}`,
+                                    suffix: pageMatch[2] || ''
+                                });
+                            }
+                        });
+                    }
+                }
+                
+                if (matchingPages.length > 0) {
+                    showPagePreviews(matchingPages, pageNumber);
+                } else {
+                    showError(`No pages found for Page ${pageNumber}`);
+                }
+            })
+            .catch(error => {
+                console.error('Error loading page previews:', error);
+                showError('Failed to load page previews');
+            });
+        }
+        
+        // Show page previews in a grid
+        function showPagePreviews(pages, pageNumber) {
+            let content = '<div class="catalog-welcome">';
+            content += `<h2>📄 Page ${pageNumber} Series</h2>`;
+            content += `<p>Found ${pages.length} catalog page(s) with product images in the Page ${pageNumber} series. Click any preview to view:</p>`;
+            content += '<div class="page-preview-grid">';
+            
+            pages.forEach(page => {
+                const sectionKey = getSectionKeyForFile(page.file);
+                const fileSize = (page.fileData && page.fileData.sizeFormatted) ? page.fileData.sizeFormatted : 'Unknown size';
+                
+                content += `<div class="page-preview-card">`;
+                content += `<div class="preview-header">`;
+                content += `<div class="preview-icon">📄</div>`;
+                content += `<h3>${page.pageLabel}</h3>`;
+                content += `</div>`;
+                content += `<div class="preview-info">`;
+                content += `<p class="file-name">${page.file}</p>`;
+                content += `<p class="file-size">${fileSize}</p>`;
+                content += `</div>`;
+                content += `<div class="preview-actions">`;
+                content += `<a href="?section=${sectionKey}" class="preview-btn primary">📖 View Page</a>`;
+                content += `<a href="Cadman_catalog/${page.file}" class="preview-btn secondary" target="_blank">🔗 Open PDF</a>`;
+                content += `<a href="Cadman_catalog/${page.file}" class="preview-btn secondary" download>📥 Download</a>`;
+                content += `</div>`;
+                content += `</div>`;
+            });
+            
+            content += '</div>';
+            content += '<div style="margin-top: 30px; text-align: center;">';
+            content += '<button onclick="showCurrentPage()" class="control-btn">🏠 Back to Current Page</button>';
+            content += '<button onclick="showAllPages()" class="control-btn secondary">📄 Show All Pages</button>';
+            content += '</div>';
+            content += '</div>';
+            
+            mainContainer.innerHTML = content;
+        }
+        
+        // Show content with data (all pages or categories)
+        function showContentWithData(catalogData, displayType) {
+            let content = '<div class="catalog-welcome">';
+            
+            if (displayType === 'all') {
+                content += '<h2>📄 All Available Pages</h2>';
+                content += '<p>Click on any page to view it:</p>';
+                content += '<div class="category-grid">';
+                
+                // Show all content pages
+                if (catalogData.content_pages) {
+                    for (const [pageGroup, files] of Object.entries(catalogData.content_pages)) {
+                        files.forEach(fileData => {
+                            const file = fileData.filename || fileData; // Handle both old and new format
+                            const pageLabel = file.replace('.pdf', '').replace('page_', 'Page ').toUpperCase();
+                            const sectionKey = getSectionKeyForFile(file);
+                            const fileSize = (fileData.sizeFormatted) ? ` (${fileData.sizeFormatted})` : '';
+                            content += `<a href="?section=${sectionKey}" class="category-card">`;
+                            content += `<h3>📄 ${pageLabel}</h3>`;
+                            content += `<p>Click to view${fileSize}</p>`;
+                            content += `</a>`;
+                        });
+                    }
+                }
+            } else if (displayType === 'category') {
+                content += '<h2>� Product ID Indexes</h2>';
+                content += '<p>Select a Product ID index to find specific catalog pages with product images:</p>';
+                content += '<div class="category-grid">';
+                
+                // Show categories
+                if (catalogData.indexes) {
+                    for (const [category, fileData] of Object.entries(catalogData.indexes)) {
+                        const file = fileData.filename || fileData; // Handle both old and new format
+                        const sectionKey = getSectionKeyForFile(file);
+                        const fileSize = (fileData.sizeFormatted) ? ` (${fileData.sizeFormatted})` : '';
+                        content += `<a href="?section=${sectionKey}" class="category-card">`;
+                        content += `<h3>� ${category}</h3>`;
+                        content += `<p>Product ID Index${fileSize}</p>`;
+                        content += `</a>`;
+                    }
+                }
+            }
+            
+            content += '</div>';
+            content += '<div style="margin-top: 30px; text-align: center;">';
+            content += '<button onclick="showCurrentPage()" class="control-btn">🏠 Back to Current Page</button>';
+            content += '</div>';
+            content += '</div>';
+            
+            mainContainer.innerHTML = content;
+        }
+        
+        // Show search results
+        function showSearchResults(results, searchTerm) {
+            let content = '<div class="catalog-welcome">';
+            content += `<h2>🔍 Search Results for "${searchTerm}"</h2>`;
+            
+            results.forEach(result => {
+                content += '<div class="search-results">';
+                content += `<h3>${result.category}</h3>`;
+                content += `<p>${result.description}</p>`;
+                content += '<div class="category-grid">';
+                
+                if (result.data.indexes && result.data.indexes.length > 0) {
+                    result.data.indexes.forEach(file => {
+                        const sectionKey = getSectionKeyForFile(file);
+                        content += `<a href="?section=${sectionKey}" class="category-card">`;
+                        content += `<h3>📑 ${file.replace('.pdf', '').replace('index_page_', '').replace(/_/g, ' ')}</h3>`;
+                        content += `<p>Index Page</p>`;
+                        content += `</a>`;
+                    });
+                }
+                
+                if (result.data.content_pages && result.data.content_pages.length > 0) {
+                    result.data.content_pages.forEach(file => {
+                        const pageLabel = file.replace('.pdf', '').replace('page_', 'Page ').toUpperCase();
+                        const sectionKey = getSectionKeyForFile(file);
+                        content += `<a href="?section=${sectionKey}" class="category-card">`;
+                        content += `<h3>📄 ${pageLabel}</h3>`;
+                        content += `<p>Content Page</p>`;
+                        content += `</a>`;
+                    });
+                }
+                
+                content += '</div>';
+                content += '</div>';
+            });
+            
+            content += '<div style="margin-top: 30px; text-align: center;">';
+            content += '<button onclick="showCurrentPage()" class="control-btn">🏠 Back to Current Page</button>';
+            content += '</div>';
+            content += '</div>';
+            
+            mainContainer.innerHTML = content;
+        }
+        
+        // Helper function to get section key for a file
+        function getSectionKeyForFile(filename) {
+            // Comprehensive file-to-section mapping for page preview navigation
+            const fileMap = {
+                // Index and special pages
+                'index_main.pdf': 'main',
+                'Title_page.pdf': 'title',
+                
+                // Product ID index pages
+                'index_page_10k-crosses_01.pdf': 'crosses',
+                'index_page_engagementsets_01.pdf': 'engagement',
+                'index_page_stoneset_01.pdf': 'stoneset',
+                'index_page_Celtic_01.pdf': 'celtic',
+                'index_page_classic_01.pdf': 'classic',
+                'index_page_bands_01.pdf': 'bands',
+                'index_page_dad_01.pdf': 'dad',
+                'index_page_corp_01.pdf': 'corp',
+                'index_page_accessories_01.pdf': 'accessories',
+                
+                // Common page mappings - numbered pages
+                'page_01a.pdf': '01a',
+                'page_01b.pdf': '01b',
+                'page_02a.pdf': '02a',
+                'page_02b.pdf': '02b',
+                'page_03a.pdf': '03a',
+                'page_03b.pdf': '03b',
+                'page_03c.pdf': '03c',
+                'page_03d.pdf': '03d',
+                'page_03e.pdf': '03e',
+                'page_04a.pdf': '04a',
+                'page_04b.pdf': '04b',
+                'page_05a.pdf': '05a',
+                'page_05b.pdf': '05b',
+                'page_05c.pdf': '05c',
+                'page_06a.pdf': '06a',
+                'page_06b.pdf': '06b',
+                'page_07a.pdf': '07a',
+                'page_07b.pdf': '07b',
+                'page_08a.pdf': '08a',
+                'page_08b.pdf': '08b',
+                'page_09a.pdf': '09a',
+                'page_09b.pdf': '09b',
+                'page_10a.pdf': '10a',
+                'page_10b.pdf': '10b',
+                
+                // Additional mappings for higher page numbers if they exist
+                'page_11a.pdf': '11a',
+                'page_11b.pdf': '11b',
+                'page_12a.pdf': '12a',
+                'page_12b.pdf': '12b',
+                'page_13a.pdf': '13a',
+                'page_13b.pdf': '13b',
+                'page_14a.pdf': '14a',
+                'page_14b.pdf': '14b',
+                'page_15a.pdf': '15a',
+                'page_15b.pdf': '15b'
+            };
+            
+            // If we have an exact mapping, use it
+            if (fileMap[filename]) {
+                return fileMap[filename];
+            }
+            
+            // Dynamic mapping for page files not explicitly listed
+            let pageMatch = filename.match(/page_(\d+)([a-z]*)/i);
+            if (pageMatch) {
+                const pageNum = pageMatch[1].padStart(2, '0'); // Ensure 2-digit format
+                const suffix = pageMatch[2] ? pageMatch[2].toLowerCase() : '';
+                return pageNum + suffix;
+            }
+            
+            // Dynamic mapping for index pages
+            if (filename.startsWith('index_page_')) {
+                return filename.replace('index_page_', '').replace('_01.pdf', '');
+            }
+            
+            // Fallback: clean up common patterns
+            return filename.replace('.pdf', '').replace('page_', '').replace('index_page_', '');
+        }
+        
+        // Helper function to get URL for a file
+        function getUrlForFile(filename) {
+            const sectionKey = getSectionKeyForFile(filename);
+            return `?section=${sectionKey}`;
+        }
+        
+        // Show error message
+        function showError(message) {
+            mainContainer.innerHTML = `
+                <div class="catalog-welcome">
+                    <div class="pdf-preview">
+                        <div class="pdf-icon">⚠️</div>
+                        <h2>Error</h2>
+                        <p style="color: #666;">${message}</p>
+                        <button onclick="showCurrentPage()" class="primary-btn">Return</button>
+                    </div>
+                </div>
+            `;
+        }
+        
+        console.log('🏭 Cadman Direct PDF Catalog with Search - Section: <?= $currentSection ?>');
+    </script>
+</body>
+</html>

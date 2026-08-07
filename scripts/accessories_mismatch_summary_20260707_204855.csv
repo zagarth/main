@@ -1,0 +1,7 @@
+category,total_rows,valid_image_rows,missing_image_rows,exact_norm_rows,exact_alnum_rows,fuzzy_candidate_rows,pdf_resolvable_rows,pdf_unresolvable_rows
+lockets,107,16,91,0,2,45,91,0
+crosses,98,29,69,0,0,25,69,0
+pendants,46,0,46,0,0,23,46,0
+bracelets,26,0,26,0,0,6,26,0
+idents,4,4,0,0,0,0,0,0
+medical,33,0,33,0,0,13,33,0

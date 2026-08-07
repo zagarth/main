@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Cadman product image coming soon">
+  <rect width="200" height="200" fill="#fafafa"/>
+  <circle cx="100" cy="85" r="32" fill="none" stroke="#b8860b" stroke-width="3"/>
+  <circle cx="100" cy="85" r="22" fill="none" stroke="#daa520" stroke-width="2"/>
+  <text x="100" y="150" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#666">Image coming soon</text>
+  <text x="100" y="170" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#b8860b" font-weight="600">CADMAN</text>
+</svg>

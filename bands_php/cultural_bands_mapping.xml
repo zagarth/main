@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cultural_bands_mapping>
+    <metadata>
+        <title>Cultural Wedding Band Product Mapping</title>
+        <version>2.0</version>
+        <source>Celtic Wedding Collection chart - January 2009 (Cultural patterns)</source>
+        <date>2025-10-30</date>
+        <notes>Cultural heritage patterns from various civilizations - pricing excluded</notes>
+    </metadata>
+
+    <!-- Cultural Band Patterns Overview -->
+    <patterns_info>
+        <pattern_count>6</pattern_count>
+        <width_options>
+            <width>7.5mm</width>
+            <width>6.5mm</width>
+            <width>5.5mm</width>
+        </width_options>
+        <heritage>Multi-cultural traditional wedding band designs</heritage>
+        <note>Patterns from Roman/Greek, Norse/Viking, and other cultural traditions plus Celtic variants</note>
+    </patterns_info>
+
+    <!-- Pattern 1: Roman Key (Greek Key / Meander) -->
+    <pattern name="Roman key" symbol="▭▭▭▭▭▭▭▭">
+        <description>Classic Greek key/meander pattern symbolizing infinity and unity</description>
+        <heritage>Roman/Greek</heritage>
+        <alternate_names>
+            <name>Greek Key</name>
+            <name>Greek Meander</name>
+            <name>Meandros</name>
+        </alternate_names>
+        <cultural_significance>Ancient pattern representing the eternal flow of life, unity, and the bonds of friendship and love</cultural_significance>
+        <band width="7.5mm">
+            <product_id>5298</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="6.5mm">
+            <product_id>5432</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="5.5mm">
+            <product_id>5602</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+    </pattern>
+
+    <!-- Pattern 2: Jelling Band (Viking/Norse) -->
+    <pattern name="Jelling band" symbol="⧓⧓⧓⧓⧓⧓⧓⧓">
+        <description>Viking-age interlace from Jelling, Denmark</description>
+        <heritage>Norse/Viking</heritage>
+        <alternate_names>
+            <name>Viking Interlace</name>
+            <name>Norse Knotwork</name>
+        </alternate_names>
+        <cultural_significance>Based on the Jelling stones in Denmark, royal monuments from the Viking Age representing strength, power, and eternal bonds</cultural_significance>
+        <band width="7.5mm">
+            <product_id>5416</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="6.5mm">
+            <product_id>5448</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="5.5mm">
+            <product_id>5624</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+    </pattern>
+
+    <!-- Pattern 3: Greek Key (Additional design) -->
+    <pattern name="Greek key variant" symbol="⧗⧗⧗⧗⧗⧗⧗⧗">
+        <description>Additional Greek key pattern with unique styling</description>
+        <heritage>Greek</heritage>
+        <alternate_names>
+            <name>Greek Meander Variant</name>
+            <name>Athenian Pattern</name>
+        </alternate_names>
+        <cultural_significance>Another interpretation of the classic Greek meander, representing eternal unity and the unbroken flow of life</cultural_significance>
+        <band width="7.5mm">
+            <product_id>5590</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+    </pattern>
+
+    <!-- Pattern 4: Runic Script -->
+    <pattern name="Runic script" symbol="ᚱᚢᚾᛁᚴ">
+        <description>Traditional Norse runic inscription band</description>
+        <heritage>Norse/Viking</heritage>
+        <alternate_names>
+            <name>Elder Futhark</name>
+            <name>Viking Runes</name>
+            <name>Nordic Script</name>
+        </alternate_names>
+        <cultural_significance>Ancient Norse runic alphabet used by Vikings, representing wisdom, protection, and mystical power</cultural_significance>
+        <band width="7.5mm">
+            <product_id>5664</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+    </pattern>
+
+    <!-- Pattern 5: Byzantine Cross -->
+    <pattern name="Byzantine cross" symbol="☩☩☩☩☩☩☩☩">
+        <description>Traditional Byzantine cross pattern symbolizing faith</description>
+        <heritage>Byzantine</heritage>
+        <alternate_names>
+            <name>Orthodox Cross</name>
+            <name>Eastern Cross</name>
+            <name>Constantinople Pattern</name>
+        </alternate_names>
+        <cultural_significance>Sacred symbol from the Byzantine Empire, representing faith, devotion, and divine protection</cultural_significance>
+        <band width="7.5mm">
+            <product_id>5690</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+    </pattern>
+
+    <!-- Pattern 6: Warrior's Shield -->
+    <pattern name="Warrior's shield" symbol="⛨⛨⛨⛨⛨⛨⛨⛨">
+        <description>Shield pattern representing protection and strength</description>
+        <heritage>Celtic</heritage>
+        <alternate_names>
+            <name>Celtic Shield</name>
+            <name>Guardian Pattern</name>
+        </alternate_names>
+        <cultural_significance>Shield symbolism representing protection and strength, from Celtic warrior traditions</cultural_significance>
+        <band width="7.5mm">
+            <product_id>5462</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="6.5mm">
+            <product_id>5464</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="5.5mm">
+            <product_id>5466</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+    </pattern>
+
+    <!-- Technical Specifications -->
+    <specifications>
+        <size_ranges>
+            <mens_sizes min="9" max="16" note="Standard men's sizing"/>
+            <ladies_sizes min="2" max="8.5" note="Standard ladies' sizing"/>
+        </size_ranges>
+        <available_metals>
+            <metal>950 Silver (95% pure)</metal>
+            <metal>10K Gold (41.7% pure)</metal>
+            <metal>14K Gold (58.5% pure)</metal>
+            <metal>18K Gold (75% pure)</metal>
+        </available_metals>
+        <available_colors>
+            <color metal="10k,14k,18k">Yellow Gold</color>
+            <color metal="10k,14k,18k">White Gold</color>
+            <color metal="10k,14k,18k">Rose Gold</color>
+        </available_colors>
+        <surface_finish>
+            <primary>High Polish - mirror finish</primary>
+            <secondary>Brushed/Matte - subtle texture</secondary>
+            <tertiary>Satin - soft lustrous finish</tertiary>
+        </surface_finish>
+    </specifications>
+
+    <!-- Special Notes -->
+    <special_notes>
+        <note category="gender_suffix">
+            All products use same base product ID for both men's and ladies' versions (no M/L suffix in product ID)
+        </note>
+        <note category="sizing">
+            Width is fixed per product ID - cannot be customized
+        </note>
+        <note category="customization">
+            Custom engraving available on interior of all bands
+        </note>
+        <note category="heritage">
+            Roman key pattern dates to ancient Greece and Rome (800 BC - 400 AD)
+            Jelling band pattern from Viking Age Denmark (10th century AD)
+            Greek key variant represents additional Hellenic design traditions
+            Runic script from Norse/Viking culture (2nd-8th centuries AD)
+            Byzantine cross from Eastern Roman Empire (330-1453 AD)
+            Celtic patterns represent Irish/Scottish/Welsh cultural heritage adapted for cultural collection
+        </note>
+        <note category="cultural_appeal">
+            These patterns appeal to customers seeking heritage designs from multiple cultures:
+            Greek/Roman classical traditions, Norse/Viking heritage, Byzantine religious symbolism,
+            and Celtic cultural interpretations distinct from the main Celtic collection
+        </note>
+    </special_notes>
+</cultural_bands_mapping>

@@ -1,0 +1,4655 @@
+[
+    {
+        "ID": "can_001",
+        "name": "Carters Jewellers Limited",
+        "street": "4741 Lakelse Ave 320",
+        "city": "Terrace",
+        "state": "BC",
+        "postal_code": "V8G 4R9",
+        "country": "Canada",
+        "phone": "(250) 635-9000",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_002",
+        "name": "Toth Jewellers Ltd.",
+        "street": "559 Talbot St.",
+        "city": "St. Thomas",
+        "state": "ON",
+        "postal_code": "N5P 1C5",
+        "country": "Canada",
+        "phone": "(519) 631-9620",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_003",
+        "name": "A Touch Of Gold",
+        "street": "500 Main St.",
+        "city": "Downeast Mall",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_004",
+        "name": "Touch of Gold",
+        "street": "Spring Garden Place",
+        "city": "Halifax",
+        "state": "NS",
+        "postal_code": "B3J 2R7",
+        "country": "Canada",
+        "phone": "(902) 423-5600",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_005",
+        "name": "Chan W K Jewellers Ltd",
+        "street": "393 Portage Ave.",
+        "city": "402 - Portage Place Shopping Ctr",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_006",
+        "name": "Charlotte Jewelers Limited",
+        "street": "341 George St. N.",
+        "city": "Peterborough",
+        "state": "ON",
+        "postal_code": "K9H 3P9",
+        "country": "Canada",
+        "phone": "(705) 743-3551",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_007",
+        "name": "Citizen Time & Gold Limited",
+        "street": "723 Johnson Street",
+        "city": "Victoria",
+        "state": "BC",
+        "postal_code": "V8W 1M8",
+        "country": "Canada",
+        "phone": "(250) 388-4735",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_008",
+        "name": "Trochu Giftware Ltd.",
+        "street": "219 Main Street",
+        "city": "Trochu",
+        "state": "AB",
+        "postal_code": "T0M 2C0",
+        "country": "Canada",
+        "phone": "(403) 442-3977",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_009",
+        "name": "Classic Jewelers (2000) Ltd.",
+        "street": "128 - 400 King St.",
+        "city": "Estevan",
+        "state": "SK",
+        "postal_code": "S4A 2B4",
+        "country": "Canada",
+        "phone": "(306) 634-5338",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_010",
+        "name": "Tuck Jewellers Limited",
+        "street": "10 Clarence St.",
+        "city": "Port Colborne",
+        "state": "ON",
+        "postal_code": "L3K 3E8",
+        "country": "Canada",
+        "phone": "(905) 834-3823",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_011",
+        "name": "Clowes Jewellers (1978) Ltd.",
+        "street": "4900 Molly Banister Drive",
+        "city": "Unit 123",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_012",
+        "name": "Vanthuyne Jewellers Limited",
+        "street": "150 West Street",
+        "city": "Simcoe",
+        "state": "ON",
+        "postal_code": "N3Y 5C1",
+        "country": "Canada",
+        "phone": "(519) 426-9160",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_013",
+        "name": "Wade's Jewellery Ltd.",
+        "street": "140 - 3rd Ave. W.",
+        "city": "Drumheller",
+        "state": "AB",
+        "postal_code": "T0J 0Y0",
+        "country": "Canada",
+        "phone": "(403) 823-4763",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_014",
+        "name": "D S Walker Jewellers Ltd.",
+        "street": "77 Margaret Ave.",
+        "city": "Wallaceburg",
+        "state": "ON",
+        "postal_code": "N8A 1Z8",
+        "country": "Canada",
+        "phone": "(519) 627-1000",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_015",
+        "name": "Curry's Jewellers 1978 Limited",
+        "street": "10019 - 100Th Avenue",
+        "city": "Grande Prairie",
+        "state": "AB",
+        "postal_code": "T8V 0V2",
+        "country": "Canada",
+        "phone": "(780) 532-2160",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_016",
+        "name": "Dana's Goldsmithing Inc.",
+        "street": "186 Queen Street",
+        "city": "Port Perry",
+        "state": "ON",
+        "postal_code": "L9L 1B8",
+        "country": "Canada",
+        "phone": "(905) 985-2953",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_017",
+        "name": "Ware's Jewelers Limited",
+        "street": "4934 - 50 Street",
+        "city": "Stettler",
+        "state": "AB",
+        "postal_code": "T0C 2L0",
+        "country": "Canada",
+        "phone": "(403) 742-2635",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_018",
+        "name": "Delamont E H Jeweler Limited",
+        "street": "915 Baker St.",
+        "city": "Cranbrook",
+        "state": "BC",
+        "postal_code": "V1C 1A4",
+        "country": "Canada",
+        "phone": "(250) 426-2772",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_019",
+        "name": "Wendts Jewellery Limited",
+        "street": "102 Elora Street",
+        "city": "Mildmay",
+        "state": "ON",
+        "postal_code": "N0G 2J0",
+        "country": "Canada",
+        "phone": "(519) 367-5357",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_020",
+        "name": "Wharrams Jewellery Limited",
+        "street": "21 Talbot Street W",
+        "city": "Leamington",
+        "state": "ON",
+        "postal_code": "N8H 1M3",
+        "country": "Canada",
+        "phone": "(519) 326-9271",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_021",
+        "name": "Durrant Jewellers Limited",
+        "street": "43 Hurontario Street",
+        "city": "Collingwood",
+        "state": "ON",
+        "postal_code": "L9Y 2L7",
+        "country": "Canada",
+        "phone": "(705) 445-3731",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_022",
+        "name": "Ron Wilkin Jewellers Ltd.",
+        "street": "109 St. Andrew Street",
+        "city": "Fergus",
+        "state": "ON",
+        "postal_code": "N1M 2W7",
+        "country": "Canada",
+        "phone": "(519) 843-1225",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_023",
+        "name": "Excelsior Jewellers Ltd",
+        "street": "24C South 2nd. Ave.",
+        "city": "Williams Lake",
+        "state": "BC",
+        "postal_code": "V2G 1H6",
+        "country": "Canada",
+        "phone": "(250) 392-4747",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_024",
+        "name": "Woodland E G & Son Jewellers Limited",
+        "street": "150 Oliver Street.",
+        "city": "Williams Lake",
+        "state": "BC",
+        "postal_code": "V2G 1L8",
+        "country": "Canada",
+        "phone": "(250) 392-5423",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_025",
+        "name": "Excel Jewellers Limited",
+        "street": "370, 20202-66th Ave.",
+        "city": "Langley",
+        "state": "BC",
+        "postal_code": "V2Y 1M9",
+        "country": "Canada",
+        "phone": "(604) 539-7720",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_026",
+        "name": "Woodley's Jewellers Ltd",
+        "street": "109 King Street E.",
+        "city": "Gananoque",
+        "state": "ON",
+        "postal_code": "K7G 1G3",
+        "country": "Canada",
+        "phone": "(613) 382-3202",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_027",
+        "name": "Wright's Jewelry Ltd.",
+        "street": "3292 Dunmore Rd. S. E.",
+        "city": "Unit 151 Medicine Hat Mall",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_028",
+        "name": "H. E. Fancy Jewellery Ltd.",
+        "street": "318 St. George St.",
+        "city": "Annapolis Royal",
+        "state": "NS",
+        "postal_code": "B0S 1A0",
+        "country": "Canada",
+        "phone": "(902) 532-5185",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_029",
+        "name": "Wright's Jewelry Ltd.",
+        "street": "108 Second St. W.",
+        "city": "Brooks",
+        "state": "AB",
+        "postal_code": "T1R 1B7",
+        "country": "Canada",
+        "phone": "(403) 362-4345",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_030",
+        "name": "H. E. Fancy Jewellery Ltd.",
+        "street": "57 Water Street",
+        "city": "Digby",
+        "state": "NS",
+        "postal_code": "B0V 1A0",
+        "country": "Canada",
+        "phone": "(902) 245-2431",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_031",
+        "name": "York Jewllers Ltd.",
+        "street": "39 3rd St. N.E.",
+        "city": "Weyburn",
+        "state": "SK",
+        "postal_code": "S4H 0W1",
+        "country": "Canada",
+        "phone": "(306) 842-5484",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_032",
+        "name": "Fiancee Jewellers Limited",
+        "street": "216 Princess St.",
+        "city": "Kingston",
+        "state": "ON",
+        "postal_code": "K7L 1B2",
+        "country": "Canada",
+        "phone": "(613) 542-8112",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_033",
+        "name": "Young J H & Sons Ltd.",
+        "street": "126 Lynden Road",
+        "city": "Brantford",
+        "state": "ON",
+        "postal_code": "N3R 8A3",
+        "country": "Canada",
+        "phone": "(519) 752-2330",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_034",
+        "name": "Fine Things Inc.",
+        "street": "88E Manitoba Drive",
+        "city": "Terra Nova Plaza",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_035",
+        "name": "Zeke's Jewellers Ltd.",
+        "street": "902 Rosser Ave.",
+        "city": "Brandon",
+        "state": "MB",
+        "postal_code": "R7A 0L4",
+        "country": "Canada",
+        "phone": "(204) 727-5500",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_036",
+        "name": "Zeke's Jewellers Ltd.",
+        "street": "1235 Main St. N.",
+        "city": "Town 'N Country Mall",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_037",
+        "name": "Zeke's Jewellers Ltd.",
+        "street": "402 Mountain Ave.",
+        "city": "Neepawa",
+        "state": "MB",
+        "postal_code": "R0J 1H0",
+        "country": "Canada",
+        "phone": "(204) 476-5386",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_038",
+        "name": "Bijouterie Ronald Fortier Inc",
+        "street": "1975 King St. W.",
+        "city": "Sherbrooke",
+        "state": "QC",
+        "postal_code": "J1J 2E6",
+        "country": "Canada",
+        "phone": "(819) 563-6460",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_039",
+        "name": "Zeke's Jewellers Ltd.",
+        "street": "11422 Railway Ave. E.",
+        "city": "Frontier Mall",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_040",
+        "name": "Zeke's Jewellers Ltd.",
+        "street": "277 Broadway St. E.",
+        "city": "Unit 7",
+        "state": "Parkland Mall",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_041",
+        "name": "Frontenac Watch Repairing Co",
+        "street": "75 Princess St.",
+        "city": "Kingston",
+        "state": "ON",
+        "postal_code": "K7L 1A6",
+        "country": "Canada",
+        "phone": "(613) 542-4666",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_042",
+        "name": "Gifts of Gold",
+        "street": "23 Broadway Street East",
+        "city": "Yorkton",
+        "state": "SK",
+        "postal_code": "S3N 0K4",
+        "country": "Canada",
+        "phone": "(306) 783-5550",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_043",
+        "name": "Gold Direct Jewellers",
+        "street": "1643 LaSalle Blvd.",
+        "city": "Sudbury",
+        "state": "ON",
+        "postal_code": "P3A 1Z8",
+        "country": "Canada",
+        "phone": "(705) 525-4653",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_044",
+        "name": "Gold & Ice",
+        "street": "119 King George Road",
+        "city": "Brantford",
+        "state": "ON",
+        "postal_code": "N3R 5K7",
+        "country": "Canada",
+        "phone": "(519) 770-4222",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_045",
+        "name": "Gold & Ice",
+        "street": "200 Broadway Street",
+        "city": "Town Centre Mall",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_046",
+        "name": "Gold Fever",
+        "street": "5100 50th Ave. N.",
+        "city": "1-Fort Hotel Plaza",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_047",
+        "name": "The Gold Room Jewellers",
+        "street": "12014 - 72nd Ave.",
+        "city": "Surrey",
+        "state": "BC",
+        "postal_code": "V3W 2L9",
+        "country": "Canada",
+        "phone": "(604) 590-5199",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_048",
+        "name": "Gold-n-Memories",
+        "street": "178 PTH 12 N Unit 72",
+        "city": "Clearspring Centre",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_049",
+        "name": "Gold Star Jewellers Belegris Ltd",
+        "street": "7107-120th Street",
+        "city": "North Delta",
+        "state": "BC",
+        "postal_code": "V4E 2A9",
+        "country": "Canada",
+        "phone": "(604) 596-5444",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_050",
+        "name": "Gordon's Gold Jewellers",
+        "street": "760 Hyde Park Road",
+        "city": "Oakridge Centre",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_051",
+        "name": "Gordon Jewellers Limited",
+        "street": "13 Second Street W.",
+        "city": "Cornwall",
+        "state": "ON",
+        "postal_code": "K6J 1G3",
+        "country": "Canada",
+        "phone": "(613) 932-8714",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_052",
+        "name": "Hall A M Jewellers Limited",
+        "street": "5 King Street",
+        "city": "Cobourg",
+        "state": "ON",
+        "postal_code": "K9A 2L8",
+        "country": "Canada",
+        "phone": "(905) 372-3213",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_053",
+        "name": "Harling's Jewellers B C Limited",
+        "street": "Suite 256 - 409 Granville Street",
+        "city": "United Kingdom Building",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_054",
+        "name": "Harmony House Jewellers Limited",
+        "street": "37 Main St. W.",
+        "city": "Grimsby",
+        "state": "ON",
+        "postal_code": "L3M 1R3",
+        "country": "Canada",
+        "phone": "(905) 945-4411",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_055",
+        "name": "J. P. Harris Burford Ltd.",
+        "street": "123 King St. E.",
+        "city": "Burford",
+        "state": "ON",
+        "postal_code": "N0E 1A0",
+        "country": "Canada",
+        "phone": "(519) 449-2951",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_056",
+        "name": "Heinrich Jewellery Sask. Ltd.",
+        "street": "8510-3310 8th St. E.",
+        "city": "Centre At Circle & 8th Mall",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_057",
+        "name": "Herbin's Limited",
+        "street": "453 Main Street",
+        "city": "Wolfville",
+        "state": "NS",
+        "postal_code": "B4P 1E3",
+        "country": "Canada",
+        "phone": "(902) 542-5705",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_058",
+        "name": "Huxley R G Jewellers Ltd",
+        "street": "240 Richmond St.",
+        "city": "London",
+        "state": "ON",
+        "postal_code": "N6B 2H6",
+        "country": "Canada",
+        "phone": "(519) 679-8427",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_059",
+        "name": "Image Jewellers Ltd.",
+        "street": "9627 - 167th Ave.",
+        "city": "Edmonton",
+        "state": "AB",
+        "postal_code": "T5Z 3S3",
+        "country": "Canada",
+        "phone": "(780) 475-2933",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_060",
+        "name": "Janina's Jewellery Ltd",
+        "street": "12425 - 99th Street",
+        "city": "Grande Prairie",
+        "state": "AB",
+        "postal_code": "T8V 6Y5",
+        "country": "Canada",
+        "phone": "(780) 539-9992",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_061",
+        "name": "Jedco Limited",
+        "street": "202,10310 Jasper Ave",
+        "city": "Melton Building",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_062",
+        "name": "Jewel Box",
+        "street": "94 King St. W.",
+        "city": "Brockville",
+        "state": "ON",
+        "postal_code": "K6V 5V7",
+        "country": "Canada",
+        "phone": "(613) 345-5132",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_063",
+        "name": "Jewel Box",
+        "street": "17 Government Rd. W.",
+        "city": "Kirkland Lake",
+        "state": "ON",
+        "postal_code": "P2N 2E3",
+        "country": "Canada",
+        "phone": "(705) 567-4151",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_064",
+        "name": "Jewel Box Limited",
+        "street": "1098 Onondaga Street",
+        "city": "Oromocto Mall",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_065",
+        "name": "Jewels on Ninth Inc",
+        "street": "24 - 9th Ave South",
+        "city": "Cranbrook",
+        "state": "BC",
+        "postal_code": "V1C 2L8",
+        "country": "Canada",
+        "phone": "(250) 489-5773",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_066",
+        "name": "Don Johnson Jewellers Limited",
+        "street": "300 Mystery Lake Road",
+        "city": "City Centre Mall",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_067",
+        "name": "Jonathan's Gold & Diamonds",
+        "street": "132 - 11801 100 St",
+        "city": "Grande Prairie Mall",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_068",
+        "name": "J S Jewellery Limited",
+        "street": "5032A - 50th Street",
+        "city": "Barrhead",
+        "state": "AB",
+        "postal_code": "T7N 1A2",
+        "country": "Canada",
+        "phone": "(780) 674-5055",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_069",
+        "name": "Keller's Jewellers Ltd",
+        "street": "7180 Lantzville Rd.",
+        "city": "Lantzville",
+        "state": "BC",
+        "postal_code": "V0R 2H0",
+        "country": "Canada",
+        "phone": "(250) 390-9089",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_070",
+        "name": "Ken's Goldsmithing Ltd",
+        "street": "Pine Centre Mall",
+        "city": "Prince George",
+        "state": "BC",
+        "postal_code": "V2N 2S0",
+        "country": "Canada",
+        "phone": "(250) 564-4006",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_071",
+        "name": "King's Fine Jewellery Limited",
+        "street": "51 Avenue-111 Street",
+        "city": "320 Southgate Shopping Mall",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_072",
+        "name": "Kurtis Sales Ltd.",
+        "street": "151 Frobisher Drive",
+        "city": "Unit C-212",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_073",
+        "name": "LA Gold",
+        "street": "777 Norquay Dr.",
+        "city": "Southland Mall",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_074",
+        "name": "Lauener Bros. Jewellers Limited",
+        "street": "1355 Cedar St.",
+        "city": "Trail",
+        "state": "BC",
+        "postal_code": "V1R 4C3",
+        "country": "Canada",
+        "phone": "(250) 368-9533",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_075",
+        "name": "Bill LeBoeuf Jewellers Of Barrie Limited",
+        "street": "52 Dunlop Street W.",
+        "city": "Barrie",
+        "state": "ON",
+        "postal_code": "L4M 4T4",
+        "country": "Canada",
+        "phone": "(705) 728-3343",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_076",
+        "name": "Lesser Bros. Jewellers Ltd",
+        "street": "146 Thames Street S.",
+        "city": "Ingersoll",
+        "state": "ON",
+        "postal_code": "N5C 2T4",
+        "country": "Canada",
+        "phone": "(519) 485-2190",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_077",
+        "name": "Lloyd's Jewellers Limited",
+        "street": "606 Main Street",
+        "city": "Swan River",
+        "state": "MB",
+        "postal_code": "R0L 1Z0",
+        "country": "Canada",
+        "phone": "(204) 734-2982",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_078",
+        "name": "Maddocks-Myers Jewellers Ltd",
+        "street": "240 Grand Ave East",
+        "city": "Chatham",
+        "state": "ON",
+        "postal_code": "N7L 5A6",
+        "country": "Canada",
+        "phone": "(519) 436-0930",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_079",
+        "name": "Martin's Jewel & Gift Shop",
+        "street": "176 King St. West",
+        "city": "Dundas",
+        "state": "ON",
+        "postal_code": "L9H 1V4",
+        "country": "Canada",
+        "phone": "(905) 627-1717",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_080",
+        "name": "McGrath Diamonds Ltd.",
+        "street": "Unit 14 - 1795 Henderson Hwy",
+        "city": "McIvor Mall",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_081",
+        "name": "Monk's Jewellers Limited",
+        "street": "148 - 2945 Jacklin Road",
+        "city": "Canwest Mall",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_082",
+        "name": "Murdoch's Gem Shop Limited",
+        "street": "203 Main Street",
+        "city": "Whitehorse",
+        "state": "YT",
+        "postal_code": "Y1A 2B2",
+        "country": "Canada",
+        "phone": "(867) 667-2615",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_083",
+        "name": "Murphy P D Jewellery Limited",
+        "street": "9 Mississauga Street",
+        "city": "Orillia",
+        "state": "ON",
+        "postal_code": "L3V 1V4",
+        "country": "Canada",
+        "phone": "(705) 326-9611",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_084",
+        "name": "Murphy P D Jewellers Limited",
+        "street": "400 Bayfield Street",
+        "city": "Koslov Centre",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_085",
+        "name": "Murphy P D Jewellery Limited",
+        "street": "125 Hwy. 118 West",
+        "city": "I. D. A. Plaza",
+        "state": "Unit 3",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_086",
+        "name": "Murphy P D Jewellery Limited",
+        "street": "Parry Sound Mall",
+        "city": "Parry Sound",
+        "state": "ON",
+        "postal_code": "P2A 2G5",
+        "country": "Canada",
+        "phone": "(705) 746-9430",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_087",
+        "name": "Murphy P D Jewellers Limited",
+        "street": "531 Bryne Drive, Unit B1",
+        "city": "Barrie",
+        "state": "ON",
+        "postal_code": "L4N 9Y3",
+        "country": "Canada",
+        "phone": "(705) 719-1475",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_088",
+        "name": "A & B Gem Jewellers Ltd.",
+        "street": "1305 Pemberton Ave.",
+        "city": "Squamish",
+        "state": "BC",
+        "postal_code": "V8B 0B5",
+        "country": "Canada",
+        "phone": "(604) 892-3002",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_089",
+        "name": "C E Adams Ltd.",
+        "street": "653 3rd St. S.E.",
+        "city": "Medicine Hat",
+        "state": "AB",
+        "postal_code": "T1A 0H5",
+        "country": "Canada",
+        "phone": "(403) 526-4900",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_090",
+        "name": "Al-Brite Manufacturing Jewellers Ltd.",
+        "street": "Mezzanine 203 10130-103 Street",
+        "city": "Royal Lepage Bldg.",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_091",
+        "name": "Ted Allen's Jewellery (1977) Ltd.",
+        "street": "431 Baker St.",
+        "city": "Nelson",
+        "state": "BC",
+        "postal_code": "V1L 4H7",
+        "country": "Canada",
+        "phone": "(250) 352-5033",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_092",
+        "name": "L. J. Alteen Ltd.",
+        "street": "2 High Street",
+        "city": "Grand Falls",
+        "state": "NF",
+        "postal_code": "A2A 2J7",
+        "country": "Canada",
+        "phone": "(709) 489-5545",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_093",
+        "name": "Ollivers Fine Jewellery Inc",
+        "street": "216 8120 Beddington Blvd N W",
+        "city": "Beddington Town Centre",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_094",
+        "name": "Anstett Jewellers Limited",
+        "street": "2 The Square",
+        "city": "Goderich",
+        "state": "ON",
+        "postal_code": "N7A 3M1",
+        "country": "Canada",
+        "phone": "(519) 524-4195",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_095",
+        "name": "Appelt's Jewellery Limited",
+        "street": "305 Madison Street Unit C",
+        "city": "Winnipeg",
+        "state": "MB",
+        "postal_code": "R3J 1H9",
+        "country": "Canada",
+        "phone": "(204) 774-2829",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_096",
+        "name": "Appelt's Jewellery Limited",
+        "street": "305 Stephen Street",
+        "city": "Morden",
+        "state": "MB",
+        "postal_code": "R6M 1V1",
+        "country": "Canada",
+        "phone": "(204) 822-4501",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_097",
+        "name": "Butt E Watch & Clock Repair",
+        "street": "P B Custom",
+        "city": "110 - 1st Ave. East",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_098",
+        "name": "Penner Fine Jewellers Inc.",
+        "street": "10-436 Vansickle Road",
+        "city": "St. Catharines",
+        "state": "ON",
+        "postal_code": "L2R 5G8",
+        "country": "Canada",
+        "phone": "(905) 688-0579",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_099",
+        "name": "Appelt's Jewellery (Steinbach) Limited",
+        "street": "11-178 PTH 12 N",
+        "city": "Steinbach",
+        "state": "MB",
+        "postal_code": "R5G 1T7",
+        "country": "Canada",
+        "phone": "(204) 326-2511",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_100",
+        "name": "Appelt's Diamonds Limited",
+        "street": "110-1570 Kenaston Boulevard",
+        "city": "Kenaston Common",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_101",
+        "name": "Pommier Jewellers Ltd.",
+        "street": "6 Second St. E.",
+        "city": "Cornwall",
+        "state": "ON",
+        "postal_code": "K6H 1Y3",
+        "country": "Canada",
+        "phone": "(613) 932-4022",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_102",
+        "name": "Prairie Gold Jewellery",
+        "street": "101 11070 - 100 Ave.",
+        "city": "Grand Prairie",
+        "state": "AB",
+        "postal_code": "T8V 7L5",
+        "country": "Canada",
+        "phone": "(780) 538-3060",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_103",
+        "name": "Audrinna's Jlry Ltd.",
+        "street": "5004A Dahl Drive, Unit 6",
+        "city": "Whitecourt",
+        "state": "AB",
+        "postal_code": "T7S 1X6",
+        "country": "Canada",
+        "phone": "(780) 778-1994",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_104",
+        "name": "Preston Jewellers Ltd",
+        "street": "979 Island Hwy.",
+        "city": "Campbell River",
+        "state": "BC",
+        "postal_code": "V9W 2C4",
+        "country": "Canada",
+        "phone": "(250) 286-6421",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_105",
+        "name": "Austen Jlrs. Ltd.",
+        "street": "103 - 3rd Ave. W.",
+        "city": "High River",
+        "state": "AB",
+        "postal_code": "T1V 1M6",
+        "country": "Canada",
+        "phone": "(403) 652-1162",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_106",
+        "name": "Babcock Jewellers Dresden Limited",
+        "street": "433 St. George St.",
+        "city": "Dresden",
+        "state": "ON",
+        "postal_code": "N0P 1M0",
+        "country": "Canada",
+        "phone": "(519) 683-2463",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_107",
+        "name": "Bailey & Sons Jewellers Ltd.",
+        "street": "4190 Petrolia Street",
+        "city": "Petrolia",
+        "state": "ON",
+        "postal_code": "N0N 1R0",
+        "country": "Canada",
+        "phone": "(519) 882-0790",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_108",
+        "name": "Reesor's Jewellery 1978 Limited",
+        "street": "Unit 51 - 1570 18th Street",
+        "city": "Brandon",
+        "state": "MB",
+        "postal_code": "R7A 5C5",
+        "country": "Canada",
+        "phone": "(204) 726-9100",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_109",
+        "name": "Reid D M Jewellers Limited",
+        "street": "395 Main St.",
+        "city": "Kentville",
+        "state": "NS",
+        "postal_code": "B4N 1K7",
+        "country": "Canada",
+        "phone": "(902) 678-6686",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_110",
+        "name": "Bakelaar Jewellers Ltd",
+        "street": "421 Main Street S.",
+        "city": "Exeter",
+        "state": "ON",
+        "postal_code": "N0M 1S1",
+        "country": "Canada",
+        "phone": "(519) 235-2720",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_111",
+        "name": "Barthau Jlrs. Ltd.",
+        "street": "6312 Main St.",
+        "city": "Stouffville",
+        "state": "ON",
+        "postal_code": "L4A 1G8",
+        "country": "Canada",
+        "phone": "(905) 640-4646",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_112",
+        "name": "Bateman Jewellers G W Limited",
+        "street": "234 2nd Ave. South",
+        "city": "Saskatoon",
+        "state": "SK",
+        "postal_code": "S7K 1K9",
+        "country": "Canada",
+        "phone": "(306) 244-8277",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_113",
+        "name": "Roland's Jewelry 2008 Inc.",
+        "street": "10307 100th Ave.",
+        "city": "Ft.Saskatchewan",
+        "state": "AB",
+        "postal_code": "T8L 1Y9",
+        "country": "Canada",
+        "phone": "(780) 998-3463",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_114",
+        "name": "Bazlik E Jewellers Limited",
+        "street": "219 Kelsey Blvd.",
+        "city": "Churchill",
+        "state": "MB",
+        "postal_code": "R0B 0E0",
+        "country": "Canada",
+        "phone": "(204) 675-2397",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_115",
+        "name": "Royalty Goldsmiths Inc.",
+        "street": "2223 Victoria Ave. East",
+        "city": "Victoria Square",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_116",
+        "name": "Bennardo Jewellers Limited",
+        "street": "126 Great Northern Road",
+        "city": "Station Mall",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_117",
+        "name": "Sandy's Jewellery & Gifts Ltd.",
+        "street": "Fairview, AB, T0H 1L0",
+        "city": "(780) 835-2575",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_118",
+        "name": "Blackburn Jewellers Limited",
+        "street": "768 Main Street",
+        "city": "Pincher Creek",
+        "state": "AB",
+        "postal_code": "T0K 1W0",
+        "country": "Canada",
+        "phone": "(403) 627-3292",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_119",
+        "name": "Bob's Watch Repair Limited",
+        "street": "37 Park Street N.",
+        "city": "Peterborough",
+        "state": "ON",
+        "postal_code": "K9J 3V5",
+        "country": "Canada",
+        "phone": "(705) 742-8787",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_120",
+        "name": "Savoy's Jewellers Limited",
+        "street": "290 Queen St. E.",
+        "city": "Sault Ste Marie",
+        "state": "ON",
+        "postal_code": "P6A 1Y7",
+        "country": "Canada",
+        "phone": "(705) 253-9703",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_121",
+        "name": "Savoy's Jewellers Limited",
+        "street": "293 Bay Street",
+        "city": "Station Mall",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_122",
+        "name": "Sharon's Jewellery & Watch Repair",
+        "street": "235A Birch Street",
+        "city": "100 Mile House",
+        "state": "BC",
+        "postal_code": "V0K 2E0",
+        "country": "Canada",
+        "phone": "(250) 395-2597",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_123",
+        "name": "Shaw W J Jewellery Limited",
+        "street": "41 Mississauga St. E.",
+        "city": "Orillia",
+        "state": "ON",
+        "postal_code": "L3V 1V4",
+        "country": "Canada",
+        "phone": "(705) 325-7800",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_124",
+        "name": "SherRing Goldsmiths Ltd.",
+        "street": "91 Broadway St E.",
+        "city": "Yorkton",
+        "state": "SK",
+        "postal_code": "S3N 0L1",
+        "country": "Canada",
+        "phone": "(306) 782-4653",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_125",
+        "name": "Simon Imports Ltd",
+        "street": "213 1120 Grant Ave.",
+        "city": "Winnipeg",
+        "state": "MB",
+        "postal_code": "R3M 2A6",
+        "country": "Canada",
+        "phone": "(204) 475-8443",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_126",
+        "name": "Simpson J B Jewellers Inc",
+        "street": "469 Richmond Street",
+        "city": "London",
+        "state": "ON",
+        "postal_code": "N6A 3E4",
+        "country": "Canada",
+        "phone": "(519) 433-0021",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_127",
+        "name": "Sonya Roe Jewellers Inc",
+        "street": "138 King St. West",
+        "city": "Suite 101",
+        "state": "",
+        "postal_code": "",
+        "country": "Canada",
+        "phone": "",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_128",
+        "name": "Brennans Jewellers Limited",
+        "street": "210 Main Street South",
+        "city": "Kenora",
+        "state": "ON",
+        "postal_code": "P9N 1T2",
+        "country": "Canada",
+        "phone": "(807) 468-7922",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_129",
+        "name": "A P Brown Jewellers Limited",
+        "street": "82 West Main St",
+        "city": "Welland",
+        "state": "ON",
+        "postal_code": "L3C 4Z9",
+        "country": "Canada",
+        "phone": "(905) 734-3841",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_130",
+        "name": "R. Brown Ltd.",
+        "street": "62 Cedar St.",
+        "city": "Sudbury",
+        "state": "ON",
+        "postal_code": "P3E 4P6",
+        "country": "Canada",
+        "phone": "(705) 674-1971",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_131",
+        "name": "Stekelbos Watch & Clock Repairs",
+        "street": "851 Dufferin Ave.",
+        "city": "Wallaceburg",
+        "state": "ON",
+        "postal_code": "N8A 2V5",
+        "country": "Canada",
+        "phone": "(519) 627-4011",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_132",
+        "name": "Bruinix Jewellers Limited",
+        "street": "73B Dundas St. W.",
+        "city": "Trenton",
+        "state": "ON",
+        "postal_code": "K8V 3P3",
+        "country": "Canada",
+        "phone": "(613) 392-5997",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_133",
+        "name": "Bryant's Jewellers Limited",
+        "street": "66 Main Street",
+        "city": "Penetanguishene",
+        "state": "ON",
+        "postal_code": "L9M 1T3",
+        "country": "Canada",
+        "phone": "(705) 549-8911",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_134",
+        "name": "George H Burke Jlrs. Ltd.",
+        "street": "898 Alloy Place",
+        "city": "Thunder Bay",
+        "state": "ON",
+        "postal_code": "P7B 6E6",
+        "country": "Canada",
+        "phone": "(807) 344-8411",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_135",
+        "name": "Caine's Jewellers Ltd",
+        "street": "4926 50th Street",
+        "city": "Rocky Mt. House",
+        "state": "AB",
+        "postal_code": "T0M 1T0",
+        "country": "Canada",
+        "phone": "(403) 845-3440",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_136",
+        "name": "Caines Jewellers Ltd.",
+        "street": "5012 - 50 Avenue",
+        "city": "Whitecourt",
+        "state": "AB",
+        "postal_code": "T7S 1P8",
+        "country": "Canada",
+        "phone": "(780) 778-3302",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_137",
+        "name": "Calgary Jewellery Ltd",
+        "street": "1201-17th Ave. S. W.",
+        "city": "Calgary",
+        "state": "AB",
+        "postal_code": "T2T 0C1",
+        "country": "Canada",
+        "phone": "(403) 245-3131",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_138",
+        "name": "Cameron's Jewellery Limited",
+        "street": "239 Main Street",
+        "city": "Antigonish",
+        "state": "NS",
+        "postal_code": "B2G 2M5",
+        "country": "Canada",
+        "phone": "(902) 863-1283",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_139",
+        "name": "Bob Thompson Jewellery & Watch Repairs",
+        "street": "193 Bank St.",
+        "city": "Ottawa",
+        "state": "ON",
+        "postal_code": "K2P 1W7",
+        "country": "Canada",
+        "phone": "(613) 233-4758",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_140",
+        "name": "Carters Jewellers Limited",
+        "street": "1131A Main Street",
+        "city": "Smithers",
+        "state": "BC",
+        "postal_code": "V0J 2N0",
+        "country": "Canada",
+        "phone": "(250) 847-9766",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    {
+        "ID": "can_141",
+        "name": "Thong's Jewellery & Repair Limited",
+        "street": "1270 Elm St, Unit 40",
+        "city": "Campbell River",
+        "state": "BC",
+        "postal_code": "V9W 3A5",
+        "country": "Canada",
+        "phone": "(250) 287-4042",
+        "email": "",
+        "website": "",
+        "lat": 50,
+        "lng": -100,
+        "specialties": [
+            "Wedding Bands",
+            "Custom Jewelry",
+            "Engagement Rings"
+        ],
+        "services": [
+            "Custom Design",
+            "Repair Services",
+            "Jewelry Cleaning"
+        ],
+        "hours": {
+            "monday": "9:00 AM - 6:00 PM",
+            "tuesday": "9:00 AM - 6:00 PM",
+            "wednesday": "9:00 AM - 6:00 PM",
+            "thursday": "9:00 AM - 6:00 PM",
+            "friday": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    }
+]

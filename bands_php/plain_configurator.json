@@ -1,0 +1,444 @@
+{
+  "version": "2.1",
+  "last_updated": "2025-11-04",
+  "collection": "plain",
+  "xml_mapping": "classic_bands_mapping.xml",
+  "data": {
+    "name": "Classic Wedding Bands",
+    "base_price": 450.0,
+    "currency": "CAD",
+    "options": {
+      "karat_level": {
+        "label": "Metal / Purity",
+        "required": true,
+        "type": "single_select",
+        "default": "950_silver",
+        "help_text": "Higher karat = more pure metal, softer & more expensive",
+        "options": [
+          {
+            "id": "950_silver",
+            "name": ".950 Silver",
+            "description": "95% pure silver",
+            "price_modifier": -300
+          },
+          {
+            "id": "10k",
+            "name": "10K Gold",
+            "description": "41.7% pure gold",
+            "price_modifier": 0
+          },
+          {
+            "id": "14k",
+            "name": "14K Gold",
+            "description": "58.5% pure gold",
+            "price_modifier": 225
+          },
+          {
+            "id": "18k",
+            "name": "18K Gold",
+            "description": "75% pure gold",
+            "price_modifier": 650
+          }
+        ]
+      },
+      "metal_color": {
+        "label": "Metal Color",
+        "required": true,
+        "type": "single_select",
+        "default": "yellow",
+        "help_text": "Metal color for gold bands",
+        "visible_when": {
+          "karat_level": [
+            "10k",
+            "14k",
+            "18k"
+          ]
+        },
+        "options": [
+          {
+            "id": "yellow",
+            "name": "Yellow Gold",
+            "description": "Classic gold color",
+            "price_modifier": 0
+          },
+          {
+            "id": "white",
+            "name": "White Gold",
+            "description": "Bright platinum-look",
+            "price_modifier": 25
+          },
+          {
+            "id": "rose",
+            "name": "Rose Gold",
+            "description": "Warm pink-gold",
+            "price_modifier": 15
+          }
+        ]
+      },
+      "gender": {
+        "label": "Gender / Sizing",
+        "required": true,
+        "type": "single_select",
+        "default": "L",
+        "help_text": "Select Men's or Ladies' sizing",
+        "options": [
+          {
+            "id": "M",
+            "name": "Men's",
+            "description": "Sizes 8.5 to 16",
+            "price_modifier": 0
+          },
+          {
+            "id": "L",
+            "name": "Ladies'",
+            "description": "Sizes 2 to 8.5",
+            "price_modifier": 0
+          }
+        ]
+      },
+      "style_and_width": {
+        "label": "Band Style & Width",
+        "required": true,
+        "type": "plain_grid",
+        "help_text": "Select your band style and width - each has unique product images",
+        "use_xml_mapping": true,
+        "grid_layout": {
+          "series": [
+            {
+              "id": "standard_tiffany",
+              "name": "Standard Tiffany",
+              "description": "Traditional rounded profile - 1.5mm thick, 2-10mm wide",
+              "thickness": "1.5mm",
+              "profile": "rounded_comfort_fit",
+              "products": [
+                { "base_id": "200", "width": "200 2mm", "product_id_m": "200M", "product_id_l": "200L", "price_modifier": -100 },
+                { "base_id": "250", "width": "250 2.5mm", "product_id_m": "250M", "product_id_l": "250L", "price_modifier": -75 },
+                { "base_id": "300", "width": "300 3mm", "product_id_m": "300M", "product_id_l": "300L", "price_modifier": -50 },
+                { "base_id": "380", "width": "380 3.8mm", "product_id_m": "380M", "product_id_l": "380L", "price_modifier": -25 },
+                { "base_id": "400", "width": "400 4mm", "product_id_m": "400M", "product_id_l": "400L", "price_modifier": 0 },
+                { "base_id": "450", "width": "450 4.5mm", "product_id_m": "450M", "product_id_l": "450L", "price_modifier": 25 },
+                { "base_id": "500", "width": "500 5mm", "product_id_m": "500M", "product_id_l": "500L", "price_modifier": 50 },
+                { "base_id": "600", "width": "600 6mm", "product_id_m": "600M", "product_id_l": "600L", "price_modifier": 100 },
+                { "base_id": "700", "width": "700 7mm", "product_id_m": "700M", "product_id_l": "700L", "price_modifier": 150 },
+                { "base_id": "800", "width": "800 8mm", "product_id_m": "800M", "product_id_l": "800L", "price_modifier": 200 },
+                { "base_id": "900", "width": "900 9mm", "product_id_m": "900M", "product_id_l": "900L", "price_modifier": 250 },
+                { "base_id": "1000", "width": "1000 10mm", "product_id_m": "1000M", "product_id_l": "1000L", "price_modifier": 300 }
+              ]
+            },
+            {
+              "id": "tiffany_lightweight",
+              "name": "Tiffany Lightweight",
+              "description": "Lightweight Tiffany series - 1.0mm thick, 3-6mm wide (max size 12)",
+              "thickness": "1.0mm",
+              "profile": "rounded_comfort_fit",
+              "size_restrictions": "max_size_12",
+              "products": [
+                { "base_id": "3001", "width": "3001 3mm", "product_id_m": "3001M", "product_id_l": "3001L", "price_modifier": 0 },
+                { "base_id": "4001", "width": "4001 4mm", "product_id_m": "4001M", "product_id_l": "4001L", "price_modifier": 25 },
+                { "base_id": "5001", "width": "5001 5mm", "product_id_m": "5001M", "product_id_l": "5001L", "price_modifier": 50 },
+                { "base_id": "6001", "width": "6001 6mm", "product_id_m": "6001M", "product_id_l": "6001L", "price_modifier": 75 }
+              ]
+            },
+            {
+              "id": "rectangular_standard",
+              "name": "Rectangular Standard",
+              "description": "Sharp profile - 1.5mm thick, 2-10mm wide",
+              "thickness": "1.5mm",
+              "profile": "sharp_flat",
+              "products": [
+                { "base_id": "200R", "width": "200R 2mm", "product_id_m": "200RM", "product_id_l": "200RL", "price_modifier": -100 },
+                { "base_id": "300R", "width": "300R 3mm", "product_id_m": "300RM", "product_id_l": "300RL", "price_modifier": -50 },
+                { "base_id": "400R", "width": "400R 4mm", "product_id_m": "400RM", "product_id_l": "400RL", "price_modifier": 0 },
+                { "base_id": "600R", "width": "600R 6mm", "product_id_m": "600RM", "product_id_l": "600RL", "price_modifier": 75 },
+                { "base_id": "800R", "width": "800R 8mm", "product_id_m": "800RM", "product_id_l": "800RL", "price_modifier": 150 }
+              ]
+            },
+            {
+              "id": "rectangular_lightweight",
+              "name": "Rectangular Lightweight",
+              "description": "Ultra-thin profile - 1.0mm thick, 2-6mm wide (max size 12)",
+              "thickness": "1.0mm",
+              "profile": "sharp_flat",
+              "size_restrictions": "max_size_12",
+              "products": [
+                { "base_id": "S200R", "width": "S200R 2mm", "product_id_l": "S200RL", "ladies_only": true, "price_modifier": -25 },
+                { "base_id": "S300R", "width": "S300R 3mm", "product_id_l": "S300RL", "ladies_only": true, "price_modifier": 0 },
+                { "base_id": "S400R", "width": "S400R 4mm", "product_id_m": "S400RM", "product_id_l": "S400RL", "price_modifier": 25 },
+                { "base_id": "S500R", "width": "S500R 5mm", "product_id_m": "S500RM", "product_id_l": "S500RL", "price_modifier": 50 },
+                { "base_id": "S600R", "width": "S600R 6mm", "product_id_m": "S600RM", "product_id_l": "S600RL", "price_modifier": 75 }
+              ]
+            },
+            {
+              "id": "tiffany_comfort_curve",
+              "name": "Tiffany Comfort Curve",
+              "description": "Tiffany Comfort Curve™ - 3 to 8mm wide, 1.8mm high",
+              "thickness": "1.8mm",
+              "profile": "comfort_curve",
+              "products": [
+                { "base_id": "3T18", "width": "3T18 3mm", "product_id_m": "3T18M", "product_id_l": "3T18L", "price_modifier": 0 },
+                { "base_id": "4T18", "width": "4T18 4mm", "product_id_m": "4T18M", "product_id_l": "4T18L", "price_modifier": 25 },
+                { "base_id": "5T18", "width": "5T18 5mm", "product_id_m": "5T18M", "product_id_l": "5T18L", "price_modifier": 50 },
+                { "base_id": "6T18", "width": "6T18 6mm", "product_id_m": "6T18M", "product_id_l": "6T18L", "price_modifier": 75 },
+                { "base_id": "7T18", "width": "7T18 7mm", "product_id_m": "7T18M", "product_id_l": "7T18L", "price_modifier": 100 },
+                { "base_id": "8T18", "width": "8T18 8mm", "product_id_m": "8T18M", "product_id_l": "8T18L", "price_modifier": 125 }
+              ]
+            },
+            {
+              "id": "rectangular_comfort_curve",
+              "name": "Rectangular Comfort Curve",
+              "description": "Rectangular Comfort Curve™ - 3 to 8mm wide, 1.8mm high",
+              "thickness": "1.8mm",
+              "profile": "rectangular_comfort_curve",
+              "products": [
+                { "base_id": "3T00R", "width": "3T00R 3mm", "product_id_m": "3T00RM", "product_id_l": "3T00RL", "price_modifier": -25 },
+                { "base_id": "4T00R", "width": "4T00R 4mm", "product_id_m": "4T00RM", "product_id_l": "4T00RL", "price_modifier": 0 },
+                { "base_id": "5T00R", "width": "5T00R 5mm", "product_id_m": "5T00RM", "product_id_l": "5T00RL", "price_modifier": 25 },
+                { "base_id": "6T00R", "width": "6T00R 6mm", "product_id_m": "6T00RM", "product_id_l": "6T00RL", "price_modifier": 50 },
+                { "base_id": "7T00R", "width": "7T00R 7mm", "product_id_m": "7T00RM", "product_id_l": "7T00RL", "price_modifier": 75 },
+                { "base_id": "8T00R", "width": "8T00R 8mm", "product_id_m": "8T00RM", "product_id_l": "8T00RL", "price_modifier": 100 }
+              ]
+            },
+            {
+              "id": "premium_series",
+              "name": "Premium Series",
+              "description": "Premium Series - 4 to 7mm wide, 2.0mm high",
+              "thickness": "2.0mm",
+              "profile": "premium",
+              "products": [
+                { "base_id": "400T", "width": "400T 4mm", "product_id_m": "400TM", "product_id_l": "400TL", "price_modifier": 0 },
+                { "base_id": "500T", "width": "500T 5mm", "product_id_m": "500TM", "product_id_l": "500TL", "price_modifier": 50 },
+                { "base_id": "550T", "width": "550T 5.5mm", "product_id_m": "550TM", "product_id_l": "550TL", "price_modifier": 75 },
+                { "base_id": "600T", "width": "600T 6mm", "product_id_m": "600TM", "product_id_l": "600TL", "price_modifier": 100 },
+                { "base_id": "700T", "width": "700T 7mm", "product_id_m": "700TM", "product_id_l": "700TL", "price_modifier": 150 }
+              ]
+            }
+          ]
+        }
+      },
+      "finish": {
+        "label": "Surface Finish",
+        "required": true,
+        "type": "single_select",
+        "default": "polish",
+        "help_text": "Select the surface finish for your band",
+        "options": [
+          {
+            "id": "polish",
+            "name": "High Polish",
+            "description": "Mirror finish",
+            "price_modifier": 0
+          },
+          {
+            "id": "brushed",
+            "name": "Brushed/Matte",
+            "description": "Textured finish",
+            "price_modifier": 0
+          },
+          {
+            "id": "satin",
+            "name": "Satin",
+            "description": "Soft lustrous finish",
+            "price_modifier": 0
+          }
+        ]
+      },
+      "size": {
+        "label": "Ring Size",
+        "required": true,
+        "type": "single_select",
+        "help_text": "Select your ring size",
+        "filter_options_by": {
+          "field": "gender",
+          "rule": "gender_based_sizes"
+        },
+        "options": [
+          {
+            "id": "2",
+            "name": "2",
+            "available_genders": ["L"]
+          },
+          {
+            "id": "2.5",
+            "name": "2.5",
+            "available_genders": ["L"]
+          },
+          {
+            "id": "3",
+            "name": "3",
+            "available_genders": ["L"]
+          },
+          {
+            "id": "3.5",
+            "name": "3.5",
+            "available_genders": ["L"]
+          },
+          {
+            "id": "4",
+            "name": "4",
+            "available_genders": ["L"]
+          },
+          {
+            "id": "4.5",
+            "name": "4.5",
+            "available_genders": ["L"]
+          },
+          {
+            "id": "5",
+            "name": "5",
+            "available_genders": ["L"]
+          },
+          {
+            "id": "5.5",
+            "name": "5.5",
+            "available_genders": ["L"]
+          },
+          {
+            "id": "6",
+            "name": "6",
+            "available_genders": ["L"]
+          },
+          {
+            "id": "6.5",
+            "name": "6.5",
+            "available_genders": ["L"]
+          },
+          {
+            "id": "7",
+            "name": "7",
+            "available_genders": ["L"]
+          },
+          {
+            "id": "7.5",
+            "name": "7.5",
+            "available_genders": ["L"]
+          },
+          {
+            "id": "8",
+            "name": "8",
+            "available_genders": ["L"]
+          },
+          {
+            "id": "8.5",
+            "name": "8.5",
+            "available_genders": ["M", "L"]
+          },
+          {
+            "id": "9",
+            "name": "9",
+            "available_genders": ["M"]
+          },
+          {
+            "id": "9.5",
+            "name": "9.5",
+            "available_genders": ["M"]
+          },
+          {
+            "id": "10",
+            "name": "10",
+            "available_genders": ["M"]
+          },
+          {
+            "id": "10.5",
+            "name": "10.5",
+            "available_genders": ["M"]
+          },
+          {
+            "id": "11",
+            "name": "11",
+            "available_genders": ["M"]
+          },
+          {
+            "id": "11.5",
+            "name": "11.5",
+            "available_genders": ["M"]
+          },
+          {
+            "id": "12",
+            "name": "12",
+            "available_genders": ["M"]
+          },
+          {
+            "id": "12.5",
+            "name": "12.5",
+            "available_genders": ["M"]
+          },
+          {
+            "id": "13",
+            "name": "13",
+            "available_genders": ["M"]
+          },
+          {
+            "id": "13.5",
+            "name": "13.5",
+            "available_genders": ["M"]
+          },
+          {
+            "id": "14",
+            "name": "14",
+            "available_genders": ["M"]
+          },
+          {
+            "id": "14.5",
+            "name": "14.5",
+            "available_genders": ["M"]
+          },
+          {
+            "id": "15",
+            "name": "15",
+            "available_genders": ["M"]
+          },
+          {
+            "id": "15.5",
+            "name": "15.5",
+            "available_genders": ["M"]
+          },
+          {
+            "id": "16",
+            "name": "16",
+            "available_genders": ["M"]
+          }
+        ]
+      },
+      "engraving": {
+        "label": "Interior Engraving",
+        "required": false,
+        "type": "text_input",
+        "max_length": 25,
+        "help_text": "Free personalized engraving inside your ring (25 char max)",
+        "price_modifier": 0
+      },
+      "edging": {
+        "label": "Edge Detail",
+        "required": false,
+        "type": "single_select",
+        "help_text": "Optional decorative edging (+$18.75)",
+        "options": [
+          {
+            "id": "none",
+            "name": "No Edging",
+            "description": "Clean smooth edge",
+            "price_modifier": 0
+          },
+          {
+            "id": "millgrained",
+            "name": "Millgrained Edge",
+            "description": "Delicate beaded detail",
+            "price_modifier": 18.75
+          },
+          {
+            "id": "cut",
+            "name": "Cut Edge",
+            "description": "Precise angular detail",
+            "price_modifier": 18.75
+          },
+          {
+            "id": "rope",
+            "name": "Rope Edge",
+            "description": "Twisted rope pattern",
+            "price_modifier": 18.75
+          }
+        ]
+      }
+    }
+  }
+}

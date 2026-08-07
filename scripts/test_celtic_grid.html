@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Celtic Grid Configurator</title>
+    <link rel="stylesheet" href="css/configurator.css">
+</head>
+<body>
+    <div style="padding: 20px;">
+        <h1>Celtic Ring Width & Pattern Selection</h1>
+        <p>Testing the Celtic pattern grid that replaces the standard width selection for Celtic category rings.</p>
+        
+        <!-- Test Celtic configurator -->
+        <div id="configurator-celtic-test" 
+             data-product-id="5310M"
+             data-category="celtic"
+             data-base-price="899"
+             data-product-name="Celtic Wedding Band">
+        </div>
+        
+        <hr style="margin: 40px 0;">
+        
+        <!-- Test regular (non-Celtic) configurator for comparison -->
+        <h2>Regular Band (Non-Celtic) for Comparison</h2>
+        <div id="configurator-regular-test" 
+             data-product-id="4T18M"
+             data-category="plain"
+             data-base-price="799"
+             data-product-name="Plain Wedding Band">
+        </div>
+    </div>
+
+    <script src="js/configurator.js"></script>
+    <script>
+        // Initialize configurators
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('=== TESTING CELTIC GRID vs REGULAR CONFIGURATOR ===');
+            
+            // Celtic configurator (should use grid)
+            const celticConfig = document.getElementById('configurator-celtic-test');
+            if (celticConfig) {
+                console.log('Initializing Celtic configurator (should show pattern grid)...');
+                new ProductConfigurator('configurator-celtic-test');
+            }
+            
+            // Regular configurator (should use standard width options)
+            const regularConfig = document.getElementById('configurator-regular-test');
+            if (regularConfig) {
+                console.log('Initializing Regular configurator (should show standard width options)...');
+                new ProductConfigurator('configurator-regular-test');
+            }
+        });
+    </script>
+</body>
+</html>

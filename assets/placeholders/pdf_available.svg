@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="View product in catalog PDF">
+  <rect width="200" height="200" fill="#fafafa"/>
+  <!-- page document -->
+  <rect x="55" y="35" width="90" height="120" rx="4" fill="#fff" stroke="#b8860b" stroke-width="3"/>
+  <!-- folded corner -->
+  <path d="M125 35 L145 55 L125 55 Z" fill="#daa520" stroke="#b8860b" stroke-width="2" stroke-linejoin="round"/>
+  <!-- text lines -->
+  <rect x="65" y="70" width="50" height="4" rx="2" fill="#daa520"/>
+  <rect x="65" y="82" width="70" height="4" rx="2" fill="#e0c060"/>
+  <rect x="65" y="94" width="60" height="4" rx="2" fill="#e0c060"/>
+  <rect x="65" y="106" width="65" height="4" rx="2" fill="#e0c060"/>
+  <rect x="65" y="118" width="45" height="4" rx="2" fill="#e0c060"/>
+  <!-- PDF badge -->
+  <rect x="60" y="130" width="40" height="18" rx="3" fill="#b8860b"/>
+  <text x="80" y="143" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#fff">PDF</text>
+  <text x="100" y="180" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#2c2c2c">View in catalog</text>
+</svg>

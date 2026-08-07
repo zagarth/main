@@ -1,0 +1,4192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<retailers>
+  <retailer id="1">
+    <name>Diamond Dreams Jewelry</name>
+    <street>123 Main Street, New York, NY, 10001</street>
+    <city>New York</city>
+    <province>NY</province>
+    <postal_code>10001</postal_code>
+    <country>USA</country>
+    <phone>+1-212-555-0123</phone>
+    <email>info@diamonddreams.com</email>
+    <website>https://www.diamonddreams.com</website>
+    <lat>40.7128</lat>
+    <lng>-74.006</lng>
+  </retailer>
+  <retailer id="2">
+    <name>Golden Gate Jewelers</name>
+    <street>456 Market Street, San Francisco, CA, 94102</street>
+    <city>San Francisco</city>
+    <province>CA</province>
+    <postal_code>94102</postal_code>
+    <country>USA</country>
+    <phone>+1-415-555-0456</phone>
+    <email>sales@goldengatejewelers.com</email>
+    <website>https://www.goldengatejewelers.com</website>
+    <lat>37.7749</lat>
+    <lng>-122.4194</lng>
+  </retailer>
+  <retailer id="3">
+    <name>Windy City Gems</name>
+    <street>789 Michigan Avenue, Chicago, IL, 60611</street>
+    <city>Chicago</city>
+    <province>IL</province>
+    <postal_code>60611</postal_code>
+    <country>USA</country>
+    <phone>+1-312-555-0789</phone>
+    <email>contact@windycitygems.com</email>
+    <website>https://www.windycitygems.com</website>
+    <lat>41.8781</lat>
+    <lng>-87.6298</lng>
+  </retailer>
+  <retailer id="4">
+    <name>Carters Jewellers Limited</name>
+    <street>4741 Lakelse Ave 320, Terrace, BC, V8G 4R9</street>
+    <city>Terrace</city>
+    <province>BC</province>
+    <postal_code>V8G 4R9</postal_code>
+    <country>Canada</country>
+    <phone>(250) 635-9000</phone>
+    <email/>
+    <website/>
+    <lat>54.5163</lat>
+    <lng>-128.5971</lng>
+  </retailer>
+  <retailer id="5">
+    <name>Toth Jewellers Ltd.</name>
+    <street>559 Talbot St., St. Thomas, ON, N5P 1C5</street>
+    <city>St. Thomas</city>
+    <province>ON</province>
+    <postal_code>N5P 1C5</postal_code>
+    <country>Canada</country>
+    <phone>(519) 631-9620</phone>
+    <email/>
+    <website/>
+    <lat>42.7788</lat>
+    <lng>-81.1818</lng>
+  </retailer>
+  <retailer id="6">
+    <name>A Touch Of Gold</name>
+    <street>500 Main St., Downeast Mall</street>
+    <city>Montague</city>
+    <province>PE</province>
+    <postal_code>C0A 1R0</postal_code>
+    <country>Canada</country>
+    <phone>(902) 838-3188</phone>
+    <email/>
+    <website>https://www.atouchofgold.info/</website>
+    <lat>46.172681158295795</lat>
+    <lng>-62.650383708016314</lng>
+  </retailer>
+  <retailer id="7">
+    <name>Touch of Gold</name>
+    <street>Spring Garden Place, Halifax, NS, B3J 2R7</street>
+    <city>Halifax</city>
+    <province>NS</province>
+    <postal_code>B3J 2R7</postal_code>
+    <country>Canada</country>
+    <phone>(902) 423-5600</phone>
+    <email/>
+    <website/>
+    <lat>44.6488</lat>
+    <lng>-63.5752</lng>
+  </retailer>
+  <retailer id="8">
+    <name>Chan W K Jewellers Ltd</name>
+    <street>393 Portage Ave</street>
+    <city>Winnipeg MB R3B 3H6</city>
+    <province>MB</province>
+    <postal_code/>
+    <country>Canada</country>
+    <phone>(204) 786-1388</phone>
+    <email/>
+    <website/>
+    <lat>49.89257</lat>
+    <lng>-97.148132</lng>
+  </retailer>
+  <retailer id="9">
+    <name>Charlotte Jewelers Limited</name>
+    <street>341 George St. N., Peterborough, ON, K9H 3P9</street>
+    <city>Peterborough</city>
+    <province>ON</province>
+    <postal_code>K9H 3P9</postal_code>
+    <country>Canada</country>
+    <phone>(705) 743-3551</phone>
+    <email/>
+    <website/>
+    <lat>44.3041</lat>
+    <lng>-78.3201</lng>
+  </retailer>
+  <retailer id="10">
+    <name>Citizen Time &amp; Gold Limited</name>
+    <street>723 Johnson Street, Victoria, BC, V8W 1M8</street>
+    <city>Victoria</city>
+    <province>BC</province>
+    <postal_code>V8W 1M8</postal_code>
+    <country>Canada</country>
+    <phone>(250) 388-4735</phone>
+    <email/>
+    <website/>
+    <lat>48.4284</lat>
+    <lng>-123.3656</lng>
+  </retailer>
+  <retailer id="11">
+    <name>Trochu Giftware Ltd.</name>
+    <street>219 Main Street, Trochu, AB, T0M 2C0</street>
+    <city>Trochu</city>
+    <province>AB</province>
+    <postal_code>T0M 2C0</postal_code>
+    <country>Canada</country>
+    <phone>(403) 442-3977</phone>
+    <email/>
+    <website/>
+    <lat>51.8274</lat>
+    <lng>-113.2266</lng>
+  </retailer>
+  <retailer id="12">
+    <name>Classic Jewelers (2000) Ltd.</name>
+    <street>128 - 400 King St., Estevan, SK, S4A 2B4</street>
+    <city>Estevan</city>
+    <province>SK</province>
+    <postal_code>S4A 2B4</postal_code>
+    <country>Canada</country>
+    <phone>(306) 634-5338</phone>
+    <email/>
+    <website/>
+    <lat>49.1456</lat>
+    <lng>-102.978</lng>
+  </retailer>
+  <retailer id="13">
+    <name>Tuck Jewellers Limited</name>
+    <street>10 Clarence St., Port Colborne, ON, L3K 3E8</street>
+    <city>Port Colborne</city>
+    <province>ON</province>
+    <postal_code>L3K 3E8</postal_code>
+    <country>Canada</country>
+    <phone>(905) 834-3823</phone>
+    <email/>
+    <website/>
+    <lat>42.8862</lat>
+    <lng>-79.2505</lng>
+  </retailer>
+  <retailer id="14">
+    <name>Clowes Jewellers (1978) Ltd.</name>
+    <street>4900 Molly Banister Drive</street>
+    <city>Red Deer</city>
+    <province>AB</province>
+    <postal_code>T4R1N9</postal_code>
+    <country>Canada</country>
+    <phone>(403) 346-2720</phone>
+    <email/>
+    <website/>
+    <lat>52.243092</lat>
+    <lng>-113.80988</lng>
+  </retailer>
+  <retailer id="15">
+    <name>Vanthuyne Jewellers Limited</name>
+    <street>150 West Street, Simcoe, ON, N3Y 5C1</street>
+    <city>Simcoe</city>
+    <province>ON</province>
+    <postal_code>N3Y 5C1</postal_code>
+    <country>Canada</country>
+    <phone>(519) 426-9160</phone>
+    <email/>
+    <website/>
+    <lat>42.8344</lat>
+    <lng>-80.3082</lng>
+  </retailer>
+  <retailer id="16">
+    <name>Wade's Jewellery Ltd.</name>
+    <street>140 - 3rd Ave. W., Drumheller, AB, T0J 0Y0</street>
+    <city>Drumheller</city>
+    <province>AB</province>
+    <postal_code>T0J 0Y0</postal_code>
+    <country>Canada</country>
+    <phone>(403) 823-4763</phone>
+    <email/>
+    <website/>
+    <lat>51.4561</lat>
+    <lng>-112.7083</lng>
+  </retailer>
+  <retailer id="17">
+    <name>D S Walker Jewellers Ltd.</name>
+    <street>77 Margaret Ave., Wallaceburg, ON, N8A 1Z8</street>
+    <city>Wallaceburg</city>
+    <province>ON</province>
+    <postal_code>N8A 1Z8</postal_code>
+    <country>Canada</country>
+    <phone>(519) 627-1000</phone>
+    <email/>
+    <website/>
+    <lat>42.5952</lat>
+    <lng>-82.3802</lng>
+  </retailer>
+  <retailer id="18">
+    <name>Curry's Jewellers 1978 Limited</name>
+    <street>10019 - 100Th Avenue, Grande Prairie, AB, T8V 0V2</street>
+    <city>Grande Prairie</city>
+    <province>AB</province>
+    <postal_code>T8V 0V2</postal_code>
+    <country>Canada</country>
+    <phone>(780) 532-2160</phone>
+    <email/>
+    <website/>
+    <lat>55.1707</lat>
+    <lng>-118.7973</lng>
+  </retailer>
+  <retailer id="19">
+    <name>Dana's Goldsmithing Inc.</name>
+    <street>186 Queen Street, Port Perry, ON, L9L 1B8</street>
+    <city>Port Perry</city>
+    <province>ON</province>
+    <postal_code>L9L 1B8</postal_code>
+    <country>Canada</country>
+    <phone>(905) 985-2953</phone>
+    <email/>
+    <website/>
+    <lat>44.1049</lat>
+    <lng>-78.9434</lng>
+  </retailer>
+  <retailer id="20">
+    <name>Ware's Jewelers Limited</name>
+    <street>4934 - 50 Street, Stettler, AB, T0C 2L0</street>
+    <city>Stettler</city>
+    <province>AB</province>
+    <postal_code>T0C 2L0</postal_code>
+    <country>Canada</country>
+    <phone>(403) 742-2635</phone>
+    <email/>
+    <website/>
+    <lat>52.3256</lat>
+    <lng>-112.7057</lng>
+  </retailer>
+  <retailer id="21">
+    <name>Delamont E H Jeweler Limited</name>
+    <street>915 Baker St., Cranbrook, BC, V1C 1A4</street>
+    <city>Cranbrook</city>
+    <province>BC</province>
+    <postal_code>V1C 1A4</postal_code>
+    <country>Canada</country>
+    <phone>(250) 426-2772</phone>
+    <email/>
+    <website/>
+    <lat>49.5066</lat>
+    <lng>-115.7469</lng>
+  </retailer>
+  <retailer id="22">
+    <name>Wendts Jewellery Limited</name>
+    <street>102 Elora Street, Mildmay, ON, N0G 2J0</street>
+    <city>Mildmay</city>
+    <province>ON</province>
+    <postal_code>N0G 2J0</postal_code>
+    <country>Canada</country>
+    <phone>(519) 367-5357</phone>
+    <email/>
+    <website/>
+    <lat>44.0426</lat>
+    <lng>-81.1193</lng>
+  </retailer>
+  <retailer id="23">
+    <name>Wharrams Jewellery Limited</name>
+    <street>21 Talbot Street W, Leamington, ON, N8H 1M3</street>
+    <city>Leamington</city>
+    <province>ON</province>
+    <postal_code>N8H 1M3</postal_code>
+    <country>Canada</country>
+    <phone>(519) 326-9271</phone>
+    <email/>
+    <website/>
+    <lat>42.0531</lat>
+    <lng>-82.6005</lng>
+  </retailer>
+  <retailer id="24">
+    <name>Durrant Jewellers Limited</name>
+    <street>43 Hurontario Street, Collingwood, ON, L9Y 2L7</street>
+    <city>Collingwood</city>
+    <province>ON</province>
+    <postal_code>L9Y 2L7</postal_code>
+    <country>Canada</country>
+    <phone>(705) 445-3731</phone>
+    <email/>
+    <website/>
+    <lat>44.5018</lat>
+    <lng>-80.217</lng>
+  </retailer>
+  <retailer id="25">
+    <name>Ron Wilkin Jewellers Ltd.</name>
+    <street>109 St. Andrew Street, Fergus, ON, N1M 2W7</street>
+    <city>Fergus</city>
+    <province>ON</province>
+    <postal_code>N1M 2W7</postal_code>
+    <country>Canada</country>
+    <phone>(519) 843-1225</phone>
+    <email/>
+    <website/>
+    <lat>43.7062</lat>
+    <lng>-80.3778</lng>
+  </retailer>
+  <retailer id="26">
+    <name>Excelsior Jewellers Ltd</name>
+    <street>24C South 2nd. Ave., Williams Lake, BC, V2G 1H6</street>
+    <city>Williams Lake</city>
+    <province>BC</province>
+    <postal_code>V2G 1H6</postal_code>
+    <country>Canada</country>
+    <phone>(250) 392-4747</phone>
+    <email/>
+    <website/>
+    <lat>52.1279</lat>
+    <lng>-122.1439</lng>
+  </retailer>
+  <retailer id="27">
+    <name>Woodland E G &amp; Son Jewellers Limited</name>
+    <street>150 Oliver Street., Williams Lake, BC, V2G 1L8</street>
+    <city>Williams Lake</city>
+    <province>BC</province>
+    <postal_code>V2G 1L8</postal_code>
+    <country>Canada</country>
+    <phone>(250) 392-5423</phone>
+    <email/>
+    <website/>
+    <lat>52.129</lat>
+    <lng>-122.1448</lng>
+  </retailer>
+  <retailer id="28">
+    <name>Excel Jewellers Limited</name>
+    <street>370, 20202-66th Ave., Langley, BC, V2Y 1M9</street>
+    <city>Langley</city>
+    <province>BC</province>
+    <postal_code>V2Y 1M9</postal_code>
+    <country>Canada</country>
+    <phone>(604) 539-7720</phone>
+    <email/>
+    <website/>
+    <lat>49.1195</lat>
+    <lng>-122.6651</lng>
+  </retailer>
+  <retailer id="29">
+    <name>Woodley's Jewellers Ltd</name>
+    <street>109 King Street E., Gananoque, ON, K7G 1G3</street>
+    <city>Gananoque</city>
+    <province>ON</province>
+    <postal_code>K7G 1G3</postal_code>
+    <country>Canada</country>
+    <phone>(613) 382-3202</phone>
+    <email/>
+    <website/>
+    <lat>44.3297</lat>
+    <lng>-76.1621</lng>
+  </retailer>
+  <retailer id="30">
+    <name>Wright's Jewelry Ltd.</name>
+    <street>3292 Dunmore Rd. S. E., Unit 151</street>
+    <city>Medicine Hat</city>
+    <province>AB</province>
+    <postal_code>T1B 0G4</postal_code>
+    <country>Canada</country>
+    <phone>(403) 526-3944</phone>
+    <email/>
+    <website/>
+    <lat>49.995005</lat>
+    <lng>-110.643876</lng>
+  </retailer>
+  <retailer id="31">
+    <name>H. E. Fancy Jewellery Ltd.</name>
+    <street>318 St. George St., Annapolis Royal, NS, B0S 1A0</street>
+    <city>Annapolis Royal</city>
+    <province>NS</province>
+    <postal_code>B0S 1A0</postal_code>
+    <country>Canada</country>
+    <phone>(902) 532-5185</phone>
+    <email/>
+    <website/>
+    <lat>44.7429</lat>
+    <lng>-65.518</lng>
+  </retailer>
+  <retailer id="32">
+    <name>Wright's Jewelry Ltd.</name>
+    <street>108 Second St. W., Brooks, AB, T1R 1B7</street>
+    <city>Brooks</city>
+    <province>AB</province>
+    <postal_code>T1R 1B7</postal_code>
+    <country>Canada</country>
+    <phone>(403) 362-4345</phone>
+    <email/>
+    <website/>
+    <lat>50.5574</lat>
+    <lng>-111.8866</lng>
+  </retailer>
+  <retailer id="33">
+    <name>H. E. Fancy Jewellery Ltd.</name>
+    <street>57 Water Street, Digby, NS, B0V 1A0</street>
+    <city>Digby</city>
+    <province>NS</province>
+    <postal_code>B0V 1A0</postal_code>
+    <country>Canada</country>
+    <phone>(902) 245-2431</phone>
+    <email/>
+    <website/>
+    <lat>44.6241</lat>
+    <lng>-65.7568</lng>
+  </retailer>
+  <retailer id="34">
+    <name>York Jewllers Ltd.</name>
+    <street>39 3rd St. N.E., Weyburn, SK, S4H 0W1</street>
+    <city>Weyburn</city>
+    <province>SK</province>
+    <postal_code>S4H 0W1</postal_code>
+    <country>Canada</country>
+    <phone>(306) 842-5484</phone>
+    <email/>
+    <website/>
+    <lat>49.0004</lat>
+    <lng>-112.788</lng>
+  </retailer>
+  <retailer id="35">
+    <name>Fiancee Jewellers Limited</name>
+    <street>216 Princess St., Kingston, ON, K7L 1B2</street>
+    <city>Kingston</city>
+    <province>ON</province>
+    <postal_code>K7L 1B2</postal_code>
+    <country>Canada</country>
+    <phone>(613) 542-8112</phone>
+    <email/>
+    <website/>
+    <lat>44.2312</lat>
+    <lng>-76.486</lng>
+  </retailer>
+  <retailer id="36">
+    <name>Young J H &amp; Sons Ltd.</name>
+    <street>126 Lynden Road, Brantford, ON, N3R 8A3</street>
+    <city>Brantford</city>
+    <province>ON</province>
+    <postal_code>N3R 8A3</postal_code>
+    <country>Canada</country>
+    <phone>(519) 752-2330</phone>
+    <email/>
+    <website/>
+    <lat>43.1745</lat>
+    <lng>-80.2348</lng>
+  </retailer>
+  <retailer id="37">
+    <name>Fine Things Inc.</name>
+    <street>88E Manitoba Drive</street>
+    <city>Clarenville</city>
+    <province>NL</province>
+    <postal_code/>
+    <country>Canada</country>
+    <phone>(709) 466-7936</phone>
+    <email/>
+    <website/>
+    <lat>48.161873</lat>
+    <lng>-53.979176</lng>
+  </retailer>
+  <retailer id="38">
+    <name>Zeke's Jewellers Ltd.</name>
+    <street>902 Rosser Ave., Brandon, MB, R7A 0L4</street>
+    <city>Brandon</city>
+    <province>MB</province>
+    <postal_code>R7A 0L4</postal_code>
+    <country>Canada</country>
+    <phone>(204) 727-5500</phone>
+    <email/>
+    <website/>
+    <lat>49.848</lat>
+    <lng>-99.9533</lng>
+  </retailer>
+  <retailer id="39">
+    <name>Zeke's Jewellers Ltd.</name>
+    <street>1235 Main St. N., Town 'N Country Mall</street>
+    <city>Moose Jaw</city>
+    <province>SK</province>
+    <postal_code>S6H 6M4</postal_code>
+    <country>Canada</country>
+    <phone/>
+    <email/>
+    <website/>
+    <lat>50.404495649609</lat>
+    <lng>-105.5302517449</lng>
+  </retailer>
+  <retailer id="40">
+    <name>Zeke's Jewellers Ltd.</name>
+    <street>402 Mountain Ave., Neepawa, MB, R0J 1H0</street>
+    <city>Neepawa</city>
+    <province>MB</province>
+    <postal_code>R0J 1H0</postal_code>
+    <country>Canada</country>
+    <phone>(204) 476-5386</phone>
+    <email/>
+    <website/>
+    <lat>50.2258</lat>
+    <lng>-99.4666</lng>
+  </retailer>
+  <retailer id="41">
+    <name>Bijouterie Ronald Fortier Inc</name>
+    <street>1975 King St. W., Sherbrooke, QC, J1J 2E6</street>
+    <city>Sherbrooke</city>
+    <province>QC</province>
+    <postal_code>J1J 2E6</postal_code>
+    <country>Canada</country>
+    <phone>(819) 563-6460</phone>
+    <email/>
+    <website/>
+    <lat>45.3987</lat>
+    <lng>-71.9223</lng>
+  </retailer>
+  
+  
+  <retailer id="44">
+    <name>Frontenac Watch Repairing Co</name>
+    <street>75 Princess St., Kingston, ON, K7L 1A6</street>
+    <city>Kingston</city>
+    <province>ON</province>
+    <postal_code>K7L 1A6</postal_code>
+    <country>Canada</country>
+    <phone>(613) 542-4666</phone>
+    <email/>
+    <website/>
+    <lat>44.2312</lat>
+    <lng>-76.486</lng>
+  </retailer>
+  <retailer id="45">
+    <name>Gifts of Gold</name>
+    <street>23 Broadway Street East, Yorkton, SK, S3N 0K4</street>
+    <city>Yorkton</city>
+    <province>SK</province>
+    <postal_code>S3N 0K4</postal_code>
+    <country>Canada</country>
+    <phone>(306) 783-5550</phone>
+    <email/>
+    <website/>
+    <lat>51.2103</lat>
+    <lng>-102.4433</lng>
+  </retailer>
+  <retailer id="46">
+    <name>Gold Direct Jewellers</name>
+    <street>1643 LaSalle Blvd., Sudbury, ON, P3A 1Z8</street>
+    <city>Sudbury</city>
+    <province>ON</province>
+    <postal_code>P3A 1Z8</postal_code>
+    <country>Canada</country>
+    <phone>(705) 525-4653</phone>
+    <email/>
+    <website/>
+    <lat>46.5218</lat>
+    <lng>-80.937</lng>
+  </retailer>
+  <retailer id="47">
+    <name>Gold &amp; Ice</name>
+    <street>119 King George Road, Brantford, ON, N3R 5K7</street>
+    <city>Brantford</city>
+    <province>ON</province>
+    <postal_code>N3R 5K7</postal_code>
+    <country>Canada</country>
+    <phone>(519) 770-4222</phone>
+    <email/>
+    <website/>
+    <lat>43.1691</lat>
+    <lng>-80.2765</lng>
+  </retailer>
+  <retailer id="48">
+    <name>Gold &amp; Ice</name>
+    <street>200 Broadway Street, Town Centre Mall</street>
+    <city>Town Centre Mall</city>
+    <province/>
+    <postal_code/>
+    <country>Canada</country>
+    <phone/>
+    <email/>
+    <website/>
+    <lat>42.8623</lat>
+    <lng>-80.7287</lng>
+  </retailer>
+  <retailer id="49">
+    <name>Gold Fever</name>
+    <street>4916 50th Ave N.</street>
+    <city>Fort Nelson</city>
+    <province>BC</province>
+    <postal_code>V0C 1R0</postal_code>
+    <country>Canada</country>
+    <phone/>
+    <email/>
+    <website/>
+    <lat>58.805184943325</lat>
+    <lng>-122.70029741566</lng>
+  </retailer>
+  <retailer id="50">
+    <name>The Gold Room Jewellers</name>
+    <street>12014 - 72nd Ave., Surrey, BC, V3W 2L9</street>
+    <city>Surrey</city>
+    <province>BC</province>
+    <postal_code>V3W 2L9</postal_code>
+    <country>Canada</country>
+    <phone>(604) 590-5199</phone>
+    <email/>
+    <website/>
+    <lat>49.0004</lat>
+    <lng>-112.788</lng>
+  </retailer>
+  <retailer id="51">
+    <name>GNM</name>
+    <street>178 PTH 12 N</street>
+    <city>Steinbach</city>
+    <province>MB</province>
+    <postal_code>R5G1T7</postal_code>
+    <country>Canada</country>
+    <phone>(204) 326-3917</phone>
+    <email/>
+    <website/>
+    <lat>49.532460</lat>
+    <lng>-96.689259</lng>
+  </retailer>
+  <retailer id="52">
+    <name>Gold Star Jewellers Belegris Ltd</name>
+    <street>7107-120th Street, North Delta, BC, V4E 2A9</street>
+    <city>North Delta</city>
+    <province>BC</province>
+    <postal_code>V4E 2A9</postal_code>
+    <country>Canada</country>
+    <phone>(604) 596-5444</phone>
+    <email/>
+    <website/>
+    <lat>49.133</lat>
+    <lng>-122.8917</lng>
+  </retailer>
+  <retailer id="53">
+    <name>Gordon's Gold Jewellers</name>
+    <street>760 Hyde Park Road, Oakridge Centre</street>
+    <city>London</city>
+    <province>ON</province>
+    <postal_code>N6H 5W9</postal_code>
+    <country>Canada</country>
+    <phone/>
+    <email/>
+    <website/>
+    <lat>42.977656930636</lat>
+    <lng>-81.322444680795</lng>
+  </retailer>
+  <retailer id="54">
+    <name>Gordon Jewellers Limited</name>
+    <street>13 Second Street W., Cornwall, ON, K6J 1G3</street>
+    <city>Cornwall</city>
+    <province>ON</province>
+    <postal_code>K6J 1G3</postal_code>
+    <country>Canada</country>
+    <phone>(613) 932-8714</phone>
+    <email/>
+    <website/>
+    <lat>49.0004</lat>
+    <lng>-112.788</lng>
+  </retailer>
+  <retailer id="55">
+    <name>Hall A M Jewellers Limited</name>
+    <street>5 King Street, Cobourg, ON, K9A 2L8</street>
+    <city>Cobourg</city>
+    <province>ON</province>
+    <postal_code>K9A 2L8</postal_code>
+    <country>Canada</country>
+    <phone>(905) 372-3213</phone>
+    <email/>
+    <website/>
+    <lat>49.0004</lat>
+    <lng>-112.788</lng>
+  </retailer>
+  <retailer id="56">
+    <name>Harling's Jewellers B C Limited</name>
+    <street>409 Granville St #256</street>
+    <city>Vancouver</city>
+    <province>BC</province>
+    <postal_code>V6C 1T2</postal_code>
+    <country>Canada</country>
+    <phone>+16046871944</phone>
+    <email/>
+    <website/>
+    <lat>49.2855277277</lat>
+    <lng>-123.11456938913</lng>
+  </retailer>
+  <retailer id="57">
+    <name>Harmony House Jewellers Limited</name>
+    <street>37 Main St. W., Grimsby, ON, L3M 1R3</street>
+    <city>Grimsby</city>
+    <province>ON</province>
+    <postal_code>L3M 1R3</postal_code>
+    <country>Canada</country>
+    <phone>(905) 945-4411</phone>
+    <email/>
+    <website/>
+    <lat>43.1936</lat>
+    <lng>-79.5616</lng>
+  </retailer>
+  <retailer id="58">
+    <name>J. P. Harris Burford Ltd.</name>
+    <street>123 King St. E., Burford, ON, N0E 1A0</street>
+    <city>Burford</city>
+    <province>ON</province>
+    <postal_code>N0E 1A0</postal_code>
+    <country>Canada</country>
+    <phone>(519) 449-2951</phone>
+    <email/>
+    <website/>
+    <lat>43.1062</lat>
+    <lng>-80.4498</lng>
+  </retailer>
+  <retailer id="59">
+    <name>Heinrich Jewellery Sask. Ltd.</name>
+    <street>3310 8 St E #510</street>
+    <city>Saskatoon</city>
+    <province>SK</province>
+    <postal_code>S7H 5M3</postal_code>
+    <country>Canada</country>
+    <phone>+13063747171</phone>
+    <email/>
+    <website/>
+    <lat>52.113144661173</lat>
+    <lng>-106.59989571517</lng>
+  </retailer>
+  <retailer id="60">
+    <name>Herbin's Limited</name>
+    <street>453 Main Street, Wolfville, NS, B4P 1E3</street>
+    <city>Wolfville</city>
+    <province>NS</province>
+    <postal_code>B4P 1E3</postal_code>
+    <country>Canada</country>
+    <phone>(902) 542-5705</phone>
+    <email/>
+    <website/>
+    <lat>45.0913</lat>
+    <lng>-64.3635</lng>
+  </retailer>
+  <retailer id="61">
+    <name>Huxley R G Jewellers Ltd</name>
+    <street>240 Richmond St., London, ON, N6B 2H6</street>
+    <city>London</city>
+    <province>ON</province>
+    <postal_code>N6B 2H6</postal_code>
+    <country>Canada</country>
+    <phone>(519) 679-8427</phone>
+    <email/>
+    <website/>
+    <lat>42.9849</lat>
+    <lng>-81.2453</lng>
+  </retailer>
+  <retailer id="62">
+    <name>Image Jewellers Ltd.</name>
+    <street>9627 - 167th Ave., Edmonton, AB, T5Z 3S3</street>
+    <city>Edmonton</city>
+    <province>AB</province>
+    <postal_code>T5Z 3S3</postal_code>
+    <country>Canada</country>
+    <phone>(780) 475-2933</phone>
+    <email/>
+    <website/>
+    <lat>53.5461</lat>
+    <lng>-113.4938</lng>
+  </retailer>
+  <retailer id="63">
+    <name>Janina's Jewellery Ltd</name>
+    <street>12425 - 99th Street, Grande Prairie, AB, T8V 6Y5</street>
+    <city>Grande Prairie</city>
+    <province>AB</province>
+    <postal_code>T8V 6Y5</postal_code>
+    <country>Canada</country>
+    <phone>(780) 539-9992</phone>
+    <email/>
+    <website/>
+    <lat>49.0004</lat>
+    <lng>-112.788</lng>
+  </retailer>
+  <retailer id="64">
+    <name>Jedco Limited</name>
+    <street>10310 Jasper Ave Suite 202 (2nd floor</street>
+    <city>Edmonton</city>
+    <province>AB</province>
+    <postal_code>T5J 1Y8</postal_code>
+    <country>Canada</country>
+    <phone>+17804291777</phone>
+    <email/>
+    <website/>
+    <lat>53.54122923453</lat>
+    <lng>-113.49783007359</lng>
+  </retailer>
+  <retailer id="65">
+    <name>Jewel Box</name>
+    <street>94 King St. W., Brockville, ON, K6V 5V7</street>
+    <city>Brockville</city>
+    <province>ON</province>
+    <postal_code>K6V 5V7</postal_code>
+    <country>Canada</country>
+    <phone>(613) 345-5132</phone>
+    <email/>
+    <website/>
+    <lat>49.0004</lat>
+    <lng>-112.788</lng>
+  </retailer>
+  <retailer id="66">
+    <name>Jewel Box</name>
+    <street>17 Government Rd. W., Kirkland Lake, ON, P2N 2E3</street>
+    <city>Kirkland Lake</city>
+    <province>ON</province>
+    <postal_code>P2N 2E3</postal_code>
+    <country>Canada</country>
+    <phone>(705) 567-4151</phone>
+    <email/>
+    <website/>
+    <lat>49.0004</lat>
+    <lng>-112.788</lng>
+  </retailer>
+  <retailer id="67">
+    <name>Jewel Box Limited</name>
+    <street>1098 Onondaga Street, Oromocto Mall</street>
+    <city>Oromocto Mall</city>
+    <province/>
+    <postal_code>E2V 4M4</postal_code>
+    <country>Canada</country>
+    <phone/>
+    <email/>
+    <website/>
+    <lat>45.8523</lat>
+    <lng>-66.4745</lng>
+  </retailer>
+  <retailer id="68">
+    <name>Jewels on Ninth Inc</name>
+    <street>24 - 9th Ave South, Cranbrook, BC, V1C 2L8</street>
+    <city>Cranbrook</city>
+    <province>BC</province>
+    <postal_code>V1C 2L8</postal_code>
+    <country>Canada</country>
+    <phone>(250) 489-5773</phone>
+    <email/>
+    <website/>
+    <lat>49.0004</lat>
+    <lng>-112.788</lng>
+  </retailer>
+  
+  
+  <retailer id="71">
+    <name>J S Jewellery Limited</name>
+    <street>5032A - 50th Street, Barrhead, AB, T7N 1A2</street>
+    <city>Barrhead</city>
+    <province>AB</province>
+    <postal_code>T7N 1A2</postal_code>
+    <country>Canada</country>
+    <phone>(780) 674-5055</phone>
+    <email/>
+    <website/>
+    <lat>54.1229</lat>
+    <lng>-114.4012</lng>
+  </retailer>
+  <retailer id="72">
+    <name>Keller's Jewellers Ltd</name>
+    <street>7180 Lantzville Rd., Lantzville, BC, V0R 2H0</street>
+    <city>Lantzville</city>
+    <province>BC</province>
+    <postal_code>V0R 2H0</postal_code>
+    <country>Canada</country>
+    <phone>(250) 390-9089</phone>
+    <email/>
+    <website/>
+    <lat>49.2505</lat>
+    <lng>-124.0752</lng>
+  </retailer>
+  <retailer id="73">
+    <name>Ken's Goldsmithing Ltd</name>
+    <street>Pine Centre Mall, Prince George, BC, V2N 2S0</street>
+    <city>Prince George</city>
+    <province>BC</province>
+    <postal_code>V2N 2S0</postal_code>
+    <country>Canada</country>
+    <phone>(250) 564-4006</phone>
+    <email/>
+    <website/>
+    <lat>53.89793794453</lat>
+    <lng>-122.77730448575</lng>
+  </retailer>
+  <retailer id="74">
+    <name>King's Fine Jewellery Limited</name>
+    <street>3850 Sherwood Dr #510</street>
+    <city>Sherwood Park</city>
+    <province>AB</province>
+    <postal_code>T8H 0Z9</postal_code>
+    <country>Canada</country>
+    <phone/>
+    <email/>
+    <website/>
+    <lat>53.555199</lat>
+    <lng>-113.292550</lng>
+  </retailer>
+  <retailer id="75">
+    <name>Kurtis Sales Ltd.</name>
+    <street>151 Frobisher Drive, Unit C-212</street>
+    <city>Waterloo</city>
+    <province>ON</province>
+    <postal_code>N2V 2C9</postal_code>
+    <country>Canada</country>
+    <phone>+15197474967</phone>
+    <email/>
+    <website/>
+    <lat>43.505833386297</lat>
+    <lng>-80.527403104712</lng>
+  </retailer>
+  <retailer id="76">
+    <name>LA Gold</name>
+    <street>655 Main St Unit 3</street>
+    <city>Winkler</city>
+    <province>MB</province>
+    <postal_code>R6W 4A4</postal_code>
+    <country>Canada</country>
+    <phone>+12043255296</phone>
+    <email/>
+    <website/>
+    <lat>49.189041129117</lat>
+    <lng>-97.938624575632</lng>
+  </retailer>
+  <retailer id="77">
+    <name>Lauener Bros. Jewellers Limited</name>
+    <street>1355 Cedar St., Trail, BC, V1R 4C3</street>
+    <city>Trail</city>
+    <province>BC</province>
+    <postal_code>V1R 4C3</postal_code>
+    <country>Canada</country>
+    <phone>(250) 368-9533</phone>
+    <email/>
+    <website/>
+    <lat>49.0004</lat>
+    <lng>-112.788</lng>
+  </retailer>
+  <retailer id="78">
+    <name>Bill LeBoeuf Jewellers Of Barrie Limited</name>
+    <street>52 Dunlop Street W., Barrie, ON, L4M 4T4</street>
+    <city>Barrie</city>
+    <province>ON</province>
+    <postal_code>L4M 4T4</postal_code>
+    <country>Canada</country>
+    <phone>(705) 728-3343</phone>
+    <email/>
+    <website/>
+    <lat>49.0004</lat>
+    <lng>-112.788</lng>
+  </retailer>
+  <retailer id="79">
+    <name>Lesser Bros. Jewellers Ltd</name>
+    <street>146 Thames Street S., Ingersoll, ON, N5C 2T4</street>
+    <city>Ingersoll</city>
+    <province>ON</province>
+    <postal_code>N5C 2T4</postal_code>
+    <country>Canada</country>
+    <phone>(519) 485-2190</phone>
+    <email/>
+    <website/>
+    <lat>49.0004</lat>
+    <lng>-112.788</lng>
+  </retailer>
+  <retailer id="80">
+    <name>Lloyd's Jewellers Limited</name>
+    <street>606 Main Street, Swan River, MB, R0L 1Z0</street>
+    <city>Swan River</city>
+    <province>MB</province>
+    <postal_code>R0L 1Z0</postal_code>
+    <country>Canada</country>
+    <phone>(204) 734-2982</phone>
+    <email/>
+    <website/>
+    <lat>52.116</lat>
+    <lng>-101.2566</lng>
+  </retailer>
+  <retailer id="81">
+    <name>Maddocks-Myers Jewellers Ltd</name>
+    <street>240 Grand Ave East, Chatham, ON, N7L 5A6</street>
+    <city>Chatham</city>
+    <province>ON</province>
+    <postal_code>N7L 5A6</postal_code>
+    <country>Canada</country>
+    <phone>(519) 436-0930</phone>
+    <email/>
+    <website/>
+    <lat>49.0004</lat>
+    <lng>-112.788</lng>
+  </retailer>
+  <retailer id="82">
+    <name>Martin's Jewel &amp; Gift Shop</name>
+    <street>176 King St. West, Dundas, ON, L9H 1V4</street>
+    <city>Dundas</city>
+    <province>ON</province>
+    <postal_code>L9H 1V4</postal_code>
+    <country>Canada</country>
+    <phone>(905) 627-1717</phone>
+    <email/>
+    <website/>
+    <lat>43.2671</lat>
+    <lng>-79.9615</lng>
+  </retailer>
+  
+  
+  <retailer id="85">
+    <name>Murdoch's Gem Shop Limited</name>
+    <street>203 Main Street, Whitehorse, YT, Y1A 2B2</street>
+    <city>Whitehorse</city>
+    <province>YT</province>
+    <postal_code>Y1A 2B2</postal_code>
+    <country>Canada</country>
+    <phone>(867) 667-2615</phone>
+    <email/>
+    <website/>
+    <lat>49.0004</lat>
+    <lng>-112.788</lng>
+  </retailer>
+  <retailer id="86">
+    <name>P.D. Murphy Jewellers Limited</name>
+    <street>9 Mississauga Street, Orillia, ON, L3V 1V4</street>
+    <city>Orillia</city>
+    <province>ON</province>
+    <postal_code>L3V 1V4</postal_code>
+    <country>Canada</country>
+    <phone>(705) 326-9611</phone>
+    <email/>
+    <website>https://pdmurphyjewellers.com/index.php</website>
+    <lat>49.0004</lat>
+    <lng>-112.788</lng>
+  </retailer>
+  
+  <retailer id="88">
+    <name>P.D. Murphy Jewellers Limited</name>
+    <street>30 Manitoba St, Bracebridge, ON P1L 1S1</street>
+    <city>Bracebridge</city>
+    <province>ON</province>
+    <postal_code>P1L 1S1</postal_code>
+    <country>Canada</country>
+    <phone>+17056452152</phone>
+    <email/>
+    <website>https://pdmurphyjewellers.com/index.php</website>
+    <lat>45.04085125072366</lat>
+    <lng>-79.3097569472345</lng>
+  </retailer>
+  <retailer id="89">
+    <name>P.D. Murphy Jewellers Limited</name>
+    <street>26 James St, Parry Sound, ON P2A 1T5</street>
+    <city>Parry Sound</city>
+    <province>ON</province>
+    <postal_code>P2A 1T5</postal_code>
+    <country>Canada</country>
+    <phone>(705) 746-9430</phone>
+    <email/>
+    <website>https://pdmurphyjewellers.com/index.php</website>
+    <lat>45.343882511563145</lat>
+    <lng>-80.0340297269856</lng>
+  </retailer>
+  <retailer id="90">
+    <name>P.D. Murphy Jewellers Limited</name>
+    <street>531 Bryne Drive, Unit B1, Barrie, ON, L4N 9Y3</street>
+    <city>Barrie</city>
+    <province>ON</province>
+    <postal_code>L4N 9Y3</postal_code>
+    <country>Canada</country>
+    <phone>(705) 719-1474</phone>
+    <email/>
+    <website>https://pdmurphyjewellers.com/index.php</website>
+    <lat>44.33074391621409</lat>
+    <lng>-79.6877109269856</lng>
+  </retailer>
+  <retailer id="91">
+    <name>A &amp; B Gem Jewellers Ltd.</name>
+    <street>1305 Pemberton Ave., Squamish, BC, V8B 0B5</street>
+    <city>Squamish</city>
+    <province>BC</province>
+    <postal_code>V8B 0B5</postal_code>
+    <country>Canada</country>
+    <phone>(604) 892-3002</phone>
+    <email/>
+    <website/>
+    <lat>49.0004</lat>
+    <lng>-112.788</lng>
+  </retailer>
+  <retailer id="92">
+    <name>C E Adams Ltd.</name>
+    <street>653 3rd St. S.E., Medicine Hat, AB, T1A 0H5</street>
+    <city>Medicine Hat</city>
+    <province>AB</province>
+    <postal_code>T1A 0H5</postal_code>
+    <country>Canada</country>
+    <phone>(403) 526-4900</phone>
+    <email/>
+    <website/>
+    <lat>50.0402</lat>
+    <lng>-110.675</lng>
+  </retailer>
+  <retailer id="93">
+    <name>Al-Brite Manufacturing Jewellers Ltd.</name>
+    <street>Mezzanine 203 10130-103 Street, Royal Lepage Bldg.</street>
+    <city>Edmonton</city>
+    <province>AB</province>
+    <postal_code>T5J 1Y7</postal_code>
+    <country>Canada</country>
+    <phone>+17804248568</phone>
+    <email/>
+    <website>https://www.al-brite.com/</website>
+    <lat>53.54191620565591</lat>
+    <lng>-113.4980405369249</lng>
+  </retailer>
+  <retailer id="94">
+    <name>Ted Allen's Jewellery (1977) Ltd.</name>
+    <street>431 Baker St., Nelson, BC, V1L 4H7</street>
+    <city>Nelson</city>
+    <province>BC</province>
+    <postal_code>V1L 4H7</postal_code>
+    <country>Canada</country>
+    <phone>(250) 352-5033</phone>
+    <email/>
+    <website/>
+    <lat>49.4916</lat>
+    <lng>-117.2956</lng>
+  </retailer>
+  <retailer id="95">
+    <name>L. J. Alteen Ltd.</name>
+    <street>2 High Street, Grand Falls, NF, A2A 2J7</street>
+    <city>Grand Falls</city>
+    <province>NF</province>
+    <postal_code>A2A 2J7</postal_code>
+    <country>Canada</country>
+    <phone>(709) 489-5545</phone>
+    <email/>
+    <website/>
+    <lat>49.0004</lat>
+    <lng>-112.788</lng>
+  </retailer>
+  
+  <retailer id="97">
+    <name>Anstett Jewellers Limited</name>
+    <street>2 Courthouse Square, Goderich, ON, N7A 3M1</street>
+    <city>Goderich</city>
+    <province>ON</province>
+    <postal_code>N7A 2T5</postal_code>
+    <country>Canada</country>
+    <phone>(519) 524-4195</phone>
+    <email/>
+    <website>https://anstett.com/</website>
+    <lat>43.744215166775774</lat>
+    <lng>-81.71142227791101</lng>
+  </retailer>
+  <retailer id="98">
+    <name>Appelt's Jewellery Limited</name>
+    <street>305 Madison Street Unit C, Winnipeg, MB, R3J 1H9</street>
+    <city>Winnipeg</city>
+    <province>MB</province>
+    <postal_code>R3J 1H9</postal_code>
+    <country>Canada</country>
+    <phone>(204) 774-2829</phone>
+    <email/>
+    <website/>
+    <lat>49.8951</lat>
+    <lng>-97.1384</lng>
+  </retailer>
+  <retailer id="99">
+    <name>Appelt's Jewellery Limited</name>
+    <street>305 Stephen Street, Morden, MB, R6M 1V1</street>
+    <city>Morden</city>
+    <province>MB</province>
+    <postal_code>R6M 1V1</postal_code>
+    <country>Canada</country>
+    <phone>(204) 822-4501</phone>
+    <email/>
+    <website/>
+    <lat>49.0004</lat>
+    <lng>-112.788</lng>
+  </retailer>
+  
+  <retailer id="101">
+    <name>Penner Fine Jewellers Inc.</name>
+    <street>10-436 Vansickle Road, St. Catharines, ON, L2R 5G8</street>
+    <city>St. Catharines</city>
+    <province>ON</province>
+    <postal_code>L2R 5G8</postal_code>
+    <country>Canada</country>
+    <phone>(905) 688-0579</phone>
+    <email/>
+    <website/>
+    <lat>49.0004</lat>
+    <lng>-112.788</lng>
+  </retailer>
+  <retailer id="102">
+    <name>Appelt's Jewellery (Steinbach) Limited</name>
+    <street>11-178 PTH 12 N, Steinbach, MB, R5G 1T7</street>
+    <city>Steinbach</city>
+    <province>MB</province>
+    <postal_code>R5G 1T7</postal_code>
+    <country>Canada</country>
+    <phone>(204) 326-2511</phone>
+    <email/>
+    <website/>
+    <lat>49.5325</lat>
+    <lng>-96.6893</lng>
+  </retailer>
+  <retailer id="103">
+    <name>Appelt's Diamonds Limited</name>
+    <street>110-1570 Kenaston Boulevard, Kenaston Common</street>
+    <city>Kenaston Common</city>
+    <province/>
+    <postal_code>R3P 0Y4</postal_code>
+    <country>Canada</country>
+    <phone/>
+    <email/>
+    <website/>
+    <lat>49.8229</lat>
+    <lng>-97.208</lng>
+  </retailer>
+  <retailer id="104">
+    <name>Pommier Jewellers Ltd.</name>
+    <street>6 Second St. E., Cornwall, ON, K6H 1Y3</street>
+    <city>Cornwall</city>
+    <province>ON</province>
+    <postal_code>K6H 1Y3</postal_code>
+    <country>Canada</country>
+    <phone>(613) 932-4022</phone>
+    <email/>
+    <website/>
+    <lat>45.0191</lat>
+    <lng>-74.7271</lng>
+  </retailer>
+  <retailer id="105">
+    <name>Prairie Gold Jewellery</name>
+    <street>101 11070 - 100 Ave., Grand Prairie, AB, T8V 7L5</street>
+    <city>Grand Prairie</city>
+    <province>AB</province>
+    <postal_code>T8V 7L5</postal_code>
+    <country>Canada</country>
+    <phone>(780) 538-3060</phone>
+    <email/>
+    <website/>
+    <lat>55.1712</lat>
+    <lng>-118.8271</lng>
+  </retailer>
+  
+  <retailer id="107">
+    <name>Preston Jewellers Ltd</name>
+    <street>979 Island Hwy., Campbell River, BC, V9W 2C4</street>
+    <city>Campbell River</city>
+    <province>BC</province>
+    <postal_code>V9W 2C4</postal_code>
+    <country>Canada</country>
+    <phone>(250) 286-6421</phone>
+    <email/>
+    <website/>
+    <lat>49.0004</lat>
+    <lng>-112.788</lng>
+  </retailer>
+  <retailer id="108">
+    <name>Austen Jlrs. Ltd.</name>
+    <street>103 - 3rd Ave. W., High River, AB, T1V 1M6</street>
+    <city>High River</city>
+    <province>AB</province>
+    <postal_code>T1V 1M6</postal_code>
+    <country>Canada</country>
+    <phone>(403) 652-1162</phone>
+    <email/>
+    <website/>
+    <lat>50.5869</lat>
+    <lng>-113.8872</lng>
+  </retailer>
+  <retailer id="109">
+    <name>Babcock Jewellers Dresden Limited</name>
+    <street>433 St. George St., Dresden, ON, N0P 1M0</street>
+    <city>Dresden</city>
+    <province>ON</province>
+    <postal_code>N0P 1M0</postal_code>
+    <country>Canada</country>
+    <phone>(519) 683-2463</phone>
+    <email/>
+    <website/>
+    <lat>42.5892</lat>
+    <lng>-82.1785</lng>
+  </retailer>
+  
+  <retailer id="111">
+    <name>Reesor's Jewellery 1978 Limited</name>
+    <street>Unit 51 - 1570 18th Street, Brandon, MB, R7A 5C5</street>
+    <city>Brandon</city>
+    <province>MB</province>
+    <postal_code>R7A 5C5</postal_code>
+    <country>Canada</country>
+    <phone>(204) 726-9100</phone>
+    <email/>
+    <website/>
+    <lat>49.848</lat>
+    <lng>-99.9533</lng>
+  </retailer>
+  <retailer id="112">
+    <name>D.M. Reid Jewellers Limited</name>
+    <street>55 Webster St, Kentville, NS B4N 1H4</street>
+    <city>Kentville</city>
+    <province>NS</province>
+    <postal_code>B4N 1H4</postal_code>
+    <country>Canada</country>
+    <phone>(902) 678-6686</phone>
+    <email/>
+    <website>https://www.reidjewellers.ca/</website>
+    <lat>45.078480815897045</lat>
+    <lng>-64.49568313200696</lng>
+  </retailer>
+  <retailer id="113">
+    <name>Bakelaar Jewellers Ltd</name>
+    <street>421 Main Street S.</street>
+    <city>Exeter</city>
+    <province>ON</province>
+    <postal_code>N0M 1S1</postal_code>
+    <country>Canada</country>
+    <phone>(519) 235-2720</phone>
+    <email/>
+    <website/>
+    <lat>43.52073303102668</lat>
+    <lng>-81.38701251958254</lng>
+  </retailer>
+  <retailer id="114">
+    <name>Barthau Jlrs. Ltd.</name>
+    <street>5758 Main St Unit 5, Whitchurch-Stouffville, ON, Canada</street>
+    <city>Stouffville</city>
+    <province>ON</province>
+    <postal_code>L4A 2T1</postal_code>
+    <country>Canada</country>
+    <phone>(905) 640-4646</phone>
+    <email/>
+    <website>http://www.barthau.com/</website>
+    <lat>43.96836047968988</lat>
+    <lng>-79.26395617791235</lng>
+  </retailer>
+  <retailer id="115">
+    <name>Bateman Jewellers G W Limited</name>
+    <street>234 2nd Ave. South, Saskatoon, SK, S7K 1K9</street>
+    <city>Saskatoon</city>
+    <province>SK</province>
+    <postal_code>S7K 1K9</postal_code>
+    <country>Canada</country>
+    <phone>(306) 244-8277</phone>
+    <email/>
+    <website/>
+    <lat>52.1579</lat>
+    <lng>-106.6702</lng>
+  </retailer>
+  
+  <retailer id="117">
+    <name>Bazlik E Jewellers Limited</name>
+    <street>219 Kelsey Blvd., Churchill, MB, R0B 0E0</street>
+    <city>Churchill</city>
+    <province>MB</province>
+    <postal_code>R0B 0E0</postal_code>
+    <country>Canada</country>
+    <phone>(204) 675-2397</phone>
+    <email/>
+    <website/>
+    <lat>58.7684</lat>
+    <lng>-94.1648</lng>
+  </retailer>
+  <retailer id="118">
+    <name>Royalty Goldsmiths Inc.</name>
+    <street>2223 Victoria Ave. East</street>
+    <city>REGINA</city>
+    <province>SK</province>
+    <postal_code>S4N 6E4</postal_code>
+    <country>Canada</country>
+    <phone>(306) 522-4653</phone>
+    <email/>
+    <website/>
+    <lat>50.447547</lat>
+    <lng>-104.498078</lng>
+  </retailer>
+  <retailer id="119">
+    <name>Bennardo Jewellers Limited</name>
+    <street>126 Great Northern Rd, Sault Ste. Marie, ON P6B 4Z1</street>
+    <city>Sault Ste. Marie</city>
+    <province>ON</province>
+    <postal_code>P6B 4Z1</postal_code>
+    <country>Canada</country>
+    <phone>+17057596116</phone>
+    <email/>
+    <website/>
+    <lat>46.52922484436256</lat>
+    <lng>-84.31909937791234</lng>
+  </retailer>
+  <retailer id="120">
+    <name>Sandy's Jewellery &amp; Gifts Ltd.</name>
+    <street>Fairview</street>
+    <city>(780) 835-2575</city>
+    <province>AB</province>
+    <postal_code>T0H 1L0</postal_code>
+    <country>Canada</country>
+    <phone>(780) 835-2575</phone>
+    <email/>
+    <website/>
+    <lat>56.066642</lat>
+    <lng>-118.384637</lng>
+  </retailer>
+  <retailer id="121">
+    <name>Blackburn Jewellers Limited</name>
+    <street>768 Main Street, Pincher Creek, AB, T0K 1W0</street>
+    <city>Pincher Creek</city>
+    <province>AB</province>
+    <postal_code>T0K 1W0</postal_code>
+    <country>Canada</country>
+    <phone>(403) 627-3292</phone>
+    <email/>
+    <website/>
+    <lat>49.4855843955121</lat>
+    <lng>-113.94671616340457</lng>
+  </retailer>
+  <retailer id="122">
+    <name>Bob's Watch Repair Limited</name>
+    <street>37 Park Street N., Peterborough, ON, K9J 3V5</street>
+    <city>Peterborough</city>
+    <province>ON</province>
+    <postal_code>K9J 3V5</postal_code>
+    <country>Canada</country>
+    <phone>(705) 742-8787</phone>
+    <email/>
+    <website>http://www.bobswatchrepair.com/</website>
+    <lat>44.29408774534963</lat>
+    <lng>-78.32562226257205</lng>
+  </retailer>
+  <retailer id="123">
+    <name>Savoy's Jewellers Limited</name>
+    <street>290 Queen St. E.</street>
+    <city>Sault Ste Marie</city>
+    <province>ON</province>
+    <postal_code>P6A 1Y7</postal_code>
+    <country>Canada</country>
+    <phone>(705) 253-9703</phone>
+    <email/>
+    <website/>
+    <lat>46.514015</lat>
+    <lng>-84.335895</lng>
+  </retailer>
+  <retailer id="124">
+    <name>Savoy's Jewellers Limited</name>
+    <street>293 Bay Street, Station Mall</street>
+    <city>Station Mall</city>
+    <province/>
+    <postal_code>P6A 1X3</postal_code>
+    <country>Canada</country>
+    <phone/>
+    <email/>
+    <website/>
+    <lat>46.5128</lat>
+    <lng>-84.3392</lng>
+  </retailer>
+  
+  <retailer id="126">
+    <name>Shaw W J Jewellery Limited</name>
+    <street>41 Mississauga St. E</street>
+    <city>Orillia</city>
+    <province>ON</province>
+    <postal_code>L3V 1V4</postal_code>
+    <country>Canada</country>
+    <phone>(705) 325-7800</phone>
+    <email/>
+    <website/>
+    <lat>49.000415</lat>
+    <lng>-112.788027</lng>
+  </retailer>
+  <retailer id="127">
+    <name>SherRing Goldsmiths Ltd.</name>
+    <street>91 Broadway St E.</street>
+    <city>Yorkton</city>
+    <province>SK</province>
+    <postal_code>S3N 0L1</postal_code>
+    <country>Canada</country>
+    <phone>(306) 782-4653</phone>
+    <email/>
+    <website/>
+    <lat>51.210130</lat>
+    <lng>-102.456329</lng>
+  </retailer>
+  <retailer id="128">
+    <name>Simon Imports Ltd</name>
+    <street>213 1120 Grant Ave., Winnipeg, MB, R3M 2A6</street>
+    <city>Winnipeg</city>
+    <province>MB</province>
+    <postal_code>R3M 2A6</postal_code>
+    <country>Canada</country>
+    <phone>(204) 475-8443</phone>
+    <email/>
+    <website/>
+    <lat>49.8951</lat>
+    <lng>-97.1384</lng>
+  </retailer>
+  <retailer id="129">
+    <name>Simpson J B Jewellers Inc</name>
+    <street>469 Richmond Street, London, ON, N6A 3E4</street>
+    <city>London</city>
+    <province>ON</province>
+    <postal_code>N6A 3E4</postal_code>
+    <country>Canada</country>
+    <phone>(519) 433-0021</phone>
+    <email/>
+    <website/>
+    <lat>42.9849</lat>
+    <lng>-81.2453</lng>
+  </retailer>
+  <retailer id="130">
+    <name>Sonya Roe Jewellers Inc</name>
+    <street>138 King St. West suit 101</street>
+    <city>Chatham</city>
+    <province>Ontario</province>
+    <postal_code>N7M 1E3</postal_code>
+    <country>Canada</country>
+    <phone/>
+    <email/>
+    <website/>
+    <lat>49.000415</lat>
+    <lng>-112.788027</lng>
+  </retailer>
+  
+  <retailer id="132">
+    <name>A P Brown Jewellers Limited</name>
+    <street>82 West Main St, Welland, ON, L3C 4Z9</street>
+    <city>Welland</city>
+    <province>ON</province>
+    <postal_code>L3C 4Z9</postal_code>
+    <country>Canada</country>
+    <phone>(905) 734-3841</phone>
+    <email/>
+    <website/>
+    <lat>42.991843</lat>
+    <lng>-79.253955</lng>
+  </retailer>
+  
+  <retailer id="134">
+    <name>Stekelbos Watch &amp; Clock Repairs</name>
+    <street>851 Dufferin Ave</street>
+    <city>Wallaceburg</city>
+    <province>ON</province>
+    <postal_code>N8A 2V5</postal_code>
+    <country>Canada</country>
+    <phone>(519) 627-4011</phone>
+    <email/>
+    <website/>
+    <lat>42.592751</lat>
+    <lng>-82.390055</lng>
+  </retailer>
+  <retailer id="135">
+    <name>Bruinix Jewellers Limited</name>
+    <street>73B Dundas St. W., Trenton, ON, K8V 3P4</street>
+    <city>Trenton</city>
+    <province>ON</province>
+    <postal_code>K8V 3P4</postal_code>
+    <country>Canada</country>
+    <phone>(613) 392-5997</phone>
+    <email/>
+    <website>http://www.bruinixjewellers.com/</website>
+    <lat>44.10116101453146</lat>
+    <lng>-77.57653044878093</lng>
+  </retailer>
+  <retailer id="136">
+    <name>Bryant's Jewellers Limited</name>
+    <street>66 Main Street, Penetanguishene, ON, L9M 1T3</street>
+    <city>Penetanguishene</city>
+    <province>ON</province>
+    <postal_code>L9M 1T3</postal_code>
+    <country>Canada</country>
+    <phone>(705) 549-8911</phone>
+    <email/>
+    <website/>
+    <lat>44.76963795455482</lat>
+    <lng>-79.9345355202422</lng>
+  </retailer>
+  
+  <retailer id="138">
+    <name>Caine's Jewellers Ltd</name>
+    <street>4930 50 Street Rocky Mountain House, Alberta T4T 1G7</street>
+    <city>Rocky Mountain House</city>
+    <province>AB</province>
+    <postal_code>T4T 1G7</postal_code>
+    <country>Canada</country>
+    <phone>(403) 845-3440</phone>
+    <email/>
+    <website>https://www.cainesjewellers.com/</website>
+    <lat>52.374066150021676</lat>
+    <lng>-114.9195292877162</lng>
+  </retailer>
+  <retailer id="139">
+    <name>Caines Jewellers Ltd.</name>
+    <street>5012 - 50 Avenue, Whitecourt, AB, T7S 1P8</street>
+    <city>Whitecourt</city>
+    <province>AB</province>
+    <postal_code>T7S 1P8</postal_code>
+    <country>Canada</country>
+    <phone>(780) 778-3302</phone>
+    <email/>
+    <website>https://www.cainesjewellers.com/</website>
+    <lat>54.14088869824293</lat>
+    <lng>-115.68575550930174</lng>
+  </retailer>
+  <retailer id="140">
+    <name>Calgary Jewellery Ltd</name>
+    <street>1201-17th Ave. S. W., Calgary, AB, T2T 0C1</street>
+    <city>Calgary</city>
+    <province>AB</province>
+    <postal_code>T2T 0C1</postal_code>
+    <country>Canada</country>
+    <phone>(403) 245-3131</phone>
+    <email/>
+    <website/>
+    <lat>51.0447</lat>
+    <lng>-114.0719</lng>
+  </retailer>
+  <retailer id="141">
+    <name>Cameron's Jewellery Limited</name>
+    <street>239 Main Street, Antigonish, NS, B2G 2M5</street>
+    <city>Antigonish</city>
+    <province>NS</province>
+    <postal_code>B2G 2M5</postal_code>
+    <country>Canada</country>
+    <phone>(902) 863-1283</phone>
+    <email/>
+    <website>https://cameronsjewellery.ca/</website>
+    <lat>45.62253413170403</lat>
+    <lng>-61.99022542538913</lng>
+  </retailer>
+  <retailer id="142">
+    <name>Bob Thompson Jewellery &amp; Watch Repairs</name>
+    <street>193 Bank St., Ottawa, ON, K2P 1W7</street>
+    <city>Ottawa</city>
+    <province>ON</province>
+    <postal_code>K2P 1W7</postal_code>
+    <country>Canada</country>
+    <phone>(613) 233-4758</phone>
+    <email/>
+    <website/>
+    <lat>45.4215</lat>
+    <lng>-75.6972</lng>
+  </retailer>
+  <retailer id="143">
+    <name>Carters Jewellers Limited</name>
+    <street>1131A Main Street, Smithers, BC, V0J 2N0</street>
+    <city>Smithers</city>
+    <province>BC</province>
+    <postal_code>V0J 2N0</postal_code>
+    <country>Canada</country>
+    <phone>(250) 847-9766</phone>
+    <email/>
+    <website>https://cartersjewellers.com/</website>
+    <lat>54.7803910022931</lat>
+    <lng>-127.17263091534026</lng>
+  </retailer>
+  <retailer id="144">
+    <name>Thong's Jewellery &amp; Repair Limited</name>
+    <street>40-1270 Dogwood St</street>
+    <city>Campbell River</city>
+    <province>BC</province>
+    <postal_code>V9W 3A5</postal_code>
+    <country>Canada</country>
+    <phone>(250) 287-4042</phone>
+    <email/>
+    <website/>
+    <lat>49.000415</lat>
+    <lng>-112.788027</lng>
+  </retailer>
+  <retailer id="145">
+    <name>Cartwright Jewellers</name>
+    <street>639 6th Street, New Westminster, BC, V3L 3C1, Canada</street>
+    <city>New Westminster</city>
+    <province>BC</province>
+    <postal_code>V3L 3C1</postal_code>
+    <country>Canada</country>
+    <phone>(604) 526-3011</phone>
+    <email/>
+    <website/>
+    <lat>49.218985</lat>
+    <lng>-122.92765</lng>
+  </retailer>
+  <retailer id="146">
+    <name>Three Gems</name>
+    <street>312 2nd Street W., Brooks, AB, TIR IC8, Canada</street>
+    <city>Brooks</city>
+    <province>AB</province>
+    <postal_code>TIR IC8</postal_code>
+    <country>Canada</country>
+    <phone>(403) 362-3436</phone>
+    <email/>
+    <website/>
+    <lat>50.571027</lat>
+    <lng>-111.893005</lng>
+  </retailer>
+  <retailer id="147">
+    <name>Carters Jewellers Prince George</name>
+    <street>3055 Massey, Prince George, BC, V2N 2S9, Canada</street>
+    <city>Prince George</city>
+    <province>BC</province>
+    <postal_code>V2N 2S9</postal_code>
+    <country>Canada</country>
+    <phone>(250) 614-9191</phone>
+    <email/>
+    <website/>
+    <lat>53.897366</lat>
+    <lng>-122.793788</lng>
+  </retailer>
+  <retailer id="148">
+    <name>Carters Jewellers Quesnel</name>
+    <street>155 Malcolm Dr. 3, Quesnel, BC, V2J 3K2, Canada</street>
+    <city>Quesnel</city>
+    <province>BC</province>
+    <postal_code>V2J 3K2</postal_code>
+    <country>Canada</country>
+    <phone>(250) 991-0129</phone>
+    <email/>
+    <website/>
+    <lat>52.979428</lat>
+    <lng>-122.493627</lng>
+  </retailer>
+  <retailer id="149">
+    <name>Town's Jewellers</name>
+    <street>51 Missisauga St. E., Orillia, ON, L3V 1V4, Canada</street>
+    <city>Orillia</city>
+    <province>ON</province>
+    <postal_code>L3V 1V4</postal_code>
+    <country>Canada</country>
+    <phone>(705) 326-2441</phone>
+    <email/>
+    <website/>
+    <lat>44.606614</lat>
+    <lng>-79.416926</lng>
+  </retailer>
+  <retailer id="150">
+    <name>Treasures Fine Jewellers</name>
+    <street>Suite 100, 4718 50 Ave., Bonnyville, AB, T9N 1A3, Canada</street>
+    <city>Bonnyville</city>
+    <province>AB</province>
+    <postal_code>T9N 1A3</postal_code>
+    <country>Canada</country>
+    <phone>(780) 826-2221</phone>
+    <email/>
+    <website/>
+    <lat>54.267925</lat>
+    <lng>-110.741515</lng>
+  </retailer>
+  <retailer id="151">
+    <name>Tres Ors Jewellers</name>
+    <street>168 Princess Street, Kingston, ON, K7L 1B1, Canada</street>
+    <city>Kingston</city>
+    <province>ON</province>
+    <postal_code>K7L 1B1</postal_code>
+    <country>Canada</country>
+    <phone>(613) 542-4492</phone>
+    <email/>
+    <website/>
+    <lat>44.231755</lat>
+    <lng>-76.48482</lng>
+  </retailer>
+  <retailer id="152">
+    <name>Marv Chony Jewellers</name>
+    <street>108 Centennial Square, Thunder Bay, ON, P7E 1H3, Canada</street>
+    <city>Thunder Bay</city>
+    <province>ON</province>
+    <postal_code>P7E 1H3</postal_code>
+    <country>Canada</country>
+    <phone>(807) 623-7767</phone>
+    <email/>
+    <website/>
+    <lat>48.406414</lat>
+    <lng>-89.259796</lng>
+  </retailer>
+  <retailer id="153">
+    <name>Roland Triebel Jewellers</name>
+    <street>Unit D-9803-93rd Ave., Fort St John, BC, V1J 6W9, Canada</street>
+    <city>Fort St John</city>
+    <province>BC</province>
+    <postal_code>V1J 6W9</postal_code>
+    <country>Canada</country>
+    <phone>(250) 787-1995</phone>
+    <email/>
+    <website/>
+    <lat>56.252404</lat>
+    <lng>-120.846943</lng>
+  </retailer>
+  <retailer id="154">
+    <name>Clarke's Gifts &amp; Flowers</name>
+    <street>18 Dennis St. E., Gladstone, MB, R0J 0T0, Canada</street>
+    <city>Gladstone</city>
+    <province>MB</province>
+    <postal_code>R0J 0T0</postal_code>
+    <country>Canada</country>
+    <phone>(204) 385-2434</phone>
+    <email/>
+    <website/>
+    <lat>50.22549</lat>
+    <lng>-98.951066</lng>
+  </retailer>
+  <retailer id="155">
+    <name>Troy Shoppe Jewellers</name>
+    <street>204 4th Street N.E., Calgary, AB, T2E 3S2, Canada</street>
+    <city>Calgary</city>
+    <province>AB</province>
+    <postal_code>T2E 3S2</postal_code>
+    <country>Canada</country>
+    <phone>(403) 293-1100</phone>
+    <email/>
+    <website/>
+    <lat>51.045606</lat>
+    <lng>-114.057541</lng>
+  </retailer>
+  <retailer id="156">
+    <name>Bijouterie Classique Jewellers</name>
+    <street>807 George Street, Hearst, ON, P0L 1N0, Canada</street>
+    <city>Hearst</city>
+    <province>ON</province>
+    <postal_code>P0L 1N0</postal_code>
+    <country>Canada</country>
+    <phone>(705) 372-1080</phone>
+    <email/>
+    <website/>
+    <lat>49.68872</lat>
+    <lng>-83.663142</lng>
+  </retailer>
+  <retailer id="157">
+    <name>Unis Jewellers</name>
+    <street>1569 Tecumseh Rd. E., Windsor, ON, N8W 1C3, Canada</street>
+    <city>Windsor</city>
+    <province>ON</province>
+    <postal_code>N8W 1C3</postal_code>
+    <country>Canada</country>
+    <phone>(519) 977-5593</phone>
+    <email/>
+    <website/>
+    <lat>42.296651</lat>
+    <lng>-83.024475</lng>
+  </retailer>
+  <retailer id="158">
+    <name>A P Vail Jewellers</name>
+    <street>149 Davis Street, Sarnia, ON, N7T 1A3, Canada</street>
+    <city>Sarnia</city>
+    <province>ON</province>
+    <postal_code>N7T 1A3</postal_code>
+    <country>Canada</country>
+    <phone>(519) 332-1066</phone>
+    <email/>
+    <website/>
+    <lat>42.970555</lat>
+    <lng>-82.406392</lng>
+  </retailer>
+  <retailer id="159">
+    <name>Comeau's Jewelry &amp; Gifts</name>
+    <street>160 Water Street, Campbellton, NB, E3N 1B4, Canada</street>
+    <city>Campbellton</city>
+    <province>NB</province>
+    <postal_code>E3N 1B4</postal_code>
+    <country>Canada</country>
+    <phone>(506) 753-5321</phone>
+    <email/>
+    <website/>
+    <lat>48.009058</lat>
+    <lng>-66.670356</lng>
+  </retailer>
+  <retailer id="160">
+    <name>Tower Jewellers</name>
+    <street>181 Main Street, Bathurst, NB, E2A 1A6, Canada</street>
+    <city>Bathurst</city>
+    <province>NB</province>
+    <postal_code>E2A 1A6</postal_code>
+    <country>Canada</country>
+    <phone>(506) 547-1157</phone>
+    <email/>
+    <website/>
+    <lat>47.620869</lat>
+    <lng>-65.654587</lng>
+  </retailer>
+  <retailer id="161">
+    <name>Cook's Jewellers</name>
+    <street>527 3rd Ave. west, Prince Rupert, BC, V8J 1L9, Canada</street>
+    <city>Prince Rupert</city>
+    <province>BC</province>
+    <postal_code>V8J 1L9</postal_code>
+    <country>Canada</country>
+    <phone>(250) 624-5231</phone>
+    <email/>
+    <website/>
+    <lat>54.309838</lat>
+    <lng>-130.329598</lng>
+  </retailer>
+  <retailer id="162">
+    <name>Van Valkenburg &amp; Son</name>
+    <street>4 King Street W., Forest, ON, N0N 1J0, Canada</street>
+    <city>Forest</city>
+    <province>ON</province>
+    <postal_code>N0N 1J0</postal_code>
+    <country>Canada</country>
+    <phone>(519) 786-5062</phone>
+    <email/>
+    <website/>
+    <lat>43.097461</lat>
+    <lng>-82.000716</lng>
+  </retailer>
+  <retailer id="163">
+    <name>Vincent Jewellers</name>
+    <street>153 High Street, Southampton, ON, N0H 2L0, Canada</street>
+    <city>Southampton</city>
+    <province>ON</province>
+    <postal_code>N0H 2L0</postal_code>
+    <country>Canada</country>
+    <phone>(519) 797-2247</phone>
+    <email/>
+    <website/>
+    <lat>44.496052</lat>
+    <lng>-81.37306</lng>
+  </retailer>
+  <retailer id="164">
+    <name>Cousineau Fine Jewellery</name>
+    <street>101 Mall - 38 Pine St. N., Timmins, ON, P4N 6K6, Canada</street>
+    <city>Timmins</city>
+    <province>ON</province>
+    <postal_code>P4N 6K6</postal_code>
+    <country>Canada</country>
+    <phone>(705) 264-9896</phone>
+    <email/>
+    <website/>
+    <lat>48.476651</lat>
+    <lng>-81.32787</lng>
+  </retailer>
+  <retailer id="165">
+    <name>Cranna's Jewellers</name>
+    <street>35680 97th Street, Oliver, BC, V0H 1T0, Canada</street>
+    <city>Oliver</city>
+    <province>BC</province>
+    <postal_code>V0H 1T0</postal_code>
+    <country>Canada</country>
+    <phone>(250) 498-3633</phone>
+    <email/>
+    <website/>
+    <lat>49.183333</lat>
+    <lng>-119.55</lng>
+  </retailer>
+  <retailer id="166">
+    <name>Wainwright Jewellers</name>
+    <street>318 10th Street, Wainwright, AB, T9W 1P6, Canada</street>
+    <city>Wainwright</city>
+    <province>AB</province>
+    <postal_code>T9W 1P6</postal_code>
+    <country>Canada</country>
+    <phone>(780) 842-3237</phone>
+    <email/>
+    <website/>
+    <lat>52.840273</lat>
+    <lng>-110.851434</lng>
+  </retailer>
+  <retailer id="167">
+    <name>Creative Framing o/a Hudson Jewellers</name>
+    <street>152 Route 560, Upper Woodstock, NB, E7M 3E5, Canada</street>
+    <city>Upper Woodstock</city>
+    <province>NB</province>
+    <postal_code>E7M 3E5</postal_code>
+    <country>Canada</country>
+    <phone>(506) 328-6527</phone>
+    <email/>
+    <website/>
+    <lat>46.17176</lat>
+    <lng>-67.572633</lng>
+  </retailer>
+  <retailer id="168">
+    <name>Crowley's Jewellers</name>
+    <street>674 Kingsway, Edmonton, AB, T5G 3E6, Canada</street>
+    <city>Edmonton</city>
+    <province>AB</province>
+    <postal_code>T5G 3E6</postal_code>
+    <country>Canada</country>
+    <phone>(780) 477-2400</phone>
+    <email/>
+    <website/>
+    <lat>53.562968</lat>
+    <lng>-113.505886</lng>
+  </retailer>
+  <retailer id="169">
+    <name>Walkers Jewellers</name>
+    <street>450 Main Street ., Penticton, BC, V2A 5C5, Canada</street>
+    <city>Penticton</city>
+    <province>BC</province>
+    <postal_code>V2A 5C5</postal_code>
+    <country>Canada</country>
+    <phone>(250) 492-7089</phone>
+    <email/>
+    <website/>
+    <lat>49.478459</lat>
+    <lng>-119.584073</lng>
+  </retailer>
+  <retailer id="170">
+    <name>Norman E Wallace Jewellery</name>
+    <street>261 Raglan Street S., Renfrew, ON, K7V 1R3, Canada</street>
+    <city>Renfrew</city>
+    <province>ON</province>
+    <postal_code>K7V 1R3</postal_code>
+    <country>Canada</country>
+    <phone>(613) 432-3284</phone>
+    <email/>
+    <website/>
+    <lat>45.470939</lat>
+    <lng>-76.682655</lng>
+  </retailer>
+  <retailer id="171">
+    <name>Dales Of Edmonton</name>
+    <street>10551 114th Street, Edmonton, AB, T5H 3J6, Canada</street>
+    <city>Edmonton</city>
+    <province>AB</province>
+    <postal_code>T5H 3J6</postal_code>
+    <country>Canada</country>
+    <phone>(780) 425-0245</phone>
+    <email/>
+    <website/>
+    <lat>53.546206</lat>
+    <lng>-113.491241</lng>
+  </retailer>
+  <retailer id="172">
+    <name>Jeff Walters Diamonds</name>
+    <street>331 Bayfield Street, Suite 203, Barrie, ON, L4M 3C2, Canada</street>
+    <city>Barrie</city>
+    <province>ON</province>
+    <postal_code>L4M 3C2</postal_code>
+    <country>Canada</country>
+    <phone>(705) 739-7464</phone>
+    <email/>
+    <website/>
+    <lat>44.389321</lat>
+    <lng>-79.69013</lng>
+  </retailer>
+  <retailer id="173">
+    <name>Phillip Wards Jewellery</name>
+    <street>104 13th St. N., Lethbridge, AB, T1H 2R4, Canada</street>
+    <city>Lethbridge</city>
+    <province>AB</province>
+    <postal_code>T1H 2R4</postal_code>
+    <country>Canada</country>
+    <phone>(403) 328-0001</phone>
+    <email/>
+    <website/>
+    <lat>49.694578</lat>
+    <lng>-112.833103</lng>
+  </retailer>
+  <retailer id="174">
+    <name>Davidson's Jewellers</name>
+    <street>790 Bank Street, Ottawa, ON, K1S 3V6, Canada</street>
+    <city>Ottawa</city>
+    <province>ON</province>
+    <postal_code>K1S 3V6</postal_code>
+    <country>Canada</country>
+    <phone>(613) 234-4136</phone>
+    <email/>
+    <website/>
+    <lat>45.403087</lat>
+    <lng>-75.688547</lng>
+  </retailer>
+  <retailer id="175">
+    <name>Deb's Jewellery &amp; Giftware</name>
+    <street>23 Main Street, Ashern, MB, R0C 0E0, Canada</street>
+    <city>Ashern</city>
+    <province>MB</province>
+    <postal_code>R0C 0E0</postal_code>
+    <country>Canada</country>
+    <phone>(204) 768-3472</phone>
+    <email/>
+    <website/>
+    <lat>51.180611</lat>
+    <lng>-98.355618</lng>
+  </retailer>
+  <retailer id="176">
+    <name>Weeks Jewellers</name>
+    <street>41 Park St W., Windsor, ON, N9A 5P3, Canada</street>
+    <city>Windsor</city>
+    <province>ON</province>
+    <postal_code>N9A 5P3</postal_code>
+    <country>Canada</country>
+    <phone>(519) 253-5891</phone>
+    <email/>
+    <website/>
+    <lat>42.314983</lat>
+    <lng>-83.044236</lng>
+  </retailer>
+  <retailer id="177">
+    <name>Diamonds for You</name>
+    <street>210, 4420 Railway Avenue, Vermilion, AB, T9X 1G1, Canada</street>
+    <city>Vermilion</city>
+    <province>AB</province>
+    <postal_code>T9X 1G1</postal_code>
+    <country>Canada</country>
+    <phone>(780) 853-4408</phone>
+    <email/>
+    <website/>
+    <lat>53.352709</lat>
+    <lng>-110.854207</lng>
+  </retailer>
+  <retailer id="178">
+    <name>Dube Designs</name>
+    <street>213 Craig Street, Timmins, ON, P4N 4A2, Canada</street>
+    <city>Timmins</city>
+    <province>ON</province>
+    <postal_code>P4N 4A2</postal_code>
+    <country>Canada</country>
+    <phone>(705) 264-7464</phone>
+    <email/>
+    <website/>
+    <lat>48.47719</lat>
+    <lng>-81.355429</lng>
+  </retailer>
+  <retailer id="179">
+    <name>Whitman Jewellers Northern</name>
+    <street>1055 Cassells Street, North Bay, ON, P1B 4B1, Canada</street>
+    <city>North Bay</city>
+    <province>ON</province>
+    <postal_code>P1B 4B1</postal_code>
+    <country>Canada</country>
+    <phone>(705) 472-2190</phone>
+    <email/>
+    <website/>
+    <lat>46.318264</lat>
+    <lng>-79.443986</lng>
+  </retailer>
+  <retailer id="180">
+    <name>Elgin Jewellers Regd</name>
+    <street>260 Elgin Street, Ottawa, ON, K2P 1L9, Canada</street>
+    <city>Ottawa</city>
+    <province>ON</province>
+    <postal_code>K2P 1L9</postal_code>
+    <country>Canada</country>
+    <phone>(613) 234-5672</phone>
+    <email/>
+    <website/>
+    <lat>45.41793</lat>
+    <lng>-75.690623</lng>
+  </retailer>
+  <retailer id="181">
+    <name>William Jewellers</name>
+    <street>38 James Street, St. Catharines, ON, L2R 5B8, Canada</street>
+    <city>St. Catharines</city>
+    <province>ON</province>
+    <postal_code>L2R 5B8</postal_code>
+    <country>Canada</country>
+    <phone>(905) 682-3621</phone>
+    <email/>
+    <website/>
+    <lat>43.158715</lat>
+    <lng>-79.244959</lng>
+  </retailer>
+  <retailer id="182">
+    <name>Elgin Jewellers</name>
+    <street>690 Goderich St., Port Elgin, ON, N0H 2C0, Canada</street>
+    <city>Port Elgin</city>
+    <province>ON</province>
+    <postal_code>N0H 2C0</postal_code>
+    <country>Canada</country>
+    <phone>(519) 832-2428</phone>
+    <email/>
+    <website/>
+    <lat>44.43796</lat>
+    <lng>-81.387696</lng>
+  </retailer>
+  <retailer id="183">
+    <name>Wilson &amp; Markle Jewellers</name>
+    <street>489 Dundas Street, Woodstock, ON, N4S 8Y4, Canada</street>
+    <city>Woodstock</city>
+    <province>ON</province>
+    <postal_code>N4S 8Y4</postal_code>
+    <country>Canada</country>
+    <phone>(519) 537-3142</phone>
+    <email/>
+    <website/>
+    <lat>43.130273</lat>
+    <lng>-80.756578</lng>
+  </retailer>
+  <retailer id="184">
+    <name>Enderby Jewellers</name>
+    <street>608 Cliff Ave., Enderby, BC, V0E 1V0, Canada</street>
+    <city>Enderby</city>
+    <province>BC</province>
+    <postal_code>V0E 1V0</postal_code>
+    <country>Canada</country>
+    <phone>(250) 838-7123</phone>
+    <email/>
+    <website/>
+    <lat>50.550285</lat>
+    <lng>-119.139379</lng>
+  </retailer>
+  <retailer id="185">
+    <name>Wolfgang Trautmann Goldsmith.</name>
+    <street>49 - 175 David Berguy Dr., Kitchener, ON, N2E 4H7, Canada</street>
+    <city>Kitchener</city>
+    <province>ON</province>
+    <postal_code>N2E 4H7</postal_code>
+    <country>Canada</country>
+    <phone>(519) 742-4190</phone>
+    <email/>
+    <website/>
+    <lat>43.451291</lat>
+    <lng>-80.492782</lng>
+  </retailer>
+  <retailer id="186">
+    <name>Woods Jewellers</name>
+    <street>13A - 330 Central N., Swift Current, SK, S9H 0L4, Canada</street>
+    <city>Swift Current</city>
+    <province>SK</province>
+    <postal_code>S9H 0L4</postal_code>
+    <country>Canada</country>
+    <phone>(306) 773-4082</phone>
+    <email/>
+    <website/>
+    <lat>50.284914</lat>
+    <lng>-107.79845</lng>
+  </retailer>
+  <retailer id="187">
+    <name>Facets Jewellery &amp; Gifts</name>
+    <street>351 Argyle St. S., Unit 4, Caledonia, ON, N3W 1K7, Canada</street>
+    <city>Caledonia</city>
+    <province>ON</province>
+    <postal_code>N3W 1K7</postal_code>
+    <country>Canada</country>
+    <phone>(905) 765-8959</phone>
+    <email/>
+    <website/>
+    <lat>43.073794</lat>
+    <lng>-79.951908</lng>
+  </retailer>
+  <retailer id="188">
+    <name>Fifth Avenue Jewellers</name>
+    <street>510-1055 Hillside Dr., Kamloops, BC, V2E 2S5, Canada</street>
+    <city>Kamloops</city>
+    <province>BC</province>
+    <postal_code>V2E 2S5</postal_code>
+    <country>Canada</country>
+    <phone>(250) 372-7777</phone>
+    <email/>
+    <website/>
+    <lat>50.664492</lat>
+    <lng>-120.368746</lng>
+  </retailer>
+  <retailer id="189">
+    <name>Fire and Ice Jewellers</name>
+    <street>310 Guelph Street, Unit 5, Georgetown, ON, L7G 4B1, Canada</street>
+    <city>Georgetown</city>
+    <province>ON</province>
+    <postal_code>L7G 4B1</postal_code>
+    <country>Canada</country>
+    <phone>(905) 873-4405</phone>
+    <email/>
+    <website/>
+    <lat>43.655383</lat>
+    <lng>-79.919045</lng>
+  </retailer>
+  <retailer id="190">
+    <name>Flondra Jewellers</name>
+    <street>213 - 3rd Avenue, Timmins, ON, P4N 1C9, Canada</street>
+    <city>Timmins</city>
+    <province>ON</province>
+    <postal_code>P4N 1C9</postal_code>
+    <country>Canada</country>
+    <phone>(705) 264-6633</phone>
+    <email/>
+    <website/>
+    <lat>48.474998</lat>
+    <lng>-81.329381</lng>
+  </retailer>
+  <retailer id="191">
+    <name>Forest of Jewels</name>
+    <street>428 Riverbend Square, Edmonton, AB, T6R 2X2, Canada</street>
+    <city>Edmonton</city>
+    <province>AB</province>
+    <postal_code>T6R 2X2</postal_code>
+    <country>Canada</country>
+    <phone>(780) 438-3682</phone>
+    <email/>
+    <website/>
+    <lat>53.468814</lat>
+    <lng>-113.586667</lng>
+  </retailer>
+  <retailer id="192">
+    <name>Fort Richmond Jewellers</name>
+    <street>2860 Pembina Hwy, Unit 10, Winnipeg, MB, R3T 3L9, Canada</street>
+    <city>Winnipeg</city>
+    <province>MB</province>
+    <postal_code>R3T 3L9</postal_code>
+    <country>Canada</country>
+    <phone>(204) 269-8248</phone>
+    <email/>
+    <website/>
+    <lat>49.895537</lat>
+    <lng>-97.138458</lng>
+  </retailer>
+  <retailer id="193">
+    <name>Foster &amp; Sons Jewellers</name>
+    <street>622 - 3rd Avenue South, Lethbridge, AB, T1J 0H5, Canada</street>
+    <city>Lethbridge</city>
+    <province>AB</province>
+    <postal_code>T1J 0H5</postal_code>
+    <country>Canada</country>
+    <phone>(403) 327-4429</phone>
+    <email/>
+    <website/>
+    <lat>49.694578</lat>
+    <lng>-112.833103</lng>
+  </retailer>
+  <retailer id="194">
+    <name>Fran's Jewellers &amp; Gift Boutique</name>
+    <street>623 Ash Grove, Oakbank, MB, R0E 1J0, Canada</street>
+    <city>Oakbank</city>
+    <province>MB</province>
+    <postal_code>R0E 1J0</postal_code>
+    <country>Canada</country>
+    <phone>(204) 444-2962</phone>
+    <email/>
+    <website/>
+    <lat>49.941734</lat>
+    <lng>-96.846474</lng>
+  </retailer>
+  <retailer id="195">
+    <name>Frank's Jewellers</name>
+    <street>8 King St. S., Waterloo, ON, N2J 1N8, Canada</street>
+    <city>Waterloo</city>
+    <province>ON</province>
+    <postal_code>N2J 1N8</postal_code>
+    <country>Canada</country>
+    <phone>(519) 886-4811</phone>
+    <email/>
+    <website/>
+    <lat>43.464978</lat>
+    <lng>-80.522114</lng>
+  </retailer>
+  <retailer id="196">
+    <name>French's Jewellery 1988</name>
+    <street>5011A-50th Ave., Wetaskiwin, AB, T9A 2E8, Canada</street>
+    <city>Wetaskiwin</city>
+    <province>AB</province>
+    <postal_code>T9A 2E8</postal_code>
+    <country>Canada</country>
+    <phone>(780) 352-2121</phone>
+    <email/>
+    <website/>
+    <lat>52.968492</lat>
+    <lng>-113.36792</lng>
+  </retailer>
+  <retailer id="197">
+    <name>Ron Galbraith Jewellers</name>
+    <street>132 Harwood Ave. S., Ajax, ON, L1S 2H6, Canada</street>
+    <city>Ajax</city>
+    <province>ON</province>
+    <postal_code>L1S 2H6</postal_code>
+    <country>Canada</country>
+    <phone>(905) 683-0407</phone>
+    <email/>
+    <website/>
+    <lat>43.848931</lat>
+    <lng>-79.020721</lng>
+  </retailer>
+  <retailer id="198">
+    <name>Gelmici Jewellers</name>
+    <street>123 - 50th Street, Edson, AB, T7E 1V4, Canada</street>
+    <city>Edson</city>
+    <province>AB</province>
+    <postal_code>T7E 1V4</postal_code>
+    <country>Canada</country>
+    <phone>(780) 723-3618</phone>
+    <email/>
+    <website/>
+    <lat>53.585866</lat>
+    <lng>-116.442847</lng>
+  </retailer>
+  <retailer id="199">
+    <name>Gemini Jewellers</name>
+    <street>132 Main Street W., Listowel, ON, N4W 1A1, Canada</street>
+    <city>Listowel</city>
+    <province>ON</province>
+    <postal_code>N4W 1A1</postal_code>
+    <country>Canada</country>
+    <phone>(519) 291-3661</phone>
+    <email/>
+    <website/>
+    <lat>43.731596</lat>
+    <lng>-80.953565</lng>
+  </retailer>
+  <retailer id="200">
+    <name>Gilbert's Jewellery</name>
+    <street>743 Queen Street, Kincardine, ON, N2Z 1Z9, Canada</street>
+    <city>Kincardine</city>
+    <province>ON</province>
+    <postal_code>N2Z 1Z9</postal_code>
+    <country>Canada</country>
+    <phone>(519) 396-2672</phone>
+    <email/>
+    <website/>
+    <lat>44.176029</lat>
+    <lng>-81.635768</lng>
+  </retailer>
+  <retailer id="201">
+    <name>GMG Jewellers</name>
+    <street>1-105-21st St. East, Saskatoon, SK, S7K 0B3, Canada</street>
+    <city>Saskatoon</city>
+    <province>SK</province>
+    <postal_code>S7K 0B3</postal_code>
+    <country>Canada</country>
+    <phone>(306) 665-8463</phone>
+    <email/>
+    <website/>
+    <lat>52.126597</lat>
+    <lng>-106.661202</lng>
+  </retailer>
+  <retailer id="202">
+    <name>Godley's Jewellery</name>
+    <street>4913-1st Street West, Claresholm, AB, T0L 0T0, Canada</street>
+    <city>Claresholm</city>
+    <province>AB</province>
+    <postal_code>T0L 0T0</postal_code>
+    <country>Canada</country>
+    <phone>(403) 625-2719</phone>
+    <email/>
+    <website/>
+    <lat>50.023946</lat>
+    <lng>-113.580029</lng>
+  </retailer>
+  <retailer id="203">
+    <name>Golden Enterprizes</name>
+    <street>8 Manitoba Street, Bracebridge, ON, P1L 1P9, Canada</street>
+    <city>Bracebridge</city>
+    <province>ON</province>
+    <postal_code>P1L 1P9</postal_code>
+    <country>Canada</country>
+    <phone>(705) 645-7439</phone>
+    <email/>
+    <website/>
+    <lat>45.128418</lat>
+    <lng>-79.364488</lng>
+  </retailer>
+  <retailer id="204">
+    <name>Golden Image Jewellery</name>
+    <street>109 Washington Ave, Davidson, SK, S0G 1A0, Canada</street>
+    <city>Davidson</city>
+    <province>SK</province>
+    <postal_code>S0G 1A0</postal_code>
+    <country>Canada</country>
+    <phone>(306) 567-2077</phone>
+    <email/>
+    <website/>
+    <lat>51.262729</lat>
+    <lng>-105.989625</lng>
+  </retailer>
+  <retailer id="205">
+    <name>Goldstream Jewellers Of Diamonds</name>
+    <street>127 Pembroke Street W., Pembroke, ON, K8A 5M7, Canada</street>
+    <city>Pembroke</city>
+    <province>ON</province>
+    <postal_code>K8A 5M7</postal_code>
+    <country>Canada</country>
+    <phone>(613) 732-3142</phone>
+    <email/>
+    <website/>
+    <lat>45.825562</lat>
+    <lng>-77.115684</lng>
+  </retailer>
+  <retailer id="206">
+    <name>Graham's Jewellers</name>
+    <street>261-Fifth St., Courtenay, BC, V9N 1J5, Canada</street>
+    <city>Courtenay</city>
+    <province>BC</province>
+    <postal_code>V9N 1J5</postal_code>
+    <country>Canada</country>
+    <phone>(250) 334-4523</phone>
+    <email/>
+    <website/>
+    <lat>49.689406</lat>
+    <lng>-124.995496</lng>
+  </retailer>
+  <retailer id="207">
+    <name>Grandis Jewellers</name>
+    <street>4230 Petrolia Street, Petrolia, ON, N0N 1R0, Canada</street>
+    <city>Petrolia</city>
+    <province>ON</province>
+    <postal_code>N0N 1R0</postal_code>
+    <country>Canada</country>
+    <phone>(519) 882-1320</phone>
+    <email/>
+    <website/>
+    <lat>42.882002</lat>
+    <lng>-82.149582</lng>
+  </retailer>
+  <retailer id="208">
+    <name>Hagersville Jewellers</name>
+    <street>11 Main St. N., Hagersville, ON, N0A 1H0, Canada</street>
+    <city>Hagersville</city>
+    <province>ON</province>
+    <postal_code>N0A 1H0</postal_code>
+    <country>Canada</country>
+    <phone>(905) 768-3341</phone>
+    <email/>
+    <website/>
+    <lat>42.962449</lat>
+    <lng>-80.05165</lng>
+  </retailer>
+  <retailer id="209">
+    <name>Hagemann Jewellers</name>
+    <street>3119 - 30th Avenue, Vernon, BC, V1T 2C4, Canada</street>
+    <city>Vernon</city>
+    <province>BC</province>
+    <postal_code>V1T 2C4</postal_code>
+    <country>Canada</country>
+    <phone>(250) 545-1528</phone>
+    <email/>
+    <website/>
+    <lat>50.266867</lat>
+    <lng>-119.271816</lng>
+  </retailer>
+  <retailer id="210">
+    <name>Halmo Jewellers</name>
+    <street>443 Norfolk St. S., Simcoe, ON, N3Y 2W8, Canada</street>
+    <city>Simcoe</city>
+    <province>ON</province>
+    <postal_code>N3Y 2W8</postal_code>
+    <country>Canada</country>
+    <phone>(519) 426-3948</phone>
+    <email/>
+    <website/>
+    <lat>44.501401</lat>
+    <lng>-79.703871</lng>
+  </retailer>
+  <retailer id="211">
+    <name>Halton Hills Fine Jewellery</name>
+    <street>218 Main Street E., Milton, ON, L9T 4Y9, Canada</street>
+    <city>Milton</city>
+    <province>ON</province>
+    <postal_code>L9T 4Y9</postal_code>
+    <country>Canada</country>
+    <phone>(905) 875-2999</phone>
+    <email/>
+    <website/>
+    <lat>43.513153</lat>
+    <lng>-79.882977</lng>
+  </retailer>
+  <retailer id="212">
+    <name>Hammond Jewellers</name>
+    <street>20832 Lougheed Hwy., Maple Ridge, BC, V2X 2R3, Canada</street>
+    <city>Maple Ridge</city>
+    <province>BC</province>
+    <postal_code>V2X 2R3</postal_code>
+    <country>Canada</country>
+    <phone>(604) 467-6861</phone>
+    <email/>
+    <website/>
+    <lat>49.217624</lat>
+    <lng>-122.644272</lng>
+  </retailer>
+  <retailer id="213">
+    <name>Harden's Jewellers</name>
+    <street>300 Eagleson Rd., Kanata, ON, K2M 1C9, Canada</street>
+    <city>Kanata</city>
+    <province>ON</province>
+    <postal_code>K2M 1C9</postal_code>
+    <country>Canada</country>
+    <phone>(613) 592-1923</phone>
+    <email/>
+    <website/>
+    <lat>45.301129</lat>
+    <lng>-75.877542</lng>
+  </retailer>
+  <retailer id="214">
+    <name>R. A. Hartman Jewellers</name>
+    <street>31 Arthur Street, Elmira, ON, N3B 2M4, Canada</street>
+    <city>Elmira</city>
+    <province>ON</province>
+    <postal_code>N3B 2M4</postal_code>
+    <country>Canada</country>
+    <phone>(519) 669-3384</phone>
+    <email/>
+    <website/>
+    <lat>43.601376</lat>
+    <lng>-80.556499</lng>
+  </retailer>
+  <retailer id="215">
+    <name>Harvey Jewellers</name>
+    <street>110 Main St.E., North Bay, ON, P1B 1A8, Canada</street>
+    <city>North Bay</city>
+    <province>ON</province>
+    <postal_code>P1B 1A8</postal_code>
+    <country>Canada</country>
+    <phone>(705) 474-2050</phone>
+    <email/>
+    <website/>
+    <lat>46.310242</lat>
+    <lng>-79.463703</lng>
+  </retailer>
+  <retailer id="216">
+    <name>Crowley's Heart To Heart Fine Jewellery</name>
+    <street>1692 Murphy Road, Unit 3, Sarnia, ON, N7S 2Z3, Canada</street>
+    <city>Sarnia</city>
+    <province>ON</province>
+    <postal_code>N7S 2Z3</postal_code>
+    <country>Canada</country>
+    <phone>(519) 542-1561</phone>
+    <email/>
+    <website/>
+    <lat>42.974382</lat>
+    <lng>-82.403533</lng>
+  </retailer>
+  <retailer id="217">
+    <name>Henne's Jewellery</name>
+    <street>459 N. Christina St., Sarnia, ON, N7T 5W3, Canada</street>
+    <city>Sarnia</city>
+    <province>ON</province>
+    <postal_code>N7T 5W3</postal_code>
+    <country>Canada</country>
+    <phone>(519) 336-3155</phone>
+    <email/>
+    <website/>
+    <lat>42.981675</lat>
+    <lng>-82.402552</lng>
+  </retailer>
+  <retailer id="218">
+    <name>Ron Henry Jewellers</name>
+    <street>70 King William St., Huntsville, ON, P1H 2A5, Canada</street>
+    <city>Huntsville</city>
+    <province>ON</province>
+    <postal_code>P1H 2A5</postal_code>
+    <country>Canada</country>
+    <phone>(705) 789-3773</phone>
+    <email/>
+    <website/>
+    <lat>45.334678</lat>
+    <lng>-79.207761</lng>
+  </retailer>
+  <retailer id="219">
+    <name>Hess Jewellers</name>
+    <street>150 Churchill Blvd., Sault Ste. Marie, ON, P6A 3Z9, Canada</street>
+    <city>Sault Ste. Marie</city>
+    <province>ON</province>
+    <postal_code>P6A 3Z9</postal_code>
+    <country>Canada</country>
+    <phone>(705) 946-0200</phone>
+    <email/>
+    <website/>
+    <lat>46.506386</lat>
+    <lng>-84.298547</lng>
+  </retailer>
+  <retailer id="220">
+    <name>Hill J D Jewellers</name>
+    <street>429 St. Paul Ave., Brantford, ON, N3R 4N8, Canada</street>
+    <city>Brantford</city>
+    <province>ON</province>
+    <postal_code>N3R 4N8</postal_code>
+    <country>Canada</country>
+    <phone>(519) 752-1752</phone>
+    <email/>
+    <website/>
+    <lat>43.15923</lat>
+    <lng>-80.271989</lng>
+  </retailer>
+  <retailer id="221">
+    <name>Hooper's Jewellers</name>
+    <street>39 King Street W., Bowmanville, ON, L1C 1R2, Canada</street>
+    <city>Bowmanville</city>
+    <province>ON</province>
+    <postal_code>L1C 1R2</postal_code>
+    <country>Canada</country>
+    <phone>(905) 623-5747</phone>
+    <email/>
+    <website/>
+    <lat>43.912509</lat>
+    <lng>-78.690239</lng>
+  </retailer>
+  <retailer id="222">
+    <name>Hoppers Jewellers</name>
+    <street>123 Gerrish Street, Windsor, NS, B0N 2TO, Canada</street>
+    <city>Windsor</city>
+    <province>NS</province>
+    <postal_code>B0N 2TO</postal_code>
+    <country>Canada</country>
+    <phone>(902) 798-2813</phone>
+    <email/>
+    <website/>
+    <lat>44.994374</lat>
+    <lng>-64.136818</lng>
+  </retailer>
+  <retailer id="223">
+    <name>House of Treasures</name>
+    <street>Main Street, Valleyview, AB, T0H 3N0, Canada</street>
+    <city>Valleyview</city>
+    <province>AB</province>
+    <postal_code>T0H 3N0</postal_code>
+    <country>Canada</country>
+    <phone>(780) 524-2629</phone>
+    <email/>
+    <website/>
+    <lat>55.066667</lat>
+    <lng>-117.283333</lng>
+  </retailer>
+  <retailer id="224">
+    <name>Independent Jewellers</name>
+    <street>11248 - 170 Street, Edmonton, AB, T5S 2X1, Canada</street>
+    <city>Edmonton</city>
+    <province>AB</province>
+    <postal_code>T5S 2X1</postal_code>
+    <country>Canada</country>
+    <phone>(780) 484-6370</phone>
+    <email/>
+    <website/>
+    <lat>53.575241</lat>
+    <lng>-113.615436</lng>
+  </retailer>
+  <retailer id="225">
+    <name>Ingham Geo T &amp; Son Jewellers</name>
+    <street>5013 50 Street, Innisfail, AB, T4G 1S7, Canada</street>
+    <city>Innisfail</city>
+    <province>AB</province>
+    <postal_code>T4G 1S7</postal_code>
+    <country>Canada</country>
+    <phone>(780) 227-3046</phone>
+    <email/>
+    <website/>
+    <lat>52.027292</lat>
+    <lng>-113.951748</lng>
+  </retailer>
+  <retailer id="226">
+    <name>Inglis Jewellers</name>
+    <street>202 Provost Street, New Glasgow, NS, B2H 2R3, Canada</street>
+    <city>New Glasgow</city>
+    <province>NS</province>
+    <postal_code>B2H 2R3</postal_code>
+    <country>Canada</country>
+    <phone>(902) 897-9955</phone>
+    <email/>
+    <website/>
+    <lat>45.586203</lat>
+    <lng>-62.645218</lng>
+  </retailer>
+  <retailer id="227">
+    <name>Ireland's Jewellery</name>
+    <street>16 - 4th avenue, Sioux Lookout, ON, P8T 1B3, Canada</street>
+    <city>Sioux Lookout</city>
+    <province>ON</province>
+    <postal_code>P8T 1B3</postal_code>
+    <country>Canada</country>
+    <phone>(807) 737-1610</phone>
+    <email/>
+    <website/>
+    <lat>50.098551</lat>
+    <lng>-91.916057</lng>
+  </retailer>
+  <retailer id="228">
+    <name>Jaylyn Jewellers</name>
+    <street>12 - 2510 Bevan Ave., Sidney, BC, V8L 1W3, Canada</street>
+    <city>Sidney</city>
+    <province>BC</province>
+    <postal_code>V8L 1W3</postal_code>
+    <country>Canada</country>
+    <phone>(250) 656-5556</phone>
+    <email/>
+    <website/>
+    <lat>48.650579</lat>
+    <lng>-123.398324</lng>
+  </retailer>
+  <retailer id="229">
+    <name>Jewellery By Sanders</name>
+    <street>403 King Street West, Oshawa, ON, L1J 2K4, Canada</street>
+    <city>Oshawa</city>
+    <province>ON</province>
+    <postal_code>L1J 2K4</postal_code>
+    <country>Canada</country>
+    <phone>(905) 433-0929</phone>
+    <email/>
+    <website/>
+    <lat>43.894129</lat>
+    <lng>-78.878307</lng>
+  </retailer>
+  <retailer id="230">
+    <name>Jewellery Box The</name>
+    <street>382 Main St. S., Exeter, ON, N0M 1S1, Canada</street>
+    <city>Exeter</city>
+    <province>ON</province>
+    <postal_code>N0M 1S1</postal_code>
+    <country>Canada</country>
+    <phone>(519) 235-4500</phone>
+    <email/>
+    <website/>
+    <lat>43.34634</lat>
+    <lng>-81.480214</lng>
+  </retailer>
+  <retailer id="231">
+    <name>Jewellery Box &amp; Giftware</name>
+    <street>10314 110th Street, Fairview, AB, T0H 1L0, Canada</street>
+    <city>Fairview</city>
+    <province>AB</province>
+    <postal_code>T0H 1L0</postal_code>
+    <country>Canada</country>
+    <phone>(780) 835-5161</phone>
+    <email/>
+    <website/>
+    <lat>49.695611</lat>
+    <lng>-112.775769</lng>
+  </retailer>
+  <retailer id="232">
+    <name>Jewellery Plus</name>
+    <street>246 Water Street, Summerside, PE, C1N 1B3, Canada</street>
+    <city>Summerside</city>
+    <province>PE</province>
+    <postal_code>C1N 1B3</postal_code>
+    <country>Canada</country>
+    <phone>(902) 888-2555</phone>
+    <email/>
+    <website/>
+    <lat>46.391259</lat>
+    <lng>-63.789916</lng>
+  </retailer>
+  <retailer id="233">
+    <name>Joella's Jewellery &amp; Gifts</name>
+    <street>113 Holland St. W., Bradford, ON, L3Z 2A7, Canada</street>
+    <city>Bradford</city>
+    <province>ON</province>
+    <postal_code>L3Z 2A7</postal_code>
+    <country>Canada</country>
+    <phone>(905) 775-2312</phone>
+    <email/>
+    <website/>
+    <lat>44.113494</lat>
+    <lng>-79.568954</lng>
+  </retailer>
+  <retailer id="234">
+    <name>Johnson's TV &amp; Appliances</name>
+    <street>116 6th Avenue, Cochrane, ON, P0L 1C0, Canada</street>
+    <city>Cochrane</city>
+    <province>ON</province>
+    <postal_code>P0L 1C0</postal_code>
+    <country>Canada</country>
+    <phone>(705) 272-4242</phone>
+    <email/>
+    <website/>
+    <lat>49.061646</lat>
+    <lng>-81.024881</lng>
+  </retailer>
+  <retailer id="235">
+    <name>Johnson Jewellers</name>
+    <street>157 Kent St. West, Lindsay, ON, K9V 2Y5, Canada</street>
+    <city>Lindsay</city>
+    <province>ON</province>
+    <postal_code>K9V 2Y5</postal_code>
+    <country>Canada</country>
+    <phone>(705) 324-5251</phone>
+    <email/>
+    <website/>
+    <lat>44.354492</lat>
+    <lng>-78.739075</lng>
+  </retailer>
+  <retailer id="236">
+    <name>Jose Jewellery &amp; Custom Designs</name>
+    <street>1688 152 St., South Surrey, BC, V4A 4N2, Canada</street>
+    <city>South Surrey</city>
+    <province>BC</province>
+    <postal_code>V4A 4N2</postal_code>
+    <country>Canada</country>
+    <phone>(604) 541-1503</phone>
+    <email/>
+    <website/>
+    <lat>49.032435</lat>
+    <lng>-122.800893</lng>
+  </retailer>
+  <retailer id="237">
+    <name>Kassie's Jewellery</name>
+    <street>630 Main Street, Moosomin, SK, S0G 3N0, Canada</street>
+    <city>Moosomin</city>
+    <province>SK</province>
+    <postal_code>S0G 3N0</postal_code>
+    <country>Canada</country>
+    <phone>(306) 435-2977</phone>
+    <email/>
+    <website/>
+    <lat>50.13951</lat>
+    <lng>-101.672445</lng>
+  </retailer>
+  <retailer id="238">
+    <name>Knar Jewellery</name>
+    <street>56 St. George Square, Guelph, ON, N1H 4E6, Canada</street>
+    <city>Guelph</city>
+    <province>ON</province>
+    <postal_code>N1H 4E6</postal_code>
+    <country>Canada</country>
+    <phone>(519) 821-2691</phone>
+    <email/>
+    <website/>
+    <lat>43.545934</lat>
+    <lng>-80.249271</lng>
+  </retailer>
+  <retailer id="239">
+    <name>A. M. Korsten Jewellers</name>
+    <street>163 Broadway, Orangeville, ON, L9W 1K2, Canada</street>
+    <city>Orangeville</city>
+    <province>ON</province>
+    <postal_code>L9W 1K2</postal_code>
+    <country>Canada</country>
+    <phone>(519) 941-1707</phone>
+    <email/>
+    <website/>
+    <lat>43.919655</lat>
+    <lng>-80.0964</lng>
+  </retailer>
+  <retailer id="240">
+    <name>Krause H M Jewellers</name>
+    <street>2-3001-31st St., Vernon, BC, V1T 5H8, Canada</street>
+    <city>Vernon</city>
+    <province>BC</province>
+    <postal_code>V1T 5H8</postal_code>
+    <country>Canada</country>
+    <phone>(250) 542-1911</phone>
+    <email/>
+    <website/>
+    <lat>50.266867</lat>
+    <lng>-119.271816</lng>
+  </retailer>
+  <retailer id="241">
+    <name>Star-Set Jewellers</name>
+    <street>125 John St. N., Arnprior, ON, K7S 2N5, Canada</street>
+    <city>Arnprior</city>
+    <province>ON</province>
+    <postal_code>K7S 2N5</postal_code>
+    <country>Canada</country>
+    <phone>(613) 623-5344</phone>
+    <email/>
+    <website/>
+    <lat>45.43381</lat>
+    <lng>-76.353841</lng>
+  </retailer>
+  <retailer id="242">
+    <name>Lair Victor Jewellers</name>
+    <street>238 Durham St. E., Walkerton, ON, N0G 2V0, Canada</street>
+    <city>Walkerton</city>
+    <province>ON</province>
+    <postal_code>N0G 2V0</postal_code>
+    <country>Canada</country>
+    <phone>(519) 881-1700</phone>
+    <email/>
+    <website/>
+    <lat>44.133401</lat>
+    <lng>-81.149395</lng>
+  </retailer>
+  <retailer id="243">
+    <name>L'Artison Bijoutier</name>
+    <street>300 Boul. Des Acadiens, Bertrand, NB, E1W 1C6, Canada</street>
+    <city>Bertrand</city>
+    <province>NB</province>
+    <postal_code>E1W 1C6</postal_code>
+    <country>Canada</country>
+    <phone>(506) 764-3004</phone>
+    <email/>
+    <website/>
+    <lat>47.757088</lat>
+    <lng>-65.066678</lng>
+  </retailer>
+  <retailer id="244">
+    <name>Lawlor Jewelry</name>
+    <street>4710-50th Street, Bay 1, Stettler, AB, T0C 2L0, Canada</street>
+    <city>Stettler</city>
+    <province>AB</province>
+    <postal_code>T0C 2L0</postal_code>
+    <country>Canada</country>
+    <phone>(403) 742-5620</phone>
+    <email/>
+    <website/>
+    <lat>52.322875</lat>
+    <lng>-112.71302</lng>
+  </retailer>
+  <retailer id="245">
+    <name>Bijouterie Leduc</name>
+    <street>144-A, Avenue Principale, Rouyn-Noranda, QC, J9X 4P5, Canada</street>
+    <city>Rouyn-Noranda</city>
+    <province>QC</province>
+    <postal_code>J9X 4P5</postal_code>
+    <country>Canada</country>
+    <phone>(819) 762-5480</phone>
+    <email/>
+    <website/>
+    <lat>48.238676</lat>
+    <lng>-79.020047</lng>
+  </retailer>
+  <retailer id="246">
+    <name>Lougheed's Fine Jewellery</name>
+    <street>501 Dundas St., Woodstock, ON, N4S 1C3, Canada</street>
+    <city>Woodstock</city>
+    <province>ON</province>
+    <postal_code>N4S 1C3</postal_code>
+    <country>Canada</country>
+    <phone>(519) 537-6901</phone>
+    <email/>
+    <website/>
+    <lat>43.130327</lat>
+    <lng>-80.756083</lng>
+  </retailer>
+  <retailer id="247">
+    <name>Lucy's Fine Jewellery</name>
+    <street>1865 Paris St. Unit B, Sudbury, ON, P3E 3C5, Canada</street>
+    <city>Sudbury</city>
+    <province>ON</province>
+    <postal_code>P3E 3C5</postal_code>
+    <country>Canada</country>
+    <phone>(705) 522-5661</phone>
+    <email/>
+    <website/>
+    <lat>46.49272</lat>
+    <lng>-80.991211</lng>
+  </retailer>
+  <retailer id="248">
+    <name>Lunding Jewellers</name>
+    <street>602 Main Street, Swan River, MB, R0L 1Z0, Canada</street>
+    <city>Swan River</city>
+    <province>MB</province>
+    <postal_code>R0L 1Z0</postal_code>
+    <country>Canada</country>
+    <phone>(204) 734-2000</phone>
+    <email/>
+    <website/>
+    <lat>52.104242</lat>
+    <lng>-101.277042</lng>
+  </retailer>
+  <retailer id="249">
+    <name>Lyon's Jewellery</name>
+    <street>5017 - 50th Ave., Ponoka, AB, T4J 1R7, Canada</street>
+    <city>Ponoka</city>
+    <province>AB</province>
+    <postal_code>T4J 1R7</postal_code>
+    <country>Canada</country>
+    <phone>(780) 425-0245</phone>
+    <email/>
+    <website/>
+    <lat>52.679414</lat>
+    <lng>-113.587171</lng>
+  </retailer>
+  <retailer id="250">
+    <name>M. &amp; R. Jewellery</name>
+    <street>37A Meredith St., Gore Bay, ON, P0P 1H0, Canada</street>
+    <city>Gore Bay</city>
+    <province>ON</province>
+    <postal_code>P0P 1H0</postal_code>
+    <country>Canada</country>
+    <phone>(705) 282-2247</phone>
+    <email/>
+    <website/>
+    <lat>45.915603</lat>
+    <lng>-82.464354</lng>
+  </retailer>
+  <retailer id="251">
+    <name>Bijouterie Markor</name>
+    <street>544 Rue St. Phillipe, Alfred, ON, K0B 1A0, Canada</street>
+    <city>Alfred</city>
+    <province>ON</province>
+    <postal_code>K0B 1A0</postal_code>
+    <country>Canada</country>
+    <phone>(613) 679-2858</phone>
+    <email/>
+    <website/>
+    <lat>45.557961</lat>
+    <lng>-74.882597</lng>
+  </retailer>
+  <retailer id="252">
+    <name>Markwart Jewellers</name>
+    <street>1111-100th Street, Tisdale, SK, S0E 1T0, Canada</street>
+    <city>Tisdale</city>
+    <province>SK</province>
+    <postal_code>S0E 1T0</postal_code>
+    <country>Canada</country>
+    <phone>(306) 873-2443</phone>
+    <email/>
+    <website/>
+    <lat>52.850059</lat>
+    <lng>-104.048767</lng>
+  </retailer>
+  <retailer id="253">
+    <name>Kevin Martin Fine Jewellery</name>
+    <street>37 King St. West, Dundas, ON, L9H 1T5, Canada</street>
+    <city>Dundas</city>
+    <province>ON</province>
+    <postal_code>L9H 1T5</postal_code>
+    <country>Canada</country>
+    <phone>(905) 628-8310</phone>
+    <email/>
+    <website/>
+    <lat>43.266423</lat>
+    <lng>-79.955267</lng>
+  </retailer>
+  <retailer id="254">
+    <name>Martin Rino Jeweller</name>
+    <street>116 Church St., Edmundston, NB, E3V 1J8, Canada</street>
+    <city>Edmundston</city>
+    <province>NB</province>
+    <postal_code>E3V 1J8</postal_code>
+    <country>Canada</country>
+    <phone>(506) 735-5295</phone>
+    <email/>
+    <website/>
+    <lat>47.357533</lat>
+    <lng>-68.231355</lng>
+  </retailer>
+  <retailer id="255">
+    <name>Mayhews Jewellery</name>
+    <street>11 Dundas Street E., Napanee, ON, K7R 3L4, Canada</street>
+    <city>Napanee</city>
+    <province>ON</province>
+    <postal_code>K7R 3L4</postal_code>
+    <country>Canada</country>
+    <phone>(613) 354-3988</phone>
+    <email/>
+    <website/>
+    <lat>44.247664</lat>
+    <lng>-76.950198</lng>
+  </retailer>
+  <retailer id="256">
+    <name>Mayhew Jewellers</name>
+    <street>97 Main St., Picton, ON, K0K 2T0, Canada</street>
+    <city>Picton</city>
+    <province>ON</province>
+    <postal_code>K0K 2T0</postal_code>
+    <country>Canada</country>
+    <phone>(613) 476-3449</phone>
+    <email/>
+    <website/>
+    <lat>44.005725</lat>
+    <lng>-77.147224</lng>
+  </retailer>
+  <retailer id="257">
+    <name>McMichael Jewellers</name>
+    <street>58 Hastings Street North, Bancroft, ON, K0L 1C0, Canada</street>
+    <city>Bancroft</city>
+    <province>ON</province>
+    <postal_code>K0L 1C0</postal_code>
+    <country>Canada</country>
+    <phone>(613) 332-7044</phone>
+    <email/>
+    <website/>
+    <lat>45.058226</lat>
+    <lng>-77.854447</lng>
+  </retailer>
+  <retailer id="258">
+    <name>Mele Jewellers</name>
+    <street>1223 4th Street, Estevan, SK, S4A 0W8, Canada</street>
+    <city>Estevan</city>
+    <province>SK</province>
+    <postal_code>S4A 0W8</postal_code>
+    <country>Canada</country>
+    <phone>(306) 637-4006</phone>
+    <email/>
+    <website/>
+    <lat>49.140393</lat>
+    <lng>-102.994949</lng>
+  </retailer>
+  <retailer id="259">
+    <name>Meloche Sales</name>
+    <street>1267 Commissioners Rd. West, London, ON, N6K 1C9, Canada</street>
+    <city>London</city>
+    <province>ON</province>
+    <postal_code>N6K 1C9</postal_code>
+    <country>Canada</country>
+    <phone>(519) 657-9955</phone>
+    <email/>
+    <website/>
+    <lat>42.959966</lat>
+    <lng>-81.333156</lng>
+  </retailer>
+  <retailer id="260">
+    <name>Mereski Jewellers (Ft Macleod)</name>
+    <street>227 - 24th Street, Fort McLeod, AB, T0L 0Z0, Canada</street>
+    <city>Fort McLeod</city>
+    <province>AB</province>
+    <postal_code>T0L 0Z0</postal_code>
+    <country>Canada</country>
+    <phone>(403) 553-2560</phone>
+    <email/>
+    <website/>
+    <lat>53.541744</lat>
+    <lng>-113.910688</lng>
+  </retailer>
+  <retailer id="261">
+    <name>Michael's Jewellers</name>
+    <street>141 - 1600 15th Ave., Prince George, BC, V2L 3X3, Canada</street>
+    <city>Prince George</city>
+    <province>BC</province>
+    <postal_code>V2L 3X3</postal_code>
+    <country>Canada</country>
+    <phone>(250) 564-1718</phone>
+    <email/>
+    <website/>
+    <lat>53.912865</lat>
+    <lng>-122.74537</lng>
+  </retailer>
+  <retailer id="262">
+    <name>Mike's Jewellery Repair</name>
+    <street>98 Main St. West, Saint John, NB, E2M 3N3, Canada</street>
+    <city>Saint John</city>
+    <province>NB</province>
+    <postal_code>E2M 3N3</postal_code>
+    <country>Canada</country>
+    <phone>(506) 672-4367</phone>
+    <email/>
+    <website/>
+    <lat>45.256585</lat>
+    <lng>-66.096335</lng>
+  </retailer>
+  <retailer id="263">
+    <name>Mitchell &amp; Jewell</name>
+    <street>2-4910-45th Street, Red Deer, AB, T4N 1K6, Canada</street>
+    <city>Red Deer</city>
+    <province>AB</province>
+    <postal_code>T4N 1K6</postal_code>
+    <country>Canada</country>
+    <phone>(403) 346-2514</phone>
+    <email/>
+    <website/>
+    <lat>52.269063</lat>
+    <lng>-113.814146</lng>
+  </retailer>
+  <retailer id="264">
+    <name>Mitton's Jewellery Store</name>
+    <street>10 Main Street E., Ridgetown, ON, N0P 2C0, Canada</street>
+    <city>Ridgetown</city>
+    <province>ON</province>
+    <postal_code>N0P 2C0</postal_code>
+    <country>Canada</country>
+    <phone>(519) 674-5554</phone>
+    <email/>
+    <website/>
+    <lat>42.439235</lat>
+    <lng>-81.887051</lng>
+  </retailer>
+  <retailer id="265">
+    <name>Muscat Jewellers</name>
+    <street>727 Talbot Street, St. Thomas, ON, N5P 1E1, Canada</street>
+    <city>St. Thomas</city>
+    <province>ON</province>
+    <postal_code>N5P 1E1</postal_code>
+    <country>Canada</country>
+    <phone>(519) 631-3692</phone>
+    <email/>
+    <website/>
+    <lat>42.779061</lat>
+    <lng>-81.187629</lng>
+  </retailer>
+  <retailer id="266">
+    <name>A &amp; A Jewellery</name>
+    <street>1226 Fourth Street, Estevan, SK, S4A 0W9, Canada</street>
+    <city>Estevan</city>
+    <province>SK</province>
+    <postal_code>S4A 0W9</postal_code>
+    <country>Canada</country>
+    <phone>(306) 634-2215</phone>
+    <email/>
+    <website/>
+    <lat>49.142808</lat>
+    <lng>-102.991075</lng>
+  </retailer>
+  <retailer id="267">
+    <name>Nadon's Jewellers</name>
+    <street>25 Brunetville Rd., Kapuskasing, ON, P5N 2E9, Canada</street>
+    <city>Kapuskasing</city>
+    <province>ON</province>
+    <postal_code>P5N 2E9</postal_code>
+    <country>Canada</country>
+    <phone>(705) 335-3955</phone>
+    <email/>
+    <website/>
+    <lat>49.420241</lat>
+    <lng>-82.419259</lng>
+  </retailer>
+  <retailer id="268">
+    <name>A &amp; A Jewellers</name>
+    <street>196 Henderson Hwy., Winnipeg, MN, Canada</street>
+    <city>Winnipeg</city>
+    <province>MN</province>
+    <postal_code/>
+    <country>Canada</country>
+    <phone>(204) 661-3494</phone>
+    <email/>
+    <website/>
+    <lat>49.895537</lat>
+    <lng>-97.138458</lng>
+  </retailer>
+  <retailer id="269">
+    <name>Nash Jewellers</name>
+    <street>370 Wonderland Rd. N., London, ON, N6H 0J5, Canada</street>
+    <city>London</city>
+    <province>ON</province>
+    <postal_code>N6H 0J5</postal_code>
+    <country>Canada</country>
+    <phone>(519) 663-1110</phone>
+    <email/>
+    <website/>
+    <lat>43.02376</lat>
+    <lng>-81.313305</lng>
+  </retailer>
+  <retailer id="270">
+    <name>Nasselquist Jewellers</name>
+    <street>68 Main Street, Suite A, Flin Flon, MB, R8A 1J8, Canada</street>
+    <city>Flin Flon</city>
+    <province>MB</province>
+    <postal_code>R8A 1J8</postal_code>
+    <country>Canada</country>
+    <phone>(204) 687-4663</phone>
+    <email/>
+    <website/>
+    <lat>54.766903</lat>
+    <lng>-101.842518</lng>
+  </retailer>
+  <retailer id="271">
+    <name>Adamas Goldsmiths Diamonds &amp; Jewellery</name>
+    <street>5015 - 111 Street N.W., Edmonton, AB, T6H 4M6, Canada</street>
+    <city>Edmonton</city>
+    <province>AB</province>
+    <postal_code>T6H 4M6</postal_code>
+    <country>Canada</country>
+    <phone>(780) 434-9479</phone>
+    <email/>
+    <website/>
+    <lat>53.546206</lat>
+    <lng>-113.491241</lng>
+  </retailer>
+  <retailer id="272">
+    <name>Nemeth Jewellers</name>
+    <street>150 - 115 Vermillion Road, Winnipeg, MB, R2J 4A9, Canada</street>
+    <city>Winnipeg</city>
+    <province>MB</province>
+    <postal_code>R2J 4A9</postal_code>
+    <country>Canada</country>
+    <phone>(204) 257-4426</phone>
+    <email/>
+    <website/>
+    <lat>49.854038</lat>
+    <lng>-97.069975</lng>
+  </retailer>
+  <retailer id="273">
+    <name>Nielsen's Watches &amp; Jewellery</name>
+    <street>406 George St., Peterborough, ON, K9H 3R5, Canada</street>
+    <city>Peterborough</city>
+    <province>ON</province>
+    <postal_code>K9H 3R5</postal_code>
+    <country>Canada</country>
+    <phone>(705) 742-9881</phone>
+    <email/>
+    <website/>
+    <lat>44.306134</lat>
+    <lng>-78.319912</lng>
+  </retailer>
+  <retailer id="274">
+    <name>Affinity Distinctive Jlry.</name>
+    <street>585 St. Clair Street, Chatham, ON, N7L 3L3, Canada</street>
+    <city>Chatham</city>
+    <province>ON</province>
+    <postal_code>N7L 3L3</postal_code>
+    <country>Canada</country>
+    <phone>(519) 351-5781</phone>
+    <email/>
+    <website/>
+    <lat>42.424639</lat>
+    <lng>-82.211331</lng>
+  </retailer>
+  <retailer id="275">
+    <name>Nifty Nook</name>
+    <street>131 Main Street, Melita, MB, ROM 1L0, Canada</street>
+    <city>Melita</city>
+    <province>MB</province>
+    <postal_code>ROM 1L0</postal_code>
+    <country>Canada</country>
+    <phone>(204) 522-8101</phone>
+    <email/>
+    <website/>
+    <lat>49.270743</lat>
+    <lng>-100.991655</lng>
+  </retailer>
+  <retailer id="276">
+    <name>Aitken's Jewellers</name>
+    <street>1450 Main St South, Dauphin, MN, Canada</street>
+    <city>Dauphin</city>
+    <province>MB</province>
+    <postal_code/>
+    <country>Canada</country>
+    <phone>(204) 638-0543</phone>
+    <email/>
+    <website/>
+    <lat>51.153509</lat>
+    <lng>-100.04425</lng>
+  </retailer>
+  <retailer id="277">
+    <name>Oakden Jewellers</name>
+    <street>47 Maple Avenue, Hamiota, MB, R0M 0T0, Canada</street>
+    <city>Hamiota</city>
+    <province>MB</province>
+    <postal_code>R0M 0T0</postal_code>
+    <country>Canada</country>
+    <phone>(204) 764-2565</phone>
+    <email/>
+    <website/>
+    <lat>50.178711</lat>
+    <lng>-100.594877</lng>
+  </retailer>
+  <retailer id="278">
+    <name>Olde Country Jewellers &amp; Gifts</name>
+    <street>12 King Street W., Hagersville, ON, N0A 1H0, Canada</street>
+    <city>Hagersville</city>
+    <province>ON</province>
+    <postal_code>N0A 1H0</postal_code>
+    <country>Canada</country>
+    <phone>(905) 768-3534</phone>
+    <email/>
+    <website/>
+    <lat>42.962414</lat>
+    <lng>-80.05238</lng>
+  </retailer>
+  <retailer id="279">
+    <name>Andersboda Jewellers</name>
+    <street>370 Centre Street, Shaunavon, SK, S0N 2M0, Canada</street>
+    <city>Shaunavon</city>
+    <province>SK</province>
+    <postal_code>S0N 2M0</postal_code>
+    <country>Canada</country>
+    <phone>(306) 297-2385</phone>
+    <email/>
+    <website/>
+    <lat>49.651753</lat>
+    <lng>-108.410931</lng>
+  </retailer>
+  <retailer id="280">
+    <name>O'Neil's Fine Jewellery</name>
+    <street>29 John St. N., Aylmer, ON, N5H 2A7, Canada</street>
+    <city>Aylmer</city>
+    <province>ON</province>
+    <postal_code>N5H 2A7</postal_code>
+    <country>Canada</country>
+    <phone>(519) 773-8121</phone>
+    <email/>
+    <website/>
+    <lat>42.776285</lat>
+    <lng>-80.982871</lng>
+  </retailer>
+  <retailer id="281">
+    <name>Annable Jewellery</name>
+    <street>513 Main St., Winchester, ON, K0C 2K0, Canada</street>
+    <city>Winchester</city>
+    <province>ON</province>
+    <postal_code>K0C 2K0</postal_code>
+    <country>Canada</country>
+    <phone>(613) 774-2102</phone>
+    <email/>
+    <website/>
+    <lat>45.092374</lat>
+    <lng>-75.354973</lng>
+  </retailer>
+  <retailer id="282">
+    <name>Orion Jewellers</name>
+    <street>26 Queen Street N., Tilbury, ON, N0P 2L0, Canada</street>
+    <city>Tilbury</city>
+    <province>ON</province>
+    <postal_code>N0P 2L0</postal_code>
+    <country>Canada</country>
+    <phone>(519) 682-2301</phone>
+    <email/>
+    <website/>
+    <lat>42.261346</lat>
+    <lng>-82.432061</lng>
+  </retailer>
+  <retailer id="283">
+    <name>Oslund Jewellers</name>
+    <street>203 - 311 Main Street, Penticton, BC, V2A 5B7, Canada</street>
+    <city>Penticton</city>
+    <province>BC</province>
+    <postal_code>V2A 5B7</postal_code>
+    <country>Canada</country>
+    <phone>(250) 492-8339</phone>
+    <email/>
+    <website/>
+    <lat>49.475849</lat>
+    <lng>-119.582877</lng>
+  </retailer>
+  <retailer id="284">
+    <name>John Anthony Jewellers</name>
+    <street>370 Highland Road West, Kitchener, ON, N2M 5J9, Canada</street>
+    <city>Kitchener</city>
+    <province>ON</province>
+    <postal_code>N2M 5J9</postal_code>
+    <country>Canada</country>
+    <phone>(519) 741-8900</phone>
+    <email/>
+    <website/>
+    <lat>43.438518</lat>
+    <lng>-80.511955</lng>
+  </retailer>
+  <retailer id="285">
+    <name>Paris Jewellers</name>
+    <street>54 Grand River St. North, Paris, ON, N3L 2M2, Canada</street>
+    <city>Paris</city>
+    <province>ON</province>
+    <postal_code>N3L 2M2</postal_code>
+    <country>Canada</country>
+    <phone>(519) 442-2176</phone>
+    <email/>
+    <website/>
+    <lat>43.193217</lat>
+    <lng>-80.384124</lng>
+  </retailer>
+  <retailer id="286">
+    <name>Apollos Jewellers</name>
+    <street>5120-A 50th Street, Barrhead, AB, T7N 1A5, Canada</street>
+    <city>Barrhead</city>
+    <province>AB</province>
+    <postal_code>T7N 1A5</postal_code>
+    <country>Canada</country>
+    <phone>(780) 674-4695</phone>
+    <email/>
+    <website/>
+    <lat>54.126236</lat>
+    <lng>-114.404412</lng>
+  </retailer>
+  <retailer id="287">
+    <name>Park Jewellery</name>
+    <street>1082 Cole Harbour Road, Dartmouth, NS, B2V 1E7, Canada</street>
+    <city>Dartmouth</city>
+    <province>NS</province>
+    <postal_code>B2V 1E7</postal_code>
+    <country>Canada</country>
+    <phone>(902) 462-2580</phone>
+    <email/>
+    <website/>
+    <lat>44.67119</lat>
+    <lng>-63.500047</lng>
+  </retailer>
+  <retailer id="288">
+    <name>N. R. Parks &amp; Son Jewellers</name>
+    <street>26 - 2nd Ave. N., Yorkton, SK, S3N 1G2, Canada</street>
+    <city>Yorkton</city>
+    <province>SK</province>
+    <postal_code>S3N 1G2</postal_code>
+    <country>Canada</country>
+    <phone>(306) 782-2927</phone>
+    <email/>
+    <website/>
+    <lat>51.218708</lat>
+    <lng>-102.461415</lng>
+  </retailer>
+  <retailer id="289">
+    <name>Penner's Jewellers</name>
+    <street>104 Main Street S., Kenora, ON, P9N 1S9, Canada</street>
+    <city>Kenora</city>
+    <province>ON</province>
+    <postal_code>P9N 1S9</postal_code>
+    <country>Canada</country>
+    <phone>(807) 468-8301</phone>
+    <email/>
+    <website/>
+    <lat>49.76755</lat>
+    <lng>-94.490359</lng>
+  </retailer>
+  <retailer id="290">
+    <name>Pirates Cove, Jewels &amp; Treasures</name>
+    <street>255 Main St, Liverpool, NS, B0T 1KO, Canada</street>
+    <city>Liverpool</city>
+    <province>NS</province>
+    <postal_code>B0T 1KO</postal_code>
+    <country>Canada</country>
+    <phone>(902) 354-7101</phone>
+    <email/>
+    <website/>
+    <lat>44.038347</lat>
+    <lng>-64.715897</lng>
+  </retailer>
+  <retailer id="291">
+    <name>James O. Poag Jewellers</name>
+    <street>94 Frank Street, Strathroy, ON, N7G 3K1, Canada</street>
+    <city>Strathroy</city>
+    <province>ON</province>
+    <postal_code>N7G 3K1</postal_code>
+    <country>Canada</country>
+    <phone>(519) 245-1040</phone>
+    <email/>
+    <website/>
+    <lat>42.9576</lat>
+    <lng>-81.62549</lng>
+  </retailer>
+  <retailer id="292">
+    <name>Arctic Jewellers</name>
+    <street>26 5014-49th Street, Yellowknife, NT, X1A 3R7, Canada</street>
+    <city>Yellowknife</city>
+    <province>NT</province>
+    <postal_code>X1A 3R7</postal_code>
+    <country>Canada</country>
+    <phone>(867) 669-8884</phone>
+    <email/>
+    <website/>
+    <lat>62.454081</lat>
+    <lng>-114.377385</lng>
+  </retailer>
+  <retailer id="293">
+    <name>Assaly, Marks &amp; Hopkins</name>
+    <street>207 Main Street, Melfort, SK, S0E 1A0, Canada</street>
+    <city>Melfort</city>
+    <province>SK</province>
+    <postal_code>S0E 1A0</postal_code>
+    <country>Canada</country>
+    <phone>(306) 752-3300</phone>
+    <email/>
+    <website/>
+    <lat>52.873284</lat>
+    <lng>-104.604013</lng>
+  </retailer>
+  <retailer id="294">
+    <name>Powers Jewellery</name>
+    <street>158 B Broadway Blvd., Grand Falls, NB, E3Z 2J9, Canada</street>
+    <city>Grand Falls</city>
+    <province>NB</province>
+    <postal_code>E3Z 2J9</postal_code>
+    <country>Canada</country>
+    <phone>(506) 473-2148</phone>
+    <email/>
+    <website/>
+    <lat>47.051402</lat>
+    <lng>-67.736084</lng>
+  </retailer>
+  <retailer id="295">
+    <name>Aurum Custom Goldsmithing</name>
+    <street>2-227 Birch Ave., 100 Mile House, BC, V0K 2E0, Canada</street>
+    <city>100 Mile House</city>
+    <province>BC</province>
+    <postal_code>V0K 2E0</postal_code>
+    <country>Canada</country>
+    <phone>(250) 395-3511</phone>
+    <email/>
+    <website/>
+    <lat>51.651256</lat>
+    <lng>-121.287529</lng>
+  </retailer>
+  <retailer id="296">
+    <name>Purdy's Jewellery &amp; Gems</name>
+    <street>61 Bolton Street, Bobcaygeon, ON, K0M 1A0, Canada</street>
+    <city>Bobcaygeon</city>
+    <province>ON</province>
+    <postal_code>K0M 1A0</postal_code>
+    <country>Canada</country>
+    <phone>(705) 738-2373</phone>
+    <email/>
+    <website/>
+    <lat>44.53701</lat>
+    <lng>-78.544537</lng>
+  </retailer>
+  <retailer id="297">
+    <name>Rabethge's Jewellery</name>
+    <street>43 Bridge St. E., Campbellford, ON, K0L 1L0, Canada</street>
+    <city>Campbellford</city>
+    <province>ON</province>
+    <postal_code>K0L 1L0</postal_code>
+    <country>Canada</country>
+    <phone>(705) 653-2540</phone>
+    <email/>
+    <website/>
+    <lat>44.308062</lat>
+    <lng>-77.797348</lng>
+  </retailer>
+  <retailer id="298">
+    <name>Reminiscence</name>
+    <street>10121 - 101 Ave., Lac La Biche, AB, T0A 2C0, Canada</street>
+    <city>Lac La Biche</city>
+    <province>AB</province>
+    <postal_code>T0A 2C0</postal_code>
+    <country>Canada</country>
+    <phone>(780) 623-3018</phone>
+    <email/>
+    <website/>
+    <lat>54.771277</lat>
+    <lng>-111.974006</lng>
+  </retailer>
+  <retailer id="299">
+    <name>Banman Jewellers</name>
+    <street>9 Railway St. S., Pilot Mound, MB, R0G 1P0, Canada</street>
+    <city>Pilot Mound</city>
+    <province>MB</province>
+    <postal_code>R0G 1P0</postal_code>
+    <country>Canada</country>
+    <phone>(204) 825-2095</phone>
+    <email/>
+    <website/>
+    <lat>49.201207</lat>
+    <lng>-98.892299</lng>
+  </retailer>
+  <retailer id="300">
+    <name>Richardson's Jewellery</name>
+    <street>34-6601-48th Ave., Camrose, AB, T4V 3G8, Canada</street>
+    <city>Camrose</city>
+    <province>AB</province>
+    <postal_code>T4V 3G8</postal_code>
+    <country>Canada</country>
+    <phone>(780) 672-8811</phone>
+    <email/>
+    <website/>
+    <lat>53.013131</lat>
+    <lng>-112.840576</lng>
+  </retailer>
+  <retailer id="301">
+    <name>Barclay's Jewellers Of Oak Bay</name>
+    <street>106 - 2187 Oak Bay Ave., Victoria, BC, V8R 1G1, Canada</street>
+    <city>Victoria</city>
+    <province>BC</province>
+    <postal_code>V8R 1G1</postal_code>
+    <country>Canada</country>
+    <phone>(250) 592-1100</phone>
+    <email/>
+    <website/>
+    <lat>48.428318</lat>
+    <lng>-123.364953</lng>
+  </retailer>
+  <retailer id="302">
+    <name>Barrington Place Jlrs.</name>
+    <street>3640 Main St., Barrington Passage, NS, B0W 1G0, Canada</street>
+    <city>Barrington Passage</city>
+    <province>NS</province>
+    <postal_code>B0W 1G0</postal_code>
+    <country>Canada</country>
+    <phone>(902) 637-3479</phone>
+    <email/>
+    <website/>
+    <lat>43.527261</lat>
+    <lng>-65.609164</lng>
+  </retailer>
+  <retailer id="303">
+    <name>Ouellette Trenton Holdings</name>
+    <street>105 Dundas Street W., Trenton, ON, K8V 5R1, Canada</street>
+    <city>Trenton</city>
+    <province>ON</province>
+    <postal_code>K8V 5R1</postal_code>
+    <country>Canada</country>
+    <phone>(613) 392-3383</phone>
+    <email/>
+    <website/>
+    <lat>44.099814</lat>
+    <lng>-77.57775</lng>
+  </retailer>
+  <retailer id="304">
+    <name>Belk's Jewellers</name>
+    <street>148 Peel St., Unit 3A, New Hamburg, ON, N3A 1E3, Canada</street>
+    <city>New Hamburg</city>
+    <province>ON</province>
+    <postal_code>N3A 1E3</postal_code>
+    <country>Canada</country>
+    <phone>(519) 662-2608</phone>
+    <email/>
+    <website/>
+    <lat>43.378422</lat>
+    <lng>-80.709772</lng>
+  </retailer>
+  <retailer id="305">
+    <name>Rutledge Jewellers</name>
+    <street>82 Brock Street W., Uxbridge, ON, L9P 1N6, Canada</street>
+    <city>Uxbridge</city>
+    <province>ON</province>
+    <postal_code>L9P 1N6</postal_code>
+    <country>Canada</country>
+    <phone>(905) 852-7846</phone>
+    <email/>
+    <website/>
+    <lat>44.108326</lat>
+    <lng>-79.124356</lng>
+  </retailer>
+  <retailer id="306">
+    <name>Sarini Fine Jewellery</name>
+    <street>106 Second Ave. S., Vulcan, AB, T0L 2B0, Canada</street>
+    <city>Vulcan</city>
+    <province>AB</province>
+    <postal_code>T0L 2B0</postal_code>
+    <country>Canada</country>
+    <phone>(403) 485-6616</phone>
+    <email/>
+    <website/>
+    <lat>50.401633</lat>
+    <lng>-113.263236</lng>
+  </retailer>
+  <retailer id="307">
+    <name>Bocian Jewellers</name>
+    <street>1235 Central Avenue, Prince Albert, SK, S6V 4V9, Canada</street>
+    <city>Prince Albert</city>
+    <province>SK</province>
+    <postal_code>S6V 4V9</postal_code>
+    <country>Canada</country>
+    <phone>(306) 922-4003</phone>
+    <email/>
+    <website/>
+    <lat>53.182119</lat>
+    <lng>-105.754361</lng>
+  </retailer>
+  <retailer id="308">
+    <name>J.K. Schmidt Jewellers</name>
+    <street>2477C Main Street, Westbank, BC, V4T 1K5, Canada</street>
+    <city>Westbank</city>
+    <province>BC</province>
+    <postal_code>V4T 1K5</postal_code>
+    <country>Canada</country>
+    <phone>(250) 768-7353</phone>
+    <email/>
+    <website/>
+    <lat>49.828098</lat>
+    <lng>-119.644052</lng>
+  </retailer>
+  <retailer id="309">
+    <name>Scott's Jewellers</name>
+    <street>Unit 1440 - 12th Ave., Kindersley, SK, S0L 1S2, Canada</street>
+    <city>Kindersley</city>
+    <province>SK</province>
+    <postal_code>S0L 1S2</postal_code>
+    <country>Canada</country>
+    <phone>(306) 965-2504</phone>
+    <email/>
+    <website/>
+    <lat>51.468709</lat>
+    <lng>-109.158136</lng>
+  </retailer>
+  <retailer id="310">
+    <name>Jewellery Plus</name>
+    <street>123 Grafton Downtown Charlottetown</street>
+    <city>Charlottetown</city>
+    <province>PE</province>
+    <postal_code>C1A 8R8</postal_code>
+    <country>Canada</country>
+    <phone>(902)-892-4761</phone>
+    <email/>
+    <website/>
+    <lat>46.235178</lat>
+    <lng>-63.127334</lng>
+  </retailer>
+  <retailer id="311">
+    <name>Seaforth Jewellers</name>
+    <street>47 Main Street South, Seaforth, ON, N0K 1W0, Canada</street>
+    <city>Seaforth</city>
+    <province>ON</province>
+    <postal_code>N0K 1W0</postal_code>
+    <country>Canada</country>
+    <phone>(519) 527-0270</phone>
+    <email/>
+    <website/>
+    <lat>43.552396</lat>
+    <lng>-81.394574</lng>
+  </retailer>
+  <retailer id="312">
+    <name>Seth Tobin Jewellers</name>
+    <street>101 - 2324 Ferry Avenue, Prince George, BC, V2N 0B1, Canada</street>
+    <city>Prince George</city>
+    <province>BC</province>
+    <postal_code>V2N 0B1</postal_code>
+    <country>Canada</country>
+    <phone>(250) 561-2636</phone>
+    <email/>
+    <website/>
+    <lat>53.912865</lat>
+    <lng>-122.74537</lng>
+  </retailer>
+  <retailer id="313">
+    <name>Simone Jewellers</name>
+    <street>107 - 1983 Columbian Ave., Castlegar, BC, V1N 2E8, Canada</street>
+    <city>Castlegar</city>
+    <province>BC</province>
+    <postal_code>V1N 2E8</postal_code>
+    <country>Canada</country>
+    <phone>(250) 365-5051</phone>
+    <email/>
+    <website/>
+    <lat>49.316171</lat>
+    <lng>-117.663574</lng>
+  </retailer>
+  <retailer id="314">
+    <name>Boven's Jewellery &amp; Giftware</name>
+    <street>4916A - 50 Street, Athabasca, AB, T9S 1E3, Canada</street>
+    <city>Athabasca</city>
+    <province>AB</province>
+    <postal_code>T9S 1E3</postal_code>
+    <country>Canada</country>
+    <phone>(780) 675-2101</phone>
+    <email/>
+    <website/>
+    <lat>54.712018</lat>
+    <lng>-113.289311</lng>
+  </retailer>
+  <retailer id="315">
+    <name>Bow Valley Jewellers</name>
+    <street>205 5th Ave. S. W., Calgary, AB, T2P 2V7, Canada</street>
+    <city>Calgary</city>
+    <province>AB</province>
+    <postal_code>T2P 2V7</postal_code>
+    <country>Canada</country>
+    <phone>(403) 234-0888</phone>
+    <email/>
+    <website/>
+    <lat>51.045606</lat>
+    <lng>-114.057541</lng>
+  </retailer>
+  <retailer id="316">
+    <name>Skyway Jewelers</name>
+    <street>57 1515 Rebecca St., Oakville, ON, L6L 5G5, Canada</street>
+    <city>Oakville</city>
+    <province>ON</province>
+    <postal_code>L6L 5G5</postal_code>
+    <country>Canada</country>
+    <phone>(905) 469-0520</phone>
+    <email/>
+    <website/>
+    <lat>43.447436</lat>
+    <lng>-79.666672</lng>
+  </retailer>
+  <retailer id="317">
+    <name>J. C. Bradley Jewellers</name>
+    <street>4900 - 27th Street, Vernon, BC, V1T 7G7, Canada</street>
+    <city>Vernon</city>
+    <province>BC</province>
+    <postal_code>V1T 7G7</postal_code>
+    <country>Canada</country>
+    <phone>(250) 545-4944</phone>
+    <email/>
+    <website/>
+    <lat>50.274216</lat>
+    <lng>-119.266632</lng>
+  </retailer>
+  <retailer id="318">
+    <name>Brancier Jewellers</name>
+    <street>55 Ontario Street, Milton, ON, L9T 2M3, Canada</street>
+    <city>Milton</city>
+    <province>ON</province>
+    <postal_code>L9T 2M3</postal_code>
+    <country>Canada</country>
+    <phone>(905) 876-4367</phone>
+    <email/>
+    <website/>
+    <lat>43.517423</lat>
+    <lng>-79.874612</lng>
+  </retailer>
+  <retailer id="319">
+    <name>Sokanne's</name>
+    <street>284 King Street, Spruce Grove, AB, T7X 2C6, Canada</street>
+    <city>Spruce Grove</city>
+    <province>AB</province>
+    <postal_code>T7X 2C6</postal_code>
+    <country>Canada</country>
+    <phone>(780) 962-1704</phone>
+    <email/>
+    <website/>
+    <lat>53.543875</lat>
+    <lng>-113.899741</lng>
+  </retailer>
+  <retailer id="320">
+    <name>The Breeze Gallery &amp; Goldsmith</name>
+    <street>328 Reid Street, Quesnel, BC, V2J 2M4, Canada</street>
+    <city>Quesnel</city>
+    <province>BC</province>
+    <postal_code>V2J 2M4</postal_code>
+    <country>Canada</country>
+    <phone>(250) 992-6060</phone>
+    <email/>
+    <website/>
+    <lat>52.97781</lat>
+    <lng>-122.496511</lng>
+  </retailer>
+  <retailer id="321">
+    <name>Brockie's Jewellers</name>
+    <street>255 Scott St., Fort Frances, ON, P9A 1G8, Canada</street>
+    <city>Fort Frances</city>
+    <province>ON</province>
+    <postal_code>P9A 1G8</postal_code>
+    <country>Canada</country>
+    <phone>(807) 274-3934</phone>
+    <email/>
+    <website/>
+    <lat>48.610055</lat>
+    <lng>-93.376141</lng>
+  </retailer>
+  <retailer id="322">
+    <name>Spicer Cole Fine Jlrs</name>
+    <street>1381 Regent St., Comp 187, Fredericton, NB, E3C 1A2, Canada</street>
+    <city>Fredericton</city>
+    <province>NB</province>
+    <postal_code>E3C 1A2</postal_code>
+    <country>Canada</country>
+    <phone>(506) 451-9915</phone>
+    <email/>
+    <website/>
+    <lat>45.963233</lat>
+    <lng>-66.643236</lng>
+  </retailer>
+  <retailer id="323">
+    <name>Brown F J &amp; Son</name>
+    <street>36 Main Street, Cambridge, ON, N1R 1V4, Canada</street>
+    <city>Cambridge</city>
+    <province>ON</province>
+    <postal_code>N1R 1V4</postal_code>
+    <country>Canada</country>
+    <phone>(519) 621-4910</phone>
+    <email/>
+    <website/>
+    <lat>43.359009</lat>
+    <lng>-80.314436</lng>
+  </retailer>
+  <retailer id="324">
+    <name>Steadman O R &amp; Son</name>
+    <street>29 Front St. South, Thorold, ON, L2V 1W8, Canada</street>
+    <city>Thorold</city>
+    <province>ON</province>
+    <postal_code>L2V 1W8</postal_code>
+    <country>Canada</country>
+    <phone>(905) 227-5412</phone>
+    <email/>
+    <website/>
+    <lat>43.124109</lat>
+    <lng>-79.200776</lng>
+  </retailer>
+  <retailer id="325">
+    <name>Stephen's Jewellers</name>
+    <street>384 Frederick St., Kitchener, ON, N2H 2P2, Canada</street>
+    <city>Kitchener</city>
+    <province>ON</province>
+    <postal_code>N2H 2P2</postal_code>
+    <country>Canada</country>
+    <phone>(519) 745-2771</phone>
+    <email/>
+    <website/>
+    <lat>43.449439</lat>
+    <lng>-80.487407</lng>
+  </retailer>
+  <retailer id="326">
+    <name>Brunel Jewellers</name>
+    <street>2 Poyntz St., Unit 125, Penetanguishene, ON, L9M 1M2, Canada</street>
+    <city>Penetanguishene</city>
+    <province>ON</province>
+    <postal_code>L9M 1M2</postal_code>
+    <country>Canada</country>
+    <phone>(705) 549-4681</phone>
+    <email/>
+    <website/>
+    <lat>44.768804</lat>
+    <lng>-79.933949</lng>
+  </retailer>
+  <retailer id="327">
+    <name>Stevens Jewellers</name>
+    <street>5014 50th Avenue, Olds, AB, T4H 1P5, Canada</street>
+    <city>Olds</city>
+    <province>AB</province>
+    <postal_code>T4H 1P5</postal_code>
+    <country>Canada</country>
+    <phone>(403) 556-3996</phone>
+    <email/>
+    <website/>
+    <lat>51.792374</lat>
+    <lng>-114.113037</lng>
+  </retailer>
+  <retailer id="328">
+    <name>Stokes on Trent</name>
+    <street>8 Colborne, Fenelon Falls, ON, K0M 1N0, Canada</street>
+    <city>Fenelon Falls</city>
+    <province>ON</province>
+    <postal_code>K0M 1N0</postal_code>
+    <country>Canada</country>
+    <phone>(705) 887-2930</phone>
+    <email/>
+    <website/>
+    <lat>44.536176</lat>
+    <lng>-78.736649</lng>
+  </retailer>
+  <retailer id="329">
+    <name>Burkes Jewellers</name>
+    <street>69 Hastings Street, Bancroft, ON, K0L 1C0, Canada</street>
+    <city>Bancroft</city>
+    <province>ON</province>
+    <postal_code>K0L 1C0</postal_code>
+    <country>Canada</country>
+    <phone>(613) 332-3135</phone>
+    <email/>
+    <website/>
+    <lat>45.058613</lat>
+    <lng>-77.854259</lng>
+  </retailer>
+  <retailer id="330">
+    <name>Sugold Jewellers</name>
+    <street>107 Prescott St., Kemptville, ON, K0G 1J0, Canada</street>
+    <city>Kemptville</city>
+    <province>ON</province>
+    <postal_code>K0G 1J0</postal_code>
+    <country>Canada</country>
+    <phone>(613) 258-1118</phone>
+    <email/>
+    <website/>
+    <lat>45.016002</lat>
+    <lng>-75.64546</lng>
+  </retailer>
+  <retailer id="331">
+    <name>Superior Jewellers</name>
+    <street>2 Hemlo Drive, Marathon, ON, P0T 2E0, Canada</street>
+    <city>Marathon</city>
+    <province>ON</province>
+    <postal_code>P0T 2E0</postal_code>
+    <country>Canada</country>
+    <phone>(807) 229-8534</phone>
+    <email/>
+    <website/>
+    <lat>48.721575</lat>
+    <lng>-86.371976</lng>
+  </retailer>
+  <retailer id="332">
+    <name>Burns Jewellers</name>
+    <street>66 Foster St., Perth, ON, K7H 1S1, Canada</street>
+    <city>Perth</city>
+    <province>ON</province>
+    <postal_code>K7H 1S1</postal_code>
+    <country>Canada</country>
+    <phone>(613) 267-4466</phone>
+    <email/>
+    <website/>
+    <lat>44.900754</lat>
+    <lng>-76.251689</lng>
+  </retailer>
+  <retailer id="333">
+    <name>Swanson Jewellers</name>
+    <street>83 Ontario St., Stratford, ON, N5A 6W1, Canada</street>
+    <city>Stratford</city>
+    <province>ON</province>
+    <postal_code>N5A 6W1</postal_code>
+    <country>Canada</country>
+    <phone>(519) 271-3131</phone>
+    <email/>
+    <website/>
+    <lat>43.371336</lat>
+    <lng>-80.983359</lng>
+  </retailer>
+  <retailer id="334">
+    <name>Busch Jewellers</name>
+    <street>148 Third Ave, Timmins, ON, P4N 7C5, Canada</street>
+    <city>Timmins</city>
+    <province>ON</province>
+    <postal_code>P4N 7C5</postal_code>
+    <country>Canada</country>
+    <phone>(705) 264-2015</phone>
+    <email/>
+    <website/>
+    <lat>48.477473</lat>
+    <lng>-81.330414</lng>
+  </retailer>
+  <retailer id="335">
+    <name>Taylor's Jewellers</name>
+    <street>134 Kent Street, Charlottetown, PE, C1A 8R8, Canada</street>
+    <city>Charlottetown</city>
+    <province>PE</province>
+    <postal_code>C1A 8R8</postal_code>
+    <country>Canada</country>
+    <phone>(902) 894-6042</phone>
+    <email/>
+    <website/>
+    <lat>46.235523</lat>
+    <lng>-63.128425</lng>
+  </retailer>
+  <retailer id="336">
+    <name>D. C. Taylor Jewellers</name>
+    <street>977 - 2nd Ave. E., Owen Sound, ON, N4K 2H5, Canada</street>
+    <city>Owen Sound</city>
+    <province>ON</province>
+    <postal_code>N4K 2H5</postal_code>
+    <country>Canada</country>
+    <phone>(519) 376-3476</phone>
+    <email/>
+    <website/>
+    <lat>44.567238</lat>
+    <lng>-80.943056</lng>
+  </retailer>
+  <retailer id="337">
+    <name>Cartel Jewels</name>
+    <street>161-11900 Haney Place Mall, Maple Ridge, BC, V2X 8R9, Canada</street>
+    <city>Maple Ridge</city>
+    <province>BC</province>
+    <postal_code>V2X 8R9</postal_code>
+    <country>Canada</country>
+    <phone>(604) 463-3632</phone>
+    <email/>
+    <website/>
+    <lat>49.219735</lat>
+    <lng>-122.599707</lng>
+  </retailer>
+</retailers>

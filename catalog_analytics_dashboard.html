@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog Analytics Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .dashboard-header {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #000;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .dashboard-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: 2px solid #FFD700;
+        }
+        
+        .card-header {
+            color: #FFD700;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            padding: 8px;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+        
+        .stat-value {
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .refresh-btn {
+            background: #FFD700;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #000;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .refresh-btn:hover {
+            background: #FFA500;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h1>📊 Catalog Analytics Dashboard</h1>
+            <p>PDF viewing statistics and performance metrics</p>
+        </div>
+        
+        <button class="refresh-btn" onclick="loadDashboardData()">🔄 Refresh Data</button>
+        
+        <div class="dashboard-grid" id="dashboardGrid">
+            <div class="dashboard-card">
+                <div class="card-header">📈 Overview</div>
+                <div id="overviewStats">Loading...</div>
+            </div>
+            
+            <div class="dashboard-card">
+                <div class="card-header">📱 Device Breakdown</div>
+                <div id="deviceStats">Loading...</div>
+            </div>
+            
+            <div class="dashboard-card">
+                <div class="card-header">🏆 Popular Sections</div>
+                <div id="popularSections">Loading...</div>
+            </div>
+            
+            <div class="dashboard-card">
+                <div class="card-header">💾 Cache Performance</div>
+                <div id="cacheStats">Loading...</div>
+            </div>
+            
+            <div class="dashboard-card">
+                <div class="card-header">🌍 Geographic Data</div>
+                <div id="geoStats">Loading...</div>
+            </div>
+            
+            <div class="dashboard-card">
+                <div class="card-header">📄 Top PDFs for Preloading</div>
+                <div id="preloadSuggestions">Loading...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function loadDashboardData() {
+            try {
+                // Fetch dashboard data
+                const response = await fetch('catalog_analytics.php?action=dashboard');
+                const data = await response.json();
+                
+                // Update overview stats
+                const overviewDiv = document.getElementById('overviewStats');
+                overviewDiv.innerHTML = `
+                    <div class="stat-item">
+                        <span>Total PDF Views:</span>
+                        <span class="stat-value">${data.total_views || 0}</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>Average Load Time:</span>
+                        <span class="stat-value">${Math.round(data.cache_stats?.avg_load_time || 0)}ms</span>
+                    </div>
+                `;
+                
+                // Update device breakdown
+                const deviceDiv = document.getElementById('deviceStats');
+                let deviceHtml = '';
+                (data.device_breakdown || []).forEach(device => {
+                    deviceHtml += `
+                        <div class="stat-item">
+                            <span>${device.device_type}:</span>
+                            <span class="stat-value">${device.views}</span>
+                        </div>
+                    `;
+                });
+                deviceDiv.innerHTML = deviceHtml || '<p>No device data available</p>';
+                
+                // Update popular sections
+                const sectionsDiv = document.getElementById('popularSections');
+                let sectionsHtml = '';
+                (data.popular_sections || []).slice(0, 5).forEach(section => {
+                    sectionsHtml += `
+                        <div class="stat-item">
+                            <span>${section.section_name}:</span>
+                            <span class="stat-value">${section.views}</span>
+                        </div>
+                    `;
+                });
+                sectionsDiv.innerHTML = sectionsHtml || '<p>No section data available</p>';
+                
+                // Update cache stats
+                const cacheDiv = document.getElementById('cacheStats');
+                const cacheData = data.cache_stats || {};
+                cacheDiv.innerHTML = `
+                    <div class="stat-item">
+                        <span>Cache Requests:</span>
+                        <span class="stat-value">${cacheData.cache_requests || 0}</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>Cache Successes:</span>
+                        <span class="stat-value">${cacheData.cache_successes || 0}</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>Success Rate:</span>
+                        <span class="stat-value">${cacheData.cache_requests ? 
+                            Math.round((cacheData.cache_successes / cacheData.cache_requests) * 100) : 0}%</span>
+                    </div>
+                `;
+                
+                // Update geographic data
+                const geoDiv = document.getElementById('geoStats');
+                let geoHtml = '';
+                (data.geographic || []).slice(0, 5).forEach(geo => {
+                    geoHtml += `
+                        <div class="stat-item">
+                            <span>${geo.country_code || 'Unknown'}:</span>
+                            <span class="stat-value">${geo.views}</span>
+                        </div>
+                    `;
+                });
+                geoDiv.innerHTML = geoHtml || '<p>No geographic data available</p>';
+                
+                // Update preload suggestions
+                const preloadDiv = document.getElementById('preloadSuggestions');
+                let preloadHtml = '';
+                (data.popular_pdfs || []).slice(0, 5).forEach(pdf => {
+                    preloadHtml += `
+                        <div class="stat-item">
+                            <span>${pdf.pdf_filename}:</span>
+                            <span class="stat-value">${pdf.total_views} views</span>
+                        </div>
+                    `;
+                });
+                preloadDiv.innerHTML = preloadHtml || '<p>No PDF data available</p>';
+                
+            } catch (error) {
+                console.error('Error loading dashboard data:', error);
+                document.getElementById('overviewStats').innerHTML = '<p style="color: red;">Error loading data</p>';
+            }
+        }
+        
+        // Load data on page load
+        loadDashboardData();
+        
+        // Auto-refresh every 30 seconds
+        setInterval(loadDashboardData, 30000);
+    </script>
+</body>
+</html>

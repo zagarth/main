@@ -1,0 +1,1143 @@
+<?php
+// Catalog Product Detail Modal Component
+
+function renderCatalogDetailModal() {
+    ?>
+    <!-- Catalog Product Detail Modal -->
+    <div id="catalog-detail-modal" class="catalog-modal-overlay" style="display: none;">
+        <div class="catalog-modal-container">
+            <div class="catalog-modal-content">
+                <button class="catalog-modal-close" onclick="closeCatalogModal()" aria-label="Close product details">
+                    <span>&times;</span>
+                </button>
+                
+                <div class="catalog-modal-header">
+                    <h2 id="catalog-modal-title">Product Details</h2>
+                    <p id="catalog-modal-subtitle">Loading product information...</p>
+                </div>
+                
+                <div class="catalog-modal-body">
+                    <div class="catalog-loading" id="catalog-loading">
+                        <div class="spinner"></div>
+                        <p>Loading product details...</p>
+                    </div>
+                    
+                    <div class="catalog-content" id="catalog-content" style="display: none;">
+                        <!-- Product images section -->
+                        <div class="product-images">
+                            <div class="main-image-container">
+                                <img id="catalog-main-image" src="" alt="Product Image" class="main-image">
+                                <div class="image-navigation" id="image-navigation" style="display: none;">
+                                    <button class="prev-image" onclick="previousImage()">❮</button>
+                                    <button class="next-image" onclick="nextImage()">❯</button>
+                                </div>
+                            </div>
+                            <div class="image-thumbnails" id="image-thumbnails"></div>
+                        </div>
+                        
+                        <!-- Product information section -->
+                        <div class="product-info">
+                            <div class="basic-info">
+                                <h3 id="product-name">Product Name</h3>
+                                <div class="product-details">
+                                    <div class="detail-row">
+                                        <span class="label">Product ID:</span>
+                                        <span id="product-id" class="value"></span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="label">Category:</span>
+                                        <span id="product-category" class="value"></span>
+                                    </div>
+                                    <div class="detail-row" id="pattern-row" style="display: none;">
+                                        <span class="label">Pattern:</span>
+                                        <span id="product-pattern" class="value"></span>
+                                    </div>
+                                    <div class="detail-row" id="width-row" style="display: none;">
+                                        <span class="label">Width:</span>
+                                        <span id="product-width" class="value"></span>
+                                    </div>
+                                    <div class="detail-row" id="style-row" style="display: none;">
+                                        <span class="label">Style:</span>
+                                        <span id="product-style" class="value"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Celtic configurator section (shown for Celtic products) -->
+                            <div class="configurator-section" id="configurator-section" style="display: none;">
+                                <h4>Customize This Product</h4>
+                                <div class="configurator-options">
+                                    <div class="option-group">
+                                        <label for="karat-level">Metal & Karat:</label>
+                                        <select id="karat-level" onchange="updatePrice()">
+                                            <option value="950_silver" data-price="0">.950 Silver (+$0)</option>
+                                            <option value="10k" data-price="225">10K Gold (+$225)</option>
+                                            <option value="14k" data-price="450">14K Gold (+$450)</option>
+                                            <option value="18k" data-price="875">18K Gold (+$875)</option>
+                                        </select>
+                                    </div>
+                                    <div class="option-group" id="pattern-metal-group" style="display: none;">
+                                        <label for="pattern-metal">Pattern Metal:</label>
+                                        <select id="pattern-metal" onchange="updatePrice()">
+                                            <option value="yellow" data-price="0">Yellow Gold (+$0)</option>
+                                            <option value="white" data-price="25">White Gold (+$25)</option>
+                                            <option value="rose" data-price="15">Rose Gold (+$15)</option>
+                                        </select>
+                                    </div>
+                                    <div class="option-group" id="band-metal-group" style="display: none;">
+                                        <label for="band-metal">Band Metal:</label>
+                                        <select id="band-metal" onchange="updatePrice()">
+                                            <option value="yellow" data-price="0">Yellow Gold (+$0)</option>
+                                            <option value="white" data-price="0">White Gold (+$0)</option>
+                                            <option value="rose" data-price="0">Rose Gold (+$0)</option>
+                                        </select>
+                                    </div>
+                                    <div class="option-group" id="finish-group">
+                                        <label for="finish">Finish:</label>
+                                        <select id="finish" onchange="updatePrice()">
+                                            <option value="polished" data-price="0">High Polish (+$0)</option>
+                                            <option value="brushed" data-price="0">Brushed (+$0)</option>
+                                            <option value="satin" data-price="25">Satin (+$25)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="pricing-section">
+                                    <div class="price-display">
+                                        <span class="price-label">Price:</span>
+                                        <span id="total-price" class="price-value">$550</span>
+                                        <span class="price-currency">CAD</span>
+                                    </div>
+                                    <button class="quote-button" onclick="requestQuote()">Request Quote</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Additional specifications -->
+                            <div class="specifications" id="specifications-section">
+                                <h4>Specifications</h4>
+                                <div id="spec-content">
+                                    <!-- Dynamically populated -->
+                                </div>
+                            </div>
+                            
+                            <!-- Action buttons -->
+                            <div class="modal-actions">
+                                <button class="btn btn-primary" onclick="requestQuote()">Request Quote</button>
+                                <button class="btn btn-secondary" onclick="viewPdfPage()">View Catalog Page</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Catalog Modal Styles -->
+    <style>
+    .catalog-modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(8px);
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        overflow-y: auto;
+    }
+
+    .catalog-modal-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        position: relative;
+    }
+
+    .catalog-modal-content {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+        position: relative;
+        max-height: 95vh;
+        overflow-y: auto;
+        animation: catalogModalSlideIn 0.4s ease-out;
+    }
+
+    @keyframes catalogModalSlideIn {
+        from {
+            opacity: 0;
+            transform: translateY(-40px) scale(0.95);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
+    .catalog-modal-close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: rgba(0, 0, 0, 0.1);
+        border: none;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        z-index: 10001;
+        font-size: 24px;
+        color: #666;
+    }
+
+    .catalog-modal-close:hover {
+        background: rgba(220, 53, 69, 0.1);
+        color: #dc3545;
+        transform: rotate(90deg);
+    }
+
+    .catalog-modal-header {
+        padding: 25px 25px 15px 25px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .catalog-modal-header h2 {
+        margin: 0 0 8px 0;
+        color: #333;
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+    .catalog-modal-header p {
+        margin: 0;
+        color: #666;
+        font-size: 16px;
+    }
+
+    .catalog-modal-body {
+        padding: 25px;
+    }
+
+    .catalog-loading {
+        text-align: center;
+        padding: 40px;
+    }
+
+    .spinner {
+        width: 40px;
+        height: 40px;
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #8B4513;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 20px auto;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .catalog-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        min-height: 400px;
+    }
+
+    /* Product Images Section */
+    .product-images {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main-image-container {
+        position: relative;
+        background: #f8f9fa;
+        border-radius: 10px;
+        overflow: hidden;
+        aspect-ratio: 1;
+    }
+
+    .main-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+    }
+
+    .image-navigation {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 15px;
+        transform: translateY(-50%);
+    }
+
+    .prev-image, .next-image {
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 18px;
+        transition: all 0.3s ease;
+    }
+
+    .prev-image:hover, .next-image:hover {
+        background: rgba(0, 0, 0, 0.8);
+        transform: scale(1.1);
+    }
+
+    .image-thumbnails {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        padding: 10px 0;
+    }
+
+    .thumbnail-image {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 8px;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+        flex-shrink: 0;
+    }
+
+    .thumbnail-image:hover {
+        border-color: #8B4513;
+        transform: scale(1.05);
+    }
+
+    .thumbnail-image.active {
+        border-color: #8B4513;
+        box-shadow: 0 0 0 2px rgba(139, 69, 19, 0.3);
+    }
+
+    /* Product Info Section */
+    .product-info {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .basic-info h3 {
+        margin: 0 0 15px 0;
+        color: #333;
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .product-details {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .detail-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .detail-row .label {
+        font-weight: 600;
+        color: #666;
+    }
+
+    .detail-row .value {
+        color: #333;
+        font-weight: 500;
+    }
+
+    /* Configurator Section */
+    .configurator-section {
+        background: #f8f9fa;
+        border-radius: 10px;
+        padding: 20px;
+        border: 1px solid #e9ecef;
+    }
+
+    .configurator-section h4 {
+        margin: 0 0 20px 0;
+        color: #333;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .configurator-options {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .option-group {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .option-group label {
+        font-weight: 600;
+        color: #555;
+        font-size: 14px;
+    }
+
+    .option-group select, .option-group input {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 14px;
+        background: white;
+        color: #333;
+        cursor: pointer;
+    }
+
+    .option-group select:focus, .option-group input:focus {
+        outline: none;
+        border-color: #8B4513;
+        box-shadow: 0 0 0 2px rgba(139, 69, 19, 0.1);
+    }
+
+    .engraving-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 5px;
+    }
+
+    .engraving-wrapper input {
+        flex: 1;
+        margin: 0;
+    }
+
+    .pricing-section {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #ddd;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .price-display {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .price-label {
+        font-weight: 600;
+        color: #666;
+    }
+
+    .price-value {
+        font-size: 24px;
+        font-weight: 700;
+        color: #8B4513;
+    }
+
+    .price-currency {
+        color: #666;
+        font-size: 16px;
+    }
+
+    .quote-button {
+        background: #28a745;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .quote-button:hover {
+        background: #218838;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+    }
+
+    /* Specifications Section */
+    .specifications {
+        background: #f8f9fa;
+        border-radius: 10px;
+        padding: 20px;
+        border: 1px solid #e9ecef;
+    }
+
+    .specifications h4 {
+        margin: 0 0 15px 0;
+        color: #333;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    /* Action Buttons */
+    .modal-actions {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        border-radius: 6px;
+        font-weight: 600;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 16px;
+    }
+
+    .btn-primary {
+        background: #8B4513;
+        color: white;
+    }
+
+    .btn-primary:hover {
+        background: #704000;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(139, 69, 19, 0.3);
+    }
+
+    .btn-secondary {
+        background: #6c757d;
+        color: white;
+    }
+
+    .btn-secondary:hover {
+        background: #545b62;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .catalog-modal-container {
+            max-width: 95%;
+        }
+        
+        .catalog-content {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        
+        .configurator-options {
+            gap: 12px;
+        }
+        
+        .modal-actions {
+            flex-direction: column;
+        }
+        
+        .pricing-section {
+            flex-direction: column;
+            gap: 15px;
+            text-align: center;
+        }
+    }
+    </style>
+
+    <!-- Catalog Modal JavaScript -->
+    <script>
+    // Global variables for catalog modal
+    let currentProductData = null;
+    let currentImageIndex = 0;
+    let productImages = [];
+
+    // Open catalog modal with product data
+    function openCatalogModal(productId, searchTerm = '') {
+        console.log('Opening catalog modal for product:', productId);
+        
+        const modal = document.getElementById('catalog-detail-modal');
+        const loading = document.getElementById('catalog-loading');
+        const content = document.getElementById('catalog-content');
+        
+        if (!modal) {
+            console.error('Catalog modal not found');
+            return;
+        }
+        
+        // Show modal and loading state
+        modal.style.display = 'flex';
+        loading.style.display = 'block';
+        content.style.display = 'none';
+        
+        // Prevent body scroll
+        document.body.style.overflow = 'hidden';
+        
+        // Fetch product data
+        fetchProductData(productId, searchTerm);
+    }
+
+    // Close catalog modal
+    function closeCatalogModal() {
+        const modal = document.getElementById('catalog-detail-modal');
+        if (modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    }
+
+    // Fetch product data from server
+    function fetchProductData(productId, searchTerm) {
+        fetch('get_product_modal_data.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: `product_id=${encodeURIComponent(productId)}&search_term=${encodeURIComponent(searchTerm)}`
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Product data received:', data);
+            if (data.success) {
+                displayProductData(data.product);
+            } else {
+                showError(data.error || 'Failed to load product data');
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching product data:', error);
+            showError('Network error loading product data');
+        });
+    }
+
+    // Display product data in modal
+    function displayProductData(product) {
+        currentProductData = product;
+        
+        const loading = document.getElementById('catalog-loading');
+        const content = document.getElementById('catalog-content');
+        
+        // Update modal title
+        document.getElementById('catalog-modal-title').textContent = product.product_name || product.product_id;
+        document.getElementById('catalog-modal-subtitle').textContent = product.category ? `${product.category.replace('_', ' ')} Collection` : '';
+        
+        // Update basic product info
+        document.getElementById('product-name').textContent = product.product_name || product.product_id;
+        document.getElementById('product-id').textContent = product.product_id;
+        document.getElementById('product-category').textContent = product.category ? product.category.replace('_', ' ').replace(/\b\w/g, l => l.toUpperCase()) : '';
+        
+        // Update pattern info (for Celtic)
+        if (product.pattern) {
+            document.getElementById('pattern-row').style.display = 'flex';
+            document.getElementById('product-pattern').textContent = product.pattern;
+        }
+        
+        // Update width info
+        if (product.width_mm) {
+            document.getElementById('width-row').style.display = 'flex';
+            document.getElementById('product-width').textContent = product.width_mm + 'mm';
+        }
+        
+        // Update style info
+        if (product.style) {
+            document.getElementById('style-row').style.display = 'flex';
+            document.getElementById('product-style').textContent = product.style;
+        }
+        
+        // Setup images
+        if (product.images && product.images.length > 0) {
+            setupProductImages(product.images);
+        } else {
+            // Hide image section or show placeholder
+            document.querySelector('.product-images').style.display = 'none';
+        }
+        
+        // Setup configurator (for Celtic products)
+        if (product.category === 'celtic_bands') {
+            setupConfigurator(product);
+        } else {
+            document.getElementById('configurator-section').style.display = 'none';
+        }
+        
+        // Setup specifications
+        setupSpecifications(product);
+        
+        // Show content, hide loading
+        loading.style.display = 'none';
+        content.style.display = 'grid';
+    }
+
+    // Setup product images
+    function setupProductImages(images) {
+        productImages = images;
+        currentImageIndex = 0;
+        
+        const mainImage = document.getElementById('catalog-main-image');
+        const thumbnailsContainer = document.getElementById('image-thumbnails');
+        const navigation = document.getElementById('image-navigation');
+        
+        // Set main image
+        mainImage.src = images[0].url;
+        mainImage.alt = images[0].alt || 'Product Image';
+        
+        // Setup thumbnails if multiple images
+        if (images.length > 1) {
+            navigation.style.display = 'flex';
+            
+            thumbnailsContainer.innerHTML = '';
+            images.forEach((image, index) => {
+                const thumb = document.createElement('img');
+                thumb.src = image.thumbnail || image.url;
+                thumb.alt = image.alt || 'Product Image';
+                thumb.className = 'thumbnail-image' + (index === 0 ? ' active' : '');
+                thumb.onclick = () => selectImage(index);
+                thumbnailsContainer.appendChild(thumb);
+            });
+        } else {
+            navigation.style.display = 'none';
+        }
+    }
+
+    // Select image by index
+    function selectImage(index) {
+        if (index >= 0 && index < productImages.length) {
+            currentImageIndex = index;
+            document.getElementById('catalog-main-image').src = productImages[index].url;
+            
+            // Update thumbnail active state
+            const thumbnails = document.querySelectorAll('.thumbnail-image');
+            thumbnails.forEach((thumb, i) => {
+                thumb.classList.toggle('active', i === index);
+            });
+        }
+    }
+
+    // Navigate to previous image
+    function previousImage() {
+        const newIndex = currentImageIndex > 0 ? currentImageIndex - 1 : productImages.length - 1;
+        selectImage(newIndex);
+    }
+
+    // Navigate to next image
+    function nextImage() {
+        const newIndex = currentImageIndex < productImages.length - 1 ? currentImageIndex + 1 : 0;
+        selectImage(newIndex);
+    }
+
+    // Setup configurator (Celtic products)
+    function setupConfigurator(product) {
+        const configuratorSection = document.getElementById('configurator-section');
+        
+        if (product.configurator_options) {
+            // Show configurator section
+            configuratorSection.style.display = 'block';
+            
+            // Clear existing hardcoded options and build dynamic ones
+            const optionsContainer = document.querySelector('.configurator-options');
+            optionsContainer.innerHTML = ''; // Clear hardcoded content
+            
+            // Store product info for width/ID mapping
+            window.currentProduct = product;
+            window.celticWidthMapping = {}; // Will store width->productID mapping
+            
+            // Process each configurator option from JSON
+            Object.keys(product.configurator_options).forEach(optionKey => {
+                const option = product.configurator_options[optionKey];
+                if (!option.options || option.options.length === 0) return;
+                
+                // Create option group
+                const optionGroup = document.createElement('div');
+                optionGroup.className = 'option-group';
+                optionGroup.id = `${optionKey}-group`;
+                
+                // Create label
+                const label = document.createElement('label');
+                label.setAttribute('for', optionKey);
+                label.textContent = option.label || optionKey;
+                optionGroup.appendChild(label);
+                
+                // Create select
+                const select = document.createElement('select');
+                select.id = optionKey;
+                select.setAttribute('data-option-key', optionKey);
+                select.onchange = function() { 
+                    updatePrice(); 
+                    if (optionKey === 'size' || optionKey === 'width') updateProductId();
+                };
+                
+                // Handle special cases for width and size
+                if (optionKey === 'width') {
+                    // For Celtic width, show product IDs instead of just "Wide"
+                    setupCelticWidthOptions(select, option, product);
+                } else if (optionKey === 'size') {
+                    // For size, we'll handle L/M suffix logic
+                    setupSizeOptions(select, option);
+                } else {
+                    // Standard options
+                    option.options.forEach(optValue => {
+                        const optElement = document.createElement('option');
+                        optElement.value = optValue.id;
+                        optElement.setAttribute('data-price', optValue.price_modifier || 0);
+                        optElement.textContent = `${optValue.name} (+$${optValue.price_modifier || 0})`;
+                        
+                        // Set default selection
+                        if (optValue.id === option.default || (!option.default && optValue === option.options[0])) {
+                            optElement.selected = true;
+                        }
+                        
+                        select.appendChild(optElement);
+                    });
+                }
+                
+                optionGroup.appendChild(select);
+                optionsContainer.appendChild(optionGroup);
+                
+                // Handle visibility conditions
+                if (option.visible_when) {
+                    optionGroup.style.display = 'none'; // Initially hidden
+                }
+            });
+            
+            // Add inner engraving option
+            addEngravingOption(optionsContainer);
+            
+            // Set up metal selection visibility for Celtic products  
+            const karatSelect = document.getElementById('karat_level');
+            if (karatSelect) {
+                karatSelect.addEventListener('change', function() {
+                    const isGold = ['10k', '14k', '18k'].includes(this.value);
+                    const patternGroup = document.getElementById('pattern_metal-group');
+                    const bandGroup = document.getElementById('band_metal-group');
+                    if (patternGroup) patternGroup.style.display = isGold ? 'flex' : 'none';
+                    if (bandGroup) bandGroup.style.display = isGold ? 'flex' : 'none';
+                });
+                // Trigger initial state
+                karatSelect.dispatchEvent(new Event('change'));
+            }
+            
+            // Initialize price and product ID
+            updatePrice();
+            updateProductId();
+        } else {
+            configuratorSection.style.display = 'none';
+        }
+    }
+
+    // Setup Celtic width options with product ID mapping
+    function setupCelticWidthOptions(select, option, product) {
+        // Celtic width mapping based on current product's pattern
+        const celticMappings = {
+            // Pattern 1: Celtic Link  
+            '5296': {'7.5mm': '5296', '6.5mm': '5430', '5.5mm': '5600'},
+            '5430': {'7.5mm': '5296', '6.5mm': '5430', '5.5mm': '5600'},
+            '5600': {'7.5mm': '5296', '6.5mm': '5430', '5.5mm': '5600'},
+            
+            // Pattern 2: Roman Key
+            '5298': {'7.5mm': '5298', '6.5mm': '5432', '5.5mm': '5602'},
+            '5432': {'7.5mm': '5298', '6.5mm': '5432', '5.5mm': '5602'},
+            '5602': {'7.5mm': '5298', '6.5mm': '5432', '5.5mm': '5602'},
+            
+            // Pattern 3: Interlocking Arrows
+            '5310': {'7.5mm': '5310', '6.5mm': '5434', '5.5mm': '5618'},
+            '5434': {'7.5mm': '5310', '6.5mm': '5434', '5.5mm': '5618'},
+            '5618': {'7.5mm': '5310', '6.5mm': '5434', '5.5mm': '5618'},
+            
+            // Pattern 4: Celtic Spiral
+            '5312': {'7.5mm': '5312', '6.5mm': '5436', '5.5mm': '5604'},
+            '5436': {'7.5mm': '5312', '6.5mm': '5436', '5.5mm': '5604'},
+            '5604': {'7.5mm': '5312', '6.5mm': '5436', '5.5mm': '5604'},
+            
+            // Pattern 5: Celtic Arches
+            '5314': {'7.5mm': '5314', '6.5mm': '5438', '5.5mm': '5606'},
+            '5438': {'7.5mm': '5314', '6.5mm': '5438', '5.5mm': '5606'},
+            '5606': {'7.5mm': '5314', '6.5mm': '5438', '5.5mm': '5606'},
+            
+            // Pattern 6: Love Knot
+            '5316': {'7.5mm': '5316', '6.5mm': '5440', '5.5mm': '5608'},
+            '5440': {'7.5mm': '5316', '6.5mm': '5440', '5.5mm': '5608'},
+            '5608': {'7.5mm': '5316', '6.5mm': '5440', '5.5mm': '5608'},
+            
+            // Pattern 14: Celtic Coils  
+            '5424': {'7.5mm': '5424', '6.5mm': '5456', '5.5mm': '5628'},
+            '5456': {'7.5mm': '5424', '6.5mm': '5456', '5.5mm': '5628'},
+            '5628': {'7.5mm': '5424', '6.5mm': '5456', '5.5mm': '5628'}
+        };
+        
+        const baseProductId = product.product_id.replace(/[LM]$/, ''); // Remove L/M suffix
+        const patternMapping = celticMappings[baseProductId];
+        
+        if (patternMapping) {
+            window.celticWidthMapping = patternMapping;
+            
+            option.options.forEach(optValue => {
+                const optElement = document.createElement('option');
+                optElement.value = optValue.id;
+                optElement.setAttribute('data-price', optValue.price_modifier || 0);
+                
+                const productIdForWidth = patternMapping[optValue.id];
+                optElement.textContent = `${optValue.id} (${productIdForWidth}) (+$${optValue.price_modifier || 0})`;
+                
+                // Set default to current product's width
+                if (product.width_mm && optValue.id === product.width_mm + 'mm') {
+                    optElement.selected = true;
+                }
+                
+                select.appendChild(optElement);
+            });
+        } else {
+            // Fallback to standard width options
+            option.options.forEach(optValue => {
+                const optElement = document.createElement('option');
+                optElement.value = optValue.id;
+                optElement.setAttribute('data-price', optValue.price_modifier || 0);
+                optElement.textContent = `${optValue.name} (+$${optValue.price_modifier || 0})`;
+                select.appendChild(optElement);
+            });
+        }
+    }
+
+    // Setup size options with defaults
+    function setupSizeOptions(select, option) {
+        option.options.forEach(optValue => {
+            const optElement = document.createElement('option');
+            optElement.value = optValue.id;
+            optElement.setAttribute('data-price', optValue.price_modifier || 0);
+            optElement.textContent = `Size ${optValue.name}`;
+            
+            // Set default selection
+            if (optValue.id === option.default || (!option.default && optValue === option.options[0])) {
+                optElement.selected = true;
+            }
+            
+            select.appendChild(optElement);
+        });
+    }
+
+    // Add inner engraving option
+    function addEngravingOption(container) {
+        const engravingGroup = document.createElement('div');
+        engravingGroup.className = 'option-group';
+        engravingGroup.id = 'engraving-group';
+        
+        const label = document.createElement('label');
+        label.setAttribute('for', 'inner-engraving');
+        label.textContent = 'Inner Engraving (Optional):';
+        engravingGroup.appendChild(label);
+        
+        const inputWrapper = document.createElement('div');
+        inputWrapper.className = 'engraving-wrapper';
+        
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.id = 'inner-engraving';
+        input.maxLength = 10;
+        input.placeholder = 'Max 10 characters';
+        input.style.marginRight = '10px';
+        
+        const counter = document.createElement('span');
+        counter.id = 'char-counter';
+        counter.textContent = '0/10';
+        counter.style.fontSize = '0.8em';
+        counter.style.color = '#666';
+        
+        input.oninput = function() {
+            const count = this.value.length;
+            counter.textContent = `${count}/10`;
+            counter.style.color = count > 8 ? '#ff6b6b' : '#666';
+        };
+        
+        inputWrapper.appendChild(input);
+        inputWrapper.appendChild(counter);
+        engravingGroup.appendChild(inputWrapper);
+        container.appendChild(engravingGroup);
+    }
+
+    // Update product ID based on width and size selection
+    function updateProductId() {
+        if (!window.currentProduct || !window.celticWidthMapping) return;
+        
+        const widthSelect = document.getElementById('width');
+        const sizeSelect = document.getElementById('size');
+        const productIdDisplay = document.getElementById('product-id');
+        
+        if (widthSelect && sizeSelect && productIdDisplay) {
+            const selectedWidth = widthSelect.value;
+            const selectedSize = parseFloat(sizeSelect.value);
+            
+            // Get base product ID for selected width
+            const baseId = window.celticWidthMapping[selectedWidth];
+            
+            if (baseId) {
+                // Apply L/M suffix based on size
+                const suffix = selectedSize <= 8 ? 'L' : 'M';
+                const finalProductId = baseId + suffix;
+                
+                productIdDisplay.textContent = finalProductId;
+                
+                // Update the modal title too
+                const modalTitle = document.getElementById('catalog-modal-title');
+                if (modalTitle) {
+                    modalTitle.textContent = `${finalProductId} - Celtic Band`;
+                }
+            }
+        }
+    }
+
+    // Update price based on selections
+    function updatePrice() {
+        let basePrice = 550; // Celtic base price
+        let totalPrice = basePrice;
+        
+        // Find all configurator selects and sum their price modifiers
+        const allSelects = document.querySelectorAll('.configurator-options select');
+        allSelects.forEach(select => {
+            if (select.selectedOptions.length > 0) {
+                const priceModifier = parseInt(select.selectedOptions[0].dataset.price) || 0;
+                totalPrice += priceModifier;
+            }
+        });
+        
+        // Check for two-tone pricing (Celtic specific)
+        const patternSelect = document.getElementById('pattern_metal');
+        const bandSelect = document.getElementById('band_metal');
+        if (patternSelect && bandSelect && 
+            patternSelect.style.display !== 'none' && bandSelect.style.display !== 'none') {
+            if (patternSelect.value !== bandSelect.value) {
+                totalPrice += 150; // Two-tone charge
+            }
+        }
+        
+        // Update display
+        const priceDisplay = document.getElementById('total-price');
+        if (priceDisplay) {
+            priceDisplay.textContent = `$${totalPrice}`;
+        }
+    }
+
+    // Setup specifications section
+    function setupSpecifications(product) {
+        const specContent = document.getElementById('spec-content');
+        let specs = [];
+        
+        if (product.width_mm) specs.push(`Width: ${product.width_mm}mm`);
+        if (product.profile) specs.push(`Profile: ${product.profile.replace('_', ' ')}`);
+        if (product.series) specs.push(`Series: ${product.series}`);
+        if (product.gender_variant && product.gender_variant !== 'unisex') {
+            specs.push(`Gender: ${product.gender_variant === 'M' ? 'Mens' : 'Ladies'}`);
+        }
+        if (product.diamond_count && product.diamond_count > 0) {
+            specs.push(`Diamonds: ${product.diamond_count}`);
+        }
+        if (product.white_gold_available) {
+            specs.push('Available in White Gold');
+        }
+        
+        specContent.innerHTML = specs.length > 0 ? 
+            specs.map(spec => `<div class="spec-item">${spec}</div>`).join('') :
+            '<div class="spec-item">No additional specifications available</div>';
+    }
+
+    // Request quote functionality
+    function requestQuote() {
+        if (currentProductData) {
+            const productIdDisplay = document.getElementById('product-id');
+            const currentDisplayedId = productIdDisplay ? productIdDisplay.textContent : currentProductData.product_id;
+            
+            const productInfo = {
+                id: currentDisplayedId, // Use the dynamically updated product ID
+                name: currentProductData.product_name || currentDisplayedId,
+                category: currentProductData.category
+            };
+            
+            // Add configurator selections if applicable
+            if (currentProductData.category === 'celtic_bands') {
+                productInfo.configuration = {};
+                
+                // Get all configurator selections
+                const allSelects = document.querySelectorAll('.configurator-options select');
+                allSelects.forEach(select => {
+                    if (select.value) {
+                        const optionKey = select.getAttribute('data-option-key');
+                        productInfo.configuration[optionKey] = {
+                            value: select.value,
+                            label: select.selectedOptions[0].textContent
+                        };
+                    }
+                });
+                
+                // Add engraving if specified
+                const engravingInput = document.getElementById('inner-engraving');
+                if (engravingInput && engravingInput.value.trim()) {
+                    productInfo.configuration.inner_engraving = engravingInput.value.trim();
+                }
+                
+                // Add calculated total price
+                const priceDisplay = document.getElementById('total-price');
+                if (priceDisplay) {
+                    productInfo.estimated_price = priceDisplay.textContent;
+                }
+            }
+            
+            // Open contact modal with product context
+            if (typeof openContactModalWithTracking === 'function') {
+                openContactModalWithTracking('Catalog Modal', `Quote Request - ${productInfo.id}`, JSON.stringify(productInfo));
+            } else {
+                // Fallback - could implement a simple quote form
+                alert(`Quote requested for ${productInfo.name} (${productInfo.id}). Please contact us for pricing.`);
+            }
+        }
+    }
+
+    // View PDF page functionality
+    function viewPdfPage() {
+        if (currentProductData && currentProductData.page_reference) {
+            const pdfFile = `./Cadman_catalog/page_${currentProductData.page_reference}.pdf`;
+            window.open(pdfFile, '_blank');
+        }
+    }
+
+    // Show error in modal
+    function showError(message) {
+        const loading = document.getElementById('catalog-loading');
+        loading.innerHTML = `
+            <div style="color: #dc3545; text-align: center;">
+                <h3>Error</h3>
+                <p>${message}</p>
+                <button onclick="closeCatalogModal()" class="btn btn-primary">Close</button>
+            </div>
+        `;
+    }
+
+    // Close modal on escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeCatalogModal();
+        }
+    });
+
+    // Close modal on overlay click
+    document.addEventListener('click', function(event) {
+        if (event.target.id === 'catalog-detail-modal') {
+            closeCatalogModal();
+        }
+    });
+    </script>
+    <?php
+}
+?>

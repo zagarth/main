@@ -1,0 +1,266 @@
+product_id,category,current_image_files,current_has_images,current_pdf_file,page_reference,pdf_resolvable,pdf_resolution,normalized_product_key,alnum_product_key,candidate_count,reason
+100,crosses,"no images found",0,page_23A.pdf,PAGE_23A,yes,page_reference_pdf,100,100,3,candidate_matches_found
+100D,crosses,"no images found",0,page_23A.pdf,PAGE_23A,yes,page_reference_pdf,100D,100D,1,candidate_matches_found
+100E,crosses,"no images found",0,page_23A.pdf,PAGE_23A,yes,page_reference_pdf,100E,100E,1,candidate_matches_found
+100S,crosses,,0,index_page_ster-crosses_01.pdf,PAGE_24A,yes,existing_pdf_file,100S,100S,0,no_image_stem_match
+101S,crosses,"no images found",0,page_23A.pdf,PAGE_23A,yes,page_reference_pdf,101S,101S,0,no_image_stem_match
+102,crosses,"no images found",0,page_23b.pdf,PAGE_23B,yes,existing_pdf_file,102,102,4,candidate_matches_found
+102E,crosses,"no images found",0,page_23A.pdf,PAGE_23A,yes,page_reference_pdf,102E,102E,2,candidate_matches_found
+102S,crosses,,0,index_page_ster-crosses_01.pdf,PAGE_24A,yes,existing_pdf_file,102S,102S,0,no_image_stem_match
+103S,crosses,,0,index_page_ster-crosses_01.pdf,PAGE_24A,yes,existing_pdf_file,103S,103S,0,no_image_stem_match
+104,crosses,"no images found",0,page_23A.pdf,PAGE_23A,yes,page_reference_pdf,104,104,3,candidate_matches_found
+104D,crosses,"no images found",0,page_23b.pdf,PAGE_23B,yes,existing_pdf_file,104D,104D,1,candidate_matches_found
+104E,crosses,"no images found",0,page_23b.pdf,PAGE_23B,yes,existing_pdf_file,104E,104E,1,candidate_matches_found
+104N,crosses,,0,index_page_ster-crosses_01.pdf,PAGE_24B,yes,existing_pdf_file,104N,104N,0,no_image_stem_match
+104S,crosses,,0,index_page_ster-crosses_01.pdf,PAGE_24B,yes,existing_pdf_file,104S,104S,0,no_image_stem_match
+105,crosses,"no images found",0,page_18a.pdf,PAGE_24B,yes,page_reference_pdf,105,105,3,candidate_matches_found
+105A,crosses,,0,index_page_ster-crosses_01.pdf,PAGE_24B,yes,existing_pdf_file,105A,105A,1,candidate_matches_found
+105N,crosses,,0,index_page_ster-crosses_01.pdf,PAGE_24B,yes,existing_pdf_file,105N,105N,0,no_image_stem_match
+105S,crosses,,0,index_page_ster-crosses_01.pdf,PAGE_24B,yes,existing_pdf_file,105S,105S,0,no_image_stem_match
+106,crosses,"no images found",0,page_23A.pdf,PAGE_23A,yes,page_reference_pdf,106,106,4,candidate_matches_found
+106AC,crosses,,0,index_page_ster-crosses_01.pdf,PAGE_24B,yes,existing_pdf_file,106AC,106AC,0,no_image_stem_match
+106D,crosses,"no images found",0,page_23b.pdf,PAGE_23B,yes,existing_pdf_file,106D,106D,1,candidate_matches_found
+106E,crosses,"no images found",0,page_23b.pdf,PAGE_23B,yes,existing_pdf_file,106E,106E,1,candidate_matches_found
+106N,crosses,,0,index_page_ster-crosses_01.pdf,PAGE_24B,yes,existing_pdf_file,106N,106N,0,no_image_stem_match
+106S,crosses,,0,index_page_ster-crosses_01.pdf,PAGE_24B,yes,existing_pdf_file,106S,106S,0,no_image_stem_match
+107C,crosses,"no images found",0,page_23b.pdf,PAGE_23B,yes,existing_pdf_file,107C,107C,0,no_image_stem_match
+107S,crosses,,0,index_page_ster-crosses_01.pdf,PAGE_24B,yes,existing_pdf_file,107S,107S,0,no_image_stem_match
+108C,crosses,"no images found",0,page_23b.pdf,PAGE_23B,yes,existing_pdf_file,108C,108C,0,no_image_stem_match
+108N,crosses,"no images found",0,page_23b.pdf,PAGE_23B,yes,existing_pdf_file,108N,108N,0,no_image_stem_match
+111,crosses,"no images found",0,page_18a.pdf,PAGE_24B,yes,page_reference_pdf,111,111,2,candidate_matches_found
+111B,crosses,,0,index_page_ster-crosses_01.pdf,PAGE_24B,yes,existing_pdf_file,111B,111B,1,candidate_matches_found
+111C,crosses,,0,index_page_ster-crosses_01.pdf,PAGE_24B,yes,existing_pdf_file,111C,111C,0,no_image_stem_match
+112P,crosses,,0,index_page_ster-crosses_01.pdf,PAGE_24B,yes,existing_pdf_file,112P,112P,1,candidate_matches_found
+113,crosses,"no images found",0,page_18a.pdf,PAGE_24B,yes,page_reference_pdf,113,113,2,candidate_matches_found
+113B,crosses,,0,index_page_ster-crosses_01.pdf,PAGE_24B,yes,existing_pdf_file,113B,113B,1,candidate_matches_found
+114P,crosses,,0,index_page_ster-crosses_01.pdf,PAGE_24B,yes,existing_pdf_file,114P,114P,1,candidate_matches_found
+12,crosses,"no images found",0,page_23A.pdf,PAGE_23A,yes,page_reference_pdf,12,12,5,candidate_matches_found
+12D,crosses,"no images found",0,page_23A.pdf,PAGE_23A,yes,page_reference_pdf,12D,12D,5,candidate_matches_found
+12E,crosses,"no images found",0,page_23A.pdf,PAGE_23A,yes,page_reference_pdf,12E,12E,5,candidate_matches_found
+26,crosses,"no images found",0,page_23A.pdf,PAGE_23A,yes,page_reference_pdf,26,26,5,candidate_matches_found
+26D,crosses,"no images found",0,page_23A.pdf,PAGE_23A,yes,page_reference_pdf,26D,26D,5,candidate_matches_found
+26E,crosses,"no images found",0,page_23A.pdf,PAGE_23A,yes,page_reference_pdf,26E,26E,5,candidate_matches_found
+27,crosses,,0,index_page_ster-crosses_01.pdf,PAGE_24A,yes,existing_pdf_file,27,27,5,candidate_matches_found
+28,crosses,,0,index_page_ster-crosses_01.pdf,PAGE_24A,yes,existing_pdf_file,28,28,5,candidate_matches_found
+33,crosses,"no images found",0,page_23A.pdf,PAGE_23A,yes,page_reference_pdf,33,33,5,candidate_matches_found
+33C,crosses,"no images found",0,page_23A.pdf,PAGE_23A,yes,page_reference_pdf,33C,33C,5,candidate_matches_found
+33E,crosses,"no images found",0,page_23A.pdf,PAGE_23A,yes,page_reference_pdf,33E,33E,5,candidate_matches_found
+34,crosses,"no images found",0,page_23A.pdf,PAGE_23A,yes,page_reference_pdf,34,34,5,candidate_matches_found
+34C,crosses,"no images found",0,page_23A.pdf,PAGE_23A,yes,page_reference_pdf,34C,34C,5,candidate_matches_found
+35,crosses,"no images found",0,page_23A.pdf,PAGE_23A,yes,page_reference_pdf,35,35,5,candidate_matches_found
+35C,crosses,"no images found",0,page_23A.pdf,PAGE_23A,yes,page_reference_pdf,35C,35C,5,candidate_matches_found
+36C,crosses,"no images found",0,page_23b.pdf,PAGE_23B,yes,existing_pdf_file,36C,36C,5,candidate_matches_found
+38,crosses,"no images found",0,page_23b.pdf,PAGE_23B,yes,existing_pdf_file,38,38,5,candidate_matches_found
+38C,crosses,"no images found",0,page_23b.pdf,PAGE_23B,yes,existing_pdf_file,38C,38C,5,candidate_matches_found
+38P,crosses,"no images found",0,page_23b.pdf,PAGE_23B,yes,existing_pdf_file,38P,38P,5,candidate_matches_found
+43CD,crosses,"no images found",0,page_23b.pdf,PAGE_23B,yes,existing_pdf_file,43CD,43CD,2,candidate_matches_found
+45,crosses,"no images found",0,page_23b.pdf,PAGE_23B,yes,existing_pdf_file,45,45,5,candidate_matches_found
+50,crosses,"no images found",0,page_23b.pdf,PAGE_23B,yes,existing_pdf_file,50,50,5,candidate_matches_found
+51,crosses,"no images found",0,page_23b.pdf,PAGE_23B,yes,existing_pdf_file,51,51,5,candidate_matches_found
+51D,crosses,"no images found",0,page_23b.pdf,PAGE_23B,yes,existing_pdf_file,51D,51D,5,candidate_matches_found
+51P,crosses,"no images found",0,page_23b.pdf,PAGE_23B,yes,existing_pdf_file,51P,51P,5,candidate_matches_found
+51PD,crosses,"no images found",0,page_23b.pdf,PAGE_23B,yes,existing_pdf_file,51PD,51PD,2,candidate_matches_found
+52C,crosses,"no images found",0,page_23b.pdf,PAGE_23B,yes,existing_pdf_file,52C,52C,5,candidate_matches_found
+93,crosses,"no images found",0,page_23A.pdf,PAGE_23A,yes,page_reference_pdf,93,93,5,candidate_matches_found
+93C,crosses,"no images found",0,page_23A.pdf,PAGE_23A,yes,page_reference_pdf,93C,93C,4,candidate_matches_found
+97,crosses,"no images found",0,page_23A.pdf,PAGE_23A,yes,page_reference_pdf,97,97,5,candidate_matches_found
+97D,crosses,"no images found",0,page_23A.pdf,PAGE_23A,yes,page_reference_pdf,97D,97D,5,candidate_matches_found
+99,crosses,,0,index_page_ster-crosses_01.pdf,PAGE_24A,yes,existing_pdf_file,99,99,5,candidate_matches_found
+B38,crosses,,0,index_page_ster-crosses_01.pdf,PAGE_24A,yes,existing_pdf_file,B38,B38,3,candidate_matches_found
+B38C,crosses,,0,index_page_ster-crosses_01.pdf,PAGE_24A,yes,existing_pdf_file,B38C,B38C,0,no_image_stem_match
+1,lockets,,0,page_22b.pdf,PAGE_22B,yes,existing_pdf_file,1,1,5,candidate_matches_found
+10TGD,lockets,"no images found",0,page_21a.pdf,PAGE_21A,yes,existing_pdf_file,10TGD,10TGD,5,candidate_matches_found
+10TGE,lockets,"no images found",0,page_21a.pdf,PAGE_21A,yes,existing_pdf_file,10TGE,10TGE,4,candidate_matches_found
+11TG,lockets,"no images found",0,page_21a.pdf,PAGE_21A,yes,existing_pdf_file,11TG,11TG,5,candidate_matches_found
+12TG,lockets,"no images found",0,page_21d.pdf,PAGE_21D,yes,existing_pdf_file,12TG,12TG,5,candidate_matches_found
+13TGA,lockets,"no images found",0,page_21a.pdf,PAGE_21A,yes,existing_pdf_file,13TGA,13TGA,5,candidate_matches_found
+13TGD,lockets,"no images found",0,page_21a.pdf,PAGE_21A,yes,existing_pdf_file,13TGD,13TGD,4,candidate_matches_found
+1ACOL,lockets,"no images found",0,page_21a.pdf,PAGE_22B,yes,existing_pdf_file,1ACOL,1ACOL,0,no_image_stem_match
+20TT,lockets,,0,page_22.pdf,PAGE_22,yes,existing_pdf_file,20TT,20TT,2,candidate_matches_found
+29A,lockets,,0,page_22a.pdf,PAGE_22A,yes,existing_pdf_file,29A,29A,5,candidate_matches_found
+29B,lockets,,0,page_22a.pdf,PAGE_22A,yes,existing_pdf_file,29B,29B,5,candidate_matches_found
+29BTT,lockets,,0,page_22.pdf,PAGE_22,yes,existing_pdf_file,29BTT,29BTT,0,no_image_stem_match
+29E,lockets,,0,page_22a.pdf,PAGE_22A,yes,existing_pdf_file,29E,29E,5,candidate_matches_found
+29TGD,lockets,"no images found",0,page_21a.pdf,PAGE_21A,yes,existing_pdf_file,29TGD,29TGD,5,candidate_matches_found
+29TGE,lockets,"no images found",0,page_21a.pdf,PAGE_21A,yes,existing_pdf_file,29TGE,29TGE,4,candidate_matches_found
+2LTG,lockets,"no images found",0,page_21d.pdf,PAGE_21D,yes,existing_pdf_file,2LTG,2LTG,5,candidate_matches_found
+2TG,lockets,"no images found",0,page_21d.pdf,PAGE_21D,yes,existing_pdf_file,2TG,2TG,5,candidate_matches_found
+30TG,lockets,"no images found",0,page_21a.pdf,PAGE_21A,yes,existing_pdf_file,30TG,30TG,5,candidate_matches_found
+3B,lockets,,0,page_22b.pdf,PAGE_22B,yes,existing_pdf_file,3B,3B,5,candidate_matches_found
+3COL,lockets,"no images found",0,page_21a.pdf,PAGE_22B,yes,existing_pdf_file,3COL,3COL,0,no_image_stem_match
+3TFG,lockets,"no images found",0,page_21b.pdf,PAGE_21B,yes,existing_pdf_file,3TFG,3TFG,1,candidate_matches_found
+3TG,lockets,"no images found",0,page_21b.pdf,PAGE_21B,yes,existing_pdf_file,3TG,3TG,5,candidate_matches_found
+3TGA,lockets,"no images found",0,page_21b.pdf,PAGE_21B,yes,existing_pdf_file,3TGA,3TGA,5,candidate_matches_found
+4,lockets,,0,page_22b.pdf,PAGE_22B,yes,existing_pdf_file,4,4,5,candidate_matches_found
+40,lockets,,0,page_22c.pdf,PAGE_22C,yes,existing_pdf_file,40,40,5,candidate_matches_found
+40A,lockets,,0,page_22c.pdf,PAGE_22C,yes,existing_pdf_file,40A,40A,3,candidate_matches_found
+41,lockets,,0,page_22c.pdf,PAGE_22C,yes,existing_pdf_file,41,41,5,candidate_matches_found
+41A,lockets,,0,page_22c.pdf,PAGE_22C,yes,existing_pdf_file,41A,41A,5,candidate_matches_found
+42,lockets,,0,page_22c.pdf,PAGE_22C,yes,existing_pdf_file,42,42,5,candidate_matches_found
+42A,lockets,,0,page_22c.pdf,PAGE_22C,yes,existing_pdf_file,42A,42A,5,candidate_matches_found
+43,lockets,,0,page_22c.pdf,PAGE_22C,yes,existing_pdf_file,43,43,5,candidate_matches_found
+43A,lockets,,0,page_22c.pdf,PAGE_22C,yes,existing_pdf_file,43A,43A,3,candidate_matches_found
+44,lockets,,0,page_22c.pdf,PAGE_22C,yes,existing_pdf_file,44,44,5,candidate_matches_found
+44A,lockets,,0,page_22c.pdf,PAGE_22C,yes,existing_pdf_file,44A,44A,1,candidate_matches_found
+44C,lockets,,0,page_22c.pdf,PAGE_22C,yes,existing_pdf_file,44C,44C,1,candidate_matches_found
+44E,lockets,,0,page_22c.pdf,PAGE_22C,yes,existing_pdf_file,44E,44E,3,candidate_matches_found
+4A,lockets,,0,page_22b.pdf,PAGE_22B,yes,existing_pdf_file,4A,4A,5,candidate_matches_found
+4COL,lockets,"no images found",0,page_21a.pdf,PAGE_22B,yes,existing_pdf_file,4COL,4COL,0,no_image_stem_match
+5,lockets,,0,page_22b.pdf,PAGE_22B,yes,existing_pdf_file,5,5,5,candidate_matches_found
+5A,lockets,,0,page_22b.pdf,PAGE_22B,yes,existing_pdf_file,5A,5A,5,candidate_matches_found
+5TGA,lockets,"no images found",0,page_21d.pdf,PAGE_21D,yes,existing_pdf_file,5TGA,5TGA,5,candidate_matches_found
+6ECOL,lockets,"no images found",0,page_21a.pdf,PAGE_22B,yes,existing_pdf_file,6ECOL,6ECOL,0,no_image_stem_match
+6TGA,lockets,"no images found",0,page_21d.pdf,PAGE_21D,yes,existing_pdf_file,6TGA,6TGA,5,candidate_matches_found
+7,lockets,,0,page_22b.pdf,PAGE_22B,yes,existing_pdf_file,7,7,5,candidate_matches_found
+70,lockets,,0,page_22b.pdf,PAGE_22B,yes,existing_pdf_file,70,70,5,candidate_matches_found
+70COL,lockets,"no images found",0,page_21a.pdf,PAGE_22A,yes,existing_pdf_file,70COL,70COL,0,no_image_stem_match
+70T-TT,lockets,,0,page_22.pdf,PAGE_22,yes,existing_pdf_file,70T-TT,70TTT,2,candidate_matches_found
+70TGA,lockets,"no images found",0,page_21b.pdf,PAGE_21B,yes,existing_pdf_file,70TGA,70TGA,5,candidate_matches_found
+70TGM,lockets,"no images found",0,page_21b.pdf,PAGE_21B,yes,existing_pdf_file,70TGM,70TGM,4,candidate_matches_found
+70TGN,lockets,"no images found",0,page_21b.pdf,PAGE_21B,yes,existing_pdf_file,70TGN,70TGN,4,candidate_matches_found
+7COL,lockets,"no images found",0,page_21a.pdf,PAGE_22A,yes,existing_pdf_file,7COL,7COL,0,no_image_stem_match
+7E,lockets,,0,page_22b.pdf,PAGE_22B,yes,existing_pdf_file,7E,7E,5,candidate_matches_found
+7ECOL,lockets,"no images found",0,page_21a.pdf,PAGE_22A,yes,existing_pdf_file,7ECOL,7ECOL,0,no_image_stem_match
+7LTT,lockets,,0,page_22.pdf,PAGE_22,yes,existing_pdf_file,7LTT,7LTT,0,no_image_stem_match
+7MTT,lockets,,0,page_22.pdf,PAGE_22,yes,existing_pdf_file,7MTT,7MTT,0,no_image_stem_match
+7NTT,lockets,,0,page_22.pdf,PAGE_22,yes,existing_pdf_file,7NTT,7NTT,2,candidate_matches_found
+7PTT,lockets,,0,page_22.pdf,PAGE_22,yes,existing_pdf_file,7PTT,7PTT,0,no_image_stem_match
+7QTT,lockets,,0,page_22.pdf,PAGE_22,yes,existing_pdf_file,7QTT,7QTT,0,no_image_stem_match
+7RTT,lockets,,0,page_22.pdf,PAGE_22,yes,existing_pdf_file,7RTT,7RTT,0,no_image_stem_match
+7STT,lockets,,0,page_22.pdf,PAGE_22,yes,existing_pdf_file,7STT,7STT,0,no_image_stem_match
+7T-TT,lockets,,0,page_22.pdf,PAGE_22,yes,existing_pdf_file,7T-TT,7TTT,0,no_image_stem_match
+7UTT,lockets,,0,page_22.pdf,PAGE_22,yes,existing_pdf_file,7UTT,7UTT,0,no_image_stem_match
+8,lockets,,0,page_22b.pdf,PAGE_22B,yes,existing_pdf_file,8,8,5,candidate_matches_found
+8E,lockets,,0,page_22b.pdf,PAGE_22B,yes,existing_pdf_file,8E,8E,5,candidate_matches_found
+8RA,lockets,,0,page_22b.pdf,PAGE_22B,yes,existing_pdf_file,8RA,8RA,3,candidate_matches_found
+8RCOL,lockets,"no images found",0,page_21a.pdf,PAGE_22A,yes,existing_pdf_file,8RCOL,8RCOL,0,no_image_stem_match
+8TG,lockets,"no images found",0,page_21a.pdf,PAGE_21A,yes,existing_pdf_file,8TG,8TG,5,candidate_matches_found
+8TGE,lockets,"no images found",0,page_21a.pdf,PAGE_21A,yes,existing_pdf_file,8TGE,8TGE,1,candidate_matches_found
+9BG,lockets,"no images found",0,page_21a.pdf,PAGE_21A,yes,existing_pdf_file,9BG,9BG,5,candidate_matches_found
+9TGA,lockets,"no images found",0,page_21b.pdf,PAGE_21B,yes,existing_pdf_file,9TGA,9TGA,5,candidate_matches_found
+9TGB,lockets,"no images found",0,page_21b.pdf,PAGE_21B,yes,existing_pdf_file,9TGB,9TGB,1,candidate_matches_found
+B70GA,lockets,"no images found",0,page_21c.pdf,PAGE_21C,yes,existing_pdf_file,B70GA,B70GA,1,candidate_matches_found
+B70GB,lockets,"no images found",0,page_21c.pdf,PAGE_21C,yes,existing_pdf_file,B70GB,B70GB,1,candidate_matches_found
+B70GC,lockets,"no images found",0,page_21c.pdf,PAGE_21C,yes,existing_pdf_file,B70GC,B70GC,0,no_image_stem_match
+B7GA,lockets,"no images found",0,page_21c.pdf,PAGE_21C,yes,existing_pdf_file,B7GA,B7GA,1,candidate_matches_found
+B7GB,lockets,"no images found",0,page_21c.pdf,PAGE_21C,yes,existing_pdf_file,B7GB,B7GB,0,no_image_stem_match
+B7GC,lockets,"no images found",0,page_21c.pdf,PAGE_21C,yes,existing_pdf_file,B7GC,B7GC,0,no_image_stem_match
+CEL,lockets,"no images found",0,page_21a.pdf,PAGE_21A,yes,existing_pdf_file,CEL,CEL,0,no_image_stem_match
+L3GA,lockets,"no images found",0,page_21d.pdf,PAGE_21D,yes,existing_pdf_file,L3GA,L3GA,1,candidate_matches_found
+L3GB,lockets,"no images found",0,page_21d.pdf,PAGE_21D,yes,existing_pdf_file,L3GB,L3GB,1,candidate_matches_found
+L3GC,lockets,"no images found",0,page_21d.pdf,PAGE_21D,yes,existing_pdf_file,L3GC,L3GC,0,no_image_stem_match
+L70G,lockets,"no images found",0,page_21d.pdf,PAGE_21D,yes,existing_pdf_file,L70G,L70G,3,candidate_matches_found
+L7TFG,lockets,"no images found",0,page_21b.pdf,PAGE_21B,yes,existing_pdf_file,L7TFG,L7TFG,3,candidate_matches_found
+M2TG,lockets,"no images found",0,page_21a.pdf,PAGE_21A,yes,existing_pdf_file,M2TG,M2TG,4,candidate_matches_found
+M2TGD,lockets,"no images found",0,page_21a.pdf,PAGE_21A,yes,existing_pdf_file,M2TGD,M2TGD,3,candidate_matches_found
+S10BCOL,lockets,"no images found",0,page_21a.pdf,PAGE_22A,yes,existing_pdf_file,S10BCOL,S10BCOL,0,no_image_stem_match
+S10COL,lockets,"no images found",0,page_21a.pdf,PAGE_22A,yes,existing_pdf_file,S10COL,S10COL,0,no_image_stem_match
+S13CCOL,lockets,"no images found",0,page_21a.pdf,PAGE_22A,yes,existing_pdf_file,S13CCOL,S13CCOL,0,no_image_stem_match
+S13COL,lockets,"no images found",0,page_21a.pdf,PAGE_22A,yes,existing_pdf_file,S13COL,S13COL,0,no_image_stem_match
+S14BCOL,lockets,"no images found",0,page_21a.pdf,PAGE_22A,yes,existing_pdf_file,S14BCOL,S14BCOL,0,no_image_stem_match
+SM3COL,lockets,"no images found",0,page_21a.pdf,PAGE_22A,yes,existing_pdf_file,SM3COL,SM3COL,0,no_image_stem_match
+13-10K,bracelets,,0,index_page_bracelets_01.pdf,PAGE_27A,yes,existing_pdf_file,13-10K,1310K,0,no_image_stem_match
+13E-10K,bracelets,,0,index_page_bracelets_01.pdf,PAGE_27A,yes,existing_pdf_file,13E-10K,13E10K,0,no_image_stem_match
+14E-10K,bracelets,,0,index_page_bracelets_01.pdf,PAGE_27A,yes,existing_pdf_file,14E-10K,14E10K,0,no_image_stem_match
+15-10K,bracelets,,0,index_page_bracelets_01.pdf,PAGE_27A,yes,existing_pdf_file,15-10K,1510K,0,no_image_stem_match
+15E-10K,bracelets,,0,index_page_bracelets_01.pdf,PAGE_27A,yes,existing_pdf_file,15E-10K,15E10K,0,no_image_stem_match
+1B-10K,bracelets,,0,index_page_bracelets_01.pdf,PAGE_27A,yes,existing_pdf_file,1B-10K,1B10K,0,no_image_stem_match
+1BH-10K,bracelets,,0,index_page_bracelets_01.pdf,PAGE_27A,yes,existing_pdf_file,1BH-10K,1BH10K,0,no_image_stem_match
+1H-10K,bracelets,,0,index_page_bracelets_01.pdf,PAGE_27A,yes,existing_pdf_file,1H-10K,1H10K,0,no_image_stem_match
+2A-10K,bracelets,,0,index_page_bracelets_01.pdf,PAGE_27A,yes,existing_pdf_file,2A-10K,2A10K,0,no_image_stem_match
+2B-10K,bracelets,,0,index_page_bracelets_01.pdf,PAGE_27A,yes,existing_pdf_file,2B-10K,2B10K,0,no_image_stem_match
+2E-10K,bracelets,,0,index_page_bracelets_01.pdf,PAGE_27A,yes,existing_pdf_file,2E-10K,2E10K,0,no_image_stem_match
+2M-10K,bracelets,,0,index_page_bracelets_01.pdf,PAGE_27A,yes,existing_pdf_file,2M-10K,2M10K,0,no_image_stem_match
+4B-10K,bracelets,,0,index_page_bracelets_01.pdf,PAGE_27A,yes,existing_pdf_file,4B-10K,4B10K,0,no_image_stem_match
+6A-10K,bracelets,,0,index_page_bracelets_01.pdf,PAGE_27A,yes,existing_pdf_file,6A-10K,6A10K,0,no_image_stem_match
+6B-10K,bracelets,,0,index_page_bracelets_01.pdf,PAGE_27A,yes,existing_pdf_file,6B-10K,6B10K,0,no_image_stem_match
+6M-10K,bracelets,,0,index_page_bracelets_01.pdf,PAGE_27A,yes,existing_pdf_file,6M-10K,6M10K,0,no_image_stem_match
+7G-10K,bracelets,,0,index_page_bracelets_01.pdf,PAGE_27A,yes,existing_pdf_file,7G-10K,7G10K,0,no_image_stem_match
+BR4,bracelets,,0,index_page_bracelets_01.pdf,PAGE_27B,yes,existing_pdf_file,BR4,BR4,0,no_image_stem_match
+BR5,bracelets,,0,index_page_bracelets_01.pdf,PAGE_27B,yes,existing_pdf_file,BR5,BR5,0,no_image_stem_match
+BR6,bracelets,,0,index_page_bracelets_01.pdf,PAGE_27B,yes,existing_pdf_file,BR6,BR6,1,candidate_matches_found
+CB209,bracelets,,0,index_page_bracelets_01.pdf,PAGE_27B,yes,existing_pdf_file,CB209,CB209,1,candidate_matches_found
+CB210,bracelets,,0,index_page_bracelets_01.pdf,PAGE_27B,yes,existing_pdf_file,CB210,CB210,1,candidate_matches_found
+CB212,bracelets,,0,index_page_bracelets_01.pdf,PAGE_27B,yes,existing_pdf_file,CB212,CB212,1,candidate_matches_found
+CB214,bracelets,,0,index_page_bracelets_01.pdf,PAGE_27B,yes,existing_pdf_file,CB214,CB214,2,candidate_matches_found
+CB215,bracelets,,0,index_page_bracelets_01.pdf,PAGE_27B,yes,existing_pdf_file,CB215,CB215,1,candidate_matches_found
+CB227,bracelets,,0,index_page_bracelets_01.pdf,PAGE_27B,yes,existing_pdf_file,CB227,CB227,0,no_image_stem_match
+13EMC,medical,,0,page_26a.pdf,PAGE_26A,yes,existing_pdf_file,13EMC,13EMC,0,no_image_stem_match
+13MC,medical,,0,page_26a.pdf,PAGE_26A,yes,existing_pdf_file,13MC,13MC,0,no_image_stem_match
+14EMC,medical,,0,page_26a.pdf,PAGE_26A,yes,existing_pdf_file,14EMC,14EMC,0,no_image_stem_match
+14EMC-10K,medical,,0,page_25a.pdf,PAGE_25A,yes,existing_pdf_file,14EMC-10K,14EMC10K,0,no_image_stem_match
+15EMC-10K,medical,,0,page_25a.pdf,PAGE_25A,yes,existing_pdf_file,15EMC-10K,15EMC10K,0,no_image_stem_match
+15M,medical,"no images found",0,page_11a.pdf,PAGE_11A,yes,existing_pdf_file,15M,15M,2,candidate_matches_found
+15M-10K,medical,,0,page_25a.pdf,PAGE_25A,yes,existing_pdf_file,15M-10K,15M10K,0,no_image_stem_match
+15MC,medical,,0,page_26a.pdf,PAGE_26A,yes,existing_pdf_file,15MC,15MC,0,no_image_stem_match
+1BEMC,medical,,0,page_26a.pdf,PAGE_26A,yes,existing_pdf_file,1BEMC,1BEMC,1,candidate_matches_found
+1BEMC-10K,medical,,0,page_25a.pdf,PAGE_25A,yes,existing_pdf_file,1BEMC-10K,1BEMC10K,1,candidate_matches_found
+1BM,medical,"no images found",0,page_11a.pdf,PAGE_11A,yes,existing_pdf_file,1BM,1BM,4,candidate_matches_found
+1BM-10K,medical,,0,page_25a.pdf,PAGE_25A,yes,existing_pdf_file,1BM-10K,1BM10K,0,no_image_stem_match
+2BMC,medical,,0,page_26a.pdf,PAGE_26A,yes,existing_pdf_file,2BMC,2BMC,0,no_image_stem_match
+2BMC-10K,medical,,0,page_25a.pdf,PAGE_25A,yes,existing_pdf_file,2BMC-10K,2BMC10K,0,no_image_stem_match
+2EMC,medical,,0,page_26a.pdf,PAGE_26A,yes,existing_pdf_file,2EMC,2EMC,0,no_image_stem_match
+2EMC-10K,medical,,0,page_25a.pdf,PAGE_25A,yes,existing_pdf_file,2EMC-10K,2EMC10K,0,no_image_stem_match
+4BEMC,medical,,0,page_26a.pdf,PAGE_26A,yes,existing_pdf_file,4BEMC,4BEMC,1,candidate_matches_found
+4BMC,medical,,0,page_26a.pdf,PAGE_26A,yes,existing_pdf_file,4BMC,4BMC,1,candidate_matches_found
+6AMC-10K,medical,,0,index_page_medical_01.pdf,PAGE_8GMC,yes,existing_pdf_file,6AMC-10K,6AMC10K,0,no_image_stem_match
+6BMC,medical,,0,page_26a.pdf,PAGE_26A,yes,existing_pdf_file,6BMC,6BMC,0,no_image_stem_match
+6BMC-10K,medical,,0,page_25a.pdf,PAGE_25A,yes,existing_pdf_file,6BMC-10K,6BMC10K,0,no_image_stem_match
+6MMC,medical,,0,page_26a.pdf,PAGE_26A,yes,existing_pdf_file,6MMC,6MMC,0,no_image_stem_match
+6MMC-10K,medical,,0,page_25a.pdf,PAGE_25A,yes,existing_pdf_file,6MMC-10K,6MMC10K,0,no_image_stem_match
+7GMC-10K,medical,,0,index_page_medical_01.pdf,PAGE_8GMC,yes,existing_pdf_file,7GMC-10K,7GMC10K,0,no_image_stem_match
+DT98SM,medical,"no images found",0,page_26a.pdf,PAGE_26A,yes,existing_pdf_file,DT98SM,DT98SM,1,candidate_matches_found
+DT98SM10K,medical,,0,page_25a.pdf,PAGE_25A,yes,existing_pdf_file,DT98SM10K,DT98SM10K,1,candidate_matches_found
+P120,medical,,0,index_page_medical_01.pdf,PAGE_8GMC,yes,existing_pdf_file,P120,P120,1,candidate_matches_found
+P120-10K,medical,,0,page_25a.pdf,PAGE_25A,yes,existing_pdf_file,P120-10K,P12010K,1,candidate_matches_found
+P120M,medical,"no images found",0,page_11a.pdf,PAGE_11A,yes,existing_pdf_file,P120M,P120M,1,candidate_matches_found
+P21BM,medical,"no images found",0,page_11a.pdf,PAGE_11A,yes,existing_pdf_file,P21BM,P21BM,1,candidate_matches_found
+P21BM-10K,medical,,0,page_25a.pdf,PAGE_25A,yes,existing_pdf_file,P21BM-10K,P21BM10K,1,candidate_matches_found
+P24M,medical,"no images found",0,page_11a.pdf,PAGE_11A,yes,existing_pdf_file,P24M,P24M,0,no_image_stem_match
+P24M-10K,medical,,0,page_25a.pdf,PAGE_25A,yes,existing_pdf_file,P24M-10K,P24M10K,0,no_image_stem_match
+CH72,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,CH72,CH72,2,candidate_matches_found
+CH73,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,CH73,CH73,2,candidate_matches_found
+E31,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,E31,E31,3,candidate_matches_found
+EB13,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,EB13,EB13,0,no_image_stem_match
+EB7,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,EB7,EB7,5,candidate_matches_found
+ED27,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,ED27,ED27,1,candidate_matches_found
+ED28,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,ED28,ED28,0,no_image_stem_match
+ED29,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,ED29,ED29,0,no_image_stem_match
+ED36,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,ED36,ED36,0,no_image_stem_match
+EH2,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,EH2,EH2,2,candidate_matches_found
+EH3,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,EH3,EH3,1,candidate_matches_found
+EH4,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,EH4,EH4,2,candidate_matches_found
+EH6,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,EH6,EH6,2,candidate_matches_found
+EH7,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,EH7,EH7,2,candidate_matches_found
+EP24,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,EP24,EP24,0,no_image_stem_match
+EP25,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,EP25,EP25,0,no_image_stem_match
+EP26,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,EP26,EP26,1,candidate_matches_found
+ER32,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,ER32,ER32,1,candidate_matches_found
+ER33,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,ER33,ER33,0,no_image_stem_match
+ER34,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,ER34,ER34,0,no_image_stem_match
+ER61,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,ER61,ER61,0,no_image_stem_match
+ER67,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,ER67,ER67,0,no_image_stem_match
+P-ER67,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,P-ER67,PER67,0,no_image_stem_match
+P31,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,P31,P31,4,candidate_matches_found
+P32,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,P32,P32,3,candidate_matches_found
+P33,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,P33,P33,3,candidate_matches_found
+P34,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,P34,P34,3,candidate_matches_found
+P37,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,P37,P37,4,candidate_matches_found
+P41,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,P41,P41,2,candidate_matches_found
+P43,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,P43,P43,1,candidate_matches_found
+PB13,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,PB13,PB13,0,no_image_stem_match
+PB7,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,PB7,PB7,5,candidate_matches_found
+PD27,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,PD27,PD27,2,candidate_matches_found
+PD28,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,PD28,PD28,0,no_image_stem_match
+PD29,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,PD29,PD29,0,no_image_stem_match
+PD30,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,PD30,PD30,1,candidate_matches_found
+PD36,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,PD36,PD36,0,no_image_stem_match
+PGA,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,PGA,PGA,1,candidate_matches_found
+PH2,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,PH2,PH2,2,candidate_matches_found
+PH3,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,PH3,PH3,1,candidate_matches_found
+PH4,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,PH4,PH4,2,candidate_matches_found
+PH6,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,PH6,PH6,2,candidate_matches_found
+PM79,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,PM79,PM79,1,candidate_matches_found
+PP24,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,PP24,PP24,0,no_image_stem_match
+PP25,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,PP25,PP25,0,no_image_stem_match
+PP26,pendants,,0,index_page_pendants-earrings_01.pdf,PAGE_20A,yes,existing_pdf_file,PP26,PP26,1,candidate_matches_found

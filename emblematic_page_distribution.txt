@@ -1,0 +1,15 @@
+Based on the emblematic index analysis, here's the page distribution I can extract from the raw text:
+
+**Page 9A products:**
+RN1, RN3, RN301B, RN31M, RNAS, RNAQY, RPN1, LPN1, etc.
+
+**Page 9AA products:** 
+HSW301B, LNA1, LPN301B, LPN31M, MLT1, VET14M, VET15L
+
+**Page 9B products:**
+Firefighters section, 1108MAS, 1116MAS, 1119MAS, 1231MAS, 231TMAS, 433MAS, 436MAS, 4911, 4912
+
+**Page 9C products:**
+S33HM, S36HM, S38M, S46M, S6RM, SA12M, S14M, S16DM, etc.
+
+The current database has all these incorrectly assigned to page_12a instead of their proper 9A/9AA/9B/9C locations.

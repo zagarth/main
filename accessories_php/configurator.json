@@ -1,0 +1,366 @@
+{
+  "version": "1.0", 
+  "last_updated": "2025-12-03",
+  "collection": "accessories",
+  "data": {
+    "name": "Accessories Collection",
+    "base_price": 185,
+    "currency": "CAD",
+    "options": {
+      "metal_type": {
+        "label": "Metal Type",
+        "required": true,
+        "type": "single_select",
+        "default": "sterling_silver",
+        "help_text": "Base metal for your accessory",
+        "options": [
+          {
+            "id": "sterling_silver",
+            "name": "Sterling Silver",
+            "description": "92.5% pure silver",
+            "price_modifier": 0
+          },
+          {
+            "id": "10k_gold",
+            "name": "10K Gold",
+            "description": "41.7% pure gold",
+            "price_modifier": 120
+          },
+          {
+            "id": "14k_gold", 
+            "name": "14K Gold",
+            "description": "58.5% pure gold",
+            "price_modifier": 220
+          },
+          {
+            "id": "18k_gold",
+            "name": "18K Gold",
+            "description": "75% pure gold",
+            "price_modifier": 380
+          }
+        ]
+      },
+      "metal_color": {
+        "label": "Metal Color",
+        "required": true,
+        "type": "single_select",
+        "default": "yellow",
+        "visible_when": {
+          "metal_type": ["10k_gold", "14k_gold", "18k_gold"]
+        },
+        "options": [
+          {
+            "id": "yellow",
+            "name": "Yellow Gold",
+            "description": "Traditional gold color",
+            "price_modifier": 0
+          },
+          {
+            "id": "white",
+            "name": "White Gold",
+            "description": "Silver-like appearance",
+            "price_modifier": 20
+          },
+          {
+            "id": "rose",
+            "name": "Rose Gold",
+            "description": "Pink-tinted gold",
+            "price_modifier": 15
+          }
+        ]
+      },
+      "accessory_type": {
+        "label": "Accessory Type",
+        "required": true,
+        "type": "single_select",
+        "default": "pendant",
+        "help_text": "Type of jewelry accessory",
+        "options": [
+          {
+            "id": "pendant",
+            "name": "Pendant/Necklace",
+            "description": "Pendant with chain",
+            "price_modifier": 0
+          },
+          {
+            "id": "cross",
+            "name": "Cross",
+            "description": "Religious cross pendant",
+            "price_modifier": 0
+          },
+          {
+            "id": "locket",
+            "name": "Locket",
+            "description": "Opening locket pendant",
+            "price_modifier": 45
+          },
+          {
+            "id": "earrings",
+            "name": "Earrings",
+            "description": "Matching earring pair",
+            "price_modifier": 25
+          },
+          {
+            "id": "cufflinks",
+            "name": "Cufflinks",
+            "description": "Formal cufflinks pair",
+            "price_modifier": 80
+          },
+          {
+            "id": "tie_accessories",
+            "name": "Tie Accessories",
+            "description": "Tie clips, tie tacks",
+            "price_modifier": 35
+          },
+          {
+            "id": "identification",
+            "name": "ID Jewelry",
+            "description": "Medical alert or ID tags",
+            "price_modifier": 15
+          }
+        ]
+      },
+      "size_style": {
+        "label": "Size/Style",
+        "required": true,
+        "type": "single_select",
+        "default": "medium",
+        "help_text": "Size and style variation",
+        "options": [
+          {
+            "id": "petite",
+            "name": "Petite/Small",
+            "description": "Delicate, subtle size",
+            "price_modifier": -20
+          },
+          {
+            "id": "medium", 
+            "name": "Medium/Standard",
+            "description": "Classic proportions",
+            "price_modifier": 0
+          },
+          {
+            "id": "large",
+            "name": "Large/Statement",
+            "description": "Bold, prominent size",
+            "price_modifier": 40
+          },
+          {
+            "id": "oversized",
+            "name": "Oversized/Dramatic",
+            "description": "Maximum impact size",
+            "price_modifier": 80
+          }
+        ]
+      },
+      "chain_length": {
+        "label": "Chain Length",
+        "required": true,
+        "type": "single_select",
+        "default": "18_inch",
+        "visible_when": {
+          "accessory_type": ["pendant", "cross", "locket"]
+        },
+        "help_text": "Chain length for pendants",
+        "options": [
+          {
+            "id": "16_inch",
+            "name": "16 inch",
+            "description": "Choker length",
+            "price_modifier": -10
+          },
+          {
+            "id": "18_inch",
+            "name": "18 inch",
+            "description": "Standard length",
+            "price_modifier": 0
+          },
+          {
+            "id": "20_inch",
+            "name": "20 inch",
+            "description": "Longer length",
+            "price_modifier": 15
+          },
+          {
+            "id": "24_inch",
+            "name": "24 inch",
+            "description": "Long chain",
+            "price_modifier": 35
+          },
+          {
+            "id": "custom_length",
+            "name": "Custom Length",
+            "description": "Specify custom length",
+            "price_modifier": 25
+          }
+        ]
+      },
+      "earring_style": {
+        "label": "Earring Style",
+        "required": true,
+        "type": "single_select",
+        "default": "post",
+        "visible_when": {
+          "accessory_type": ["earrings"]
+        },
+        "options": [
+          {
+            "id": "post",
+            "name": "Post/Stud",
+            "description": "Classic stud earrings",
+            "price_modifier": 0
+          },
+          {
+            "id": "hook",
+            "name": "Hook/Wire",
+            "description": "French hook style",
+            "price_modifier": 5
+          },
+          {
+            "id": "leverback",
+            "name": "Leverback",
+            "description": "Secure leverback closure",
+            "price_modifier": 20
+          },
+          {
+            "id": "clip_on",
+            "name": "Clip-On",
+            "description": "No piercing required",
+            "price_modifier": 15
+          }
+        ]
+      },
+      "customization": {
+        "label": "Customization",
+        "required": false,
+        "type": "single_select",
+        "default": "standard",
+        "help_text": "Custom design options",
+        "options": [
+          {
+            "id": "standard",
+            "name": "Standard Design",
+            "description": "No customization",
+            "price_modifier": 0
+          },
+          {
+            "id": "birthstone",
+            "name": "Birthstone",
+            "description": "Add birthstone accent",
+            "price_modifier": 60
+          },
+          {
+            "id": "gemstone_accent",
+            "name": "Gemstone Accent",
+            "description": "Add gemstone details",
+            "price_modifier": 85
+          },
+          {
+            "id": "custom_design",
+            "name": "Custom Design",
+            "description": "Completely custom piece",
+            "price_modifier": 150
+          }
+        ]
+      },
+      "engraving": {
+        "label": "Engraving",
+        "required": false,
+        "type": "single_select", 
+        "default": "none",
+        "help_text": "Personal engraving options",
+        "options": [
+          {
+            "id": "none",
+            "name": "No Engraving",
+            "description": "Plain finish",
+            "price_modifier": 0
+          },
+          {
+            "id": "initials",
+            "name": "Initials",
+            "description": "Personal initials",
+            "price_modifier": 35
+          },
+          {
+            "id": "date",
+            "name": "Special Date",
+            "description": "Important date",
+            "price_modifier": 40
+          },
+          {
+            "id": "short_message",
+            "name": "Short Message",
+            "description": "Brief personal message",
+            "price_modifier": 60
+          },
+          {
+            "id": "symbol",
+            "name": "Symbol/Logo",
+            "description": "Personal symbol or small logo",
+            "price_modifier": 70
+          }
+        ]
+      },
+      "packaging": {
+        "label": "Gift Packaging",
+        "required": false,
+        "type": "single_select",
+        "default": "standard",
+        "help_text": "Special packaging options",
+        "options": [
+          {
+            "id": "standard",
+            "name": "Standard Box",
+            "description": "Regular jewelry box",
+            "price_modifier": 0
+          },
+          {
+            "id": "gift_box",
+            "name": "Premium Gift Box",
+            "description": "Elegant gift presentation",
+            "price_modifier": 25
+          },
+          {
+            "id": "luxury_box",
+            "name": "Luxury Presentation",
+            "description": "High-end gift box with ribbon",
+            "price_modifier": 45
+          }
+        ]
+      },
+      "finish": {
+        "label": "Surface Finish",
+        "required": true,
+        "type": "single_select",
+        "default": "polished",
+        "options": [
+          {
+            "id": "polished",
+            "name": "High Polish",
+            "description": "Bright mirror finish",
+            "price_modifier": 0
+          },
+          {
+            "id": "brushed",
+            "name": "Brushed Finish",
+            "description": "Subtle matte texture",
+            "price_modifier": 18
+          },
+          {
+            "id": "antique",
+            "name": "Antique Finish",
+            "description": "Vintage aged appearance",
+            "price_modifier": 30
+          },
+          {
+            "id": "two_tone",
+            "name": "Two-Tone Finish",
+            "description": "Combination of finishes",
+            "price_modifier": 35
+          }
+        ]
+      }
+    }
+  }
+}

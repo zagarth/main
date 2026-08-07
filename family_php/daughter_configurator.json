@@ -1,0 +1,282 @@
+{
+    "version": "1.0",
+    "last_updated": "2025-10-17",
+    "collection": "daughter",
+    "data": {
+        "name": "Daughter Rings",
+        "base_price": 280,
+        "currency": "CAD",
+        "options": {
+            "karat_level": {
+                "label": "Karat / Purity",
+                "required": true,
+                "type": "single_select",
+                "default": "sterling",
+                "help_text": "Higher karat = more pure metal, softer & more expensive",
+                "options": [
+                    {
+                        "id": "sterling",
+                        "name": "Sterling Silver",
+                        "description": "92.5% pure silver",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "10k",
+                        "name": "10K Gold",
+                        "description": "41.7% pure gold",
+                        "price_modifier": 120
+                    },
+                    {
+                        "id": "14k",
+                        "name": "14K Gold",
+                        "description": "58.5% pure gold",
+                        "price_modifier": 220
+                    },
+                    {
+                        "id": "18k",
+                        "name": "18K Gold",
+                        "description": "75% pure gold",
+                        "price_modifier": 400
+                    }
+                ]
+            },
+            "metal_color": {
+                "label": "Metal Color",
+                "required": true,
+                "type": "single_select",
+                "default": "yellow",
+                "visible_when": {
+                    "karat_level": ["10k", "14k", "18k"]
+                },
+                "options": [
+                    {
+                        "id": "yellow",
+                        "name": "Yellow",
+                        "description": "Classic gold",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "white",
+                        "name": "White",
+                        "description": "Platinum look",
+                        "price_modifier": 15
+                    },
+                    {
+                        "id": "rose",
+                        "name": "Rose",
+                        "description": "Pink gold",
+                        "price_modifier": 10
+                    }
+                ]
+            },
+            "design_style": {
+                "label": "Design Style",
+                "required": true,
+                "type": "single_select",
+                "default": "delicate",
+                "help_text": "Choose the style that fits her personality",
+                "options": [
+                    {
+                        "id": "delicate",
+                        "name": "Delicate & Feminine",
+                        "description": "Thin bands with elegant details",
+                        "price_modifier": 0,
+                        "product_ids": ["1208", "1210", "1869"]
+                    },
+                    {
+                        "id": "classic",
+                        "name": "Classic Traditional",
+                        "description": "Timeless designs for everyday wear",
+                        "price_modifier": 25,
+                        "product_ids": ["1877", "1879"]
+                    },
+                    {
+                        "id": "modern",
+                        "name": "Modern Contemporary",
+                        "description": "Contemporary styles with unique flair",
+                        "price_modifier": 40,
+                        "product_ids": ["2282"]
+                    }
+                ]
+            },
+            "finish": {
+                "label": "Surface Finish",
+                "required": true,
+                "type": "single_select",
+                "default": "polished",
+                "options": [
+                    {
+                        "id": "polished",
+                        "name": "High Polish",
+                        "description": "Mirror-like shine",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "brushed",
+                        "name": "Brushed/Matte",
+                        "description": "Subtle texture, no glare",
+                        "price_modifier": 25
+                    },
+                    {
+                        "id": "satin",
+                        "name": "Satin",
+                        "description": "Soft lustrous finish",
+                        "price_modifier": 20
+                    }
+                ]
+            },
+            "size": {
+                "label": "Ring Size",
+                "required": true,
+                "type": "single_select",
+                "default": "6.5",
+                "help_text": "Typical daughter sizes 4-8. Not sure? Request a free ring sizer.",
+                "options": [
+                    {
+                        "id": "4",
+                        "name": "4",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "4.5",
+                        "name": "4.5",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "5",
+                        "name": "5",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "5.5",
+                        "name": "5.5",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "6",
+                        "name": "6",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "6.5",
+                        "name": "6.5",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "7",
+                        "name": "7",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "7.5",
+                        "name": "7.5",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "8",
+                        "name": "8",
+                        "price_modifier": 0
+                    }
+                ]
+            },
+            "stone_accent": {
+                "label": "Stone Accent",
+                "required": false,
+                "type": "single_select",
+                "default": "none",
+                "help_text": "Add a special touch with gemstones",
+                "options": [
+                    {
+                        "id": "none",
+                        "name": "No Stone",
+                        "description": "Clean band design",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "birthstone",
+                        "name": "Birthstone",
+                        "description": "Her birth month stone",
+                        "price_modifier": 45
+                    },
+                    {
+                        "id": "diamond",
+                        "name": "Small Diamond",
+                        "description": "Petite diamond accent",
+                        "price_modifier": 85
+                    },
+                    {
+                        "id": "heart_stone",
+                        "name": "Heart Stone",
+                        "description": "Heart-shaped accent",
+                        "price_modifier": 60
+                    }
+                ]
+            },
+            "engraving": {
+                "label": "Engraving",
+                "required": false,
+                "type": "text_input",
+                "price_modifier": 35,
+                "max_characters": 25,
+                "help_text": "Up to 25 characters. Name, date, or special message."
+            },
+            "gift_packaging": {
+                "label": "Gift Packaging",
+                "required": false,
+                "type": "single_select",
+                "default": "premium",
+                "options": [
+                    {
+                        "id": "standard",
+                        "name": "Standard Box",
+                        "description": "Classic ring box",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "premium",
+                        "name": "Premium Gift Box",
+                        "description": "Beautiful presentation box",
+                        "price_modifier": 25
+                    },
+                    {
+                        "id": "luxury",
+                        "name": "Luxury Keepsake Box",
+                        "description": "Heirloom quality box",
+                        "price_modifier": 60
+                    }
+                ]
+            }
+        },
+        "production_time": {
+            "standard": {
+                "label": "Standard Production",
+                "weeks": 3,
+                "price_modifier": 0
+            },
+            "rush": {
+                "label": "Rush Production (1.5 weeks)",
+                "weeks": 1.5,
+                "price_modifier": 150
+            }
+        },
+        "warranty": {
+            "included": "Lifetime warranty against manufacturing defects",
+            "details": "Includes one free resizing within first year"
+        }
+    },
+    "ui_config": {
+        "color_scheme": {
+            "primary": "#2c3e50",
+            "secondary": "#e91e63",
+            "accent": "#f06292",
+            "success": "#4caf50",
+            "background": "#fce4ec",
+            "text": "#2c3e50"
+        },
+        "animations": {
+            "option_select": "fadeIn 0.3s ease",
+            "price_update": "pulse 0.5s ease"
+        },
+        "mobile_breakpoint": "768px"
+    }
+}

@@ -1,0 +1,29 @@
+{
+  "newsletter": {
+    "name": "Newsletter",
+    "subject": "Latest Updates from Cadman Manufacturing",
+    "content": "",
+    "created": "2025-10-25 00:00:00",
+    "created_by": "system",
+    "category": "newsletter",
+    "description": "Regular newsletter template with company updates and highlights"
+  },
+  "promotion": {
+    "name": "Promotional Offer",
+    "subject": "Special Offer Just for You!",
+    "content": "",
+    "created": "2025-10-25 00:00:00",
+    "created_by": "system", 
+    "category": "promotion",
+    "description": "Eye-catching promotional template for special offers and deals"
+  },
+  "announcement": {
+    "name": "Company Announcement",
+    "subject": "Important Update from Cadman Manufacturing",
+    "content": "",
+    "created": "2025-10-25 00:00:00",
+    "created_by": "system",
+    "category": "announcement", 
+    "description": "Professional template for important company announcements"
+  }
+}

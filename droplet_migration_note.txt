@@ -1,0 +1,61 @@
+DROPLET MIGRATION HANDOFF
+========================
+
+This note is for the next AI or operator taking over the server migration.
+
+PROJECT
+-------
+Website: Cadman Manufacturing / homesite
+Workspace root: /var/www/html/homesite
+Purpose: PHP web application with catalog, cart, retailer integration, email, and database-backed features.
+
+IMPORTANT
+---------
+- Leave the current local configuration intact.
+- Copy files only unless the user explicitly requests a modification.
+- Do not overwrite existing production files unless approved.
+- Prefer a safe, non-destructive migration approach.
+
+KEY FILES TO REVIEW
+-------------------
+- .env.template
+- composer.json
+- config/ (if present)
+- includes/, classes/, cart/, api/, admin/, user/
+- database/ and db_backups/
+- logs/ and cache/
+
+ENVIRONMENT NOTES
+-----------------
+- The application expects PHP 8.1+.
+- Composer dependencies are defined in composer.json.
+- The project uses environment-based configuration. Review .env.template for the expected variables.
+- The database credentials shown in .env.template are example values; verify the actual environment values on the target host before deployment.
+
+RECOMMENDED MIGRATION APPROACH
+------------------------------
+1. Copy the application files to the target server using rsync or scp.
+2. Preserve directory structure.
+3. Exclude temporary, cache, backup, and log files where appropriate.
+4. Verify PHP and Composer are available on the target server.
+5. Install Composer dependencies if needed.
+6. Copy or configure the runtime environment file separately.
+7. Ensure the target web root points to the migrated application.
+
+SAFE COPY SETTINGS
+------------------
+- Use rsync with --archive --human-readable --progress.
+- Avoid destructive flags such as --delete unless explicitly approved.
+- If a file already exists, preserve it unless a replace is explicitly requested.
+
+SENSITIVE INFORMATION
+---------------------
+- Do not expose passwords, API keys, or secrets in chat logs.
+- Use secure transfer methods and verify credentials on the target host.
+
+NEXT STEPS FOR THE NEXT AGENT
+-----------------------------
+- Review the live server environment before copying anything important.
+- Confirm the target web root, PHP version, web server config, and database access.
+- Prepare a dry-run migration plan first.
+- Only then perform the transfer.

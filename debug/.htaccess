@@ -1,0 +1,7 @@
+# Block all access to debug folder
+Require all denied
+
+# Additional protection against information disclosure
+<FilesMatch ".*">
+    Require all denied
+</FilesMatch>

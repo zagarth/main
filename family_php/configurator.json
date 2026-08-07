@@ -1,0 +1,263 @@
+{
+    "version": "1.0",
+    "last_updated": "2025-10-17",
+    "collection": "family",
+    "data": {
+        "name": "Family Rings",
+        "base_price": 320,
+        "currency": "CAD",
+        "options": {
+            "karat_level": {
+                "label": "Karat / Purity",
+                "required": true,
+                "type": "single_select",
+                "default": "sterling",
+                "help_text": "Higher karat = more pure metal, softer & more expensive",
+                "options": [
+                    {
+                        "id": "sterling",
+                        "name": "Sterling Silver",
+                        "description": "92.5% pure silver",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "10k",
+                        "name": "10K Gold",
+                        "description": "41.7% pure gold",
+                        "price_modifier": 130
+                    },
+                    {
+                        "id": "14k",
+                        "name": "14K Gold",
+                        "description": "58.5% pure gold",
+                        "price_modifier": 240
+                    },
+                    {
+                        "id": "18k",
+                        "name": "18K Gold",
+                        "description": "75% pure gold",
+                        "price_modifier": 420
+                    }
+                ]
+            },
+            "metal_color": {
+                "label": "Metal Color",
+                "required": true,
+                "type": "single_select",
+                "default": "yellow",
+                "visible_when": {
+                    "karat_level": ["10k", "14k", "18k"]
+                },
+                "options": [
+                    {
+                        "id": "yellow",
+                        "name": "Yellow",
+                        "description": "Classic gold",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "white",
+                        "name": "White",
+                        "description": "Platinum look",
+                        "price_modifier": 18
+                    },
+                    {
+                        "id": "rose",
+                        "name": "Rose",
+                        "description": "Pink gold",
+                        "price_modifier": 12
+                    }
+                ]
+            },
+            "finish": {
+                "label": "Surface Finish",
+                "required": true,
+                "type": "single_select",
+                "default": "polished",
+                "options": [
+                    {
+                        "id": "polished",
+                        "name": "High Polish",
+                        "description": "Mirror-like shine",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "brushed",
+                        "name": "Brushed/Matte",
+                        "description": "Subtle texture, no glare",
+                        "price_modifier": 25
+                    },
+                    {
+                        "id": "satin",
+                        "name": "Satin",
+                        "description": "Soft lustrous finish",
+                        "price_modifier": 20
+                    }
+                ]
+            },
+            "size": {
+                "label": "Ring Size",
+                "required": true,
+                "type": "single_select",
+                "default": "7",
+                "help_text": "Not sure? Request a free ring sizer.",
+                "options": [
+                    {
+                        "id": "4",
+                        "name": "4",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "4.5",
+                        "name": "4.5",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "5",
+                        "name": "5",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "5.5",
+                        "name": "5.5",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "6",
+                        "name": "6",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "6.5",
+                        "name": "6.5",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "7",
+                        "name": "7",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "7.5",
+                        "name": "7.5",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "8",
+                        "name": "8",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "8.5",
+                        "name": "8.5",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "9",
+                        "name": "9",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "9.5",
+                        "name": "9.5",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "10",
+                        "name": "10",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "10.5",
+                        "name": "10.5",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "11",
+                        "name": "11",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "11.5",
+                        "name": "11.5",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "12",
+                        "name": "12",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "12.5",
+                        "name": "12.5",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "13",
+                        "name": "13",
+                        "price_modifier": 0
+                    }
+                ]
+            },
+            "engraving": {
+                "label": "Engraving",
+                "required": false,
+                "type": "text_input",
+                "price_modifier": 35,
+                "max_characters": 25,
+                "help_text": "Up to 25 characters. Names, dates, or special message."
+            },
+            "gift_packaging": {
+                "label": "Gift Packaging",
+                "required": false,
+                "type": "single_select",
+                "default": "standard",
+                "options": [
+                    {
+                        "id": "standard",
+                        "name": "Standard Box",
+                        "description": "Classic ring box",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "premium",
+                        "name": "Premium Gift Box",
+                        "description": "Beautiful presentation box",
+                        "price_modifier": 25
+                    }
+                ]
+            }
+        },
+        "production_time": {
+            "standard": {
+                "label": "Standard Production",
+                "weeks": 3,
+                "price_modifier": 0
+            },
+            "rush": {
+                "label": "Rush Production (2 weeks)",
+                "weeks": 2,
+                "price_modifier": 150
+            }
+        },
+        "warranty": {
+            "included": "Lifetime warranty against manufacturing defects",
+            "details": "Includes one free resizing within first year"
+        }
+    },
+    "ui_config": {
+        "color_scheme": {
+            "primary": "#2c3e50",
+            "secondary": "#8bc34a",
+            "accent": "#4caf50",
+            "success": "#4caf50",
+            "background": "#f1f8e9",
+            "text": "#2c3e50"
+        },
+        "animations": {
+            "option_select": "fadeIn 0.3s ease",
+            "price_update": "pulse 0.5s ease"
+        },
+        "mobile_breakpoint": "768px"
+    }
+}

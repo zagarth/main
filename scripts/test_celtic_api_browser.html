@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celtic Configurator Quick Test</title>
+    <link rel="stylesheet" href="css/configurator.css">
+</head>
+<body>
+    <h1>Celtic Configurator Test</h1>
+    
+    <div class="configurator-test" style="margin: 20px;">
+        <h3>Testing API directly:</h3>
+        <button onclick="testAPI('5296')">Test 5296 (L only)</button>
+        <button onclick="testAPI('5310')">Test 5310 (M & L)</button>
+        
+        <div id="api-results" style="margin-top: 20px; padding: 15px; background: #f5f5f5; border-radius: 8px;">
+            Click a button to test the API...
+        </div>
+    </div>
+
+    <script>
+        async function testAPI(productId) {
+            const resultsDiv = document.getElementById('api-results');
+            resultsDiv.innerHTML = `Testing product ${productId}...`;
+            
+            try {
+                const response = await fetch(`/homesite/api/get_celtic_thumbnails.php?product_id=${productId}`);
+                const data = await response.json();
+                
+                resultsDiv.innerHTML = `
+                    <h4>Results for ${productId}:</h4>
+                    <p><strong>M thumbnail:</strong> ${data.M || 'None'}</p>
+                    <p><strong>L thumbnail:</strong> ${data.L || 'None'}</p>
+                    <p><strong>Available images:</strong> ${data.available_images.length}</p>
+                    <details>
+                        <summary>Show available images</summary>
+                        <pre>${JSON.stringify(data.available_images, null, 2)}</pre>
+                    </details>
+                `;
+                
+                // Test loading the images
+                if (data.M) {
+                    const mImg = new Image();
+                    mImg.onload = () => console.log(`✅ M image loaded: ${data.M}`);
+                    mImg.onerror = () => console.log(`❌ M image failed: ${data.M}`);
+                    mImg.src = data.M;
+                }
+                
+                if (data.L) {
+                    const lImg = new Image();
+                    lImg.onload = () => console.log(`✅ L image loaded: ${data.L}`);
+                    lImg.onerror = () => console.log(`❌ L image failed: ${data.L}`);
+                    lImg.src = data.L;
+                }
+                
+            } catch (error) {
+                resultsDiv.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+                console.error('API test error:', error);
+            }
+        }
+    </script>
+</body>
+</html>

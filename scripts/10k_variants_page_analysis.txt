@@ -1,0 +1,128 @@
+10K VARIANT PAGE ASSIGNMENTS REPORT
+===================================
+Generated: 2025-12-01 19:28:04
+
+SUMMARY:
+Found 37 unique 10K variants across 18 index pages
+
+DETAILED LISTINGS:
+==================
+
+13-10K:
+  - Page 27A (from index_page_bracelets_01.pdf)
+
+13E-10K:
+  - Page 27A (from index_page_bracelets_01.pdf)
+
+14E-10K:
+  - Page 27A (from index_page_bracelets_01.pdf)
+
+15-10K:
+  - Page 27A (from index_page_bracelets_01.pdf)
+
+15E-10K:
+  - Page 27A (from index_page_bracelets_01.pdf)
+
+1B-10K:
+  - Page 27A (from index_page_bracelets_01.pdf)
+
+1BE-10K:
+  - Page 27A (from index_page_bracelets_01.pdf)
+
+1BH-10K:
+  - Page 27A (from index_page_bracelets_01.pdf)
+
+1H-10K:
+  - Page 27A (from index_page_bracelets_01.pdf)
+
+2A-10K:
+  - Page 27A (from index_page_bracelets_01.pdf)
+
+2B-10K:
+  - Page 27A (from index_page_bracelets_01.pdf)
+
+2E-10K:
+  - Page 27A (from index_page_bracelets_01.pdf)
+
+2M-10K:
+  - Page 27A (from index_page_bracelets_01.pdf)
+
+4B-10K:
+  - Page 27A (from index_page_bracelets_01.pdf)
+
+4BE-10K:
+  - Page 27A (from index_page_bracelets_01.pdf)
+
+5B-10K:
+  - Page 27A (from index_page_bracelets_01.pdf)
+
+6A-10K:
+  - Page 27A (from index_page_bracelets_01.pdf)
+
+6B-10K:
+  - Page 27A (from index_page_bracelets_01.pdf)
+
+6M-10K:
+  - Page 27A (from index_page_bracelets_01.pdf)
+
+7G-10K:
+  *** APPEARS ON MULTIPLE PAGES ***
+  - Page 27A (from index_page_bracelets_01.pdf)
+  - Page 27A (from index_page_mens-jewellry_01.pdf)
+
+CB209-10K:
+  - Page 27A (from index_page_bracelets_01.pdf)
+
+CB210-10K:
+  - Page 27A (from index_page_bracelets_01.pdf)
+
+CB212-10K:
+  - Page 27A (from index_page_bracelets_01.pdf)
+
+CB214-10K:
+  - Page 27A (from index_page_bracelets_01.pdf)
+
+14EMC-10K:
+  - Page 25A (from index_page_medical_01.pdf)
+
+15EMC-10K:
+  - Page 25A (from index_page_medical_01.pdf)
+
+15M-10K:
+  - Page 25A (from index_page_medical_01.pdf)
+
+1BEMC-10K:
+  - Page 25A (from index_page_medical_01.pdf)
+
+1BM-10K:
+  - Page 25A (from index_page_medical_01.pdf)
+
+2BMC-10K:
+  - Page 25A (from index_page_medical_01.pdf)
+
+2EMC-10K:
+  - Page 25A (from index_page_medical_01.pdf)
+
+6BMC-10K:
+  - Page 25A (from index_page_medical_01.pdf)
+
+6MMC-10K:
+  - Page 25A (from index_page_medical_01.pdf)
+
+DT98SM10K:
+  - Page 25A (from index_page_medical_01.pdf)
+
+P120-10K:
+  - Page 25A (from index_page_medical_01.pdf)
+
+P21BM-10K:
+  - Page 25A (from index_page_medical_01.pdf)
+
+P24M-10K:
+  - Page 25A (from index_page_medical_01.pdf)
+
+MULTIPLE PAGE OCCURRENCES:
+==========================
+7G-10K appears on pages: 27A, 27A
+
+Total variants appearing on multiple pages: 1

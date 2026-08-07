@@ -1,0 +1,365 @@
+{
+  "version": "1.0",
+  "last_updated": "2025-10-17",
+  "collection": "engagement",
+  "data": {
+    "name": "Engagement Rings",
+    "base_price": 1200.0,
+    "currency": "CAD",
+    "options": {
+      "metal_type": {
+        "label": "Metal Type",
+        "required": true,
+        "type": "single_select",
+        "default": "14k_white_gold",
+        "options": [
+          {
+            "id": "10k_white_gold",
+            "name": "10K White Gold",
+            "description": "Classic platinum look",
+            "price_modifier": 0,
+            "image": "metal_10k_white.jpg"
+          },
+          {
+            "id": "10k_yellow_gold",
+            "name": "10K Yellow Gold",
+            "description": "Warm traditional gold",
+            "price_modifier": -20,
+            "image": "metal_10k_yellow.jpg"
+          },
+          {
+            "id": "10k_rose_gold",
+            "name": "10K Rose Gold",
+            "description": "Romantic pink gold",
+            "price_modifier": -10,
+            "image": "metal_10k_rose.jpg"
+          },
+          {
+            "id": "14k_white_gold",
+            "name": "14K White Gold",
+            "description": "Premium white gold",
+            "price_modifier": 200,
+            "image": "metal_14k_white.jpg"
+          },
+          {
+            "id": "14k_yellow_gold",
+            "name": "14K Yellow Gold",
+            "description": "Premium yellow gold",
+            "price_modifier": 180,
+            "image": "metal_14k_yellow.jpg"
+          },
+          {
+            "id": "14k_rose_gold",
+            "name": "14K Rose Gold",
+            "description": "Premium rose gold",
+            "price_modifier": 190,
+            "image": "metal_14k_rose.jpg"
+          },
+          {
+            "id": "18k_white_gold",
+            "name": "18K White Gold",
+            "description": "Luxury white gold",
+            "price_modifier": 600,
+            "image": "metal_18k_white.jpg"
+          },
+          {
+            "id": "platinum",
+            "name": "Platinum",
+            "description": "Ultimate luxury",
+            "price_modifier": 1200,
+            "image": "metal_platinum.jpg"
+          }
+        ]
+      },
+      "setting_style": {
+        "label": "Setting Style",
+        "required": true,
+        "type": "single_select",
+        "default": "solitaire",
+        "options": [
+          {
+            "id": "solitaire",
+            "name": "Solitaire",
+            "description": "Classic single stone",
+            "price_modifier": 0,
+            "image": "setting_solitaire.jpg"
+          },
+          {
+            "id": "halo",
+            "name": "Halo",
+            "description": "Center stone surrounded by diamonds",
+            "price_modifier": 400,
+            "image": "setting_halo.jpg"
+          },
+          {
+            "id": "three_stone",
+            "name": "Three Stone",
+            "description": "Past, present, future",
+            "price_modifier": 350,
+            "image": "setting_three_stone.jpg"
+          },
+          {
+            "id": "pave",
+            "name": "Pavé Band",
+            "description": "Diamonds on the band",
+            "price_modifier": 500,
+            "image": "setting_pave.jpg"
+          },
+          {
+            "id": "vintage",
+            "name": "Vintage Inspired",
+            "description": "Intricate antique details",
+            "price_modifier": 450,
+            "image": "setting_vintage.jpg"
+          },
+          {
+            "id": "tension",
+            "name": "Tension Set",
+            "description": "Modern floating appearance",
+            "price_modifier": 300,
+            "image": "setting_tension.jpg"
+          }
+        ]
+      },
+      "center_stone": {
+        "label": "Center Stone",
+        "required": true,
+        "type": "single_select",
+        "default": "0.75ct_diamond",
+        "options": [
+          {
+            "id": "0.50ct_diamond",
+            "name": "0.50 Carat Diamond",
+            "description": "GH Color, VS2 Clarity",
+            "price_modifier": 800,
+            "image": "diamond_050ct.jpg"
+          },
+          {
+            "id": "0.75ct_diamond",
+            "name": "0.75 Carat Diamond",
+            "description": "GH Color, VS2 Clarity",
+            "price_modifier": 1800,
+            "image": "diamond_075ct.jpg"
+          },
+          {
+            "id": "1.00ct_diamond",
+            "name": "1.00 Carat Diamond",
+            "description": "GH Color, VS2 Clarity",
+            "price_modifier": 3500,
+            "image": "diamond_100ct.jpg"
+          },
+          {
+            "id": "1.25ct_diamond",
+            "name": "1.25 Carat Diamond",
+            "description": "GH Color, VS2 Clarity",
+            "price_modifier": 5000,
+            "image": "diamond_125ct.jpg"
+          },
+          {
+            "id": "1.50ct_diamond",
+            "name": "1.50 Carat Diamond",
+            "description": "GH Color, VS2 Clarity",
+            "price_modifier": 7500,
+            "image": "diamond_150ct.jpg"
+          },
+          {
+            "id": "sapphire",
+            "name": "Sapphire",
+            "description": "1ct blue sapphire",
+            "price_modifier": 1200,
+            "image": "sapphire.jpg"
+          },
+          {
+            "id": "ruby",
+            "name": "Ruby",
+            "description": "1ct ruby",
+            "price_modifier": 1400,
+            "image": "ruby.jpg"
+          },
+          {
+            "id": "emerald",
+            "name": "Emerald",
+            "description": "1ct emerald",
+            "price_modifier": 1100,
+            "image": "emerald.jpg"
+          },
+          {
+            "id": "moissanite",
+            "name": "Moissanite",
+            "description": "1ct equivalent, eco-friendly",
+            "price_modifier": 400,
+            "image": "moissanite.jpg"
+          }
+        ]
+      },
+      "diamond_quality": {
+        "label": "Diamond Quality Upgrade",
+        "required": false,
+        "type": "single_select",
+        "applies_to": [
+          "0.50ct_diamond",
+          "0.75ct_diamond",
+          "1.00ct_diamond",
+          "1.25ct_diamond",
+          "1.50ct_diamond"
+        ],
+        "default": "standard",
+        "options": [
+          {
+            "id": "standard",
+            "name": "Standard (GH Color, VS2)",
+            "price_modifier": 0
+          },
+          {
+            "id": "premium",
+            "name": "Premium (FG Color, VS1)",
+            "price_modifier_percentage": 15
+          },
+          {
+            "id": "super_premium",
+            "name": "Super Premium (EF Color, VVS2)",
+            "price_modifier_percentage": 30
+          },
+          {
+            "id": "ultimate",
+            "name": "Ultimate (DEF Color, VVS1-IF)",
+            "price_modifier_percentage": 50
+          }
+        ]
+      },
+      "size": {
+        "label": "Ring Size",
+        "required": true,
+        "type": "single_select",
+        "default": "6.5",
+        "help_text": "Request a free ring sizer with your quote.",
+        "options": [
+          {
+            "id": "4",
+            "name": "4",
+            "price_modifier": 0
+          },
+          {
+            "id": "4.5",
+            "name": "4.5",
+            "price_modifier": 0
+          },
+          {
+            "id": "5",
+            "name": "5",
+            "price_modifier": 0
+          },
+          {
+            "id": "5.5",
+            "name": "5.5",
+            "price_modifier": 0
+          },
+          {
+            "id": "6",
+            "name": "6",
+            "price_modifier": 0
+          },
+          {
+            "id": "6.5",
+            "name": "6.5",
+            "price_modifier": 0
+          },
+          {
+            "id": "7",
+            "name": "7",
+            "price_modifier": 0
+          },
+          {
+            "id": "7.5",
+            "name": "7.5",
+            "price_modifier": 0
+          },
+          {
+            "id": "8",
+            "name": "8",
+            "price_modifier": 0
+          },
+          {
+            "id": "8.5",
+            "name": "8.5",
+            "price_modifier": 0
+          },
+          {
+            "id": "9",
+            "name": "9",
+            "price_modifier": 0
+          }
+        ]
+      },
+      "engraving": {
+        "label": "Inside Engraving",
+        "required": false,
+        "type": "text_input",
+        "price_modifier": 45,
+        "max_characters": 25,
+        "help_text": "Up to 25 characters"
+      },
+      "gift_packaging": {
+        "label": "Gift Packaging",
+        "required": false,
+        "type": "single_select",
+        "default": "premium",
+        "options": [
+          {
+            "id": "premium",
+            "name": "Premium Wood Box",
+            "description": "Included with engagement rings",
+            "price_modifier": 0,
+            "image": "box_premium.jpg"
+          },
+          {
+            "id": "luxury",
+            "name": "Luxury Display Case",
+            "description": "Leather presentation case",
+            "price_modifier": 85,
+            "image": "box_luxury.jpg"
+          }
+        ]
+      },
+      "matching_band": {
+        "label": "Add Matching Wedding Band",
+        "required": false,
+        "type": "checkbox",
+        "price_modifier": 450,
+        "discount_percentage": 10,
+        "help_text": "Save 10% when ordered together"
+      }
+    },
+    "production_time": {
+      "standard": {
+        "label": "Standard Production",
+        "weeks": 6,
+        "price_modifier": 0
+      },
+      "rush": {
+        "label": "Rush Production (3 weeks)",
+        "weeks": 3,
+        "price_modifier": 300
+      }
+    },
+    "warranty": {
+      "included": "Lifetime warranty, free professional cleaning, one free resizing",
+      "details": "Certificate of authenticity included with all diamond purchases"
+    }
+  },
+  "ui_config": {
+    "color_scheme": {
+      "primary": "#2c3e50",
+      "secondary": "#3498db",
+      "accent": "#e74c3c",
+      "success": "#27ae60",
+      "background": "#ecf0f1",
+      "text": "#2c3e50"
+    },
+    "animations": {
+      "option_select": "fadeIn 0.3s ease",
+      "price_update": "pulse 0.5s ease"
+    },
+    "mobile_breakpoint": "768px"
+  }
+}

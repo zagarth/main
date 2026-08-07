@@ -1,0 +1,134 @@
+# Admin Directory Security Controls
+# Cadman Manufacturing - Enhanced Admin Protection
+
+# Block dangerous HTTP methods in admin (DELETE, PUT, PATCH blocked site-wide already)
+# This is redundant but provides defense in depth
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Enforce safe methods only in admin area
+    RewriteCond %{REQUEST_METHOD} ^(DELETE|PUT|PATCH)$ [NC]
+    RewriteRule .* - [F,L]
+</IfModule>
+
+# Force HTTPS for admin directory
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# Public endpoints - allow from anywhere (authentication checked in PHP)
+<FilesMatch "^(login|password_reset|test_status_api|index|dashboard|manage_pricing|check_catalog_structure|universal_collection_processor|server_status_api)\.php$">
+    Require all granted
+</FilesMatch>
+
+# Allow static assets (CSS, JS) - needed for admin UI
+<FilesMatch "\.(css|js)$">
+    Require all granted
+</FilesMatch>
+
+# Allow the admin area to reach the PHP login/auth flow from the browser.
+# PHP session authentication still controls who can access protected admin pages.
+<IfModule mod_authz_core.c>
+    Require all granted
+</IfModule>
+
+# Enhanced Security Headers for Admin
+<IfModule mod_headers.c>
+    # Maximum security headers
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+    
+    # Content Security Policy for admin - Allow goldprice.org widgets (HTTPS only)
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://charts.goldprice.org; style-src 'self' 'unsafe-inline' https://api.qrserver.com https://charts.goldprice.org; img-src 'self' data: https://api.qrserver.com https://charts.goldprice.org; font-src 'self'; connect-src 'self' https://charts.goldprice.org https://goldprice.org; frame-ancestors 'none';"
+    
+    # Hide server information
+    Header always unset Server
+    Header always unset X-Powered-By
+    Header always unset X-CF-Powered-By
+    
+    # Cache control for admin files
+    Header always set Cache-Control "no-cache, no-store, must-revalidate, private"
+    Header always set Pragma "no-cache"
+    Header always set Expires "0"
+</IfModule>
+
+# PHP Security Settings
+<IfModule mod_php7.c>
+    php_flag expose_php Off
+    php_flag display_errors Off
+    php_flag log_errors On
+    php_admin_value session.cookie_httponly On
+    php_admin_value session.cookie_secure On
+    php_admin_value session.use_only_cookies On
+    php_admin_value session.cookie_samesite Strict
+</IfModule>
+
+<IfModule mod_php8.c>
+    php_flag expose_php Off
+    php_flag display_errors Off
+    php_flag log_errors On
+    php_admin_value session.cookie_httponly On
+    php_admin_value session.cookie_secure On
+    php_admin_value session.use_only_cookies On
+    php_admin_value session.cookie_samesite Strict
+</IfModule>
+
+# Protect sensitive files
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+<FilesMatch "\.(env|json|log|txt|md|conf)$">
+    Require all denied
+</FilesMatch>
+
+# Extra protection for 2FA storage files
+<FilesMatch "^2fa_(secrets|backup_codes)\.json$">
+    Require all denied
+</FilesMatch>
+
+# Disable directory browsing
+Options -Indexes
+
+# Disable server signature
+ServerSignature Off
+
+# Block common attack patterns
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Block SQL injection attempts
+    RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+    RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2}) [OR]
+    RewriteCond %{QUERY_STRING} (\<|%3C).*iframe.*(\>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} union.*select.*\( [NC,OR]
+    RewriteCond %{QUERY_STRING} union.*all.*select.* [NC]
+    RewriteRule .* - [F,L]
+    
+    # Block file injection attempts
+    RewriteCond %{REQUEST_METHOD} GET
+    RewriteCond %{QUERY_STRING} [a-zA-Z0-9_]=http:// [OR]
+    RewriteCond %{QUERY_STRING} [a-zA-Z0-9_]=https:// [OR]
+    RewriteCond %{QUERY_STRING} [a-zA-Z0-9_]=(\.\.//?)+ [OR]
+    RewriteCond %{QUERY_STRING} [a-zA-Z0-9_]=/([a-z0-9_.]//?)+ [NC]
+    RewriteRule .* - [F,L]
+</IfModule>
+
+# Rate limiting (if mod_evasive is available)
+<IfModule mod_evasive24.c>
+    DOSHashTableSize    2048
+    DOSPageCount        10
+    DOSSiteCount        50
+    DOSPageInterval     1
+    DOSSiteInterval     1
+    DOSBlockingPeriod   300
+</IfModule>
+# Additional .env file protection
+<Files ".env">
+    Require all denied
+</Files>

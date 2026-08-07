@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Test</title>
+</head>
+<body>
+    <div id="test">Testing JavaScript syntax...</div>
+    
+    <script>
+        let retailerLocations = [];
+        let retailerDataLoaded = false;
+        
+        // Load retailer data from JSON/XML files
+        async function loadRetailerData() {
+            try {
+                console.log('Loading retailers from JSON...');
+                
+                // Try to load from JSON first
+                let response = await fetch('retailers.json');
+                if (!response.ok) {
+                    throw new Error('Failed to load retailers.json: ' + response.status);
+                }
+                
+                const data = await response.json();
+                console.log('Successfully loaded ' + data.length + ' retailers');
+                
+                retailerLocations = data;
+                retailerDataLoaded = true;
+                
+                return data;
+                
+            } catch (error) {
+                console.log('JSON failed, trying XML conversion:', error);
+                
+                // Fallback: try XML to JSON conversion
+                try {
+                    const response = await fetch('xml_to_json.php');
+                    const data = await response.json();
+                    console.log('XML fallback successful: ' + data.length + ' retailers');
+                    
+                    retailerLocations = data;
+                    retailerDataLoaded = true;
+                    
+                    return data;
+                    
+                } catch (xmlError) {
+                    console.error('Both JSON and XML failed:', xmlError);
+                    
+                    // Final fallback to sample data
+                    retailerLocations = [
+                        {
+                            name: "Sample Retailer",
+                            address: "123 Main Street, Toronto, ON M5H 2M5",
+                            phone: "(416) 555-0123",
+                            lat: 43.6532,
+                            lng: -79.3832,
+                            city: "Toronto",
+                            province: "ON"
+                        }
+                    ];
+                    retailerDataLoaded = true;
+                    
+                    return retailerLocations;
+                }
+            } catch (error) {
+                console.error('Failed to load retailer data:', error);
+                return [];
+            }
+        }
+        
+        // Test the function
+        loadRetailerData().then(data => {
+            console.log('Loaded', data.length, 'retailers');
+            document.getElementById('test').innerHTML = 'Loaded ' + data.length + ' retailers successfully!';
+        });
+    </script>
+</body>
+</html>

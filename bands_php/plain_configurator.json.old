@@ -1,0 +1,224 @@
+{
+  "version": "2.0",
+  "last_updated": "2025-11-03",
+  "collection": "plain",
+  "xml_mapping": "classic_bands_mapping.xml",
+  "data": {
+    "name": "Classic Wedding Bands",
+    "base_price": 450.0,
+    "currency": "CAD",
+    "options": {
+      "karat_level": {
+        "label": "Metal / Purity",
+        "required": true,
+        "type": "single_select",
+        "default": "950_silver",
+        "help_text": "Higher karat = more pure metal, softer & more expensive",
+        "options": [
+          {
+            "id": "950_silver",
+            "name": ".950 Silver",
+            "description": "95% pure silver",
+            "price_modifier": -300
+          },
+          {
+            "id": "10k",
+            "name": "10K Gold",
+            "description": "41.7% pure gold",
+            "price_modifier": 0
+          },
+          {
+            "id": "14k",
+            "name": "14K Gold",
+            "description": "58.5% pure gold",
+            "price_modifier": 225
+          },
+          {
+            "id": "18k",
+            "name": "18K Gold",
+            "description": "75% pure gold",
+            "price_modifier": 650
+          }
+        ]
+      },
+      "metal_color": {
+        "label": "Metal Color",
+        "required": true,
+        "type": "single_select",
+        "default": "yellow",
+        "help_text": "Metal color for gold bands",
+        "visible_when": {
+          "karat_level": [
+            "10k",
+            "14k",
+            "18k"
+          ]
+        },
+        "options": [
+          {
+            "id": "yellow",
+            "name": "Yellow Gold",
+            "description": "Classic gold color",
+            "price_modifier": 0
+          },
+          {
+            "id": "white",
+            "name": "White Gold",
+            "description": "Bright platinum-look",
+            "price_modifier": 25
+          },
+          {
+            "id": "rose",
+            "name": "Rose Gold",
+            "description": "Warm pink-gold",
+            "price_modifier": 15
+          }
+        ]
+      },
+      "gender": {
+        "label": "Gender / Sizing",
+        "required": true,
+        "type": "single_select",
+        "default": "M",
+        "help_text": "Select Men's or Ladies' sizing",
+        "options": [
+          {
+            "id": "M",
+            "name": "Men's",
+            "description": "Sizes 8.5 to 12",
+            "price_modifier": 0
+          },
+          {
+            "id": "L",
+            "name": "Ladies'",
+            "description": "Sizes 6 to 8",
+            "price_modifier": 0
+          }
+        ]
+      },
+      "style_and_width": {
+        "label": "Style & Width",
+        "required": true,
+        "type": "plain_grid",
+        "help_text": "Select your band style and width - styles grouped by design",
+        "use_xml_mapping": true,
+        "grid_layout": {
+          "note": "Width selections loaded from classic_bands_mapping.xml",
+          "styles": ["Plain Round", "Rectangular Cut", "Beaded Edge", "Tiffany Profile", "Comfort Fit", "Polished Center"]
+        }
+      },
+      "finish": {
+        "label": "Surface Finish",
+        "required": true,
+        "type": "single_select",
+        "default": "polish",
+        "help_text": "Select the surface finish for your band",
+        "options": [
+          {
+            "id": "polish",
+            "name": "High Polish",
+            "description": "Mirror finish",
+            "price_modifier": 0
+          },
+          {
+            "id": "brushed",
+            "name": "Brushed/Matte",
+            "description": "Textured finish",
+            "price_modifier": 0
+          },
+          {
+            "id": "satin",
+            "name": "Satin",
+            "description": "Soft lustrous finish",
+            "price_modifier": 0
+          }
+        ]
+      },
+      "size": {
+        "label": "Ring Size",
+        "required": true,
+        "type": "single_select",
+        "help_text": "Select your ring size",
+        "filter_options_by": {
+          "field": "gender",
+          "rule": "gender_based_sizes"
+        },
+        "options": [
+          {
+            "id": "6",
+            "name": "6",
+            "available_genders": ["L"]
+          },
+          {
+            "id": "6.5",
+            "name": "6.5",
+            "available_genders": ["L"]
+          },
+          {
+            "id": "7",
+            "name": "7",
+            "available_genders": ["L"]
+          },
+          {
+            "id": "7.5",
+            "name": "7.5",
+            "available_genders": ["L"]
+          },
+          {
+            "id": "8",
+            "name": "8",
+            "available_genders": ["L"]
+          },
+          {
+            "id": "8.5",
+            "name": "8.5",
+            "available_genders": ["M"]
+          },
+          {
+            "id": "9",
+            "name": "9",
+            "available_genders": ["M"]
+          },
+          {
+            "id": "9.5",
+            "name": "9.5",
+            "available_genders": ["M"]
+          },
+          {
+            "id": "10",
+            "name": "10",
+            "available_genders": ["M"]
+          },
+          {
+            "id": "10.5",
+            "name": "10.5",
+            "available_genders": ["M"]
+          },
+          {
+            "id": "11",
+            "name": "11",
+            "available_genders": ["M"]
+          },
+          {
+            "id": "11.5",
+            "name": "11.5",
+            "available_genders": ["M"]
+          },
+          {
+            "id": "12",
+            "name": "12",
+            "available_genders": ["M"]
+          }
+        ]
+      },
+      "engraving": {
+        "label": "Interior Engraving",
+        "required": false,
+        "type": "text_input",
+        "max_length": 25,
+        "help_text": "Optional engraving inside band (25 char max)",
+        "price_modifier": 50
+      }
+    }
+  }
+}

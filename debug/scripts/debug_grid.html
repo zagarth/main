@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Grid Layout</title>
+    <link rel="stylesheet" href="css/configurator.css">
+    <style>
+        .debug-container {
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid red;
+            background: #f9f9f9;
+        }
+        .debug-grid {
+            border: 3px solid blue;
+            background: #e0e0ff;
+            margin: 10px 0;
+        }
+        .debug-item {
+            border: 1px solid green;
+            background: #e0ffe0;
+        }
+        .info {
+            background: yellow;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="debug-container">
+        <h1>Grid Layout Debug</h1>
+        
+        <div class="info">
+            Expected: Items should display in a grid with multiple columns and wrap to new rows automatically.
+        </div>
+        
+        <h2>Test 1: Direct Grid CSS</h2>
+        <div class="debug-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 12px;">
+            <div class="debug-item">Item 1</div>
+            <div class="debug-item">Item 2</div>
+            <div class="debug-item">Item 3</div>
+            <div class="debug-item">Item 4</div>
+            <div class="debug-item">Item 5</div>
+            <div class="debug-item">Item 6</div>
+            <div class="debug-item">Item 7</div>
+            <div class="debug-item">Item 8</div>
+        </div>
+        
+        <h2>Test 2: Using width-options-grid class</h2>
+        <div class="width-options-grid debug-grid">
+            <div class="width-option debug-item">
+                <div>Option 1</div>
+            </div>
+            <div class="width-option debug-item">
+                <div>Option 2</div>
+            </div>
+            <div class="width-option debug-item">
+                <div>Option 3</div>
+            </div>
+            <div class="width-option debug-item">
+                <div>Option 4</div>
+            </div>
+            <div class="width-option debug-item">
+                <div>Option 5</div>
+            </div>
+            <div class="width-option debug-item">
+                <div>Option 6</div>
+            </div>
+        </div>
+        
+        <h2>Test 3: Full width selector structure</h2>
+        <div class="plain-width-selector debug-grid">
+            <h4>Select Width:</h4>
+            <div class="width-options-grid">
+                <div class="width-option">
+                    <input type="radio" id="test_200" name="test" value="test_200" class="plain-width-radio">
+                    <label for="test_200" class="plain-width-label debug-item">
+                        <div class="width-thumbnail" style="background: #ccc; width: 60px; height: 60px;"></div>
+                        <div class="width-size">200 2mm</div>
+                    </label>
+                </div>
+                <div class="width-option">
+                    <input type="radio" id="test_250" name="test" value="test_250" class="plain-width-radio">
+                    <label for="test_250" class="plain-width-label debug-item">
+                        <div class="width-thumbnail" style="background: #ccc; width: 60px; height: 60px;"></div>
+                        <div class="width-size">250 2.5mm</div>
+                    </label>
+                </div>
+                <div class="width-option">
+                    <input type="radio" id="test_300" name="test" value="test_300" class="plain-width-radio">
+                    <label for="test_300" class="plain-width-label debug-item">
+                        <div class="width-thumbnail" style="background: #ccc; width: 60px; height: 60px;"></div>
+                        <div class="width-size">300 3mm</div>
+                    </label>
+                </div>
+                <div class="width-option">
+                    <input type="radio" id="test_400" name="test" value="test_400" class="plain-width-radio">
+                    <label for="test_400" class="plain-width-label debug-item">
+                        <div class="width-thumbnail" style="background: #ccc; width: 60px; height: 60px;"></div>
+                        <div class="width-size">400 4mm</div>
+                    </label>
+                </div>
+                <div class="width-option">
+                    <input type="radio" id="test_450" name="test" value="test_450" class="plain-width-radio">
+                    <label for="test_450" class="plain-width-label debug-item">
+                        <div class="width-thumbnail" style="background: #ccc; width: 60px; height: 60px;"></div>
+                        <div class="width-size">450 4.5mm</div>
+                    </label>
+                </div>
+                <div class="width-option">
+                    <input type="radio" id="test_500" name="test" value="test_500" class="plain-width-radio">
+                    <label for="test_500" class="plain-width-label debug-item">
+                        <div class="width-thumbnail" style="background: #ccc; width: 60px; height: 60px;"></div>
+                        <div class="width-size">500 5mm</div>
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="info">
+            Check: 
+            1. Does Test 1 show items in a grid?
+            2. Does Test 2 show items in a grid?
+            3. Does Test 3 show the width options in a grid?
+            If any of these show as a vertical list, there's a CSS conflict.
+        </div>
+    </div>
+    
+    <script>
+        // Log computed styles for debugging
+        setTimeout(() => {
+            const grid = document.querySelector('.width-options-grid');
+            const computedStyle = window.getComputedStyle(grid);
+            console.log('Grid display:', computedStyle.display);
+            console.log('Grid template columns:', computedStyle.gridTemplateColumns);
+            console.log('Grid gap:', computedStyle.gap);
+        }, 100);
+    </script>
+</body>
+</html>

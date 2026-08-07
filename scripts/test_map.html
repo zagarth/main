@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Map</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+            border: 2px solid #333;
+        }
+        
+        .debug {
+            background: #f0f0f0;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>Debug Map Test</h1>
+    <div id="debug-output" class="debug">Starting debug...</div>
+    <div id="map"></div>
+    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script>
+        function log(message) {
+            console.log(message);
+            document.getElementById('debug-output').textContent += message + '\n';
+        }
+        
+        log('Document ready, initializing map...');
+        
+        try {
+            // Initialize map
+            var map = L.map('map').setView([56.1304, -106.3468], 4);
+            log('Map created successfully');
+            
+            // Add tile layer
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+            log('Tile layer added');
+            
+            // Load retailers from JSON API
+            log('Loading retailers from API...');
+            
+            fetch('retailers_api.php')
+                .then(response => response.json())
+                .then(retailers => {
+                    log('Loaded ' + retailers.length + ' retailers from API');
+                    
+                    var validCount = 0;
+                    retailers.forEach(function(retailer) {
+                        var lat = parseFloat(retailer.lat);
+                        var lng = parseFloat(retailer.lng);
+                        
+                        // Skip placeholder coordinates
+                        if (lat === 50 && lng === -100) {
+                            return;
+                        }
+                        
+                        log('Adding marker for: ' + retailer.name + ' at ' + lat + ', ' + lng);
+                        
+                        var marker = L.marker([lat, lng]);
+                        
+                        var popupContent = '<div>' +
+                            '<h6>' + retailer.name + '</h6>' +
+                            '<p>' + retailer.street + '<br>' +
+                            retailer.city + ', ' + retailer.state + ' ' + retailer.postal_code + '</p>';
+                        
+                        if (retailer.phone) {
+                            popupContent += '<p>Phone: ' + retailer.phone + '</p>';
+                        }
+                        
+                        popupContent += '</div>';
+                        
+                        marker.bindPopup(popupContent);
+                        marker.addTo(map);
+                        
+                        validCount++;
+                    });
+                    
+                    log('Added ' + validCount + ' valid retailers to map. Test complete.');
+                    
+                })
+                .catch(error => {
+                    log('ERROR loading retailers: ' + error.message);
+                });
+                
+        } catch (error) {
+            log('ERROR: ' + error.message);
+            log('Error stack: ' + error.stack);
+        }
+    </script>
+</body>
+</html>

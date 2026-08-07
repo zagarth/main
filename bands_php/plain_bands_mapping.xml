@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plain_bands>
+    <metadata>
+        <title>Celestial Wedding Band Complete Specifications</title>
+        <source>Celestial Wedding Band Pricing sheets (2 pages)</source>
+        <date>2025-10-30</date>
+        <last_updated>2025-10-30</last_updated>
+        <version>2.0</version>
+        <notes>Complete product specifications including thickness, width ranges, size restrictions, and series information. Cross-referenced with plain_configurator.json and official pricing sheets.</notes>
+    </metadata>
+    
+    <!-- STANDARD TIFFANY SERIES -->
+    <series name="Standard Tiffany" thickness="1.5mm" profile="rounded_comfort_fit">
+        <range>250-1000</range>
+        <width_range>2mm to 10mm wide</width_range>
+        <description>Traditional rounded profile - 1.5mm thick, 2-10mm wide</description>
+        <size_restrictions>None</size_restrictions>
+        
+        <band style="tiffany" width="2.0mm" thickness="1.5mm">
+            <product_id_m>200M</product_id_m>
+            <product_id_l>200L</product_id_l>
+            <base_id>200</base_id>
+            <note>2.0mm wide</note>
+            <available_genders>M,L</available_genders>
+        </band>
+        
+        <band style="tiffany" width="2.5mm" thickness="1.5mm">
+            <product_id_m>250M</product_id_m>
+            <product_id_l>250L</product_id_l>
+            <base_id>250</base_id>
+            <note>2.5mm wide</note>
+            <available_genders>M,L</available_genders>
+        </band>
+        
+        <band style="tiffany" width="3.0mm" thickness="1.5mm">
+            <product_id_m>300M</product_id_m>
+            <product_id_l>300L</product_id_l>
+            <base_id>300</base_id>
+            <available_genders>M,L</available_genders>
+        </band>
+        
+        <band style="tiffany" width="3.8mm" thickness="1.5mm">
+            <product_id_m>380M</product_id_m>
+            <product_id_l>380L</product_id_l>
+            <base_id>380</base_id>
+            <available_genders>M,L</available_genders>
+        </band>
+        
+        <band style="tiffany" width="4.0mm" thickness="1.5mm">
+            <product_id_m>400M</product_id_m>
+            <product_id_l>400L</product_id_l>
+            <base_id>400</base_id>
+            <available_genders>M,L</available_genders>
+        </band>
+        
+        <band style="tiffany" width="4.5mm" thickness="1.5mm">
+            <product_id_m>450M</product_id_m>
+            <product_id_l>450L</product_id_l>
+            <base_id>450</base_id>
+            <available_genders>M,L</available_genders>
+        </band>
+        
+        <band style="tiffany" width="5.0mm" thickness="1.5mm">
+            <product_id_m>500M</product_id_m>
+            <product_id_l>500L</product_id_l>
+            <base_id>500</base_id>
+            <available_genders>M,L</available_genders>
+        </band>
+        
+        <band style="tiffany" width="6.0mm" thickness="1.5mm">
+            <product_id_m>600M</product_id_m>
+            <product_id_l>600L</product_id_l>
+            <base_id>600</base_id>
+            <available_genders>M,L</available_genders>
+        </band>
+        
+        <band style="tiffany" width="7.0mm" thickness="1.5mm">
+            <product_id_m>700M</product_id_m>
+            <product_id_l>700L</product_id_l>
+            <base_id>700</base_id>
+            <available_genders>M,L</available_genders>
+        </band>
+        
+        <band style="tiffany" width="8.0mm" thickness="1.5mm">
+            <product_id_m>800M</product_id_m>
+            <product_id_l>800L</product_id_l>
+            <base_id>800</base_id>
+            <available_genders>M,L</available_genders>
+        </band>
+        
+        <band style="tiffany" width="9.0mm" thickness="1.5mm">
+            <product_id_m>900M</product_id_m>
+            <product_id_l>900L</product_id_l>
+            <base_id>900</base_id>
+            <available_genders>M,L</available_genders>
+        </band>
+        
+        <band style="tiffany" width="10.0mm" thickness="1.5mm">
+            <product_id_m>1000M</product_id_m>
+            <product_id_l>1000L</product_id_l>
+            <base_id>1000</base_id>
+            <available_genders>M,L</available_genders>
+        </band>
+    </series>
+    
+    <!-- LIGHTWEIGHT TIFFANY SERIES -->
+    <series name="Tiffany Lightweight" thickness="1.0mm" profile="rounded_comfort_fit">
+        <range>3001-6001</range>
+        <width_range>3mm to 6mm wide</width_range>
+        <description>Lightweight Tiffany series - 1.0mm thick, 3-6mm wide</description>
+        <size_restrictions>Up to size 12 only</size_restrictions>
+        
+        <band style="tiffany" width="3.0mm" thickness="1.0mm">
+            <product_id_m>3001M</product_id_m>
+            <product_id_l>3001L</product_id_l>
+            <base_id>3001</base_id>
+            <note>Lightweight series - 3mm</note>
+            <available_genders>M,L</available_genders>
+            <size_restriction>max_size_12</size_restriction>
+        </band>
+        
+        <band style="tiffany" width="4.0mm" thickness="1.0mm">
+            <product_id_m>4001M</product_id_m>
+            <product_id_l>4001L</product_id_l>
+            <base_id>4001</base_id>
+            <note>Lightweight series - 4mm</note>
+            <available_genders>M,L</available_genders>
+            <size_restriction>max_size_12</size_restriction>
+        </band>
+        
+        <band style="tiffany" width="5.0mm" thickness="1.0mm">
+            <product_id_m>5001M</product_id_m>
+            <product_id_l>5001L</product_id_l>
+            <base_id>5001</base_id>
+            <note>Lightweight series - 5mm</note>
+            <available_genders>M,L</available_genders>
+            <size_restriction>max_size_12</size_restriction>
+        </band>
+        
+        <band style="tiffany" width="6.0mm" thickness="1.0mm">
+            <product_id_m>6001M</product_id_m>
+            <product_id_l>6001L</product_id_l>
+            <base_id>6001</base_id>
+            <note>Lightweight series - 6mm</note>
+            <available_genders>M,L</available_genders>
+            <size_restriction>max_size_12</size_restriction>
+        </band>
+    </series>
+    
+    <!-- RECTANGULAR 1.5MM SERIES -->
+    <series name="Rectangular Standard" thickness="1.5mm" profile="sharp_flat">
+        <range>400R-800R</range>
+        <width_range>4mm to 8mm wide</width_range>
+        <description>Sharp profile - 1.5mm thick, 4-8mm wide</description>
+        <size_restrictions>None</size_restrictions>
+        
+        <band style="rectangular" width="4.0mm" thickness="1.5mm">
+            <product_id_m>400RM</product_id_m>
+            <product_id_l>400RL</product_id_l>
+            <base_id>400R</base_id>
+            <note>4mm wide, 1.5mm thick</note>
+            <available_genders>M,L</available_genders>
+        </band>
+        
+        <band style="rectangular" width="6.0mm" thickness="1.5mm">
+            <product_id_m>600RM</product_id_m>
+            <product_id_l>600RL</product_id_l>
+            <base_id>600R</base_id>
+            <note>6mm wide, 1.5mm thick</note>
+            <available_genders>M,L</available_genders>
+        </band>
+        
+        <band style="rectangular" width="8.0mm" thickness="1.5mm">
+            <product_id_m>800RM</product_id_m>
+            <product_id_l>800RL</product_id_l>
+            <base_id>800R</base_id>
+            <note>8mm wide, 1.5mm thick</note>
+            <available_genders>M,L</available_genders>
+        </band>
+    </series>
+    
+    <!-- RECTANGULAR 1.0MM LIGHTWEIGHT SERIES -->
+    <series name="Rectangular Lightweight" thickness="1.0mm" profile="sharp_flat">
+        <range>S200R-S600R</range>
+        <width_range>2mm to 6mm wide</width_range>
+        <description>Ultra-thin profile - 1.0mm thick, 2-6mm wide</description>
+        <size_restrictions>Up to size 12 only</size_restrictions>
+        
+        <band style="rectangular" width="2.0mm" thickness="1.0mm">
+            <product_id_l>S200RL</product_id_l>
+            <base_id>S200R</base_id>
+            <note>Lightweight, 2-6mm wide - Ladies only</note>
+            <available_genders>L</available_genders>
+            <size_restriction>max_size_12</size_restriction>
+        </band>
+        
+        <band style="rectangular" width="3.0mm" thickness="1.0mm">
+            <product_id_l>S300RL</product_id_l>
+            <base_id>S300R</base_id>
+            <note>Lightweight, 3mm wide - Ladies only</note>
+            <available_genders>L</available_genders>
+            <size_restriction>max_size_12</size_restriction>
+        </band>
+        
+        <band style="rectangular" width="4.0mm" thickness="1.0mm">
+            <product_id_m>S400RM</product_id_m>
+            <product_id_l>S400RL</product_id_l>
+            <base_id>S400R</base_id>
+            <note>Lightweight, 4mm wide</note>
+            <available_genders>M,L</available_genders>
+            <size_restriction>max_size_12</size_restriction>
+        </band>
+        
+        <band style="rectangular" width="5.0mm" thickness="1.0mm">
+            <product_id_m>S500RM</product_id_m>
+            <product_id_l>S500RL</product_id_l>
+            <base_id>S500R</base_id>
+            <note>Lightweight, 5mm wide</note>
+            <available_genders>M,L</available_genders>
+            <size_restriction>max_size_12</size_restriction>
+        </band>
+        
+        <band style="rectangular" width="6.0mm" thickness="1.0mm">
+            <product_id_m>S600RM</product_id_m>
+            <product_id_l>S600RL</product_id_l>
+            <base_id>S600R</base_id>
+            <note>Lightweight, 6mm wide</note>
+            <available_genders>M,L</available_genders>
+            <size_restriction>max_size_12</size_restriction>
+        </band>
+    </series>
+    
+    <!-- TIFFANY COMFORT CURVE SERIES -->
+    <series name="Tiffany Comfort Curve" thickness="1.8mm" profile="comfort_curve">
+        <range>3T18-8T18</range>
+        <width_range>3mm to 8mm wide</width_range>
+        <height>1.8mm high</height>
+        <description>Tiffany Comfort Curve™ - 3 to 8 mm wide, 1.8mm high</description>
+        <size_restrictions>None</size_restrictions>
+        
+        <band style="tiffany_comfort_curve" width="3.0mm" height="1.8mm">
+            <product_id_m>3T18M</product_id_m>
+            <product_id_l>3T18L</product_id_l>
+            <base_id>3T18</base_id>
+            <note>3mm wide, 1.8mm high</note>
+            <available_genders>M,L</available_genders>
+        </band>
+        
+        <band style="tiffany_comfort_curve" width="4.0mm" height="1.8mm">
+            <product_id_m>4T18M</product_id_m>
+            <product_id_l>4T18L</product_id_l>
+            <base_id>4T18</base_id>
+            <note>4mm wide, 1.8mm high</note>
+            <available_genders>M,L</available_genders>
+        </band>
+        
+        <band style="tiffany_comfort_curve" width="5.0mm" height="1.8mm">
+            <product_id_m>5T18M</product_id_m>
+            <product_id_l>5T18L</product_id_l>
+            <base_id>5T18</base_id>
+            <note>5mm wide, 1.8mm high</note>
+            <available_genders>M,L</available_genders>
+        </band>
+        
+        <band style="tiffany_comfort_curve" width="6.0mm" height="1.8mm">
+            <product_id_m>6T18M</product_id_m>
+            <product_id_l>6T18L</product_id_l>
+            <base_id>6T18</base_id>
+            <note>6mm wide, 1.8mm high</note>
+            <available_genders>M,L</available_genders>
+        </band>
+        
+        <band style="tiffany_comfort_curve" width="7.0mm" height="1.8mm">
+            <product_id_m>7T18M</product_id_m>
+            <product_id_l>7T18L</product_id_l>
+            <base_id>7T18</base_id>
+            <note>7mm wide, 1.8mm high</note>
+            <available_genders>M,L</available_genders>
+        </band>
+        
+        <band style="tiffany_comfort_curve" width="8.0mm" height="1.8mm">
+            <product_id_m>8T18M</product_id_m>
+            <product_id_l>8T18L</product_id_l>
+            <base_id>8T18</base_id>
+            <note>8mm wide, 1.8mm high</note>
+            <available_genders>M,L</available_genders>
+        </band>
+    </series>
+    
+    <!-- RECTANGULAR COMFORT CURVE SERIES -->
+    <series name="Rectangular Comfort Curve" thickness="1.8mm" profile="rectangular_comfort_curve">
+        <range>3T00R-8T00R</range>
+        <width_range>3mm to 8mm wide</width_range>
+        <height>1.8mm high</height>
+        <description>Rectangular Comfort Curve™ - 3 to 8 mm wide, 1.8mm high</description>
+        <size_restrictions>None</size_restrictions>
+        
+        <band style="rectangular_comfort_curve" width="3.0mm" height="1.8mm">
+            <product_id_m>3T00RM</product_id_m>
+            <product_id_l>3T00RL</product_id_l>
+            <base_id>3T00R</base_id>
+            <note>3mm wide, 1.8mm high</note>
+            <available_genders>M,L</available_genders>
+        </band>
+        
+        <band style="rectangular_comfort_curve" width="4.0mm" height="1.8mm">
+            <product_id_m>4T00RM</product_id_m>
+            <product_id_l>4T00RL</product_id_l>
+            <base_id>4T00R</base_id>
+            <note>4mm wide, 1.8mm high</note>
+            <available_genders>M,L</available_genders>
+        </band>
+        
+        <band style="rectangular_comfort_curve" width="5.0mm" height="1.8mm">
+            <product_id_m>5T00RM</product_id_m>
+            <product_id_l>5T00RL</product_id_l>
+            <base_id>5T00R</base_id>
+            <note>5mm wide, 1.8mm high</note>
+            <available_genders>M,L</available_genders>
+        </band>
+        
+        <band style="rectangular_comfort_curve" width="6.0mm" height="1.8mm">
+            <product_id_m>6T00RM</product_id_m>
+            <product_id_l>6T00RL</product_id_l>
+            <base_id>6T00R</base_id>
+            <note>6mm wide, 1.8mm high</note>
+            <available_genders>M,L</available_genders>
+        </band>
+        
+        <band style="rectangular_comfort_curve" width="7.0mm" height="1.8mm">
+            <product_id_m>7T00RM</product_id_m>
+            <product_id_l>7T00RL</product_id_l>
+            <base_id>7T00R</base_id>
+            <note>7mm wide, 1.8mm high</note>
+            <available_genders>M,L</available_genders>
+        </band>
+        
+        <band style="rectangular_comfort_curve" width="8.0mm" height="1.8mm">
+            <product_id_m>8T00RM</product_id_m>
+            <product_id_l>8T00RL</product_id_l>
+            <base_id>8T00R</base_id>
+            <note>8mm wide, 1.8mm high</note>
+            <available_genders>M,L</available_genders>
+        </band>
+    </series>
+    
+    <!-- PREMIUM SERIES -->
+    <series name="Premium Series" thickness="2.0mm" profile="premium">
+        <range>400T-700T</range>
+        <width_range>4mm to 7mm wide</width_range>
+        <height>2mm high</height>
+        <description>Premium Series - 4 to 7mm wide, 2mm high</description>
+        <size_restrictions>None</size_restrictions>
+        
+        <band style="premium" width="4.0mm" height="2.0mm">
+            <product_id_m>400TM</product_id_m>
+            <product_id_l>400TL</product_id_l>
+            <base_id>400T</base_id>
+            <note>4mm wide, 2mm high</note>
+            <available_genders>M,L</available_genders>
+        </band>
+        
+        <band style="premium" width="5.0mm" height="2.0mm">
+            <product_id_m>500TM</product_id_m>
+            <product_id_l>500TL</product_id_l>
+            <base_id>500T</base_id>
+            <note>5mm wide, 2mm high</note>
+            <available_genders>M,L</available_genders>
+        </band>
+        
+        <band style="premium" width="5.5mm" height="2.0mm">
+            <product_id_m>550TM</product_id_m>
+            <product_id_l>550TL</product_id_l>
+            <base_id>550T</base_id>
+            <note>5.5mm wide, 2mm high</note>
+            <available_genders>M,L</available_genders>
+        </band>
+        
+        <band style="premium" width="6.0mm" height="2.0mm">
+            <product_id_m>600TM</product_id_m>
+            <product_id_l>600TL</product_id_l>
+            <base_id>600T</base_id>
+            <note>6mm wide, 2mm high</note>
+            <available_genders>M,L</available_genders>
+        </band>
+        
+        <band style="premium" width="7.0mm" height="2.0mm">
+            <product_id_m>700TM</product_id_m>
+            <product_id_l>700TL</product_id_l>
+            <base_id>700T</base_id>
+            <note>7mm wide, 2mm high</note>
+            <available_genders>M,L</available_genders>
+        </band>
+    </series>
+    
+    <!-- GENERAL SPECIFICATIONS -->
+    <specifications>
+        <sizing>
+            <ladies_sizes>Sizes 6 to 8</ladies_sizes>
+            <mens_sizes>Sizes 8.5 to 12</mens_sizes>
+            <note>Pricing for ladies' rings based on sizes to 8, for men's rings on sizes 8.5 to 12</note>
+        </sizing>
+        
+        <edging>
+            <standard>Embellish any plain band with the delicate detail of edging: millgrained, cut or rope edge</standard>
+            <price_addition>Add $18.75 to the price of the ring shown</price_addition>
+        </edging>
+        
+        <engraving>
+            <description>Personalize the inside of your ring with sentiments that will last a lifetime</description>
+            <availability>Free engraving included</availability>
+        </engraving>
+    </specifications>
+</plain_bands>

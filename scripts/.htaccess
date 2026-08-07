@@ -1,0 +1,11 @@
+# Scripts Directory Security
+# Block all test and debug files from public access
+
+<FilesMatch "^(test_|debug_|.*_test\.php|.*_debug\.php)">
+    Require all denied
+</FilesMatch>
+
+# Additional protection
+<FilesMatch "\.(log|txt|md|json)$">
+    Require all denied
+</FilesMatch>

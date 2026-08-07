@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Width Display Test</title>
+    <link rel="stylesheet" href="css/configurator.css">
+    <style>
+        body { margin: 20px; font-family: Arial, sans-serif; }
+        .test-container { max-width: 900px; margin: 0 auto; }
+        h2 { color: #333; margin-bottom: 20px; }
+        .debug-info { 
+            background: #f0f0f0; 
+            padding: 10px; 
+            margin-bottom: 20px; 
+            border-radius: 4px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h2>Width Options Grid Test</h2>
+        <div class="debug-info">
+            This should display as a grid with multiple items per row, automatically wrapping to the next row when needed.
+        </div>
+        
+        <div class="width-options-grid">
+            <div class="width-option">
+                <input type="radio" id="width_200" name="style_and_width" value="width_200" class="plain-width-radio" data-product-id-m="200M" data-product-id-l="200L" data-base-id="200">
+                <label for="width_200" class="plain-width-label">
+                    <div class="width-thumbnail">
+                        <img src="bands_php/images/plain/200M.png" alt="200M" class="width-image" onerror="this.src='images/jewelry-placeholder.jpg'">
+                    </div>
+                    <div class="width-size">200 2mm</div>
+                </label>
+            </div>
+            <div class="width-option">
+                <input type="radio" id="width_250" name="style_and_width" value="width_250" class="plain-width-radio" data-product-id-m="250M" data-product-id-l="250L" data-base-id="250">
+                <label for="width_250" class="plain-width-label">
+                    <div class="width-thumbnail">
+                        <img src="bands_php/images/plain/250M.png" alt="250M" class="width-image" onerror="this.src='images/jewelry-placeholder.jpg'">
+                    </div>
+                    <div class="width-size">250 2.5mm</div>
+                </label>
+            </div>
+            <div class="width-option">
+                <input type="radio" id="width_300" name="style_and_width" value="width_300" class="plain-width-radio" data-product-id-m="300M" data-product-id-l="300L" data-base-id="300">
+                <label for="width_300" class="plain-width-label">
+                    <div class="width-thumbnail">
+                        <img src="bands_php/images/plain/300M.png" alt="300M" class="width-image" onerror="this.src='images/jewelry-placeholder.jpg'">
+                    </div>
+                    <div class="width-size">300 3mm</div>
+                </label>
+            </div>
+            <div class="width-option">
+                <input type="radio" id="width_400" name="style_and_width" value="width_400" class="plain-width-radio" data-product-id-m="400M" data-product-id-l="400L" data-base-id="400">
+                <label for="width_400" class="plain-width-label">
+                    <div class="width-thumbnail">
+                        <img src="bands_php/images/plain/400M.png" alt="400M" class="width-image" onerror="this.src='images/jewelry-placeholder.jpg'">
+                    </div>
+                    <div class="width-size">400 4mm</div>
+                </label>
+            </div>
+            <div class="width-option">
+                <input type="radio" id="width_450" name="style_and_width" value="width_450" class="plain-width-radio" data-product-id-m="450M" data-product-id-l="450L" data-base-id="450">
+                <label for="width_450" class="plain-width-label">
+                    <div class="width-thumbnail">
+                        <img src="bands_php/images/plain/450M.png" alt="450M" class="width-image" onerror="this.src='images/jewelry-placeholder.jpg'">
+                    </div>
+                    <div class="width-size">450 4.5mm</div>
+                </label>
+            </div>
+            <div class="width-option">
+                <input type="radio" id="width_500" name="style_and_width" value="width_500" class="plain-width-radio" data-product-id-m="500M" data-product-id-l="500L" data-base-id="500">
+                <label for="width_500" class="plain-width-label">
+                    <div class="width-thumbnail">
+                        <img src="bands_php/images/plain/500M.png" alt="500M" class="width-image" onerror="this.src='images/jewelry-placeholder.jpg'">
+                    </div>
+                    <div class="width-size">500 5mm</div>
+                </label>
+            </div>
+            <div class="width-option">
+                <input type="radio" id="width_600" name="style_and_width" value="width_600" class="plain-width-radio" data-product-id-m="600M" data-product-id-l="600L" data-base-id="600">
+                <label for="width_600" class="plain-width-label">
+                    <div class="width-thumbnail">
+                        <img src="bands_php/images/plain/600M.png" alt="600M" class="width-image" onerror="this.src='images/jewelry-placeholder.jpg'">
+                    </div>
+                    <div class="width-size">600 6mm</div>
+                </label>
+            </div>
+            <div class="width-option">
+                <input type="radio" id="width_700" name="style_and_width" value="width_700" class="plain-width-radio" data-product-id-m="700M" data-product-id-l="700L" data-base-id="700">
+                <label for="width_700" class="plain-width-label">
+                    <div class="width-thumbnail">
+                        <img src="bands_php/images/plain/700M.png" alt="700M" class="width-image" onerror="this.src='images/jewelry-placeholder.jpg'">
+                    </div>
+                    <div class="width-size">700 7mm</div>
+                </label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

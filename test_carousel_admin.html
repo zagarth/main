@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Carousel Admin Test</title>
+</head>
+<body>
+    <h1>Carousel Admin Test</h1>
+    
+    <button onclick="testGetCategories()">Test Get Categories</button>
+    <button onclick="testSetCarousel()">Test Set Carousel</button>
+    <button onclick="testGetCurrentConfig()">Test Get Current Config</button>
+    
+    <div id="results" style="margin-top: 20px; white-space: pre-wrap; font-family: monospace; background: #f5f5f5; padding: 10px;"></div>
+
+    <script>
+        function log(message) {
+            document.getElementById('results').textContent += new Date().toLocaleTimeString() + ': ' + message + '\n';
+        }
+
+        async function testGetCategories() {
+            try {
+                log('Testing category loading...');
+                const response = await fetch('admin/carousel_filter_manager.php?action=items&collection=catalog&filter=lockets');
+                const data = await response.json();
+                log('Categories response: ' + JSON.stringify(data, null, 2));
+            } catch (error) {
+                log('Error: ' + error.message);
+            }
+        }
+
+        async function testSetCarousel() {
+            try {
+                log('Testing carousel update...');
+                const formData = new FormData();
+                formData.append('action', 'set');
+                formData.append('collection', 'catalog_products');
+                formData.append('filter', 'crosses');
+
+                const response = await fetch('admin/carousel_filter_manager.php', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                log('Set response: ' + JSON.stringify(data, null, 2));
+            } catch (error) {
+                log('Error: ' + error.message);
+            }
+        }
+
+        async function testGetCurrentConfig() {
+            try {
+                log('Testing current config...');
+                const response = await fetch('admin/carousel_filter_manager.php?action=get');
+                const data = await response.json();
+                log('Current config: ' + JSON.stringify(data, null, 2));
+            } catch (error) {
+                log('Error: ' + error.message);
+            }
+        }
+    </script>
+</body>
+</html>

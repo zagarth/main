@@ -1,0 +1,341 @@
+{
+    "version": "1.0",
+    "last_updated": "2025-10-17",
+    "collection": "father",
+    "data": {
+        "name": "Father Rings",
+        "base_price": 420,
+        "currency": "CAD",
+        "options": {
+            "karat_level": {
+                "label": "Karat / Purity",
+                "required": true,
+                "type": "single_select",
+                "default": "10k",
+                "help_text": "Higher karat = more pure metal, softer & more expensive",
+                "options": [
+                    {
+                        "id": "sterling",
+                        "name": "Sterling Silver",
+                        "description": "92.5% pure silver",
+                        "price_modifier": -80
+                    },
+                    {
+                        "id": "10k",
+                        "name": "10K Gold",
+                        "description": "41.7% pure gold",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "14k",
+                        "name": "14K Gold",
+                        "description": "58.5% pure gold",
+                        "price_modifier": 180
+                    },
+                    {
+                        "id": "18k",
+                        "name": "18K Gold",
+                        "description": "75% pure gold",
+                        "price_modifier": 350
+                    }
+                ]
+            },
+            "metal_color": {
+                "label": "Metal Color",
+                "required": true,
+                "type": "single_select",
+                "default": "yellow",
+                "visible_when": {
+                    "karat_level": ["10k", "14k", "18k"]
+                },
+                "options": [
+                    {
+                        "id": "yellow",
+                        "name": "Yellow",
+                        "description": "Classic gold",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "white",
+                        "name": "White",
+                        "description": "Platinum look",
+                        "price_modifier": 25
+                    },
+                    {
+                        "id": "rose",
+                        "name": "Rose",
+                        "description": "Pink gold",
+                        "price_modifier": 15
+                    }
+                ]
+            },
+            "design_style": {
+                "label": "Design Style",
+                "required": true,
+                "type": "single_select",
+                "default": "classic",
+                "help_text": "Choose a style that reflects his personality",
+                "options": [
+                    {
+                        "id": "classic",
+                        "name": "Classic Traditional",
+                        "description": "Timeless designs for everyday wear",
+                        "price_modifier": 0,
+                        "product_ids": ["F120M", "FFC41", "FFC42"]
+                    },
+                    {
+                        "id": "modern",
+                        "name": "Modern Contemporary",
+                        "description": "Updated styles with clean lines",
+                        "price_modifier": 40,
+                        "product_ids": ["F5t90", "FS32-2"]
+                    },
+                    {
+                        "id": "statement",
+                        "name": "Bold Statement",
+                        "description": "Distinctive designs that stand out",
+                        "price_modifier": 75,
+                        "product_ids": ["F6T18FC"]
+                    }
+                ]
+            },
+            "band_width": {
+                "label": "Band Width",
+                "required": true,
+                "type": "single_select",
+                "default": "7mm",
+                "help_text": "Wider bands make a bolder statement",
+                "options": [
+                    {
+                        "id": "6mm",
+                        "name": "6mm",
+                        "description": "Standard masculine width",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "7mm",
+                        "name": "7mm",
+                        "description": "Popular choice",
+                        "price_modifier": 25
+                    },
+                    {
+                        "id": "8mm",
+                        "name": "8mm",
+                        "description": "Bold and substantial",
+                        "price_modifier": 50
+                    },
+                    {
+                        "id": "10mm",
+                        "name": "10mm",
+                        "description": "Maximum impact",
+                        "price_modifier": 85
+                    }
+                ]
+            },
+            "finish": {
+                "label": "Surface Finish",
+                "required": true,
+                "type": "single_select",
+                "default": "brushed",
+                "options": [
+                    {
+                        "id": "polished",
+                        "name": "High Polish",
+                        "description": "Mirror-like shine",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "brushed",
+                        "name": "Brushed/Matte",
+                        "description": "Subtle texture, no glare",
+                        "price_modifier": 30
+                    },
+                    {
+                        "id": "satin",
+                        "name": "Satin",
+                        "description": "Soft lustrous finish",
+                        "price_modifier": 25
+                    },
+                    {
+                        "id": "hammered",
+                        "name": "Hammered",
+                        "description": "Artisan hand-textured",
+                        "price_modifier": 60
+                    }
+                ]
+            },
+            "size": {
+                "label": "Ring Size",
+                "required": true,
+                "type": "single_select",
+                "default": "10",
+                "help_text": "Typical father sizes 9-13. Not sure? Request a free ring sizer.",
+                "options": [
+                    {
+                        "id": "8",
+                        "name": "8",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "8.5",
+                        "name": "8.5",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "9",
+                        "name": "9",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "9.5",
+                        "name": "9.5",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "10",
+                        "name": "10",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "10.5",
+                        "name": "10.5",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "11",
+                        "name": "11",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "11.5",
+                        "name": "11.5",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "12",
+                        "name": "12",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "12.5",
+                        "name": "12.5",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "13",
+                        "name": "13",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "13.5",
+                        "name": "13.5",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "14",
+                        "name": "14",
+                        "price_modifier": 0
+                    }
+                ]
+            },
+            "personalization": {
+                "label": "Personalization Options",
+                "required": false,
+                "type": "single_select",
+                "default": "none",
+                "help_text": "Add a personal touch",
+                "options": [
+                    {
+                        "id": "none",
+                        "name": "No Personalization",
+                        "description": "Classic design as shown",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "initial",
+                        "name": "Single Initial",
+                        "description": "Elegant monogram",
+                        "price_modifier": 50
+                    },
+                    {
+                        "id": "family_crest",
+                        "name": "Family Crest",
+                        "description": "Traditional heraldic design",
+                        "price_modifier": 120
+                    },
+                    {
+                        "id": "masonic",
+                        "name": "Masonic Symbol",
+                        "description": "Fraternal organization symbol",
+                        "price_modifier": 85
+                    }
+                ]
+            },
+            "engraving": {
+                "label": "Inside Engraving",
+                "required": false,
+                "type": "text_input",
+                "price_modifier": 40,
+                "max_characters": 30,
+                "help_text": "Up to 30 characters. Names, dates, or meaningful message."
+            },
+            "gift_packaging": {
+                "label": "Gift Packaging",
+                "required": false,
+                "type": "single_select",
+                "default": "standard",
+                "options": [
+                    {
+                        "id": "standard",
+                        "name": "Standard Box",
+                        "description": "Classic ring box",
+                        "price_modifier": 0
+                    },
+                    {
+                        "id": "premium",
+                        "name": "Premium Wood Box",
+                        "description": "Handcrafted presentation box",
+                        "price_modifier": 35
+                    },
+                    {
+                        "id": "luxury",
+                        "name": "Luxury Display Case",
+                        "description": "Executive leather case",
+                        "price_modifier": 75
+                    }
+                ]
+            }
+        },
+        "production_time": {
+            "standard": {
+                "label": "Standard Production",
+                "weeks": 4,
+                "price_modifier": 0
+            },
+            "rush": {
+                "label": "Rush Production (2 weeks)",
+                "weeks": 2,
+                "price_modifier": 200
+            }
+        },
+        "warranty": {
+            "included": "Lifetime warranty against manufacturing defects",
+            "details": "Includes one free resizing within first year"
+        }
+    },
+    "ui_config": {
+        "color_scheme": {
+            "primary": "#2c3e50",
+            "secondary": "#3f51b5",
+            "accent": "#1976d2",
+            "success": "#4caf50",
+            "background": "#e3f2fd",
+            "text": "#2c3e50"
+        },
+        "animations": {
+            "option_select": "fadeIn 0.3s ease",
+            "price_update": "pulse 0.5s ease"
+        },
+        "mobile_breakpoint": "768px"
+    }
+}

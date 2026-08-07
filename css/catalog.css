@@ -1,0 +1,465 @@
+/* ===============================================
+   catalog.css — SEO catalog pages skeleton
+   Crawler-friendly, mobile-first, no JS required.
+   =============================================== */
+
+:root {
+    --cat-gold: #b8860b;
+    --cat-gold-light: #daa520;
+    --cat-text: #222;
+    --cat-muted: #666;
+    --cat-bg: #fff;
+    --cat-surface: #fafafa;
+    --cat-border: #e6e6e6;
+    --cat-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    --cat-radius: 6px;
+    --cat-maxw: 1280px;
+}
+
+main.catalog-main {
+    max-width: var(--cat-maxw);
+    margin: 0 auto;
+    padding: 1.25rem 1rem 3rem;
+    color: var(--cat-text);
+    line-height: 1.5;
+}
+
+/* ---------- Breadcrumbs ---------- */
+.catalog-breadcrumbs {
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    color: var(--cat-muted);
+}
+.catalog-breadcrumbs ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.5rem;
+}
+.catalog-breadcrumbs li + li::before {
+    content: "›";
+    padding-right: 0.5rem;
+    color: var(--cat-border);
+}
+.catalog-breadcrumbs a {
+    color: var(--cat-muted);
+    text-decoration: none;
+}
+.catalog-breadcrumbs a:hover { color: var(--cat-gold); text-decoration: underline; }
+.catalog-breadcrumbs li[aria-current="page"] { color: var(--cat-text); font-weight: 500; }
+
+/* ---------- Page headers ---------- */
+.catalog-header {
+    margin: 0 0 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--cat-border);
+}
+.catalog-header h1 {
+    margin: 0 0 0.25rem;
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+    line-height: 1.2;
+}
+.catalog-header .intro {
+    margin: 0;
+    color: var(--cat-muted);
+    max-width: 70ch;
+}
+
+/* ---------- Facets / filters ---------- */
+.catalog-facets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+    padding: 0.75rem;
+    background: var(--cat-surface);
+    border-radius: var(--cat-radius);
+}
+.catalog-facets a {
+    display: inline-block;
+    padding: 0.4rem 0.85rem;
+    border: 1px solid var(--cat-border);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--cat-text);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: all 0.15s ease;
+}
+.catalog-facets a:hover {
+    border-color: var(--cat-gold);
+    color: var(--cat-gold);
+}
+.catalog-facets a.active {
+    background: var(--cat-gold);
+    color: #fff;
+    border-color: var(--cat-gold);
+}
+.catalog-facets .count { color: var(--cat-muted); font-size: 0.75rem; margin-left: 0.25rem; }
+.catalog-facets a.active .count { color: rgba(255,255,255,0.85); }
+
+/* ---------- Product grid ---------- */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+}
+.catalog-card {
+    background: #fff;
+    border: 1px solid var(--cat-border);
+    border-radius: var(--cat-radius);
+    overflow: hidden;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+.catalog-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--cat-shadow);
+    border-color: var(--cat-gold);
+}
+.catalog-card a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+.catalog-card .thumb {
+    aspect-ratio: 1 / 1;
+    background: var(--cat-surface) no-repeat center / contain;
+    border-bottom: 1px solid var(--cat-border);
+}
+.catalog-card .info {
+    padding: 0.6rem 0.75rem 0.75rem;
+}
+.catalog-card .name {
+    font-size: 0.875rem;
+    margin: 0 0 0.15rem;
+    line-height: 1.3;
+    color: var(--cat-text);
+    /* clamp to 2 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.catalog-card .meta {
+    font-size: 0.75rem;
+    color: var(--cat-muted);
+}
+.catalog-card .price {
+    margin-top: 0.35rem;
+    font-weight: 600;
+    color: var(--cat-gold);
+    font-size: 0.95rem;
+}
+
+/* ---------- Collection landing tiles ---------- */
+.catalog-tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.catalog-tile {
+    display: block;
+    padding: 1.5rem;
+    background: linear-gradient(145deg, #fff, var(--cat-surface));
+    border: 1px solid var(--cat-border);
+    border-radius: var(--cat-radius);
+    text-decoration: none;
+    color: var(--cat-text);
+    transition: all 0.15s;
+}
+.catalog-tile:hover {
+    border-color: var(--cat-gold);
+    box-shadow: var(--cat-shadow);
+}
+.catalog-tile h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1.1rem;
+    color: var(--cat-gold);
+}
+.catalog-tile p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--cat-muted);
+}
+
+/* ---------- Product detail ---------- */
+.product-detail {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: start;
+}
+@media (max-width: 720px) {
+    .product-detail { grid-template-columns: 1fr; }
+}
+.product-detail .gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--cat-radius);
+    background: var(--cat-surface);
+}
+.product-detail h1 {
+    margin: 0 0 0.5rem;
+    font-size: clamp(1.4rem, 2vw, 2rem);
+}
+.product-detail .pid {
+    color: var(--cat-muted);
+    font-family: ui-monospace, monospace;
+    margin: 0 0 1rem;
+}
+.product-detail .price-block {
+    margin: 1rem 0;
+    padding: 0.75rem 1rem;
+    background: var(--cat-surface);
+    border-left: 3px solid var(--cat-gold);
+    border-radius: var(--cat-radius);
+}
+.product-detail .price-block .price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--cat-gold);
+}
+.product-detail .price-locked {
+    color: var(--cat-muted);
+    font-size: 0.875rem;
+}
+.product-detail .price-locked a {
+    color: var(--cat-gold);
+    text-decoration: underline;
+}
+.product-detail dl.specs {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.4rem 1rem;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+.product-detail dl.specs dt { color: var(--cat-muted); }
+.product-detail dl.specs dd { margin: 0; }
+
+/* ---------- Related products ---------- */
+.related-products {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--cat-border);
+}
+.related-products h2 {
+    font-size: 1.2rem;
+    margin: 0 0 1rem;
+}
+
+/* ---------- Pagination ---------- */
+.catalog-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 2rem 0 0;
+}
+.catalog-pagination a, .catalog-pagination span {
+    padding: 0.5rem 0.85rem;
+    border: 1px solid var(--cat-border);
+    border-radius: var(--cat-radius);
+    text-decoration: none;
+    color: var(--cat-text);
+    font-size: 0.875rem;
+}
+.catalog-pagination .current {
+    background: var(--cat-gold);
+    border-color: var(--cat-gold);
+    color: #fff;
+}
+
+/* ---------- Empty state ---------- */
+.catalog-empty {
+    padding: 3rem 1rem;
+    text-align: center;
+    color: var(--cat-muted);
+    background: var(--cat-surface);
+    border-radius: var(--cat-radius);
+}
+
+/* ---------- Tool page wrapper (lift-and-shift) ---------- */
+main.tool-page { padding-bottom: 1rem; }
+
+/* ============================================================
+ * Catalog card layout overrides — ensure Quick View / View Details
+ * align consistently across cards (item-actions pinned at bottom).
+ * ============================================================ */
+.gallery-grid .jewelry-item {
+    display: flex;
+    flex-direction: column;
+}
+.gallery-grid .jewelry-item .item-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+.gallery-grid .jewelry-item .item-actions {
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 12px;
+}
+.gallery-grid .jewelry-item .item-actions .btn,
+.gallery-grid .jewelry-item .item-actions a.btn,
+.gallery-grid .jewelry-item .item-actions button.btn {
+    flex: 1 1 0;
+    min-width: 110px;
+    max-width: 180px;
+    padding: 10px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    box-sizing: border-box;
+    line-height: 1.2;
+}
+.gallery-grid .jewelry-item .item-actions .btn-primary {
+    background: linear-gradient(145deg, #FFD700, #FFA500);
+    color: #000;
+    border-color: #FFD700;
+}
+.gallery-grid .jewelry-item .item-actions .btn-primary:hover {
+    background: linear-gradient(145deg, #FFA500, #FFD700);
+    transform: translateY(-1px);
+}
+.gallery-grid .jewelry-item .item-actions .btn-secondary {
+    background: #fff;
+    color: #2c2c2c;
+    border-color: #FFD700;
+}
+.gallery-grid .jewelry-item .item-actions .btn-secondary:hover {
+    background: #FFD700;
+    color: #000;
+}
+
+/* ============================================================
+ * Image visibility fix — Bands.php has a JS loader that adds
+ * .loaded class after the image loads (rotating-image opacity=0
+ * by default in styles.css). On catalog pages we don't run that
+ * loader, so force images visible immediately.
+ * ============================================================ */
+.gallery-grid .rotating-image {
+    opacity: 1 !important;
+}
+.gallery-grid .rotating-image-container::before {
+    display: none !important;
+}
+/* styles.css starts .jewelry-item / .paginated-item at opacity:0
+ * waiting for a JS loader (Bands.php) to add .visible/.loaded.
+ * Catalog pages don't run that loader — force cards visible. */
+.gallery-grid .jewelry-item,
+.gallery-grid .paginated-item {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* Legacy collection pages (Bands.php, Family.php, etc.) add 140px margin-top
+ * on .bands-header / .family-header / etc. to clear a fixed nav. New catalog
+ * pages render under a normal-flow header, so we want ~50px gap below the
+ * breadcrumb instead of the giant 140px void. */
+.catalog-main .bands-header,
+.catalog-main .school-header,
+.catalog-main .family-header,
+.catalog-main .engagement-header,
+.catalog-main .signet-header,
+.catalog-main .collection-header {
+    margin-top: 50px !important;
+}
+@media (max-width: 768px) {
+    .catalog-main .bands-header,
+    .catalog-main .school-header,
+    .catalog-main .family-header,
+    .catalog-main .engagement-header,
+    .catalog-main .signet-header,
+    .catalog-main .collection-header {
+        margin-top: 30px !important;
+    }
+}
+
+/* Parent landing pages (e.g. /wedding/) typically show 2–4 collection tiles.
+ * Center them as a row with a sensible max tile width, and stack on mobile. */
+.gallery-grid--parent {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 320px)) !important;
+    justify-content: center !important;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (max-width: 768px) {
+    .gallery-grid--parent {
+        grid-template-columns: 1fr !important;
+        max-width: 360px;
+    }
+}
+
+/* PDF-fallback card chrome */
+.gallery-grid .jewelry-item .rotating-image-container .rotation-indicator {
+    background: rgba(184, 134, 11, 0.95);
+    color: #fff;
+    border-radius: 14px;
+    padding: 4px 10px;
+    width: auto;
+    height: auto;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+/* Related-designs corner PDF action */
+.related-products .catalog-card {
+    position: relative;
+}
+
+.related-products .related-pdf-corner,
+.gallery-grid .jewelry-item .related-pdf-corner {
+   /* position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;*/
+    height:28px;
+    text-align: center;
+    display: inline-block;
+    padding: 0.45rem 0.45rem;
+    border-radius: 12px;
+    background: rgba(184, 134, 11, 0.95);
+    color: #fff;
+    font-size: 0.7rem;
+    line-height: 1.2;
+    font-weight: 600;
+    text-decoration: none;
+    z-index: 2;
+}
+
+.related-products .related-pdf-corner:hover,
+.gallery-grid .jewelry-item .related-pdf-corner {
+    background: rgba(139, 102, 6, 0.98);
+}
+
+
+.shoulder-item {
+    width: 120px;
+    height: 150px; /* tune if needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shoulder-name {
+    height: 22px;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 4px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+

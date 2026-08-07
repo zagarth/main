@@ -1,0 +1,1551 @@
+=== RETAILER SYNC STARTED ===
+[2025-09-08 19:20:36] Starting retailer sync process...
+[2025-09-08 19:20:36] Loading retailers.txt file...
+[2025-09-08 19:20:36] Found 380 retailers in txt file
+[2025-09-08 19:20:36] Loading existing JSON database...
+[2025-09-08 19:20:36] Found 144 existing retailers in database
+[2025-09-08 19:20:36] Processing retailer 1/380: Cartwright Jewellers
+[2025-09-08 19:20:36]   - Geocoding: 639 6th Street, New Westminster, BC
+[2025-09-08 19:20:38]   - Geocoded successfully: 49.218985, -122.92765 (exact address)
+[2025-09-08 19:20:38]     Location: 6th Street, Glenbrooke North, New Westminster, Metro Vancouver Regional District, British Columbia, V3N 3N3, Canada
+[2025-09-08 19:20:38]   - Added to database with ID: ret_004
+[2025-09-08 19:20:38]   - Waiting 1 second before next request...
+[2025-09-08 19:20:39] Processing retailer 2/380: Three Gems
+[2025-09-08 19:20:39]   - Geocoding: 312 2nd Street W., Brooks, AB
+[2025-09-08 19:20:42]   - Geocoded successfully: 50.571027, -111.893005 (city center)
+[2025-09-08 19:20:42]     Location: Brooks, City of Brooks, Alberta, Canada
+[2025-09-08 19:20:42]   - Added to database with ID: ret_005
+[2025-09-08 19:20:42]   - Waiting 1 second before next request...
+[2025-09-08 19:20:43] Processing retailer 3/380: Carters Jewellers Limited
+[2025-09-08 19:20:43]   - Already exists, skipping
+[2025-09-08 19:20:43] Processing retailer 4/380: Toth Jewellers Ltd.
+[2025-09-08 19:20:43]   - Already exists, skipping
+[2025-09-08 19:20:43] Processing retailer 5/380: Carters Jewellers Prince George
+[2025-09-08 19:20:43]   - Geocoding: 3055 Massey, Prince George, BC
+[2025-09-08 19:20:44]   - Geocoded successfully: 53.897366, -122.793788 (exact address)
+[2025-09-08 19:20:44]     Location: Massey Drive, Prince George, Regional District of Fraser-Fort George, British Columbia, V2N 1V9, Canada
+[2025-09-08 19:20:44]   - Added to database with ID: ret_006
+[2025-09-08 19:20:44]   - Waiting 1 second before next request...
+[2025-09-08 19:20:45] Processing retailer 6/380: A Touch Of Gold
+[2025-09-08 19:20:45]   - Already exists, skipping
+[2025-09-08 19:20:45] Processing retailer 7/380: Carters Jewellers Quesnel
+[2025-09-08 19:20:45]   - Geocoding: 155 Malcolm Dr. 3, Quesnel, BC
+[2025-09-08 19:20:46]   - Geocoded successfully: 52.979428, -122.493627 (city center)
+[2025-09-08 19:20:46]     Location: Quesnel, Cariboo Regional District, British Columbia, Canada
+[2025-09-08 19:20:46]   - Added to database with ID: ret_007
+[2025-09-08 19:20:46]   - Waiting 1 second before next request...
+[2025-09-08 19:20:47] Processing retailer 8/380: Touch of Gold
+[2025-09-08 19:20:47]   - Already exists, skipping
+[2025-09-08 19:20:47] Processing retailer 9/380: Celtic Creations
+[2025-09-08 19:20:47]   - Missing required data (name/city/province), skipping
+[2025-09-08 19:20:47] Processing retailer 10/380: Town's Jewellers
+[2025-09-08 19:20:47]   - Geocoding: 51 Missisauga St. E., Orillia, ON
+[2025-09-08 19:20:49]   - Geocoded successfully: 44.606614, -79.416926 (city center)
+[2025-09-08 19:20:49]     Location: Orillia, Central Ontario, Ontario, Canada
+[2025-09-08 19:20:49]   - Added to database with ID: ret_008
+[2025-09-08 19:20:49]   - Waiting 1 second before next request...
+[2025-09-08 19:20:50] Processing retailer 11/380: Chan W K Jewellers Ltd
+[2025-09-08 19:20:50]   - Already exists, skipping
+[2025-09-08 19:20:50] Processing retailer 12/380: Treasures Fine Jewellers
+[2025-09-08 19:20:50]   - Geocoding: Suite 100, 4718 50 Ave., Bonnyville, AB
+[2025-09-08 19:20:51]   - Geocoded successfully: 54.267925, -110.741515 (city center)
+[2025-09-08 19:20:51]     Location: Town of Bonnyville, Alberta, Canada
+[2025-09-08 19:20:51]   - Added to database with ID: ret_009
+[2025-09-08 19:20:51]   - Waiting 1 second before next request...
+[2025-09-08 19:20:52] Processing retailer 13/380: Chapleau Village Shops
+[2025-09-08 19:20:52]   - Missing required data (name/city/province), skipping
+[2025-09-08 19:20:52] Processing retailer 14/380: Treasures Fine Jewellers
+[2025-09-08 19:20:52]   - Already exists, skipping
+[2025-09-08 19:20:52] Processing retailer 15/380: Charlotte Jewelers Limited
+[2025-09-08 19:20:52]   - Already exists, skipping
+[2025-09-08 19:20:52] Processing retailer 16/380: Tres Ors Jewellers
+[2025-09-08 19:20:52]   - Geocoding: 168 Princess Street, Kingston, ON
+[2025-09-08 19:20:53]   - Geocoded successfully: 44.231755, -76.48482 (exact address)
+[2025-09-08 19:20:53]     Location: 168, Princess Street, Sydenham, Kingston, Eastern Ontario, Ontario, K7L 1B1, Canada
+[2025-09-08 19:20:53]   - Added to database with ID: ret_010
+[2025-09-08 19:20:53]   - Waiting 1 second before next request...
+[2025-09-08 19:20:54] Processing retailer 17/380: Marv Chony Jewellers
+[2025-09-08 19:20:54]   - Geocoding: 108 Centennial Square, Thunder Bay, ON
+[2025-09-08 19:20:56]   - Geocoded successfully: 48.406414, -89.259796 (city center)
+[2025-09-08 19:20:56]     Location: Thunder Bay, Thunder Bay District, Northwestern Ontario, Ontario, Canada
+[2025-09-08 19:20:56]   - Added to database with ID: ret_011
+[2025-09-08 19:20:56]   - Waiting 1 second before next request...
+[2025-09-08 19:20:57] Processing retailer 18/380: Roland Triebel Jewellers
+[2025-09-08 19:20:57]   - Geocoding: Unit D-9803-93rd Ave., Fort St John, BC
+[2025-09-08 19:20:59]   - Geocoded successfully: 56.252404, -120.846943 (city center)
+[2025-09-08 19:20:59]     Location: Fort St. John, Peace River Regional District, British Columbia, Canada
+[2025-09-08 19:20:59]   - Added to database with ID: ret_012
+[2025-09-08 19:20:59]   - Waiting 1 second before next request...
+[2025-09-08 19:21:00] Processing retailer 19/380: Citizen Time & Gold Limited
+[2025-09-08 19:21:00]   - Already exists, skipping
+[2025-09-08 19:21:00] Processing retailer 20/380: Trochu Giftware Ltd.
+[2025-09-08 19:21:00]   - Already exists, skipping
+[2025-09-08 19:21:00] Processing retailer 21/380: Clarke's Gifts & Flowers
+[2025-09-08 19:21:00]   - Geocoding: 18 Dennis St. E., Gladstone, MB
+[2025-09-08 19:21:02]   - Geocoded successfully: 50.22549, -98.951066 (city center)
+[2025-09-08 19:21:02]     Location: Gladstone, Municipality of WestLake – Gladstone, Manitoba, Canada
+[2025-09-08 19:21:02]   - Added to database with ID: ret_013
+[2025-09-08 19:21:02]   - Waiting 1 second before next request...
+[2025-09-08 19:21:03] Processing retailer 22/380: Troy Shoppe Jewellers
+[2025-09-08 19:21:03]   - Geocoding: 204 4th Street N.E., Calgary, AB
+[2025-09-08 19:21:05]   - Geocoded successfully: 51.045606, -114.057541 (city center)
+[2025-09-08 19:21:05]     Location: Calgary, Alberta, Canada
+[2025-09-08 19:21:05]   - Added to database with ID: ret_014
+[2025-09-08 19:21:05]   - Waiting 1 second before next request...
+[2025-09-08 19:21:06] Processing retailer 23/380: Classic Jewelers (2000) Ltd.
+[2025-09-08 19:21:06]   - Already exists, skipping
+[2025-09-08 19:21:06] Processing retailer 24/380: Tuck Jewellers Limited
+[2025-09-08 19:21:06]   - Already exists, skipping
+[2025-09-08 19:21:06] Processing retailer 25/380: Bijouterie Classique Jewellers
+[2025-09-08 19:21:06]   - Geocoding: 807 George Street, Hearst, ON
+[2025-09-08 19:21:07]   - Geocoded successfully: 49.68872, -83.663142 (exact address)
+[2025-09-08 19:21:07]     Location: 807, George Street, Hearst, Cochrane District, Northeastern Ontario, Ontario, P0L 1N0, Canada
+[2025-09-08 19:21:07]   - Added to database with ID: ret_015
+[2025-09-08 19:21:07]   - Waiting 1 second before next request...
+[2025-09-08 19:21:08] Processing retailer 26/380: Unis Jewellers
+[2025-09-08 19:21:08]   - Geocoding: 1569 Tecumseh Rd. E., Windsor, ON
+[2025-09-08 19:21:09]   - Geocoded successfully: 42.296651, -83.024475 (exact address)
+[2025-09-08 19:21:09]     Location: Tecumseh Road East, South Central, Windsor, Southwestern Ontario, Ontario, N8X 4V2, Canada
+[2025-09-08 19:21:09]   - Added to database with ID: ret_016
+[2025-09-08 19:21:09]   - Waiting 1 second before next request...
+[2025-09-08 19:21:10] Processing retailer 27/380: Clowes Jewellers (1978) Ltd.
+[2025-09-08 19:21:10]   - Already exists, skipping
+[2025-09-08 19:21:10] Processing retailer 28/380: A P Vail Jewellers
+[2025-09-08 19:21:10]   - Geocoding: 149 Davis Street, Sarnia, ON
+[2025-09-08 19:21:11]   - Geocoded successfully: 42.970555, -82.406392 (exact address)
+[2025-09-08 19:21:11]     Location: 149, Davis Street, Mitton Village, Sarnia, Lambton County, Ontario, N7T 2W2, Canada
+[2025-09-08 19:21:11]   - Added to database with ID: ret_017
+[2025-09-08 19:21:11]   - Waiting 1 second before next request...
+[2025-09-08 19:21:12] Processing retailer 29/380: Comeau's Jewelry & Gifts
+[2025-09-08 19:21:12]   - Geocoding: 160 Water Street, Campbellton, NB
+[2025-09-08 19:21:12]   - Geocoded successfully: 48.009058, -66.670356 (exact address)
+[2025-09-08 19:21:12]     Location: Water Street, Paroisse d'Addington, Comté de Restigouche, New Brunswick, E3N 1A9, Canada
+[2025-09-08 19:21:12]   - Added to database with ID: ret_018
+[2025-09-08 19:21:12]   - Waiting 1 second before next request...
+[2025-09-08 19:21:13] Processing retailer 30/380: Tower Jewellers
+[2025-09-08 19:21:13]   - Geocoding: 181 Main Street, Bathurst, NB
+[2025-09-08 19:21:14]   - Geocoded successfully: 47.620869, -65.654587 (exact address)
+[2025-09-08 19:21:14]     Location: Tower Jewellers Est. 1920, 181, Main Street, Ville de Bathurst, Comté de Gloucester, New Brunswick, E2A 5B9, Canada
+[2025-09-08 19:21:14]   - Added to database with ID: ret_019
+[2025-09-08 19:21:14]   - Waiting 1 second before next request...
+[2025-09-08 19:21:15] Processing retailer 31/380: Congers Jewellers
+[2025-09-08 19:21:15]   - Missing required data (name/city/province), skipping
+[2025-09-08 19:21:15] Processing retailer 32/380: VandenDool Jewellers
+[2025-09-08 19:21:15]   - Missing required data (name/city/province), skipping
+[2025-09-08 19:21:15] Processing retailer 33/380: Cook's Jewellers
+[2025-09-08 19:21:15]   - Geocoding: 527 3rd Ave. west, Prince Rupert, BC
+[2025-09-08 19:21:16]   - Geocoded successfully: 54.309838, -130.329598 (exact address)
+[2025-09-08 19:21:16]     Location: 3rd Avenue West, Prince Rupert, North Coast Regional District, British Columbia, V8J 1H6, Canada
+[2025-09-08 19:21:16]   - Added to database with ID: ret_020
+[2025-09-08 19:21:16]   - Waiting 1 second before next request...
+[2025-09-08 19:21:17] Processing retailer 34/380: Vanthuyne Jewellers Limited
+[2025-09-08 19:21:17]   - Already exists, skipping
+[2025-09-08 19:21:17] Processing retailer 35/380: Cook's Jewellers
+[2025-09-08 19:21:17]   - Already exists, skipping
+[2025-09-08 19:21:17] Processing retailer 36/380: Van Valkenburg & Son
+[2025-09-08 19:21:17]   - Geocoding: 4 King Street W., Forest, ON
+[2025-09-08 19:21:18]   - Geocoded successfully: 43.097461, -82.000716 (exact address)
+[2025-09-08 19:21:18]     Location: 4, King Street West, Forest, Lambton Shores, Lambton County, Ontario, N0N 1J0, Canada
+[2025-09-08 19:21:18]   - Added to database with ID: ret_021
+[2025-09-08 19:21:18]   - Waiting 1 second before next request...
+[2025-09-08 19:21:19] Processing retailer 37/380: Cook's Jewellers
+[2025-09-08 19:21:19]   - Already exists, skipping
+[2025-09-08 19:21:19] Processing retailer 38/380: Vincent Jewellers
+[2025-09-08 19:21:19]   - Geocoding: 153 High Street, Southampton, ON
+[2025-09-08 19:21:20]   - Geocoded successfully: 44.496052, -81.37306 (exact address)
+[2025-09-08 19:21:20]     Location: Lakeside Denture Centre, 153, High Street, Southampton, Saugeen Shores, Bruce County, Southwestern Ontario, Ontario, N0H 2L0, Canada
+[2025-09-08 19:21:20]   - Added to database with ID: ret_022
+[2025-09-08 19:21:20]   - Waiting 1 second before next request...
+[2025-09-08 19:21:21] Processing retailer 39/380: Cousineau Fine Jewellery
+[2025-09-08 19:21:21]   - Geocoding: 101 Mall - 38 Pine St. N., Timmins, ON
+[2025-09-08 19:21:22]   - Geocoded successfully: 48.476651, -81.32787 (exact address)
+[2025-09-08 19:21:22]     Location: The 101 Mall Dental Centre, 38, Pine Street North, Schumacher, Timmins, Cochrane District, Northeastern Ontario, Ontario, P4N 6K6, Canada
+[2025-09-08 19:21:22]   - Added to database with ID: ret_023
+[2025-09-08 19:21:22]   - Waiting 1 second before next request...
+[2025-09-08 19:21:23] Processing retailer 40/380: Wade's Jewellery Ltd.
+[2025-09-08 19:21:23]   - Already exists, skipping
+[2025-09-08 19:21:23] Processing retailer 41/380: Cranna's Jewellers
+[2025-09-08 19:21:23]   - Geocoding: 35680 97th Street, Oliver, BC
+[2025-09-08 19:21:25]   - Geocoded successfully: 49.183333, -119.55 (city center)
+[2025-09-08 19:21:25]     Location: Oliver, Regional District of Okanagan-Similkameen, British Columbia, Canada
+[2025-09-08 19:21:25]   - Added to database with ID: ret_024
+[2025-09-08 19:21:25]   - Waiting 1 second before next request...
+[2025-09-08 19:21:26] Processing retailer 42/380: Wainwright Jewellers
+[2025-09-08 19:21:26]   - Geocoding: 318 10th Street, Wainwright, AB
+[2025-09-08 19:21:27]   - Geocoded successfully: 52.840273, -110.851434 (city center)
+[2025-09-08 19:21:27]     Location: Town of Wainwright, Alberta, Canada
+[2025-09-08 19:21:27]   - Added to database with ID: ret_025
+[2025-09-08 19:21:27]   - Waiting 1 second before next request...
+[2025-09-08 19:21:28] Processing retailer 43/380: Creative Framing o/a Hudson Jewellers
+[2025-09-08 19:21:28]   - Geocoding: 152 Route 560, Upper Woodstock, NB
+[2025-09-08 19:21:31]   - Geocoded successfully: 46.17176, -67.572633 (city center)
+[2025-09-08 19:21:31]     Location: Upper Woodstock Rural Cemetery, Woodstock Parish, Town of Woodstock, Carleton County, New Brunswick, Canada
+[2025-09-08 19:21:31]   - Added to database with ID: ret_026
+[2025-09-08 19:21:31]   - Waiting 1 second before next request...
+[2025-09-08 19:21:32] Processing retailer 44/380: D S Walker Jewellers Ltd.
+[2025-09-08 19:21:32]   - Already exists, skipping
+[2025-09-08 19:21:32] Processing retailer 45/380: Crowley's Jewellers
+[2025-09-08 19:21:32]   - Geocoding: 674 Kingsway, Edmonton, AB
+[2025-09-08 19:21:34]   - Geocoded successfully: 53.562968, -113.505886 (exact address)
+[2025-09-08 19:21:34]     Location: Kingsway Mall, 1, Avenue District, Edmonton, Alberta, T5G 3A6, Canada
+[2025-09-08 19:21:34]   - Added to database with ID: ret_027
+[2025-09-08 19:21:34]   - Waiting 1 second before next request...
+[2025-09-08 19:21:35] Processing retailer 46/380: Walkers Jewellers
+[2025-09-08 19:21:35]   - Geocoding: 450 Main Street ., Penticton, BC
+[2025-09-08 19:21:36]   - Geocoded successfully: 49.478459, -119.584073 (exact address)
+[2025-09-08 19:21:36]     Location: Main Street, Penticton, Regional District of Okanagan-Similkameen, British Columbia, V2A 5H2, Canada
+[2025-09-08 19:21:36]   - Added to database with ID: ret_028
+[2025-09-08 19:21:36]   - Waiting 1 second before next request...
+[2025-09-08 19:21:37] Processing retailer 47/380: Curry's Jewellers 1978 Limited
+[2025-09-08 19:21:37]   - Already exists, skipping
+[2025-09-08 19:21:37] Processing retailer 48/380: Norman E Wallace Jewellery
+[2025-09-08 19:21:37]   - Geocoding: 261 Raglan Street S., Renfrew, ON
+[2025-09-08 19:21:37]   - Geocoded successfully: 45.470939, -76.682655 (exact address)
+[2025-09-08 19:21:37]     Location: Norman E. Wallace Jewellers, 261, Raglan Street South, Renfrew, Renfrew County, Eastern Ontario, Ontario, K7V 3B3, Canada
+[2025-09-08 19:21:37]   - Added to database with ID: ret_029
+[2025-09-08 19:21:37]   - Waiting 1 second before next request...
+[2025-09-08 19:21:38] Processing retailer 49/380: Dales Of Edmonton
+[2025-09-08 19:21:38]   - Geocoding: 10551 114th Street, Edmonton, AB
+[2025-09-08 19:21:40]   - Geocoded successfully: 53.546206, -113.491241 (city center)
+[2025-09-08 19:21:40]     Location: Edmonton, Alberta, Canada
+[2025-09-08 19:21:40]   - Added to database with ID: ret_030
+[2025-09-08 19:21:40]   - Waiting 1 second before next request...
+[2025-09-08 19:21:41] Processing retailer 50/380: Jeff Walters Diamonds
+[2025-09-08 19:21:41]   - Geocoding: 331 Bayfield Street, Suite 203, Barrie, ON
+[2025-09-08 19:21:44]   - Geocoded successfully: 44.389321, -79.69013 (city center)
+[2025-09-08 19:21:44]     Location: Barrie, Central Ontario, Ontario, Canada
+[2025-09-08 19:21:44]   - Added to database with ID: ret_031
+[2025-09-08 19:21:44]   - Waiting 1 second before next request...
+[2025-09-08 19:21:45] Processing retailer 51/380: Dana's Goldsmithing Inc.
+[2025-09-08 19:21:45]   - Already exists, skipping
+[2025-09-08 19:21:45] Processing retailer 52/380: Phillip Wards Jewellery
+[2025-09-08 19:21:45]   - Geocoding: 104 13th St. N., Lethbridge, AB
+[2025-09-08 19:21:47]   - Geocoded successfully: 49.694578, -112.833103 (city center)
+[2025-09-08 19:21:47]     Location: Lethbridge, Alberta, Canada
+[2025-09-08 19:21:47]   - Added to database with ID: ret_032
+[2025-09-08 19:21:47]   - Waiting 1 second before next request...
+[2025-09-08 19:21:48] Processing retailer 53/380: Davidson's Jewellers
+[2025-09-08 19:21:48]   - Geocoding: 790 Bank Street, Ottawa, ON
+[2025-09-08 19:21:49]   - Geocoded successfully: 45.403087, -75.688547 (exact address)
+[2025-09-08 19:21:49]     Location: Davidson's Jewellers, 790, Bank Street, The Glebe, Capital, Ottawa, Eastern Ontario, Ontario, K1S 3V8, Canada
+[2025-09-08 19:21:49]   - Added to database with ID: ret_033
+[2025-09-08 19:21:49]   - Waiting 1 second before next request...
+[2025-09-08 19:21:50] Processing retailer 54/380: Ware's Jewelers Limited
+[2025-09-08 19:21:50]   - Already exists, skipping
+[2025-09-08 19:21:50] Processing retailer 55/380: Deb's Jewellery & Giftware
+[2025-09-08 19:21:50]   - Geocoding: 23 Main Street, Ashern, MB
+[2025-09-08 19:21:51]   - Geocoded successfully: 51.180611, -98.355618 (exact address)
+[2025-09-08 19:21:51]     Location: Main Street, Ashern, Municipality of West Interlake, Manitoba, R0C 0E0, Canada
+[2025-09-08 19:21:51]   - Added to database with ID: ret_034
+[2025-09-08 19:21:51]   - Waiting 1 second before next request...
+[2025-09-08 19:21:52] Processing retailer 56/380: Weeks Jewellers
+[2025-09-08 19:21:52]   - Geocoding: 41 Park St W., Windsor, ON
+[2025-09-08 19:21:55]   - Geocoded successfully: 42.314983, -83.044236 (exact address)
+[2025-09-08 19:21:55]     Location: Park Street West, Chinatown, City Centre, Windsor, Southwestern Ontario, Ontario, N9A 5R4, Canada
+[2025-09-08 19:21:55]   - Added to database with ID: ret_035
+[2025-09-08 19:21:55]   - Waiting 1 second before next request...
+[2025-09-08 19:21:56] Processing retailer 57/380: Delamont E H Jeweler Limited
+[2025-09-08 19:21:56]   - Already exists, skipping
+[2025-09-08 19:21:56] Processing retailer 58/380: Wendts Jewellery Limited
+[2025-09-08 19:21:56]   - Already exists, skipping
+[2025-09-08 19:21:56] Processing retailer 59/380: Diamonds for You
+[2025-09-08 19:21:56]   - Geocoding: 210, 4420 Railway Avenue, Vermilion, AB
+[2025-09-08 19:21:57]   - Geocoded successfully: 53.352709, -110.854207 (city center)
+[2025-09-08 19:21:57]     Location: Vermilion, Town of Vermilion, Alberta, T9X 1B7, Canada
+[2025-09-08 19:21:57]   - Added to database with ID: ret_036
+[2025-09-08 19:21:57]   - Waiting 1 second before next request...
+[2025-09-08 19:21:58] Processing retailer 60/380: Wharrams Jewellery Limited
+[2025-09-08 19:21:58]   - Already exists, skipping
+[2025-09-08 19:21:58] Processing retailer 61/380: Dube Designs
+[2025-09-08 19:21:58]   - Geocoding: 213 Craig Street, Timmins, ON
+[2025-09-08 19:22:00]   - Geocoded successfully: 48.47719, -81.355429 (exact address)
+[2025-09-08 19:22:00]     Location: Craig Street, Mountjoy, Timmins, Cochrane District, Northeastern Ontario, Ontario, P4N 4B6, Canada
+[2025-09-08 19:22:00]   - Added to database with ID: ret_037
+[2025-09-08 19:22:00]   - Waiting 1 second before next request...
+[2025-09-08 19:22:01] Processing retailer 62/380: Whitman Jewellers Northern
+[2025-09-08 19:22:01]   - Geocoding: 1055 Cassells Street, North Bay, ON
+[2025-09-08 19:22:02]   - Geocoded successfully: 46.318264, -79.443986 (exact address)
+[2025-09-08 19:22:02]     Location: Cassells Street, North Bay, Nipissing District, Northeastern Ontario, Ontario, P1B 4C8, Canada
+[2025-09-08 19:22:02]   - Added to database with ID: ret_038
+[2025-09-08 19:22:02]   - Waiting 1 second before next request...
+[2025-09-08 19:22:03] Processing retailer 63/380: Durrant Jewellers Limited
+[2025-09-08 19:22:03]   - Already exists, skipping
+[2025-09-08 19:22:03] Processing retailer 64/380: Ron Wilkin Jewellers Ltd.
+[2025-09-08 19:22:03]   - Already exists, skipping
+[2025-09-08 19:22:03] Processing retailer 65/380: Elgin Jewellers Regd
+[2025-09-08 19:22:03]   - Geocoding: 260 Elgin Street, Ottawa, ON
+[2025-09-08 19:22:04]   - Geocoded successfully: 45.41793, -75.690623 (exact address)
+[2025-09-08 19:22:04]     Location: 260, Elgin Street, Golden Triangle, Centretown, Somerset, Ottawa, Eastern Ontario, Ontario, K2P 1L9, Canada
+[2025-09-08 19:22:04]   - Added to database with ID: ret_039
+[2025-09-08 19:22:04]   - Waiting 1 second before next request...
+[2025-09-08 19:22:05] Processing retailer 66/380: William Jewellers
+[2025-09-08 19:22:05]   - Geocoding: 38 James Street, St. Catharines, ON
+[2025-09-08 19:22:07]   - Geocoded successfully: 43.158715, -79.244959 (exact address)
+[2025-09-08 19:22:07]     Location: 38, James Street, Downtown St. Catharines, St. Catharines, Niagara Region, Golden Horseshoe, Ontario, L2R 7C2, Canada
+[2025-09-08 19:22:07]   - Added to database with ID: ret_040
+[2025-09-08 19:22:07]   - Waiting 1 second before next request...
+[2025-09-08 19:22:08] Processing retailer 67/380: Elgin Jewellers
+[2025-09-08 19:22:08]   - Geocoding: 690 Goderich St., Port Elgin, ON
+[2025-09-08 19:22:09]   - Geocoded successfully: 44.43796, -81.387696 (exact address)
+[2025-09-08 19:22:09]     Location: 690, Goderich Street, Port Elgin, Saugeen Shores, Bruce County, Ontario, N0H 2C0, Canada
+[2025-09-08 19:22:09]   - Added to database with ID: ret_041
+[2025-09-08 19:22:09]   - Waiting 1 second before next request...
+[2025-09-08 19:22:10] Processing retailer 68/380: Wilson & Markle Jewellers
+[2025-09-08 19:22:10]   - Geocoding: 489 Dundas Street, Woodstock, ON
+[2025-09-08 19:22:11]   - Geocoded successfully: 43.130273, -80.756578 (exact address)
+[2025-09-08 19:22:11]     Location: 489, Dundas Street, Woodstock, Oxford County, Ontario, N4S 1B8, Canada
+[2025-09-08 19:22:11]   - Added to database with ID: ret_042
+[2025-09-08 19:22:11]   - Waiting 1 second before next request...
+[2025-09-08 19:22:12] Processing retailer 69/380: Enderby Jewellers
+[2025-09-08 19:22:12]   - Geocoding: 608 Cliff Ave., Enderby, BC
+[2025-09-08 19:22:13]   - Geocoded successfully: 50.550285, -119.139379 (exact address)
+[2025-09-08 19:22:13]     Location: Cliff Avenue, Enderby, Regional District of North Okanagan, British Columbia, V0E 1V0, Canada
+[2025-09-08 19:22:13]   - Added to database with ID: ret_043
+[2025-09-08 19:22:13]   - Waiting 1 second before next request...
+[2025-09-08 19:22:14] Processing retailer 70/380: Wolfgang Trautmann Goldsmith.
+[2025-09-08 19:22:14]   - Geocoding: 49 - 175 David Berguy Dr., Kitchener, ON
+[2025-09-08 19:22:16]   - Geocoded successfully: 43.451291, -80.492782 (city center)
+[2025-09-08 19:22:16]     Location: Kitchener, Region of Waterloo, Southwestern Ontario, Ontario, Canada
+[2025-09-08 19:22:16]   - Added to database with ID: ret_044
+[2025-09-08 19:22:16]   - Waiting 1 second before next request...
+[2025-09-08 19:22:17] Processing retailer 71/380: European Goldsmith
+[2025-09-08 19:22:17]   - Missing required data (name/city/province), skipping
+[2025-09-08 19:22:17] Processing retailer 72/380: Woods Jewellers
+[2025-09-08 19:22:17]   - Geocoding: 13A - 330 Central N., Swift Current, SK
+[2025-09-08 19:22:19]   - Geocoded successfully: 50.284914, -107.79845 (city center)
+[2025-09-08 19:22:19]     Location: Swift Current, Saskatchewan, Canada
+[2025-09-08 19:22:19]   - Added to database with ID: ret_045
+[2025-09-08 19:22:19]   - Waiting 1 second before next request...
+[2025-09-08 19:22:20] Processing retailer 73/380: Excelsior Jewellers Ltd
+[2025-09-08 19:22:20]   - Already exists, skipping
+[2025-09-08 19:22:20] Processing retailer 74/380: Woodland E G & Son Jewellers Limited
+[2025-09-08 19:22:20]   - Already exists, skipping
+[2025-09-08 19:22:20] Processing retailer 75/380: Excel Jewellers Limited
+[2025-09-08 19:22:20]   - Already exists, skipping
+[2025-09-08 19:22:20] Processing retailer 76/380: Woodley's Jewellers Ltd
+[2025-09-08 19:22:20]   - Already exists, skipping
+[2025-09-08 19:22:20] Processing retailer 77/380: Facets Jewellery & Gifts
+[2025-09-08 19:22:20]   - Geocoding: 351 Argyle St. S., Unit 4, Caledonia, ON
+[2025-09-08 19:22:21]   - Geocoded successfully: 43.073794, -79.951908 (city center)
+[2025-09-08 19:22:21]     Location: Caledonia, Haldimand County, Ontario, N3W 1C1, Canada
+[2025-09-08 19:22:21]   - Added to database with ID: ret_046
+[2025-09-08 19:22:21]   - Waiting 1 second before next request...
+[2025-09-08 19:22:22] Processing retailer 78/380: Wright's Jewelry Ltd.
+[2025-09-08 19:22:22]   - Already exists, skipping
+[2025-09-08 19:22:22] Processing retailer 79/380: H. E. Fancy Jewellery Ltd.
+[2025-09-08 19:22:22]   - Already exists, skipping
+[2025-09-08 19:22:22] Processing retailer 80/380: Wright's Jewelry Ltd.
+[2025-09-08 19:22:22]   - Already exists, skipping
+[2025-09-08 19:22:22] Processing retailer 81/380: H. E. Fancy Jewellery Ltd.
+[2025-09-08 19:22:22]   - Already exists, skipping
+[2025-09-08 19:22:22] Processing retailer 82/380: York Jewllers Ltd.
+[2025-09-08 19:22:22]   - Already exists, skipping
+[2025-09-08 19:22:22] Processing retailer 83/380: Fiancee Jewellers Limited
+[2025-09-08 19:22:22]   - Already exists, skipping
+[2025-09-08 19:22:22] Processing retailer 84/380: Young J H & Sons Ltd.
+[2025-09-08 19:22:22]   - Already exists, skipping
+[2025-09-08 19:22:22] Processing retailer 85/380: Fifth Avenue Jewellers
+[2025-09-08 19:22:22]   - Geocoding: 510-1055 Hillside Dr., Kamloops, BC
+[2025-09-08 19:22:24]   - Geocoded successfully: 50.664492, -120.368746 (exact address)
+[2025-09-08 19:22:24]     Location: Fifth Avenue Jewellers, 1055, Hillside Drive, Kamloops, Thompson-Nicola Regional District, British Columbia, V2C 2S5, Canada
+[2025-09-08 19:22:24]   - Added to database with ID: ret_047
+[2025-09-08 19:22:24]   - Waiting 1 second before next request...
+[2025-09-08 19:22:25] Processing retailer 86/380: Young & Co
+[2025-09-08 19:22:25]   - Missing required data (name/city/province), skipping
+[2025-09-08 19:22:25] Processing retailer 87/380: Fine Things Inc.
+[2025-09-08 19:22:25]   - Already exists, skipping
+[2025-09-08 19:22:25] Processing retailer 88/380: Young & Co.
+[2025-09-08 19:22:25]   - Missing required data (name/city/province), skipping
+[2025-09-08 19:22:25] Processing retailer 89/380: Fire and Ice Jewellers
+[2025-09-08 19:22:25]   - Geocoding: 310 Guelph Street, Unit 5, Georgetown, ON
+[2025-09-08 19:22:27]   - Geocoded successfully: 43.655383, -79.919045 (city center)
+[2025-09-08 19:22:27]     Location: Georgetown, GO parking lot, Georgetown, Halton Hills, Halton Region, Golden Horseshoe, Ontario, L7G 2H6, Canada
+[2025-09-08 19:22:27]   - Added to database with ID: ret_048
+[2025-09-08 19:22:27]   - Waiting 1 second before next request...
+[2025-09-08 19:22:28] Processing retailer 90/380: Zeke's Jewellers Ltd.
+[2025-09-08 19:22:28]   - Already exists, skipping
+[2025-09-08 19:22:28] Processing retailer 91/380: Flondra Jewellers
+[2025-09-08 19:22:28]   - Geocoding: 213 - 3rd Avenue, Timmins, ON
+[2025-09-08 19:22:29]   - Geocoded successfully: 48.474998, -81.329381 (exact address)
+[2025-09-08 19:22:29]     Location: 213, 3rd Avenue, Schumacher, Timmins, Cochrane District, Northeastern Ontario, Ontario, P4N 2A5, Canada
+[2025-09-08 19:22:29]   - Added to database with ID: ret_049
+[2025-09-08 19:22:29]   - Waiting 1 second before next request...
+[2025-09-08 19:22:30] Processing retailer 92/380: Zeke's Jewellers Ltd.
+[2025-09-08 19:22:30]   - Already exists, skipping
+[2025-09-08 19:22:30] Processing retailer 93/380: Forest of Jewels
+[2025-09-08 19:22:30]   - Geocoding: 428 Riverbend Square, Edmonton, AB
+[2025-09-08 19:22:31]   - Geocoded successfully: 53.468814, -113.586667 (exact address)
+[2025-09-08 19:22:31]     Location: Riverbend Square, Riverbend, Edmonton, Alberta, T6R 2E3, Canada
+[2025-09-08 19:22:31]   - Added to database with ID: ret_050
+[2025-09-08 19:22:31]   - Waiting 1 second before next request...
+[2025-09-08 19:22:32] Processing retailer 94/380: Zeke's Jewellers Ltd.
+[2025-09-08 19:22:32]   - Already exists, skipping
+[2025-09-08 19:22:32] Processing retailer 95/380: Bijouterie Ronald Fortier Inc
+[2025-09-08 19:22:32]   - Already exists, skipping
+[2025-09-08 19:22:32] Processing retailer 96/380: Zeke's Jewellers Ltd.
+[2025-09-08 19:22:32]   - Already exists, skipping
+[2025-09-08 19:22:32] Processing retailer 97/380: Fort Richmond Jewellers
+[2025-09-08 19:22:32]   - Geocoding: 2860 Pembina Hwy, Unit 10, Winnipeg, MB
+[2025-09-08 19:22:35]   - Geocoded successfully: 49.895537, -97.138458 (city center)
+[2025-09-08 19:22:35]     Location: Winnipeg, Manitoba, Canada
+[2025-09-08 19:22:35]   - Added to database with ID: ret_051
+[2025-09-08 19:22:35]   - Waiting 1 second before next request...
+[2025-09-08 19:22:36] Processing retailer 98/380: Zeke's Jewellers Ltd.
+[2025-09-08 19:22:36]   - Already exists, skipping
+[2025-09-08 19:22:36] Processing retailer 99/380: Foster & Sons Jewellers
+[2025-09-08 19:22:36]   - Geocoding: 622 - 3rd Avenue South, Lethbridge, AB
+[2025-09-08 19:22:37]   - Geocoded successfully: 49.694578, -112.833103 (city center)
+[2025-09-08 19:22:37]     Location: Lethbridge, Alberta, Canada
+[2025-09-08 19:22:37]   - Added to database with ID: ret_052
+[2025-09-08 19:22:37]   - Waiting 1 second before next request...
+[2025-09-08 19:22:38] Processing retailer 100/380: Fran's Jewellers & Gift Boutique
+[2025-09-08 19:22:38]   - Geocoding: 623 Ash Grove, Oakbank, MB
+[2025-09-08 19:22:40]   - Geocoded successfully: 49.941734, -96.846474 (exact address)
+[2025-09-08 19:22:40]     Location: Ash Grove, Oakbank, Rural Municipality of Springfield, Manitoba, R0E 1J2, Canada
+[2025-09-08 19:22:40]   - Added to database with ID: ret_053
+[2025-09-08 19:22:40]   - Waiting 1 second before next request...
+[2025-09-08 19:22:41] Processing retailer 101/380: Frank's Jewellers
+[2025-09-08 19:22:41]   - Geocoding: 8 King St. S., Waterloo, ON
+[2025-09-08 19:22:42]   - Geocoded successfully: 43.464978, -80.522114 (exact address)
+[2025-09-08 19:22:42]     Location: Frank's Jewellers, 8, King Street South, Uptown, Waterloo, Region of Waterloo, Ontario, N2J 1N8, Canada
+[2025-09-08 19:22:42]   - Added to database with ID: ret_054
+[2025-09-08 19:22:42]   - Waiting 1 second before next request...
+[2025-09-08 19:22:43] Processing retailer 102/380: French's Jewellery 1988
+[2025-09-08 19:22:43]   - Geocoding: 5011A-50th Ave., Wetaskiwin, AB
+[2025-09-08 19:22:44]   - Geocoded successfully: 52.968492, -113.36792 (city center)
+[2025-09-08 19:22:44]     Location: City of Wetaskiwin, Wetaskiwin, Alberta, Canada
+[2025-09-08 19:22:44]   - Added to database with ID: ret_055
+[2025-09-08 19:22:44]   - Waiting 1 second before next request...
+[2025-09-08 19:22:45] Processing retailer 103/380: Frontenac Watch Repairing Co
+[2025-09-08 19:22:45]   - Already exists, skipping
+[2025-09-08 19:22:45] Processing retailer 104/380: Ron Galbraith Jewellers
+[2025-09-08 19:22:45]   - Geocoding: 132 Harwood Ave. S., Ajax, ON
+[2025-09-08 19:22:46]   - Geocoded successfully: 43.848931, -79.020721 (exact address)
+[2025-09-08 19:22:46]     Location: 132, Harwood Avenue South, Downtown, Ajax, Durham Region, Golden Horseshoe, Ontario, L1S 2H6, Canada
+[2025-09-08 19:22:46]   - Added to database with ID: ret_056
+[2025-09-08 19:22:46]   - Waiting 1 second before next request...
+[2025-09-08 19:22:47] Processing retailer 105/380: Gateway Jewellers
+[2025-09-08 19:22:47]   - Missing required data (name/city/province), skipping
+[2025-09-08 19:22:47] Processing retailer 106/380: Gelmici Jewellers
+[2025-09-08 19:22:47]   - Geocoding: 123 - 50th Street, Edson, AB
+[2025-09-08 19:22:49]   - Geocoded successfully: 53.585866, -116.442847 (city center)
+[2025-09-08 19:22:49]     Location: Edson, Alberta, Canada
+[2025-09-08 19:22:49]   - Added to database with ID: ret_057
+[2025-09-08 19:22:49]   - Waiting 1 second before next request...
+[2025-09-08 19:22:50] Processing retailer 107/380: Gemini Jewellers
+[2025-09-08 19:22:50]   - Geocoding: 132 Main Street W., Listowel, ON
+[2025-09-08 19:22:51]   - Geocoded successfully: 43.731596, -80.953565 (exact address)
+[2025-09-08 19:22:51]     Location: 132, Main Street West, Downtown Listowel, Listowel, North Perth, Perth County, Ontario, N4W 1A3, Canada
+[2025-09-08 19:22:51]   - Added to database with ID: ret_058
+[2025-09-08 19:22:51]   - Waiting 1 second before next request...
+[2025-09-08 19:22:52] Processing retailer 108/380: Gifts of Gold
+[2025-09-08 19:22:52]   - Already exists, skipping
+[2025-09-08 19:22:52] Processing retailer 109/380: Gilbert's Jewellery
+[2025-09-08 19:22:52]   - Geocoding: 743 Queen Street, Kincardine, ON
+[2025-09-08 19:22:52]   - Geocoded successfully: 44.176029, -81.635768 (exact address)
+[2025-09-08 19:22:52]     Location: 743, Queen Street, Kincardine, Bruce County, Ontario, N2Z 2A3, Canada
+[2025-09-08 19:22:52]   - Added to database with ID: ret_059
+[2025-09-08 19:22:52]   - Waiting 1 second before next request...
+[2025-09-08 19:22:53] Processing retailer 110/380: GMG Jewellers
+[2025-09-08 19:22:53]   - Geocoding: 1-105-21st St. East, Saskatoon, SK
+[2025-09-08 19:22:55]   - Geocoded successfully: 52.126597, -106.661202 (exact address)
+[2025-09-08 19:22:55]     Location: 21st Street East, Central Business District, Saskatoon, Saskatchewan, S7K 5X2, Canada
+[2025-09-08 19:22:55]   - Added to database with ID: ret_060
+[2025-09-08 19:22:55]   - Waiting 1 second before next request...
+[2025-09-08 19:22:56] Processing retailer 111/380: Godley's Jewellery
+[2025-09-08 19:22:56]   - Geocoding: 4913-1st Street West, Claresholm, AB
+[2025-09-08 19:22:58]   - Geocoded successfully: 50.023946, -113.580029 (city center)
+[2025-09-08 19:22:58]     Location: Claresholm, Town of Claresholm, Alberta, T0L 0T0, Canada
+[2025-09-08 19:22:58]   - Added to database with ID: ret_061
+[2025-09-08 19:22:58]   - Waiting 1 second before next request...
+[2025-09-08 19:22:59] Processing retailer 112/380: Gold Direct Jewellers
+[2025-09-08 19:22:59]   - Already exists, skipping
+[2025-09-08 19:22:59] Processing retailer 113/380: Golden Enterprizes
+[2025-09-08 19:22:59]   - Geocoding: 8 Manitoba Street, Bracebridge, ON
+[2025-09-08 19:23:00]   - Geocoded successfully: 45.128418, -79.364488 (exact address)
+[2025-09-08 19:23:00]     Location: Manitoba Street, Bracebridge, District Municipality of Muskoka, Muskoka District, Central Ontario, Ontario, P1L 1X4, Canada
+[2025-09-08 19:23:00]   - Added to database with ID: ret_062
+[2025-09-08 19:23:00]   - Waiting 1 second before next request...
+[2025-09-08 19:23:01] Processing retailer 114/380: Gold & Ice
+[2025-09-08 19:23:01]   - Already exists, skipping
+[2025-09-08 19:23:01] Processing retailer 115/380: Gold & Ice
+[2025-09-08 19:23:01]   - Already exists, skipping
+[2025-09-08 19:23:01] Processing retailer 116/380: Gold Fever
+[2025-09-08 19:23:01]   - Already exists, skipping
+[2025-09-08 19:23:01] Processing retailer 117/380: Golden Image Jewellery
+[2025-09-08 19:23:01]   - Geocoding: 109 Washington Ave, Davidson, SK
+[2025-09-08 19:23:03]   - Geocoded successfully: 51.262729, -105.989625 (exact address)
+[2025-09-08 19:23:03]     Location: Washington Avenue, Davidson, Saskatchewan, S0G 1A0, Canada
+[2025-09-08 19:23:03]   - Added to database with ID: ret_063
+[2025-09-08 19:23:03]   - Waiting 1 second before next request...
+[2025-09-08 19:23:04] Processing retailer 118/380: The Gold Room Jewellers
+[2025-09-08 19:23:04]   - Already exists, skipping
+[2025-09-08 19:23:04] Processing retailer 119/380: Gold-n-Memories
+[2025-09-08 19:23:04]   - Already exists, skipping
+[2025-09-08 19:23:04] Processing retailer 120/380: Gold Star Jewellers Belegris Ltd
+[2025-09-08 19:23:04]   - Already exists, skipping
+[2025-09-08 19:23:04] Processing retailer 121/380: Goldstream Jewellers Of Diamonds
+[2025-09-08 19:23:04]   - Geocoding: 127 Pembroke Street W., Pembroke, ON
+[2025-09-08 19:23:05]   - Geocoded successfully: 45.825562, -77.115684 (exact address)
+[2025-09-08 19:23:05]     Location: 127, Pembroke Street West, Downtown Pembroke, Pembroke, Eastern Ontario, Ontario, K8A 4K2, Canada
+[2025-09-08 19:23:05]   - Added to database with ID: ret_064
+[2025-09-08 19:23:05]   - Waiting 1 second before next request...
+[2025-09-08 19:23:06] Processing retailer 122/380: Gordon's Gold Jewellers
+[2025-09-08 19:23:06]   - Already exists, skipping
+[2025-09-08 19:23:06] Processing retailer 123/380: Gordon Jewellers Limited
+[2025-09-08 19:23:06]   - Already exists, skipping
+[2025-09-08 19:23:06] Processing retailer 124/380: Graham's Jewellers
+[2025-09-08 19:23:06]   - Geocoding: 261-Fifth St., Courtenay, BC
+[2025-09-08 19:23:07]   - Geocoded successfully: 49.689406, -124.995496 (city center)
+[2025-09-08 19:23:07]     Location: Courtenay, Comox Valley Regional District, British Columbia, Canada
+[2025-09-08 19:23:07]   - Added to database with ID: ret_065
+[2025-09-08 19:23:07]   - Waiting 1 second before next request...
+[2025-09-08 19:23:08] Processing retailer 125/380: Grandis Jewellers
+[2025-09-08 19:23:08]   - Geocoding: 4230 Petrolia Street, Petrolia, ON
+[2025-09-08 19:23:10]   - Geocoded successfully: 42.882002, -82.149582 (city center)
+[2025-09-08 19:23:10]     Location: Petrolia, Lambton County, Ontario, N0N 1R0, Canada
+[2025-09-08 19:23:10]   - Added to database with ID: ret_066
+[2025-09-08 19:23:10]   - Waiting 1 second before next request...
+[2025-09-08 19:23:11] Processing retailer 126/380: Hagersville Jewellers
+[2025-09-08 19:23:11]   - Geocoding: 11 Main St. N., Hagersville, ON
+[2025-09-08 19:23:12]   - Geocoded successfully: 42.962449, -80.05165 (exact address)
+[2025-09-08 19:23:12]     Location: 11, Main Street North, Hagersville, Haldimand County, Ontario, N0A 1H0, Canada
+[2025-09-08 19:23:12]   - Added to database with ID: ret_067
+[2025-09-08 19:23:12]   - Waiting 1 second before next request...
+[2025-09-08 19:23:13] Processing retailer 127/380: Hagemann Jewellers
+[2025-09-08 19:23:13]   - Geocoding: 3119 - 30th Avenue, Vernon, BC
+[2025-09-08 19:23:16]   - Geocoded successfully: 50.266867, -119.271816 (city center)
+[2025-09-08 19:23:16]     Location: Vernon, Regional District of North Okanagan, British Columbia, Canada
+[2025-09-08 19:23:16]   - Added to database with ID: ret_068
+[2025-09-08 19:23:16]   - Waiting 1 second before next request...
+[2025-09-08 19:23:17] Processing retailer 128/380: Hall A M Jewellers Limited
+[2025-09-08 19:23:17]   - Already exists, skipping
+[2025-09-08 19:23:17] Processing retailer 129/380: Halmo Jewellers
+[2025-09-08 19:23:17]   - Geocoding: 443 Norfolk St. S., Simcoe, ON
+[2025-09-08 19:23:19]   - Geocoded successfully: 44.501401, -79.703871 (city center)
+[2025-09-08 19:23:19]     Location: Simcoe County, Central Ontario, Ontario, Canada
+[2025-09-08 19:23:19]   - Added to database with ID: ret_069
+[2025-09-08 19:23:19]   - Waiting 1 second before next request...
+[2025-09-08 19:23:20] Processing retailer 130/380: Halton Hills Fine Jewellery
+[2025-09-08 19:23:20]   - Geocoding: 218 Main Street E., Milton, ON
+[2025-09-08 19:23:22]   - Geocoded successfully: 43.513153, -79.882977 (exact address)
+[2025-09-08 19:23:22]     Location: The Vault, 218, Main Street East, Downtown Milton, Milton, Halton Region, Golden Horseshoe, Ontario, L9T 1S2, Canada
+[2025-09-08 19:23:22]   - Added to database with ID: ret_070
+[2025-09-08 19:23:22]   - Waiting 1 second before next request...
+[2025-09-08 19:23:23] Processing retailer 131/380: Hammond Jewellers
+[2025-09-08 19:23:23]   - Geocoding: 20832 Lougheed Hwy., Maple Ridge, BC
+[2025-09-08 19:23:24]   - Geocoded successfully: 49.217624, -122.644272 (exact address)
+[2025-09-08 19:23:24]     Location: Hammond Jewellers, 20832, Lougheed Highway, West Maple Ridge, Maple Ridge, Metro Vancouver Regional District, British Columbia, V2X 2R3, Canada
+[2025-09-08 19:23:24]   - Added to database with ID: ret_071
+[2025-09-08 19:23:24]   - Waiting 1 second before next request...
+[2025-09-08 19:23:25] Processing retailer 132/380: Harden's Jewellers
+[2025-09-08 19:23:25]   - Geocoding: 300 Eagleson Rd., Kanata, ON
+[2025-09-08 19:23:25]   - Geocoded successfully: 45.301129, -75.877542 (exact address)
+[2025-09-08 19:23:25]     Location: 大統華 T&T Supermarket, 300, Eagleson Road, Kanata, Kanata South, Ottawa, Eastern Ontario, Ontario, K2M 1C9, Canada
+[2025-09-08 19:23:25]   - Added to database with ID: ret_072
+[2025-09-08 19:23:25]   - Waiting 1 second before next request...
+[2025-09-08 19:23:26] Processing retailer 133/380: Harling's Jewellers B C Limited
+[2025-09-08 19:23:26]   - Already exists, skipping
+[2025-09-08 19:23:26] Processing retailer 134/380: Harmony House Jewellers
+[2025-09-08 19:23:26]   - Already exists, skipping
+[2025-09-08 19:23:26] Processing retailer 135/380: Harmony House Jewellers Limited
+[2025-09-08 19:23:26]   - Already exists, skipping
+[2025-09-08 19:23:26] Processing retailer 136/380: J. P. Harris Burford Ltd.
+[2025-09-08 19:23:26]   - Already exists, skipping
+[2025-09-08 19:23:26] Processing retailer 137/380: R. A. Hartman Jewellers
+[2025-09-08 19:23:26]   - Geocoding: 31 Arthur Street, Elmira, ON
+[2025-09-08 19:23:30]   - Geocoded successfully: 43.601376, -80.556499 (exact address)
+[2025-09-08 19:23:30]     Location: 31, Arthur Street North, Elmira, Woolwich, Region of Waterloo, Ontario, N3B 2K8, Canada
+[2025-09-08 19:23:30]   - Added to database with ID: ret_073
+[2025-09-08 19:23:30]   - Waiting 1 second before next request...
+[2025-09-08 19:23:31] Processing retailer 138/380: Harvey Jewellers
+[2025-09-08 19:23:31]   - Geocoding: 110 Main St.E., North Bay, ON
+[2025-09-08 19:23:33]   - Geocoded successfully: 46.310242, -79.463703 (exact address)
+[2025-09-08 19:23:33]     Location: 110, Main Street East, North Bay, Nipissing District, Northeastern Ontario, Ontario, P1B 1A8, Canada
+[2025-09-08 19:23:33]   - Added to database with ID: ret_074
+[2025-09-08 19:23:33]   - Waiting 1 second before next request...
+[2025-09-08 19:23:34] Processing retailer 139/380: Crowley's Heart To Heart Fine Jewellery
+[2025-09-08 19:23:34]   - Geocoding: 1692 Murphy Road, Unit 3, Sarnia, ON
+[2025-09-08 19:23:36]   - Geocoded successfully: 42.974382, -82.403533 (city center)
+[2025-09-08 19:23:36]     Location: Sarnia, Lambton County, Southwestern Ontario, Ontario, Canada
+[2025-09-08 19:23:36]   - Added to database with ID: ret_075
+[2025-09-08 19:23:36]   - Waiting 1 second before next request...
+[2025-09-08 19:23:37] Processing retailer 140/380: Marcuss Swiss Jewellers
+[2025-09-08 19:23:37]   - Missing required data (name/city/province), skipping
+[2025-09-08 19:23:37] Processing retailer 141/380: Heinrich Jewellery Sask. Ltd.
+[2025-09-08 19:23:37]   - Already exists, skipping
+[2025-09-08 19:23:37] Processing retailer 142/380: Henne's Jewellery
+[2025-09-08 19:23:37]   - Geocoding: 459 N. Christina St., Sarnia, ON
+[2025-09-08 19:23:39]   - Geocoded successfully: 42.981675, -82.402552 (exact address)
+[2025-09-08 19:23:39]     Location: 459, Christina Street North, Sarnia, Lambton County, Southwestern Ontario, Ontario, N7T 4V8, Canada
+[2025-09-08 19:23:39]   - Added to database with ID: ret_076
+[2025-09-08 19:23:39]   - Waiting 1 second before next request...
+[2025-09-08 19:23:40] Processing retailer 143/380: Ron Henry Jewellers
+[2025-09-08 19:23:40]   - Geocoding: 70 King William St., Huntsville, ON
+[2025-09-08 19:23:42]   - Geocoded successfully: 45.334678, -79.207761 (exact address)
+[2025-09-08 19:23:42]     Location: Huntsville Place Mall, 70, King William Street, Huntsville, District Municipality of Muskoka, Muskoka District, Central Ontario, Ontario, P1H 1E5, Canada
+[2025-09-08 19:23:42]   - Added to database with ID: ret_077
+[2025-09-08 19:23:42]   - Waiting 1 second before next request...
+[2025-09-08 19:23:43] Processing retailer 144/380: Herbin's Limited
+[2025-09-08 19:23:43]   - Already exists, skipping
+[2025-09-08 19:23:43] Processing retailer 145/380: Hess Jewellers
+[2025-09-08 19:23:43]   - Geocoding: 150 Churchill Blvd., Sault Ste. Marie, ON
+[2025-09-08 19:23:45]   - Geocoded successfully: 46.506386, -84.298547 (exact address)
+[2025-09-08 19:23:45]     Location: Churchill Boulevard, Sault Ste. Marie, Algoma District, Northeastern Ontario, Ontario, P6A 3S2, Canada
+[2025-09-08 19:23:45]   - Added to database with ID: ret_078
+[2025-09-08 19:23:45]   - Waiting 1 second before next request...
+[2025-09-08 19:23:46] Processing retailer 146/380: Hill J D Jewellers
+[2025-09-08 19:23:46]   - Geocoding: 429 St. Paul Ave., Brantford, ON
+[2025-09-08 19:23:47]   - Geocoded successfully: 43.15923, -80.271989 (exact address)
+[2025-09-08 19:23:47]     Location: 429, St. Paul Avenue, Brantford, Ontario, N3R 5J9, Canada
+[2025-09-08 19:23:47]   - Added to database with ID: ret_079
+[2025-09-08 19:23:47]   - Waiting 1 second before next request...
+[2025-09-08 19:23:48] Processing retailer 147/380: Hooper's Jewellers
+[2025-09-08 19:23:48]   - Geocoding: 39 King Street W., Bowmanville, ON
+[2025-09-08 19:23:49]   - Geocoded successfully: 43.912509, -78.690239 (exact address)
+[2025-09-08 19:23:49]     Location: 39, King Street West, Downtown Bowmanville, Bowmanville, Clarington, Durham Region, Golden Horseshoe, Ontario, L1C 1R4, Canada
+[2025-09-08 19:23:49]   - Added to database with ID: ret_080
+[2025-09-08 19:23:49]   - Waiting 1 second before next request...
+[2025-09-08 19:23:50] Processing retailer 148/380: Hoppers Jewellers
+[2025-09-08 19:23:50]   - Geocoding: 123 Gerrish Street, Windsor, NS
+[2025-09-08 19:23:50]   - Geocoded successfully: 44.994374, -64.136818 (exact address)
+[2025-09-08 19:23:50]     Location: 123, Gerrish Street, Windsor, Region of Windsor and West Hants Municipality, Hants County, Nova Scotia, B0N 2T0, Canada
+[2025-09-08 19:23:50]   - Added to database with ID: ret_081
+[2025-09-08 19:23:50]   - Waiting 1 second before next request...
+[2025-09-08 19:23:51] Processing retailer 149/380: House of Treasures
+[2025-09-08 19:23:51]   - Geocoding: Main Street, Valleyview, AB
+[2025-09-08 19:23:53]   - Geocoded successfully: 55.066667, -117.283333 (city center)
+[2025-09-08 19:23:53]     Location: Town of Valleyview, Alberta, Canada
+[2025-09-08 19:23:53]   - Added to database with ID: ret_082
+[2025-09-08 19:23:53]   - Waiting 1 second before next request...
+[2025-09-08 19:23:54] Processing retailer 150/380: Huxley R G Jewellers Ltd
+[2025-09-08 19:23:54]   - Already exists, skipping
+[2025-09-08 19:23:54] Processing retailer 151/380: Image Jewellers Ltd.
+[2025-09-08 19:23:54]   - Already exists, skipping
+[2025-09-08 19:23:54] Processing retailer 152/380: Independent Jewellers
+[2025-09-08 19:23:54]   - Geocoding: 11248 - 170 Street, Edmonton, AB
+[2025-09-08 19:23:57]   - Geocoded successfully: 53.575241, -113.615436 (exact address)
+[2025-09-08 19:23:57]     Location: 170 Street NW, Kinokamau Plains Area, Northwest Industrial, Edmonton, Alberta, T5V 1M8, Canada
+[2025-09-08 19:23:57]   - Added to database with ID: ret_083
+[2025-09-08 19:23:57]   - Waiting 1 second before next request...
+[2025-09-08 19:23:58] Processing retailer 153/380: Independent Jewellers
+[2025-09-08 19:23:58]   - Already exists, skipping
+[2025-09-08 19:23:58] Processing retailer 154/380: Ingham Geo T & Son Jewellers
+[2025-09-08 19:23:58]   - Geocoding: 5013 50 Street, Innisfail, AB
+[2025-09-08 19:23:59]   - Geocoded successfully: 52.027292, -113.951748 (exact address)
+[2025-09-08 19:23:59]     Location: 5013, 50 Street, Innisfail, Town of Innisfail, Alberta, T4G 1S1, Canada
+[2025-09-08 19:23:59]   - Added to database with ID: ret_084
+[2025-09-08 19:23:59]   - Waiting 1 second before next request...
+[2025-09-08 19:24:00] Processing retailer 155/380: Inglis Jewellers
+[2025-09-08 19:24:00]   - Geocoding: 202 Provost Street, New Glasgow, NS
+[2025-09-08 19:24:00]   - Geocoded successfully: 45.586203, -62.645218 (exact address)
+[2025-09-08 19:24:00]     Location: Inglis Jewelers, 202, Provost Street, Chattan Park, New Glasgow, Town of New Glasgow, Pictou County, Nova Scotia, B2H 2P6, Canada
+[2025-09-08 19:24:00]   - Added to database with ID: ret_085
+[2025-09-08 19:24:00]   - Waiting 1 second before next request...
+[2025-09-08 19:24:01] Processing retailer 156/380: Inglis Jewellers
+[2025-09-08 19:24:01]   - Already exists, skipping
+[2025-09-08 19:24:01] Processing retailer 157/380: Inglis Jewellers
+[2025-09-08 19:24:01]   - Already exists, skipping
+[2025-09-08 19:24:01] Processing retailer 158/380: Ireland's Jewellery
+[2025-09-08 19:24:01]   - Geocoding: 16 - 4th avenue, Sioux Lookout, ON
+[2025-09-08 19:24:02]   - Geocoded successfully: 50.098551, -91.916057 (exact address)
+[2025-09-08 19:24:02]     Location: Ireland's Jwellery, 16, 4th Avenue, Sioux Lookout, Kenora District, Northwestern Ontario, Ontario, P8T 1B8, Canada
+[2025-09-08 19:24:02]   - Added to database with ID: ret_086
+[2025-09-08 19:24:02]   - Waiting 1 second before next request...
+[2025-09-08 19:24:03] Processing retailer 159/380: Janina's Jewellery Ltd
+[2025-09-08 19:24:03]   - Already exists, skipping
+[2025-09-08 19:24:03] Processing retailer 160/380: Jaylyn Jewellers
+[2025-09-08 19:24:03]   - Geocoding: 12 - 2510 Bevan Ave., Sidney, BC
+[2025-09-08 19:24:04]   - Geocoded successfully: 48.650579, -123.398324 (city center)
+[2025-09-08 19:24:04]     Location: Sidney, Capital Regional District, British Columbia, Canada
+[2025-09-08 19:24:04]   - Added to database with ID: ret_087
+[2025-09-08 19:24:04]   - Waiting 1 second before next request...
+[2025-09-08 19:24:05] Processing retailer 161/380: Jedco Limited
+[2025-09-08 19:24:05]   - Already exists, skipping
+[2025-09-08 19:24:05] Processing retailer 162/380: Jewellery By Sanders
+[2025-09-08 19:24:05]   - Geocoding: 403 King Street West, Oshawa, ON
+[2025-09-08 19:24:06]   - Geocoded successfully: 43.894129, -78.878307 (exact address)
+[2025-09-08 19:24:06]     Location: 403, King Street West, McLaughlin, Oshawa, Durham Region, Golden Horseshoe, Ontario, L1J 2K0, Canada
+[2025-09-08 19:24:06]   - Added to database with ID: ret_088
+[2025-09-08 19:24:06]   - Waiting 1 second before next request...
+[2025-09-08 19:24:07] Processing retailer 163/380: Jewellery Box The
+[2025-09-08 19:24:07]   - Geocoding: 382 Main St. S., Exeter, ON
+[2025-09-08 19:24:08]   - Geocoded successfully: 43.34634, -81.480214 (exact address)
+[2025-09-08 19:24:08]     Location: 382, Main Street South, Downtown Exeter, Exeter, South Huron, Huron County, Southwestern Ontario, Ontario, N0M 1S6, Canada
+[2025-09-08 19:24:08]   - Added to database with ID: ret_089
+[2025-09-08 19:24:08]   - Waiting 1 second before next request...
+[2025-09-08 19:24:09] Processing retailer 164/380: Jewellery Box & Giftware
+[2025-09-08 19:24:09]   - Geocoding: 10314 110th Street, Fairview, AB
+[2025-09-08 19:24:11]   - Geocoded successfully: 49.695611, -112.775769 (city center)
+[2025-09-08 19:24:11]     Location: Fairview, Lethbridge County, Alberta, Canada
+[2025-09-08 19:24:11]   - Added to database with ID: ret_090
+[2025-09-08 19:24:11]   - Waiting 1 second before next request...
+[2025-09-08 19:24:12] Processing retailer 165/380: Jewellery Plus
+[2025-09-08 19:24:12]   - Geocoding: 246 Water Street, Summerside, PE
+[2025-09-08 19:24:12]   - Geocoded successfully: 46.391259, -63.789916 (exact address)
+[2025-09-08 19:24:12]     Location: 246, Water Street, Summerside, City of Summerside, Prince County, Prince Edward Island, C1N 5R1, Canada
+[2025-09-08 19:24:12]   - Added to database with ID: ret_091
+[2025-09-08 19:24:12]   - Waiting 1 second before next request...
+[2025-09-08 19:24:13] Processing retailer 166/380: Jewel Box
+[2025-09-08 19:24:13]   - Already exists, skipping
+[2025-09-08 19:24:13] Processing retailer 167/380: Jewel Box
+[2025-09-08 19:24:13]   - Already exists, skipping
+[2025-09-08 19:24:13] Processing retailer 168/380: Jewel Box Limited
+[2025-09-08 19:24:13]   - Already exists, skipping
+[2025-09-08 19:24:13] Processing retailer 169/380: Jewels on Ninth Inc
+[2025-09-08 19:24:13]   - Already exists, skipping
+[2025-09-08 19:24:13] Processing retailer 170/380: Jewellery Plus
+[2025-09-08 19:24:13]   - Already exists, skipping
+[2025-09-08 19:24:13] Processing retailer 171/380: Joella's Jewellery & Gifts
+[2025-09-08 19:24:13]   - Geocoding: 113 Holland St. W., Bradford, ON
+[2025-09-08 19:24:15]   - Geocoded successfully: 44.113494, -79.568954 (exact address)
+[2025-09-08 19:24:15]     Location: 113, Holland Street West, Downtown Bradford, Bradford West Gwillimbury, Simcoe County, Central Ontario, Ontario, L3Z 1B0, Canada
+[2025-09-08 19:24:15]   - Added to database with ID: ret_092
+[2025-09-08 19:24:15]   - Waiting 1 second before next request...
+[2025-09-08 19:24:16] Processing retailer 172/380: Johnson's TV & Appliances
+[2025-09-08 19:24:16]   - Geocoding: 116 6th Avenue, Cochrane, ON
+[2025-09-08 19:24:17]   - Geocoded successfully: 49.061646, -81.024881 (exact address)
+[2025-09-08 19:24:17]     Location: 116, 6th Avenue, Downtown Cochrane, Cochrane, Cochrane District, Northeastern Ontario, Ontario, P0L 1C0, Canada
+[2025-09-08 19:24:17]   - Added to database with ID: ret_093
+[2025-09-08 19:24:17]   - Waiting 1 second before next request...
+[2025-09-08 19:24:18] Processing retailer 173/380: Johnson Jewellers
+[2025-09-08 19:24:18]   - Geocoding: 157 Kent St. West, Lindsay, ON
+[2025-09-08 19:24:19]   - Geocoded successfully: 44.354492, -78.739075 (exact address)
+[2025-09-08 19:24:19]     Location: 157, Kent Street West, Downtown Lindsay, Lindsay, Kawartha Lakes, Central Ontario, Ontario, K9V 2Y5, Canada
+[2025-09-08 19:24:19]   - Added to database with ID: ret_094
+[2025-09-08 19:24:19]   - Waiting 1 second before next request...
+[2025-09-08 19:24:20] Processing retailer 174/380: Don Johnson Jewellers Limited
+[2025-09-08 19:24:20]   - Already exists, skipping
+[2025-09-08 19:24:20] Processing retailer 175/380: Jonathan's Gold & Diamonds
+[2025-09-08 19:24:20]   - Already exists, skipping
+[2025-09-08 19:24:20] Processing retailer 176/380: Jose Jewellery & Custom Designs
+[2025-09-08 19:24:20]   - Geocoding: 1688 152 St., South Surrey, BC
+[2025-09-08 19:24:21]   - Geocoded successfully: 49.032435, -122.800893 (exact address)
+[2025-09-08 19:24:21]     Location: 1688, 152 Street, Semiahmoo Town Centre, South Surrey, Surrey, Metro Vancouver Regional District, British Columbia, V4A 4N2, Canada
+[2025-09-08 19:24:21]   - Added to database with ID: ret_095
+[2025-09-08 19:24:21]   - Waiting 1 second before next request...
+[2025-09-08 19:24:22] Processing retailer 177/380: Joy Gift & Jewellery
+[2025-09-08 19:24:22]   - Missing required data (name/city/province), skipping
+[2025-09-08 19:24:22] Processing retailer 178/380: J S Jewellery Limited
+[2025-09-08 19:24:22]   - Already exists, skipping
+[2025-09-08 19:24:22] Processing retailer 179/380: Kassie's Jewellery
+[2025-09-08 19:24:22]   - Geocoding: 630 Main Street, Moosomin, SK
+[2025-09-08 19:24:23]   - Geocoded successfully: 50.13951, -101.672445 (exact address)
+[2025-09-08 19:24:23]     Location: Main Street, Moosomin, Moosomin No. 121, Saskatchewan, S0G 3N0, Canada
+[2025-09-08 19:24:23]   - Added to database with ID: ret_096
+[2025-09-08 19:24:23]   - Waiting 1 second before next request...
+[2025-09-08 19:24:24] Processing retailer 180/380: Keller's Jewellers Ltd
+[2025-09-08 19:24:24]   - Already exists, skipping
+[2025-09-08 19:24:24] Processing retailer 181/380: Ken's Goldsmithing Ltd
+[2025-09-08 19:24:24]   - Already exists, skipping
+[2025-09-08 19:24:24] Processing retailer 182/380: King's Fine Jewellery Limited
+[2025-09-08 19:24:24]   - Already exists, skipping
+[2025-09-08 19:24:24] Processing retailer 183/380: Knar Jewellery
+[2025-09-08 19:24:24]   - Geocoding: 56 St. George Square, Guelph, ON
+[2025-09-08 19:24:26]   - Geocoded successfully: 43.545934, -80.249271 (exact address)
+[2025-09-08 19:24:26]     Location: Saint George's Square, Guelph Downtown Neighbourhood Association, Guelph, Southwestern Ontario, Ontario, N1H 4E8, Canada
+[2025-09-08 19:24:26]   - Added to database with ID: ret_097
+[2025-09-08 19:24:26]   - Waiting 1 second before next request...
+[2025-09-08 19:24:27] Processing retailer 184/380: A. M. Korsten Jewellers
+[2025-09-08 19:24:27]   - Geocoding: 163 Broadway, Orangeville, ON
+[2025-09-08 19:24:28]   - Geocoded successfully: 43.919655, -80.0964 (exact address)
+[2025-09-08 19:24:28]     Location: 163, Broadway, Downtown Orangeville, Orangeville, Dufferin County, Central Ontario, Ontario, L9W 2B5, Canada
+[2025-09-08 19:24:28]   - Added to database with ID: ret_098
+[2025-09-08 19:24:28]   - Waiting 1 second before next request...
+[2025-09-08 19:24:29] Processing retailer 185/380: Krause H M Jewellers
+[2025-09-08 19:24:29]   - Geocoding: 2-3001-31st St., Vernon, BC
+[2025-09-08 19:24:31]   - Geocoded successfully: 50.266867, -119.271816 (city center)
+[2025-09-08 19:24:31]     Location: Vernon, Regional District of North Okanagan, British Columbia, Canada
+[2025-09-08 19:24:31]   - Added to database with ID: ret_099
+[2025-09-08 19:24:31]   - Waiting 1 second before next request...
+[2025-09-08 19:24:32] Processing retailer 186/380: Star-Set Jewellers
+[2025-09-08 19:24:32]   - Geocoding: 125 John St. N., Arnprior, ON
+[2025-09-08 19:24:32]   - Geocoded successfully: 45.43381, -76.353841 (exact address)
+[2025-09-08 19:24:32]     Location: Star-Set Jewellers, 125, John Street North, Downtown Arnprior, Arnprior, Renfrew County, Eastern Ontario, Ontario, K7S 2N5, Canada
+[2025-09-08 19:24:32]   - Added to database with ID: ret_100
+[2025-09-08 19:24:32]   - Waiting 1 second before next request...
+[2025-09-08 19:24:33] Processing retailer 187/380: Kurtis Sales Ltd.
+[2025-09-08 19:24:33]   - Already exists, skipping
+[2025-09-08 19:24:33] Processing retailer 188/380: LA Gold
+[2025-09-08 19:24:33]   - Already exists, skipping
+[2025-09-08 19:24:33] Processing retailer 189/380: Lair Victor Jewellers
+[2025-09-08 19:24:33]   - Geocoding: 238 Durham St. E., Walkerton, ON
+[2025-09-08 19:24:34]   - Geocoded successfully: 44.133401, -81.149395 (exact address)
+[2025-09-08 19:24:34]     Location: 238, Durham Street East, Walkerton, Brockton, Bruce County, Southwestern Ontario, Ontario, N0G 2V0, Canada
+[2025-09-08 19:24:34]   - Added to database with ID: ret_101
+[2025-09-08 19:24:34]   - Waiting 1 second before next request...
+[2025-09-08 19:24:35] Processing retailer 190/380: L'Artison Bijoutier
+[2025-09-08 19:24:35]   - Geocoding: 300 Boul. Des Acadiens, Bertrand, NB
+[2025-09-08 19:24:36]   - Geocoded successfully: 47.757088, -65.066678 (exact address)
+[2025-09-08 19:24:36]     Location: Boulevard des Acadiens, Paroisse de Caraquet, Bertrand, Ville de Rivière-du-Nord, Comté de Gloucester, New Brunswick, E1W 1A1, Canada
+[2025-09-08 19:24:36]   - Added to database with ID: ret_102
+[2025-09-08 19:24:36]   - Waiting 1 second before next request...
+[2025-09-08 19:24:37] Processing retailer 191/380: Lauener Bros. Jewellers Limited
+[2025-09-08 19:24:37]   - Already exists, skipping
+[2025-09-08 19:24:37] Processing retailer 192/380: Lawlor Jewelry
+[2025-09-08 19:24:37]   - Geocoding: 4710-50th Street, Bay 1, Stettler, AB
+[2025-09-08 19:24:39]   - Geocoded successfully: 52.322875, -112.71302 (city center)
+[2025-09-08 19:24:39]     Location: Town of Stettler, Alberta, Canada
+[2025-09-08 19:24:39]   - Added to database with ID: ret_103
+[2025-09-08 19:24:39]   - Waiting 1 second before next request...
+[2025-09-08 19:24:40] Processing retailer 193/380: Bill LeBoeuf Jewellers Of Barrie Limited
+[2025-09-08 19:24:40]   - Already exists, skipping
+[2025-09-08 19:24:40] Processing retailer 194/380: Bijouterie Leduc
+[2025-09-08 19:24:40]   - Geocoding: 144-A, Avenue Principale, Rouyn-Noranda, QC
+[2025-09-08 19:24:41]   - Geocoded successfully: 48.238676, -79.020047 (exact address)
+[2025-09-08 19:24:41]     Location: Avenue Principale, Centre-ville, Rouyn, Rouyn-Noranda, Abitibi-Témiscamingue, Québec, J9X 3C1, Canada
+[2025-09-08 19:24:41]   - Added to database with ID: ret_104
+[2025-09-08 19:24:41]   - Waiting 1 second before next request...
+[2025-09-08 19:24:42] Processing retailer 195/380: Lesser Bros. Jewellers Ltd
+[2025-09-08 19:24:42]   - Already exists, skipping
+[2025-09-08 19:24:42] Processing retailer 196/380: Lloyd's Jewellers Limited
+[2025-09-08 19:24:42]   - Already exists, skipping
+[2025-09-08 19:24:42] Processing retailer 197/380: Lougheed's Fine Jewellery
+[2025-09-08 19:24:42]   - Geocoding: 501 Dundas St., Woodstock, ON
+[2025-09-08 19:24:43]   - Geocoded successfully: 43.130327, -80.756083 (exact address)
+[2025-09-08 19:24:43]     Location: 501, Dundas Street, Woodstock, Oxford County, Ontario, N4S 7Y3, Canada
+[2025-09-08 19:24:43]   - Added to database with ID: ret_105
+[2025-09-08 19:24:43]   - Waiting 1 second before next request...
+[2025-09-08 19:24:44] Processing retailer 198/380: Lucy's Fine Jewellery
+[2025-09-08 19:24:44]   - Geocoding: 1865 Paris St. Unit B, Sudbury, ON
+[2025-09-08 19:24:46]   - Geocoded successfully: 46.49272, -80.991211 (city center)
+[2025-09-08 19:24:46]     Location: Greater Sudbury, Sudbury District, Northeastern Ontario, Ontario, Canada
+[2025-09-08 19:24:46]   - Added to database with ID: ret_106
+[2025-09-08 19:24:46]   - Waiting 1 second before next request...
+[2025-09-08 19:24:47] Processing retailer 199/380: Lunding Jewellers
+[2025-09-08 19:24:47]   - Geocoding: 602 Main Street, Swan River, MB
+[2025-09-08 19:24:50]   - Geocoded successfully: 52.104242, -101.277042 (exact address)
+[2025-09-08 19:24:50]     Location: Main Street West, Swan River, Manitoba, R0I 1Z0, Canada
+[2025-09-08 19:24:50]   - Added to database with ID: ret_107
+[2025-09-08 19:24:50]   - Waiting 1 second before next request...
+[2025-09-08 19:24:51] Processing retailer 200/380: Lyon's Jewellery
+[2025-09-08 19:24:51]   - Geocoding: 5017 - 50th Ave., Ponoka, AB
+[2025-09-08 19:24:53]   - Geocoded successfully: 52.679414, -113.587171 (city center)
+[2025-09-08 19:24:53]     Location: Ponoka, Town of Ponoka, Alberta, Canada
+[2025-09-08 19:24:53]   - Added to database with ID: ret_108
+[2025-09-08 19:24:53]   - Waiting 1 second before next request...
+[2025-09-08 19:24:54] Processing retailer 201/380: M. & R. Jewellery
+[2025-09-08 19:24:54]   - Geocoding: 37A Meredith St., Gore Bay, ON
+[2025-09-08 19:24:55]   - Geocoded successfully: 45.915603, -82.464354 (exact address)
+[2025-09-08 19:24:55]     Location: Meredith Street, Gore Bay, Manitoulin District, Northeastern Ontario, Ontario, P0P 1H0, Canada
+[2025-09-08 19:24:55]   - Added to database with ID: ret_109
+[2025-09-08 19:24:55]   - Waiting 1 second before next request...
+[2025-09-08 19:24:56] Processing retailer 202/380: Maddocks-Myers Jewellers Ltd
+[2025-09-08 19:24:56]   - Already exists, skipping
+[2025-09-08 19:24:56] Processing retailer 203/380: Bijouterie Markor
+[2025-09-08 19:24:56]   - Geocoding: 544 Rue St. Phillipe, Alfred, ON
+[2025-09-08 19:24:58]   - Geocoded successfully: 45.557961, -74.882597 (city center)
+[2025-09-08 19:24:58]     Location: Alfred, Alfred and Plantagenet, Prescott and Russell Counties, Eastern Ontario, Ontario, K0B 1A0, Canada
+[2025-09-08 19:24:58]   - Added to database with ID: ret_110
+[2025-09-08 19:24:58]   - Waiting 1 second before next request...
+[2025-09-08 19:24:59] Processing retailer 204/380: Markwart Jewellers
+[2025-09-08 19:24:59]   - Geocoding: 1111-100th Street, Tisdale, SK
+[2025-09-08 19:25:01]   - Geocoded successfully: 52.850059, -104.048767 (city center)
+[2025-09-08 19:25:01]     Location: Tisdale, Saskatchewan, S0E 1T0, Canada
+[2025-09-08 19:25:01]   - Added to database with ID: ret_111
+[2025-09-08 19:25:01]   - Waiting 1 second before next request...
+[2025-09-08 19:25:02] Processing retailer 205/380: Kevin Martin Fine Jewellery
+[2025-09-08 19:25:02]   - Geocoding: 37 King St. West, Dundas, ON
+[2025-09-08 19:25:03]   - Geocoded successfully: 43.266423, -79.955267 (exact address)
+[2025-09-08 19:25:03]     Location: 37, King Street West, Downtown Dundas, Central Business District, Hamilton, Golden Horseshoe, Ontario, L9H 1T5, Canada
+[2025-09-08 19:25:03]   - Added to database with ID: ret_112
+[2025-09-08 19:25:03]   - Waiting 1 second before next request...
+[2025-09-08 19:25:04] Processing retailer 206/380: Martin's Jewel & Gift Shop
+[2025-09-08 19:25:04]   - Already exists, skipping
+[2025-09-08 19:25:04] Processing retailer 207/380: Martin Rino Jeweller
+[2025-09-08 19:25:04]   - Geocoding: 116 Church St., Edmundston, NB
+[2025-09-08 19:25:05]   - Geocoded successfully: 47.357533, -68.231355 (exact address)
+[2025-09-08 19:25:05]     Location: Rue De L' Église, Ville d'Edmundston, Comté de Madawaska, New Brunswick, E7C 1E4, Canada
+[2025-09-08 19:25:05]   - Added to database with ID: ret_113
+[2025-09-08 19:25:05]   - Waiting 1 second before next request...
+[2025-09-08 19:25:06] Processing retailer 208/380: Mayhews Jewellery
+[2025-09-08 19:25:06]   - Geocoding: 11 Dundas Street E., Napanee, ON
+[2025-09-08 19:25:08]   - Geocoded successfully: 44.247664, -76.950198 (exact address)
+[2025-09-08 19:25:08]     Location: 11, Dundas Street East, Greater Napanee, Lennox and Addington County, Eastern Ontario, Ontario, K7R 1H6, Canada
+[2025-09-08 19:25:08]   - Added to database with ID: ret_114
+[2025-09-08 19:25:08]   - Waiting 1 second before next request...
+[2025-09-08 19:25:09] Processing retailer 209/380: Mayhew Jewellers
+[2025-09-08 19:25:09]   - Geocoding: 97 Main St., Picton, ON
+[2025-09-08 19:25:09]   - Geocoded successfully: 44.005725, -77.147224 (exact address)
+[2025-09-08 19:25:09]     Location: Bulk Barn, 97, Picton Main Street, Downtown Picton, Picton, Prince Edward County, Central Ontario, Ontario, K0K 2T0, Canada
+[2025-09-08 19:25:09]   - Added to database with ID: ret_115
+[2025-09-08 19:25:09]   - Waiting 1 second before next request...
+[2025-09-08 19:25:10] Processing retailer 210/380: McCullough Jewellers
+[2025-09-08 19:25:10]   - Missing required data (name/city/province), skipping
+[2025-09-08 19:25:10] Processing retailer 211/380: McGrath Diamonds Ltd.
+[2025-09-08 19:25:10]   - Already exists, skipping
+[2025-09-08 19:25:10] Processing retailer 212/380: McMichael Jewellers
+[2025-09-08 19:25:10]   - Geocoding: 58 Hastings Street North, Bancroft, ON
+[2025-09-08 19:25:11]   - Geocoded successfully: 45.058226, -77.854447 (exact address)
+[2025-09-08 19:25:11]     Location: 58, Hastings Street North, Bancroft, Hastings County, Central Ontario, Ontario, K0L 1C0, Canada
+[2025-09-08 19:25:11]   - Added to database with ID: ret_116
+[2025-09-08 19:25:11]   - Waiting 1 second before next request...
+[2025-09-08 19:25:12] Processing retailer 213/380: Mele Jewellers
+[2025-09-08 19:25:12]   - Geocoding: 1223 4th Street, Estevan, SK
+[2025-09-08 19:25:13]   - Geocoded successfully: 49.140393, -102.994949 (exact address)
+[2025-09-08 19:25:13]     Location: 4th Street, Estevan, Saskatchewan, S4A 0Z5, Canada
+[2025-09-08 19:25:13]   - Added to database with ID: ret_117
+[2025-09-08 19:25:13]   - Waiting 1 second before next request...
+[2025-09-08 19:25:14] Processing retailer 214/380: Meloche Sales
+[2025-09-08 19:25:14]   - Geocoding: 1267 Commissioners Rd. West, London, ON
+[2025-09-08 19:25:15]   - Geocoded successfully: 42.959966, -81.333156 (exact address)
+[2025-09-08 19:25:15]     Location: 1267, Commissioners Road West, London, Southwestern Ontario, Ontario, N6K 1C9, Canada
+[2025-09-08 19:25:15]   - Added to database with ID: ret_118
+[2025-09-08 19:25:15]   - Waiting 1 second before next request...
+[2025-09-08 19:25:16] Processing retailer 215/380: Mereski Jewellers (Ft Macleod)
+[2025-09-08 19:25:16]   - Geocoding: 227 - 24th Street, Fort McLeod, AB
+[2025-09-08 19:25:20]   - Geocoded successfully: 53.541744, -113.910688 (city center)
+[2025-09-08 19:25:20]     Location: Easy Liquor, 98, McLeod Avenue, Mobile City Estates, City Centre, City of Spruce Grove, Alberta, T7X 1R2, Canada
+[2025-09-08 19:25:20]   - Added to database with ID: ret_119
+[2025-09-08 19:25:20]   - Waiting 1 second before next request...
+[2025-09-08 19:25:21] Processing retailer 216/380: Michaels Jewellery Store
+[2025-09-08 19:25:21]   - Geocoding: 712 Conception Bay Hwy., Conception Bay S, NF
+[2025-09-08 19:25:24]   - Geocoding failed: No valid coordinates found for this location
+[2025-09-08 19:25:24] Processing retailer 217/380: Michael's Jewellers
+[2025-09-08 19:25:24]   - Geocoding: 141 - 1600 15th Ave., Prince George, BC
+[2025-09-08 19:25:30]   - Geocoded successfully: 53.912865, -122.74537 (city center)
+[2025-09-08 19:25:30]     Location: Prince George, Regional District of Fraser-Fort George, British Columbia, Canada
+[2025-09-08 19:25:30]   - Added to database with ID: ret_120
+[2025-09-08 19:25:30]   - Waiting 1 second before next request...
+[2025-09-08 19:25:31] Processing retailer 218/380: Mike's Jewellery Repair
+[2025-09-08 19:25:31]   - Geocoding: 98 Main St. West, Saint John, NB
+[2025-09-08 19:25:32]   - Geocoded successfully: 45.256585, -66.096335 (exact address)
+[2025-09-08 19:25:32]     Location: Mike's Jewelry Repair, 98, Main Street West, Greendale, Purdys Corner, City of Saint John, Saint John County, New Brunswick, E2M 3N4, Canada
+[2025-09-08 19:25:32]   - Added to database with ID: ret_121
+[2025-09-08 19:25:32]   - Waiting 1 second before next request...
+[2025-09-08 19:25:33] Processing retailer 219/380: Mini's Accessories
+[2025-09-08 19:25:33]   - Missing required data (name/city/province), skipping
+[2025-09-08 19:25:33] Processing retailer 220/380: Mitchell & Jewell
+[2025-09-08 19:25:33]   - Geocoding: 2-4910-45th Street, Red Deer, AB
+[2025-09-08 19:25:35]   - Geocoded successfully: 52.269063, -113.814146 (city center)
+[2025-09-08 19:25:35]     Location: City of Red Deer, Alberta, Canada
+[2025-09-08 19:25:35]   - Added to database with ID: ret_122
+[2025-09-08 19:25:35]   - Waiting 1 second before next request...
+[2025-09-08 19:25:36] Processing retailer 221/380: Mitton's Jewellery Store
+[2025-09-08 19:25:36]   - Geocoding: 10 Main Street E., Ridgetown, ON
+[2025-09-08 19:25:38]   - Geocoded successfully: 42.439235, -81.887051 (city center)
+[2025-09-08 19:25:38]     Location: Ridgetown, Chatham-Kent, Southwestern Ontario, Ontario, N0P 2C0, Canada
+[2025-09-08 19:25:38]   - Added to database with ID: ret_123
+[2025-09-08 19:25:38]   - Waiting 1 second before next request...
+[2025-09-08 19:25:39] Processing retailer 222/380: Monk's Jewellers Limited
+[2025-09-08 19:25:39]   - Already exists, skipping
+[2025-09-08 19:25:39] Processing retailer 223/380: Murdoch's Gem Shop Limited
+[2025-09-08 19:25:39]   - Already exists, skipping
+[2025-09-08 19:25:39] Processing retailer 224/380: Murphy P D Jewellery Limited
+[2025-09-08 19:25:39]   - Already exists, skipping
+[2025-09-08 19:25:39] Processing retailer 225/380: Murphy P D Jewellers Limited
+[2025-09-08 19:25:39]   - Already exists, skipping
+[2025-09-08 19:25:39] Processing retailer 226/380: Murphy P D Jewellery Limited
+[2025-09-08 19:25:39]   - Already exists, skipping
+[2025-09-08 19:25:39] Processing retailer 227/380: Murphy P D Jewellery Limited
+[2025-09-08 19:25:39]   - Already exists, skipping
+[2025-09-08 19:25:39] Processing retailer 228/380: Murphy P D Jewellers Limited
+[2025-09-08 19:25:39]   - Already exists, skipping
+[2025-09-08 19:25:39] Processing retailer 229/380: Muscat Jewellers
+[2025-09-08 19:25:39]   - Geocoding: 727 Talbot Street, St. Thomas, ON
+[2025-09-08 19:25:39]   - Geocoded successfully: 42.779061, -81.187629 (exact address)
+[2025-09-08 19:25:39]     Location: 727, Talbot Street, St. Thomas, Southwestern Ontario, Ontario, N5P 2X5, Canada
+[2025-09-08 19:25:39]   - Added to database with ID: ret_124
+[2025-09-08 19:25:39]   - Waiting 1 second before next request...
+[2025-09-08 19:25:40] Processing retailer 230/380: A & A Jewellery
+[2025-09-08 19:25:40]   - Geocoding: 1226 Fourth Street, Estevan, SK
+[2025-09-08 19:25:42]   - Geocoded successfully: 49.142808, -102.991075 (city center)
+[2025-09-08 19:25:42]     Location: Estevan, Saskatchewan, Canada
+[2025-09-08 19:25:42]   - Added to database with ID: ret_125
+[2025-09-08 19:25:42]   - Waiting 1 second before next request...
+[2025-09-08 19:25:43] Processing retailer 231/380: Nadon's Jewellers
+[2025-09-08 19:25:43]   - Geocoding: 25 Brunetville Rd., Kapuskasing, ON
+[2025-09-08 19:25:44]   - Geocoded successfully: 49.420241, -82.419259 (exact address)
+[2025-09-08 19:25:44]     Location: 25, Brunetville Road, Brunetville, Kapuskasing, Cochrane District, Northeastern Ontario, Ontario, P5N 2E7, Canada
+[2025-09-08 19:25:44]   - Added to database with ID: ret_126
+[2025-09-08 19:25:44]   - Waiting 1 second before next request...
+[2025-09-08 19:25:45] Processing retailer 232/380: A & A Jewellers
+[2025-09-08 19:25:45]   - Geocoding: 196 Henderson Hwy., Winnipeg, MN
+[2025-09-08 19:25:48]   - Geocoded successfully: 49.895537, -97.138458 (city center)
+[2025-09-08 19:25:48]     Location: Winnipeg, Manitoba, Canada
+[2025-09-08 19:25:48]   - Added to database with ID: ret_127
+[2025-09-08 19:25:48]   - Waiting 1 second before next request...
+[2025-09-08 19:25:49] Processing retailer 233/380: Nash Jewellers
+[2025-09-08 19:25:49]   - Geocoding: 370 Wonderland Rd. N., London, ON
+[2025-09-08 19:25:51]   - Geocoded successfully: 43.02376, -81.313305 (exact address)
+[2025-09-08 19:25:51]     Location: Wonderland Road North, London, Southwestern Ontario, Ontario, N6G 5C7, Canada
+[2025-09-08 19:25:51]   - Added to database with ID: ret_128
+[2025-09-08 19:25:51]   - Waiting 1 second before next request...
+[2025-09-08 19:25:52] Processing retailer 234/380: A & B Gem Jewellers Ltd.
+[2025-09-08 19:25:52]   - Already exists, skipping
+[2025-09-08 19:25:52] Processing retailer 235/380: Nasselquist Jewellers
+[2025-09-08 19:25:52]   - Geocoding: 68 Main Street, Suite A, Flin Flon, MB
+[2025-09-08 19:25:53]   - Geocoded successfully: 54.766903, -101.842518 (city center)
+[2025-09-08 19:25:53]     Location: Flin Flon, Manitoba, Canada
+[2025-09-08 19:25:53]   - Added to database with ID: ret_129
+[2025-09-08 19:25:53]   - Waiting 1 second before next request...
+[2025-09-08 19:25:54] Processing retailer 236/380: Adamas Goldsmiths Diamonds & Jewellery
+[2025-09-08 19:25:54]   - Geocoding: 5015 - 111 Street N.W., Edmonton, AB
+[2025-09-08 19:25:56]   - Geocoded successfully: 53.546206, -113.491241 (city center)
+[2025-09-08 19:25:56]     Location: Edmonton, Alberta, Canada
+[2025-09-08 19:25:56]   - Added to database with ID: ret_130
+[2025-09-08 19:25:56]   - Waiting 1 second before next request...
+[2025-09-08 19:25:57] Processing retailer 237/380: Nemeth Jewellers
+[2025-09-08 19:25:57]   - Geocoding: 150 - 115 Vermillion Road, Winnipeg, MB
+[2025-09-08 19:25:58]   - Geocoded successfully: 49.854038, -97.069975 (exact address)
+[2025-09-08 19:25:58]     Location: Vermillion Road, Southdale, St. Boniface, Winnipeg, Manitoba, R2J 4A9, Canada
+[2025-09-08 19:25:58]   - Added to database with ID: ret_131
+[2025-09-08 19:25:58]   - Waiting 1 second before next request...
+[2025-09-08 19:25:59] Processing retailer 238/380: C E Adams Ltd.
+[2025-09-08 19:25:59]   - Already exists, skipping
+[2025-09-08 19:25:59] Processing retailer 239/380: Nielsen's Watches & Jewellery
+[2025-09-08 19:25:59]   - Geocoding: 406 George St., Peterborough, ON
+[2025-09-08 19:26:01]   - Geocoded successfully: 44.306134, -78.319912 (exact address)
+[2025-09-08 19:26:01]     Location: Nielsen's Jewelry & Watches, 406, George Street North, Downtown Peterborough, Peterborough, Central Ontario, Ontario, K9H 2K7, Canada
+[2025-09-08 19:26:01]   - Added to database with ID: ret_132
+[2025-09-08 19:26:01]   - Waiting 1 second before next request...
+[2025-09-08 19:26:02] Processing retailer 240/380: Affinity Distinctive Jlry.
+[2025-09-08 19:26:02]   - Geocoding: 585 St. Clair Street, Chatham, ON
+[2025-09-08 19:26:03]   - Geocoded successfully: 42.424639, -82.211331 (exact address)
+[2025-09-08 19:26:03]     Location: VAPE ON THE RUN, 585, St. Clair Street, Chatham, Chatham-Kent, Southwestern Ontario, Ontario, N7L 4K6, Canada
+[2025-09-08 19:26:03]   - Added to database with ID: ret_133
+[2025-09-08 19:26:03]   - Waiting 1 second before next request...
+[2025-09-08 19:26:04] Processing retailer 241/380: Nifty Nook
+[2025-09-08 19:26:04]   - Geocoding: 131 Main Street, Melita, MB
+[2025-09-08 19:26:04]   - Geocoded successfully: 49.270743, -100.991655 (exact address)
+[2025-09-08 19:26:04]     Location: Main Street, Melita, Manitoba, R0M 1L0, Canada
+[2025-09-08 19:26:04]   - Added to database with ID: ret_134
+[2025-09-08 19:26:04]   - Waiting 1 second before next request...
+[2025-09-08 19:26:05] Processing retailer 242/380: Aitken's Jewellers
+[2025-09-08 19:26:05]   - Geocoding: 1450 Main St South, Dauphin, MN
+[2025-09-08 19:26:07]   - Geocoded successfully: 51.153509, -100.04425 (city center)
+[2025-09-08 19:26:07]     Location: Dauphin, Manitoba, Canada
+[2025-09-08 19:26:07]   - Added to database with ID: ret_135
+[2025-09-08 19:26:07]   - Waiting 1 second before next request...
+[2025-09-08 19:26:08] Processing retailer 243/380: Norton's Jewellers
+[2025-09-08 19:26:08]   - Missing required data (name/city/province), skipping
+[2025-09-08 19:26:08] Processing retailer 244/380: Al-Brite Manufacturing Jewellers Ltd.
+[2025-09-08 19:26:08]   - Already exists, skipping
+[2025-09-08 19:26:08] Processing retailer 245/380: Oakden Jewellers
+[2025-09-08 19:26:08]   - Geocoding: 47 Maple Avenue, Hamiota, MB
+[2025-09-08 19:26:09]   - Geocoded successfully: 50.178711, -100.594877 (exact address)
+[2025-09-08 19:26:09]     Location: Maple Avenue, Hamiota, Hamiota Municipality, Manitoba, R0M 0T0, Canada
+[2025-09-08 19:26:09]   - Added to database with ID: ret_136
+[2025-09-08 19:26:09]   - Waiting 1 second before next request...
+[2025-09-08 19:26:10] Processing retailer 246/380: Ted Allen's Jewellery (1977) Ltd.
+[2025-09-08 19:26:10]   - Already exists, skipping
+[2025-09-08 19:26:10] Processing retailer 247/380: Olde Country Jewellers & Gifts
+[2025-09-08 19:26:10]   - Geocoding: 12 King Street W., Hagersville, ON
+[2025-09-08 19:26:11]   - Geocoded successfully: 42.962414, -80.05238 (exact address)
+[2025-09-08 19:26:11]     Location: 12, King Street West, Hagersville, Haldimand County, Ontario, N0A 1H0, Canada
+[2025-09-08 19:26:11]   - Added to database with ID: ret_137
+[2025-09-08 19:26:11]   - Waiting 1 second before next request...
+[2025-09-08 19:26:12] Processing retailer 248/380: L. J. Alteen Ltd.
+[2025-09-08 19:26:12]   - Already exists, skipping
+[2025-09-08 19:26:12] Processing retailer 249/380: Ollivers Fine Jewellery Inc
+[2025-09-08 19:26:12]   - Already exists, skipping
+[2025-09-08 19:26:12] Processing retailer 250/380: Andersboda Jewellers
+[2025-09-08 19:26:12]   - Geocoding: 370 Centre Street, Shaunavon, SK
+[2025-09-08 19:26:12]   - Geocoded successfully: 49.651753, -108.410931 (exact address)
+[2025-09-08 19:26:12]     Location: Centre Street, Shaunavon, Saskatchewan, S0N 2M0, Canada
+[2025-09-08 19:26:12]   - Added to database with ID: ret_138
+[2025-09-08 19:26:13]   - Waiting 1 second before next request...
+[2025-09-08 19:26:14] Processing retailer 251/380: O'Neil's Fine Jewellery
+[2025-09-08 19:26:14]   - Geocoding: 29 John St. N., Aylmer, ON
+[2025-09-08 19:26:15]   - Geocoded successfully: 42.776285, -80.982871 (exact address)
+[2025-09-08 19:26:15]     Location: John Street North, Aylmer, Elgin County, Ontario, N5H 1J6, Canada
+[2025-09-08 19:26:15]   - Added to database with ID: ret_139
+[2025-09-08 19:26:15]   - Waiting 1 second before next request...
+[2025-09-08 19:26:16] Processing retailer 252/380: Annable Jewellery
+[2025-09-08 19:26:16]   - Geocoding: 513 Main St., Winchester, ON
+[2025-09-08 19:26:17]   - Geocoded successfully: 45.092374, -75.354973 (exact address)
+[2025-09-08 19:26:17]     Location: Main Street Clothing Company, 513, Main Street, Winchester, North Dundas, Stormont, Dundas and Glengarry Counties, Eastern Ontario, Ontario, K0C 2K0, Canada
+[2025-09-08 19:26:17]   - Added to database with ID: ret_140
+[2025-09-08 19:26:17]   - Waiting 1 second before next request...
+[2025-09-08 19:26:18] Processing retailer 253/380: Orion Jewellers
+[2025-09-08 19:26:18]   - Geocoding: 26 Queen Street N., Tilbury, ON
+[2025-09-08 19:26:19]   - Geocoded successfully: 42.261346, -82.432061 (exact address)
+[2025-09-08 19:26:19]     Location: Queen Street North, Tilbury, Chatham-Kent, Southwestern Ontario, Ontario, N0P 2L0, Canada
+[2025-09-08 19:26:19]   - Added to database with ID: ret_141
+[2025-09-08 19:26:19]   - Waiting 1 second before next request...
+[2025-09-08 19:26:20] Processing retailer 254/380: Anstett Jewellers Limited
+[2025-09-08 19:26:20]   - Already exists, skipping
+[2025-09-08 19:26:20] Processing retailer 255/380: Oslund Jewellers
+[2025-09-08 19:26:20]   - Geocoding: 203 - 311 Main Street, Penticton, BC
+[2025-09-08 19:26:22]   - Geocoded successfully: 49.475849, -119.582877 (exact address)
+[2025-09-08 19:26:22]     Location: Petro-Canada, 2020, Main Street, Penticton, Regional District of Okanagan-Similkameen, British Columbia, V2A 5A4, Canada
+[2025-09-08 19:26:22]   - Added to database with ID: ret_142
+[2025-09-08 19:26:22]   - Waiting 1 second before next request...
+[2025-09-08 19:26:23] Processing retailer 256/380: John Anthony Jewellers
+[2025-09-08 19:26:23]   - Geocoding: 370 Highland Road West, Kitchener, ON
+[2025-09-08 19:26:24]   - Geocoded successfully: 43.438518, -80.511955 (exact address)
+[2025-09-08 19:26:24]     Location: 370, Highland Road West, Victoria Hills, Kitchener, Region of Waterloo, Ontario, N2M 5J9, Canada
+[2025-09-08 19:26:24]   - Added to database with ID: ret_143
+[2025-09-08 19:26:24]   - Waiting 1 second before next request...
+[2025-09-08 19:26:25] Processing retailer 257/380: Paris Jewellers
+[2025-09-08 19:26:25]   - Geocoding: 54 Grand River St. North, Paris, ON
+[2025-09-08 19:26:26]   - Geocoded successfully: 43.193217, -80.384124 (exact address)
+[2025-09-08 19:26:26]     Location: 54, Grand River Street North, Paris, Brant County, Southwestern Ontario, Ontario, N3L 2M3, Canada
+[2025-09-08 19:26:26]   - Added to database with ID: ret_144
+[2025-09-08 19:26:26]   - Waiting 1 second before next request...
+[2025-09-08 19:26:27] Processing retailer 258/380: Apollos Jewellers
+[2025-09-08 19:26:27]   - Geocoding: 5120-A 50th Street, Barrhead, AB
+[2025-09-08 19:26:28]   - Geocoded successfully: 54.126236, -114.404412 (city center)
+[2025-09-08 19:26:28]     Location: Town of Barrhead, Alberta, Canada
+[2025-09-08 19:26:28]   - Added to database with ID: ret_145
+[2025-09-08 19:26:28]   - Waiting 1 second before next request...
+[2025-09-08 19:26:29] Processing retailer 259/380: Park Jewellery
+[2025-09-08 19:26:29]   - Geocoding: 1082 Cole Harbour Road, Dartmouth, NS
+[2025-09-08 19:26:32]   - Geocoded successfully: 44.67119, -63.500047 (exact address)
+[2025-09-08 19:26:32]     Location: Cole Harbour Road, Highland Acres, Woodlawn, Cole Harbour, Halifax Regional Municipality, Halifax County, Nova Scotia, B2V 1E5, Canada
+[2025-09-08 19:26:32]   - Added to database with ID: ret_146
+[2025-09-08 19:26:32]   - Waiting 1 second before next request...
+[2025-09-08 19:26:33] Processing retailer 260/380: Appelt's Jewellery Limited
+[2025-09-08 19:26:33]   - Already exists, skipping
+[2025-09-08 19:26:33] Processing retailer 261/380: N. R. Parks & Son Jewellers
+[2025-09-08 19:26:33]   - Geocoding: 26 - 2nd Ave. N., Yorkton, SK
+[2025-09-08 19:26:34]   - Geocoded successfully: 51.218708, -102.461415 (exact address)
+[2025-09-08 19:26:34]     Location: 2nd Avenue North, Yorkton, Saskatchewan, S3N 1C6, Canada
+[2025-09-08 19:26:34]   - Added to database with ID: ret_147
+[2025-09-08 19:26:34]   - Waiting 1 second before next request...
+[2025-09-08 19:26:35] Processing retailer 262/380: Appelt's Jewellery Limited
+[2025-09-08 19:26:35]   - Already exists, skipping
+[2025-09-08 19:26:35] Processing retailer 263/380: Butt E Watch & Clock Repair
+[2025-09-08 19:26:35]   - Already exists, skipping
+[2025-09-08 19:26:35] Processing retailer 264/380: Appelt's Jewellery
+[2025-09-08 19:26:35]   - Already exists, skipping
+[2025-09-08 19:26:35] Processing retailer 265/380: Penner's Jewellers
+[2025-09-08 19:26:35]   - Geocoding: 104 Main Street S., Kenora, ON
+[2025-09-08 19:26:36]   - Geocoded successfully: 49.76755, -94.490359 (exact address)
+[2025-09-08 19:26:36]     Location: 104, Main Street South, Kenora, Kenora District, Northwestern Ontario, Ontario, P9N 1S9, Canada
+[2025-09-08 19:26:36]   - Added to database with ID: ret_148
+[2025-09-08 19:26:36]   - Waiting 1 second before next request...
+[2025-09-08 19:26:37] Processing retailer 266/380: Appelt's Jewellery
+[2025-09-08 19:26:37]   - Already exists, skipping
+[2025-09-08 19:26:37] Processing retailer 267/380: Penner Fine Jewellers Inc.
+[2025-09-08 19:26:37]   - Already exists, skipping
+[2025-09-08 19:26:37] Processing retailer 268/380: Appelt's Jewellery (Steinbach) Limited
+[2025-09-08 19:26:37]   - Already exists, skipping
+[2025-09-08 19:26:37] Processing retailer 269/380: Pirates Cove, Jewels & Treasures
+[2025-09-08 19:26:37]   - Geocoding: 255 Main St, Liverpool, NS
+[2025-09-08 19:26:39]   - Geocoded successfully: 44.038347, -64.715897 (exact address)
+[2025-09-08 19:26:39]     Location: 255, Main Street, Liverpool, Region of Queens Municipality, Queens County, Nova Scotia, B0T 1K0, Canada
+[2025-09-08 19:26:39]   - Added to database with ID: ret_149
+[2025-09-08 19:26:39]   - Waiting 1 second before next request...
+[2025-09-08 19:26:40] Processing retailer 270/380: Appelt's Diamonds Limited
+[2025-09-08 19:26:40]   - Already exists, skipping
+[2025-09-08 19:26:40] Processing retailer 271/380: James O. Poag Jewellers
+[2025-09-08 19:26:40]   - Geocoding: 94 Frank Street, Strathroy, ON
+[2025-09-08 19:26:40]   - Geocoded successfully: 42.9576, -81.62549 (exact address)
+[2025-09-08 19:26:40]     Location: 94, Frank Street, Downtown Strathroy, Strathroy, Strathroy-Caradoc, Middlesex County, Ontario, N7G 2R3, Canada
+[2025-09-08 19:26:40]   - Added to database with ID: ret_150
+[2025-09-08 19:26:40]   - Waiting 1 second before next request...
+[2025-09-08 19:26:41] Processing retailer 272/380: Arctic Jewellers
+[2025-09-08 19:26:41]   - Geocoding: 26 5014-49th Street, Yellowknife, NT
+[2025-09-08 19:26:44]   - Geocoded successfully: 62.454081, -114.377385 (city center)
+[2025-09-08 19:26:44]     Location: Yellowknife, North Slave Region, Northwest Territories, Canada
+[2025-09-08 19:26:44]   - Added to database with ID: ret_151
+[2025-09-08 19:26:44]   - Waiting 1 second before next request...
+[2025-09-08 19:26:45] Processing retailer 273/380: Pommier Jewellers Ltd.
+[2025-09-08 19:26:45]   - Already exists, skipping
+[2025-09-08 19:26:45] Processing retailer 274/380: Assaly, Marks & Hopkins
+[2025-09-08 19:26:45]   - Geocoding: 207 Main Street, Melfort, SK
+[2025-09-08 19:26:46]   - Geocoded successfully: 52.873284, -104.604013 (exact address)
+[2025-09-08 19:26:46]     Location: Main Street, Melfort, Saskatchewan, Canada
+[2025-09-08 19:26:46]   - Added to database with ID: ret_152
+[2025-09-08 19:26:46]   - Waiting 1 second before next request...
+[2025-09-08 19:26:47] Processing retailer 275/380: Powers Jewellery
+[2025-09-08 19:26:47]   - Geocoding: 158 B Broadway Blvd., Grand Falls, NB
+[2025-09-08 19:26:51]   - Geocoded successfully: 47.051402, -67.736084 (exact address)
+[2025-09-08 19:26:51]     Location: Broadway Boulevard, Hennigar Corner, Paroisse de Drummond, Victoria County, New Brunswick, E2Z 2L9, Canada
+[2025-09-08 19:26:51]   - Added to database with ID: ret_153
+[2025-09-08 19:26:51]   - Waiting 1 second before next request...
+[2025-09-08 19:26:52] Processing retailer 276/380: Assaly, Marks & Hopkins
+[2025-09-08 19:26:52]   - Already exists, skipping
+[2025-09-08 19:26:52] Processing retailer 277/380: Prairie Gold Jewellery
+[2025-09-08 19:26:52]   - Already exists, skipping
+[2025-09-08 19:26:52] Processing retailer 278/380: Audrinna's Jlry Ltd.
+[2025-09-08 19:26:52]   - Already exists, skipping
+[2025-09-08 19:26:52] Processing retailer 279/380: Precision Jewellers
+[2025-09-08 19:26:52]   - Missing required data (name/city/province), skipping
+[2025-09-08 19:26:52] Processing retailer 280/380: Aurum Custom Goldsmithing
+[2025-09-08 19:26:52]   - Geocoding: 2-227 Birch Ave., 100 Mile House, BC
+[2025-09-08 19:26:54]   - Geocoded successfully: 51.651256, -121.287529 (exact address)
+[2025-09-08 19:26:54]     Location: Birch Avenue North, 100 Mile House, Cariboo Regional District, British Columbia, V0K 3E0, Canada
+[2025-09-08 19:26:54]   - Added to database with ID: ret_154
+[2025-09-08 19:26:54]   - Waiting 1 second before next request...
+[2025-09-08 19:26:55] Processing retailer 281/380: Preston Jewellers Ltd
+[2025-09-08 19:26:55]   - Already exists, skipping
+[2025-09-08 19:26:55] Processing retailer 282/380: Austen Jlrs. Ltd.
+[2025-09-08 19:26:55]   - Already exists, skipping
+[2025-09-08 19:26:55] Processing retailer 283/380: Purdy's Jewellery & Gems
+[2025-09-08 19:26:55]   - Geocoding: 61 Bolton Street, Bobcaygeon, ON
+[2025-09-08 19:26:56]   - Geocoded successfully: 44.53701, -78.544537 (exact address)
+[2025-09-08 19:26:56]     Location: Purdy's Jewellery & Gems, 61, Bolton Street, Bobcaygeon, Kawartha Lakes, Central Ontario, Ontario, K0M 1A0, Canada
+[2025-09-08 19:26:56]   - Added to database with ID: ret_155
+[2025-09-08 19:26:56]   - Waiting 1 second before next request...
+[2025-09-08 19:26:57] Processing retailer 284/380: Babcock Jewellers Dresden Limited
+[2025-09-08 19:26:57]   - Already exists, skipping
+[2025-09-08 19:26:57] Processing retailer 285/380: Rabethge's Jewellery
+[2025-09-08 19:26:57]   - Geocoding: 43 Bridge St. E., Campbellford, ON
+[2025-09-08 19:26:57]   - Geocoded successfully: 44.308062, -77.797348 (exact address)
+[2025-09-08 19:26:57]     Location: 43, Bridge Street East, Campbellford, Trent Hills, Northumberland County, Central Ontario, Ontario, K0L 1L0, Canada
+[2025-09-08 19:26:57]   - Added to database with ID: ret_156
+[2025-09-08 19:26:57]   - Waiting 1 second before next request...
+[2025-09-08 19:26:58] Processing retailer 286/380: Bailey & Sons Jewellers Ltd.
+[2025-09-08 19:26:58]   - Already exists, skipping
+[2025-09-08 19:26:58] Processing retailer 287/380: Reesor's Jewellery 1978 Limited
+[2025-09-08 19:26:58]   - Already exists, skipping
+[2025-09-08 19:26:58] Processing retailer 288/380: Bakelaar Jewellers
+[2025-09-08 19:26:58]   - Already exists, skipping
+[2025-09-08 19:26:58] Processing retailer 289/380: Reid D M Jewellers Limited
+[2025-09-08 19:26:58]   - Already exists, skipping
+[2025-09-08 19:26:58] Processing retailer 290/380: Bakelaar Jewellers Ltd
+[2025-09-08 19:26:58]   - Already exists, skipping
+[2025-09-08 19:26:58] Processing retailer 291/380: Reminiscence
+[2025-09-08 19:26:58]   - Geocoding: 10121 - 101 Ave., Lac La Biche, AB
+[2025-09-08 19:26:59]   - Geocoded successfully: 54.771277, -111.974006 (exact address)
+[2025-09-08 19:26:59]     Location: 101 Avenue, Hamlet of Lac la Biche, Lac La Biche County, Alberta, T0A 2C0, Canada
+[2025-09-08 19:26:59]   - Added to database with ID: ret_157
+[2025-09-08 19:26:59]   - Waiting 1 second before next request...
+[2025-09-08 19:27:00] Processing retailer 292/380: Banman Jewellers
+[2025-09-08 19:27:00]   - Geocoding: 9 Railway St. S., Pilot Mound, MB
+[2025-09-08 19:27:01]   - Geocoded successfully: 49.201207, -98.892299 (exact address)
+[2025-09-08 19:27:01]     Location: South Railway Street, Pilot Mound, Municipality of Louise, Manitoba, R0G 1P0, Canada
+[2025-09-08 19:27:01]   - Added to database with ID: ret_158
+[2025-09-08 19:27:01]   - Waiting 1 second before next request...
+[2025-09-08 19:27:02] Processing retailer 293/380: Richardson's Jewellery
+[2025-09-08 19:27:02]   - Geocoding: 34-6601-48th Ave., Camrose, AB
+[2025-09-08 19:27:05]   - Geocoded successfully: 53.013131, -112.840576 (city center)
+[2025-09-08 19:27:05]     Location: Camrose, Alberta, Canada
+[2025-09-08 19:27:05]   - Added to database with ID: ret_159
+[2025-09-08 19:27:05]   - Waiting 1 second before next request...
+[2025-09-08 19:27:06] Processing retailer 294/380: Barclay's Jewellers Of Oak Bay
+[2025-09-08 19:27:06]   - Geocoding: 106 - 2187 Oak Bay Ave., Victoria, BC
+[2025-09-08 19:27:08]   - Geocoded successfully: 48.428318, -123.364953 (city center)
+[2025-09-08 19:27:08]     Location: Victoria, Capital Regional District, British Columbia, Canada
+[2025-09-08 19:27:08]   - Added to database with ID: ret_160
+[2025-09-08 19:27:08]   - Waiting 1 second before next request...
+[2025-09-08 19:27:09] Processing retailer 295/380: Richardson's Jewellery
+[2025-09-08 19:27:09]   - Already exists, skipping
+[2025-09-08 19:27:09] Processing retailer 296/380: Barrington Place Jlrs.
+[2025-09-08 19:27:09]   - Geocoding: 3640 Main St., Barrington Passage, NS
+[2025-09-08 19:27:11]   - Geocoded successfully: 43.527261, -65.609164 (city center)
+[2025-09-08 19:27:11]     Location: Barrington Passage, Municipality of the District of Barrington, Shelburne County, Nova Scotia, B0W 1E0, Canada
+[2025-09-08 19:27:11]   - Added to database with ID: ret_161
+[2025-09-08 19:27:11]   - Waiting 1 second before next request...
+[2025-09-08 19:27:12] Processing retailer 297/380: Richardson's Jewellery
+[2025-09-08 19:27:12]   - Already exists, skipping
+[2025-09-08 19:27:12] Processing retailer 298/380: Barthau Jlrs. Ltd.
+[2025-09-08 19:27:12]   - Already exists, skipping
+[2025-09-08 19:27:12] Processing retailer 299/380: Richardson's Jewellery
+[2025-09-08 19:27:12]   - Already exists, skipping
+[2025-09-08 19:27:12] Processing retailer 300/380: Bateman Jewellers G W Limited
+[2025-09-08 19:27:12]   - Already exists, skipping
+[2025-09-08 19:27:12] Processing retailer 301/380: Roland's Jewelry 2008 Inc.
+[2025-09-08 19:27:12]   - Already exists, skipping
+[2025-09-08 19:27:12] Processing retailer 302/380: Bazlik E Jewellers Limited
+[2025-09-08 19:27:12]   - Already exists, skipping
+[2025-09-08 19:27:12] Processing retailer 303/380: Ouellette Trenton Holdings
+[2025-09-08 19:27:12]   - Geocoding: 105 Dundas Street W., Trenton, ON
+[2025-09-08 19:27:13]   - Geocoded successfully: 44.099814, -77.57775 (exact address)
+[2025-09-08 19:27:13]     Location: 105, Dundas Street West, Downtown Trenton, Trenton, Quinte West, Central Ontario, Ontario, K8V 3P0, Canada
+[2025-09-08 19:27:13]   - Added to database with ID: ret_162
+[2025-09-08 19:27:13]   - Waiting 1 second before next request...
+[2025-09-08 19:27:14] Processing retailer 304/380: Beaupre Jewellers
+[2025-09-08 19:27:14]   - Missing required data (name/city/province), skipping
+[2025-09-08 19:27:14] Processing retailer 305/380: Royalty Goldsmiths Inc.
+[2025-09-08 19:27:14]   - Already exists, skipping
+[2025-09-08 19:27:14] Processing retailer 306/380: Belk's Jewellers
+[2025-09-08 19:27:14]   - Geocoding: 148 Peel St., Unit 3A, New Hamburg, ON
+[2025-09-08 19:27:16]   - Geocoded successfully: 43.378422, -80.709772 (city center)
+[2025-09-08 19:27:16]     Location: New Hamburg, Wilmot, Region of Waterloo, Ontario, N3A 1K1, Canada
+[2025-09-08 19:27:16]   - Added to database with ID: ret_163
+[2025-09-08 19:27:16]   - Waiting 1 second before next request...
+[2025-09-08 19:27:17] Processing retailer 307/380: Rutledge Jewellers
+[2025-09-08 19:27:17]   - Geocoding: 82 Brock Street W., Uxbridge, ON
+[2025-09-08 19:27:18]   - Geocoded successfully: 44.108326, -79.124356 (exact address)
+[2025-09-08 19:27:18]     Location: 82, Brock Street West, Uxbridge, Durham Region, Golden Horseshoe, Ontario, L9P 1P5, Canada
+[2025-09-08 19:27:18]   - Added to database with ID: ret_164
+[2025-09-08 19:27:18]   - Waiting 1 second before next request...
+[2025-09-08 19:27:19] Processing retailer 308/380: Bennardo Jewellers Limited
+[2025-09-08 19:27:19]   - Already exists, skipping
+[2025-09-08 19:27:19] Processing retailer 309/380: Sandy's Jewellery & Gifts Ltd.
+[2025-09-08 19:27:19]   - Already exists, skipping
+[2025-09-08 19:27:19] Processing retailer 310/380: Blackburn Jewellers Limited
+[2025-09-08 19:27:19]   - Already exists, skipping
+[2025-09-08 19:27:19] Processing retailer 311/380: Sarini Fine Jewellery
+[2025-09-08 19:27:19]   - Geocoding: 106 Second Ave. S., Vulcan, AB
+[2025-09-08 19:27:21]   - Geocoded successfully: 50.401633, -113.263236 (city center)
+[2025-09-08 19:27:21]     Location: Town of Vulcan, Alberta, T0L 2B0, Canada
+[2025-09-08 19:27:21]   - Added to database with ID: ret_165
+[2025-09-08 19:27:21]   - Waiting 1 second before next request...
+[2025-09-08 19:27:22] Processing retailer 312/380: Bob's Watch Repair Limited
+[2025-09-08 19:27:22]   - Already exists, skipping
+[2025-09-08 19:27:22] Processing retailer 313/380: Savoy's Jewellers Limited
+[2025-09-08 19:27:22]   - Already exists, skipping
+[2025-09-08 19:27:22] Processing retailer 314/380: Bocian Jewellers
+[2025-09-08 19:27:22]   - Geocoding: 1235 Central Avenue, Prince Albert, SK
+[2025-09-08 19:27:23]   - Geocoded successfully: 53.182119, -105.754361 (exact address)
+[2025-09-08 19:27:23]     Location: Central Avenue, Prince Albert, Saskatchewan, S6V 8A4, Canada
+[2025-09-08 19:27:23]   - Added to database with ID: ret_166
+[2025-09-08 19:27:23]   - Waiting 1 second before next request...
+[2025-09-08 19:27:24] Processing retailer 315/380: Savoy's Jewellers Limited
+[2025-09-08 19:27:24]   - Already exists, skipping
+[2025-09-08 19:27:24] Processing retailer 316/380: Bogart's Jewellers H.O.
+[2025-09-08 19:27:24]   - Geocoding: 40 Aberdeen Ave., Suite 106, St. John's, NF
+[2025-09-08 19:27:27]   - Geocoding failed: No valid coordinates found for this location
+[2025-09-08 19:27:27] Processing retailer 317/380: J.K. Schmidt Jewellers
+[2025-09-08 19:27:27]   - Geocoding: 2477C Main Street, Westbank, BC
+[2025-09-08 19:27:27]   - Geocoded successfully: 49.828098, -119.644052 (exact address)
+[2025-09-08 19:27:27]     Location: Okanagan Highway, Westbank, Glenrosa, West Kelowna, Westbank First Nation #9, Regional District of Central Okanagan, British Columbia, V4T 2J6, Canada
+[2025-09-08 19:27:27]   - Added to database with ID: ret_167
+[2025-09-08 19:27:27]   - Waiting 1 second before next request...
+[2025-09-08 19:27:28] Processing retailer 318/380: Bogart's Jewellers #10
+[2025-09-08 19:27:28]   - Missing required data (name/city/province), skipping
+[2025-09-08 19:27:28] Processing retailer 319/380: Scott's Jewellers
+[2025-09-08 19:27:28]   - Geocoding: Unit 1440 - 12th Ave., Kindersley, SK
+[2025-09-08 19:27:30]   - Geocoded successfully: 51.468709, -109.158136 (city center)
+[2025-09-08 19:27:30]     Location: Kindersley, Saskatchewan, S0L 1S0, Canada
+[2025-09-08 19:27:30]   - Added to database with ID: ret_168
+[2025-09-08 19:27:30]   - Waiting 1 second before next request...
+[2025-09-08 19:27:31] Processing retailer 320/380: Bogart's Jewellers #15
+[2025-09-08 19:27:31]   - Geocoding: 134 Kent Street, Charlottetown, PE
+[2025-09-08 19:27:31]   - Geocoded successfully: 46.235523, -63.128425 (exact address)
+[2025-09-08 19:27:31]     Location: Vogue Optical, 134, Kent Street, Downtown, Charlottetown, City of Charlottetown, Queens County, Prince Edward Island, C1A 1P2, Canada
+[2025-09-08 19:27:31]   - Added to database with ID: ret_169
+[2025-09-08 19:27:31]   - Waiting 1 second before next request...
+[2025-09-08 19:27:32] Processing retailer 321/380: Seaforth Jewellers
+[2025-09-08 19:27:32]   - Geocoding: 47 Main Street South, Seaforth, ON
+[2025-09-08 19:27:33]   - Geocoded successfully: 43.552396, -81.394574 (exact address)
+[2025-09-08 19:27:33]     Location: Seaforth Jewellers, 47, Main Street South, Downtown Seaforth, Seaforth, Huron East, Huron County, Ontario, N0K 1W0, Canada
+[2025-09-08 19:27:33]   - Added to database with ID: ret_170
+[2025-09-08 19:27:33]   - Waiting 1 second before next request...
+[2025-09-08 19:27:34] Processing retailer 322/380: Bogart's Jewellers #20
+[2025-09-08 19:27:34]   - Geocoding: 21 Merchant Drive, Mount Pearl, NF
+[2025-09-08 19:27:35]   - Geocoding failed: No valid coordinates found for this location
+[2025-09-08 19:27:35] Processing retailer 323/380: Seth Tobin Jewellers
+[2025-09-08 19:27:35]   - Geocoding: 101 - 2324 Ferry Avenue, Prince George, BC
+[2025-09-08 19:27:39]   - Geocoded successfully: 53.912865, -122.74537 (city center)
+[2025-09-08 19:27:39]     Location: Prince George, Regional District of Fraser-Fort George, British Columbia, Canada
+[2025-09-08 19:27:39]   - Added to database with ID: ret_171
+[2025-09-08 19:27:39]   - Waiting 1 second before next request...
+[2025-09-08 19:27:40] Processing retailer 324/380: Bogart's Jewellers #30
+[2025-09-08 19:27:40]   - Missing required data (name/city/province), skipping
+[2025-09-08 19:27:40] Processing retailer 325/380: Sharon's Jewellery & Watch Repair
+[2025-09-08 19:27:40]   - Already exists, skipping
+[2025-09-08 19:27:40] Processing retailer 326/380: Bogart's Jewellers #40
+[2025-09-08 19:27:40]   - Geocoding: 132 Bennett Drive, Gander, NF
+[2025-09-08 19:27:42]   - Geocoding failed: No valid coordinates found for this location
+[2025-09-08 19:27:42] Processing retailer 327/380: Shaw W J Jewellery Limited
+[2025-09-08 19:27:42]   - Already exists, skipping
+[2025-09-08 19:27:42] Processing retailer 328/380: Bogart's Jewellers #50
+[2025-09-08 19:27:42]   - Already exists, skipping
+[2025-09-08 19:27:42] Processing retailer 329/380: SherRing Goldsmiths Ltd.
+[2025-09-08 19:27:42]   - Already exists, skipping
+[2025-09-08 19:27:42] Processing retailer 330/380: Bogart's Jewellers #70
+[2025-09-08 19:27:42]   - Geocoding: 40 Aberdeen Ave., Suite 105, St. John's, NF
+[2025-09-08 19:27:46]   - Geocoding failed: No valid coordinates found for this location
+[2025-09-08 19:27:46] Processing retailer 331/380: Simone Jewellers
+[2025-09-08 19:27:46]   - Geocoding: 107 - 1983 Columbian Ave., Castlegar, BC
+[2025-09-08 19:27:47]   - Geocoded successfully: 49.316171, -117.663574 (city center)
+[2025-09-08 19:27:47]     Location: Castlegar, Regional District of Central Kootenay, British Columbia, Canada
+[2025-09-08 19:27:47]   - Added to database with ID: ret_172
+[2025-09-08 19:27:47]   - Waiting 1 second before next request...
+[2025-09-08 19:27:48] Processing retailer 332/380: Bogart's Jewellers #80
+[2025-09-08 19:27:48]   - Missing required data (name/city/province), skipping
+[2025-09-08 19:27:48] Processing retailer 333/380: Simon Imports Ltd
+[2025-09-08 19:27:48]   - Already exists, skipping
+[2025-09-08 19:27:48] Processing retailer 334/380: Boven's Jewellery & Giftware
+[2025-09-08 19:27:48]   - Geocoding: 4916A - 50 Street, Athabasca, AB
+[2025-09-08 19:27:49]   - Geocoded successfully: 54.712018, -113.289311 (exact address)
+[2025-09-08 19:27:49]     Location: 50 Street, Town of Athabasca, Alberta, T9S 1A3, Canada
+[2025-09-08 19:27:49]   - Added to database with ID: ret_173
+[2025-09-08 19:27:49]   - Waiting 1 second before next request...
+[2025-09-08 19:27:50] Processing retailer 335/380: Simpson J B Jewellers Inc
+[2025-09-08 19:27:50]   - Already exists, skipping
+[2025-09-08 19:27:50] Processing retailer 336/380: Bow Valley Jewellers
+[2025-09-08 19:27:50]   - Geocoding: 205 5th Ave. S. W., Calgary, AB
+[2025-09-08 19:27:53]   - Geocoded successfully: 51.045606, -114.057541 (city center)
+[2025-09-08 19:27:53]     Location: Calgary, Alberta, Canada
+[2025-09-08 19:27:53]   - Added to database with ID: ret_174
+[2025-09-08 19:27:53]   - Waiting 1 second before next request...
+[2025-09-08 19:27:54] Processing retailer 337/380: Skyway Jewelers
+[2025-09-08 19:27:54]   - Geocoding: 57 1515 Rebecca St., Oakville, ON
+[2025-09-08 19:27:56]   - Geocoded successfully: 43.447436, -79.666672 (city center)
+[2025-09-08 19:27:56]     Location: Oakville, Halton Region, Golden Horseshoe, Ontario, Canada
+[2025-09-08 19:27:56]   - Added to database with ID: ret_175
+[2025-09-08 19:27:56]   - Waiting 1 second before next request...
+[2025-09-08 19:27:57] Processing retailer 338/380: J. C. Bradley Jewellers
+[2025-09-08 19:27:57]   - Geocoding: 4900 - 27th Street, Vernon, BC
+[2025-09-08 19:27:59]   - Geocoded successfully: 50.274216, -119.266632 (exact address)
+[2025-09-08 19:27:59]     Location: 27th Street, Vernon, Regional District of North Okanagan, British Columbia, V1T 4Y0, Canada
+[2025-09-08 19:27:59]   - Added to database with ID: ret_176
+[2025-09-08 19:27:59]   - Waiting 1 second before next request...
+[2025-09-08 19:28:00] Processing retailer 339/380: W Smith & Co. Fine Jewellers
+[2025-09-08 19:28:00]   - Missing required data (name/city/province), skipping
+[2025-09-08 19:28:00] Processing retailer 340/380: Brancier Jewellers
+[2025-09-08 19:28:00]   - Geocoding: 55 Ontario Street, Milton, ON
+[2025-09-08 19:28:01]   - Geocoded successfully: 43.517423, -79.874612 (exact address)
+[2025-09-08 19:28:01]     Location: RBC, 55, Ontario Street South, Milton, Halton Region, Golden Horseshoe, Ontario, L9T 5G2, Canada
+[2025-09-08 19:28:01]   - Added to database with ID: ret_177
+[2025-09-08 19:28:01]   - Waiting 1 second before next request...
+[2025-09-08 19:28:02] Processing retailer 341/380: Sokanne's
+[2025-09-08 19:28:02]   - Geocoding: 284 King Street, Spruce Grove, AB
+[2025-09-08 19:28:03]   - Geocoded successfully: 53.543875, -113.899741 (exact address)
+[2025-09-08 19:28:03]     Location: 284;286;288;290;292, King Street, Shep Industrial, City Centre, City of Spruce Grove, Alberta, T7X 2C6, Canada
+[2025-09-08 19:28:03]   - Added to database with ID: ret_178
+[2025-09-08 19:28:03]   - Waiting 1 second before next request...
+[2025-09-08 19:28:04] Processing retailer 342/380: The Breeze Gallery & Goldsmith
+[2025-09-08 19:28:04]   - Geocoding: 328 Reid Street, Quesnel, BC
+[2025-09-08 19:28:04]   - Geocoded successfully: 52.97781, -122.496511 (exact address)
+[2025-09-08 19:28:04]     Location: 328, Reid Street, West Quesnel, Quesnel, Cariboo Regional District, British Columbia, V2J 2M0, Canada
+[2025-09-08 19:28:04]   - Added to database with ID: ret_179
+[2025-09-08 19:28:04]   - Waiting 1 second before next request...
+[2025-09-08 19:28:05] Processing retailer 343/380: Sonya Roe Jewellers Inc
+[2025-09-08 19:28:05]   - Already exists, skipping
+[2025-09-08 19:28:05] Processing retailer 344/380: Brennans Jewellers Limited
+[2025-09-08 19:28:05]   - Already exists, skipping
+[2025-09-08 19:28:05] Processing retailer 345/380: Spencer's Store
+[2025-09-08 19:28:05]   - Missing required data (name/city/province), skipping
+[2025-09-08 19:28:05] Processing retailer 346/380: Brockie's Jewellers
+[2025-09-08 19:28:05]   - Geocoding: 255 Scott St., Fort Frances, ON
+[2025-09-08 19:28:08]   - Geocoded successfully: 48.610055, -93.376141 (exact address)
+[2025-09-08 19:28:08]     Location: Scott Street, Fort Frances, Rainy River District, Northwestern Ontario, Ontario, P9A 1J4, Canada
+[2025-09-08 19:28:08]   - Added to database with ID: ret_180
+[2025-09-08 19:28:08]   - Waiting 1 second before next request...
+[2025-09-08 19:28:09] Processing retailer 347/380: Spicer Cole Fine Jlrs
+[2025-09-08 19:28:09]   - Geocoding: 1381 Regent St., Comp 187, Fredericton, NB
+[2025-09-08 19:28:12]   - Geocoded successfully: 45.963233, -66.643236 (city center)
+[2025-09-08 19:28:12]     Location: City of Fredericton, York County, New Brunswick, Canada
+[2025-09-08 19:28:12]   - Added to database with ID: ret_181
+[2025-09-08 19:28:12]   - Waiting 1 second before next request...
+[2025-09-08 19:28:13] Processing retailer 348/380: A P Brown Jewellers Limited
+[2025-09-08 19:28:13]   - Already exists, skipping
+[2025-09-08 19:28:13] Processing retailer 349/380: Star-Set Jewellers
+[2025-09-08 19:28:13]   - Already exists, skipping
+[2025-09-08 19:28:13] Processing retailer 350/380: Brown F J & Son
+[2025-09-08 19:28:13]   - Geocoding: 36 Main Street, Cambridge, ON
+[2025-09-08 19:28:17]   - Geocoded successfully: 43.359009, -80.314436 (exact address)
+[2025-09-08 19:28:17]     Location: 36, Main Street, Downtown Galt/Cambridge, Galt, Cambridge, Region of Waterloo, Southwestern Ontario, Ontario, N1R 3B2, Canada
+[2025-09-08 19:28:17]   - Added to database with ID: ret_182
+[2025-09-08 19:28:17]   - Waiting 1 second before next request...
+[2025-09-08 19:28:18] Processing retailer 351/380: Steadman O R & Son
+[2025-09-08 19:28:18]   - Geocoding: 29 Front St. South, Thorold, ON
+[2025-09-08 19:28:18]   - Geocoded successfully: 43.124109, -79.200776 (exact address)
+[2025-09-08 19:28:18]     Location: 29, Front Street South, Downtown Thorold, Thorold, Niagara Region, Golden Horseshoe, Ontario, L2V 1P1, Canada
+[2025-09-08 19:28:18]   - Added to database with ID: ret_183
+[2025-09-08 19:28:18]   - Waiting 1 second before next request...
+[2025-09-08 19:28:19] Processing retailer 352/380: R. Brown Ltd.
+[2025-09-08 19:28:19]   - Already exists, skipping
+[2025-09-08 19:28:19] Processing retailer 353/380: Stekelbos Watch & Clock Repairs
+[2025-09-08 19:28:19]   - Already exists, skipping
+[2025-09-08 19:28:19] Processing retailer 354/380: Bruinix Jewellers Limited
+[2025-09-08 19:28:19]   - Already exists, skipping
+[2025-09-08 19:28:19] Processing retailer 355/380: Stephen's Jewellers
+[2025-09-08 19:28:19]   - Geocoding: 384 Frederick St., Kitchener, ON
+[2025-09-08 19:28:21]   - Geocoded successfully: 43.449439, -80.487407 (exact address)
+[2025-09-08 19:28:21]     Location: Frederick Street, Downtown, City Commercial Core, Kitchener, Region of Waterloo, Southwestern Ontario, Ontario, N2H 6M7, Canada
+[2025-09-08 19:28:21]   - Added to database with ID: ret_184
+[2025-09-08 19:28:21]   - Waiting 1 second before next request...
+[2025-09-08 19:28:22] Processing retailer 356/380: Brunel Jewellers
+[2025-09-08 19:28:22]   - Geocoding: 2 Poyntz St., Unit 125, Penetanguishene, ON
+[2025-09-08 19:28:24]   - Geocoded successfully: 44.768804, -79.933949 (city center)
+[2025-09-08 19:28:24]     Location: Penetanguishene, Simcoe County, Central Ontario, Ontario, Canada
+[2025-09-08 19:28:24]   - Added to database with ID: ret_185
+[2025-09-08 19:28:24]   - Waiting 1 second before next request...
+[2025-09-08 19:28:25] Processing retailer 357/380: Stevens Jewellers
+[2025-09-08 19:28:25]   - Geocoding: 5014 50th Avenue, Olds, AB
+[2025-09-08 19:28:26]   - Geocoded successfully: 51.792374, -114.113037 (city center)
+[2025-09-08 19:28:26]     Location: Olds, Town of Olds, Alberta, T4H 1H7, Canada
+[2025-09-08 19:28:26]   - Added to database with ID: ret_186
+[2025-09-08 19:28:26]   - Waiting 1 second before next request...
+[2025-09-08 19:28:27] Processing retailer 358/380: Bryant's Jewellers Limited
+[2025-09-08 19:28:27]   - Already exists, skipping
+[2025-09-08 19:28:27] Processing retailer 359/380: Stokes on Trent
+[2025-09-08 19:28:27]   - Geocoding: 8 Colborne, Fenelon Falls, ON
+[2025-09-08 19:28:28]   - Geocoded successfully: 44.536176, -78.736649 (exact address)
+[2025-09-08 19:28:28]     Location: 8, Colborne Street, Downtown Fenelon Falls, Fenelon Falls, Kawartha Lakes, Central Ontario, Ontario, K0M 1N0, Canada
+[2025-09-08 19:28:28]   - Added to database with ID: ret_187
+[2025-09-08 19:28:28]   - Waiting 1 second before next request...
+[2025-09-08 19:28:29] Processing retailer 360/380: Burkes Jewellers
+[2025-09-08 19:28:29]   - Geocoding: 69 Hastings Street, Bancroft, ON
+[2025-09-08 19:28:30]   - Geocoded successfully: 45.058613, -77.854259 (exact address)
+[2025-09-08 19:28:30]     Location: 69, Hastings Street North, Bancroft, Hastings County, Central Ontario, Ontario, K0L 1C0, Canada
+[2025-09-08 19:28:30]   - Added to database with ID: ret_188
+[2025-09-08 19:28:30]   - Waiting 1 second before next request...
+[2025-09-08 19:28:31] Processing retailer 361/380: Sugold Jewellers
+[2025-09-08 19:28:31]   - Geocoding: 107 Prescott St., Kemptville, ON
+[2025-09-08 19:28:31]   - Geocoded successfully: 45.016002, -75.64546 (exact address)
+[2025-09-08 19:28:31]     Location: 107, Prescott Street, Kemptville, North Grenville, Leeds and Grenville Counties, Eastern Ontario, Ontario, K0G 1J0, Canada
+[2025-09-08 19:28:31]   - Added to database with ID: ret_189
+[2025-09-08 19:28:31]   - Waiting 1 second before next request...
+[2025-09-08 19:28:32] Processing retailer 362/380: George H Burke Jlrs. Ltd.
+[2025-09-08 19:28:32]   - Already exists, skipping
+[2025-09-08 19:28:32] Processing retailer 363/380: Superior Jewellers
+[2025-09-08 19:28:32]   - Geocoding: 2 Hemlo Drive, Marathon, ON
+[2025-09-08 19:28:33]   - Geocoded successfully: 48.721575, -86.371976 (exact address)
+[2025-09-08 19:28:33]     Location: 2, Hemlo Drive, Marathon, Thunder Bay District, Northwestern Ontario, Ontario, P0T 2E0, Canada
+[2025-09-08 19:28:33]   - Added to database with ID: ret_190
+[2025-09-08 19:28:33]   - Waiting 1 second before next request...
+[2025-09-08 19:28:34] Processing retailer 364/380: Burns Jewellers
+[2025-09-08 19:28:34]   - Geocoding: 66 Foster St., Perth, ON
+[2025-09-08 19:28:35]   - Geocoded successfully: 44.900754, -76.251689 (exact address)
+[2025-09-08 19:28:35]     Location: 66, Foster Street, Perth Historic Downtown, Perth, Lanark County, Eastern Ontario, Ontario, K7H 2M8, Canada
+[2025-09-08 19:28:35]   - Added to database with ID: ret_191
+[2025-09-08 19:28:35]   - Waiting 1 second before next request...
+[2025-09-08 19:28:36] Processing retailer 365/380: Swanson Jewellers
+[2025-09-08 19:28:36]   - Geocoding: 83 Ontario St., Stratford, ON
+[2025-09-08 19:28:37]   - Geocoded successfully: 43.371336, -80.983359 (exact address)
+[2025-09-08 19:28:37]     Location: 83, Ontario Street, Stratford, Southwestern Ontario, Ontario, N5A 2L2, Canada
+[2025-09-08 19:28:37]   - Added to database with ID: ret_192
+[2025-09-08 19:28:37]   - Waiting 1 second before next request...
+[2025-09-08 19:28:38] Processing retailer 366/380: Burns Jewellers
+[2025-09-08 19:28:38]   - Already exists, skipping
+[2025-09-08 19:28:38] Processing retailer 367/380: Tany's Jewellery
+[2025-09-08 19:28:38]   - Missing required data (name/city/province), skipping
+[2025-09-08 19:28:38] Processing retailer 368/380: Busch Jewellers
+[2025-09-08 19:28:38]   - Geocoding: 148 Third Ave, Timmins, ON
+[2025-09-08 19:28:41]   - Geocoded successfully: 48.477473, -81.330414 (city center)
+[2025-09-08 19:28:41]     Location: Timmins, Cochrane District, Northeastern Ontario, Ontario, Canada
+[2025-09-08 19:28:41]   - Added to database with ID: ret_193
+[2025-09-08 19:28:41]   - Waiting 1 second before next request...
+[2025-09-08 19:28:42] Processing retailer 369/380: Taylor's Jewellers
+[2025-09-08 19:28:42]   - Geocoding: 134 Kent Street, Charlottetown, PE
+[2025-09-08 19:28:43]   - Geocoded successfully: 46.235523, -63.128425 (exact address)
+[2025-09-08 19:28:43]     Location: Vogue Optical, 134, Kent Street, Downtown, Charlottetown, City of Charlottetown, Queens County, Prince Edward Island, C1A 1P2, Canada
+[2025-09-08 19:28:43]   - Added to database with ID: ret_194
+[2025-09-08 19:28:43]   - Waiting 1 second before next request...
+[2025-09-08 19:28:44] Processing retailer 370/380: Caine's Jewellers Ltd
+[2025-09-08 19:28:44]   - Already exists, skipping
+[2025-09-08 19:28:44] Processing retailer 371/380: D. C. Taylor Jewellers
+[2025-09-08 19:28:44]   - Geocoding: 977 - 2nd Ave. E., Owen Sound, ON
+[2025-09-08 19:28:45]   - Geocoded successfully: 44.567238, -80.943056 (exact address)
+[2025-09-08 19:28:45]     Location: 977, 2nd Avenue East, Owen Sound, Grey County, Southwestern Ontario, Ontario, N4K 2H5, Canada
+[2025-09-08 19:28:45]   - Added to database with ID: ret_195
+[2025-09-08 19:28:45]   - Waiting 1 second before next request...
+[2025-09-08 19:28:46] Processing retailer 372/380: Caines Jewellers Ltd.
+[2025-09-08 19:28:46]   - Already exists, skipping
+[2025-09-08 19:28:46] Processing retailer 373/380: D. C. Taylor Jewellers
+[2025-09-08 19:28:46]   - Already exists, skipping
+[2025-09-08 19:28:46] Processing retailer 374/380: Calgary Jewellery Ltd
+[2025-09-08 19:28:46]   - Already exists, skipping
+[2025-09-08 19:28:46] Processing retailer 375/380: Cameron's Jewellery Limited
+[2025-09-08 19:28:46]   - Already exists, skipping
+[2025-09-08 19:28:46] Processing retailer 376/380: Taylor's Jewellers
+[2025-09-08 19:28:46]   - Already exists, skipping
+[2025-09-08 19:28:46] Processing retailer 377/380: Cartel Jewels
+[2025-09-08 19:28:46]   - Geocoding: 161-11900 Haney Place Mall, Maple Ridge, BC
+[2025-09-08 19:28:47]   - Geocoded successfully: 49.219735, -122.599707 (city center)
+[2025-09-08 19:28:47]     Location: Maple Ridge, Metro Vancouver Regional District, British Columbia, Canada
+[2025-09-08 19:28:47]   - Added to database with ID: ret_196
+[2025-09-08 19:28:47]   - Waiting 1 second before next request...
+[2025-09-08 19:28:48] Processing retailer 378/380: Bob Thompson Jewellery & Watch Repairs
+[2025-09-08 19:28:48]   - Already exists, skipping
+[2025-09-08 19:28:48] Processing retailer 379/380: Carters Jewellers Limited
+[2025-09-08 19:28:48]   - Already exists, skipping
+[2025-09-08 19:28:48] Processing retailer 380/380: Thong's Jewellery & Repair Limited
+[2025-09-08 19:28:48]   - Already exists, skipping
+[2025-09-08 19:28:48] 
+=== SYNC COMPLETE ===
+[2025-09-08 19:28:48] Total retailers in txt file: 380
+[2025-09-08 19:28:48] Already existed: 161
+[2025-09-08 19:28:48] Geocoding successful: 193
+[2025-09-08 19:28:48] Geocoding failed: 5
+[2025-09-08 19:28:48] Save failed: 0
+[2025-09-08 19:28:48] Successfully added: 193

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form Test</title>
+</head>
+<body>
+    <h1>Contact Form Test</h1>
+    
+    <?php
+    // Start session properly
+    ini_set('session.cookie_httponly', 1);
+    ini_set('session.use_only_cookies', 1);
+    session_start();
+    
+    // Include and render the contact form
+    include 'contact_form.php';
+    renderContactForm('Test Contact Form');
+    ?>
+    
+    <hr>
+    <h2>Debug Information</h2>
+    <p><strong>Session ID:</strong> <?php echo session_id(); ?></p>
+    <p><strong>Image URL:</strong> create.php?<?php echo session_name() . '=' . session_id(); ?></p>
+    <p><strong>Global Captcha:</strong> <?php echo isset($GLOBALS['CURRENT_CAPTCHA']) ? $GLOBALS['CURRENT_CAPTCHA'] : 'Not set'; ?></p>
+    
+</body>
+</html>

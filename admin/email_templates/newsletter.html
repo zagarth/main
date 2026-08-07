@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter - {{COMPANY_NAME}}</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f4f4f4;">
+    <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f4f4f4;">
+        <tr>
+            <td align="center" style="padding: 20px 0;">
+                <table width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <!-- Header -->
+                    <tr>
+                        <td style="background: linear-gradient(135deg, #333, #666, #FFD700); padding: 30px; text-align: center; border-radius: 8px 8px 0 0;">
+                            <h1 style="color: #ffffff; margin: 0; font-size: 28px; font-weight: bold;">{{COMPANY_NAME}}</h1>
+                            <p style="color: #ffffff; margin: 10px 0 0 0; font-size: 16px; opacity: 0.9;">Latest News & Updates</p>
+                        </td>
+                    </tr>
+                    
+                    <!-- Content -->
+                    <tr>
+                        <td style="padding: 40px 30px;">
+                            <h2 style="color: #333; margin: 0 0 20px 0; font-size: 24px;">Dear {{CLIENT_NAME}},</h2>
+                            
+                            <p style="color: #666; line-height: 1.6; margin: 0 0 20px 0; font-size: 16px;">
+                                We hope this newsletter finds you well. We're excited to share some important updates and news from {{COMPANY_NAME}}.
+                            </p>
+                            
+                            <!-- Custom Message Section -->
+                            <div style="background: #f8f9fa; padding: 20px; border-radius: 6px; margin: 20px 0;">
+                                <h3 style="color: #333; margin: 0 0 15px 0; font-size: 20px;">What's New</h3>
+                                <p style="color: #666; line-height: 1.6; margin: 0; font-size: 16px;">
+                                    {{CUSTOM_MESSAGE}}
+                                </p>
+                            </div>
+                            
+                            <!-- Features Section -->
+                            <div style="margin: 30px 0;">
+                                <h3 style="color: #333; margin: 0 0 20px 0; font-size: 20px;">Recent Highlights</h3>
+                                
+                                <table width="100%" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td width="50%" style="padding-right: 15px; vertical-align: top;">
+                                            <div style="border: 1px solid #ddd; border-radius: 6px; padding: 20px; height: 120px;">
+                                                <h4 style="color: #333; margin: 0 0 10px 0; font-size: 18px;">New Collections</h4>
+                                                <p style="color: #666; margin: 0; font-size: 14px; line-height: 1.5;">
+                                                    Discover our latest jewelry collections featuring innovative designs and premium craftsmanship.
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td width="50%" style="padding-left: 15px; vertical-align: top;">
+                                            <div style="border: 1px solid #ddd; border-radius: 6px; padding: 20px; height: 120px;">
+                                                <h4 style="color: #333; margin: 0 0 10px 0; font-size: 18px;">Quality Assurance</h4>
+                                                <p style="color: #666; margin: 0; font-size: 14px; line-height: 1.5;">
+                                                    Our commitment to excellence continues with enhanced quality control processes.
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                            <!-- Call to Action -->
+                            <div style="text-align: center; margin: 30px 0;">
+                                <a href="{{WEBSITE_URL}}" style="background: linear-gradient(135deg, #333, #666); color: #ffffff; text-decoration: none; padding: 15px 30px; border-radius: 6px; font-size: 16px; font-weight: bold; display: inline-block;">
+                                    Visit Our Website
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <!-- Footer -->
+                    <tr>
+                        <td style="background: #f8f9fa; padding: 30px; text-align: center; border-radius: 0 0 8px 8px; border-top: 1px solid #ddd;">
+                            <p style="color: #666; margin: 0 0 10px 0; font-size: 14px;">
+                                Thank you for being a valued customer of {{COMPANY_NAME}}
+                            </p>
+                            <p style="color: #999; margin: 0; font-size: 12px;">
+                                © {{CURRENT_YEAR}} {{COMPANY_NAME}}. All rights reserved.<br>
+                                {{CURRENT_DATE}}
+                            </p>
+                            <p style="color: #999; margin: 15px 0 0 0; font-size: 12px;">
+                                You received this email because you're subscribed to our newsletter.<br>
+                                <a href="{{WEBSITE_URL}}/unsubscribe" style="color: #666;">Unsubscribe</a> | 
+                                <a href="{{WEBSITE_URL}}/contact" style="color: #666;">Contact Us</a>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

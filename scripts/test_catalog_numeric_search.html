@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Catalog Numeric Search</title>
+    <style>
+        body { 
+            font-family: Arial, Helvetica, sans-serif; 
+            margin: 20px; 
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+            color: #f8f9fa;
+            min-height: 100vh;
+        }
+        .test-container { 
+            max-width: 800px; 
+            margin: 0 auto; 
+            background: linear-gradient(145deg, #ffffff, #f8f9fa);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            border: 2px solid #FFD700;
+        }
+        .test-container h1, .test-container h2 {
+            color: #FFD700;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        .test-container p {
+            color: #333;
+        }
+        .test-section { 
+            margin: 20px 0; 
+            padding: 20px; 
+            background: linear-gradient(145deg, #f8f9fa, #ffffff);
+            border: 2px solid #FFD700; 
+            border-radius: 12px;
+        }
+        .result { 
+            background: #f8f9fa; 
+            padding: 15px; 
+            margin: 15px 0; 
+            border-radius: 8px;
+            border: 1px solid #FFD700;
+            color: #333;
+        }
+        button { 
+            padding: 12px 24px; 
+            margin: 8px; 
+            cursor: pointer;
+            background: linear-gradient(145deg, #FFD700, #FFA500);
+            color: #000;
+            border: 2px solid #FFD700;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background: linear-gradient(145deg, #FFA500, #FF8C00);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255,215,0,0.4);
+        }
+        input {
+            padding: 10px;
+            margin: 5px;
+            border: 2px solid #FFD700;
+            border-radius: 8px;
+            background: #2d2d2d;
+            color: #f8f9fa;
+        }
+        input::placeholder {
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🧪 Catalog Product ID Search Test</h1>
+        
+        <div class="test-section">
+            <h2>Test Available Product Page Numbers</h2>
+            <p>Click a number to test if catalog pages with product images exist for that page series:</p>
+            <button onclick="testPageSeries('2')">Test Page 2</button>
+            <button onclick="testPageSeries('3')">Test Page 3</button>
+            <button onclick="testPageSeries('4')">Test Page 4</button>
+            <button onclick="testPageSeries('5')">Test Page 5</button>
+            <button onclick="testPageSeries('6')">Test Page 6</button>
+            <button onclick="testPageSeries('7')">Test Page 7</button>
+            <button onclick="testPageSeries('8')">Test Page 8</button>
+            <button onclick="testPageSeries('10')">Test Page 10</button>
+        </div>
+
+        <div class="test-section">
+            <h2>Test Custom Number</h2>
+            <input type="text" id="customNumber" placeholder="Enter page number" maxlength="3">
+            <button onclick="testCustomNumber()">Test Custom Number</button>
+        </div>
+
+        <div class="test-section">
+            <h2>Available Product Image Files Preview</h2>
+            <p>Show all available catalog pages containing product images:</p>
+            <button onclick="showAvailableFiles()">Show Available Product Page Files</button>
+        </div>
+
+        <div id="results" class="result" style="display: none;">
+            <h3>Results:</h3>
+            <div id="resultContent"></div>
+        </div>
+    </div>
+
+    <script>
+        function testPageSeries(pageNumber) {
+            showResult(`Testing page series: ${pageNumber}`);
+            
+            fetch('/homesite/catalog_direct.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'action=get_catalog_structure'
+            })
+            .then(response => response.json())
+            .then(data => {
+                const matchingPages = [];
+                
+                if (data.content_pages) {
+                    for (const [pageGroup, files] of Object.entries(data.content_pages)) {
+                        files.forEach(fileData => {
+                            const file = fileData.filename || fileData;
+                            const pageMatch = file.match(/page_0*(\d+)([a-z]*)/i);
+                            if (pageMatch && pageMatch[1] === pageNumber) {
+                                matchingPages.push({
+                                    file: file,
+                                    size: fileData.sizeFormatted || 'Unknown',
+                                    suffix: pageMatch[2] || '',
+                                    pageLabel: `Page ${pageNumber.toUpperCase()}${pageMatch[2] ? pageMatch[2].toUpperCase() : ''}`
+                                });
+                            }
+                        });
+                    }
+                }
+                
+                let result = `<strong>Page ${pageNumber} Product Images Results:</strong><br>`;
+                if (matchingPages.length > 0) {
+                    result += `Found ${matchingPages.length} catalog pages with product images:<br>`;
+                    matchingPages.forEach(page => {
+                        result += `• ${page.pageLabel} (${page.file}) - ${page.size}<br>`;
+                    });
+                    result += `<br><em>✅ Numeric search would show preview grid for these product image pages.</em>`;
+                } else {
+                    result += `❌ No catalog pages with product images found for Page ${pageNumber}`;
+                }
+                
+                showResult(result);
+            })
+            .catch(error => {
+                showResult(`❌ Error: ${error.message}`);
+            });
+        }
+
+        function testCustomNumber() {
+            const number = document.getElementById('customNumber').value.trim();
+            if (number && /^\d+$/.test(number)) {
+                testPageSeries(number);
+            } else {
+                showResult('❌ Please enter a valid number');
+            }
+        }
+
+        function showAvailableFiles() {
+            showResult('Loading available files...');
+            
+            fetch('/homesite/catalog_direct.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'action=get_catalog_structure'
+            })
+            .then(response => response.json())
+            .then(data => {
+                let result = '<strong>Available Catalog Pages with Product Images:</strong><br>';
+                
+                if (data.content_pages) {
+                    const allFiles = [];
+                    for (const [pageGroup, files] of Object.entries(data.content_pages)) {
+                        files.forEach(fileData => {
+                            const file = fileData.filename || fileData;
+                            const pageMatch = file.match(/page_(\d+)([a-z]*)/i);
+                            if (pageMatch) {
+                                allFiles.push({
+                                    file: file,
+                                    pageNum: parseInt(pageMatch[1]),
+                                    suffix: pageMatch[2] || '',
+                                    size: fileData.sizeFormatted || 'Unknown'
+                                });
+                            }
+                        });
+                    }
+                    
+                    // Sort by page number
+                    allFiles.sort((a, b) => {
+                        if (a.pageNum !== b.pageNum) return a.pageNum - b.pageNum;
+                        return a.suffix.localeCompare(b.suffix);
+                    });
+                    
+                    // Group by page number
+                    const pageGroups = {};
+                    allFiles.forEach(file => {
+                        if (!pageGroups[file.pageNum]) {
+                            pageGroups[file.pageNum] = [];
+                        }
+                        pageGroups[file.pageNum].push(file);
+                    });
+                    
+                    for (const [pageNum, files] of Object.entries(pageGroups)) {
+                        result += `<strong>Page ${pageNum}:</strong> `;
+                        result += files.map(f => `${f.file} (${f.size})`).join(', ');
+                        result += '<br>';
+                    }
+                } else {
+                    result += '❌ No content pages found';
+                }
+                
+                showResult(result);
+            })
+            .catch(error => {
+                showResult(`❌ Error: ${error.message}`);
+            });
+        }
+
+        function showResult(content) {
+            document.getElementById('resultContent').innerHTML = content;
+            document.getElementById('results').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

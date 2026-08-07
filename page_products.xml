@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog_products>
+    <metadata>
+        <title>Complete Cadman Catalog Product Database</title>
+        <source>Extracted from PDF index files and existing XML mappings</source>
+        <date>2025-11-18</date>
+        <version>1.0</version>
+        <notes>Comprehensive product listing combining PDF index data with detailed specifications from existing XML files</notes>
+    </metadata>
+
+    <!-- 10K CROSSES CATEGORY -->
+    <category name="crosses" subcategory="10k_crosses">
+        <product_group page="23A">
+            <product id="100" name="10K Cross" white_gold="true" />
+            <product id="100D" name="10K Cross Diamond" white_gold="true" />
+            <product id="100E" name="10K Cross Engraved" white_gold="true" />
+            <product id="101S" name="10K Cross Small" white_gold="false" />
+            <product id="102" name="10K Cross" white_gold="true" />
+            <product id="102E" name="10K Cross Engraved" white_gold="true" />
+            <product id="104" name="10K Cross" white_gold="true" />
+            <product id="106" name="10K Cross" white_gold="true" />
+            <product id="12" name="10K Cross" />
+            <product id="12D" name="10K Cross Diamond" />
+            <product id="12E" name="10K Cross Engraved" />
+            <product id="26" name="10K Cross" />
+            <product id="26D" name="10K Cross Diamond" />
+            <product id="26E" name="10K Cross Engraved" />
+            <product id="30" name="10K Cross" />
+            <product id="33" name="10K Cross" />
+            <product id="33C" name="10K Cross Cubic Zirconia" />
+            <product id="33E" name="10K Cross Engraved" />
+            <product id="34" name="10K Cross" />
+            <product id="34C" name="10K Cross Cubic Zirconia" />
+            <product id="35" name="10K Cross" />
+            <product id="35C" name="10K Cross Cubic Zirconia" />
+            <product id="93" name="10K Cross" />
+            <product id="93C" name="10K Cross Cubic Zirconia" />
+            <product id="97" name="10K Cross" />
+            <product id="97D" name="10K Cross Diamond" />
+            <product id="97E" name="10K Cross Engraved" />
+        </product_group>
+        
+        <product_group page="23B">
+            <product id="107C" name="10K Cross Cubic Zirconia" />
+            <product id="108C" name="10K Cross Cubic Zirconia" />
+            <product id="108N" name="10K Cross" />
+            <product id="102" name="10K Cross" />
+            <product id="104D" name="10K Cross Diamond" />
+            <product id="104E" name="10K Cross Engraved" />
+            <product id="106D" name="10K Cross Diamond" />
+            <product id="106E" name="10K Cross Engraved" />
+            <product id="36C" name="10K Cross Cubic Zirconia" />
+            <product id="38" name="10K Cross" />
+            <product id="38C" name="10K Cross Cubic Zirconia" />
+            <product id="38P" name="10K Cross Polished" />
+            <product id="43CD" name="10K Cross Cubic Diamond" />
+            <product id="45" name="10K Cross" />
+            <product id="50" name="10K Cross" />
+            <product id="51" name="10K Cross" />
+            <product id="51D" name="10K Cross Diamond" />
+            <product id="51P" name="10K Cross Polished" />
+            <product id="51PD" name="10K Cross Polished Diamond" />
+            <product id="52C" name="10K Cross Cubic Zirconia" />
+        </product_group>
+    </category>
+
+    <!-- ENGAGEMENT SETS CATEGORY -->
+    <category name="engagement" subcategory="engagement_sets">
+        <product_group page="7A">
+            <product id="M304" name="Men's Engagement Set" gender="M" />
+            <product id="M305" name="Men's Engagement Set" gender="M" />
+            <product id="M307" name="Men's Engagement Set" gender="M" />
+            <product id="ME64" name="Men's Engagement Set" gender="M" />
+            <product id="MJ37" name="Men's Engagement Set" gender="M" />
+            <product id="MK26" name="Men's Engagement Set" gender="M" />
+            <product id="W304" name="Women's Engagement Set" gender="L" />
+            <product id="W305" name="Women's Engagement Set" gender="L" />
+            <product id="W307" name="Women's Engagement Set" gender="L" />
+            <product id="WD12" name="Women's Engagement Set" gender="L" />
+            <product id="WE64" name="Women's Engagement Set" gender="L" />
+        </product_group>
+        
+        <product_group page="7B">
+            <product id="MK61DA" name="Men's Engagement Set Diamond A" gender="M" />
+            <product id="WK61DA" name="Women's Engagement Set Diamond A" gender="L" />
+            <product id="WK61DAM" name="Women's Engagement Set Diamond A Modified" gender="L" />
+        </product_group>
+        
+        <product_group page="7C">
+            <product id="MK59DB" name="Men's Engagement Set Diamond B" gender="M" />
+            <product id="MK68DB" name="Men's Engagement Set Diamond B" gender="M" />
+            <product id="MK69DA" name="Men's Engagement Set Diamond A" gender="M" />
+            <product id="MK69DB" name="Men's Engagement Set Diamond B" gender="M" />
+            <product id="MK70D" name="Men's Engagement Set Diamond" gender="M" />
+            <product id="MK71D" name="Men's Engagement Set Diamond" gender="M" />
+            <product id="WK59D" name="Women's Engagement Set Diamond" gender="L" />
+            <product id="WK63" name="Women's Engagement Set" gender="L" />
+            <product id="WK64D" name="Women's Engagement Set Diamond" gender="L" />
+            <product id="WK65" name="Women's Engagement Set" gender="L" />
+            <product id="WK68D" name="Women's Engagement Set Diamond" gender="L" />
+            <product id="WK69DA" name="Women's Engagement Set Diamond A" gender="L" />
+            <product id="WK69DB" name="Women's Engagement Set Diamond B" gender="L" />
+            <product id="WN31D" name="Women's Engagement Set Diamond" gender="L" />
+        </product_group>
+    </category>
+
+    <!-- WEDDING BANDS CATEGORY -->
+    <category name="wedding" subcategory="wedding_bands">
+        <product_group page="1A">
+            <product id="3T18M" name="Wedding Band" gender="M" width="3.0" thickness="1.8" style="comfort_curve" />
+            <product id="3T18L" name="Wedding Band" gender="L" width="3.0" thickness="1.8" style="comfort_curve" />
+            <product id="4T00RM" name="Rectangular Wedding Band" gender="M" width="4.0" thickness="1.8" style="rectangular" />
+            <product id="4T00RL" name="Rectangular Wedding Band" gender="L" width="4.0" thickness="1.8" style="rectangular" />
+            <product id="4T18M" name="Wedding Band" gender="M" width="4.0" thickness="1.8" style="comfort_curve" />
+            <product id="4T18L" name="Wedding Band" gender="L" width="4.0" thickness="1.8" style="comfort_curve" />
+            <product id="400TM" name="Premium Wedding Band" gender="M" width="4.0" thickness="2.0" style="premium" />
+            <product id="400TL" name="Premium Wedding Band" gender="L" width="4.0" thickness="2.0" style="premium" />
+        </product_group>
+        
+        <product_group page="1B">
+            <product id="1000M" name="Wedding Band" gender="M" width="10.0" thickness="1.5" style="tiffany" />
+            <product id="1000L" name="Wedding Band" gender="L" width="10.0" thickness="1.5" style="tiffany" />
+            <product id="1T46M" name="Wedding Band" gender="M" />
+            <product id="1T46L" name="Wedding Band" gender="L" />
+            <product id="4001M" name="Lightweight Wedding Band" gender="M" width="4.0" thickness="1.0" style="lightweight" />
+            <product id="4001L" name="Lightweight Wedding Band" gender="L" width="4.0" thickness="1.0" style="lightweight" />
+            <product id="200L" name="Wedding Band" gender="L" width="2.0" thickness="1.5" style="tiffany" />
+            <product id="201M" name="Wedding Band" gender="M" />
+            <product id="201L" name="Wedding Band" gender="L" />
+            <product id="250M" name="Wedding Band" gender="M" width="2.5" thickness="1.5" style="tiffany" />
+            <product id="250L" name="Wedding Band" gender="L" width="2.5" thickness="1.5" style="tiffany" />
+            <product id="300M" name="Wedding Band" gender="M" width="3.0" thickness="1.5" style="tiffany" />
+            <product id="300L" name="Wedding Band" gender="L" width="3.0" thickness="1.5" style="tiffany" />
+            <product id="380M" name="Wedding Band" gender="M" width="3.8" thickness="1.5" style="tiffany" />
+            <product id="380L" name="Wedding Band" gender="L" width="3.8" thickness="1.5" style="tiffany" />
+            <product id="400M" name="Wedding Band" gender="M" width="4.0" thickness="1.5" style="tiffany" />
+            <product id="400L" name="Wedding Band" gender="L" width="4.0" thickness="1.5" style="tiffany" />
+            <product id="450M" name="Wedding Band" gender="M" width="4.5" thickness="1.5" style="tiffany" />
+            <product id="450L" name="Wedding Band" gender="L" width="4.5" thickness="1.5" style="tiffany" />
+            <product id="464M" name="Wedding Band" gender="M" />
+            <product id="465L" name="Wedding Band" gender="L" />
+            <product id="500M" name="Wedding Band" gender="M" width="5.0" thickness="1.5" style="tiffany" />
+            <product id="500L" name="Wedding Band" gender="L" width="5.0" thickness="1.5" style="tiffany" />
+        </product_group>
+    </category>
+
+    <!-- SIGNETS CATEGORY -->
+    <category name="signets" subcategory="signets">
+        <product_group page="8A">
+            <product id="C125" name="Signet Ring" white_gold="true" />
+            <product id="C126" name="Signet Ring" white_gold="true" />
+            <product id="C127" name="Signet Ring" white_gold="true" />
+            <product id="C128" name="Signet Ring" white_gold="true" />
+            <product id="C129" name="Signet Ring" white_gold="true" />
+            <product id="C147" name="Signet Ring" white_gold="true" />
+            <product id="C17" name="Signet Ring" white_gold="true" />
+            <product id="C21" name="Signet Ring" white_gold="true" />
+            <product id="C22" name="Signet Ring" white_gold="true" />
+            <product id="C23" name="Signet Ring" white_gold="true" />
+            <product id="C24" name="Signet Ring" white_gold="true" />
+            <product id="C25" name="Signet Ring" white_gold="true" />
+            <product id="C26" name="Signet Ring" white_gold="true" />
+            <product id="C27" name="Signet Ring" white_gold="true" />
+            <product id="C28" name="Signet Ring" white_gold="true" />
+            <product id="C32" name="Signet Ring" white_gold="true" />
+            <product id="8TG" name="Signet Ring" white_gold="true" />
+            <product id="8TGE" name="Signet Ring Engraved" white_gold="true" />
+        </product_group>
+        
+        <product_group page="8B">
+            <product id="C19" name="Signet Ring" white_gold="true" />
+            <product id="C19A" name="Signet Ring A" white_gold="true" />
+            <product id="C19E" name="Signet Ring Engraved" white_gold="true" />
+            <product id="C29" name="Signet Ring" white_gold="true" />
+            <product id="C29D" name="Signet Ring Diamond" white_gold="true" />
+            <product id="C29E" name="Signet Ring Engraved" white_gold="true" />
+            <product id="C33" name="Signet Ring" white_gold="true" />
+            <product id="C34" name="Signet Ring" white_gold="true" />
+            <product id="C35" name="Signet Ring" white_gold="true" />
+            <product id="C37" name="Signet Ring" white_gold="true" />
+            <product id="C43" name="Signet Ring" white_gold="true" />
+            <product id="CB63" name="Signet Ring" white_gold="true" />
+            <product id="CM12" name="Signet Ring" white_gold="true" />
+            <product id="CM13" name="Signet Ring" white_gold="true" />
+            <product id="CM17" name="Signet Ring" white_gold="true" />
+            <product id="CS11" name="Signet Ring" white_gold="true" />
+        </product_group>
+        
+        <product_group page="8C">
+            <product id="12NS" name="Signet Ring" white_gold="true" />
+            <product id="14WS" name="Signet Ring" white_gold="true" />
+            <product id="2537NS" name="Signet Ring" white_gold="true" />
+            <product id="C155" name="Signet Ring" white_gold="true" />
+            <product id="C156" name="Signet Ring" white_gold="true" />
+            <product id="C157" name="Signet Ring" white_gold="true" />
+            <product id="C20" name="Signet Ring" white_gold="true" />
+            <product id="C212" name="Signet Ring" white_gold="true" />
+            <product id="C213" name="Signet Ring" white_gold="true" />
+            <product id="C213E" name="Signet Ring Engraved" white_gold="true" />
+            <product id="C21A" name="Signet Ring A" white_gold="true" />
+            <product id="C36" name="Signet Ring" white_gold="true" />
+            <product id="C50" name="Signet Ring" white_gold="true" />
+            <product id="C50C" name="Signet Ring Cubic" white_gold="true" />
+            <product id="C54C" name="Signet Ring Cubic" white_gold="true" />
+            <product id="CC70" name="Signet Ring" white_gold="true" />
+            <product id="CD61" name="Signet Ring" white_gold="true" />
+            <product id="CS10" name="Signet Ring" white_gold="true" />
+            <product id="CS10A" name="Signet Ring A" white_gold="true" />
+            <product id="CS10E" name="Signet Ring Engraved" white_gold="true" />
+            <product id="S18" name="Signet Ring" white_gold="true" />
+            <product id="SL4" name="Signet Ring" white_gold="true" />
+            <product id="SL4CD" name="Signet Ring Cubic Diamond" white_gold="true" />
+            <product id="SL8D" name="Signet Ring Diamond" white_gold="true" />
+        </product_group>
+        
+        <product_group page="8D">
+            <product id="C39" name="Signet Ring" white_gold="true" />
+            <product id="C40" name="Signet Ring" white_gold="true" />
+            <product id="C42" name="Signet Ring" white_gold="true" />
+            <product id="C46" name="Signet Ring" white_gold="true" />
+            <product id="C57D" name="Signet Ring Diamond" white_gold="true" />
+            <product id="C64E" name="Signet Ring Engraved" white_gold="true" />
+            <product id="CB62" name="Signet Ring" white_gold="true" />
+            <product id="CE4" name="Signet Ring" white_gold="true" />
+            <product id="CE5" name="Signet Ring" white_gold="true" />
+            <product id="CM14" name="Signet Ring" white_gold="true" />
+            <product id="CM15" name="Signet Ring" white_gold="true" />
+            <product id="CM16" name="Signet Ring" white_gold="true" />
+            <product id="CM18" name="Signet Ring" white_gold="true" />
+            <product id="CM3D" name="Signet Ring 3D" white_gold="true" />
+            <product id="CM5" name="Signet Ring" white_gold="true" />
+            <product id="CM6" name="Signet Ring" white_gold="true" />
+            <product id="CS1" name="Signet Ring" white_gold="true" />
+            <product id="CS12" name="Signet Ring" white_gold="true" />
+            <product id="CS13" name="Signet Ring" white_gold="true" />
+            <product id="CS15" name="Signet Ring" white_gold="true" />
+            <product id="CS16" name="Signet Ring" white_gold="true" />
+            <product id="CS3" name="Signet Ring" white_gold="true" />
+            <product id="CS3E" name="Signet Ring Engraved" white_gold="true" />
+            <product id="CS4" name="Signet Ring" white_gold="true" />
+            <product id="CS6" name="Signet Ring" white_gold="true" />
+        </product_group>
+    </category>
+
+    <!-- 10K LOCKETS CATEGORY -->
+    <category name="lockets" subcategory="10k_lockets">
+        <product_group page="21A">
+            <product id="10TGA" name="10K Locket" />
+            <product id="10TGD" name="10K Locket Diamond" />
+            <product id="10TGE" name="10K Locket Engraved" />
+            <product id="11TG" name="10K Locket" />
+            <product id="13TGA" name="10K Locket A" />
+            <product id="13TGD" name="10K Locket Diamond" />
+            <product id="21TG" name="10K Locket" />
+            <product id="21TGA" name="10K Locket A" />
+            <product id="29TGA" name="10K Locket A" />
+            <product id="29TGD" name="10K Locket Diamond" />
+            <product id="29TGE" name="10K Locket Engraved" />
+            <product id="30TG" name="10K Locket" />
+            <product id="30TGA" name="10K Locket A" />
+            <product id="70TGD" name="10K Locket Diamond" />
+            <product id="8TG" name="10K Locket" />
+            <product id="8TGE" name="10K Locket Engraved" />
+            <product id="9BG" name="10K Locket" />
+            <product id="L26TG" name="10K Ladies Locket" />
+            <product id="L7TG" name="10K Ladies Locket" />
+            <product id="L7TGA" name="10K Ladies Locket A" />
+            <product id="L7TGD" name="10K Ladies Locket Diamond" />
+            <product id="M2TG" name="10K Mens Locket" />
+            <product id="M2TGD" name="10K Mens Locket Diamond" />
+            <product id="M3TG" name="10K Mens Locket" />
+        </product_group>
+        
+        <product_group page="21B">
+            <product id="3TFG" name="10K Locket" />
+            <product id="3TG" name="10K Locket" />
+            <product id="3TGA" name="10K Locket A" />
+            <product id="70TGA" name="10K Locket A" />
+            <product id="70TGE" name="10K Locket Engraved" />
+            <product id="70TGM" name="10K Locket M" />
+            <product id="70TGN" name="10K Locket N" />
+            <product id="9TGA" name="10K Locket A" />
+            <product id="9TGB" name="10K Locket B" />
+            <product id="L7TFG" name="10K Ladies Locket" />
+        </product_group>
+        
+        <product_group page="21C">
+            <product id="B70GA" name="10K Bracelet Locket A" />
+            <product id="B70GB" name="10K Bracelet Locket B" />
+            <product id="B70GC" name="10K Bracelet Locket C" />
+            <product id="B7GA" name="10K Bracelet Locket A" />
+            <product id="B7GB" name="10K Bracelet Locket B" />
+            <product id="B7GC" name="10K Bracelet Locket C" />
+        </product_group>
+        
+        <product_group page="21D">
+            <product id="12TG" name="10K Locket" />
+            <product id="2LTG" name="10K Ladies Locket" />
+            <product id="2TG" name="10K Locket" />
+            <product id="30TGA" name="10K Locket A" />
+            <product id="5TGA" name="10K Locket A" />
+            <product id="6TGA" name="10K Locket A" />
+            <product id="L3GA" name="10K Ladies Locket A" />
+            <product id="L3GB" name="10K Ladies Locket B" />
+            <product id="L3GC" name="10K Ladies Locket C" />
+            <product id="L70G" name="10K Ladies Locket" />
+        </product_group>
+    </category>
+
+    <!-- GENTS RINGS CATEGORY -->
+    <category name="gents_rings" subcategory="gents_rings">
+        <product_group page="8D">
+            <product id="C39" name="Gents Ring" />
+            <product id="C40" name="Gents Ring" />
+            <product id="C42" name="Gents Ring" />
+            <product id="C46" name="Gents Ring" />
+            <product id="CM14" name="Gents Ring" />
+            <product id="CM15" name="Gents Ring" />
+            <product id="CM16" name="Gents Ring" />
+            <product id="CM18" name="Gents Ring" />
+            <product id="CM3D" name="Gents Ring 3D" />
+            <product id="CM5" name="Gents Ring" />
+            <product id="CM6" name="Gents Ring" />
+            <product id="CS1" name="Gents Ring" />
+            <product id="CS12" name="Gents Ring" />
+            <product id="CS13" name="Gents Ring" />
+            <product id="CS15" name="Gents Ring" />
+            <product id="CS16" name="Gents Ring" />
+            <product id="CS3" name="Gents Ring" />
+            <product id="CS3E" name="Gents Ring Engraved" />
+            <product id="CS4" name="Gents Ring" />
+            <product id="CS6" name="Gents Ring" />
+        </product_group>
+        
+        <product_group page="12R">
+            <product id="1059" name="Gents Ring" />
+            <product id="1060" name="Gents Ring" />
+            <product id="1116" name="Gents Ring" />
+            <product id="1117" name="Gents Ring" />
+            <product id="1125" name="Gents Ring" />
+            <product id="1131" name="Gents Ring" />
+            <product id="1151" name="Gents Ring" />
+            <product id="1434" name="Gents Ring" />
+            <product id="C411" name="Gents Ring" />
+            <product id="C415" name="Gents Ring" />
+        </product_group>
+        
+        <product_group page="15G">
+            <product id="1061" name="Gents Ring" />
+            <product id="1066" name="Gents Ring" />
+            <product id="1152" name="Gents Ring" />
+            <product id="1231" name="Gents Ring" />
+            <product id="1232" name="Gents Ring" />
+            <product id="1233" name="Gents Ring" />
+            <product id="1234" name="Gents Ring" />
+            <product id="6028A" name="Gents Ring A" />
+            <product id="C528" name="Gents Ring" />
+            <product id="C529" name="Gents Ring" />
+            <product id="C530" name="Gents Ring" />
+            <product id="C547" name="Gents Ring" />
+            <product id="C548" name="Gents Ring" />
+            <product id="C549" name="Gents Ring" />
+            <product id="C551" name="Gents Ring" />
+            <product id="C552" name="Gents Ring" />
+            <product id="C553" name="Gents Ring" />
+            <product id="C556" name="Gents Ring" />
+            <product id="C558" name="Gents Ring" />
+            <product id="C564" name="Gents Ring" />
+            <product id="C567" name="Gents Ring" />
+            <product id="C57D" name="Gents Ring Diamond" />
+            <product id="C64E" name="Gents Ring Engraved" />
+            <product id="C64H" name="Gents Ring H" />
+            <product id="CE4" name="Gents Ring" />
+            <product id="CE5" name="Gents Ring" />
+            <product id="D417" name="Gents Ring" />
+            <product id="D424" name="Gents Ring" />
+            <product id="D425A" name="Gents Ring A" />
+            <product id="M327" name="Gents Ring" />
+        </product_group>
+    </category>
+
+    <!-- CELTIC BANDS CATEGORY -->
+    <category name="celtic_bands" subcategory="celtic_patterns">
+        <product_group page="celtic">
+            <!-- Celtic Link Pattern -->
+            <product id="5296M" name="Celtic Link Band" gender="M" width="7.5" pattern="Celtic link" />
+            <product id="5296L" name="Celtic Link Band" gender="L" width="7.5" pattern="Celtic link" />
+            <product id="5430M" name="Celtic Link Band" gender="M" width="6.5" pattern="Celtic link" />
+            <product id="5430L" name="Celtic Link Band" gender="L" width="6.5" pattern="Celtic link" />
+            <product id="5600M" name="Celtic Link Band" gender="M" width="5.5" pattern="Celtic link" />
+            <product id="5600L" name="Celtic Link Band" gender="L" width="5.5" pattern="Celtic link" />
+            
+            <!-- Roman Key Pattern -->
+            <product id="5298M" name="Roman Key Band" gender="M" width="7.5" pattern="Roman key" />
+            <product id="5298L" name="Roman Key Band" gender="L" width="7.5" pattern="Roman key" />
+            <product id="5432M" name="Roman Key Band" gender="M" width="6.5" pattern="Roman key" />
+            <product id="5432L" name="Roman Key Band" gender="L" width="6.5" pattern="Roman key" />
+            <product id="5602M" name="Roman Key Band" gender="M" width="5.5" pattern="Roman key" />
+            <product id="5602L" name="Roman Key Band" gender="L" width="5.5" pattern="Roman key" />
+            
+            <!-- Interlocking Arrows Pattern -->
+            <product id="5310M" name="Interlocking Arrows Band" gender="M" width="7.5" pattern="Interlocking arrows" />
+            <product id="5310L" name="Interlocking Arrows Band" gender="L" width="7.5" pattern="Interlocking arrows" />
+            <product id="5434M" name="Interlocking Arrows Band" gender="M" width="6.5" pattern="Interlocking arrows" />
+            <product id="5434L" name="Interlocking Arrows Band" gender="L" width="6.5" pattern="Interlocking arrows" />
+            <product id="5618M" name="Interlocking Arrows Band" gender="M" width="5.5" pattern="Interlocking arrows" />
+            <product id="5618L" name="Interlocking Arrows Band" gender="L" width="5.5" pattern="Interlocking arrows" />
+        </product_group>
+    </category>
+
+    <!-- PLAIN BANDS CATEGORY -->
+    <category name="plain_bands" subcategory="wedding_bands">
+        <product_group page="plain">
+            <!-- Standard Tiffany Series -->
+            <product id="200M" name="Tiffany Band" gender="M" width="2.0" thickness="1.5" style="tiffany" />
+            <product id="200L" name="Tiffany Band" gender="L" width="2.0" thickness="1.5" style="tiffany" />
+            <product id="250M" name="Tiffany Band" gender="M" width="2.5" thickness="1.5" style="tiffany" />
+            <product id="250L" name="Tiffany Band" gender="L" width="2.5" thickness="1.5" style="tiffany" />
+            <product id="300M" name="Tiffany Band" gender="M" width="3.0" thickness="1.5" style="tiffany" />
+            <product id="300L" name="Tiffany Band" gender="L" width="3.0" thickness="1.5" style="tiffany" />
+            <product id="380M" name="Tiffany Band" gender="M" width="3.8" thickness="1.5" style="tiffany" />
+            <product id="380L" name="Tiffany Band" gender="L" width="3.8" thickness="1.5" style="tiffany" />
+            <product id="400M" name="Tiffany Band" gender="M" width="4.0" thickness="1.5" style="tiffany" />
+            <product id="400L" name="Tiffany Band" gender="L" width="4.0" thickness="1.5" style="tiffany" />
+            <product id="450M" name="Tiffany Band" gender="M" width="4.5" thickness="1.5" style="tiffany" />
+            <product id="450L" name="Tiffany Band" gender="L" width="4.5" thickness="1.5" style="tiffany" />
+            <product id="500M" name="Tiffany Band" gender="M" width="5.0" thickness="1.5" style="tiffany" />
+            <product id="500L" name="Tiffany Band" gender="L" width="5.0" thickness="1.5" style="tiffany" />
+            <product id="600M" name="Tiffany Band" gender="M" width="6.0" thickness="1.5" style="tiffany" />
+            <product id="600L" name="Tiffany Band" gender="L" width="6.0" thickness="1.5" style="tiffany" />
+            <product id="700M" name="Tiffany Band" gender="M" width="7.0" thickness="1.5" style="tiffany" />
+            <product id="700L" name="Tiffany Band" gender="L" width="7.0" thickness="1.5" style="tiffany" />
+            <product id="800M" name="Tiffany Band" gender="M" width="8.0" thickness="1.5" style="tiffany" />
+            <product id="800L" name="Tiffany Band" gender="L" width="8.0" thickness="1.5" style="tiffany" />
+            <product id="900M" name="Tiffany Band" gender="M" width="9.0" thickness="1.5" style="tiffany" />
+            <product id="900L" name="Tiffany Band" gender="L" width="9.0" thickness="1.5" style="tiffany" />
+            <product id="1000M" name="Tiffany Band" gender="M" width="10.0" thickness="1.5" style="tiffany" />
+            <product id="1000L" name="Tiffany Band" gender="L" width="10.0" thickness="1.5" style="tiffany" />
+            
+            <!-- Lightweight Series -->
+            <product id="3001M" name="Lightweight Tiffany Band" gender="M" width="3.0" thickness="1.0" style="lightweight" size_restriction="max_size_12" />
+            <product id="3001L" name="Lightweight Tiffany Band" gender="L" width="3.0" thickness="1.0" style="lightweight" size_restriction="max_size_12" />
+            <product id="4001M" name="Lightweight Tiffany Band" gender="M" width="4.0" thickness="1.0" style="lightweight" size_restriction="max_size_12" />
+            <product id="4001L" name="Lightweight Tiffany Band" gender="L" width="4.0" thickness="1.0" style="lightweight" size_restriction="max_size_12" />
+            <product id="5001M" name="Lightweight Tiffany Band" gender="M" width="5.0" thickness="1.0" style="lightweight" size_restriction="max_size_12" />
+            <product id="5001L" name="Lightweight Tiffany Band" gender="L" width="5.0" thickness="1.0" style="lightweight" size_restriction="max_size_12" />
+            <product id="6001M" name="Lightweight Tiffany Band" gender="M" width="6.0" thickness="1.0" style="lightweight" size_restriction="max_size_12" />
+            <product id="6001L" name="Lightweight Tiffany Band" gender="L" width="6.0" thickness="1.0" style="lightweight" size_restriction="max_size_12" />
+            
+            <!-- Rectangular Series -->
+            <product id="400RM" name="Rectangular Band" gender="M" width="4.0" thickness="1.5" style="rectangular" />
+            <product id="400RL" name="Rectangular Band" gender="L" width="4.0" thickness="1.5" style="rectangular" />
+            <product id="600RM" name="Rectangular Band" gender="M" width="6.0" thickness="1.5" style="rectangular" />
+            <product id="600RL" name="Rectangular Band" gender="L" width="6.0" thickness="1.5" style="rectangular" />
+            <product id="800RM" name="Rectangular Band" gender="M" width="8.0" thickness="1.5" style="rectangular" />
+            <product id="800RL" name="Rectangular Band" gender="L" width="8.0" thickness="1.5" style="rectangular" />
+            
+            <!-- Comfort Curve Series -->
+            <product id="3T18M" name="Tiffany Comfort Curve Band" gender="M" width="3.0" height="1.8" style="comfort_curve" />
+            <product id="3T18L" name="Tiffany Comfort Curve Band" gender="L" width="3.0" height="1.8" style="comfort_curve" />
+            <product id="4T18M" name="Tiffany Comfort Curve Band" gender="M" width="4.0" height="1.8" style="comfort_curve" />
+            <product id="4T18L" name="Tiffany Comfort Curve Band" gender="L" width="4.0" height="1.8" style="comfort_curve" />
+            <product id="5T18M" name="Tiffany Comfort Curve Band" gender="M" width="5.0" height="1.8" style="comfort_curve" />
+            <product id="5T18L" name="Tiffany Comfort Curve Band" gender="L" width="5.0" height="1.8" style="comfort_curve" />
+            <product id="6T18M" name="Tiffany Comfort Curve Band" gender="M" width="6.0" height="1.8" style="comfort_curve" />
+            <product id="6T18L" name="Tiffany Comfort Curve Band" gender="L" width="6.0" height="1.8" style="comfort_curve" />
+            <product id="7T18M" name="Tiffany Comfort Curve Band" gender="M" width="7.0" height="1.8" style="comfort_curve" />
+            <product id="7T18L" name="Tiffany Comfort Curve Band" gender="L" width="7.0" height="1.8" style="comfort_curve" />
+            <product id="8T18M" name="Tiffany Comfort Curve Band" gender="M" width="8.0" height="1.8" style="comfort_curve" />
+            <product id="8T18L" name="Tiffany Comfort Curve Band" gender="L" width="8.0" height="1.8" style="comfort_curve" />
+        </product_group>
+    </category>
+
+    <!-- FANCY BANDS CATEGORY -->
+    <category name="fancy_bands" subcategory="galaxy_bands">
+        <product_group page="fancy">
+            <product id="7T38M" name="Galaxy Band" gender="M" width="5.0" diamonds="0" />
+            <product id="7T38L" name="Galaxy Band" gender="L" width="5.0" diamonds="0" />
+            <product id="7T40M" name="Galaxy Band" gender="M" width="6.0" diamonds="0" />
+            <product id="7T40L" name="Galaxy Band" gender="L" width="6.0" diamonds="0" />
+            <product id="7T62M" name="Galaxy Band" gender="M" width="6.0" diamonds="0" />
+            <product id="7T62L" name="Galaxy Band" gender="L" width="6.0" diamonds="0" />
+            <product id="7T74M" name="Galaxy Band" gender="M" width="6.0" diamonds="0" />
+            <product id="7T74L" name="Galaxy Band" gender="L" width="6.0" diamonds="0" />
+            <product id="8T14M" name="Galaxy Band" gender="M" width="6.0" diamonds="0" />
+            <product id="8T14L" name="Galaxy Band" gender="L" width="6.0" diamonds="0" />
+            <product id="1T006M" name="Galaxy Band" gender="M" width="7.0" diamonds="0" />
+            <product id="1T006L" name="Galaxy Band" gender="L" width="7.0" diamonds="0" />
+            <product id="1T010M" name="Galaxy Band" gender="M" width="6.0" diamonds="0" />
+            <product id="1T011L" name="Galaxy Band" gender="L" width="6.0" diamonds="0" />
+            <product id="1T014M" name="Galaxy Band" gender="M" width="6.0" diamonds="0" />
+            <product id="1T015L" name="Galaxy Band" gender="L" width="6.0" diamonds="0" />
+            <product id="1T022M" name="Galaxy Band" gender="M" width="6.0" diamonds="0" />
+            <product id="1T023L" name="Galaxy Band" gender="L" width="6.0" diamonds="0" />
+            <product id="1T026M" name="Galaxy Band" gender="M" width="5.0" diamonds="0.03" count="1" />
+            <product id="1T026L" name="Galaxy Band" gender="L" width="5.0" diamonds="0.03" count="1" />
+            <product id="1T028M" name="Galaxy Band" gender="M" width="6.0" diamonds="0" />
+            <product id="1T028L" name="Galaxy Band" gender="L" width="6.0" diamonds="0" />
+            <product id="1T030M" name="Galaxy Band" gender="M" width="6.0" diamonds="0.02" count="3" />
+            <product id="1T030L" name="Galaxy Band" gender="L" width="6.0" diamonds="0.02" count="3" />
+            <product id="1T032M" name="Galaxy Band" gender="M" width="7.0" diamonds="0.015" count="4" />
+            <product id="1T032L" name="Galaxy Band" gender="L" width="7.0" diamonds="0.015" count="4" />
+            <product id="1T034M" name="Galaxy Band" gender="M" width="6.5" diamonds="0" />
+            <product id="1T034L" name="Galaxy Band" gender="L" width="6.5" diamonds="0" />
+        </product_group>
+    </category>
+</catalog_products>

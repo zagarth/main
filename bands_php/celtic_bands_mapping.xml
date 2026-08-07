@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<celtic_bands_mapping>
+    <metadata>
+        <title>Celtic Wedding Band Product Mapping</title>
+        <version>2.0</version>
+        <source>Celtic Wedding Collection chart - January 2009</source>
+        <date>2025-10-30</date>
+        <notes>Comprehensive Celtic collection mapping with traditional patterns - pricing excluded</notes>
+    </metadata>
+
+    <!-- Celtic Band Patterns Overview -->
+    <patterns_info>
+        <pattern_count>19</pattern_count>
+        <width_options>
+            <width>7.5mm</width>
+            <width>6.5mm</width>
+            <width>5.5mm</width>
+        </width_options>
+        <heritage>Celtic/Irish traditional wedding band designs</heritage>
+        <note>Each pattern available in three widths - some patterns only available in specific widths</note>
+    </patterns_info>
+
+    <!-- Pattern 1: Celtic Link -->
+    <pattern name="Celtic link" symbol="⚬⚬⚬⚬⚬⚬⚬⚬">
+        <description>Interwoven chain pattern representing eternal connection</description>
+        <heritage>Celtic</heritage>
+        <band width="7.5mm">
+            <product_id>5296</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="6.5mm">
+            <product_id>5430</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="5.5mm">
+            <product_id>5600</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+    </pattern>
+
+    <!-- Pattern 2: Roman Key -->
+    <pattern name="Roman key" symbol="▭▭▭▭▭▭▭▭">
+        <description>Classic Greek key/meander pattern symbolizing infinity and unity</description>
+        <heritage>Roman/Greek</heritage>
+        <band width="7.5mm">
+            <product_id>5298</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="6.5mm">
+            <product_id>5432</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="5.5mm">
+            <product_id>5602</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+    </pattern>
+
+    <!-- Pattern 3: Interlocking Arrows -->
+    <pattern name="Interlocking arrows" symbol="≫≫≫≫≫≫≫≫">
+        <description>Directional arrows interlocking to represent shared journey</description>
+        <heritage>Celtic</heritage>
+        <band width="7.5mm">
+            <product_id>5310</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="6.5mm">
+            <product_id>5434</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="5.5mm">
+            <product_id>5618</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+    </pattern>
+
+    <!-- Pattern 4: Celtic Spiral -->
+    <pattern name="Celtic spiral" symbol="〰〰〰〰〰〰〰〰">
+        <description>Triple spiral pattern representing life, death, and rebirth</description>
+        <heritage>Celtic</heritage>
+        <band width="7.5mm">
+            <product_id>5312</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="6.5mm">
+            <product_id>5436</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="5.5mm">
+            <product_id>5604</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+    </pattern>
+
+    <!-- Pattern 5: Celtic Arches -->
+    <pattern name="Celtic arches" symbol="⌒⌒⌒⌒⌒⌒⌒⌒">
+        <description>Repeating arch pattern symbolizing protection and unity</description>
+        <heritage>Celtic</heritage>
+        <band width="7.5mm">
+            <product_id>5314</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="6.5mm">
+            <product_id>5438</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="5.5mm">
+            <product_id>5606</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+    </pattern>
+
+    <!-- Pattern 6: Love Knot -->
+    <pattern name="Love knot" symbol="∞∞∞∞∞∞∞∞">
+        <description>Endless knot representing eternal love with no beginning or end</description>
+        <heritage>Celtic</heritage>
+        <band width="7.5mm">
+            <product_id>5316</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="6.5mm">
+            <product_id>5440</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="5.5mm">
+            <product_id>5608</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+    </pattern>
+
+    <!-- Pattern 7: Celtic Scroll -->
+    <pattern name="Celtic scroll" symbol="⚘⚘⚘⚘⚘⚘⚘⚘">
+        <description>Flowing scroll work representing continuity and growth</description>
+        <heritage>Celtic</heritage>
+        <band width="7.5mm">
+            <product_id>5410</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="6.5mm">
+            <product_id>5442</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="5.5mm">
+            <product_id>5610</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+    </pattern>
+
+    <!-- Pattern 8: Celtic Petals -->
+    <pattern name="Celtic petals" symbol="✿✿✿✿✿✿✿✿">
+        <description>Floral petal design representing natural beauty and growth</description>
+        <heritage>Celtic</heritage>
+        <band width="7.5mm">
+            <product_id>5412</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="6.5mm">
+            <product_id>5444</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="5.5mm">
+            <product_id>5620</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+    </pattern>
+
+    <!-- Pattern 9: Celtic Trefoil -->
+    <pattern name="Celtic trefoil" symbol="☘☘☘☘☘☘☘☘">
+        <description>Three-leaf shamrock pattern representing the Holy Trinity</description>
+        <heritage>Celtic/Irish</heritage>
+        <band width="7.5mm">
+            <product_id>5414</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="6.5mm">
+            <product_id>5446</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="5.5mm">
+            <product_id>5622</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+    </pattern>
+
+    <!-- Pattern 10: Jelling Band -->
+    <pattern name="Jelling band" symbol="⧓⧓⧓⧓⧓⧓⧓⧓">
+        <description>Viking-age interlace from Jelling, Denmark</description>
+        <heritage>Norse/Viking</heritage>
+        <band width="7.5mm">
+            <product_id>5416</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="6.5mm">
+            <product_id>5448</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="5.5mm">
+            <product_id>5624</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+    </pattern>
+
+    <!-- Pattern 11: Wave Band -->
+    <pattern name="Wave band" symbol="〜〜〜〜〜〜〜〜">
+        <description>Flowing wave pattern representing the journey of life</description>
+        <heritage>Celtic</heritage>
+        <band width="7.5mm">
+            <product_id>5418</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="6.5mm">
+            <product_id>5450</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="5.5mm">
+            <product_id>5612</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+    </pattern>
+
+    <!-- Pattern 12: Solomon's Knot -->
+    <pattern name="Solomon's knot" symbol="⧈⧈⧈⧈⧈⧈⧈⧈">
+        <description>Ancient interlaced square pattern symbolizing wisdom and eternity</description>
+        <heritage>Celtic</heritage>
+        <band width="7.5mm">
+            <product_id>5420</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="6.5mm">
+            <product_id>5452</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="5.5mm">
+            <product_id>5614</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+    </pattern>
+
+    <!-- Pattern 13: Celtic Twist -->
+    <pattern name="Celtic twist" symbol="∿∿∿∿∿∿∿∿">
+        <description>Twisted rope pattern representing intertwined lives</description>
+        <heritage>Celtic</heritage>
+        <band width="7.5mm">
+            <product_id>5422</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="6.5mm">
+            <product_id>5454</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="5.5mm">
+            <product_id>5626</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+    </pattern>
+
+    <!-- Pattern 14: Celtic Coils -->
+    <pattern name="Celtic Coils" symbol="◉◉◉◉◉◉◉◉">
+        <description>Circular coil pattern representing cycles and continuity</description>
+        <heritage>Celtic</heritage>
+        <band width="7.5mm">
+            <product_id>5424</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="6.5mm">
+            <product_id>5456</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="5.5mm">
+            <product_id>5628</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+    </pattern>
+
+    <!-- Pattern 15: Interlocking Hearts -->
+    <pattern name="Interlocking hearts" symbol="♥♥♥♥♥♥♥♥">
+        <description>Hearts intertwined representing united love</description>
+        <heritage>Celtic</heritage>
+        <band width="7.5mm">
+            <product_id>5426</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="6.5mm">
+            <product_id>5458</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="5.5mm">
+            <product_id>5616</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+    </pattern>
+
+    <!-- Pattern 16: Double Hearts -->
+    <pattern name="Double hearts" symbol="♡♡♡♡♡♡♡♡">
+        <description>Paired hearts pattern symbolizing two souls united</description>
+        <heritage>Celtic</heritage>
+        <band width="7.5mm">
+            <product_id>5428</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="6.5mm">
+            <product_id>5460</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="5.5mm">
+            <product_id>5630</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+    </pattern>
+
+    <!-- Pattern 17: Warrior's Shield -->
+    <pattern name="Warrior's shield" symbol="⛨⛨⛨⛨⛨⛨⛨⛨">
+        <description>Shield pattern representing protection and strength</description>
+        <heritage>Celtic</heritage>
+        <band width="7.5mm">
+            <product_id>5462</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="6.5mm">
+            <product_id>5464</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="5.5mm">
+            <product_id>5466</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+    </pattern>
+
+    <!-- Pattern 18: Celtic Lattice -->
+    <pattern name="Celtic lattice" symbol="⊞⊞⊞⊞⊞⊞⊞⊞">
+        <description>Woven lattice pattern representing interconnected paths</description>
+        <heritage>Celtic</heritage>
+        <band width="7.5mm">
+            <product_id>5468</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="6.5mm">
+            <product_id>5470</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="5.5mm">
+            <product_id>5472</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+    </pattern>
+
+    <!-- Pattern 19: Celtic Cross -->
+    <pattern name="Celtic Cross" symbol="✚✚✚✚✚✚✚✚">
+        <description>Celtic cross pattern representing faith and heritage</description>
+        <heritage>Celtic/Irish</heritage>
+        <note>Only available in 7.5mm and 6.5mm widths</note>
+        <band width="7.5mm">
+            <product_id>5474</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+        <band width="6.5mm">
+            <product_id>5476</product_id>
+            <available_genders>
+                <gender>M</gender>
+                <gender>L</gender>
+            </available_genders>
+        </band>
+    </pattern>
+
+    <!-- Technical Specifications -->
+    <specifications>
+        <size_ranges>
+            <mens_sizes min="9" max="16" note="Standard men's sizing"/>
+            <ladies_sizes min="2" max="8.5" note="Standard ladies' sizing"/>
+        </size_ranges>
+        <available_metals>
+            <metal>950 Silver (95% pure)</metal>
+            <metal>10K Gold (41.7% pure)</metal>
+            <metal>14K Gold (58.5% pure)</metal>
+            <metal>18K Gold (75% pure)</metal>
+        </available_metals>
+        <available_colors>
+            <color metal="10k,14k,18k">Yellow Gold</color>
+            <color metal="10k,14k,18k">White Gold</color>
+            <color metal="10k,14k,18k">Rose Gold</color>
+        </available_colors>
+        <surface_finish>
+            <primary>High Polish - mirror finish</primary>
+            <secondary>Brushed/Matte - subtle texture</secondary>
+            <tertiary>Satin - soft lustrous finish</tertiary>
+        </surface_finish>
+    </specifications>
+
+    <!-- Cultural/Historical Patterns (also in cultural collection) -->
+    <cultural_patterns>
+        <pattern name="Roman key" heritage="Roman/Greek"/>
+        <pattern name="Jelling band" heritage="Norse/Viking"/>
+    </cultural_patterns>
+
+    <!-- Special Notes -->
+    <special_notes>
+        <note category="gender_suffix">
+            All products use same base product ID for both men's and ladies' versions (no M/L suffix in product ID)
+        </note>
+        <note category="sizing">
+            Width is fixed per product ID - cannot be customized
+        </note>
+        <note category="customization">
+            Custom engraving available on interior of all bands
+        </note>
+        <note category="heritage">
+            Most patterns are traditional Celtic/Irish designs dating back centuries
+        </note>
+        <note category="craftsmanship">
+            All bands handcrafted with traditional Celtic knotwork techniques
+        </note>
+    </special_notes>
+</celtic_bands_mapping>

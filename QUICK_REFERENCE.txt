@@ -1,0 +1,155 @@
+╔══════════════════════════════════════════════════════════════╗
+║       CADMAN MANUFACTURING - ENCRYPTED CREDENTIALS           ║
+║                  Quick Reference Card                        ║
+╚══════════════════════════════════════════════════════════════╝
+
+┌──────────────────────────────────────────────────────────────┐
+│ 📋 QUICK SETUP (First Time)                                  │
+└──────────────────────────────────────────────────────────────┘
+
+  1. Run setup script:
+     $ sudo bash setup_encrypted_config.sh
+     
+  2. Save the credentials it generates
+  
+  3. Create MySQL user with generated DB password
+  
+  4. Test decryption:
+     $ python3 config_encrypt.py decrypt
+
+
+┌──────────────────────────────────────────────────────────────┐
+│ 🔐 DAILY OPERATIONS                                          │
+└──────────────────────────────────────────────────────────────┘
+
+  DECRYPT (Start of day):
+  $ cd /var/www/html/homesite
+  $ python3 config_encrypt.py decrypt
+  → Enter encryption password
+  → Credentials now available to application
+  
+  ENCRYPT (End of day):
+  $ cd /var/www/html/homesite
+  $ python3 config_encrypt.py encrypt
+  $ sudo rm -rf /var/www/config
+  → Credentials safely encrypted
+
+
+┌──────────────────────────────────────────────────────────────┐
+│ 📁 FILE LOCATIONS                                            │
+└──────────────────────────────────────────────────────────────┘
+
+  ENCRYPTED (permanent):
+  /var/www/config_encrypted/.env.development.encrypted
+  
+  DECRYPTED (runtime only):
+  /var/www/config/.env.development
+  
+  CODE FILES:
+  /var/www/html/homesite/includes/config_loader.php
+  /var/www/html/homesite/includes/db_config_encrypted.php
+
+
+┌──────────────────────────────────────────────────────────────┐
+│ 🔑 WHAT'S ENCRYPTED                                          │
+└──────────────────────────────────────────────────────────────┘
+
+  ✓ Admin username
+  ✓ Admin password hash
+  ✓ Database username
+  ✓ Database password
+  ✓ Session secret key
+  ✓ API keys (if configured)
+
+
+┌──────────────────────────────────────────────────────────────┐
+│ 🛠️ COMMON TASKS                                             │
+└──────────────────────────────────────────────────────────────┘
+
+  CHECK STATUS:
+  $ python3 config_encrypt.py status
+  
+  CHANGE PASSWORD:
+  1. $ python3 config_encrypt.py decrypt
+  2. $ sudo nano /var/www/config/.env.development
+  3. $ python3 config_encrypt.py encrypt
+  
+  GENERATE NEW ADMIN HASH:
+  $ php -r "echo password_hash('NewPassword', PASSWORD_DEFAULT);"
+  
+  GENERATE RANDOM PASSWORD:
+  $ openssl rand -base64 24 | tr -d '/+=' | cut -c1-20
+
+
+┌──────────────────────────────────────────────────────────────┐
+│ ⚠️ TROUBLESHOOTING                                           │
+└──────────────────────────────────────────────────────────────┘
+
+  "Database credentials not loaded":
+  → Run: python3 config_encrypt.py decrypt
+  
+  "No configuration file found":
+  → Check: ls /var/www/config/.env.development
+  → If missing, run: python3 config_encrypt.py decrypt
+  
+  "Decryption failed":
+  → Wrong password - try again
+  → Check: ls /var/www/config_encrypted/
+  
+  Can't login after setup:
+  1. Decrypt config
+  2. Check credentials: cat /var/www/config/.env.development
+  3. Verify DB user exists: sudo mysql -u cadman_admin -p
+
+
+┌──────────────────────────────────────────────────────────────┐
+│ 🔒 SECURITY CHECKLIST                                        │
+└──────────────────────────────────────────────────────────────┘
+
+  ✓ Encryption password saved in password manager
+  ✓ Never commit .env.development to git
+  ✓ Re-encrypt after editing credentials
+  ✓ Backup /var/www/config_encrypted/ regularly
+  ✓ Set permissions: chmod 600 on decrypted config
+  ✓ Remove decrypted config when not in use
+
+
+┌──────────────────────────────────────────────────────────────┐
+│ 📞 EMERGENCY ACCESS                                          │
+└──────────────────────────────────────────────────────────────┘
+
+  If you lose the encryption password:
+  
+  1. You'll need to recreate the config from scratch
+  2. Run: sudo bash setup_encrypted_config.sh
+  3. Enter new credentials
+  4. Update MySQL with new DB password
+  5. Create new admin password hash
+  
+  That's why backing up is important!
+
+
+┌──────────────────────────────────────────────────────────────┐
+│ 📚 DOCUMENTATION                                             │
+└──────────────────────────────────────────────────────────────┘
+
+  Full guide:        ENCRYPTION_SETUP.md
+  Quick summary:     ENCRYPTION_SUMMARY.md
+  Implementation:    UNIFIED_LOGIN_IMPLEMENTATION.md
+  This card:         QUICK_REFERENCE.txt
+
+
+┌──────────────────────────────────────────────────────────────┐
+│ 💡 TIPS                                                      │
+└──────────────────────────────────────────────────────────────┘
+
+  • Keep config decrypted only while working
+  • Use strong, unique encryption password
+  • Test decryption regularly to ensure backup works
+  • Consider automating decrypt on server boot (advanced)
+  • Monitor /var/www/config/ for unauthorized access
+
+
+╔══════════════════════════════════════════════════════════════╗
+║  Print this card and keep it handy! 📋                       ║
+╚══════════════════════════════════════════════════════════════╝

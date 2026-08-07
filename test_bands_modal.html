@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Bands Modal Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-button {
+            background: #8B4513;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .test-button:hover {
+            background: #6B3410;
+        }
+        .description {
+            color: #666;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enhanced Bands Modal - Adaptive Series Display</h1>
+    
+    <div class="test-section">
+        <h2>Products WITH Series Data</h2>
+        <div class="description">
+            These products have series information in the database and will show width alternatives and series siblings.
+        </div>
+        <button class="test-button" onclick="ProductModal.open('4T18M')">
+            4T18M - Tiffany Comfort Curve (4mm)
+        </button>
+        <button class="test-button" onclick="ProductModal.open('6T18L')">
+            6T18L - Tiffany Comfort Curve (6mm)
+        </button>
+        <button class="test-button" onclick="ProductModal.open('3T18M')">
+            3T18M - Tiffany Comfort Curve (3mm)
+        </button>
+    </div>
+    
+    <div class="test-section">
+        <h2>Products WITHOUT Series Data</h2>
+        <div class="description">
+            These products lack series info but may show pattern siblings (T006 matches).
+        </div>
+        <button class="test-button" onclick="ProductModal.open('1T006L')">
+            1T006L - Pattern Sibling Test
+        </button>
+        <button class="test-button" onclick="ProductModal.open('1T006M')">
+            1T006M - Pattern Sibling Test  
+        </button>
+        <button class="test-button" onclick="ProductModal.open('1T010M')">
+            1T010M - Isolated Product
+        </button>
+    </div>
+    
+    <div class="test-section">
+        <h2>Expected Behavior</h2>
+        <div class="description">
+            <ul>
+                <li><strong>T18 Series Products:</strong> Should show "Available Widths in Tiffany Comfort Curve Series" with 3mm, 4mm, 5mm, 6mm, 7mm, 8mm options</li>
+                <li><strong>T006 Products:</strong> Should show "Related Products" with T006 pattern siblings (1T006L, 1T006M)</li>
+                <li><strong>Isolated Products:</strong> Should show no related products section (adaptive)</li>
+                <li><strong>Current Product:</strong> Should be highlighted with dark background in related products</li>
+                <li><strong>Clickable Siblings:</strong> Should open their modal when clicked</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Include the ProductModal -->
+    <?php 
+    require_once 'classes/ProductModal.php';
+    ProductModal::renderModalContainer();
+    ?>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+Current Products on page_12a (27 items):
+============================================
+
+4900 Series:
+- 4911
+- 4912  
+- 4913
+
+C Series:
+- C553MAS
+- C58MAS
+- C64MAS
+
+E/L/P/V Series:
+- EMR31M
+- LPN31M
+- PCW31M
+- VET14M
+
+S Series:
+- S14M
+- S16DM
+- S180M
+- S185M
+- S20M
+- S240L
+- S24M
+- S25M
+- S26M
+- S30HM
+- S31HM
+- S32HM
+- S33HM
+- S36HM
+- S38M
+- S46M
+- S6RM
+
+Total: 27 products currently assigned to page_12a

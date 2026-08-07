@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Viewer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+        }
+        .viewer-container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .toolbar {
+            background: #333;
+            color: white;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .pdf-canvas-container {
+            flex: 1;
+            overflow: auto;
+            background: white;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        #pdfCanvas {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        button {
+            background: #555;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #777;
+        }
+        button:disabled {
+            background: #999;
+            cursor: not-allowed;
+        }
+        .page-info {
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="viewer-container">
+        <div class="toolbar">
+            <div class="controls">
+                <button id="prevPage">← Previous</button>
+                <button id="nextPage">Next →</button>
+                <span class="page-info">
+                    Page: <span id="pageNum">1</span> / <span id="pageCount">--</span>
+                </span>
+            </div>
+            <div class="controls">
+                <button id="zoomOut">Zoom Out</button>
+                <button id="zoomIn">Zoom In</button>
+                <span class="page-info">Scale: <span id="scaleDisplay">100%</span></span>
+            </div>
+        </div>
+        <div class="pdf-canvas-container">
+            <canvas id="pdfCanvas"></canvas>
+        </div>
+    </div>
+
+    <script src="../build/pdf.mjs" type="module"></script>
+    <script type="module">
+        import { getDocument, GlobalWorkerOptions } from '../build/pdf.mjs';
+        
+        // Set worker
+        GlobalWorkerOptions.workerSrc = '../build/pdf.worker.mjs';
+        
+        let pdfDoc = null;
+        let pageNum = 1;
+        let pageRendering = false;
+        let pageNumPending = null;
+        let scale = 1.5;
+        
+        const canvas = document.getElementById('pdfCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Get PDF file parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const pdfFile = urlParams.get('file') || '../../../Cadman_catalog/index_main.pdf';
+        
+        // Load PDF
+        getDocument(pdfFile).promise.then(function(pdf) {
+            pdfDoc = pdf;
+            document.getElementById('pageCount').textContent = pdf.numPages;
+            renderPage(pageNum);
+        }).catch(function(error) {
+            console.error('Error loading PDF:', error);
+            document.getElementById('pdfCanvas').style.display = 'none';
+            document.querySelector('.pdf-canvas-container').innerHTML = 
+                '<div style="text-align: center; padding: 50px; color: #666;">' +
+                '<h2>Error Loading PDF</h2>' +
+                '<p>Could not load: ' + pdfFile + '</p>' +
+                '<p>Error: ' + error.message + '</p>' +
+                '</div>';
+        });
+        
+        function renderPage(num) {
+            if (pageRendering) {
+                pageNumPending = num;
+                return;
+            }
+            
+            pageRendering = true;
+            
+            pdfDoc.getPage(num).then(function(page) {
+                const viewport = page.getViewport({ scale: scale });
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+                
+                const renderContext = {
+                    canvasContext: ctx,
+                    viewport: viewport
+                };
+                
+                const renderTask = page.render(renderContext);
+                renderTask.promise.then(function() {
+                    pageRendering = false;
+                    if (pageNumPending !== null) {
+                        renderPage(pageNumPending);
+                        pageNumPending = null;
+                    }
+                });
+            });
+            
+            document.getElementById('pageNum').textContent = num;
+            document.getElementById('prevPage').disabled = (num <= 1);
+            document.getElementById('nextPage').disabled = (num >= pdfDoc.numPages);
+        }
+        
+        function updateScale() {
+            document.getElementById('scaleDisplay').textContent = Math.round(scale * 100) + '%';
+            renderPage(pageNum);
+        }
+        
+        // Event listeners
+        document.getElementById('prevPage').addEventListener('click', function() {
+            if (pageNum <= 1) return;
+            pageNum--;
+            renderPage(pageNum);
+        });
+        
+        document.getElementById('nextPage').addEventListener('click', function() {
+            if (pageNum >= pdfDoc.numPages) return;
+            pageNum++;
+            renderPage(pageNum);
+        });
+        
+        document.getElementById('zoomOut').addEventListener('click', function() {
+            if (scale <= 0.5) return;
+            scale -= 0.25;
+            updateScale();
+        });
+        
+        document.getElementById('zoomIn').addEventListener('click', function() {
+            if (scale >= 3) return;
+            scale += 0.25;
+            updateScale();
+        });
+    </script>
+</body>
+</html>

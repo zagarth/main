@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurator_rules>
+    <!-- 
+    Configurator Rules Documentation
+    This file documents the specific behavior requirements for each band category
+    -->
+    
+    <category name="celtic">
+        <type>pattern-based</type>
+        <description>Each pattern has exactly 3 width options with specific product IDs</description>
+        <xml_file>celtic_bands_mapping.xml</xml_file>
+        <behavior>
+            <selection_method>pattern_specific</selection_method>
+            <width_options>3</width_options>
+            <widths>7.5mm, 6.5mm, 5.5mm</widths>
+            <product_id_format>Specific IDs for each width (e.g., 5296/5430/5600 for Celtic Link)</product_id_format>
+        </behavior>
+        <example>
+            <pattern>Celtic Link</pattern>
+            <width_7_5mm>5296</width_7_5mm>
+            <width_6_5mm>5430</width_6_5mm>
+            <width_5_5mm>5600</width_5_5mm>
+        </example>
+    </category>
+    
+    <category name="cultural">
+        <type>pattern-based</type>
+        <description>Similar to celtic - each pattern has exactly 3 width options</description>
+        <xml_file>cultural_bands_mapping.xml</xml_file>
+        <behavior>
+            <selection_method>pattern_specific</selection_method>
+            <width_options>3</width_options>
+            <widths>7.5mm, 6.5mm, 5.5mm</widths>
+            <product_id_format>Specific IDs for each width per pattern</product_id_format>
+        </behavior>
+    </category>
+    
+    <category name="plain">
+        <type>series-based</type>
+        <description>Series contain multiple widths with M/L product ID suffixes</description>
+        <xml_file>plain_bands_mapping.xml</xml_file>
+        <behavior>
+            <selection_method>series_based</selection_method>
+            <width_options>variable</width_options>
+            <widths>Multiple widths per series (2mm-8mm)</widths>
+            <product_id_format>Base ID + M/L suffix (e.g., 5001M, 5001L)</product_id_format>
+        </behavior>
+        <example>
+            <series>Bronze 5001M</series>
+            <widths>2mm, 3mm, 4mm, 5mm, 6mm, 7mm, 8mm</widths>
+            <product_ids>5001M-2, 5001M-3, 5001M-4, 5001M-5, 5001M-6, 5001M-7, 5001M-8</product_ids>
+        </example>
+    </category>
+    
+    <category name="fancy">
+        <type>individual</type>
+        <description>Individual rings with gold type and size choices</description>
+        <xml_file>fancy_bands_mapping.xml</xml_file>
+        <behavior>
+            <selection_method>individual_ring</selection_method>
+            <options>gold_type, size</options>
+            <gold_types>White Gold, Yellow Gold, Rose Gold</gold_types>
+            <product_id_format>Individual product IDs for each ring</product_id_format>
+        </behavior>
+    </category>
+    
+    <!-- Configuration Instructions -->
+    <implementation_notes>
+        <note>Use these rules to determine configurator behavior in test_classic_configurator.php</note>
+        <note>Celtic and Cultural categories should show pattern-specific width grids</note>
+        <note>Plain category should show series-based width selection</note>
+        <note>Fancy category should show gold type and size options</note>
+        <note>All product IDs should be clearly displayed next to options</note>
+    </implementation_notes>
+</configurator_rules>

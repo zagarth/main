@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Width Options</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/configurator.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .debug-container {
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid red;
+        }
+        .test-results {
+            background: #f0f0f0;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="debug-container">
+        <h1>Width Options Debug</h1>
+        
+        <h2>Test 1: Manual HTML Grid</h2>
+        <div class="width-options-grid" style="border: 2px solid blue;">
+            <div class="width-option" style="border: 1px solid green;">
+                <div class="plain-width-label" style="background: #ffe0e0;">
+                    <div>200 2mm</div>
+                </div>
+            </div>
+            <div class="width-option" style="border: 1px solid green;">
+                <div class="plain-width-label" style="background: #e0ffe0;">
+                    <div>250 2.5mm</div>
+                </div>
+            </div>
+            <div class="width-option" style="border: 1px solid green;">
+                <div class="plain-width-label" style="background: #e0e0ff;">
+                    <div>300 3mm</div>
+                </div>
+            </div>
+            <div class="width-option" style="border: 1px solid green;">
+                <div class="plain-width-label" style="background: #ffe0ff;">
+                    <div>400 4mm</div>
+                </div>
+            </div>
+        </div>
+        
+        <h2>Test 2: API Data</h2>
+        <div id="api-test" class="test-results">Loading API data...</div>
+        
+        <h2>Test 3: Dynamic Grid Creation</h2>
+        <div id="dynamic-grid-container">
+            <div class="plain-width-selector">
+                <h4>Select Width:</h4>
+                <div class="width-options-grid" id="dynamic-width-options">
+                    <!-- This will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+        
+        <h2>CSS Debug Info</h2>
+        <div id="css-debug" class="test-results">Checking CSS...</div>
+    </div>
+
+    <script>
+        console.log('=== DEBUG SCRIPT STARTING ===');
+        
+        // Test 1: Check CSS
+        setTimeout(() => {
+            const grid = document.querySelector('.width-options-grid');
+            if (grid) {
+                const computed = window.getComputedStyle(grid);
+                const cssInfo = `
+Grid Display: ${computed.display}
+Grid Template Columns: ${computed.gridTemplateColumns}
+Grid Gap: ${computed.gap}
+Max Width: ${computed.maxWidth}
+`;
+                document.getElementById('css-debug').textContent = cssInfo;
+                console.log('CSS Info:', cssInfo);
+            }
+        }, 100);
+        
+        // Test 2: Check API
+        fetch('api/get_configurator_config.php?collection=plain')
+            .then(response => response.json())
+            .then(data => {
+                console.log('API Response:', data);
+                const apiInfo = `
+API Status: ${data.status || 'unknown'}
+Data Available: ${data.data ? 'yes' : 'no'}
+Series Count: ${data.data?.options?.style_and_width?.grid_layout?.series?.length || 0}
+`;
+                document.getElementById('api-test').textContent = apiInfo + '\n\nFull Response:\n' + JSON.stringify(data, null, 2);
+                
+                // Test 3: Create dynamic grid
+                if (data.data?.options?.style_and_width?.grid_layout?.series) {
+                    createDynamicGrid(data.data.options.style_and_width.grid_layout);
+                }
+            })
+            .catch(error => {
+                console.error('API Error:', error);
+                document.getElementById('api-test').textContent = 'API Error: ' + error.message;
+            });
+            
+        function createDynamicGrid(gridLayout) {
+            console.log('Creating dynamic grid with:', gridLayout);
+            const container = document.getElementById('dynamic-width-options');
+            
+            if (!gridLayout.series || gridLayout.series.length === 0) {
+                container.innerHTML = '<p>No series data available</p>';
+                return;
+            }
+            
+            // Use first series for testing
+            const series = gridLayout.series[0];
+            let html = '';
+            
+            if (series.products) {
+                series.products.slice(0, 6).forEach((product, index) => {
+                    html += `
+                        <div class="width-option" style="border: 1px solid orange;">
+                            <input type="radio" id="test_${product.base_id}" name="test_width" class="plain-width-radio">
+                            <label for="test_${product.base_id}" class="plain-width-label" style="background: #f0f8ff;">
+                                <div class="width-size">${product.width}</div>
+                                <div style="font-size: 12px; color: #666;">ID: ${product.base_id}</div>
+                            </label>
+                        </div>
+                    `;
+                });
+            }
+            
+            container.innerHTML = html || '<p>No products found</p>';
+            console.log('Dynamic grid HTML set');
+        }
+    </script>
+</body>
+</html>

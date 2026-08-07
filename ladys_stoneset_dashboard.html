@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ladys Stoneset Auto-Processor Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .dashboard-header {
+            background: linear-gradient(135deg, #8B008B, #FF69B4);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .dashboard-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: 1px solid #e0e0e0;
+        }
+        
+        .card-header {
+            color: #8B008B;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .status-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        
+        .status-item:last-child {
+            border-bottom: none;
+        }
+        
+        .status-badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .status-ready {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status-missing {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .status-partial {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .action-button {
+            background: linear-gradient(135deg, #8B008B, #FF69B4);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .action-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(139, 0, 139, 0.3);
+        }
+        
+        .action-button:disabled {
+            background: #cccccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: #f0f0f0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #8B008B, #FF69B4);
+            transition: width 0.3s ease;
+        }
+        
+        .log-container {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 15px;
+            max-height: 300px;
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+        
+        .upload-zone {
+            border: 2px dashed #8B008B;
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            background: #fafafa;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .upload-zone:hover {
+            background: #f0f0f0;
+            border-color: #FF69B4;
+        }
+        
+        .upload-zone.dragover {
+            background: #e8f4f8;
+            border-color: #007bff;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #8B008B, #FF69B4);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h1>Ladys Stoneset Auto-Processor Dashboard</h1>
+            <p>Automated thumbnail generation and detail page creation system</p>
+        </div>
+        
+        <div class="stats-grid" id="statsGrid">
+            <div class="stat-card">
+                <div class="stat-number" id="gemsCount">-</div>
+                <div class="stat-label">Gems Items</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="pearlsCount">-</div>
+                <div class="stat-label">Pearls Items</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="readyCount">-</div>
+                <div class="stat-label">Ready Items</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="pendingCount">-</div>
+                <div class="stat-label">Pending Items</div>
+            </div>
+        </div>
+        
+        <div class="dashboard-grid">
+            <div class="dashboard-card">
+                <div class="card-header">🎛️ Processing Controls</div>
+                <div style="text-align: center;">
+                    <button class="action-button" onclick="processNewImages()">
+                        🔄 Process New Images
+                    </button>
+                    <button class="action-button" onclick="refreshStatus()">
+                        📊 Refresh Status
+                    </button>
+                    <button class="action-button" onclick="generateThumbnails()">
+                        🖼️ Generate All Thumbnails
+                    </button>
+                </div>
+                <div id="processingProgress" style="display: none;">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill" style="width: 0%;"></div>
+                    </div>
+                    <div id="processingStatus">Processing...</div>
+                </div>
+            </div>
+            
+            <div class="dashboard-card">
+                <div class="card-header">📈 Collection Status</div>
+                <div id="collectionStats">Loading...</div>
+            </div>
+            
+            <div class="dashboard-card">
+                <div class="card-header">💎 Gems Collection</div>
+                <div id="gemsStatus">Loading...</div>
+            </div>
+            
+            <div class="dashboard-card">
+                <div class="card-header">🤍 Pearls Collection</div>
+                <div id="pearlsStatus">Loading...</div>
+            </div>
+        </div>
+        
+        <div class="dashboard-card">
+            <div class="card-header">📋 Processing Log</div>
+            <div class="log-container" id="processingLog">
+                <div>Dashboard initialized. Ready to process images...</div>
+            </div>
+            <div style="text-align: center; margin-top: 10px;">
+                <button class="action-button" onclick="clearLog()">Clear Log</button>
+            </div>
+        </div>
+        
+        <div class="dashboard-card">
+            <div class="card-header">📤 Quick Upload</div>
+            <div class="upload-zone" id="uploadZone">
+                <div>
+                    <strong>Drag & Drop Images Here</strong><br>
+                    or click to select files<br>
+                    <small>Supports: JPG, PNG, GIF, WEBP</small>
+                </div>
+                <input type="file" id="fileInput" multiple accept=".jpg,.jpeg,.png,.gif,.webp" style="display: none;">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let statusData = {};
+        
+        // Initialize dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            refreshStatus();
+            
+            // Setup file upload
+            setupFileUpload();
+            
+            // Auto-refresh every 30 seconds
+            setInterval(refreshStatus, 30000);
+        });
+        
+        // Setup file upload functionality
+        function setupFileUpload() {
+            const uploadZone = document.getElementById('uploadZone');
+            const fileInput = document.getElementById('fileInput');
+            
+            uploadZone.addEventListener('click', () => fileInput.click());
+            
+            uploadZone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                uploadZone.classList.add('dragover');
+            });
+            
+            uploadZone.addEventListener('dragleave', () => {
+                uploadZone.classList.remove('dragover');
+            });
+            
+            uploadZone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                uploadZone.classList.remove('dragover');
+                handleFileUpload(e.dataTransfer.files);
+            });
+            
+            fileInput.addEventListener('change', (e) => {
+                handleFileUpload(e.target.files);
+            });
+        }
+        
+        // Handle file upload
+        function handleFileUpload(files) {
+            if (files.length === 0) return;
+            
+            logMessage(`Uploading ${files.length} file(s)...`);
+            
+            // This would typically upload to a PHP script
+            // For now, just simulate the process
+            setTimeout(() => {
+                logMessage(`Upload completed. Processing new images...`);
+                processNewImages();
+            }, 1000);
+        }
+        
+        // Refresh collection status
+        async function refreshStatus() {
+            try {
+                logMessage('Refreshing collection status...');
+                
+                const response = await fetch('ladys_stoneset_auto_processor.php?action=status');
+                statusData = await response.json();
+                
+                updateStatusDisplay();
+                logMessage('Status refreshed successfully');
+                
+            } catch (error) {
+                logMessage(`Error refreshing status: ${error.message}`);
+            }
+        }
+        
+        // Process new images
+        async function processNewImages() {
+            try {
+                showProcessingProgress();
+                logMessage('Starting image processing...');
+                
+                const response = await fetch('ladys_stoneset_auto_processor.php?action=process');
+                const results = await response.json();
+                
+                hideProcessingProgress();
+                
+                logMessage(`Processing completed:`);
+                logMessage(`- Thumbnails created: ${results.thumbnails_created}`);
+                logMessage(`- Detail pages created: ${results.detail_pages_created}`);
+                logMessage(`- Errors: ${results.errors}`);
+                
+                // Refresh status after processing
+                setTimeout(refreshStatus, 1000);
+                
+            } catch (error) {
+                hideProcessingProgress();
+                logMessage(`Error processing images: ${error.message}`);
+            }
+        }
+        
+        // Generate thumbnails using the existing script
+        async function generateThumbnails() {
+            try {
+                logMessage('Generating thumbnails using main script...');
+                showProcessingProgress();
+                
+                const response = await fetch('generate_thumbnails.php');
+                const result = await response.text();
+                
+                hideProcessingProgress();
+                logMessage('Thumbnail generation completed');
+                
+                // Refresh status after processing
+                setTimeout(refreshStatus, 1000);
+                
+            } catch (error) {
+                hideProcessingProgress();
+                logMessage(`Error generating thumbnails: ${error.message}`);
+            }
+        }
+        
+        // Update status display
+        function updateStatusDisplay() {
+            updateStats();
+            updateGemsStatus();
+            updatePearlsStatus();
+            updateCollectionStats();
+        }
+        
+        // Update statistics
+        function updateStats() {
+            const gemsCount = Object.keys(statusData.gems || {}).length;
+            const pearlsCount = Object.keys(statusData.pearls || {}).length;
+            let readyCount = 0;
+            let pendingCount = 0;
+            
+            // Count ready and pending items
+            [...Object.values(statusData.gems || {}), ...Object.values(statusData.pearls || {})].forEach(item => {
+                if (item.ready) {
+                    readyCount++;
+                } else {
+                    pendingCount++;
+                }
+            });
+            
+            document.getElementById('gemsCount').textContent = gemsCount;
+            document.getElementById('pearlsCount').textContent = pearlsCount;
+            document.getElementById('readyCount').textContent = readyCount;
+            document.getElementById('pendingCount').textContent = pendingCount;
+        }
+        
+        // Update gems status
+        function updateGemsStatus() {
+            const container = document.getElementById('gemsStatus');
+            const gems = statusData.gems || {};
+            
+            if (Object.keys(gems).length === 0) {
+                container.innerHTML = '<div style="color: #666; font-style: italic;">No gems found</div>';
+                return;
+            }
+            
+            let html = '';
+            Object.entries(gems).forEach(([name, item]) => {
+                const status = getItemStatus(item);
+                html += `
+                    <div class="status-item">
+                        <span>${name}</span>
+                        <span class="status-badge ${status.class}">${status.text}</span>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+        }
+        
+        // Update pearls status
+        function updatePearlsStatus() {
+            const container = document.getElementById('pearlsStatus');
+            const pearls = statusData.pearls || {};
+            
+            if (Object.keys(pearls).length === 0) {
+                container.innerHTML = '<div style="color: #666; font-style: italic;">No pearls found</div>';
+                return;
+            }
+            
+            let html = '';
+            Object.entries(pearls).forEach(([name, item]) => {
+                const status = getItemStatus(item);
+                html += `
+                    <div class="status-item">
+                        <span>${name}</span>
+                        <span class="status-badge ${status.class}">${status.text}</span>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+        }
+        
+        // Update collection statistics
+        function updateCollectionStats() {
+            const container = document.getElementById('collectionStats');
+            const totalItems = Object.keys(statusData.gems || {}).length + Object.keys(statusData.pearls || {}).length;
+            
+            if (totalItems === 0) {
+                container.innerHTML = '<div style="color: #666; font-style: italic;">No items found</div>';
+                return;
+            }
+            
+            let readyItems = 0;
+            let missingThumbs = 0;
+            let missingDetails = 0;
+            
+            [...Object.values(statusData.gems || {}), ...Object.values(statusData.pearls || {})].forEach(item => {
+                if (item.ready) readyItems++;
+                if (!item.thumbnail) missingThumbs++;
+                if (!item.detail_page) missingDetails++;
+            });
+            
+            const readyPercent = Math.round((readyItems / totalItems) * 100);
+            
+            container.innerHTML = `
+                <div class="status-item">
+                    <span>Total Items</span>
+                    <span><strong>${totalItems}</strong></span>
+                </div>
+                <div class="status-item">
+                    <span>Ready Items</span>
+                    <span><strong>${readyItems}</strong> (${readyPercent}%)</span>
+                </div>
+                <div class="status-item">
+                    <span>Missing Thumbnails</span>
+                    <span><strong>${missingThumbs}</strong></span>
+                </div>
+                <div class="status-item">
+                    <span>Missing Detail Pages</span>
+                    <span><strong>${missingDetails}</strong></span>
+                </div>
+                <div style="margin-top: 10px;">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: ${readyPercent}%;"></div>
+                    </div>
+                </div>
+            `;
+        }
+        
+        // Get item status
+        function getItemStatus(item) {
+            if (item.ready) {
+                return { class: 'status-ready', text: 'Ready' };
+            } else if (item.thumbnail && !item.detail_page) {
+                return { class: 'status-partial', text: 'Missing Detail' };
+            } else if (!item.thumbnail && item.detail_page) {
+                return { class: 'status-partial', text: 'Missing Thumb' };
+            } else {
+                return { class: 'status-missing', text: 'Not Ready' };
+            }
+        }
+        
+        // Show processing progress
+        function showProcessingProgress() {
+            document.getElementById('processingProgress').style.display = 'block';
+            simulateProgress();
+        }
+        
+        // Hide processing progress
+        function hideProcessingProgress() {
+            document.getElementById('processingProgress').style.display = 'none';
+        }
+        
+        // Simulate progress animation
+        function simulateProgress() {
+            const progressFill = document.getElementById('progressFill');
+            const statusText = document.getElementById('processingStatus');
+            
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += Math.random() * 20;
+                if (progress > 100) progress = 100;
+                
+                progressFill.style.width = progress + '%';
+                
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    statusText.textContent = 'Processing complete!';
+                }
+            }, 200);
+        }
+        
+        // Log message
+        function logMessage(message) {
+            const logContainer = document.getElementById('processingLog');
+            const timestamp = new Date().toLocaleTimeString();
+            const logEntry = document.createElement('div');
+            logEntry.textContent = `[${timestamp}] ${message}`;
+            
+            logContainer.appendChild(logEntry);
+            logContainer.scrollTop = logContainer.scrollHeight;
+        }
+        
+        // Clear log
+        function clearLog() {
+            document.getElementById('processingLog').innerHTML = '<div>Log cleared.</div>';
+        }
+    </script>
+</body>
+</html>

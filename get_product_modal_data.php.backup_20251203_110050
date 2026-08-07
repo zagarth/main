@@ -1,0 +1,224 @@
+<?php
+// Get Product Modal Data Endpoint
+// Fetches comprehensive product data for catalog detail modal
+
+header('Content-Type: application/json');
+
+// Database connection
+try {
+    // Create database user if needed
+    exec('sudo mysql -e "CREATE USER IF NOT EXISTS \'scanner\'@\'localhost\' IDENTIFIED BY \'scan123\'; GRANT ALL PRIVILEGES ON CadmanClients.* TO \'scanner\'@\'localhost\'; FLUSH PRIVILEGES;" 2>/dev/null');
+    
+    $host = 'localhost';
+    $dbname = 'CadmanClients';  
+    $username = 'scanner';
+    $password = 'scan123';
+    
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password, [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+    ]);
+} catch (PDOException $e) {
+    echo json_encode(['success' => false, 'error' => 'Database connection failed']);
+    exit;
+}
+
+// Get POST parameters
+$productId = $_POST['product_id'] ?? '';
+$searchTerm = $_POST['search_term'] ?? '';
+
+if (empty($productId)) {
+    echo json_encode(['success' => false, 'error' => 'Product ID required']);
+    exit;
+}
+
+try {
+    // Fetch product data from database
+    $stmt = $pdo->prepare("
+        SELECT 
+            product_id,
+            product_name,
+            category,
+            subcategory,
+            page_reference,
+            base_id,
+            gender_variant,
+            width_mm,
+            thickness_mm,
+            height_mm,
+            profile,
+            style,
+            pattern,
+            series,
+            material_options,
+            white_gold_available,
+            special_notes,
+            size_restrictions,
+            diamond_count,
+            diamond_weight_ct,
+            has_images,
+            image_files,
+            pdf_file,
+            source,
+            base_price,
+            created_at,
+            updated_at
+        FROM catalog_products 
+        WHERE product_id = ?
+    ");
+    $stmt->execute([$productId]);
+    $product = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+    if (!$product) {
+        echo json_encode(['success' => false, 'error' => 'Product not found']);
+        exit;
+    }
+    
+    // Process image files
+    $images = [];
+    if ($product['has_images'] && !empty($product['image_files']) && $product['image_files'] !== 'no images found') {
+        $imagePath = $product['image_files'];
+        
+        // Check if image file exists
+        if (file_exists($imagePath)) {
+            $images[] = [
+                'url' => $imagePath,
+                'thumbnail' => $imagePath,
+                'alt' => $product['product_name'] ?? $product['product_id']
+            ];
+            
+            // Look for additional variant images (like _alt1, _alt2, etc.)
+            $pathInfo = pathinfo($imagePath);
+            $baseName = $pathInfo['filename'];
+            $extension = $pathInfo['extension'];
+            $directory = $pathInfo['dirname'];
+            
+            // Remove existing suffixes to get clean base name
+            $cleanBaseName = preg_replace('/(_alt\d*|_view\d*|_art\d*)$/', '', $baseName);
+            
+            // Look for variant images in the same directory
+            if (is_dir($directory)) {
+                $files = scandir($directory);
+                foreach ($files as $file) {
+                    if (is_file($directory . '/' . $file)) {
+                        $fileInfo = pathinfo($file);
+                        if ($fileInfo['extension'] === $extension) {
+                            $fileName = $fileInfo['filename'];
+                            
+                            // Check if this file is a variant of our base product
+                            if (preg_match('/^' . preg_quote($cleanBaseName, '/') . '(_alt\d*|_view\d*|_art\d*)?$/', $fileName) && 
+                                $fileName !== $baseName) {
+                                $variantPath = $directory . '/' . $file;
+                                $images[] = [
+                                    'url' => $variantPath,
+                                    'thumbnail' => $variantPath,
+                                    'alt' => ($product['product_name'] ?? $product['product_id']) . ' - Alternate View'
+                                ];
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    // For Celtic products, try to find pattern group images
+    if ($product['category'] === 'celtic_bands' && empty($images)) {
+        $celticDir = 'bands_php/images/celtic/';
+        if (is_dir($celticDir)) {
+            // Extract base pattern name from product ID
+            $basePattern = preg_replace('/[ML]?$/', '', $product['product_id']);
+            
+            // Look for images with similar pattern
+            $files = scandir($celticDir);
+            foreach ($files as $file) {
+                if (preg_match('/\.(png|jpg|jpeg)$/i', $file)) {
+                    $fileBaseName = preg_replace('/(_alt.*)?\..*$/', '', $file);
+                    $filePattern = preg_replace('/[ML]?$/', '', $fileBaseName);
+                    
+                    if ($filePattern === $basePattern || strpos($file, $basePattern) === 0) {
+                        $imagePath = $celticDir . $file;
+                        $images[] = [
+                            'url' => $imagePath,
+                            'thumbnail' => str_replace('/images/', '/thumbs/images/', $imagePath),
+                            'alt' => ($product['product_name'] ?? $product['product_id']) . ' - Celtic Pattern'
+                        ];
+                        break; // Use first matching image
+                    }
+                }
+            }
+        }
+    }
+    
+    // Get related products (same pattern, different widths for Celtic)
+    $relatedProducts = [];
+    if ($product['category'] === 'celtic_bands' && !empty($product['pattern'])) {
+        $stmt = $pdo->prepare("
+            SELECT product_id, product_name, width_mm, has_images, image_files
+            FROM catalog_products 
+            WHERE category = 'celtic_bands' 
+            AND pattern = ? 
+            AND product_id != ?
+            ORDER BY width_mm, product_id
+            LIMIT 10
+        ");
+        $stmt->execute([$product['pattern'], $productId]);
+        $relatedProducts = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    
+    // Load configurator options for Celtic products
+    $configuratorOptions = null;
+    if ($product['category'] === 'celtic_bands') {
+        $configuratorFile = 'bands_php/celtic_configurator.json';
+        if (file_exists($configuratorFile)) {
+            $configuratorData = json_decode(file_get_contents($configuratorFile), true);
+            if ($configuratorData && isset($configuratorData['data']['options'])) {
+                $configuratorOptions = $configuratorData['data']['options'];
+            }
+        }
+    }
+    
+    // Prepare response
+    $response = [
+        'success' => true,
+        'product' => [
+            'product_id' => $product['product_id'],
+            'product_name' => $product['product_name'],
+            'category' => $product['category'],
+            'subcategory' => $product['subcategory'],
+            'page_reference' => $product['page_reference'],
+            'pattern' => $product['pattern'],
+            'style' => $product['style'],
+            'width_mm' => $product['width_mm'],
+            'thickness_mm' => $product['thickness_mm'],
+            'height_mm' => $product['height_mm'],
+            'profile' => $product['profile'],
+            'series' => $product['series'],
+            'gender_variant' => $product['gender_variant'],
+            'diamond_count' => $product['diamond_count'],
+            'diamond_weight_ct' => $product['diamond_weight_ct'],
+            'white_gold_available' => (bool)$product['white_gold_available'],
+            'special_notes' => $product['special_notes'],
+            'size_restrictions' => $product['size_restrictions'],
+            'base_price' => $product['base_price'],
+            'material_options' => $product['material_options'],
+            'images' => $images,
+            'related_products' => $relatedProducts,
+            'configurator_options' => $configuratorOptions,
+            'has_configurator' => $product['category'] === 'celtic_bands'
+        ],
+        'search_context' => [
+            'search_term' => $searchTerm,
+            'timestamp' => time()
+        ]
+    ];
+    
+    echo json_encode($response, JSON_PRETTY_PRINT);
+    
+} catch (PDOException $e) {
+    error_log('Product modal data error: ' . $e->getMessage());
+    echo json_encode(['success' => false, 'error' => 'Database error occurred']);
+} catch (Exception $e) {
+    error_log('Product modal general error: ' . $e->getMessage());
+    echo json_encode(['success' => false, 'error' => 'An error occurred loading product data']);
+}
+?>

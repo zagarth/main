@@ -1,0 +1,322 @@
+{
+  "version": "1.0",
+  "last_updated": "2025-12-03",
+  "collection": "frontline_workers",
+  "data": {
+    "name": "Frontline Workers Rings",
+    "base_price": 320,
+    "currency": "CAD",
+    "options": {
+      "metal_type": {
+        "label": "Metal Type",
+        "required": true,
+        "type": "single_select",
+        "default": "sterling_silver",
+        "help_text": "Base metal for your frontline workers ring",
+        "options": [
+          {
+            "id": "sterling_silver",
+            "name": "Sterling Silver",
+            "description": "92.5% pure silver",
+            "price_modifier": 0
+          },
+          {
+            "id": "10k_gold",
+            "name": "10K Gold",
+            "description": "41.7% pure gold",
+            "price_modifier": 190
+          },
+          {
+            "id": "14k_gold",
+            "name": "14K Gold",
+            "description": "58.5% pure gold",
+            "price_modifier": 340
+          },
+          {
+            "id": "18k_gold",
+            "name": "18K Gold",
+            "description": "75% pure gold",
+            "price_modifier": 620
+          }
+        ]
+      },
+      "metal_color": {
+        "label": "Metal Color",
+        "required": true,
+        "type": "single_select",
+        "default": "yellow",
+        "visible_when": {
+          "metal_type": ["10k_gold", "14k_gold", "18k_gold"]
+        },
+        "options": [
+          {
+            "id": "yellow",
+            "name": "Yellow Gold",
+            "description": "Traditional gold color",
+            "price_modifier": 0
+          },
+          {
+            "id": "white",
+            "name": "White Gold",
+            "description": "Professional silver-like look",
+            "price_modifier": 25
+          },
+          {
+            "id": "rose",
+            "name": "Rose Gold",
+            "description": "Distinctive pink-gold tone",
+            "price_modifier": 20
+          }
+        ]
+      },
+      "service_type": {
+        "label": "Service Type",
+        "required": true,
+        "type": "single_select",
+        "default": "firefighter",
+        "help_text": "Type of frontline service",
+        "options": [
+          {
+            "id": "firefighter",
+            "name": "Firefighter",
+            "description": "Fire and rescue service",
+            "price_modifier": 0
+          },
+          {
+            "id": "clinical_services",
+            "name": "Clinical Services",
+            "description": "Healthcare and medical staff",
+            "price_modifier": 0
+          },
+          {
+            "id": "emergency_medical",
+            "name": "Emergency Medical",
+            "description": "EMS and paramedic services",
+            "price_modifier": 0
+          },
+          {
+            "id": "police",
+            "name": "Police/Law Enforcement",
+            "description": "Law enforcement services",
+            "price_modifier": 0
+          },
+          {
+            "id": "custom_service",
+            "name": "Other Essential Service",
+            "description": "Custom essential worker role",
+            "price_modifier": 25
+          }
+        ]
+      },
+      "design_style": {
+        "label": "Design Style",
+        "required": true,
+        "type": "single_select",
+        "default": "service_emblem",
+        "options": [
+          {
+            "id": "service_emblem",
+            "name": "Service Emblem",
+            "description": "Official service symbol/logo",
+            "price_modifier": 0
+          },
+          {
+            "id": "maltese_cross",
+            "name": "Maltese Cross",
+            "description": "Traditional firefighter symbol",
+            "price_modifier": 15
+          },
+          {
+            "id": "medical_caduceus",
+            "name": "Medical Caduceus", 
+            "description": "Healthcare symbol",
+            "price_modifier": 15
+          },
+          {
+            "id": "badge_style",
+            "name": "Badge Style",
+            "description": "Professional badge design",
+            "price_modifier": 30
+          },
+          {
+            "id": "minimalist",
+            "name": "Minimalist",
+            "description": "Simple, clean design",
+            "price_modifier": -20
+          }
+        ]
+      },
+      "width": {
+        "label": "Ring Width",
+        "required": true,
+        "type": "single_select",
+        "default": "standard",
+        "help_text": "Width of the ring band",
+        "options": [
+          {
+            "id": "narrow",
+            "name": "Narrow (8-10mm)",
+            "description": "Professional, subtle width",
+            "price_modifier": -20
+          },
+          {
+            "id": "standard",
+            "name": "Standard (12-14mm)",
+            "description": "Traditional service ring width",
+            "price_modifier": 0
+          },
+          {
+            "id": "wide",
+            "name": "Wide (16-18mm)",
+            "description": "Bold, statement width",
+            "price_modifier": 45
+          }
+        ]
+      },
+      "profile": {
+        "label": "Ring Profile",
+        "required": true,
+        "type": "single_select",
+        "default": "comfort_fit",
+        "options": [
+          {
+            "id": "comfort_fit",
+            "name": "Comfort Fit",
+            "description": "Rounded interior for all-day wear",
+            "price_modifier": 0
+          },
+          {
+            "id": "traditional_flat",
+            "name": "Traditional Flat",
+            "description": "Classic flat interior profile",
+            "price_modifier": -15
+          }
+        ]
+      },
+      "personalization": {
+        "label": "Personalization",
+        "required": false,
+        "type": "single_select",
+        "default": "none",
+        "help_text": "Service-specific customization",
+        "options": [
+          {
+            "id": "none",
+            "name": "Standard Design",
+            "description": "No personalization",
+            "price_modifier": 0
+          },
+          {
+            "id": "badge_number",
+            "name": "Badge Number",
+            "description": "Personal badge/ID number",
+            "price_modifier": 45
+          },
+          {
+            "id": "department_name",
+            "name": "Department Name",
+            "description": "Fire dept/hospital name",
+            "price_modifier": 65
+          },
+          {
+            "id": "years_service",
+            "name": "Years of Service",
+            "description": "Service milestone years",
+            "price_modifier": 50
+          },
+          {
+            "id": "full_custom",
+            "name": "Full Customization",
+            "description": "Name, dept, years, rank",
+            "price_modifier": 140
+          }
+        ]
+      },
+      "engraving": {
+        "label": "Personal Engraving",
+        "required": false,
+        "type": "single_select",
+        "default": "none",
+        "help_text": "Personal message engraving",
+        "options": [
+          {
+            "id": "none",
+            "name": "No Engraving",
+            "description": "Plain finish",
+            "price_modifier": 0
+          },
+          {
+            "id": "name_initials",
+            "name": "Name/Initials",
+            "description": "Personal name or initials",
+            "price_modifier": 40
+          },
+          {
+            "id": "motto",
+            "name": "Service Motto",
+            "description": "Department or personal motto",
+            "price_modifier": 75
+          },
+          {
+            "id": "dedication",
+            "name": "Dedication",
+            "description": "Memorial or dedication text",
+            "price_modifier": 85
+          }
+        ]
+      },
+      "size": {
+        "label": "Ring Size",
+        "required": true,
+        "type": "single_select",
+        "default": "9",
+        "help_text": "Ring size - request free ring sizer if unsure",
+        "options": [
+          {"id": "6", "name": "6", "price_modifier": 0},
+          {"id": "6.5", "name": "6.5", "price_modifier": 0},
+          {"id": "7", "name": "7", "price_modifier": 0},
+          {"id": "7.5", "name": "7.5", "price_modifier": 0},
+          {"id": "8", "name": "8", "price_modifier": 0},
+          {"id": "8.5", "name": "8.5", "price_modifier": 0},
+          {"id": "9", "name": "9", "price_modifier": 0},
+          {"id": "9.5", "name": "9.5", "price_modifier": 0},
+          {"id": "10", "name": "10", "price_modifier": 0},
+          {"id": "10.5", "name": "10.5", "price_modifier": 0},
+          {"id": "11", "name": "11", "price_modifier": 0},
+          {"id": "11.5", "name": "11.5", "price_modifier": 0},
+          {"id": "12", "name": "12", "price_modifier": 0},
+          {"id": "12.5", "name": "12.5", "price_modifier": 0},
+          {"id": "13", "name": "13", "price_modifier": 0},
+          {"id": "13.5", "name": "13.5", "price_modifier": 0},
+          {"id": "14", "name": "14", "price_modifier": 0}
+        ]
+      },
+      "finish": {
+        "label": "Surface Finish",
+        "required": true,
+        "type": "single_select",
+        "default": "polished",
+        "options": [
+          {
+            "id": "polished",
+            "name": "High Polish",
+            "description": "Professional mirror finish",
+            "price_modifier": 0
+          },
+          {
+            "id": "brushed",
+            "name": "Brushed Finish",
+            "description": "Durable matte texture",
+            "price_modifier": 25
+          },
+          {
+            "id": "blackened",
+            "name": "Blackened/Oxidized",
+            "description": "Tactical dark finish",
+            "price_modifier": 45
+          }
+        ]
+      }
+    }
+  }
+}

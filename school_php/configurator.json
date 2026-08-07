@@ -1,0 +1,272 @@
+{
+  "version": "1.0",
+  "last_updated": "2025-12-03",
+  "collection": "school",
+  "data": {
+    "name": "School Rings",
+    "base_price": 280,
+    "currency": "CAD",
+    "options": {
+      "metal_type": {
+        "label": "Metal Type",
+        "required": true,
+        "type": "single_select",
+        "default": "sterling_silver",
+        "help_text": "Base metal for your school ring",
+        "options": [
+          {
+            "id": "sterling_silver",
+            "name": "Sterling Silver",
+            "description": "92.5% pure silver",
+            "price_modifier": 0
+          },
+          {
+            "id": "10k_gold",
+            "name": "10K Gold",
+            "description": "41.7% pure gold",
+            "price_modifier": 180
+          },
+          {
+            "id": "14k_gold",
+            "name": "14K Gold",
+            "description": "58.5% pure gold",
+            "price_modifier": 320
+          },
+          {
+            "id": "18k_gold",
+            "name": "18K Gold",
+            "description": "75% pure gold",
+            "price_modifier": 580
+          }
+        ]
+      },
+      "metal_color": {
+        "label": "Metal Color",
+        "required": true,
+        "type": "single_select",
+        "default": "yellow",
+        "visible_when": {
+          "metal_type": ["10k_gold", "14k_gold", "18k_gold"]
+        },
+        "options": [
+          {
+            "id": "yellow",
+            "name": "Yellow Gold",
+            "description": "Traditional gold color",
+            "price_modifier": 0
+          },
+          {
+            "id": "white",
+            "name": "White Gold",
+            "description": "Silver-like appearance",
+            "price_modifier": 25
+          },
+          {
+            "id": "rose",
+            "name": "Rose Gold",
+            "description": "Pink-tinted gold",
+            "price_modifier": 20
+          }
+        ]
+      },
+      "school_style": {
+        "label": "School Style",
+        "required": true,
+        "type": "single_select",
+        "default": "crest_top",
+        "help_text": "Type of school ring design",
+        "options": [
+          {
+            "id": "crest_top",
+            "name": "Crest Top",
+            "description": "School crest or emblem design",
+            "price_modifier": 0
+          },
+          {
+            "id": "band_style",
+            "name": "Band Style",
+            "description": "Musical band commemoration",
+            "price_modifier": -20
+          },
+          {
+            "id": "shoulder_insignia",
+            "name": "Shoulder Insignia",
+            "description": "Academic achievement design",
+            "price_modifier": 30
+          },
+          {
+            "id": "graduation",
+            "name": "Graduation Style",
+            "description": "Class year and graduation theme",
+            "price_modifier": 25
+          }
+        ]
+      },
+      "width": {
+        "label": "Ring Width",
+        "required": true,
+        "type": "single_select",
+        "default": "standard",
+        "help_text": "Width of the ring band",
+        "options": [
+          {
+            "id": "petite",
+            "name": "Petite (6-8mm)",
+            "description": "Delicate, subtle width",
+            "price_modifier": -25
+          },
+          {
+            "id": "standard",
+            "name": "Standard (10-12mm)",
+            "description": "Traditional school ring width",
+            "price_modifier": 0
+          },
+          {
+            "id": "large",
+            "name": "Large (14-16mm)",
+            "description": "Bold, prominent width",
+            "price_modifier": 40
+          }
+        ]
+      },
+      "profile": {
+        "label": "Ring Profile",
+        "required": true,
+        "type": "single_select",
+        "default": "comfort_fit",
+        "options": [
+          {
+            "id": "comfort_fit",
+            "name": "Comfort Fit",
+            "description": "Rounded interior for comfort",
+            "price_modifier": 0
+          },
+          {
+            "id": "traditional_flat",
+            "name": "Traditional Flat",
+            "description": "Classic flat interior",
+            "price_modifier": -15
+          }
+        ]
+      },
+      "customization": {
+        "label": "Customization",
+        "required": false,
+        "type": "single_select",
+        "default": "standard",
+        "help_text": "Custom school details",
+        "options": [
+          {
+            "id": "standard",
+            "name": "Standard Design",
+            "description": "No customization",
+            "price_modifier": 0
+          },
+          {
+            "id": "school_name",
+            "name": "School Name",
+            "description": "Custom school name engraving",
+            "price_modifier": 50
+          },
+          {
+            "id": "graduation_year",
+            "name": "Graduation Year",
+            "description": "Class year engraving",
+            "price_modifier": 40
+          },
+          {
+            "id": "full_custom",
+            "name": "Full Customization",
+            "description": "Name, year, and activities",
+            "price_modifier": 120
+          }
+        ]
+      },
+      "engraving": {
+        "label": "Personal Engraving",
+        "required": false,
+        "type": "single_select",
+        "default": "none",
+        "help_text": "Personal text engraving",
+        "options": [
+          {
+            "id": "none",
+            "name": "No Engraving",
+            "description": "Plain finish",
+            "price_modifier": 0
+          },
+          {
+            "id": "initials",
+            "name": "Initials",
+            "description": "Personal initials",
+            "price_modifier": 35
+          },
+          {
+            "id": "name",
+            "name": "Full Name",
+            "description": "Complete name engraving",
+            "price_modifier": 60
+          },
+          {
+            "id": "custom_text",
+            "name": "Custom Text",
+            "description": "Personal message or quote",
+            "price_modifier": 75
+          }
+        ]
+      },
+      "size": {
+        "label": "Ring Size",
+        "required": true,
+        "type": "single_select",
+        "default": "8",
+        "help_text": "Ring size - request free ring sizer if unsure",
+        "options": [
+          {"id": "5", "name": "5", "price_modifier": 0},
+          {"id": "5.5", "name": "5.5", "price_modifier": 0},
+          {"id": "6", "name": "6", "price_modifier": 0},
+          {"id": "6.5", "name": "6.5", "price_modifier": 0},
+          {"id": "7", "name": "7", "price_modifier": 0},
+          {"id": "7.5", "name": "7.5", "price_modifier": 0},
+          {"id": "8", "name": "8", "price_modifier": 0},
+          {"id": "8.5", "name": "8.5", "price_modifier": 0},
+          {"id": "9", "name": "9", "price_modifier": 0},
+          {"id": "9.5", "name": "9.5", "price_modifier": 0},
+          {"id": "10", "name": "10", "price_modifier": 0},
+          {"id": "10.5", "name": "10.5", "price_modifier": 0},
+          {"id": "11", "name": "11", "price_modifier": 0},
+          {"id": "11.5", "name": "11.5", "price_modifier": 0},
+          {"id": "12", "name": "12", "price_modifier": 0},
+          {"id": "12.5", "name": "12.5", "price_modifier": 0},
+          {"id": "13", "name": "13", "price_modifier": 0}
+        ]
+      },
+      "finish": {
+        "label": "Surface Finish", 
+        "required": true,
+        "type": "single_select",
+        "default": "polished",
+        "options": [
+          {
+            "id": "polished",
+            "name": "High Polish",
+            "description": "Bright, mirror finish",
+            "price_modifier": 0
+          },
+          {
+            "id": "brushed",
+            "name": "Brushed Finish",
+            "description": "Subtle matte texture",
+            "price_modifier": 20
+          },
+          {
+            "id": "antique",
+            "name": "Antique Finish",
+            "description": "Aged, vintage appearance",
+            "price_modifier": 35
+          }
+        ]
+      }
+    }
+  }
+}

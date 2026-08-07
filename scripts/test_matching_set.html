@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Matching Set Logic</title>
+    <link rel="stylesheet" href="css/configurator.css">
+</head>
+<body>
+    <div style="padding: 20px;">
+        <h1>Test Matching Set Logic</h1>
+        
+        <!-- Test product 4T18M (Mens) -->
+        <div style="margin-bottom: 40px;">
+            <h2>Product: 4T18M (Should show matching Ladies 4T18L)</h2>
+            <div id="configurator-4T18M" 
+                 data-product-id="4T18M"
+                 data-category="plain"
+                 data-base-price="899"
+                 data-product-name="4T18M Plain Wedding Band">
+            </div>
+        </div>
+        
+        <!-- Test product 4T18L (Ladies) -->
+        <div style="margin-bottom: 40px;">
+            <h2>Product: 4T18L (Should show matching Mens 4T18M)</h2>
+            <div id="configurator-4T18L" 
+                 data-product-id="4T18L"
+                 data-category="plain"
+                 data-base-price="799"
+                 data-product-name="4T18L Plain Wedding Band">
+            </div>
+        </div>
+        
+        <!-- Test product 5001M (Should show 5001L but may not exist) -->
+        <div style="margin-bottom: 40px;">
+            <h2>Product: 5001M (Should show matching 5001L)</h2>
+            <div id="configurator-5001M" 
+                 data-product-id="5001M"
+                 data-category="plain"
+                 data-base-price="1099"
+                 data-product-name="5001M Plain Wedding Band">
+            </div>
+        </div>
+        
+        <!-- Test product without M/L (Should not show matching set) -->
+        <div style="margin-bottom: 40px;">
+            <h2>Product: 123X (Should NOT show matching set)</h2>
+            <div id="configurator-123X" 
+                 data-product-id="123X"
+                 data-category="plain"
+                 data-base-price="999"
+                 data-product-name="123X Plain Wedding Band">
+            </div>
+        </div>
+    </div>
+
+    <script src="js/configurator.js"></script>
+    <script>
+        // Initialize configurators for each test case
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('=== TESTING MATCHING SET LOGIC ===');
+            
+            // Test 4T18M
+            const config4T18M = document.getElementById('configurator-4T18M');
+            if (config4T18M) {
+                console.log('Initializing 4T18M configurator...');
+                new ProductConfigurator('configurator-4T18M');
+            }
+            
+            // Test 4T18L
+            const config4T18L = document.getElementById('configurator-4T18L');
+            if (config4T18L) {
+                console.log('Initializing 4T18L configurator...');
+                new ProductConfigurator('configurator-4T18L');
+            }
+            
+            // Test 5001M
+            const config5001M = document.getElementById('configurator-5001M');
+            if (config5001M) {
+                console.log('Initializing 5001M configurator...');
+                new ProductConfigurator('configurator-5001M');
+            }
+            
+            // Test 123X
+            const config123X = document.getElementById('configurator-123X');
+            if (config123X) {
+                console.log('Initializing 123X configurator...');
+                new ProductConfigurator('configurator-123X');
+            }
+        });
+    </script>
+</body>
+</html>

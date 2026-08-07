@@ -1,0 +1,59 @@
+# Robots.txt for Cadman Manufacturing
+# https://www.cadmanmfg.com
+
+User-agent: *
+Allow: /
+
+# Block legacy modal / JSON endpoints (not meant for crawlers)
+Disallow: /get_product_modal_data.php
+Disallow: /get_retailers.php
+Disallow: /get_next_family_image.php
+Disallow: /carousel_data.php
+Disallow: /global_captcha_status.php
+Disallow: /contact_status.php
+Disallow: /contact_success.php
+Disallow: /catalog_search_functions.php
+Disallow: /image_loader_v2.php
+Disallow: /image_loader_v2_backup.php
+Disallow: /secure_image_loader.php
+
+# Sensitive / internal directories
+Disallow: /admin/
+Disallow: /includes/
+Disallow: /classes/
+Disallow: /scripts/
+Disallow: /cart/
+Disallow: /database/
+Disallow: /cadman-database/
+Disallow: /backup/
+Disallow: /Debug/
+Disallow: /logs/
+
+# Development / debug / backup files
+Disallow: /debug_*
+Disallow: /test_*
+Disallow: /*_test.php
+Disallow: /*_debug.php
+Disallow: /*_backup.*
+Disallow: /*_old.*
+Disallow: /*.bak
+Disallow: /*.backup
+Disallow: /*.log
+Disallow: /*.env
+Disallow: /*.tmp
+
+# Underlying image directories — products are reachable via SEO URLs
+Disallow: /bands_php/
+Disallow: /family_php/
+Disallow: /accessories_php/
+Disallow: /corp_php/
+Disallow: /ladys_stoneset_php/
+
+# Common bot traps
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /wordpress/
+
+Crawl-delay: 1
+
+Sitemap: https://www.cadmanmfg.com/sitemap.xml

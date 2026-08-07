@@ -1,0 +1,26 @@
+[Unit]
+Description=Universal Collections File Watcher
+After=network.target apache2.service
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+ExecStart=/var/www/html/homesite/admin/universal_collections_watcher.sh
+Restart=always
+RestartSec=10
+StandardOutput=append:/var/log/collections_watcher.log
+StandardError=append:/var/log/collections_watcher.log
+
+# Environment variables
+Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+# Security settings
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/www/html/homesite /var/log /tmp
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

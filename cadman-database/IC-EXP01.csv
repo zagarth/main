@@ -1,0 +1,540 @@
+PART|DESCRIPTION|CLASS|COST|MTRL|METL-HI|METL-LO|G     RUP|GOLD-GR|GOLD-$|STER-GR|STER-$
+.015           |.015 DIAMOND            |RM|    6.06|    6.06|STO|NE| |  0.000|    0.00|  0.000|   0.00
+.02            |.02 DIAMOND             |RM|    8.57|    8.57|STO|NE| |  0.000|    0.00|  0.000|   0.00
+.03            |.03 DIAMOND             |RM|   12.75|   12.75|STO|NE| |  0.000|    0.00|  0.000|   0.00
+.06            |.06 DIAMOND             |RM|   37.34|   37.34|STO|NE| |  0.000|    0.00|  0.000|   0.00
+.07            |.07 DIAMOND             |RM|    0.00|    0.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+.08            |.08 REGULAR DIAMONDS    |RM|   49.04|   49.04|STO|NE| |  0.000|    0.00|  0.000|   0.00
+.10            |.10 DIAMOND             |RM|   73.04|   73.04|STO|NE| |  0.000|    0.00|  0.000|   0.00
+.12            |.12 DIAMOND             |RM|   81.15|   81.15|STO|NE| |  0.000|    0.00|  0.000|   0.00
+.15            |.15 DIAMOND FOR ENG.RING|RM|  190.00|  190.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+.16            |.16 DIAMOND             |RM|  113.07|  113.07|STO|NE| |  0.000|    0.00|  0.000|   0.00
+.18            |.18 DIAMOND             |RM|  230.00|  230.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+.25            |.25 DIA.SI-ONE,COLOUR H.|RM|  357.87|  357.87|STO|NE| |  0.000|    0.00|  0.000|   0.00
+.41            |.41 RBC DIAMOND         |RM|  962.95|  962.95|STO|NE| |  0.000|    0.00|  0.000|   0.00
+0.18           |0.18 DIAMOND            |RM|  185.25|  185.25|STO|NE| |  0.000|    0.00|  0.000|   0.00
+1.50           |1.50 LAB CREATED DIAMOND|RM|  939.17|  939.17|STO|NE| |  0.000|    0.00|  0.000|   0.00
+10K-1.24WIRE   |1.24MM 10K WIRE         |RM|   90.48|    0.00|10K|  | |  1.000|   90.48|  0.000|   0.00
+10K-2.03X0.76  |10K FLAT STOCK          |RM|   90.48|    0.00|10K|  | |  1.000|   90.48|  0.000|   0.00
+10K-6.0X0.75   |10K TIE BAR STOCK       |RM|   90.48|    0.00|10K|  | |  1.000|   90.48|  0.000|   0.00
+10K-BUTTERFLY  |10K BUTTERFLY BACK PIECE|RM|    5.18|    5.18|   |  | |  0.000|    0.00|  0.000|   0.00
+10K-EAR.BALL   |10K EARRING BALL & LOOP |RM|    1.54|    1.54|   |  | |  0.000|    0.00|  0.000|   0.00
+10K-LINKS      |10K PAIR CUFFLINK BACKS |RM|   36.00|   36.00|   |  | |  0.000|    0.00|  0.000|   0.00
+10K-RIBBON     |10KT GOLD RIBBON        |RM|    0.06|    0.06|   |  | |  0.000|    0.00|  0.000|   0.00
+10K.SCRAP      |10K SCRAP               |WP|   90.48|    0.00|10K|  |S|  1.000|   90.48|  0.000|   0.00
+10K10F-30B     |30CM BULK CHAIN         |RM|    5.21|    5.21|   |  | |  0.000|    0.00|  0.000|   0.00
+10K10F-40      |40CM FINISHED CHAIN     |RM|    8.01|    8.01|   |  | |  0.000|    0.00|  0.000|   0.00
+10K10F-45      |45CM FINISHED CHAIN     |RM|   14.19|   14.19|   |  | |  0.000|    0.00|  0.000|   0.00
+10K10F-50      |10K 50CM FINISHED CHAIN |RM|   15.80|   15.80|   |  | |  0.000|    0.00|  0.000|   0.00
+10K11R-30B     |30CM BULK CHAIN         |RM|   44.97|   44.97|   |  | |  0.000|    0.00|  0.000|   0.00
+10K11R-45      |10K FINISHED CHAIN 45CM |RM|   15.95|   15.95|   |  | |  0.000|    0.00|  0.000|   0.00
+10K11R-50      |10K CHAIN 50CM          |RM|   16.95|   16.95|   |  | |  0.000|    0.00|  0.000|   0.00
+10K12F-30B     |10K BULK FINISHED CHAIN |RM|   37.91|   37.91|   |  | |  0.000|    0.00|  0.000|   0.00
+10K12F-45      |45CM FINISHED CHAIN     |RM|   95.00|   95.00|   |  | |  0.000|    0.00|  0.000|   0.00
+10K12F-50      |50CM FINISHED CHAIN     |RM|   21.00|   21.00|   |  | |  0.000|    0.00|  0.000|   0.00
+10K13R-30B     |30CM BULK CHAIN         |RM|   15.54|   15.54|   |  | |  0.000|    0.00|  0.000|   0.00
+10K13R-45      |10K 13R 45CM CHAIN      |RM|   23.30|   23.30|   |  | |  0.000|    0.00|  0.000|   0.00
+10K14F-30B     |BULK 30CM CHAIN         |RM|   10.75|   10.75|   |  | |  0.000|    0.00|  0.000|   0.00
+10K14F-45      |45CM FINISHED CHAIN     |RM|   10.75|   10.75|   |  | |  0.000|    0.00|  0.000|   0.00
+10K16F-30B     |30CM BULK CHAIN         |RM|   13.24|   13.24|   |  | |  0.000|    0.00|  0.000|   0.00
+10K18F-30B     |BULK 30CM CHAIN         |RM|   18.60|   18.60|   |  | |  0.000|    0.00|  0.000|   0.00
+10K20F-30B     |BULK 30CM CHAIN         |RM|   23.71|   23.71|   |  | |  0.000|    0.00|  0.000|   0.00
+10K20F-45      |BULK CHAIN 45CM         |RM|   35.57|   35.57|   |  | |  0.000|    0.00|  0.000|   0.00
+10K20F-50      |BULK CHAIN 50CM         |RM|   39.60|   39.60|   |  | |  0.000|    0.00|  0.000|   0.00
+10K20F-55      |55CM 10K CHAIN          |RM|   43.45|   43.45|   |  | |  0.000|    0.00|  0.000|   0.00
+10K20F-60      |60CM 10K CHAIN          |RM|   47.40|   47.40|   |  | |  0.000|    0.00|  0.000|   0.00
+10K32F-30B     |BULK 30CM CHAIN         |RM|   97.00|   97.00|   |  | |  0.000|    0.00|  0.000|   0.00
+10K9R-45       |10K WHITE CHAIN         |RM|   16.68|   16.68|   |  | |  0.000|    0.00|  0.000|   0.00
+10KB-.635X.635 |10K CHARM BRACELET WIRE |RM|   90.48|    0.00|10K|  | |  1.000|   90.48|  0.000|   0.00
+10KB-1         |10K GOLD BLANKS-GROUP 1 |WP|   90.48|    0.00|10K|  |1|  1.000|   90.48|  0.000|   0.00
+10KB-1.02X2.29 |10K CROSS STOCK         |RM|   90.48|    0.00|10K|  | |  1.000|   90.48|  0.000|   0.00
+10KB-1.52X1.52 |10K CROSS STOCK #97     |RM|   90.48|    0.00|10K|  | |  1.000|   90.48|  0.000|   0.00
+10KB-1.79X0.76 |10K CROSS STOCK         |RM|   90.48|    0.00|10K|  | |  1.000|   90.48|  0.000|   0.00
+10KB-1.91X1.91 |10K CROSS STOCK         |RM|   90.48|    0.00|10K|  | |  1.000|   90.48|  0.000|   0.00
+10KB-2         |10K GOLD BLANKS-GROUP 2 |WP|   90.48|    0.00|10K|  |2|  1.000|   90.48|  0.000|   0.00
+10KB-2.53X1.92 |10K CROSS STOCK  #108   |RM|   90.48|    0.00|10K|  | |  1.000|   90.48|  0.000|   0.00
+10KB-3         |10K GOLD BLANKS-GROUP 3 |WP|   90.48|    0.00|10K|  |3|  1.000|   90.48|  0.000|   0.00
+10KB-4         |10K GOLD BLANKS-GROUP 4 |WP|   90.48|    0.00|10K|  |4|  1.000|   90.48|  0.000|   0.00
+10KB-5         |10K GOLD BLANKS-GROUP 5 |WP|   90.48|    0.00|10K|  |5|  1.000|   90.48|  0.000|   0.00
+10KB-6         |10K GOLD BLANKS-GROUP 6 |WP|   90.48|    0.00|10K|  |6|  1.000|   90.48|  0.000|   0.00
+10KB-8         |10K GOLD BLANKS GROUP 8 |WP|   90.48|    0.00|10K|  |8|  1.000|   90.48|  0.000|   0.00
+10KBRAC-BOX    |BOX-CHARM BRAC CLASP    |RM|    0.00|    0.00|   |  | |  0.000|    0.00|  0.000|   0.00
+10KBRAC-CATCH  |CATCH-CHARM BRAC CLASP  |RM|    0.00|    0.00|   |  | |  0.000|    0.00|  0.000|   0.00
+10KBT102-30B   |BT102 CHAIN 30CM BULK   |RM|  237.00|  237.00|   |  | |  0.000|    0.00|  0.000|   0.00
+10KF60-30B     |10K FIGARO F60 CHAIN-FT.|RM|   18.95|   18.95|   |  | |  0.000|    0.00|  0.000|   0.00
+10KG80-30B     |10K GUCCI G80 CHAIN,FOOT|RM|   32.77|   32.77|   |  | |  0.000|    0.00|  0.000|   0.00
+10KI           |10K GOLD INGOTS         |WP|   90.48|    0.00|10K|  |R|  1.000|   90.48|  0.000|   0.00
+10KLOBSTER-LG  |10K LARGE LOBSTER CLASP |RM|    6.37|    6.37|   |  | |  0.000|    0.00|  0.000|   0.00
+10KLOBSTER-SM  |10K SMALL LOBSTER CLASP |RM|    4.67|    4.67|   |  | |  0.000|    0.00|  0.000|   0.00
+10KSIS-LG      |10K LARGE SISTER HOOK   |RM|   12.36|   12.36|   |  | |  0.000|    0.00|  0.000|   0.00
+10KSIS-SM      |10K SMALL SISTER HOOK   |RM|    8.13|    8.13|   |  | |  0.000|    0.00|  0.000|   0.00
+10KSR-5        |10K SPRING RING 5MM     |RM|    0.85|    0.85|   |  | |  0.000|    0.00|  0.000|   0.00
+10KSR-6        |10K 6MM SPRING RING     |RM|    2.20|    2.20|   |  | |  0.000|    0.00|  0.000|   0.00
+14K-3005       |14K HINGED EAR WIRE EACH|RM|    6.46|    6.46|   |  | |  0.000|    0.00|  0.000|   0.00
+14K-3944       |1944 BALL EAR WIRES EACH|RM|    2.78|    2.78|   |  | |  0.000|    0.00|  0.000|   0.00
+14K-BUTTERFLY  |14K BUTTERFLY PCS.      |RM|    0.93|    0.93|   |  | |  0.000|    0.00|  0.000|   0.00
+14K-RIBBON     |14KT GOLD RIBBON        |RM|    0.06|    0.06|   |  | |  0.000|    0.00|  0.000|   0.00
+14K.SCRAP      |14K SCRAP               |WP|  126.68|    0.00|14K|  |S|  1.000|  126.68|  0.000|   0.00
+14K11R-30B     |14K BULK FINISHED CHAIN |RM|   19.32|   19.32|   |  | |  0.000|    0.00|  0.000|   0.00
+14K11R-45      |45CM FINISHED CHAIN     |RM|   30.66|   30.66|   |  | |  0.000|    0.00|  0.000|   0.00
+14K12F-30B     |14K BULK FINISHED CHAIN |RM|   13.69|   13.69|   |  | |  0.000|    0.00|  0.000|   0.00
+14K12F-45      |45CM FINISHED CHAIN     |RM|   24.40|   24.40|   |  | |  0.000|    0.00|  0.000|   0.00
+14K12F-50      |14K FINISHED CHAIN 50CM |RM|   30.90|   30.90|   |  | |  0.000|    0.00|  0.000|   0.00
+14K14F-30B     |14K BULK CHAIN          |RM|   11.75|   11.75|   |  | |  0.000|    0.00|  0.000|   0.00
+14K14F-45      |45CM FINISHED CHAIN     |RM|   27.85|   27.85|   |  | |  0.000|    0.00|  0.000|   0.00
+14KB-1         |14K GOLD BLANKS GROUP 1 |WP|  126.68|    0.00|14K|  |1|  1.000|  126.68|  0.000|   0.00
+14KB-2         |14K GOLD BLANKS-GROUP 2 |WP|  126.68|    0.00|14K|  |2|  1.000|  126.68|  0.000|   0.00
+14KB-3         |14K GOLD BLANKS- GROUP 3|WP|  126.68|    0.00|14K|  |3|  1.000|  126.68|  0.000|   0.00
+14KB-4         |14K GOLD BLANKS GROUP 4 |WP|  126.68|    0.00|14K|  |4|  1.000|  126.68|  0.000|   0.00
+14KB-5         |14K GOLD BLANKS GROUP 5 |WP|  126.68|    0.00|14K|  |5|  1.000|  126.68|  0.000|   0.00
+14KB-6         |14K GOLD BLANKS GROUP 6 |WP|  126.68|    0.00|14K|  |6|  1.000|  126.68|  0.000|   0.00
+14KB-8         |14K GOLD BLANKS GROUP 8 |WP|  126.68|    0.00|14K|  |8|  1.000|  126.68|  0.000|   0.00
+14KI           |14K GOLD INGOTS         |WP|  126.68|    0.00|14K|  |R|  1.000|  126.68|  0.000|   0.00
+18K.SCRAP      |18K SCRAP               |WP|  162.87|    0.00|18K|  |S|  1.000|  162.87|  0.000|   0.00
+18KB-1         |18K BLANKS FOR SIGNETS  |WP|  162.87|    0.00|18K|  |1|  1.000|  162.87|  0.000|   0.00
+18KB-2         |18K GOLD BLANKS GROUP 2 |WP|  162.87|    0.00|18K|  |2|  1.000|  162.87|  0.000|   0.00
+18KB-3         |18K GOLD BLANKS GROUP 3 |WP|  162.87|    0.00|18K|  |3|  1.000|  162.87|  0.000|   0.00
+18KB-4         |18K GOLD BLANKS-GROUP 4 |WP|  162.87|    0.00|18K|  |4|  1.000|  162.87|  0.000|   0.00
+18KB-5         |18K GOLD BLANKS GROUP 5 |WP|  162.87|    0.00|18K|  |5|  1.000|  162.87|  0.000|   0.00
+18KB-6         |18K GOLD BLANKS GROUP 6 |WP|  162.87|    0.00|18K|  |6|  1.000|  162.87|  0.000|   0.00
+18KB-8         |18K GOLD BLANKS GROUP 8 |WP|  162.87|    0.00|18K|  |8|  1.000|  162.87|  0.000|   0.00
+18KI           |18K GOLD INGOTS         |WP|  162.87|    0.00|18K|  |R|  1.000|  162.87|  0.000|   0.00
+24K            |24K GOLD INGOTS         |RM|  215.41|    0.00|24K|  | |  1.000|  215.41|  0.000|   0.00
+24K.CONS       |24K GOLD - CONSIGNMENT  |RM|  215.41|    0.00|24K|  | |  1.000|  215.41|  0.000|   0.00
+ALLOY          |ALLOY CASTING GRAIN     |RM|    0.10|    0.10|ALL|OY| |  0.000|    0.00|  0.000|   0.00
+ALLOY-1        |ALLOY BLANKS GROUP 1    |WP|    0.10|    0.10|ALL|OY|1|  0.000|    0.00|  0.000|   0.00
+ALLOY-2        |ALLOY BLANKS GROUP 2    |WP|    0.10|    0.10|ALL|OY|2|  0.000|    0.00|  0.000|   0.00
+ALLOY-3        |ALLOY BLANKS GROUP 3    |WP|    0.10|    0.10|ALL|OY|3|  0.000|    0.00|  0.000|   0.00
+ALLOY-4        |ALLOY BLANKS GROUP 4    |WP|    0.10|    0.10|ALL|OY|4|  0.000|    0.00|  0.000|   0.00
+ALLOY-5        |ALLOY BLANKS GROUP 5    |WP|    0.10|    0.10|ALL|OY|5|  0.000|    0.00|  0.000|   0.00
+ALLOY-6        |ALLOY BLANKS GROUP 6    |WP|    0.10|    0.10|ALL|OY|6|  0.000|    0.00|  0.000|   0.00
+ALLOY-8        |ALLOY BLANKS GROUP 8    |WP|    0.10|    0.10|ALL|OY|8|  0.000|    0.00|  0.000|   0.00
+ALLOY-BALLTIP  |TIPS FOR PEARL STRANDS  |RM|    0.04|    0.04|   |  | |  0.000|    0.00|  0.000|   0.00
+ALLOY-LINKS    |ALLOY PR. CUFFLINK BACKS|RM|    2.00|    2.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ALLOY-SR12     |ALLOY SPRING RING 12MM  |RM|    0.00|    0.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ALLOY-SWIVEL   |ALLOY SWIVEL-MENS CHAIN |RM|    1.50|    1.50|   |  | |  0.000|    0.00|  0.000|   0.00
+ALLOY.SCRAP    |ALLOY SCRAP             |WP|    0.00|    0.00|ALL|OY| |  0.000|    0.00|  0.000|   0.00
+ALLOY230-440TB |ALLOY RAW TIE BAR       |RM|    0.28|    0.28|   |  | |  0.000|    0.00|  0.000|   0.00
+ALLOYMC29K     |ALLOY MC29K RAW MONEY CL|RM|    0.00|    0.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ANT-12X10      |12X10 SYN ANT. SHAPE    |RM|   10.70|   10.70|STO|NE| |  0.000|    0.00|  0.000|   0.00
+ANT-8X6        |8X6 SYN ANT. SHAPE      |RM|    6.00|    6.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+B3S/GPB        |FANCY BOWPIN SMALL      |RM|    1.00|    1.00|   |  | |  0.000|    0.00|  0.000|   0.00
+BAQ-6X2        |6X2MM SYN.BAGUETTE STONE|RM|    1.77|    1.77|STO|NE| |  0.000|    0.00|  0.000|   0.00
+BC-6X4         |6X4MM BLUE OR WHITE CAT |RM|    0.60|    0.60|STO|NE| |  0.000|    0.00|  0.000|   0.00
+BC-8X6         |8X6MM OVAL BLUE CAT     |RM|    1.50|    1.50|STO|NE| |  0.000|    0.00|  0.000|   0.00
+BEZEL          |BEZEL ETC. FOR LOCKETS  |RM|    0.45|    0.45|   |  | |  0.000|    0.00|  0.000|   0.00
+BRAC-BOX       |VELVET BRACELET BOX     |RM|    4.14|    4.14|   |  | |  0.000|    0.00|  0.000|   0.00
+BROOCH-BACK    |ONE PART BROOCH BACK    |RM|    0.17|    0.17|   |  | |  0.000|    0.00|  0.000|   0.00
+BROOCH-CATCH   |CATCH FOR 3 PART BACK   |RM|    0.17|    0.17|   |  | |  0.000|    0.00|  0.000|   0.00
+BROOCH-JOINT   |JOINT FOR 3 PART BACK   |RM|    0.04|    0.04|   |  | |  0.000|    0.00|  0.000|   0.00
+BROOCH-STEM    |STEM FOR 3 PART BACK    |RM|    0.02|    0.02|   |  | |  0.000|    0.00|  0.000|   0.00
+CAMEO-10X5MQ   |CAMEO 10X5MM MARQUIS    |RM|    3.00|    3.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+CAMEO-10X8     |10X8MM OVAL CAMEO       |RM|    3.62|    3.62|STO|NE| |  0.000|    0.00|  0.000|   0.00
+CAMEO-14X10    |CAMEO  14X10MM          |RM|    4.81|    4.81|STO|NE| |  0.000|    0.00|  0.000|   0.00
+CAMEO-15X7MQ   |15X7MM MQ CAMEO         |RM|    6.50|    6.50|STO|NE| |  0.000|    0.00|  0.000|   0.00
+CLIPON-BOX     |CLIP-ON BRACELET BOX    |RM|    0.00|    0.00|   |  | |  0.000|    0.00|  0.000|   0.00
+COLOUR         |COLOUR LOCKET COST @ .25|RM|    0.00|    0.00|   |  | |  0.000|    0.00|  0.000|   0.00
+CORDISP        |TRAY FOR CORP. & MASONIC|RM|   23.75|   23.75|   |  | |  0.000|    0.00|  0.000|   0.00
+CUSH-10X5      |SYN 10X5 CUSH STONE     |RM|    3.54|    3.54|STO|NE| |  0.000|    0.00|  0.000|   0.00
+CUSH-10X8      |10X8 SYN. CUSH.         |RM|    5.00|    5.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+CUSH-12X10     |SYN.12X10 CUSH.STONE    |RM|    9.95|    9.95|STO|NE| |  0.000|    0.00|  0.000|   0.00
+CUSH-8X6       |SYN 8 X 6 CUSH STONE    |RM|    6.54|    6.54|STO|NE| |  0.000|    0.00|  0.000|   0.00
+EARRING-BOX    |VELVET GREEN EARRING BOX|RM|    0.65|    0.65|   |  | |  0.000|    0.00|  0.000|   0.00
+EARRING-TOB    |TOBOGGAN DISPLAY 12 PR. |RM|    8.25|    8.25|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-BRAC1     |ENGR. STER BR 4,5,6     |RM|    3.50|    3.50|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-BRAC3     |ENGR. STER BR 10, 11, 12|RM|    5.20|    5.20|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-BRAC4     |ENGR.BR10 11 12 20 21 22|RM|    9.50|    9.50|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-BRAC5     |ENGR.STER BR. 15,16,17  |RM|    7.00|    7.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-BRAC7     |ENGR.STER BR 20,21,22   |RM|    5.00|    5.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-BROOCH1   |ENGR. STER & GF BROOCHES|RM|    6.00|    6.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-BROOCH2   |ENGR. 10K BROOCHES      |RM|    8.00|    8.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-CROSS1    |ENGR. STER   #30-32     |RM|    2.20|    2.20|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-CROSS10   |ENGR.10K CROSSES 97--101|RM|    4.00|    4.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-CROSS11   |ENGR.10K CROSS 106,107  |RM|    5.00|    5.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-CROSS12   |ENGR.ST.& GF #111-114   |RM|    3.50|    3.50|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-CROSS13   |ENGR. ST & GF #45 CROSS |RM|    3.00|    3.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-CROSS14   |ENGR. 10K CROSS  50     |RM|    4.00|    4.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-CROSS15   |ENGR. 10K CROSS # 45    |RM|    4.00|    4.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-CROSS2    |STER.26-27,102-105      |RM|    3.00|    3.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-CROSS3    |10K #30,32,12E CROSSES  |RM|    3.00|    3.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-CROSS4    |ENGR. 10K 26E & 27      |RM|    3.00|    3.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-CROSS5    |ST & GF 100-101,98-99,28|RM|    2.50|    2.50|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-CROSS6    |ST & GF 106 & 107    .  |RM|    3.00|    3.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-CROSS7    |ENGR. 10K 108N          |RM|    5.00|    5.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-CROSS8    |GF & STER #50,#38       |RM|    3.00|    3.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-CROSS9    |10K 102-104             |RM|    4.00|    4.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-EAR1      |ENGR.ST & GF EARRING PR.|RM|    4.50|    4.50|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-EAR2      |ENGR. 10K EARRINGS PR.  |RM|    6.00|    6.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-EAR3      |ENGR GF E23-70H;E10-S13C|RM|    4.00|    4.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-IDENT1    |ENGR. STER & GF IDENTS  |RM|    3.00|    3.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-IDENT2    |ENGR. 10K IDENTS        |RM|    5.00|    5.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-LOCK1     |ENGRAVING LOCKETS 20-M2 |RM|    3.00|    3.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-LOCK10    |ENGR. 10K 3G,4G  LOCKETS|RM|    8.00|    8.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-LOCK11    |ENGR.10K LOCKETS 41     |RM|    9.50|    9.50|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-LOCK12    |ENGR.44 SERIES STER LOCK|RM|    7.00|    7.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-LOCK13    |ENGRAVING STER LOCKET 29|RM|    3.00|    3.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-LOCK14    |ENGRAVE 10K 2LTG LOCKET |RM|    9.00|    9.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-LOCK15    |ENGRAVING L70G          |RM|    9.50|    9.50|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-LOCK16    |ENGRAVING BOOK LOCKETS  |RM|    7.00|    7.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-LOCK18    |ENGR LOCKETS 7-8 NATURE |RM|    6.00|    6.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-LOCK19    |ENGR LOCKETS 3-5 NATURE |RM|    6.50|    6.50|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-LOCK2     |ENGRAVING LOCKETS 7-9   |RM|    3.00|    3.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-LOCK20    |ENGR LOCKETS 41 NATURE  |RM|    7.50|    7.50|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-LOCK3     |ENGRAVING LOCKETS 1 - 6 |RM|    4.00|    4.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-LOCK4     |ENGRAVING LOCKETS 40, 41|RM|    5.50|    5.50|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-LOCK5     |ENGR. LOCKET 42         |RM|    7.00|    7.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-LOCK6     |ENGRAVING LOCKETS 43    |RM|    7.50|    7.50|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-LOCK7     |ENGR.10K LOCKETS 21-30  |RM|    4.00|    4.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-LOCK8     |ENGR. 10K LOCKETS M2-10 |RM|    4.20|    4.20|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-LOCK9     |ENGR. 10K LOCKETS 7-70  |RM|   10.00|   10.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-MEN1      |ENGR. STER CUFF LINKS   |RM|    5.00|    5.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-MEN2      |ENGR.10K CUFF LINKS     |RM|    6.00|    6.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-MEN3      |ENGR. STER TIE TAC & BAR|RM|    3.00|    3.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-MEN4      |ENGR. 10K TIE TACS,BARS |RM|    3.00|    3.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-PEND1     |ENGR. STER & GF PENDANTS|RM|    3.00|    3.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-PEND2     |ENGR. 10K PENDANTS      |RM|    5.00|    5.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-SIG1      |ENGR.STER SIGNETS       |RM|    5.00|    5.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-SIG2      |ENGR. 10K SIGNETS       |RM|    6.00|    6.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-SIG3      |ENGR. STER CS10A        |RM|    7.50|    7.50|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-SIG4      |ENGR. 10K CS10A         |RM|    8.50|    8.50|   |  | |  0.000|    0.00|  0.000|   0.00
+ENGR-WED1      |ENGR.340-345,5016,5017  |WP|    9.00|    9.00|   |  |2|  0.000|    0.00|  0.000|   0.00
+ENGR-WED2      |ENGR.WED 974            |WP|    8.00|    8.00|   |  |2|  0.000|    0.00|  0.000|   0.00
+ENGR-WED3      |ENGR. 938,940,980,982   |WP|    8.00|    8.00|   |  |2|  0.000|    0.00|  0.000|   0.00
+ENGR-WED4      |ENGRAVING 602 702 WEDD  |WP|   15.00|   15.00|   |  |2|  0.000|    0.00|  0.000|   0.00
+ENGR-WED5      |396,397,454-459,896-912.|WP|   12.00|   12.00|   |  |2|  0.000|    0.00|  0.000|   0.00
+ENGR-WED6      |220-226,360-395,460-469.|WP|   11.00|   11.00|   |  |2|  0.000|    0.00|  0.000|   0.00
+ENGR-WED8      |14K HAND ENGR. WEDD     |WP|   15.00|   15.00|   |  |2|  0.000|    0.00|  0.000|   0.00
+FAMBRO1        |50 FAMILY RING BROCHURES|RM|    0.00|    0.00|   |  | |  0.000|    0.00|  0.000|   0.00
+GEN-1.5        |GEN. 1.5MM STONE        |RM|    1.30|    1.30|STO|NE| |  0.000|    0.00|  0.000|   0.00
+GEN-10.0RD     |GEN 10MM ROUND          |RM|   48.00|   48.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+GEN-10X10CON   |GEN 10X10 CUSH CONTOUR  |RM|   69.00|   69.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+GEN-10X5MQ     |SOME 10X5 MQ.SPEC.PRICE |RM|    6.30|    6.30|STO|NE| |  0.000|    0.00|  0.000|   0.00
+GEN-10X7PS     |GENUINE 10X7 PEAR SHAPE |RM|   13.01|   13.01|STO|NE| |  0.000|    0.00|  0.000|   0.00
+GEN-12X6MQ     |GEN 12X6 MARQ BUFF TOP  |RM|   17.00|   17.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+GEN-12X8BAR    |GEN 12X8 OVAL BAR CUT   |RM|   31.00|   31.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+GEN-14X10OVAL  |GEN 14X10 OVAL          |RM|   55.00|   55.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+GEN-2.0        |GEN. 2.0MM STONE        |RM|    1.58|    1.58|STO|NE| |  0.000|    0.00|  0.000|   0.00
+GEN-2.5        |GEN. 2.5MM STONE        |RM|    2.70|    2.70|STO|NE| |  0.000|    0.00|  0.000|   0.00
+GEN-2.5X2.5SQ  |SQUARE STONE 2.5        |RM|   12.00|   12.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+GEN-3.0        |GEN. 3.0MM STONE        |RM|    4.49|    4.49|STO|NE| |  0.000|    0.00|  0.000|   0.00
+GEN-3.5        |GEN.3.5MM SPECIAL PRICE |RM|    2.41|    2.41|STO|NE| |  0.000|    0.00|  0.000|   0.00
+GEN-3X3SQ      |FOR RAINBOW RING & PEND |RM|    4.75|    4.75|STO|NE| |  0.000|    0.00|  0.000|   0.00
+GEN-4.0        |SPEC.PRICE 4.0MM GENUINE|RM|    3.25|    3.25|STO|NE| |  0.000|    0.00|  0.000|   0.00
+GEN-4X3        |4X3 OVAL SPECIAL PRICE  |RM|    2.32|    2.32|STO|NE| |  0.000|    0.00|  0.000|   0.00
+GEN-5.0        |GEN.SPECIAL PRICE STONES|RM|    6.41|    6.41|STO|NE| |  0.000|    0.00|  0.000|   0.00
+GEN-5X2.5      |5X2.5 MARQ.SPECIAL PRICE|RM|    2.14|    2.14|STO|NE| |  0.000|    0.00|  0.000|   0.00
+GEN-5X3        |5X3MM OVAL SPECIAL PRICE|RM|    3.08|    3.08|STO|NE| |  0.000|    0.00|  0.000|   0.00
+GEN-5X3PS      |5X3 PEAR SPECIAL PRICE  |RM|    2.69|    2.69|STO|NE| |  0.000|    0.00|  0.000|   0.00
+GEN-6          |LOCKET TRAY FOR SPINNER |RM|   16.85|   16.85|   |  | |  0.000|    0.00|  0.000|   0.00
+GEN-6.0CHK     |6X6 CHECKERED TOP STONES|RM|   15.00|   15.00|   |  | |  0.000|    0.00|  0.000|   0.00
+GEN-6X3MQ      |6X3 MARQ.SPECIAL PRICE  |RM|    3.12|    3.12|STO|NE| |  0.000|    0.00|  0.000|   0.00
+GEN-6X4        |6X4 OVAL SPECIAL PRICE  |RM|    5.39|    5.39|STO|NE| |  0.000|    0.00|  0.000|   0.00
+GEN-6X4PS      |6X4 PEAR SPECIAL PRICE  |RM|    5.01|    5.01|STO|NE| |  0.000|    0.00|  0.000|   0.00
+GEN-8X4MQ      |SPEC.PRICE GEN.8X4 MARQ.|RM|    3.20|    3.20|STO|NE| |  0.000|    0.00|  0.000|   0.00
+GEN-8X8BT      |GEN. 8X8 BUFFTOP        |RM|   21.00|   21.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+GEN-9X6PS      |SOME 9X6 P/S SPEC.PRICE |RM|    7.85|    7.85|STO|NE| |  0.000|    0.00|  0.000|   0.00
+GENLG          |36 RING TRAY - GENERIC  |RM|   24.47|   24.47|   |  | |  0.000|    0.00|  0.000|   0.00
+GENMD          |20 RING TRAY - GENERIC  |RM|   20.64|   20.64|   |  | |  0.000|    0.00|  0.000|   0.00
+GENPEND        |6 POCKET PENDANT TRAY   |RM|   16.85|   16.85|   |  | |  0.000|    0.00|  0.000|   0.00
+GENSM          |SMALL RING TRAY-GENERIC |RM|   17.86|   17.86|   |  | |  0.000|    0.00|  0.000|   0.00
+GF-.635X.635   |GF SQUARE WIRE          |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+GF-0.36X69.85  |GF DUMMY LOCKET STOCK   |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+GF-0.51X14.29  |GF FLAT STOCK           |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+GF-0.5X8.26    |GF FLAT STOCK           |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+GF-1.02X2.29   |GF CROSS STOCK 33-35    |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+GF-1.14X11.91  |GF FLAT STOCK           |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+GF-1.14X6.00   |GF. STOCK - SLIDES      |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+GF-1.14X7.87   |G.F. STOCK SLIDES & N.P |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+GF-1.24WIRE    |1.24MM G.F. WIRE        |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+GF-1.52X1.52   |#97 CROSS STOCK G.F.    |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+GF-1.79X0.76   |#93 CROSS STOCK G.F.    |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+GF-1.91X1.91   |G.F. CROSS STOCK #100   |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+GF-1.91X3.69   |G.F. CROSS STOCK        |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+GF-10.31X.51   |GF FLAT STOCK           |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+GF-11.1X0.55   |GF FLAT STOCK           |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+GF-14.28X.51   |GF FLAT STOCK -BRACELETS|RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+GF-19.05X.51   |GF FLAT STOCK           |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+GF-2.53X1.92   |G.F. CROSS STOCK        |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+GF-25.4X0.45   |GF-FLAT STOCK BRACELETS |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+GF-6.35X0.89   |GF FLAT STOCK  IDENTS   |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+GF-69.85X0.71  |#30 CROSS STOCK G.F.    |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+GF-69.85X1.14  |GF FLAT STOCK           |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+GF-76.2X0.71   |GF FLAT STOCK           |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+GF-KIDNEY      |GF KIDNEY WIRE  EACH    |RM|    0.23|    0.23|   |  | |  0.000|    0.00|  0.000|   0.00
+GF-LINKS       |GF PAIR CUFFLINK BACKS  |RM|    4.96|    4.96|   |  | |  0.000|    0.00|  0.000|   0.00
+GF-RIBBON      |14KT. G.F. RIBBON       |RM|    0.06|    0.06|   |  | |  0.000|    0.00|  0.000|   0.00
+GF-SR7         |GF. SPRING RING 7MM     |RM|    0.00|    0.00|   |  | |  0.000|    0.00|  0.000|   0.00
+GF.SCRAP       |GF SCRAP                |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+GF1-6          |GF. 1,2,3,4,5 & 6 RAW LO|RM|    9.42|    9.42|   |  | |  0.000|    0.00|  0.000|   0.00
+GF1.14X15.88   |GF STOCK FOR IDENTS     |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+GF10-12        |GF 10, 11 & 12 RAW LOCKE|RM|    3.51|    3.51|   |  | |  0.000|    0.00|  0.000|   0.00
+GF10F-30       |30CM FINISHED CHAIN     |RM|    1.47|    1.47|   |  | |  0.000|    0.00|  0.000|   0.00
+GF10F-40       |40CM FINISHED CHAIN     |RM|    1.65|    1.65|   |  | |  0.000|    0.00|  0.000|   0.00
+GF10F-45       |45CM FINISHED CHAIN     |RM|    1.74|    1.74|   |  | |  0.000|    0.00|  0.000|   0.00
+GF11R-30B      |30CM BULK CHAIN         |RM|    1.95|    1.95|   |  | |  0.000|    0.00|  0.000|   0.00
+GF11R-40       |40CM GF FINISHED CHAIN  |RM|    2.60|    2.60|   |  | |  0.000|    0.00|  0.000|   0.00
+GF11R-45       |45CM FINISHED CHAIN     |RM|    2.67|    2.67|   |  | |  0.000|    0.00|  0.000|   0.00
+GF11R-50       |50CM FINISHED CHAIN     |RM|    2.86|    2.86|   |  | |  0.000|    0.00|  0.000|   0.00
+GF11R-60       |60CM GF FINISHED CHAIN  |RM|    3.90|    3.90|   |  | |  0.000|    0.00|  0.000|   0.00
+GF13           |GF 13 RAW LOCKET        |RM|    3.51|    3.51|   |  | |  0.000|    0.00|  0.000|   0.00
+GF13R-30B      |30CM BULK CHAIN         |RM|    2.71|    2.71|   |  | |  0.000|    0.00|  0.000|   0.00
+GF13R-45       |GF 45CM FINISHED CHAIN  |RM|    4.00|    4.00|   |  | |  0.000|    0.00|  0.000|   0.00
+GF13R-50       |50CM FINISHED CHAIN     |RM|    3.22|    3.22|   |  | |  0.000|    0.00|  0.000|   0.00
+GF13R-60       |60CM FINISHED CHAIN     |RM|    3.80|    3.80|   |  | |  0.000|    0.00|  0.000|   0.00
+GF14-15        |GF 14 & 15 RAW LOCKET   |RM|    3.51|    3.51|   |  | |  0.000|    0.00|  0.000|   0.00
+GF14F-30B      |BULK 30CM CHAIN         |RM|    1.84|    1.84|   |  | |  0.000|    0.00|  0.000|   0.00
+GF14F-40       |40CM FINISHED CHAIN     |RM|    2.40|    2.40|   |  | |  0.000|    0.00|  0.000|   0.00
+GF14F-45       |45CM FINISHED CHAIN     |RM|    2.30|    2.30|   |  | |  0.000|    0.00|  0.000|   0.00
+GF14F-50       |50CM FINISHED CHAIN     |RM|    2.30|    2.30|   |  | |  0.000|    0.00|  0.000|   0.00
+GF16F-30B      |30CM BULK CHAIN         |RM|    2.00|    2.00|   |  | |  0.000|    0.00|  0.000|   0.00
+GF16R-30B      |30CM BULK CHAIN         |RM|    2.20|    2.20|   |  | |  0.000|    0.00|  0.000|   0.00
+GF18F-30B      |BULK 30CM CHAIN         |RM|    3.95|    3.95|   |  | |  0.000|    0.00|  0.000|   0.00
+GF18F-50       |GF 50CM FINISHED CHAIN  |RM|    5.50|    5.50|   |  | |  0.000|    0.00|  0.000|   0.00
+GF20-21        |GF 20 & 21 RAW LOCKET   |RM|   11.68|   11.68|   |  | |  0.000|    0.00|  0.000|   0.00
+GF20F-30B      |BULK 30CM CHAIN         |RM|    2.80|    2.80|   |  | |  0.000|    0.00|  0.000|   0.00
+GF20F-50       |GF 50CM FINISHED CHAIN  |RM|    4.65|    4.65|   |  | |  0.000|    0.00|  0.000|   0.00
+GF20F-60       |GF 60CM FINISHED CHAIN  |RM|    5.60|    5.60|   |  | |  0.000|    0.00|  0.000|   0.00
+GF22-23        |GF 22 & 23 RAW LOCKET   |RM|    2.44|    2.44|   |  | |  0.000|    0.00|  0.000|   0.00
+GF24-25        |GF 24 & 25 RAW LOCKET   |RM|    2.44|    2.44|   |  | |  0.000|    0.00|  0.000|   0.00
+GF29           |GF 29 RAW LOCKET        |RM|   12.63|   12.63|   |  | |  0.000|    0.00|  0.000|   0.00
+GF32F-30B      |BULK CHAIN              |RM|   11.00|   11.00|GF |  | |  0.000|    0.00|  0.000|   0.00
+GF3B           |G.F. 3B RAW LOCKET      |RM|    9.83|    9.83|   |  | |  0.000|    0.00|  0.000|   0.00
+GF40           |G.F. 40 RAW LOCKET      |RM|    1.96|    1.96|   |  | |  0.000|    0.00|  0.000|   0.00
+GF41           |G.F. 41 RAW LOCKET      |RM|   12.70|   12.70|   |  | |  0.000|    0.00|  0.000|   0.00
+GF42           |G.F. 42 RAW LOCKET      |RM|    2.21|    2.21|   |  | |  0.000|    0.00|  0.000|   0.00
+GF43           |G.F. 43 RAW LOCKET      |RM|   13.70|   13.70|   |  | |  0.000|    0.00|  0.000|   0.00
+GF44           |G.F. 44 RAW LOCKET      |RM|   15.62|   15.62|   |  | |  0.000|    0.00|  0.000|   0.00
+GF60C-30B      |BULK 30CM CHAIN         |RM|   49.35|   49.35|   |  | |  0.000|    0.00|  0.000|   0.00
+GF7-9          |G.F. 7, 8 & 9 RAW LOCKET|RM|    5.32|    5.32|   |  | |  0.000|    0.00|  0.000|   0.00
+GF70           |GF 70 RAW LOCKET        |RM|    5.70|    5.70|   |  | |  0.000|    0.00|  0.000|   0.00
+GF8R           |G.F. 8R RAW LOCKET      |RM|   10.16|   10.16|   |  | |  0.000|    0.00|  0.000|   0.00
+GFBR15-17      |GF BR15-17 RAW CLIP ON B|RM|    0.00|    0.00|   |  | |  0.000|    0.00|  0.000|   0.00
+GFBR20-22      |GF BR20-22 RAW CLIPON BR|RM|    0.00|    0.00|   |  | |  0.000|    0.00|  0.000|   0.00
+GFBR4-6        |GF. BR4-6 RAW CLIP ON BR|RM|    0.00|    0.00|   |  | |  0.000|    0.00|  0.000|   0.00
+GFBR7-9        |GF RAW BR7-9 CLIP ON BRA|RM|    0.00|    0.00|   |  | |  0.000|    0.00|  0.000|   0.00
+GFF60-30       |30CM FINISHED CHAIN     |RM|    5.70|    5.70|   |  | |  0.000|    0.00|  0.000|   0.00
+GFF60-30B      |F60 GF BULK CHAIN       |RM|    7.63|    7.63|   |  | |  0.000|    0.00|  0.000|   0.00
+GFL26-L27      |GF L26 & L27 RAW LOCKET |RM|    3.56|    3.56|   |  | |  0.000|    0.00|  0.000|   0.00
+GFLOBSTER-LG   |G.F. LARGE LOBSTER CLASP|RM|    1.54|    1.54|   |  | |  0.000|    0.00|  0.000|   0.00
+GFLOBSTER-SM   |G.F. SMALL LOBSTER CLASP|RM|    1.40|    1.40|   |  | |  0.000|    0.00|  0.000|   0.00
+GFM1           |GF M1 RAW LOCKET        |RM|    1.99|    1.99|   |  | |  0.000|    0.00|  0.000|   0.00
+GFM2           |GF M2 RAW LOCKET        |RM|    4.90|    4.90|   |  | |  0.000|    0.00|  0.000|   0.00
+GFSIS-LG       |GF LARGE SISTER HOOK    |RM|    2.65|    2.65|   |  | |  0.000|    0.00|  0.000|   0.00
+GFSIS-SM       |GF SMALL SISTER HOOK    |RM|    0.79|    0.79|   |  | |  0.000|    0.00|  0.000|   0.00
+GFSR-5         |G.F. SPRING RING 5MM    |RM|    0.17|    0.17|   |  | |  0.000|    0.00|  0.000|   0.00
+GFSR-6         |GF 6MM SPRING RING      |RM|    0.18|    0.18|   |  | |  0.000|    0.00|  0.000|   0.00
+HEART-4X4      |SYN 4X4 STONE           |RM|    1.93|    1.93|STO|NE| |  0.000|    0.00|  0.000|   0.00
+HEART-5X5      |5X5MM HEART SHAPE SYN.. |RM|    0.83|    0.83|STO|NE| |  0.000|    0.00|  0.000|   0.00
+HEM-10X5CU     |10X5 HEM CUSH. SHAPE    |RM|    1.65|    1.65|STO|NE| |  0.000|    0.00|  0.000|   0.00
+HEM-10X5MQ     |10X5MM MQ. HEM.         |RM|   16.85|   16.85|STO|NE| |  0.000|    0.00|  0.000|   0.00
+HEM-10X8       |HEMATITE 10X8 OVAL STONE|RM|    1.30|    1.30|STO|NE| |  0.000|    0.00|  0.000|   0.00
+HEM-15X7MQ     |15X7MM MQ HEM.          |RM|   19.95|   19.95|STO|NE| |  0.000|    0.00|  0.000|   0.00
+HEM-26X6.5MQ   |26X6.5MM MQ. HEM.       |RM|   26.95|   26.95|STO|NE| |  0.000|    0.00|  0.000|   0.00
+INTAG-10X8     |10X8 OVAL HEM.INTAGLIO  |RM|    8.00|    8.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+LAPEL-BACK     |CLUTCH BACK-LAPEL PINS  |RM|    0.78|    0.78|   |  | |  0.000|    0.00|  0.000|   0.00
+LOCKET-BOX     |VELVET LOCKET BOX-NO PAD|RM|    0.95|    0.95|   |  | |  0.000|    0.00|  0.000|   0.00
+LOCKET-PAD     |WHITE OR GREEN PADS     |RM|    0.38|    0.38|   |  | |  0.000|    0.00|  0.000|   0.00
+MARQ-10X5      |10X5MM MARQ. SHAPE SYN. |RM|    1.98|    1.98|STO|NE| |  0.000|    0.00|  0.000|   0.00
+MARQ-5X2.5     |5X2.5MM MARQ. SHAPE SYN.|RM|    0.80|    0.80|STO|NE| |  0.000|    0.00|  0.000|   0.00
+MARQ-6X3       |6X3MM MARQ. SHAPE SYN.  |RM|    1.08|    1.08|STO|NE| |  0.000|    0.00|  0.000|   0.00
+MAS-10X8       |10X8 OVAL SYN.MASONIC   |RM|   18.00|   18.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+MAS-12X10CU    |12X10 CUSH SYN.MASONIC  |RM|   20.50|   20.50|STO|NE| |  0.000|    0.00|  0.000|   0.00
+OCT-12X10      |12X10MM SYN. OCT.       |RM|    9.95|    9.95|STO|NE| |  0.000|    0.00|  0.000|   0.00
+OCT-7X5        |7X5MM OCT. SYN. STONE   |RM|    2.08|    2.08|STO|NE| |  0.000|    0.00|  0.000|   0.00
+OCT-8X6        |SYN 8X6 OCT. STONE      |RM|   11.60|   11.60|STO|NE| |  0.000|    0.00|  0.000|   0.00
+ONYX-10X10ANT  |10X10 ANT. SHAPE STONE  |RM|    2.00|    2.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+ONYX-10X5CU    |10X5 ONYX CUSH. SHAPE   |RM|    1.46|    1.46|STO|NE| |  0.000|    0.00|  0.000|   0.00
+ONYX-10X5MQ    |10X5MM MQ. ONYX         |RM|    2.00|    2.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+ONYX-10X8      |10X8MM OVAL ONYX        |RM|    3.00|    3.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+ONYX-10X8AN    |10X8 ONYX ANT. SHAPE    |RM|    1.80|    1.80|STO|NE| |  0.000|    0.00|  0.000|   0.00
+ONYX-10X8CU    |10X8 ONYX CUSH.         |RM|    1.75|    1.75|STO|NE| |  0.000|    0.00|  0.000|   0.00
+ONYX-11X9AN    |ONYX-11.8X9.6 ANT.SHAPE |RM|   18.00|   18.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+ONYX-12X10ANT  |12X10 ANT SHAPE STONE   |RM|    3.00|    3.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+ONYX-12X10CU   |ONYX 12 X 10 CUSH STONE |RM|    2.50|    2.50|STO|NE| |  0.000|    0.00|  0.000|   0.00
+ONYX-12X10OC   |ONYX 12 X 10 OCT.STONE  |RM|    2.50|    2.50|STO|NE| |  0.000|    0.00|  0.000|   0.00
+ONYX-12X10OVAL |ONYX OR TE 12X10 OVAL   |RM|    2.32|    2.32|STO|NE| |  0.000|    0.00|  0.000|   0.00
+ONYX-14X12     |14 X 12 MM OVAL ONYX.   |RM|    1.77|    1.77|STO|NE| |  0.000|    0.00|  0.000|   0.00
+ONYX-15X7MQ    |15X7MM MQ ONYX          |RM|    2.08|    2.08|STO|NE| |  0.000|    0.00|  0.000|   0.00
+ONYX-6X4       |6X4 OVAL ONYX           |RM|    1.00|    1.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+ONYX-8.0       |8mm CABOCHON STONE      |RM|    2.00|    2.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+ONYX-8X6       |ONYX 8X6 OVAL STONE     |RM|    1.25|    1.25|STO|NE| |  0.000|    0.00|  0.000|   0.00
+ONYX-8X6CU     |ONYX 8X6 CUSH STONE     |RM|    1.75|    1.75|STO|NE| |  0.000|    0.00|  0.000|   0.00
+ONYX-8X6OC     |ONYX 8X6 OCT. STONE     |RM|    1.75|    1.75|STO|NE| |  0.000|    0.00|  0.000|   0.00
+ONYXMA-10X8    |10X8 OVAL ONYX MASONIC  |RM|   14.00|   14.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+ONYXMA-12X10CU |12X10 CUSH.ONYX MASONIC |RM|   31.50|   31.50|STO|NE| |  0.000|    0.00|  0.000|   0.00
+OPAL-10X5MQ    |10X5MM MQ. OPAL         |RM|    5.00|    5.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+OPAL-10X8      |10X8MM OVAL OPAL        |RM|    9.73|    9.73|STO|NE| |  0.000|    0.00|  0.000|   0.00
+OPAL-15X7MQ    |15X7MM MARQ. OPAL       |RM|   14.42|   14.42|STO|NE| |  0.000|    0.00|  0.000|   0.00
+OPAL-5.0       |5.0MM ROUND OPAL        |RM|    2.00|    2.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+OPAL-5X3       |5X3MM OVAL OPAL         |RM|    1.05|    1.05|STO|NE| |  0.000|    0.00|  0.000|   0.00
+OPAL-6X4       |6X4MM OVAL OPAL         |RM|    1.22|    1.22|STO|NE| |  0.000|    0.00|  0.000|   0.00
+OPAL-6X4PS     |6X4MM P.S. OPAL         |RM|    1.66|    1.66|STO|NE| |  0.000|    0.00|  0.000|   0.00
+OPAL-8X6       |8X6MM OVAL OPAL         |RM|    4.62|    4.62|STO|NE| |  0.000|    0.00|  0.000|   0.00
+OVAL-10X8      |10X8MM OVAL SYN. STONE  |RM|    4.10|    4.10|STO|NE| |  0.000|    0.00|  0.000|   0.00
+OVAL-5X3       |5X3MM OVAL SYN. STONE   |RM|    1.01|    1.01|STO|NE| |  0.000|    0.00|  0.000|   0.00
+OVAL-6X4       |6X4MM OVAL SYN STONE    |RM|    1.22|    1.22|STO|NE| |  0.000|    0.00|  0.000|   0.00
+OVAL-7X5       |7X5MM OVAL SYN STONE    |RM|    2.06|    2.06|STO|NE| |  0.000|    0.00|  0.000|   0.00
+OVAL-8X6       |8X6MM SYN STONE         |RM|    3.18|    3.18|STO|NE| |  0.000|    0.00|  0.000|   0.00
+OVAL-9X7       |9X7MM OVAL GEN STONE    |RM|   12.48|   12.48|STO|NE| |  0.000|    0.00|  0.000|   0.00
+P.005          |.005 PROMOTIONAL DIAMOND|WP|    1.17|    1.17|STO|NE|2|  0.000|    0.00|  0.000|   0.00
+P.01           |.01 PROMOTIONAL DIAMOND |WP|    3.19|    3.19|STO|NE|2|  0.000|    0.00|  0.000|   0.00
+P.015          |.015 PROMOTIONAL DIAMOND|WP|    8.59|    8.59|STO|NE|2|  0.000|    0.00|  0.000|   0.00
+P.02           |.02 PROMOTIONAL DIAMOND |WP|   23.00|   23.00|STO|NE|2|  0.000|    0.00|  0.000|   0.00
+P.03           |.03 PROMOTIONAL DIAMOND |WP|   37.50|   37.50|STO|NE|2|  0.000|    0.00|  0.000|   0.00
+P.04           |.04 PROMOTIONAL DIAMOND |WP|   18.84|   18.84|STO|NE|2|  0.000|    0.00|  0.000|   0.00
+P.05           |.05 PROMOTIONAL DIAMOND |WP|   34.41|   34.41|STO|NE|2|  0.000|    0.00|  0.000|   0.00
+P.06           |.06 PROMOTIONAL DIAMOND |WP|   31.49|   31.49|STO|NE|2|  0.000|    0.00|  0.000|   0.00
+P.18           |.18 DIA PROMO QUALITY   |RM|  150.00|  150.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+P.27           |.27 DIAMOND FOR 5T06    |RM|  309.89|  309.89|STO|NE| |  0.000|    0.00|  0.000|   0.00
+PCUT           |PRINCESS CUT DIA .17ct  |WP|  179.40|  179.40|STO|NE|2|  0.000|    0.00|  0.000|   0.00
+PCUT.10        |PRINCESS CUT DIA .10ct  |WP|   87.40|   87.40|STO|NE|2|  0.000|    0.00|  0.000|   0.00
+PEAR-6X4       |6X4MM PEAR SHAPE SYN.   |RM|    1.13|    1.13|STO|NE| |  0.000|    0.00|  0.000|   0.00
+PEARL-11       |JU50-75CM,JU65-90CM     |RM|    6.50|    6.50|   |  | |  0.000|    0.00|  0.000|   0.00
+PEARL-12       |JU50-90CM               |RM|    7.50|    7.50|   |  | |  0.000|    0.00|  0.000|   0.00
+PEARL-2.0      |1.5 - 3.5MM PEARL       |RM|    2.00|    2.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+PEARL-4.0      |4.0 - 4.5MM PEARL       |RM|    4.65|    4.65|STO|NE| |  0.000|    0.00|  0.000|   0.00
+PEARL-5.0      |5.0 - 5.5MM PEARL       |RM|    4.75|    4.75|STO|NE| |  0.000|    0.00|  0.000|   0.00
+PEARL-6.0      |6.0 - 6.5MM PEARL       |RM|    8.04|    8.04|STO|NE| |  0.000|    0.00|  0.000|   0.00
+PEARL-7.0      |7-7.5MM CULTURED PEARL  |RM|   17.00|   17.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+PEARL-BOX      |GREEN VELVET PEARL BOX  |RM|    2.00|    2.00|   |  | |  0.000|    0.00|  0.000|   0.00
+PEARL-JU50     |STRANDS-IMIT.PEARLS 5MM.|RM|    1.13|    1.13|STO|NE| |  0.000|    0.00|  0.000|   0.00
+PEARL-JU65     |STRAND-IMIT.PEARLS 6MM. |RM|    1.10|    1.10|STO|NE| |  0.000|    0.00|  0.000|   0.00
+PEARL-JU73     |SYN.PEARLS FOR JU73.    |RM|    1.34|    1.34|STO|NE| |  0.000|    0.00|  0.000|   0.00
+PHOTO          |PHOTO COSTS @ 6.00 EACH |RM|    0.00|    0.00|   |  | |  0.000|    0.00|  0.000|   0.00
+RHODIUM        |PLATING COSTS @ .40/UNIT|RM|    0.00|    0.00|   |  | |  0.000|    0.00|  0.000|   0.00
+RING-TRAY      |DISPLAY TRAY FOR RINGS  |RM|    0.00|    0.00|   |  | |  0.000|    0.00|  0.000|   0.00
+RM6            |RM6 BOX,PAD & LID       |RM|    0.35|    0.35|   |  | |  0.000|    0.00|  0.000|   0.00
+ROSEWOOD-BOX   |ROSEWOOD BOX FOR URNS   |RM|    0.00|    0.00|   |  | |  0.000|    0.00|  0.000|   0.00
+SC-10X8        |10X8MM OVAL SILVER CAT  |RM|    6.00|    6.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+SC-6X4         |6X4MM OVAL SILVER CAT   |RM|    1.25|    1.25|STO|NE| |  0.000|    0.00|  0.000|   0.00
+SC-8X6         |8X6MM OVAL SILVER CAT   |RM|    2.00|    2.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+SCHBRO1        |50 SCHOOL RING BROCHURES|RM|    0.00|    0.00|   |  | |  0.000|    0.00|  0.000|   0.00
+SCRAP-DIRTY    |SCRAP TO GO TO REFINER  |WP|    0.00|    0.00|   |  |S|  0.000|    0.00|  0.000|   0.00
+SQUARE-7X5     |7X5MM SQUARE SHAPE SYN. |RM|    2.00|    2.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+ST-PC1         |STER PEARL CLASP        |RM|    1.20|    1.20|   |  | |  0.000|    0.00|  0.000|   0.00
+ST1-6          |STER 1,2,3,4,5 & 6 RAW L|RM|    8.66|    8.66|   |  | |  0.000|    0.00|  0.000|   0.00
+ST10-12        |STER 10 11 & 12 RAW LOCK|RM|    0.00|    0.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ST13           |STER 13 RAW LOCKET      |RM|    0.00|    0.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ST14-15        |STER 14 & 15 RAW LOCKET |RM|    0.00|    0.00|   |  | |  0.000|    0.00|  0.000|   0.00
+ST20-21        |STER 20 & 21 RAW LOCKET |RM|    3.99|    3.99|   |  | |  0.000|    0.00|  0.000|   0.00
+ST22-23        |STER 22 & 23 RAW LOCKET |RM|    1.99|    1.99|   |  | |  0.000|    0.00|  0.000|   0.00
+ST24-25        |STER 24 & 25 RAW LOCKET |RM|    1.99|    1.99|   |  | |  0.000|    0.00|  0.000|   0.00
+ST29           |STER 29 RAW LOCKET      |RM|    4.94|    4.94|   |  | |  0.000|    0.00|  0.000|   0.00
+ST32F-30       |30CM FINISHED CHAIN     |RM|    4.71|    4.71|   |  | |  0.000|    0.00|  0.000|   0.00
+ST3B           |STER 3B RAW LOCKET      |RM|    8.92|    8.92|   |  | |  0.000|    0.00|  0.000|   0.00
+ST40           |STER 40 RAW LOCKET      |RM|    7.43|    7.43|   |  | |  0.000|    0.00|  0.000|   0.00
+ST41           |STER  41 RAW LOCKET     |RM|   12.88|   12.88|   |  | |  0.000|    0.00|  0.000|   0.00
+ST42           |STER 42 RAW LOCKET      |RM|    2.21|    2.21|   |  | |  0.000|    0.00|  0.000|   0.00
+ST43           |STER 43 RAW LOCKET      |RM|   10.44|   10.44|   |  | |  0.000|    0.00|  0.000|   0.00
+ST44           |STER 44 RAW LOCKET      |RM|    9.19|    9.19|   |  | |  0.000|    0.00|  0.000|   0.00
+ST7-9          |STER 7, 8 & 9 RAW LOCKET|RM|    6.64|    6.64|   |  | |  0.000|    0.00|  0.000|   0.00
+ST70           |STER 70 RAW LOCKET      |RM|    7.45|    7.45|   |  | |  0.000|    0.00|  0.000|   0.00
+ST8R           |STER 8R RAW LOCKET      |RM|    7.94|    7.94|   |  | |  0.000|    0.00|  0.000|   0.00
+STAR-10X8      |10X8MM BLUE OR PINK STAR|RM|   36.50|   36.50|STO|NE| |  0.000|    0.00|  0.000|   0.00
+STAR-5X3       |5X3MM BLUE OR PINK STAR |RM|    2.90|    2.90|STO|NE| |  0.000|    0.00|  0.000|   0.00
+STAR-6X4       |6X4MM BLUE OR PINK STAR |RM|    3.90|    3.90|STO|NE| |  0.000|    0.00|  0.000|   0.00
+STAR-8X6       |8X6MM BLUE OR PINK STAR |RM|    9.25|    9.25|STO|NE| |  0.000|    0.00|  0.000|   0.00
+STBRAC-BOX     |BOX-CHARM BRAC. CLASP   |RM|    0.00|    0.00|   |  | |  0.000|    0.00|  0.000|   0.00
+STBRAC-CATCH   |CATCH-CHARM BRAC. CLASP |RM|    0.00|    0.00|   |  | |  0.000|    0.00|  0.000|   0.00
+STE-.635X.635  |SQUARE WIRE (CHARM BR)  |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STE-0.36X69.85 |STER FLAT STOCK DUMMYLOC|RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STE-1.02X2.29  |STER CROSS STOCK 33-35  |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STE-1.0X2.5    |STER FLAT STOCK         |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STE-1.14X11.91 |STER FLAT STOCK  IDENTS |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STE-1.14X15.88 |STER FLAT STOCK  IDENTS |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STE-1.14X6.00  |STER STOCK  SLIDES & N P|RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STE-1.14X7.87  |STERLING STOCK - N.PINS |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STE-1.1X3.4    |STER FLAT STOCK         |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STE-1.24WIRE   |1.24MM STERLING WIRE    |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STE-1.52X1.52  |#97 CROSS STOCK         |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STE-1.79X0.76  |#93 STERLING CROSS STOCK|RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STE-1.91X1.91  |STERLING CROSS STOCK#100|RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STE-1.91X3.69  |STERLING CROSS STOCK    |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STE-10.31X.51  |STER FLAT STOCK         |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STE-14.28X.51  |STER FLAT STOCK         |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STE-19.05X.51  |STER FLAT STOCK         |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STE-2.53X1.92  |STERLING CROSS STOCK    |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STE-2.5X50.8   |PLATE 2.5x50.8mm (WEDDS)|RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STE-2.75X50.8  |STOCK TO MAKE STER 600R |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STE-25.4X0.45  |STER FLAT STOCK         |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STE-6.35X0.89  |STER FLAT STOCK IDENTS  |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STE-69.85X0.71 |#30 CROSS STOCK STERLING|RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STE-69.85X1.14 |STER FLAT STOCK         |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STE-76.2X0.36  |STER FLAT STOCK         |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STE-76.2X0.71  |STERLING FLAT STOCK     |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STE-76X1.78    |STERLING SIGNET STOCK   |WP|    4.17|    0.00|STE|R |1|  0.000|    0.00|  1.000|   4.17
+STE-8.0X4.3    |STER FLAT STOCK         |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STE-BUTTERFLY  |ST. BUTTERFLY BACK PIECE|RM|    0.13|    0.13|   |  | |  0.000|    0.00|  0.000|   0.00
+STE-KIDNEY     |STER KIDNEY WIRE EACH   |RM|    0.41|    0.41|   |  | |  0.000|    0.00|  0.000|   0.00
+STE-LINKS      |STER PR.CUFFLINK BACKS  |RM|    3.10|    3.10|   |  | |  0.000|    0.00|  0.000|   0.00
+STE-SR12       |STER SPRING RING 12MM   |RM|    0.00|    0.00|   |  | |  0.000|    0.00|  0.000|   0.00
+STE-SR7        |STER. SPRING RING 7MM   |RM|    0.00|    0.00|   |  | |  0.000|    0.00|  0.000|   0.00
+STE-SWIVEL     |STER SWIVEL-GENTS CHAIN |RM|    3.34|    3.34|   |  | |  0.000|    0.00|  0.000|   0.00
+STE1025MC      |40CM FINISHED CHAIN     |RM|    2.60|    2.60|   |  | |  0.000|    0.00|  0.000|   0.00
+STE10F-30      |30CM FINISHED CHAIN     |RM|    1.26|    1.26|   |  | |  0.000|    0.00|  0.000|   0.00
+STE10F-40      |40CM FINISHED CHAIN     |RM|    1.40|    1.40|   |  | |  0.000|    0.00|  0.000|   0.00
+STE10F-45      |45CM FINISHED CHAIN     |RM|    1.56|    1.56|   |  | |  0.000|    0.00|  0.000|   0.00
+STE11R-30B     |30CM BULK CHAIN         |RM|    1.27|    1.27|   |  | |  0.000|    0.00|  0.000|   0.00
+STE11R-40      |STER 11R 40CM FINISH.CHN|RM|    1.70|    1.70|   |  | |  0.000|    0.00|  0.000|   0.00
+STE11R-45      |STER BULK CHAIN         |RM|    1.90|    1.90|   |  | |  0.000|    0.00|  0.000|   0.00
+STE11R-50      |50CM FINISHED CHAIN     |RM|    2.24|    2.24|   |  | |  0.000|    0.00|  0.000|   0.00
+STE13R-30B     |30CM BULK CHAIN         |RM|    1.83|    1.83|   |  | |  0.000|    0.00|  0.000|   0.00
+STE13R-45      |13R 45CM STER CHAIN     |RM|    2.75|    2.75|   |  | |  0.000|    0.00|  0.000|   0.00
+STE13R-50      |STER 50CM FINISHED CHAIN|RM|    2.49|    2.49|   |  | |  0.000|    0.00|  0.000|   0.00
+STE13R-60      |60CM FINISHED CHAIN     |RM|    3.80|    3.80|   |  | |  0.000|    0.00|  0.000|   0.00
+STE14F-30B     |BULK 30CM CHAIN         |RM|    1.24|    1.24|   |  | |  0.000|    0.00|  0.000|   0.00
+STE14F-45      |45CM FINISHED CHAIN     |RM|    1.92|    1.92|   |  | |  0.000|    0.00|  0.000|   0.00
+STE14F-50      |50CM FINISHED CHAIN     |RM|    2.03|    2.03|   |  | |  0.000|    0.00|  0.000|   0.00
+STE14F-60      |STER 14F 60CM CHAIN     |RM|    2.25|    2.25|   |  | |  0.000|    0.00|  0.000|   0.00
+STE16F-30B     |30CM BULK CHAIN         |RM|    1.28|    1.28|   |  | |  0.000|    0.00|  0.000|   0.00
+STE16R-30B     |30CM BULK CHAIN         |RM|    0.00|    0.00|   |  | |  0.000|    0.00|  0.000|   0.00
+STE20F-30B     |BULK 30CM CHAIN         |RM|    2.49|    2.49|   |  | |  0.000|    0.00|  0.000|   0.00
+STE20F-45      |STER 45CM FINISHED CHAIN|RM|    3.74|    3.74|   |  | |  0.000|    0.00|  0.000|   0.00
+STE20F-50      |50CM FINISHED CHAIN     |RM|    4.00|    4.00|   |  | |  0.000|    0.00|  0.000|   0.00
+STE20F-60      |STER 60CM FINISHED CHAIN|RM|    5.00|    5.00|   |  | |  0.000|    0.00|  0.000|   0.00
+STE32F-30B     |STER CHAIN BULK         |RM|    0.79|    0.79|   |  | |  0.000|    0.00|  0.000|   0.00
+STE60C-30B     |BULK 30CM CHAIN         |RM|   19.36|   19.36|   |  | |  0.000|    0.00|  0.000|   0.00
+STEB-1         |STER BLANKS GROUP 1     |WP|    4.17|    0.00|STE|R |1|  0.000|    0.00|  1.000|   4.17
+STEB-2         |STER BLANKS GROUP 2     |WP|    4.17|    0.00|STE|R |2|  0.000|    0.00|  1.000|   4.17
+STEB-3         |STER BLANKS GROUP 3     |WP|    4.17|    0.00|STE|R |3|  0.000|    0.00|  1.000|   4.17
+STEB-4         |STER BLANKS GROUP 4     |WP|    4.17|    0.00|STE|R |4|  0.000|    0.00|  1.000|   4.17
+STEB-5         |STER BLANKS GROUP 5     |WP|    4.17|    0.00|STE|R |5|  0.000|    0.00|  1.000|   4.17
+STEB-6         |STER BLANKS GROUP 6     |WP|    4.17|    0.00|STE|R |6|  0.000|    0.00|  1.000|   4.17
+STEB-8         |STER BLANKS GROUP 8     |WP|    4.17|    0.00|STE|R |8|  0.000|    0.00|  1.000|   4.17
+STEF60-30B     |STER BULK CHAIN         |RM|   19.36|   19.36|   |  | |  0.000|    0.00|  0.000|   0.00
+STER           |STER CASTING GRAIN      |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STER.CONS      |STERLING ON CONSIGNMENT |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STER.SCRAP     |STER SCRAP              |RM|    4.17|    0.00|STE|R | |  0.000|    0.00|  1.000|   4.17
+STL26-L27      |STER L26 & L27 RAW LOCKE|RM|    4.02|    4.02|   |  | |  0.000|    0.00|  0.000|   0.00
+STLOBSTER-LG   |STER LARGE LOBSTER CLASP|RM|    1.00|    1.00|   |  | |  0.000|    0.00|  0.000|   0.00
+STLOBSTER-SM   |STER SMALL LOBSTER CLASP|RM|    0.86|    0.86|   |  | |  0.000|    0.00|  0.000|   0.00
+STM1           |STER M1 RAW LOCKET      |RM|    3.39|    3.39|   |  | |  0.000|    0.00|  0.000|   0.00
+STM2           |STER M2 RAW LOCKET      |RM|    4.74|    4.74|   |  | |  0.000|    0.00|  0.000|   0.00
+STSIS-LG       |STER LARGE SISTER HOOK  |RM|    1.30|    1.30|   |  | |  0.000|    0.00|  0.000|   0.00
+STSIS-SM       |STER SMALL SISTER HOOK  |RM|    0.48|    0.48|   |  | |  0.000|    0.00|  0.000|   0.00
+STSR-5         |STER SPRING RING 5MM    |RM|    0.12|    0.12|   |  | |  0.000|    0.00|  0.000|   0.00
+STSR-6         |STER 6MM SPRING RING    |RM|    0.30|    0.30|   |  | |  0.000|    0.00|  0.000|   0.00
+SYN-1.0        |1.0MM SYN. STONE        |RM|    0.65|    0.65|STO|NE| |  0.000|    0.00|  0.000|   0.00
+SYN-1.5        |SYN 1.5MM STONE         |RM|    0.70|    0.70|STO|NE| |  0.000|    0.00|  0.000|   0.00
+SYN-2.0        |SYN. 2.0MM STONE        |RM|    0.80|    0.80|STO|NE| |  0.000|    0.00|  0.000|   0.00
+SYN-2.5        |2.5MM SYN STONE         |RM|    0.39|    0.39|STO|NE| |  0.000|    0.00|  0.000|   0.00
+SYN-2.5X2.5SQ  |SQUARE STONES FAM RING  |RM|    0.65|    0.65|STO|NE| |  0.000|    0.00|  0.000|   0.00
+SYN-3.0        |SYN 3.0MM STONE         |RM|    1.00|    1.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+SYN-3.5        |SYN 3.5MM STONE         |RM|    1.10|    1.10|STO|NE| |  0.000|    0.00|  0.000|   0.00
+SYN-3X3SQ      |SQUARE STONES FAM RING  |RM|    1.68|    1.68|STO|NE| |  0.000|    0.00|  0.000|   0.00
+SYN-4.0        |4.0MM SYN. STONE        |RM|    0.82|    0.82|STO|NE| |  0.000|    0.00|  0.000|   0.00
+SYN-4.5        |4.5MM SYN. STONE        |RM|    0.00|    0.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+SYN-5.0        |SYN. 5.0MM STONE        |RM|    0.00|    0.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+SYN-6.0        |6.0MM SYN. STONE        |RM|    0.00|    0.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+SYN-PEARL      |SYN.PEARL-PEND.& EARRING|RM|    0.05|    0.05|STO|NE| |  0.000|    0.00|  0.000|   0.00
+TE-10X5CU      |10X5 TIGER EYE CUSH.    |RM|    1.46|    1.46|STO|NE| |  0.000|    0.00|  0.000|   0.00
+TE-10X8        |10 X 8 OVAL TIGER EYE   |RM|    0.75|    0.75|STO|NE| |  0.000|    0.00|  0.000|   0.00
+TE-12X10CU     |12X10 TIGER EYE CUSH.   |RM|    3.30|    3.30|STO|NE| |  0.000|    0.00|  0.000|   0.00
+TE-5X3         |5X3MM OVAL TIGER EYE    |RM|    1.00|    1.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+TE-6X4         |6X4MM OVAL TIGER EYE    |RM|    1.75|    1.75|STO|NE| |  0.000|    0.00|  0.000|   0.00
+TE-8X6         |8X6MM OVAL TIGER EYE    |RM|    2.00|    2.00|STO|NE| |  0.000|    0.00|  0.000|   0.00
+TIEBAR-BOX     |VELVET TIE BAR BOX      |RM|    0.85|    0.85|   |  | |  0.000|    0.00|  0.000|   0.00
+TIETAC-BACK    |CLUTCH BACK WITH CHAIN  |RM|    0.55|    0.55|   |  | |  0.000|    0.00|  0.000|   0.00
+TIETAC-BOX     |VELVET TIE TAC BOX      |RM|    0.65|    0.65|   |  | |  0.000|    0.00|  0.000|   0.00
+TIETAC-POST    |TIE TAC POST            |RM|    0.04|    0.04|   |  | |  0.000|    0.00|  0.000|   0.00
+TOWER2SIDE     |2 SIDED COUNTER DISPLAY |RM|   51.23|   51.23|   |  | |  0.000|    0.00|  0.000|   0.00

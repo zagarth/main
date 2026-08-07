@@ -1,0 +1,454 @@
+{
+  "version": "2.0",
+  "last_updated": "2025-10-30",
+  "collection": "designer",
+  "products": {
+    "7T38": {
+      "width": "5mm",
+      "diamonds": "None",
+      "description": "Galaxy texture - plain"
+    },
+    "1T026": {
+      "width": "5mm",
+      "diamonds": "1x 0.03ct",
+      "description": "Galaxy texture with single diamond accent"
+    },
+    "7T40": {
+      "width": "6mm",
+      "diamonds": "None",
+      "description": "Galaxy texture - plain"
+    },
+    "7T62": {
+      "width": "6mm",
+      "diamonds": "None",
+      "description": "Galaxy texture - plain (alternate design)"
+    },
+    "7T74": {
+      "width": "6mm",
+      "diamonds": "None",
+      "description": "Galaxy texture - plain (alternate design)"
+    },
+    "8T14": {
+      "width": "6mm",
+      "diamonds": "None",
+      "description": "Galaxy texture - plain (alternate design)"
+    },
+    "1T010": {
+      "width": "6mm",
+      "diamonds": "None",
+      "description": "Galaxy texture - plain",
+      "note": "Ladies version: 1T011L"
+    },
+    "1T014": {
+      "width": "6mm",
+      "diamonds": "None",
+      "description": "Galaxy texture - plain",
+      "note": "Ladies version: 1T015L"
+    },
+    "1T022": {
+      "width": "6mm",
+      "diamonds": "None",
+      "description": "Galaxy texture - plain",
+      "note": "Ladies version: 1T023L"
+    },
+    "1T028": {
+      "width": "6mm",
+      "diamonds": "None",
+      "description": "Galaxy texture - plain"
+    },
+    "1T030": {
+      "width": "6mm",
+      "diamonds": "3x 0.02ct",
+      "description": "Galaxy texture with triple diamond accents"
+    },
+    "1T036": {
+      "width": "6mm",
+      "diamonds": "None",
+      "description": "Galaxy texture - plain"
+    },
+    "1T034": {
+      "width": "6.5mm",
+      "diamonds": "None",
+      "description": "Galaxy texture - plain"
+    },
+    "1T006": {
+      "width": "7mm",
+      "diamonds": "None",
+      "description": "Galaxy texture - plain"
+    },
+    "1T032": {
+      "width": "7mm",
+      "diamonds": "4x 0.015ct",
+      "description": "Galaxy texture with quad diamond accents"
+    },
+    "2291": {
+      "width": "5mm",
+      "diamonds": "None",
+      "description": "Sunrise designer band - plain"
+    },
+    "5750": {
+      "width": "6mm",
+      "diamonds": "3x 0.10ct pc",
+      "description": "Sunrise band with triple princess cut diamonds"
+    },
+    "5752": {
+      "width": "5.5mm",
+      "diamonds": "None",
+      "description": "Sunrise designer band - plain"
+    },
+    "5754": {
+      "width": "5.5mm",
+      "diamonds": "None",
+      "description": "Sunrise designer band - plain"
+    },
+    "5756": {
+      "width": "5.5mm",
+      "diamonds": "1x 0.10ct pc",
+      "description": "Sunrise band with single princess cut diamond"
+    },
+    "5760": {
+      "width": "5.5mm",
+      "diamonds": "None",
+      "description": "Sunrise designer band - plain"
+    },
+    "5762": {
+      "width": "8.5-6mm taper",
+      "diamonds": "3x 0.10ct pc",
+      "description": "Tapered Sunrise band (8.5mm to 6mm) with triple princess cut diamonds"
+    },
+    "5764": {
+      "width": "7.5-5mm taper",
+      "diamonds": "1x 0.10ct pc",
+      "description": "Tapered Sunrise band (7.5mm to 5mm) with single princess cut diamond",
+      "note": "Ladies version: 5664L"
+    },
+    "5768": {
+      "width": "8-5.5mm taper",
+      "diamonds": "1x 0.10ct rbc",
+      "description": "Tapered Sunrise band (8mm to 5.5mm) with single round brilliant diamond"
+    },
+    "5770": {
+      "width": "7mm (M) / 6mm (L)",
+      "diamonds": "None",
+      "description": "Sunrise designer band - different widths for men's and ladies'",
+      "note": "Ladies version: 5771L"
+    },
+    "5772": {
+      "width": "5.5mm (M) / 4mm (L)",
+      "diamonds": "1x 0.17ct (M) / 1x 0.10ct (L) pc",
+      "description": "Sunrise band with princess cut diamond - different widths and diamond sizes",
+      "note": "Ladies version: 5773L"
+    },
+    "5344P": {
+      "width": "5.5mm (M) / 4mm (L)",
+      "diamonds": "None",
+      "description": "Sunrise designer band - different widths for men's and ladies'",
+      "note": "Men's: 5344PM, Ladies: 5345PL"
+    },
+    "5774": {
+      "width": "9mm (M) / 8mm (L)",
+      "diamonds": "None",
+      "description": "Sunrise designer band - different widths for men's and ladies'",
+      "note": "Ladies version: 5775L"
+    },
+    "5776": {
+      "width": "9mm (M) / 8mm (L)",
+      "diamonds": "None",
+      "description": "Sunrise designer band - different widths for men's and ladies'",
+      "note": "Ladies version: 5777L"
+    },
+    "5778": {
+      "width": "6mm",
+      "diamonds": "None",
+      "description": "Sunrise designer band - plain",
+      "note": "Ladies version: 5779L"
+    },
+    "5780": {
+      "width": "7mm (M) / 6mm (L)",
+      "diamonds": "0.24ctw",
+      "description": "Sunrise band with diamonds - different widths for men's and ladies'",
+      "note": "Ladies version: 5781L"
+    }
+  },
+  "data": {
+    "name": "Designer Bands",
+    "base_price": 750.0,
+    "currency": "CAD",
+    "options": {
+      "karat_level": {
+        "label": "Karat / Purity",
+        "required": true,
+        "type": "single_select",
+        "default": "sterling",
+        "help_text": "Higher karat = more pure metal, softer & more expensive",
+        "options": [
+          {
+            "id": "sterling",
+            "name": "Sterling Silver",
+            "description": "92.5% pure silver",
+            "price_modifier": 0
+          },
+          {
+            "id": "10k",
+            "name": "10K Gold",
+            "description": "41.7% pure gold",
+            "price_modifier": 300
+          },
+          {
+            "id": "14k",
+            "name": "14K Gold",
+            "description": "58.5% pure gold",
+            "price_modifier": 600
+          },
+          {
+            "id": "18k",
+            "name": "18K Gold",
+            "description": "75% pure gold",
+            "price_modifier": 1200
+          }
+        ]
+      },
+      "outer_band_color": {
+        "label": "Outer Band Color",
+        "required": true,
+        "type": "single_select",
+        "default": "yellow",
+        "visible_when": {
+          "karat_level": ["10k", "14k", "18k"]
+        },
+        "options": [
+          {
+            "id": "yellow",
+            "name": "Yellow Gold",
+            "description": "Classic gold",
+            "price_modifier": 0
+          },
+          {
+            "id": "white",
+            "name": "White Gold",
+            "description": "Platinum look",
+            "price_modifier": 50
+          },
+          {
+            "id": "rose",
+            "name": "Rose Gold",
+            "description": "Pink gold",
+            "price_modifier": 25
+          }
+        ]
+      },
+      "inner_band_color": {
+        "label": "Inner Band Color",
+        "required": true,
+        "type": "single_select",
+        "default": "yellow",
+        "visible_when": {
+          "karat_level": ["10k", "14k", "18k"]
+        },
+        "options": [
+          {
+            "id": "yellow",
+            "name": "Yellow Gold",
+            "description": "Classic gold",
+            "price_modifier": 0
+          },
+          {
+            "id": "white",
+            "name": "White Gold",
+            "description": "Platinum look",
+            "price_modifier": 50
+          },
+          {
+            "id": "rose",
+            "name": "Rose Gold",
+            "description": "Pink gold",
+            "price_modifier": 25
+          }
+        ]
+      },
+      "gender_selection": {
+        "label": "Ring Style",
+        "required": true,
+        "type": "single_select",
+        "default": "M",
+        "help_text": "Choose between men's or ladies' sizing",
+        "options": [
+          {
+            "id": "M",
+            "name": "Men's Designer Band",
+            "description": "Sizes 8.5-16",
+            "price_modifier": 0
+          },
+          {
+            "id": "L",
+            "name": "Ladies' Designer Band",
+            "description": "Sizes 2-8.5",
+            "price_modifier": 0
+          }
+        ]
+      },
+      "finish": {
+        "label": "Surface Finish",
+        "required": true,
+        "type": "single_select",
+        "default": "polished",
+        "options": [
+          {
+            "id": "polished",
+            "name": "High Polish",
+            "description": "Mirror-like shine",
+            "price_modifier": 0,
+            "image": "finish_polished.jpg"
+          },
+          {
+            "id": "brushed",
+            "name": "Brushed/Matte",
+            "description": "Subtle texture, no glare",
+            "price_modifier": 60,
+            "image": "finish_brushed.jpg"
+          },
+          {
+            "id": "satin",
+            "name": "Satin",
+            "description": "Soft lustrous finish",
+            "price_modifier": 50,
+            "image": "finish_satin.jpg"
+          }
+        ]
+      },
+      "size_mens": {
+        "label": "Ring Size",
+        "required": true,
+        "type": "single_select",
+        "default": "10",
+        "visible_when": {
+          "gender_selection": ["M"]
+        },
+        "help_text": "Men's sizes 8.5-16. Not sure? Request a free ring sizer.",
+        "options": [
+          {"id": "8.5", "name": "8.5", "price_modifier": 0},
+          {"id": "9", "name": "9", "price_modifier": 0},
+          {"id": "9.5", "name": "9.5", "price_modifier": 0},
+          {"id": "10", "name": "10", "price_modifier": 0},
+          {"id": "10.5", "name": "10.5", "price_modifier": 0},
+          {"id": "11", "name": "11", "price_modifier": 0},
+          {"id": "11.5", "name": "11.5", "price_modifier": 0},
+          {"id": "12", "name": "12", "price_modifier": 0},
+          {"id": "12.5", "name": "12.5", "price_modifier": 0},
+          {"id": "13", "name": "13", "price_modifier": 0},
+          {"id": "13.5", "name": "13.5", "price_modifier": 0},
+          {"id": "14", "name": "14", "price_modifier": 0},
+          {"id": "14.5", "name": "14.5", "price_modifier": 0},
+          {"id": "15", "name": "15", "price_modifier": 0},
+          {"id": "15.5", "name": "15.5", "price_modifier": 0},
+          {"id": "16", "name": "16", "price_modifier": 0}
+        ]
+      },
+      "size_ladies": {
+        "label": "Ring Size",
+        "required": true,
+        "type": "single_select",
+        "default": "6.5",
+        "visible_when": {
+          "gender_selection": ["L"]
+        },
+        "help_text": "Ladies' sizes 2-8.5. Not sure? Request a free ring sizer.",
+        "options": [
+          {"id": "2", "name": "2", "price_modifier": 0},
+          {"id": "2.5", "name": "2.5", "price_modifier": 0},
+          {"id": "3", "name": "3", "price_modifier": 0},
+          {"id": "3.5", "name": "3.5", "price_modifier": 0},
+          {"id": "4", "name": "4", "price_modifier": 0},
+          {"id": "4.5", "name": "4.5", "price_modifier": 0},
+          {"id": "5", "name": "5", "price_modifier": 0},
+          {"id": "5.5", "name": "5.5", "price_modifier": 0},
+          {"id": "6", "name": "6", "price_modifier": 0},
+          {"id": "6.5", "name": "6.5", "price_modifier": 0},
+          {"id": "7", "name": "7", "price_modifier": 0},
+          {"id": "7.5", "name": "7.5", "price_modifier": 0},
+          {"id": "8", "name": "8", "price_modifier": 0},
+          {"id": "8.5", "name": "8.5", "price_modifier": 0}
+        ]
+      },
+      "matching_set": {
+        "label": "Matching Set",
+        "required": false,
+        "type": "checkbox",
+        "price_modifier": 0,
+        "discount_percentage": 15,
+        "help_text": "Order matching his & hers rings and save 15%"
+      },
+      "partner_ring": {
+        "label": "Partner's Ring Pattern & Width",
+        "required": false,
+        "type": "celtic_grid",
+        "help_text": "Select pattern and width for the matching ring",
+        "visible_when": {
+          "matching_set": [true]
+        },
+        "grid_layout": {
+          "columns": ["4.0mm", "5.0mm", "6.0mm", "7.0mm", "8.0mm"],
+          "rows": [
+            {
+              "pattern": "Classic Diamond Pattern",
+              "symbol": "💎💎💎💎💎💎💎💎",
+              "heritage": "Fancy",
+              "description": "Traditional diamond channel setting",
+              "options": [
+                {"width": "4.0mm", "product_id": "1T026M", "price_modifier": 100},
+                {"width": "5.0mm", "product_id": "1T028M", "price_modifier": 125},
+                {"width": "6.0mm", "product_id": "1T030M", "price_modifier": 150},
+                {"width": "7.0mm", "product_id": "5778M", "price_modifier": 175},
+                {"width": "8.0mm", "product_id": "8T14M", "price_modifier": 200}
+              ]
+            },
+            {
+              "pattern": "Classic Diamond Pattern (Ladies)",
+              "symbol": "💎💎💎💎💎💎💎💎",
+              "heritage": "Fancy",
+              "description": "Traditional diamond channel setting - ladies sizing",
+              "options": [
+                {"width": "4.0mm", "product_id": "1T026L", "price_modifier": 100},
+                {"width": "5.0mm", "product_id": "1T028L", "price_modifier": 125},
+                {"width": "6.0mm", "product_id": "1T030L", "price_modifier": 150},
+                {"width": "7.0mm", "product_id": "5777L", "price_modifier": 175},
+                {"width": "8.0mm", "product_id": "8T14L", "price_modifier": 200}
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "production_time": {
+      "standard": {
+        "label": "Standard Production",
+        "weeks": 5,
+        "price_modifier": 0
+      },
+      "rush": {
+        "label": "Rush Production (2 weeks)",
+        "weeks": 2,
+        "price_modifier": 300
+      }
+    },
+    "warranty": {
+      "included": "Lifetime warranty against manufacturing defects",
+      "details": "Includes one free resizing within first year"
+    }
+  },
+  "ui_config": {
+    "color_scheme": {
+      "primary": "#8b0000",
+      "secondary": "#cd853f",
+      "accent": "#ffd700",
+      "success": "#228b22",
+      "background": "#fff8dc",
+      "text": "#2f4f4f"
+    },
+    "animations": {
+      "option_select": "fadeIn 0.3s ease",
+      "price_update": "pulse 0.5s ease"
+    },
+    "mobile_breakpoint": "768px"
+  }
+}

@@ -1,0 +1,345 @@
+## Legacy school URL redirects (handle before rewrite/dir checks)
+<IfModule mod_alias.c>
+    RedirectMatch 301 (?i)^/school_php/?$ /school/
+    RedirectMatch 301 (?i)^/school\.php$ /school/
+    RedirectMatch 301 (?i)^/school\.ph$ /school/
+</IfModule>
+
+# Block dangerous HTTP methods globally (no DELETE anywhere)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Block DELETE, PUT, PATCH methods site-wide (allow GET, POST, HEAD, OPTIONS only)
+    RewriteCond %{REQUEST_METHOD} ^(DELETE|PUT|PATCH)$ [NC]
+    RewriteRule .* - [F,L]
+</IfModule>
+
+# Enhanced URL Injection Protection
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Block common injection patterns in URLs
+    RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+    RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2}) [OR]
+    RewriteCond %{QUERY_STRING} proc\/self\/environ [OR]
+    RewriteCond %{QUERY_STRING} mosConfig_[a-zA-Z_]{1,21}(=|\%3D) [OR]
+    RewriteCond %{QUERY_STRING} base64_encode.*\(.*\) [OR]
+    RewriteCond %{QUERY_STRING} (\<|%3C).*iframe.*(\>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} (\<|%3C).*object.*(\>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} (\<|%3C).*embed.*(\>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} (javascript:|vbscript:) [NC,OR]
+    RewriteCond %{QUERY_STRING} (union.*select|select.*union) [NC,OR]
+    RewriteCond %{QUERY_STRING} (drop.*table|drop.*database) [NC]
+    RewriteRule .* - [F,L]
+    
+    # Exception: Allow curl/wget for PDF downloads in Cadman_catalog (GET/HEAD only)
+    RewriteCond %{HTTP_USER_AGENT} (wget|curl) [NC]
+    RewriteCond %{REQUEST_URI} ^/Cadman_catalog/.*\.pdf$ [NC]
+    RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
+    RewriteRule .* - [L]
+    
+    # Exception: Allow all access to cadman-database directory
+    RewriteCond %{REQUEST_URI} ^/cadman-database/ [NC]
+    RewriteRule .* - [L]
+    
+    # Exception: Allow API access in cadman-database/api (GET/POST/OPTIONS)
+    RewriteCond %{REQUEST_URI} ^/cadman-database/api/ [NC]
+    RewriteCond %{REQUEST_METHOD} ^(GET|POST|OPTIONS)$
+    RewriteRule .* - [L]
+    
+    # Exception: Allow access to gold price API
+    RewriteCond %{REQUEST_URI} ^/gold_price_api\.php$ [NC]
+    RewriteCond %{REQUEST_METHOD} ^(GET|OPTIONS)$
+    RewriteRule .* - [L]
+    
+    # Exception: Allow access to silver price API
+    RewriteCond %{REQUEST_URI} ^/silver_price_api\.php$ [NC]
+    RewriteCond %{REQUEST_METHOD} ^(GET|OPTIONS)$
+    RewriteRule .* - [L]
+    
+    # Block suspicious User-Agents
+    RewriteCond %{HTTP_USER_AGENT} (libwww-perl|wget|curl|nikto|nmap|sqlmap) [NC]
+    RewriteRule .* - [F,L]
+    
+    # Extra protection: Block POST to Cadman_catalog (already blocked globally)
+    RewriteCond %{REQUEST_URI} ^/Cadman_catalog/ [NC]
+    RewriteCond %{REQUEST_METHOD} ^POST$
+    RewriteRule .* - [F,L]
+    
+    # Block requests with null bytes
+    RewriteCond %{QUERY_STRING} \x00 [OR]
+    RewriteCond %{REQUEST_URI} \x00
+    RewriteRule .* - [F,L]
+    
+    # Limit request length to prevent DoS
+    RewriteCond %{HTTP_HOST} !=""
+    RewriteCond %{QUERY_STRING} ^.{2048,}$
+    RewriteRule .* - [F,L]
+</IfModule>
+
+# Security Configuration
+# Hide server information (Headers only - ServerTokens requires server config)
+<IfModule mod_headers.c>
+    Header unset Server
+    Header unset X-Powered-By
+</IfModule>
+
+# Disable PHP exposure
+<IfModule mod_php7.c>
+    php_flag expose_php Off
+</IfModule>
+
+<IfModule mod_php8.c>
+    php_flag expose_php Off
+</IfModule>
+
+# Protect sensitive files
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# Protect sensitive files - block all JSON, logs, env files, etc.
+<FilesMatch "\.(env|json|log|txt|md)$">
+    Require all denied
+</FilesMatch>
+
+# Public crawler files — must override the .txt deny above
+<FilesMatch "^(robots\.txt|ads\.txt|humans\.txt|security\.txt)$">
+    Require all granted
+</FilesMatch>
+
+# Block access to backup files and sensitive data
+<FilesMatch "\.(bak|backup|old|tmp|temp)$">
+    Require all denied
+</FilesMatch>
+
+# Allow specific 2FA admin scripts
+<FilesMatch "^(2fa_setup\.php|TwoFactorAuth\.php)$">
+    Require all granted
+</FilesMatch>
+
+# Extra protection for 2FA and auth files  
+<FilesMatch "^(2fa_|auth_|session_|csrf_)">
+    Require all denied
+</FilesMatch>
+
+# Block all test and debug files (security risk)
+# Exception: Allow test_invoice.php and print_invoice.php in cadman-database
+# Exception: Allow test_status_api.php in admin (read-only status endpoint)
+<FilesMatch "^(test_|debug_|.*_test\.php|.*_debug\.php|print_)">
+    <If "%{REQUEST_URI} =~ m#^/cadman-database/(test_invoice|print_invoice)\.php$#">
+        Require all granted
+    </If>
+    <ElseIf "%{REQUEST_URI} =~ m#^/admin/test_status_api\.php#">
+        Require all granted
+    </ElseIf>
+    <Else>
+        Require all denied
+    </Else>
+</FilesMatch>
+
+# Disable directory browsing
+Options -Indexes
+
+# Enable compression
+# Use SetOutputFilter for reliable gzip with mod_filter in Apache 2.4+
+<IfModule mod_deflate.c>
+    # Compress text-based content by file extension (bypasses mod_filter quirks)
+    <FilesMatch "\.(html|htm|php|css|js|mjs|xml|txt|json|svg|wasm)$">
+        SetOutputFilter DEFLATE
+        Header append Vary Accept-Encoding
+    </FilesMatch>
+    # Also cover dynamic content by MIME type as fallback
+    AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css
+    AddOutputFilterByType DEFLATE text/javascript application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript application/json
+    AddOutputFilterByType DEFLATE application/xhtml+xml application/rss+xml
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# Set cache-control headers for static assets
+<IfModule mod_headers.c>
+    # Images
+    <FilesMatch "\.(jpg|jpeg|png|gif|ico|svg|webp)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    
+    # CSS and JavaScript
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=31536000"
+    </FilesMatch>
+    
+    # Fonts
+    <FilesMatch "\.(woff|woff2|ttf|eot)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    
+    # PHP files (dynamic content) - no-cache by default
+    <FilesMatch "\.(php)$">
+        Header set Cache-Control "no-cache, must-revalidate"
+    </FilesMatch>
+    
+    # Price API endpoints - publicly cacheable, updated 2x/day by cron
+    <FilesMatch "^(gold_price_api|silver_price_api)\.php$">
+        Header set Cache-Control "public, max-age=1800"
+        Header unset Pragma
+    </FilesMatch>
+    
+    # HTML files
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "public, max-age=3600"
+    </FilesMatch>
+</IfModule>
+
+# Expires headers as fallback
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/pdf "access plus 1 year"
+    ExpiresByType text/javascript "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType application/x-javascript "access plus 1 year"
+    ExpiresByType application/x-shockwave-flash "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+# Enhanced security headers
+<IfModule mod_headers.c>
+    # Basic security headers
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # Content Security Policy - allow PDF embedding, Leaflet maps, configurators, and required external resources
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: https://*.basemaps.cartocdn.com https://cdnjs.cloudflare.com; connect-src 'self' https://*.basemaps.cartocdn.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'self';"
+    
+    # Strict Transport Security (2 years)
+    Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload" env=HTTPS
+    
+    # Cross-Origin policies - relaxed for Google Maps compatibility
+    Header always set Cross-Origin-Embedder-Policy "unsafe-none"
+    Header always set Cross-Origin-Opener-Policy "same-origin-allow-popups"
+    Header always set Cross-Origin-Resource-Policy "cross-origin"
+    
+    # Additional security headers
+    Header always set X-Permitted-Cross-Domain-Policies "none"
+    Header always set X-DNS-Prefetch-Control "off"
+</IfModule>
+
+# Cookie Security Configuration
+<IfModule mod_php7.c>
+    # Secure session cookies
+    php_value session.cookie_secure 1
+    php_value session.cookie_httponly 1
+    php_value session.cookie_samesite "Strict"
+    php_value session.use_strict_mode 1
+    php_value session.cookie_lifetime 3600
+    php_value session.gc_maxlifetime 3600
+    php_value session.name "CADMAN_SESSID"
+    
+    # Additional PHP security
+    php_flag expose_php Off
+    php_value max_execution_time 30
+    php_value max_input_vars 1000
+    php_value post_max_size 10M
+    php_value upload_max_filesize 5M
+</IfModule>
+
+<IfModule mod_php8.c>
+    # Secure session cookies
+    php_value session.cookie_secure 1
+    php_value session.cookie_httponly 1
+    php_value session.cookie_samesite "Strict"
+    php_value session.use_strict_mode 1
+    php_value session.cookie_lifetime 3600
+    php_value session.gc_maxlifetime 3600
+    php_value session.name "CADMAN_SESSID"
+    
+    # Additional PHP security
+    php_flag expose_php Off
+    php_value max_execution_time 30
+    php_value max_input_vars 1000
+    php_value post_max_size 10M
+    php_value upload_max_filesize 5M
+</IfModule>
+
+# Block access to admin without proper authentication
+RewriteEngine On
+
+# Disable automatic directory slash handling to allow our rewrites to work
+DirectorySlash Off
+
+# SEO-friendly URL rewrites (must come before other rules)
+# ========== SEO catalog tree (5 parents) ==========
+# Skip rewriting real files / dirs under these parents
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(wedding|celtic|personal-family|corporate-service|accessories|school)(/.*)?$ - [L]
+
+# 4-segment: /{parent}/{collection}/{subOrSeries}/{id-slug}
+RewriteRule ^(wedding|celtic|personal-family|corporate-service|accessories|school)/([a-z0-9-]+)/([a-z0-9-]+)/([A-Za-z0-9_-]+)/?$ catalog/product.php?parent=$1&collection=$2&facet=$3&id_slug=$4 [L,QSA]
+
+# 3-segment: /{parent}/{collection}/{anything} — router decides product vs facet listing
+RewriteRule ^(wedding|celtic|personal-family|corporate-service|accessories|school)/([a-z0-9-]+)/([A-Za-z0-9_-]+)/?$ catalog/router.php?parent=$1&collection=$2&seg=$3 [L,QSA]
+
+# 2-segment: /{parent}/{collection}/  (listing)
+RewriteRule ^(wedding|celtic|personal-family|corporate-service|accessories|school)/([a-z0-9-]+)/?$ catalog/category.php?parent=$1&collection=$2 [L,QSA]
+
+# 1-segment: /{parent}/  (landing)
+RewriteRule ^(wedding|celtic|personal-family|corporate-service|accessories|school)/?$ catalog/parent.php?parent=$1 [L,QSA]
+
+# Main category pages (legacy — pending migration)
+# Bands.php has been migrated to /wedding/bands/ — 301 redirect old URLs
+RewriteRule ^bands/?$ /wedding/bands/ [R=301,L]
+RewriteRule ^Bands\.php$ /wedding/bands/ [R=301,L,QSA]
+
+# School legacy URLs -> canonical SEO parent landing
+RewriteRule ^school_php/?$ /school/ [R=301,L,NC]
+RewriteRule ^school\.php$ /school/ [R=301,L,NC,QSA]
+RewriteRule ^School\.php$ /school/ [R=301,L,QSA]
+RewriteRule ^school\.ph$ /school/ [R=301,L,NC,QSA]
+
+# Dynamic sitemap — serve /sitemap.xml from sitemap.php
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+RewriteRule ^accessories/?$ Accessories.php [L,QSA]
+RewriteRule ^family/?$ Family.php [L,QSA]
+RewriteRule ^engagement/?$ Engagement.php [L,QSA]
+RewriteRule ^ladies/?$ Ladys_Stoneset.php [L,QSA]
+RewriteRule ^corporate/?$ Corp.php [L,QSA]
+RewriteRule ^about/?$ about.php [L,QSA]
+RewriteRule ^contact/?$ contact_form.php [L,QSA]
+
+# Category sub-pages with filters (e.g., /ladies/wedding-bands/, /bands/celtic/)
+RewriteRule ^ladies/([^/]+)/?$ Ladys_Stoneset.php?category=$1 [L,QSA]
+RewriteRule ^bands/([^/]+)/?$ Bands.php?category=$1 [L,QSA]
+RewriteRule ^family/([^/]+)/?$ Family.php?category=$1 [L,QSA]
+RewriteRule ^engagement/([^/]+)/?$ Engagement.php?category=$1 [L,QSA]
+RewriteRule ^accessories/([^/]+)/?$ Accessories.php?category=$1 [L,QSA]
+RewriteRule ^corporate/([^/]+)/?$ Corp.php?category=$1 [L,QSA]
+
+# Product modal endpoints - ensure they work with clean URLs
+RewriteRule ^api/product/(.+)$ get_product_modal_data.php?product_id=$1 [L,QSA]
+
+# Redirect common misspellings and old URLs
+RewriteRule ^band$ /bands [R=301,L]
+RewriteRule ^jewellery$ /family [R=301,L]
+RewriteRule ^jewelry$ /family [R=301,L]
+
+# Force HTTPS redirect
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Admin access restrictions
+RewriteCond %{REQUEST_URI} ^/admin/
+RewriteCond %{REMOTE_ADDR} !^127\.0\.0\.1$
+RewriteCond %{REMOTE_ADDR} !^192\.168\.1\.
+RewriteCond %{REMOTE_ADDR} !^100\.64\.
+RewriteCond %{REMOTE_ADDR} !^66\.203\.171\.222$
+RewriteRule ^admin/(?!login\.php) admin/login.php [R=302,L]

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Retailer - Cadman Manufacturing</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #1e3a8a;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        #debug-panel {
+            background: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 12px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        #map {
+            height: 600px;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        
+        .stats {
+            background: #e8f4f8;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .stat-item {
+            display: inline-block;
+            margin: 0 20px;
+        }
+        
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #1e3a8a;
+            display: block;
+        }
+        
+        .search-box {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        
+        #retailer-list {
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+        }
+        
+        .retailer-item {
+            background: #f9f9f9;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 4px;
+            border-left: 4px solid #1e3a8a;
+        }
+        
+        .retailer-name {
+            font-weight: bold;
+            color: #1e3a8a;
+        }
+        
+        .retailer-address {
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Find a Retailer - Cadman Manufacturing</h1>
+        
+        <div id="debug-panel">
+            <strong>Debug Log:</strong><br>
+            <div id="debug-output">Starting initialization...</div>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number" id="total-retailers">Loading...</span>
+                <span class="stat-label">Total Retailers</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="mapped-retailers">Loading...</span>
+                <span class="stat-label">On Map</span>
+            </div>
+        </div>
+        
+        <div id="map"></div>
+        
+        <input type="text" class="search-box" id="search" placeholder="Search retailers by name or location...">
+        
+        <div id="retailer-list"></div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <script>
+        function debugLog(message) {
+            console.log(message);
+            const output = document.getElementById('debug-output');
+            output.innerHTML += '<br>' + new Date().toLocaleTimeString() + ': ' + message;
+            output.scrollTop = output.scrollHeight;
+        }
+        
+        let allRetailers = [];
+        let map = null;
+        let markersGroup = null;
+        
+        debugLog('Starting retailer locator...');
+        
+        // Initialize map
+        function initMap() {
+            debugLog('Initializing map...');
+            map = L.map('map').setView([56.1304, -106.3468], 4);
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+            
+            markersGroup = L.featureGroup().addTo(map);
+            debugLog('Map initialized successfully');
+        }
+        
+        // Load retailer data
+        function loadRetailers() {
+            debugLog('Loading retailers from JSON...');
+            
+            fetch('retailers.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to load retailers.json: ' + response.status);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    debugLog('Successfully loaded ' + data.length + ' retailers');
+                    allRetailers = data;
+                    processRetailers();
+                })
+                .catch(error => {
+                    debugLog('ERROR loading retailers: ' + error.message);
+                    
+                    // Fallback: try to generate data via PHP
+                    debugLog('Trying fallback XML to JSON conversion...');
+                    fetch('xml_to_json.php')
+                        .then(response => response.json())
+                        .then(data => {
+                            debugLog('Fallback successful: ' + data.length + ' retailers');
+                            allRetailers = data;
+                            processRetailers();
+                        })
+                        .catch(fallbackError => {
+                            debugLog('ERROR: Both methods failed - ' + fallbackError.message);
+                        });
+                });
+        }
+        
+        // Process and display retailers
+        function processRetailers() {
+            debugLog('Processing ' + allRetailers.length + ' retailers...');
+            
+            // Sort alphabetically
+            allRetailers.sort((a, b) => a.name.localeCompare(b.name));
+            
+            // Update stats
+            document.getElementById('total-retailers').textContent = allRetailers.length;
+            
+            // Add markers to map
+            let mappedCount = 0;
+            allRetailers.forEach(retailer => {
+                const lat = parseFloat(retailer.lat);
+                const lng = parseFloat(retailer.lng);
+                
+                // Skip placeholder coordinates (50, -100)
+                if (lat === 50 && lng === -100) {
+                    return;
+                }
+                
+                // Debug Bazlik specifically
+                if (retailer.name.includes('Bazlik')) {
+                    debugLog('*** BAZLIK FOUND ***');
+                    debugLog('Name: ' + retailer.name);
+                    debugLog('Coordinates: ' + lat + ', ' + lng);
+                    debugLog('Address: ' + retailer.city + ', ' + retailer.state);
+                }
+                
+                mappedCount++;
+                
+                const marker = L.marker([lat, lng]);
+                const popupContent = `
+                    <div>
+                        <h4>${retailer.name}</h4>
+                        <p>${retailer.street}<br>
+                        ${retailer.city}, ${retailer.state} ${retailer.postal_code}</p>
+                        ${retailer.phone ? '<p>📞 ' + retailer.phone + '</p>' : ''}
+                    </div>
+                `;
+                
+                marker.bindPopup(popupContent);
+                markersGroup.addLayer(marker);
+            });
+            
+            document.getElementById('mapped-retailers').textContent = mappedCount;
+            debugLog('Added ' + mappedCount + ' markers to map');
+            
+            // Fit map to show all markers
+            if (mappedCount > 0) {
+                map.fitBounds(markersGroup.getBounds(), {padding: [20, 20]});
+            }
+            
+            // Display retailer list
+            displayRetailerList();
+            
+            debugLog('Processing complete!');
+        }
+        
+        // Display retailer list
+        function displayRetailerList() {
+            const listContainer = document.getElementById('retailer-list');
+            let html = '';
+            
+            allRetailers.forEach(retailer => {
+                html += `
+                    <div class="retailer-item">
+                        <div class="retailer-name">${retailer.name}</div>
+                        <div class="retailer-address">
+                            ${retailer.street}, ${retailer.city}, ${retailer.state} ${retailer.postal_code}
+                            ${retailer.phone ? '<br>📞 ' + retailer.phone : ''}
+                        </div>
+                    </div>
+                `;
+            });
+            
+            listContainer.innerHTML = html;
+        }
+        
+        // Search functionality
+        document.getElementById('search').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const items = document.querySelectorAll('.retailer-item');
+            
+            items.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(searchTerm) ? 'block' : 'none';
+            });
+        });
+        
+        // Initialize everything
+        debugLog('Initializing components...');
+        initMap();
+        loadRetailers();
+        
+    </script>
+</body>
+</html>

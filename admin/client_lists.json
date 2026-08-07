@@ -1,0 +1,42 @@
+{
+  "all_clients": {
+    "name": "All Clients",
+    "description": "Complete client database",
+    "count": 0,
+    "last_updated": "2025-10-25",
+    "source": "database",
+    "filters": []
+  },
+  "newsletter_subscribers": {
+    "name": "Newsletter Subscribers",
+    "description": "Clients who opted in for newsletters",
+    "count": 0,
+    "last_updated": "2025-10-25",
+    "source": "newsletter_signups",
+    "filters": ["newsletter_consent = 1"]
+  },
+  "recent_customers": {
+    "name": "Recent Customers",
+    "description": "Customers from the last 6 months",
+    "count": 0,
+    "last_updated": "2025-10-25",
+    "source": "orders",
+    "filters": ["order_date >= DATE_SUB(NOW(), INTERVAL 6 MONTH)"]
+  },
+  "vip_customers": {
+    "name": "VIP Customers", 
+    "description": "High-value customers",
+    "count": 0,
+    "last_updated": "2025-10-25",
+    "source": "database",
+    "filters": ["customer_tier = 'VIP'"]
+  },
+  "test_group": {
+    "name": "Test Group",
+    "description": "Small test group for email testing",
+    "count": 3,
+    "last_updated": "2025-10-25",
+    "source": "manual",
+    "filters": []
+  }
+}

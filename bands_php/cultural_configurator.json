@@ -1,0 +1,366 @@
+{
+  "version": "2.0",
+  "last_updated": "2025-11-04",
+  "collection": "cultural",
+  "data": {
+    "name": "Cultural Heritage Bands",
+    "base_price": 575.0,
+    "currency": "CAD",
+    "options": {
+      "karat_level": {
+        "label": "Karat / Purity",
+        "required": true,
+        "type": "single_select",
+        "default": "950_silver",
+        "help_text": "Higher karat = more pure metal, softer & more expensive",
+        "options": [
+          {
+            "id": "950_silver",
+            "name": ".950 Silver",
+            "description": "95% pure silver",
+            "price_modifier": 0
+          },
+          {
+            "id": "10k",
+            "name": "10K Gold",
+            "description": "41.7% pure gold",
+            "price_modifier": 225
+          },
+          {
+            "id": "14k",
+            "name": "14K Gold",
+            "description": "58.5% pure gold",
+            "price_modifier": 450
+          },
+          {
+            "id": "18k",
+            "name": "18K Gold",
+            "description": "75% pure gold",
+            "price_modifier": 875
+          }
+        ]
+      },
+      "pattern_metal": {
+        "label": "Pattern Metal",
+        "required": true,
+        "type": "single_select",
+        "default": "yellow",
+        "help_text": "Metal color for the cultural pattern detail",
+        "visible_when": {
+          "karat_level": [
+            "10k",
+            "14k",
+            "18k"
+          ]
+        },
+        "options": [
+          {
+            "id": "yellow",
+            "name": "Yellow Gold",
+            "description": "Classic gold pattern",
+            "price_modifier": 0
+          },
+          {
+            "id": "white",
+            "name": "White Gold",
+            "description": "Bright platinum-look pattern",
+            "price_modifier": 25
+          },
+          {
+            "id": "rose",
+            "name": "Rose Gold",
+            "description": "Warm pink-gold pattern",
+            "price_modifier": 15
+          }
+        ]
+      },
+      "band_metal": {
+        "label": "Band Metal",
+        "required": true,
+        "type": "single_select",
+        "default": "yellow",
+        "help_text": "Metal color for the band body (two-tone adds $150 if different from pattern)",
+        "visible_when": {
+          "karat_level": [
+            "10k",
+            "14k",
+            "18k"
+          ]
+        },
+        "two_tone_price": 150,
+        "options": [
+          {
+            "id": "yellow",
+            "name": "Yellow Gold",
+            "description": "Classic gold band",
+            "price_modifier": 0
+          },
+          {
+            "id": "white",
+            "name": "White Gold",
+            "description": "Bright platinum-look band",
+            "price_modifier": 0
+          },
+          {
+            "id": "rose",
+            "name": "Rose Gold",
+            "description": "Warm pink-gold band",
+            "price_modifier": 0
+          }
+        ]
+      },
+      "width": {
+        "label": "Cultural Pattern & Width",
+        "required": true,
+        "type": "celtic_grid",
+        "help_text": "Select cultural heritage pattern and width",
+        "xml_source": "cultural_bands_mapping.xml",
+        "grid_layout": {
+          "use_xml_data": true,
+          "columns": ["7.5mm", "6.5mm", "5.5mm"],
+          "price_modifiers": {
+            "7.5mm": 75,
+            "6.5mm": 50,
+            "5.5mm": 0
+          }
+        }
+      },
+      "finish": {
+        "label": "Surface Finish",
+        "required": true,
+        "type": "single_select",
+        "default": "polished",
+        "options": [
+          {
+            "id": "polished",
+            "name": "High Polish",
+            "description": "Mirror-like shine",
+            "price_modifier": 0,
+            "image": "finish_polished.jpg"
+          },
+          {
+            "id": "brushed",
+            "name": "Brushed/Matte",
+            "description": "Subtle texture, no glare",
+            "price_modifier": 40,
+            "image": "finish_brushed.jpg"
+          },
+          {
+            "id": "satin",
+            "name": "Satin",
+            "description": "Soft lustrous finish",
+            "price_modifier": 35,
+            "image": "finish_satin.jpg"
+          }
+        ]
+      },
+      "antiquing": {
+        "label": "Antiquing / Oxidation",
+        "required": false,
+        "type": "single_select",
+        "default": "none",
+        "help_text": "Add darkened accents to highlight the cultural pattern details",
+        "options": [
+          {
+            "id": "none",
+            "name": "No Antiquing",
+            "description": "Standard finish as selected above",
+            "price_modifier": 0
+          },
+          {
+            "id": "antiqued",
+            "name": "Antiqued/Oxidized",
+            "description": "Darkened background enhances pattern depth and detail",
+            "price_modifier": 50,
+            "image": "finish_antiqued.jpg"
+          }
+        ]
+      },
+      "size": {
+        "label": "Ring Size",
+        "required": true,
+        "type": "single_select",
+                "default": "10",
+        "help_text": "Full size range 2-16 (Ladies default: 6.5, Men's default: 10). Not sure? Request a free ring sizer.",
+        "options": [
+          {
+            "id": "2",
+            "name": "2",
+            "price_modifier": 0
+          },
+          {
+            "id": "2.5",
+            "name": "2.5",
+            "price_modifier": 0
+          },
+          {
+            "id": "3",
+            "name": "3",
+            "price_modifier": 0
+          },
+          {
+            "id": "3.5",
+            "name": "3.5",
+            "price_modifier": 0
+          },
+          {
+            "id": "4",
+            "name": "4",
+            "price_modifier": 0
+          },
+          {
+            "id": "4.5",
+            "name": "4.5",
+            "price_modifier": 0
+          },
+          {
+            "id": "5",
+            "name": "5",
+            "price_modifier": 0
+          },
+          {
+            "id": "5.5",
+            "name": "5.5",
+            "price_modifier": 0
+          },
+          {
+            "id": "6",
+            "name": "6",
+            "price_modifier": 0
+          },
+          {
+            "id": "6.5",
+            "name": "6.5",
+            "price_modifier": 0
+          },
+          {
+            "id": "7",
+            "name": "7",
+            "price_modifier": 0
+          },
+          {
+            "id": "7.5",
+            "name": "7.5",
+            "price_modifier": 0
+          },
+          {
+            "id": "8",
+            "name": "8",
+            "price_modifier": 0
+          },
+          {
+            "id": "8.5",
+            "name": "8.5",
+            "price_modifier": 0
+          },
+          {
+            "id": "9",
+            "name": "9",
+            "price_modifier": 0
+          },
+          {
+            "id": "9.5",
+            "name": "9.5",
+            "price_modifier": 0
+          },
+          {
+            "id": "10",
+            "name": "10",
+            "price_modifier": 0
+          },
+          {
+            "id": "10.5",
+            "name": "10.5",
+            "price_modifier": 0
+          },
+          {
+            "id": "11",
+            "name": "11",
+            "price_modifier": 0
+          },
+          {
+            "id": "11.5",
+            "name": "11.5",
+            "price_modifier": 0
+          },
+          {
+            "id": "12",
+            "name": "12",
+            "price_modifier": 0
+          },
+          {
+            "id": "12.5",
+            "name": "12.5",
+            "price_modifier": 0
+          },
+          {
+            "id": "13",
+            "name": "13",
+            "price_modifier": 0
+          },
+          {
+            "id": "13.5",
+            "name": "13.5",
+            "price_modifier": 0
+          },
+          {
+            "id": "14",
+            "name": "14",
+            "price_modifier": 0
+          },
+          {
+            "id": "14.5",
+            "name": "14.5",
+            "price_modifier": 0
+          },
+          {
+            "id": "15",
+            "name": "15",
+            "price_modifier": 0
+          },
+          {
+            "id": "15.5",
+            "name": "15.5",
+            "price_modifier": 0
+          },
+          {
+            "id": "16",
+            "name": "16",
+            "price_modifier": 0
+          }
+        ]
+      }
+    },
+    "production_time": {
+      "standard": {
+        "label": "Standard Production",
+        "weeks": 5,
+        "price_modifier": 0
+      },
+      "rush": {
+        "label": "Rush Production (2 weeks)",
+        "weeks": 2,
+        "price_modifier": 225
+      }
+    },
+    "warranty": {
+      "included": "Lifetime warranty against manufacturing defects",
+      "details": "Includes one free resizing within first year and cultural authenticity guarantee"
+    }
+  },
+  "ui_config": {
+    "color_scheme": {
+      "primary": "#8b4513",
+      "secondary": "#cd853f",
+      "accent": "#daa520",
+      "success": "#228b22",
+      "background": "#f5f5dc",
+      "text": "#2f4f4f"
+    },
+    "animations": {
+      "option_select": "fadeIn 0.3s ease",
+      "price_update": "pulse 0.5s ease"
+    },
+    "mobile_breakpoint": "768px"
+  }
+}

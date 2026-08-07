@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Bands Test</title>
+<style>
+.item { border: 1px solid #ccc; margin: 10px; padding: 10px; display: block; }
+.hidden { display: none; }
+</style>
+</head>
+<body>
+<h1>Simple Bands Test</h1>
+
+<?php
+// Simple version of the bands logic
+function getBandsBaseName($filename) {
+    $name = pathinfo($filename, PATHINFO_FILENAME);
+    $name = preg_replace('/_alt\d*$/', '', $name);
+    $name = preg_replace('/-alt\d*$/', '', $name);
+    $name = preg_replace('/_(view\d*|art\d*)$/', '', $name);
+    $name = preg_replace('/-(view\d*|art\d*)$/', '', $name);
+    return $name;
+}
+
+function groupBandsImagesByBaseName($directory) {
+    $images = [];
+    if (is_dir($directory)) {
+        $files = scandir($directory);
+        $grouped = [];
+        
+        foreach ($files as $file) {
+            $extension = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+            if (in_array($extension, ['png', 'jpg', 'jpeg', 'gif', 'webp'])) {
+                $baseName = getBandsBaseName($file);
+                
+                if (!isset($grouped[$baseName])) {
+                    $grouped[$baseName] = [];
+                }
+                $grouped[$baseName][] = $file;
+            }
+        }
+        
+        foreach ($grouped as $baseName => &$variants) {
+            usort($variants, function($a, $b) {
+                $aIsMain = !preg_match('/_alt\d*|_view\d*|_art\d*|-alt\d*|-view\d*|-art\d*/', $a);
+                $bIsMain = !preg_match('/_alt\d*|_view\d*|_art\d*|-alt\d*|-view\d*|-art\d*/', $b);
+                
+                if ($aIsMain && !$bIsMain) return -1;
+                if (!$aIsMain && $bIsMain) return 1;
+                return strcmp($a, $b);
+            });
+            
+            $images[] = [
+                'baseName' => $baseName,
+                'mainImage' => $variants[0],
+                'variants' => $variants,
+                'variantCount' => count($variants)
+            ];
+        }
+    }
+    return $images;
+}
+
+$categories = [
+    'celtic' => [
+        'path' => 'bands_php/images/celtic',
+        'display_name' => 'Celtic Bands'
+    ],
+    'cultural' => [
+        'path' => 'bands_php/images/cultural', 
+        'display_name' => 'Cultural Bands'
+    ],
+    'fancy' => [
+        'path' => 'bands_php/images/fancy',
+        'display_name' => 'Fancy Bands'
+    ],
+    'plain' => [
+        'path' => 'bands_php/images/plain',
+        'display_name' => 'Plain Bands'
+    ]
+];
+
+$allItems = [];
+foreach ($categories as $categoryKey => $category) {
+    $categoryImages = groupBandsImagesByBaseName($category['path']);
+    foreach ($categoryImages as $item) {
+        $allItems[] = [
+            'category' => $categoryKey,
+            'categoryPath' => $category['path'],
+            'baseName' => $item['baseName'],
+            'mainImage' => $item['mainImage'],
+            'variantCount' => $item['variantCount']
+        ];
+    }
+}
+
+echo "<p>Total items found: " . count($allItems) . "</p>";
+
+// Show first 10 items
+for ($i = 0; $i < min(10, count($allItems)); $i++) {
+    $item = $allItems[$i];
+    echo "<div class='item'>";
+    echo "<strong>" . $item['baseName'] . "</strong><br>";
+    echo "Category: " . $item['category'] . "<br>";
+    echo "Main Image: " . $item['mainImage'] . "<br>";
+    echo "Variants: " . $item['variantCount'] . "<br>";
+    echo "Path: " . $item['categoryPath'] . "/" . $item['mainImage'] . "<br>";
+    echo "</div>";
+}
+?>
+
+</body>
+</html>

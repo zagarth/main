@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Retailer - Cadman Manufacturing</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        .retailer-header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .location-search-app {
+            margin: 40px 0;
+        }
+        
+        .location-search-form {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .search-input-group {
+            display: flex;
+            gap: 15px;
+            align-items: end;
+            flex-wrap: wrap;
+        }
+        
+        .search-field {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .search-button {
+            background: #1e3a8a;
+            border: none;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .search-button:hover {
+            background: #1e40af;
+        }
+        
+        .location-search-results {
+            min-height: 300px;
+        }
+        
+        .location-search-results.loading {
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBzdHJva2U9IiM1NTUiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiLz48cmVjdCB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDggOCkiLz48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSI2Ii8+PC9nPjwvc3ZnPg==') no-repeat center;
+            background-size: 40px 40px;
+        }
+        
+        .location-search-result {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+        }
+        
+        .location-search-result:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .location-detail-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #1e3a8a;
+            margin-bottom: 8px;
+        }
+        
+        .location-detail-address {
+            color: #666;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        
+        .location-detail-phone {
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .location-detail-website {
+            margin-bottom: 10px;
+        }
+        
+        .location-detail-website a {
+            color: #1e3a8a;
+            text-decoration: none;
+        }
+        
+        .location-detail-website a:hover {
+            text-decoration: underline;
+        }
+        
+        .location-detail-specialties {
+            margin-top: 10px;
+        }
+        
+        .specialty-tag {
+            display: inline-block;
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            margin-right: 5px;
+            margin-bottom: 3px;
+        }
+        
+        .stats-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            display: inline-block;
+            margin: 0 20px;
+        }
+        
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #1e3a8a;
+            display: block;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        #location-search-results-map {
+            height: 600px;
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            margin-bottom: 30px;
+        }
+        
+        .map-popup h6 {
+            color: #1e3a8a;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .search-controls {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .search-controls input {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 8px 12px;
+        }
+        
+        .debug-panel {
+            background: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 12px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation will be added by script -->
+    
+    <header class="retailer-header">
+        <div class="container">
+            <h1 class="display-4">Find a Retailer</h1>
+            <p class="lead">Locate authorized Cadman Manufacturing retailers near you</p>
+        </div>
+    </header>
+
+    <main class="container location-search-app">
+        <div class="location-search-form">
+            <h2 class="h4 mb-3">Browse All Retailers</h2>
+            <div class="search-input-group">
+                <div class="search-field">
+                    <label for="location-search-query" class="form-label">Search by name, location, or specialty</label>
+                    <input type="text" id="location-search-query" class="form-control" placeholder="Enter retailer name, city, or specialty...">
+                </div>
+                <button type="button" class="search-button" onclick="performSearch()">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </div>
+        </div>
+
+        <div class="stats-section">
+            <div class="stat-item">
+                <span class="stat-number" id="total-retailers">Loading...</span>
+                <span class="stat-label">Total Retailers</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="provinces-count">Loading...</span>
+                <span class="stat-label">Provinces/States</span>
+            </div>
+        </div>
+
+        <div id="debug-panel" class="debug-panel">
+            <strong>Debug Log:</strong><br>
+            <div id="debug-output">Starting initialization...</div>
+        </div>
+
+        <div id="location-search-results-map"></div>
+        
+        <div class="location-search-results loading">
+            Loading retailer information...
+        </div>
+    </main>
+
+    <!-- Footer will be added by script -->
+
+    <!-- jQuery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <script>
+        function debugLog(message) {
+            console.log(message);
+            const output = document.getElementById('debug-output');
+            output.innerHTML += '<br>' + new Date().toLocaleTimeString() + ': ' + message;
+            output.scrollTop = output.scrollHeight;
+        }
+        
+        debugLog('Page loaded, checking libraries...');
+        debugLog('jQuery available: ' + (typeof jQuery !== 'undefined'));
+        debugLog('Leaflet available: ' + (typeof L !== 'undefined'));
+        
+        // Load the JSON data
+        jQuery(document).ready(function($) {
+            debugLog('jQuery ready, loading retailer data...');
+            
+            // Load JSON data directly (generated from PHP)
+            $.getJSON('retailers.json')
+                .done(function(retailers) {
+                    debugLog('Loaded ' + retailers.length + ' retailers from JSON');
+                    processRetailers(retailers);
+                })
+                .fail(function() {
+                    debugLog('Failed to load retailers.json, trying to generate it...');
+                    
+                    // Fallback: generate JSON from XML via PHP
+                    $.ajax({
+                        url: 'xml_to_json.php',
+                        type: 'GET',
+                        dataType: 'json',
+                        timeout: 10000
+                    })
+                    .done(function(retailers) {
+                        debugLog('Generated JSON from XML: ' + retailers.length + ' retailers');
+                        processRetailers(retailers);
+                    })
+                    .fail(function(xhr, status, error) {
+                        debugLog('ERROR: Failed to load retailer data - ' + error);
+                        $('.location-search-results').removeClass('loading').html(
+                            '<div class="alert alert-danger">Error loading retailer data. Please try again later.<br>Error: ' + error + '</div>'
+                        );
+                    });
+                });
+        });
+        
+        function processRetailers(retailers) {
+            debugLog('Processing ' + retailers.length + ' retailers...');
+            
+            // Sort retailers alphabetically by name
+            retailers.sort(function(a, b) {
+                return a.name.localeCompare(b.name);
+            });
+            
+            // Generate HTML for ALL retailers
+            var resultsHtml = '';
+            retailers.forEach(function(retailer) {
+                // Generate specialties HTML
+                var specialtiesHtml = '';
+                if (retailer.specialties && retailer.specialties.length > 0) {
+                    specialtiesHtml = '<div class="location-detail-specialties">';
+                    retailer.specialties.forEach(function(specialty) {
+                        specialtiesHtml += '<span class="specialty-tag">' + specialty + '</span>';
+                    });
+                    specialtiesHtml += '</div>';
+                }
+
+                var address = retailer.street;
+                if (retailer.city) address += '<br>' + retailer.city;
+                if (retailer.state) address += ', ' + retailer.state;
+                if (retailer.postal_code) address += ' ' + retailer.postal_code;
+                if (retailer.country) address += '<br>' + retailer.country;
+
+                resultsHtml += '<div class="location-search-result retailer-item" id="location-search-result-' + retailer.ID + '">' +
+                    '<div class="location-detail-name">' + retailer.name + '</div>' +
+                    '<div class="location-detail-address">' + address + '</div>';
+                
+                if (retailer.phone) {
+                    resultsHtml += '<div class="location-detail-phone"><i class="fas fa-phone"></i> ' + retailer.phone + '</div>';
+                }
+                
+                if (retailer.website) {
+                    resultsHtml += '<div class="location-detail-website"><i class="fas fa-globe"></i> <a href="' + retailer.website + '" target="_blank">Visit Website</a></div>';
+                }
+                
+                resultsHtml += specialtiesHtml + '</div>';
+            });
+
+            // Show ALL retailers
+            $('.location-search-results').removeClass('loading').html(resultsHtml);
+            
+            // Add search box before results
+            $('.location-search-results').before(
+                '<div class="search-controls mb-3">' +
+                '<input type="text" id="retailer-search" placeholder="Search retailers by name..." class="form-control">' +
+                '<small class="text-muted">Showing all ' + retailers.length + ' retailers (alphabetically sorted)</small>' +
+                '</div>'
+            );
+
+            // Search functionality
+            $('#retailer-search').on('input', function() {
+                var searchTerm = $(this).val().toLowerCase();
+                var visibleCount = 0;
+                $('.retailer-item').each(function() {
+                    var retailerName = $(this).find('.location-detail-name').text().toLowerCase();
+                    if (retailerName.includes(searchTerm)) {
+                        $(this).show();
+                        visibleCount++;
+                    } else {
+                        $(this).hide();
+                    }
+                });
+                $('.search-controls small').text('Showing ' + visibleCount + ' of ' + retailers.length + ' retailers');
+            });
+            
+            // Update stats
+            $('#total-retailers').text(retailers.length);
+            
+            // Count unique provinces/states
+            var provinces = new Set();
+            retailers.forEach(function(retailer) {
+                if (retailer.state) provinces.add(retailer.state);
+            });
+            $('#provinces-count').text(provinces.size);
+            
+            debugLog('About to initialize map with ' + retailers.length + ' retailers');
+            
+            // Initialize map with all retailers
+            initializeMap(retailers);
+        }
+        
+        // Initialize Leaflet map
+        function initializeMap(retailers) {
+            debugLog('=== MAP INITIALIZATION DEBUG ===');
+            debugLog('Total retailers received: ' + retailers.length);
+            
+            // Check if Leaflet is loaded
+            if (typeof L === 'undefined') {
+                debugLog('ERROR: Leaflet library not loaded!');
+                return;
+            }
+            debugLog('Leaflet library is loaded');
+            
+            // Check if map container exists
+            var mapContainer = document.getElementById('location-search-results-map');
+            if (!mapContainer) {
+                debugLog('ERROR: Map container #location-search-results-map not found!');
+                return;
+            }
+            debugLog('Map container found');
+            
+            try {
+                debugLog('Creating map...');
+                var map = L.map('location-search-results-map').setView([56.1304, -106.3468], 4);
+                
+                debugLog('Adding tile layer...');
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© OpenStreetMap contributors'
+                }).addTo(map);
+                
+                debugLog('Processing retailers for markers...');
+                var markers = L.featureGroup();
+                var markerCount = 0;
+                var validRetailers = [];
+                
+                retailers.forEach(function(retailer, index) {
+                    var lat = parseFloat(retailer.lat);
+                    var lng = parseFloat(retailer.lng);
+                    
+                    // Debug specific retailers
+                    if (retailer.name.indexOf('Bazlik') !== -1) {
+                        debugLog('*** BAZLIK DEBUG ***');
+                        debugLog('Name: ' + retailer.name);
+                        debugLog('Raw lat: ' + retailer.lat + ', Raw lng: ' + retailer.lng);
+                        debugLog('Parsed lat: ' + lat + ', Parsed lng: ' + lng);
+                        debugLog('Is placeholder? ' + (lat === 50 && lng === -100));
+                    }
+                    
+                    // Skip placeholder coordinates
+                    if (lat === 50 && lng === -100) {
+                        return;
+                    }
+                    
+                    debugLog('Adding marker for: ' + retailer.name + ' at ' + lat + ', ' + lng);
+                    validRetailers.push(retailer);
+                    markerCount++;
+                    
+                    var marker = L.marker([lat, lng]);
+                    
+                    var popupContent = '<div class="map-popup">' +
+                        '<h6>' + retailer.name + '</h6>' +
+                        '<p>' + retailer.street + '<br>' +
+                        retailer.city + ', ' + retailer.state + ' ' + retailer.postal_code + '</p>';
+                    
+                    if (retailer.phone) {
+                        popupContent += '<p><i class="fas fa-phone"></i> ' + retailer.phone + '</p>';
+                    }
+                    
+                    popupContent += '</div>';
+                    
+                    marker.bindPopup(popupContent);
+                    markers.addLayer(marker);
+                });
+                
+                debugLog('Adding ' + markerCount + ' markers to map');
+                markers.addTo(map);
+                
+                if (markerCount > 0) {
+                    debugLog('Setting map bounds...');
+                    map.fitBounds(markers.getBounds(), {padding: [20, 20]});
+                } else {
+                    debugLog('WARNING: No valid retailers found for map display');
+                }
+                
+                debugLog('=== MAP INITIALIZATION COMPLETE ===');
+                debugLog('Valid retailers on map: ' + validRetailers.map(r => r.name).join(', '));
+                
+            } catch (error) {
+                debugLog('ERROR during map initialization: ' + error.message);
+                debugLog('Error stack: ' + error.stack);
+            }
+        }
+        
+        function performSearch() {
+            var query = document.getElementById('location-search-query').value;
+            if (query.trim()) {
+                document.getElementById('retailer-search').value = query;
+                document.getElementById('retailer-search').dispatchEvent(new Event('input'));
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>F120M Pricing Consistency Test</title>
+    <style>
+        body { font-family: monospace; padding: 20px; background: #f5f5f5; }
+        .container { background: white; padding: 30px; border-radius: 8px; max-width: 1000px; margin: 0 auto; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #333; margin-bottom: 20px; }
+        h2 { color: #666; margin-top: 30px; margin-bottom: 15px; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #e0e0e0; }
+        th { background: #f9f9f9; font-weight: bold; }
+        .pass { color: #28a745; font-weight: bold; }
+        .fail { color: #dc3545; font-weight: bold; }
+        .value { font-weight: bold; color: #007bff; }
+        .section { background: #f9f9f9; padding: 15px; border-radius: 6px; margin: 15px 0; }
+        .label { font-weight: bold; color: #666; }
+    </style>
+</head>
+<body>
+<div class='container'>
+<h1>F120M Pricing Consistency Test</h1>
+<div class='section'>
+<h2>System Settings</h2>
+<table>
+<tr><th>Setting</th><th>Value</th></tr>
+<tr><td>Gold Price</td><td class='value'>$7400/oz</td></tr>
+<tr><td>Labor Rate</td><td class='value'>$28/hr</td></tr>
+<tr><td>Sterling GF</td><td class='value'>130</td></tr>
+<tr><td>Base Margin</td><td class='value'>20%</td></tr>
+</table>
+</div>
+<h2>F120M Variant Pricing Tests</h2>
+<div class='section'>
+<h3>10K</h3>
+<table>
+<tr><th colspan='2'>Input Parameters</th></tr>
+<tr><td>Gold Grams</td><td class='value'>9.6g</td></tr>
+<tr><td>Sterling Grams</td><td class='value'>0g</td></tr>
+<tr><td>Labor Hours</td><td class='value'>0.536 hrs</td></tr>
+<tr><td>Material Cost</td><td class='value'>$0</td></tr>
+<tr><td>Stone Cost</td><td class='value'>$2.8</td></tr>
+<tr><td>Star Cost</td><td class='value'>$0</td></tr>
+<tr><td>Stone Setting Cost</td><td class='value'>$29.4</td></tr>
+<tr><td>Markup</td><td class='value'>55%</td></tr>
+</table>
+<table>
+<tr><th colspan='2'>Calculated Breakdown</th></tr>
+<tr><td>Gold Cost</td><td class='value'>$2,283.99</td></tr>
+<tr><td>Sterling Cost</td><td class='value'>$0.00</td></tr>
+<tr><td>Labor Cost</td><td class='value'>$15.01</td></tr>
+<tr><td><strong>Total Cost</strong></td><td class='value'><strong>$2,331.20</strong></td></tr>
+<tr><td>Selling Price (before rounding)</td><td class='value'>$4,336.02</td></tr>
+<tr><td><strong>Final Price (quarter-rounded)</strong></td><td class='value'><strong>$4,336.25</strong></td></tr>
+</table>
+<table>
+<tr><th>Metric</th><th>Stored (DB)</th><th>Calculated (New)</th><th>Difference</th><th>Status</th></tr>
+<tr>
+  <td>Cost</td>
+  <td>$915.80</td>
+  <td>$2,331.20</td>
+  <td>$1,415.40</td>
+  <td class='fail'>DIFFER</td>
+</tr>
+<tr>
+  <td>Price</td>
+  <td>$1,533.25</td>
+  <td>$4,336.25</td>
+  <td>$2,803.00</td>
+  <td class='fail'>DIFFER</td>
+</tr>
+</table>
+<p style='color: #856404; background: #fff3cd; padding: 10px; border-radius: 4px; margin-top: 10px;'>
+<strong>Note:</strong> Differences are expected because:
+<ul style='margin: 10px 0 0 20px;'>
+<li>Stored prices may be from old gold price settings</li>
+<li>The gold formula was corrected from the wrong calculation</li>
+<li>Base margin was updated from 8% to 20%</li>
+<li>Quarter-rounding logic may have been refined</li>
+</ul>
+</p>
+</div>
+<div class='section'>
+<h3>14K</h3>
+<table>
+<tr><th colspan='2'>Input Parameters</th></tr>
+<tr><td>Gold Grams</td><td class='value'>10.9g</td></tr>
+<tr><td>Sterling Grams</td><td class='value'>0g</td></tr>
+<tr><td>Labor Hours</td><td class='value'>0.536 hrs</td></tr>
+<tr><td>Material Cost</td><td class='value'>$0</td></tr>
+<tr><td>Stone Cost</td><td class='value'>$2.8</td></tr>
+<tr><td>Star Cost</td><td class='value'>$0</td></tr>
+<tr><td>Stone Setting Cost</td><td class='value'>$29.4</td></tr>
+<tr><td>Markup</td><td class='value'>55%</td></tr>
+</table>
+<table>
+<tr><th colspan='2'>Calculated Breakdown</th></tr>
+<tr><td>Gold Cost</td><td class='value'>$3,630.59</td></tr>
+<tr><td>Sterling Cost</td><td class='value'>$0.00</td></tr>
+<tr><td>Labor Cost</td><td class='value'>$15.01</td></tr>
+<tr><td><strong>Total Cost</strong></td><td class='value'><strong>$3,677.80</strong></td></tr>
+<tr><td>Selling Price (before rounding)</td><td class='value'>$6,840.70</td></tr>
+<tr><td><strong>Final Price (quarter-rounded)</strong></td><td class='value'><strong>$6,840.75</strong></td></tr>
+</table>
+<table>
+<tr><th>Metric</th><th>Stored (DB)</th><th>Calculated (New)</th><th>Difference</th><th>Status</th></tr>
+<tr>
+  <td>Cost</td>
+  <td>$1,427.92</td>
+  <td>$3,677.80</td>
+  <td>$2,249.88</td>
+  <td class='fail'>DIFFER</td>
+</tr>
+<tr>
+  <td>Price</td>
+  <td>$2,390.50</td>
+  <td>$6,840.75</td>
+  <td>$4,450.25</td>
+  <td class='fail'>DIFFER</td>
+</tr>
+</table>
+<p style='color: #856404; background: #fff3cd; padding: 10px; border-radius: 4px; margin-top: 10px;'>
+<strong>Note:</strong> Differences are expected because:
+<ul style='margin: 10px 0 0 20px;'>
+<li>Stored prices may be from old gold price settings</li>
+<li>The gold formula was corrected from the wrong calculation</li>
+<li>Base margin was updated from 8% to 20%</li>
+<li>Quarter-rounding logic may have been refined</li>
+</ul>
+</p>
+</div>
+<div class='section'>
+<h3>STER</h3>
+<table>
+<tr><th colspan='2'>Input Parameters</th></tr>
+<tr><td>Gold Grams</td><td class='value'>0g</td></tr>
+<tr><td>Sterling Grams</td><td class='value'>8.256g</td></tr>
+<tr><td>Labor Hours</td><td class='value'>0.536 hrs</td></tr>
+<tr><td>Material Cost</td><td class='value'>$0</td></tr>
+<tr><td>Stone Cost</td><td class='value'>$2.8</td></tr>
+<tr><td>Star Cost</td><td class='value'>$0</td></tr>
+<tr><td>Stone Setting Cost</td><td class='value'>$29.4</td></tr>
+<tr><td>Markup</td><td class='value'>55%</td></tr>
+</table>
+<table>
+<tr><th colspan='2'>Calculated Breakdown</th></tr>
+<tr><td>Gold Cost</td><td class='value'>$0.00</td></tr>
+<tr><td>Sterling Cost</td><td class='value'>$34.51</td></tr>
+<tr><td>Labor Cost</td><td class='value'>$15.01</td></tr>
+<tr><td><strong>Total Cost</strong></td><td class='value'><strong>$81.71</strong></td></tr>
+<tr><td>Selling Price (before rounding)</td><td class='value'>$151.99</td></tr>
+<tr><td><strong>Final Price (quarter-rounded)</strong></td><td class='value'><strong>$152.00</strong></td></tr>
+</table>
+<table>
+<tr><th>Metric</th><th>Stored (DB)</th><th>Calculated (New)</th><th>Difference</th><th>Status</th></tr>
+<tr>
+  <td>Cost</td>
+  <td>$101.70</td>
+  <td>$81.71</td>
+  <td>$-19.99</td>
+  <td class='fail'>DIFFER</td>
+</tr>
+<tr>
+  <td>Price</td>
+  <td>$170.25</td>
+  <td>$152.00</td>
+  <td>$-18.25</td>
+  <td class='fail'>DIFFER</td>
+</tr>
+</table>
+<p style='color: #856404; background: #fff3cd; padding: 10px; border-radius: 4px; margin-top: 10px;'>
+<strong>Note:</strong> Differences are expected because:
+<ul style='margin: 10px 0 0 20px;'>
+<li>Stored prices may be from old gold price settings</li>
+<li>The gold formula was corrected from the wrong calculation</li>
+<li>Base margin was updated from 8% to 20%</li>
+<li>Quarter-rounding logic may have been refined</li>
+</ul>
+</p>
+</div>
+<h2>Expected F120M/10K Calculation (Verification)</h2>
+<div class='section'>
+<p class='label'>Based on specifications:</p>
+<ul>
+<li>Gold: 9.6g × ($7400 / 31.1035) = $2,284.78</li>
+<li>Labor: 0.536 hrs × $28/hr = $15.00</li>
+<li>Stones: $2.80</li>
+<li>Total Cost: $2,302.58</li>
+<li>Selling Price: $2,302.58 × 1.55 × 1.20 = $4,282.79</li>
+<li>Quarter-Rounded: $4,282.75</li>
+</ul>
+<p class='label'>Actual Calculation:</p>
+<table>
+<tr><td>Gold Cost</td><td class='value'>$2,283.99</td></tr>
+<tr><td>Labor Cost</td><td class='value'>$15.01</td></tr>
+<tr><td>Stone Cost</td><td class='value'>$2.80</td></tr>
+<tr><td><strong>Total Cost</strong></td><td class='value'><strong>$2,301.80</strong></td></tr>
+<tr><td>Selling Price (before rounding)</td><td class='value'>$4,281.34</td></tr>
+<tr><td><strong>Final Price (quarter-rounded)</strong></td><td class='value'><strong>$4,281.50</strong></td></tr>
+</table>
+<p class='fail' style='font-size: 18px; margin-top: 20px;'>
+Formula Verification: ✗ FAILED
+</p>
+</div>
+</div>
+</body>
+</html>

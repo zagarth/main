@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Configurator Test - Plain Bands</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-container { border: 1px solid #ccc; padding: 20px; margin: 20px 0; }
+        .log { background: #f0f0f0; padding: 10px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>Plain Bands Configurator Test</h1>
+    
+    <div class="test-container">
+        <h2>Test Case: Plain Band Product</h2>
+        <p>This should load the plain_configurator.json and show "200R 2mm" format</p>
+        
+        <div id="product-configurator" 
+             data-collection="bands"
+             data-product-id="200RM"
+             data-category="plain"
+             data-base-price="450"
+             data-product-name="200RM Plain Band"
+             data-base-product-id="200R">
+            <div class="configurator-loading">Loading configurator...</div>
+        </div>
+    </div>
+    
+    <div class="log">
+        <h3>Console Log:</h3>
+        <div id="console-log"></div>
+    </div>
+    
+    <script src="js/configurator.js"></script>
+    <script>
+        // Capture console.log for display
+        const originalLog = console.log;
+        const logDiv = document.getElementById('console-log');
+        
+        console.log = function(...args) {
+            originalLog(...args);
+            const logEntry = document.createElement('div');
+            logEntry.textContent = args.join(' ');
+            logDiv.appendChild(logEntry);
+        };
+        
+        // Initialize configurator
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('=== Starting Plain Bands Configurator Test ===');
+            
+            const configuratorElement = document.getElementById('product-configurator');
+            if (configuratorElement) {
+                console.log('Configurator element found');
+                console.log('Data attributes:', {
+                    collection: configuratorElement.dataset.collection,
+                    category: configuratorElement.dataset.category,
+                    productId: configuratorElement.dataset.productId
+                });
+                
+                const configurator = new ProductConfigurator(configuratorElement);
+                configurator.init().then(() => {
+                    console.log('Configurator initialized successfully');
+                }).catch(error => {
+                    console.error('Configurator initialization failed:', error);
+                });
+            } else {
+                console.error('Configurator element not found');
+            }
+        });
+    </script>
+</body>
+</html>

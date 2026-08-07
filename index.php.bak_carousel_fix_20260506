@@ -1,0 +1,2766 @@
+<?php
+// Session configuration for contact form
+ini_set('session.cookie_httponly', 1);
+ini_set('session.use_only_cookies', 1);
+ini_set('session.cookie_secure', 1);
+ini_set('session.cookie_samesite', 'Strict');
+session_start();
+
+// Leaflet map implementation - No API key required
+?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0066CC" />
+<meta name="description" content="Cadman Manufacturing crafts custom jewelry, wedding bands, and engagement rings in Canada. Live gold and silver prices in CAD, 3D jewelry viewer, and authorized retailer locator." />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Permissions-Policy" content="geolocation=*">
+<link rel="canonical" href="https://cadmanmfg.com/" />
+<link rel="icon" sizes="" href="/favicon.ico">
+<title>Cadman Manufacturing - Custom Corperate and Family Jewellery </title>
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://cadmanmfg.com/" />
+<meta property="og:title" content="Cadman Manufacturing - Custom Corperate and Family Jewellery" />
+<meta property="og:description" content="Cadman Manufacturing crafts custom jewelry, wedding bands, and engagement rings in Canada. Live gold and silver prices in CAD, 3D jewelry viewer, and authorized retailer locator." />
+<meta property="og:image" content="https://cadmanmfg.com/PNG/logo.png" />
+
+<!-- LocalBusiness JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "JewelryStore",
+  "name": "Cadman Manufacturing",
+  "url": "https://cadmanmfg.com/",
+  "logo": "https://cadmanmfg.com/PNG/logo.png",
+  "description": "Custom jewelry manufacturer specializing in wedding bands, engagement rings, and fine jewelry in Canada.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "17 Main Street of Courtland",
+    "addressLocality": "Courtland",
+    "addressRegion": "ON",
+    "postalCode": "N0J 1E0",
+    "addressCountry": "CA"
+  },
+  "telephone": "+1-519-688-2121",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+      "opens": "08:00",
+      "closes": "16:30"
+    }
+  ],
+  "sameAs": []
+}
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Leaflet CSS/JS loaded lazily when map scrolls into view -->
+<style>
+/* Mobile responsive positioning for preload indicator */
+@media (max-width: 768px) {
+    #preload-indicator {
+        bottom: 10px !important;
+        left: 10px !important;
+        right: 10px !important;
+        max-width: none !important;
+        padding: 8px 12px !important;
+        font-size: 11px !important;
+    }
+    
+    #preload-indicator div:first-child {
+        margin-bottom: 3px !important;
+    }
+    
+    #preload-indicator .progress-container {
+        width: 100% !important;
+        height: 3px !important;
+    }
+}
+
+/* Custom Map Marker Styles */
+.cadman-marker {
+    filter: drop-shadow(0 3px 6px rgba(0,0,0,0.3));
+    transition: all 0.3s ease;
+}
+
+.cadman-marker:hover {
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.4));
+    transform: scale(1.05);
+}
+
+.cadman-cluster-wrapper {
+    transition: all 0.3s ease;
+}
+
+.cadman-cluster-wrapper:hover {
+    transform: scale(1.05);
+}
+
+.cadman-cluster-icon {
+    transition: all 0.3s ease;
+}
+
+/* Map Popup Enhancements */
+.leaflet-popup-content-wrapper {
+    border-radius: 12px !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+}
+
+.leaflet-popup-tip {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
+}
+</style>
+<script type="text/javascript">
+window.addEventListener("load",eventWindowLoaded,false);
+
+// Enhanced Image preloading system for Cadman Manufacturing website (IMAGES ONLY)
+var preloadedImages = [];
+var imagePreloadQueue = [];
+var imagePreloadProgress = 0;
+var totalImagePreloadCount = 0;
+
+// Priority images to preload first (main gallery rotation)
+var priorityImages = [
+    "bands_php/images/celtic/5310L.png",
+    "bands_php/images/fancy/2291.png", 
+    "Engagement_php/images/MK_series/MK2207.png",
+    "accessories_php/images/Crosses_and_Lockets/21.png"
+];
+
+// Collection preview images to preload for faster navigation
+var collectionPreviewImages = [
+    // Bands collection samples
+    "bands_php/images/celtic/5310M.png",
+    "bands_php/images/fancy/1T026L.png",
+    "bands_php/images/plain/200RM.png",
+    
+    // Engagement collection samples (all series updated today)
+    "Engagement_php/images/MK_series/MK2207.png", // Already in priority
+    "Engagement_php/images/MM_series/MM13.png",
+    "Engagement_php/images/WM_series/WM13.png",
+    
+    // Accessories collection samples  
+    "accessories_php/images/Idents/1BE.png",
+    "accessories_php/images/Pendant_earrings/UN1E.png",
+    
+    // Family collection samples
+    "family_php/images/Mother/1879.png",
+    
+    // Corporate collection samples
+    "corp_php/images/awards/SA12CM_alt1.png",
+    
+    // Signet collection samples
+    "signet_php/images/crest_top/C19.jpg",
+    "signet_php/images/jewel top/C526.jpg",
+    
+    // Frontline Workers samples (formerly emergency services)
+    "Frontline_Workers_php/images/Firefighter/LPFF6.png",
+    "Frontline_Workers_php/images/clinical_services/PA1.png",
+    
+    // Additional key images
+    "PNG/cadman_crest_only_gold.jpg", // Logo
+    "ladys_stoneset_php/Gems/1898.png", // Lady's stoneset sample
+    "school_php/images/Bands/SR109D.jpg" // School sample
+];
+
+function preloadImageFile(src, priority = false) {
+    if (priority) {
+        imagePreloadQueue.unshift(src); // Add to front of queue
+    } else {
+        imagePreloadQueue.push(src);
+    }
+}
+
+function updateImagePreloadProgress() {
+    imagePreloadProgress = preloadedImages.length;
+    var percentage = totalImagePreloadCount > 0 ? Math.round((imagePreloadProgress / totalImagePreloadCount) * 100) : 0;
+    
+    // Update progress bar
+    var progressBar = document.getElementById('preload-progress');
+    if (progressBar) {
+        progressBar.style.width = percentage + '%';
+    }
+    
+    // Update status text
+    var statusText = document.getElementById('preload-status');
+    if (statusText) {
+        if (percentage < 25) {
+            statusText.textContent = 'Loading priority gallery images...';
+        } else if (percentage < 75) {
+            statusText.textContent = 'Loading collection previews...';
+        } else if (percentage < 100) {
+            statusText.textContent = 'Almost ready...';
+        } else {
+            statusText.textContent = 'Gallery images loaded successfully!';
+        }
+    }
+    
+    // Hide progress indicator when complete
+    if (percentage >= 100) {
+        setTimeout(function() {
+            var indicator = document.getElementById('preload-indicator');
+            if (indicator) {
+                indicator.style.opacity = '0';
+                indicator.style.transition = 'opacity 1s ease';
+                setTimeout(function() {
+                    indicator.style.display = 'none';
+                }, 1000);
+            }
+        }, 1500); // Show "success" message for a bit longer
+    }
+}
+
+function startImagePreloading() {
+    totalImagePreloadCount = imagePreloadQueue.length;
+    if (totalImagePreloadCount === 0) return;
+    
+    var index = 0;
+    var maxConcurrentImages = 3; // Load up to 3 images simultaneously
+    var activeImageLoads = 0;
+    
+    function loadNextImage() {
+        while (activeImageLoads < maxConcurrentImages && index < totalImagePreloadCount) {
+            loadSingleImage(imagePreloadQueue[index]);
+            index++;
+            activeImageLoads++;
+        }
+    }
+    
+    function loadSingleImage(src) {
+        var img = new Image();
+        img.onload = function() {
+            preloadedImages.push(this);
+            activeImageLoads--;
+            updateImagePreloadProgress();
+            loadNextImage();
+        };
+        img.onerror = function() {
+            activeImageLoads--;
+            updateImagePreloadProgress();
+            loadNextImage();
+        };
+        img.src = src;
+    }
+    
+    loadNextImage();
+}
+
+// Called when the window is finished loading - handles GALLERY IMAGES only
+function eventWindowLoaded() {
+    
+    // Preload priority images first (main gallery rotation)
+    priorityImages.forEach(function(src) {
+        preloadImageFile(src, true); // High priority
+    });
+    
+    // Then preload collection preview images
+    collectionPreviewImages.forEach(function(src) {
+        preloadImageFile(src, false); // Normal priority
+    });
+    
+    // Start the gallery image preloading process
+    startImagePreloading();
+    
+    // Initialize Continuous Scrolling Carousel
+    $(document).ready(function() {
+        let carouselImages = []; // Will be loaded from admin API
+        let isCarouselPaused = false;
+        let carouselTrack;
+        
+        // Load carousel images from database-driven public API  
+        async function loadCarouselImages() {
+            try {
+                console.log('Loading carousel images from database...');
+                const response = await fetch('carousel_data.php');
+                const carouselData = await response.json();
+                
+                if (carouselData.active && carouselData.items && carouselData.items.length > 0) {
+                    // Use database-driven items
+                    carouselImages = carouselData.items;
+                    console.log(`Loaded ${carouselImages.length} carousel items from database (${carouselData.source})`);
+                } else {
+                    // Use default items  
+                    carouselImages = getDefaultCarouselItems();
+                    console.log(`Using ${carouselImages.length} fallback carousel items`);
+                }
+                
+                // Initialize carousel with loaded images - but only if DOM is ready
+                setTimeout(() => initializeCarousel(), 100);
+                
+                // Preload images for better performance
+                carouselImages.forEach(item => {
+                    const img = new Image();
+                    img.src = item.src;
+                });
+                console.log(`Preloaded ${carouselImages.length} carousel images`);
+                
+            } catch (error) {
+                console.error('Error loading carousel from database:', error);
+                // Fallback to hardcoded default items
+                carouselImages = getDefaultCarouselItems();
+                console.log(`Fallback: Loaded ${carouselImages.length} hardcoded carousel items`);
+                setTimeout(() => initializeCarousel(), 100);
+                
+                // Preload fallback images
+                carouselImages.forEach(item => {
+                    const img = new Image();
+                    img.src = item.src;
+                });
+            }
+        }
+        
+        // Default carousel items (fallback)
+        function getDefaultCarouselItems() {
+            return [
+                // Celtic bands
+                { product_id: "5310L", category: "celtic_bands", src: "bands_php/thumbs/images/celtic/5310L.png", name: "Celtic Knot Band" },
+                { product_id: "5310M", category: "celtic_bands", src: "bands_php/thumbs/images/celtic/5310M.png", name: "Celtic Design" },
+                { product_id: "5410M", category: "celtic_bands", src: "bands_php/thumbs/images/celtic/5410M.png", name: "Celtic Pattern" },
+                { product_id: "5854M", category: "celtic_bands", src: "bands_php/thumbs/images/celtic/5854M.png", name: "Celtic Twist" },
+                { product_id: "5636L", category: "celtic_bands", src: "bands_php/thumbs/images/celtic/5636L_alt1.png", name: "Celtic Band" },
+                { product_id: "5312M", category: "celtic_bands", src: "bands_php/thumbs/images/celtic/5312M_alt2.png", name: "Celtic Ring" },
+                
+                // Plain bands  
+                { product_id: "5T18M", category: "plain_bands", src: "bands_php/thumbs/images/plain/5T18M_alt1.png", name: "Classic Band" },
+                { product_id: "4T00RL", category: "plain_bands", src: "bands_php/thumbs/images/plain/4T00RL_alt1.png", name: "Plain Ring" },
+                { product_id: "300RM", category: "plain_bands", src: "bands_php/thumbs/images/plain/300RM_alt1.png", name: "Simple Band" },
+                { product_id: "550TL", category: "plain_bands", src: "bands_php/thumbs/images/plain/550TL_alt2.png", name: "Traditional Ring" },
+                { product_id: "400TL", category: "plain_bands", src: "bands_php/thumbs/images/plain/400TL_alt1.png", name: "Timeless Ring" },
+                
+                // Fancy bands
+                { product_id: "2291", category: "fancy_bands", src: "bands_php/thumbs/images/fancy/2291_alt1.png", name: "Fancy Design" },
+                { product_id: "1T026L", category: "fancy_bands", src: "bands_php/thumbs/images/fancy/1T026L.png", name: "Textured Band" },
+                { product_id: "5758L", category: "fancy_bands", src: "bands_php/thumbs/images/fancy/5758L.png", name: "Decorative Ring" },
+                { product_id: "7T62L", category: "fancy_bands", src: "bands_php/thumbs/images/fancy/7T62L_alt2.png", name: "Designer Band" },
+                { product_id: "5771L", category: "fancy_bands", src: "bands_php/thumbs/images/fancy/5771L.png", name: "Elegant Band" },
+                { product_id: "8T14L", category: "fancy_bands", src: "bands_php/thumbs/images/fancy/8T14L_alt1.png", name: "Modern Design" },
+                { product_id: "1T028M", category: "fancy_bands", src: "bands_php/thumbs/images/fancy/1T028M.png", name: "Contemporary Band" }
+            ];
+        }
+        
+        // Initialize carousel
+        function initializeCarousel() {
+            carouselTrack = document.getElementById('carouselTrack');
+            
+            if (!carouselTrack) {
+                console.warn('Carousel track element not found - DOM may not be ready yet');
+                return;
+            }
+            
+            if (!carouselImages || carouselImages.length === 0) {
+                console.warn('No carousel images available for initialization');
+                return;
+            }
+            
+            // Clear existing carousel items before adding new ones
+            carouselTrack.innerHTML = '';
+            
+            // Check if mobile
+            const isMobile = window.innerWidth <= 768;
+            
+            // Create two sets of images for seamless loop
+            const doubledImages = [...carouselImages, ...carouselImages];
+            
+            // Populate carousel with images
+            doubledImages.forEach((item, index) => {
+                const carouselItem = document.createElement('div');
+                carouselItem.className = `carousel-item ${item.type}`;
+                
+                carouselItem.innerHTML = `
+                    <img src="${item.src}" alt="${item.name}" loading="lazy" />
+                    <div class="item-label">${item.name}</div>
+                `;
+                
+                // Generate correct action for ProductModal
+                function openProductModal(item) {
+                    // Extract the product ID from the image filename instead of truncated base_name
+                    const productId = extractBaseName(item.src);
+                    
+                    // Determine category from collection/filter
+                    let category = 'bands'; // default
+                    if (item.collection === 'bands') {
+                        if (item.filter === 'plain') category = 'plain_bands';
+                        else if (item.filter === 'fancy') category = 'fancy_bands'; 
+                        else if (item.filter === 'celtic') category = 'celtic_bands';
+                    } else if (item.collection === 'engagement') {
+                        category = 'engagement';
+                    } else if (item.collection === 'family') {
+                        category = 'family';
+                    }
+                    
+                    console.log(`Opening ProductModal for: ${productId} (category: ${category})`);
+                    
+                    // Open ProductModal instead of navigating to a page
+                    if (typeof ProductModal !== 'undefined' && ProductModal.open) {
+                        ProductModal.open(productId, category);
+                    } else {
+                        console.error('ProductModal not available');
+                    }
+                }
+                
+                // Helper function to extract base name from image path (for legacy support)
+                function extractBaseName(imagePath) {
+                    const pathParts = imagePath.split('/');
+                    const filename = pathParts[pathParts.length - 1];
+                    let baseName = filename.replace(/\.(png|jpg|jpeg)$/i, '');
+                    // Remove variant suffixes
+                    baseName = baseName.replace(/_alt\d*$/, '');
+                    baseName = baseName.replace(/-alt\d*$/, '');
+                    baseName = baseName.replace(/_view\d*$/, '');
+                    baseName = baseName.replace(/_art\d*$/, '');
+                    return baseName;
+                }
+                
+                // Add click handler for ProductModal
+                carouselItem.addEventListener('click', () => {
+                    openProductModal(item);
+                });
+                
+                // Add hover pause functionality (desktop only)
+                if (!isMobile) {
+                    carouselItem.addEventListener('mouseenter', () => {
+                        carouselTrack.style.animationPlayState = 'paused';
+                    });
+                    
+                    carouselItem.addEventListener('mouseleave', () => {
+                        if (!isCarouselPaused) {
+                            carouselTrack.style.animationPlayState = 'running';
+                        }
+                    });
+                }
+                
+                carouselTrack.appendChild(carouselItem);
+            });
+            
+            // Calculate total width for animation based on device
+            const itemCount = doubledImages.length;
+            const itemWidth = isMobile ? 140 : 180; // Adjusted for mobile: 120px + 20px gap vs 160px + 20px gap
+            const totalWidth = itemCount * itemWidth;
+            carouselTrack.style.width = totalWidth + 'px';
+            
+            // Simple mobile solution - orientation-aware
+            if (isMobile) {
+                // Check orientation and adjust accordingly
+                const isPortrait = window.innerHeight > window.innerWidth;
+                const adjustedItemWidth = isPortrait ? 100 : 120; // Smaller items in portrait
+                const adjustedTotalWidth = doubledImages.length * (adjustedItemWidth + 15); // 15px gap
+                const animationSpeed = isPortrait ? '30s' : '35s'; // Faster in portrait
+                
+                // Force CSS animation with orientation-specific properties
+                carouselTrack.style.cssText = `
+                    display: flex !important;
+                    position: absolute !important;
+                    top: 0 !important;
+                    left: 0 !important;
+                    height: 100% !important;
+                    width: ${adjustedTotalWidth}px !important;
+                    animation: scrollRight ${animationSpeed} linear infinite !important;
+                    animation-play-state: running !important;
+                    gap: 15px !important;
+                `;
+                
+                // Adjust item sizes for orientation
+                const items = carouselTrack.querySelectorAll('.carousel-item');
+                items.forEach(item => {
+                    item.style.cssText = `
+                        width: ${adjustedItemWidth}px !important;
+                        height: ${adjustedItemWidth}px !important;
+                        flex-shrink: 0 !important;
+                        min-width: ${adjustedItemWidth}px !important;
+                    `;
+                });
+                
+                console.log(`Mobile carousel: ${isPortrait ? 'Portrait' : 'Landscape'} mode, width: ${adjustedTotalWidth}px, speed: ${animationSpeed}`);
+            }
+        }
+        
+        // Enhanced pause/resume functionality for mobile and desktop
+        $('#pauseBtn').click(function() {
+            isCarouselPaused = !isCarouselPaused;
+            const button = $(this);
+            
+            // More reliable mobile detection - check multiple conditions
+            const isMobile = window.innerWidth <= 768 || 
+                            /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            
+            console.log('Pause button clicked. Mobile:', isMobile, 'Paused:', isCarouselPaused);
+            
+            if (isCarouselPaused) {
+                if (isMobile) {
+                    // For mobile, completely stop the animation
+                    carouselTrack.style.setProperty('animation', 'none', 'important');
+                    console.log('Mobile animation stopped');
+                } else {
+                    // For desktop, use normal pause
+                    carouselTrack.style.animationPlayState = 'paused';
+                    console.log('Desktop animation paused');
+                }
+                button.html('▶️ Play').addClass('playing');
+            } else {
+                if (isMobile) {
+                    // For mobile, restart the animation with current orientation settings
+                    const isPortrait = window.innerHeight > window.innerWidth;
+                    const animationSpeed = isPortrait ? '30s' : '35s';
+                    carouselTrack.style.setProperty('animation', `scrollRight ${animationSpeed} linear infinite`, 'important');
+                    console.log('Mobile animation restarted with speed:', animationSpeed);
+                } else {
+                    // For desktop, use normal resume
+                    carouselTrack.style.animationPlayState = 'running';
+                    console.log('Desktop animation resumed');
+                }
+                button.html('⏸️ Pause').removeClass('playing');
+            }
+        });
+        
+        // Initialize everything - load carousel images from admin API first
+        loadCarouselImages();
+        
+        // Attach smooth touch event listeners to carousel for mobile
+        const carouselContainer = document.querySelector('.carousel-container');
+        if (carouselContainer) {
+            // Add touch event listeners with better options
+            carouselContainer.addEventListener('touchstart', handleTouchStart, { 
+                passive: false,
+                capture: true 
+            });
+            carouselContainer.addEventListener('touchmove', handleTouchMove, { 
+                passive: false,
+                capture: true 
+            });
+            carouselContainer.addEventListener('touchend', handleTouchEnd, { 
+                passive: false,
+                capture: true 
+            });
+            
+            // Prevent context menu on long press
+            carouselContainer.addEventListener('contextmenu', (e) => {
+                if (isDragging) {
+                    e.preventDefault();
+                }
+            });
+            
+            // Improve touch target
+            carouselContainer.style.touchAction = 'pan-y pinch-zoom';
+            
+            console.log('Smooth touch event listeners attached to carousel');
+        }
+        
+        // Handle orientation changes on mobile
+        if (window.innerWidth <= 768) {
+            window.addEventListener('orientationchange', function() {
+                setTimeout(() => {
+                    console.log('Orientation changed, reinitializing carousel');
+                    initializeCarousel();
+                }, 100); // Small delay to let orientation settle
+            });
+            
+            window.addEventListener('resize', function() {
+                if (window.innerWidth <= 768) {
+                    setTimeout(() => {
+                        console.log('Mobile resize detected, reinitializing carousel');
+                        initializeCarousel();
+                    }, 100);
+                }
+            });
+        }
+        
+        // Smooth touch support for mobile carousel scrolling
+        let touchStartX = 0;
+        let touchEndX = 0;
+        let isDragging = false;
+        let currentTransform = 0;
+        let animationWasPaused = false;
+        let originalAnimationState = '';
+        
+        function handleTouchStart(e) {
+            const isMobile = window.innerWidth <= 768 || 
+                            /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            
+            if (!isMobile) return;
+            
+            touchStartX = e.changedTouches[0].screenX;
+            isDragging = true;
+            
+            // Store current animation state
+            animationWasPaused = isCarouselPaused;
+            originalAnimationState = getComputedStyle(carouselTrack).animation;
+            
+            // Completely pause animation during touch
+            carouselTrack.style.setProperty('animation-play-state', 'paused', 'important');
+            carouselTrack.style.setProperty('animation', 'none', 'important');
+            
+            // Get current visual position
+            const rect = carouselTrack.getBoundingClientRect();
+            const containerRect = carouselTrack.parentElement.getBoundingClientRect();
+            currentTransform = rect.left - containerRect.left;
+            
+            console.log('Touch start - animation paused for smooth dragging');
+        }
+        
+        function handleTouchMove(e) {
+            if (!isDragging) return;
+            
+            e.preventDefault(); // Prevent page scrolling
+            e.stopPropagation(); // Prevent event bubbling
+            
+            const touchCurrentX = e.changedTouches[0].screenX;
+            const deltaX = touchCurrentX - touchStartX;
+            
+            // Smooth drag with dampening for better feel
+            const dampening = 0.3; // Reduce movement for smoother feel
+            const newTransform = currentTransform + (deltaX * dampening);
+            
+            // Apply transform smoothly
+            carouselTrack.style.setProperty('transform', `translateX(${newTransform}px)`, 'important');
+            carouselTrack.style.setProperty('transition', 'none', 'important');
+        }
+        
+        function handleTouchEnd(e) {
+            if (!isDragging) return;
+            
+            touchEndX = e.changedTouches[0].screenX;
+            isDragging = false;
+            
+            // Add smooth transition back
+            carouselTrack.style.setProperty('transition', 'transform 0.3s ease-out', 'important');
+            
+            handleSwipeEnd();
+        }
+        
+        function handleSwipeEnd() {
+            const swipeThreshold = 30; // Lower threshold for better responsiveness
+            const swipeDistance = touchEndX - touchStartX;
+            const isMobile = window.innerWidth <= 768 || 
+                            /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            
+            console.log('Touch end - swipe distance:', swipeDistance);
+            
+            // Smooth return to animation after a brief delay
+            setTimeout(() => {
+                carouselTrack.style.removeProperty('transition');
+                
+                if (!animationWasPaused && isMobile) {
+                    const isPortrait = window.innerHeight > window.innerWidth;
+                    let animationSpeed;
+                    
+                    if (Math.abs(swipeDistance) > swipeThreshold) {
+                        if (swipeDistance > 0) {
+                            // Swipe right - slower
+                            animationSpeed = isPortrait ? '45s' : '50s';
+                            console.log('Swipe right detected - slowing carousel');
+                        } else {
+                            // Swipe left - faster  
+                            animationSpeed = isPortrait ? '20s' : '25s';
+                            console.log('Swipe left detected - speeding carousel');
+                        }
+                        
+                        // Apply new speed
+                        carouselTrack.style.setProperty('animation', `scrollRight ${animationSpeed} linear infinite`, 'important');
+                        
+                        // Return to normal speed after 2 seconds
+                        setTimeout(() => {
+                            if (!isCarouselPaused) {
+                                const normalSpeed = isPortrait ? '30s' : '35s';
+                                carouselTrack.style.setProperty('animation', `scrollRight ${normalSpeed} linear infinite`, 'important');
+                                console.log('Returning to normal speed');
+                            }
+                        }, 2000);
+                    } else {
+                        // No significant swipe - resume normal
+                        animationSpeed = isPortrait ? '30s' : '35s';
+                        carouselTrack.style.setProperty('animation', `scrollRight ${animationSpeed} linear infinite`, 'important');
+                        console.log('Resuming normal animation');
+                    }
+                }
+            }, 100); // Small delay for smooth transition
+        }
+        
+        // Add touch event listeners for mobile
+        if (window.innerWidth <= 768) {
+            const carouselContainer = document.querySelector('.carousel-container');
+            if (carouselContainer) {
+                carouselContainer.addEventListener('touchstart', handleTouchStart, { passive: true });
+                carouselContainer.addEventListener('touchend', handleTouchEnd, { passive: true });
+            }
+        }
+        
+        // Handle orientation change and resize
+        window.addEventListener('orientationchange', function() {
+            setTimeout(() => {
+                // Restart carousel after orientation change
+                if (carouselTrack) {
+                    carouselTrack.style.animationPlayState = 'running';
+                }
+            }, 500);
+        });
+        
+        window.addEventListener('resize', function() {
+            // Adjust animation on resize
+            const isMobile = window.innerWidth <= 768;
+            if (carouselTrack && isMobile) {
+                carouselTrack.style.animationDuration = '40s';
+            } else if (carouselTrack) {
+                carouselTrack.style.animationDuration = '60s';
+            }
+        });
+        
+        // Start loading carousel data
+        loadCarouselImages();
+    });
+}
+
+// (3D viewer removed)
+
+</script>
+</head>
+<body>
+    <!-- Search Modal -->
+    <?php include 'includes/search_modal.php'; ?>
+    
+    <?php include 'navigation.php'; renderNavigation('home'); ?>
+    <?php include 'topButton.php'; renderTopButton(); ?>
+    
+    <main id="wrapper">
+        <!-- Continuous Scrolling Gallery Carousel -->
+        <div class="carousel-section" style="margin-top: 10px; padding: 40px 0; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h1 style="color: #FFD700; font-size: 2.5em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Welcome to Cadman Manufacturing</h1>
+                <style>
+                    @keyframes fadeSlideIn {
+                        from { opacity: 0; transform: translateY(10px); }
+                        to   { opacity: 1; transform: translateY(0); }
+                    }
+                </style>
+                <p style="padding: 14px 30px; color: rgba(255,255,255,0.75); background: rgba(255,255,255,0.07); font-size: 1.1em; line-height: 1.7; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); max-width: 760px; margin: 0 auto; animation: fadeSlideIn 1.2s ease 0.3s both;">Discover our handcrafted jewellery, our pride since 1932. Cadman's has grown from Walter Cadman travelling from town to town. Showing his jewellery to Canada. Now with the fourth generation, Jim Dickenson leads Cadmans into the 21st century. Combining artisan craftsmanship with the latest technology to create unique pieces of jewellery.</p>
+            </div>
+            
+            <!-- Carousel Container -->
+            <div class="carousel-container" style="position: relative; overflow: hidden; width: 100%; height: 200px; border-radius: 10px; background: rgba(0,0,0,0.1);">
+                <!-- Carousel Track -->
+                <div class="carousel-track" id="carouselTrack" style="display: flex; position: absolute; top: 0; left: 0; height: 100%; animation: scrollRight 60s linear infinite;">
+                    <!-- Images will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Pause Button - positioned below carousel -->
+            <div class="carousel-controls" style="text-align: center; margin-top: 20px;">
+                <button id="pauseBtn" class="pause-button" style="background: rgba(0,0,0,0.8); color: #FFD700; border: 2px solid #FFD700; border-radius: 25px; padding: 10px 18px; cursor: pointer; font-size: 14px; font-weight: bold; transition: all 0.3s ease; backdrop-filter: blur(10px); box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                    ⏸️ Pause
+                </button>
+            </div>
+        </div>
+        
+        <!-- Welcome Section -->
+        <div style="text-align: center; padding: 10px 20px; background: rgba(255,255,255,0.9); margin: 10px; border-radius: 10px;">
+            <h2 style="color: #333; font-size: 2.5em; margin-bottom: 20px;">Daily Metal Prices</h2>
+            <p style="font-size: 1.2em; color: #666; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+                update provided by <a href="www.goldapi.io">goldapi</a>
+            </p>
+            
+            <!-- Metals Grid Container -->
+            <div id="metals-grid" style="margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 100%; overflow: hidden;">
+            
+            <!-- Gold Section -->
+            <div style="padding: 30px; background: linear-gradient(135deg, rgba(255,215,0,0.1), rgba(255,255,255,0.05)); border-radius: 15px; border-left: 4px solid #FFD700; min-height: 420px; box-sizing: border-box;">
+                <h3 style="color: #FFD700; margin-bottom: 20px; font-size: 1.3em; display: flex; align-items: center; gap: 10px; justify-content: center;">
+                    🥇 Gold
+                </h3>
+                <div id="gold-price-container" style="position: relative; display: flex; flex-direction: column; gap: 15px;">
+                    <!-- Skeleton Loader Overlay -->
+                    <div id="gold-loading" class="skeleton-loader" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: transparent; border-radius: 15px; display: none; flex-direction: column; gap: 15px; z-index: 10;">
+                        <!-- Price Skeleton -->
+                        <div style="background: rgba(255,255,255,0.9); padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); min-height: 105px; box-sizing: border-box;">
+                            <div class="skeleton-box" style="height: 14px; width: 60px; margin: 0 auto 10px;"></div>
+                            <div class="skeleton-box" style="height: 35px; width: 180px; margin: 0 auto 10px;"></div>
+                            <div class="skeleton-box" style="height: 14px; width: 140px; margin: 0 auto;"></div>
+                        </div>
+                        <!-- Chart Skeleton -->
+                        <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                            <div class="skeleton-box" style="height: 180px; width: 100%; border-radius: 5px;"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Price Display -->
+                    <div style="background: rgba(255,255,255,0.9); padding: 20px; border-radius: 10px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); min-height: 105px; box-sizing: border-box;">
+                        <div style="color: #666; font-size: 0.85em; margin-bottom: 5px; min-height: 1.2em;">CAD/oz</div>
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 8px; min-height: 2.2em;">
+                            <div id="gold-price" style="font-size: 2em; font-weight: bold; color: #FFD700;">$—</div>
+                            <div id="gold-change" style="font-size: 1.5em; font-weight: bold;">—</div>
+                        </div>
+                        <div id="last-updated" style="color: #999; font-size: 0.75em; margin-top: 8px; min-height: 1em;">Last updated: —</div>
+                    </div>
+                    
+                    <!-- Chart -->
+                    <div class="chart-wrapper" style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); box-sizing: border-box;">
+                        <canvas id="goldChart"></canvas>
+                    </div>
+                </div>
+                <div style="margin-top: 10px; font-size: 0.75em; color: #999; text-align: center;">
+                    Updates Daily (8AM)
+                </div>
+            </div>
+            
+            <!-- Silver Section -->
+            <div style="padding: 30px; background: linear-gradient(135deg, rgba(192,192,192,0.1), rgba(255,255,255,0.05)); border-radius: 15px; border-left: 4px solid #C0C0C0; min-height: 420px; box-sizing: border-box;">
+                <h3 style="color: #888; margin-bottom: 20px; font-size: 1.3em; display: flex; align-items: center; gap: 10px; justify-content: center;">
+                    🥈 Silver
+                </h3>
+                <div id="silver-price-container" style="position: relative; display: flex; flex-direction: column; gap: 15px;">
+                    <!-- Skeleton Loader Overlay -->
+                    <div id="silver-loading" class="skeleton-loader" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: transparent; border-radius: 15px; display: none; flex-direction: column; gap: 15px; z-index: 10;">
+                        <!-- Price Skeleton -->
+                        <div style="background: rgba(255,255,255,0.9); padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); min-height: 105px; box-sizing: border-box;">
+                            <div class="skeleton-box" style="height: 14px; width: 60px; margin: 0 auto 10px;"></div>
+                            <div class="skeleton-box" style="height: 35px; width: 180px; margin: 0 auto 10px;"></div>
+                            <div class="skeleton-box" style="height: 14px; width: 140px; margin: 0 auto;"></div>
+                        </div>
+                        <!-- Chart Skeleton -->
+                        <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                            <div class="skeleton-box" style="height: 180px; width: 100%; border-radius: 5px;"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Price Display -->
+                    <div style="background: rgba(255,255,255,0.9); padding: 20px; border-radius: 10px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); min-height: 105px; box-sizing: border-box;">
+                        <div style="color: #666; font-size: 0.85em; margin-bottom: 5px; min-height: 1.2em;">CAD/oz</div>
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 8px; min-height: 2.2em;">
+                            <div id="silver-price" style="font-size: 2em; font-weight: bold; color: #888;">$—</div>
+                            <div id="silver-change" style="font-size: 1.5em; font-weight: bold;">—</div>
+                        </div>
+                        <div id="silver-last-updated" style="color: #999; font-size: 0.75em; margin-top: 8px; min-height: 1em;">Last updated: —</div>
+                    </div>
+                    
+                    <!-- Chart -->
+                    <div class="chart-wrapper" style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); box-sizing: border-box;">
+                        <canvas id="silverChart"></canvas>
+                    </div>
+                </div>
+                <div style="margin-top: 10px; font-size: 0.75em; color: #999; text-align: center;">
+                    Updates Daily (8AM EST)
+                </div>
+            </div>
+            </div>
+
+            <style>
+                @keyframes shimmer {
+                    0% {
+                        background-position: -468px 0;
+                    }
+                    100% {
+                        background-position: 468px 0;
+                    }
+                }
+                
+                @keyframes fadeOut {
+                    0% { opacity: 1; }
+                    100% { opacity: 0; }
+                }
+                
+                .skeleton-box {
+                    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+                    background-size: 400% 100%;
+                    animation: shimmer 1.5s ease-in-out infinite;
+                    border-radius: 4px;
+                }
+                
+                .skeleton-loader {
+                    pointer-events: none;
+                }
+                .loading-hidden {
+                    animation: fadeOut 0.3s ease forwards;
+                    pointer-events: none;
+                }
+                
+                /* Make canvases responsive */
+                #goldChart, #silverChart {
+                    max-width: 100%;
+                    width: 100% !important;
+                    height: 180px !important;
+                    display: block;
+                }
+                .chart-wrapper {
+                    height: 180px;
+                    overflow: hidden;
+                }
+                
+                /* Mobile responsive styles for precious metals */
+                @media (max-width: 768px) {
+                    #metals-grid {
+                        grid-template-columns: 1fr !important;
+                        padding: 0 5px;
+                    }
+                    
+                    #metals-grid > div {
+                        max-width: 100%;
+                        box-sizing: border-box;
+                        padding: 20px 15px !important;
+                        min-height: 380px;
+                    }
+                    
+                    #gold-price, #silver-price {
+                        font-size: 1.8em !important;
+                        min-width: 120px;
+                    }
+                    
+                    #gold-change, #silver-change {
+                        font-size: 1.3em !important;
+                        min-width: 30px;
+                    }
+                    
+                    #last-updated, #silver-last-updated {
+                        min-height: 1em;
+                        display: block;
+                    }
+                }
+            </style>
+            
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>            <script>
+            // Gold Price Tracker using Metals API (free tier available)
+            let goldChart;
+            let priceHistory = [];
+            let maxHistoryPoints = 24; // Track 24 data points for day view
+            
+            function showGoldLoading() {
+                const loader = document.getElementById('gold-loading');
+                if (loader) {
+                    loader.style.display = 'flex';
+                    loader.classList.remove('loading-hidden');
+                }
+            }
+            
+            function hideGoldLoading() {
+                const loader = document.getElementById('gold-loading');
+                if (loader) {
+                    loader.classList.add('loading-hidden');
+                    setTimeout(() => {
+                        loader.style.display = 'none';
+                    }, 300);
+                }
+            }
+
+            async function fetchGoldPrice() {
+                try {
+                    console.log('🥇 Fetching gold price...');
+                    showGoldLoading();
+                    
+                    const response = await fetch('gold_price_api.php', {
+                        method: 'GET',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    });
+                    
+                    if (!response.ok) throw new Error('API request failed');
+                    
+                    const data = await response.json();
+                    console.log('🥇 Gold API Response:', data);
+                    
+                    if (data.success) {
+                        updateGoldDisplay(data);
+                        // Use server-side price history - keep full objects with day property
+                        if (data.price_history && data.price_history.length > 0) {
+                            priceHistory = data.price_history;
+                            console.log('🥇 Loaded price history:', priceHistory);
+                        } else {
+                            // Fallback: use current price if no history yet
+                            priceHistory = [{ price: parseFloat(data.current_price.replace(/,/g, '')), day: 'Today' }];
+                        }
+                        if (typeof Chart !== 'undefined') {
+                            updateChart();
+                        }
+                        hideGoldLoading();
+                    } else {
+                        console.error('Gold price API error:', data.error);
+                        hideGoldLoading();
+                        document.getElementById('gold-price').textContent = 'Error';
+                    }
+                } catch (error) {
+                    console.error('🥇 Error fetching gold price:', error);
+                    hideGoldLoading();
+                    
+                    // Use real fallback data
+                    priceHistory = [
+                        { price: 6975.70, day: 'Monday' },
+                        { price: 7049.94, day: 'Tuesday' },
+                        { price: 7033.79, day: 'Wednesday' },
+                        { price: 6926.18, day: 'Thursday' },
+                        { price: 6893.65, day: 'Friday' }
+                    ];
+                    
+                    document.getElementById('gold-price').textContent = 'CA$6,893.65';
+                    document.getElementById('gold-change').textContent = '▼';
+                    document.getElementById('gold-change').style.color = '#dc3545';
+                    
+                    if (typeof Chart !== 'undefined') {
+                        updateChart();
+                    }
+                }
+            }
+
+            function updateGoldDisplay(data) {
+                // Update price with proper Canadian formatting - REMOVE COMMAS BEFORE PARSING
+                const price = parseFloat(data.current_price.replace(/,/g, ''));
+                document.getElementById('gold-price').textContent = `CA$${price.toLocaleString('en-CA', {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                })}`;;
+                
+                // Update trend indicator (arrow only)
+                const changeAmount = parseFloat(data.change_amount.replace(/,/g, ''));
+                const isPositive = changeAmount >= 0;
+                
+                const changeColor = isPositive ? '#28a745' : '#dc3545';
+                const changeSymbol = isPositive ? '▲' : '▼';
+                
+                document.getElementById('gold-change').textContent = changeSymbol;
+                document.getElementById('gold-change').style.color = changeColor;
+                
+                // Update timestamp with next update time
+                const now = new Date();
+                const updateInfo = data.next_update ? ` • Next: ${data.next_update}` : '';
+                document.getElementById('last-updated').textContent = `Updated: ${now.toLocaleTimeString()}${updateInfo}`;
+            }
+
+            function updateChart() {
+                console.log('🥇 updateChart called with priceHistory:', priceHistory);
+                const ctx = document.getElementById('goldChart').getContext('2d');
+                
+                if (goldChart) {
+                    goldChart.destroy();
+                }
+                
+                // Process price history data - handle objects with day property
+                const chartData = priceHistory.map(item => {
+                    if (typeof item === 'object' && item.price) {
+                        return parseFloat(item.price);
+                    } else {
+                        return parseFloat(item);
+                    }
+                });
+                
+                const chartLabels = priceHistory.map((item, index) => {
+                    if (item.day) {
+                        return item.day; // Monday, Tuesday, etc.
+                    } else if (item.date) {
+                        const date = new Date(item.date);
+                        return date.toLocaleDateString('en-US', { weekday: 'short' });
+                    } else {
+                        return `Day ${index + 1}`;
+                    }
+                });
+                
+                console.log('🥇 Chart Data:', chartData);
+                console.log('🥇 Chart Labels:', chartLabels);
+                
+                // Calculate min/max for better scaling
+                const minPrice = Math.min(...chartData);
+                const maxPrice = Math.max(...chartData);
+                const padding = (maxPrice - minPrice) * 0.05 || 100;
+                
+                goldChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: chartLabels,
+                        datasets: [{
+                            label: 'Gold Price (CAD/oz)',
+                            data: chartData,
+                            borderColor: '#FFD700',
+                            backgroundColor: 'rgba(255, 215, 0, 0.1)',
+                            borderWidth: 3,
+                            fill: true,
+                            tension: 0.3,
+                            pointRadius: 5,
+                            pointBackgroundColor: '#FFD700',
+                            pointBorderColor: '#fff',
+                            pointBorderWidth: 2,
+                            pointHoverRadius: 7,
+                            pointHoverBackgroundColor: '#FFD700',
+                            pointHoverBorderColor: '#fff',
+                            pointHoverBorderWidth: 3
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                                padding: 12,
+                                titleColor: '#FFD700',
+                                bodyColor: '#fff',
+                                borderColor: '#FFD700',
+                                borderWidth: 1,
+                                callbacks: {
+                                    title: function(context) {
+                                        return context[0].label;
+                                    },
+                                    label: function(context) {
+                                        return `CA$${parseFloat(context.parsed.y).toLocaleString('en-CA', {
+                                            minimumFractionDigits: 2,
+                                            maximumFractionDigits: 2
+                                        })} /oz`;
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: false,
+                                min: Math.max(0, minPrice - padding),
+                                max: maxPrice + padding,
+                                grid: {
+                                    color: 'rgba(255, 215, 0, 0.1)',
+                                    drawBorder: false
+                                },
+                                ticks: {
+                                    color: '#666',
+                                    callback: function(value) {
+                                        return 'CA$' + parseFloat(value).toLocaleString('en-CA', {
+                                            maximumFractionDigits: 0
+                                        });
+                                    }
+                                }
+                            },
+                            x: {
+                                grid: {
+                                    display: false,
+                                    drawBorder: false
+                                },
+                                ticks: {
+                                    color: '#666',
+                                    maxRotation: 45,
+                                    minRotation: 0
+                                }
+                            }
+                        },
+                        interaction: {
+                            intersect: false,
+                            mode: 'index'
+                        }
+                    }
+                });
+                
+                console.log('🥇 Chart created successfully');
+            }
+
+            // Silver Price Tracking
+            let silverChart;
+            let silverPriceHistory = [];
+            
+            function showSilverLoading() {
+                const loader = document.getElementById('silver-loading');
+                if (loader) {
+                    loader.style.display = 'flex';
+                    loader.classList.remove('loading-hidden');
+                }
+            }
+            
+            function hideSilverLoading() {
+                const loader = document.getElementById('silver-loading');
+                if (loader) {
+                    loader.classList.add('loading-hidden');
+                    setTimeout(() => {
+                        loader.style.display = 'none';
+                    }, 300);
+                }
+            }
+            
+            async function fetchSilverPrice() {
+                try {
+                    console.log('🥈 Fetching silver price...');
+                    showSilverLoading();
+                    
+                    const response = await fetch('silver_price_api.php', {
+                        method: 'GET',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    });
+                    
+                    if (!response.ok) throw new Error('API request failed');
+                    
+                    const data = await response.json();
+                    console.log('🥈 Silver API Response:', data);
+                    
+                    if (data.success) {
+                        updateSilverDisplay(data);
+                        if (data.price_history && data.price_history.length > 0) {
+                            silverPriceHistory = data.price_history;
+                            console.log('🥈 Loaded price history:', silverPriceHistory);
+                        } else {
+                            silverPriceHistory = [{ price: parseFloat(data.current_price.replace(/,/g, '')), day: 'Today' }];
+                        }
+                        if (typeof Chart !== 'undefined') {
+                            updateSilverChart();
+                        }
+                        hideSilverLoading();
+                    } else {
+                        console.error('Silver price API error:', data.error);
+                        hideSilverLoading();
+                        document.getElementById('silver-price').textContent = 'Error';
+                    }
+                } catch (error) {
+                    console.error('🥈 Error fetching silver price:', error);
+                    hideSilverLoading();
+                }
+            }
+            
+            function updateSilverDisplay(data) {
+                const price = parseFloat(data.current_price.replace(/,/g, ''));
+                document.getElementById('silver-price').textContent = `CA$${price.toLocaleString('en-CA', {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                })}`;
+                
+                const changeAmount = parseFloat(data.change_amount.replace(/,/g, ''));
+                const isPositive = changeAmount >= 0;
+                
+                const changeColor = isPositive ? '#28a745' : '#dc3545';
+                const changeSymbol = isPositive ? '▲' : '▼';
+                
+                document.getElementById('silver-change').textContent = changeSymbol;
+                document.getElementById('silver-change').style.color = changeColor;
+                
+                const now = new Date();
+                const updateInfo = data.next_update ? ` • Next: ${data.next_update}` : '';
+                document.getElementById('silver-last-updated').textContent = `Updated: ${now.toLocaleTimeString()}${updateInfo}`;
+            }
+            
+            function updateSilverChart() {
+                console.log('🥈 updateSilverChart called with history:', silverPriceHistory);
+                const ctx = document.getElementById('silverChart').getContext('2d');
+                
+                if (silverChart) {
+                    silverChart.destroy();
+                }
+                
+                const chartData = silverPriceHistory.map(item => {
+                    if (typeof item === 'object' && item.price) {
+                        return parseFloat(item.price);
+                    } else {
+                        return parseFloat(item);
+                    }
+                });
+                
+                const chartLabels = silverPriceHistory.map((item, index) => {
+                    if (item.day) {
+                        return item.day;
+                    } else if (item.date) {
+                        const date = new Date(item.date);
+                        return date.toLocaleDateString('en-US', { weekday: 'short' });
+                    } else {
+                        return `Day ${index + 1}`;
+                    }
+                });
+                
+                const minPrice = Math.min(...chartData);
+                const maxPrice = Math.max(...chartData);
+                const padding = (maxPrice - minPrice) * 0.05 || 5;
+                
+                silverChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: chartLabels,
+                        datasets: [{
+                            label: 'Silver Price (CAD/oz)',
+                            data: chartData,
+                            borderColor: '#C0C0C0',
+                            backgroundColor: 'rgba(192, 192, 192, 0.1)',
+                            borderWidth: 3,
+                            fill: true,
+                            tension: 0.3,
+                            pointRadius: 5,
+                            pointBackgroundColor: '#C0C0C0',
+                            pointBorderColor: '#fff',
+                            pointBorderWidth: 2,
+                            pointHoverRadius: 7,
+                            pointHoverBackgroundColor: '#C0C0C0',
+                            pointHoverBorderColor: '#fff',
+                            pointHoverBorderWidth: 3
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                                padding: 12,
+                                titleColor: '#C0C0C0',
+                                bodyColor: '#fff',
+                                borderColor: '#C0C0C0',
+                                borderWidth: 1,
+                                callbacks: {
+                                    title: function(context) {
+                                        return context[0].label;
+                                    },
+                                    label: function(context) {
+                                        return `CA$${parseFloat(context.parsed.y).toLocaleString('en-CA', {
+                                            minimumFractionDigits: 2,
+                                            maximumFractionDigits: 2
+                                        })} /oz`;
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: false,
+                                min: Math.max(0, minPrice - padding),
+                                max: maxPrice + padding,
+                                grid: {
+                                    color: 'rgba(192, 192, 192, 0.1)',
+                                    drawBorder: false
+                                },
+                                ticks: {
+                                    color: '#666',
+                                    callback: function(value) {
+                                        return 'CA$' + parseFloat(value).toLocaleString('en-CA', {
+                                            maximumFractionDigits: 0
+                                        });
+                                    }
+                                }
+                            },
+                            x: {
+                                grid: {
+                                    display: false,
+                                    drawBorder: false
+                                },
+                                ticks: {
+                                    color: '#666',
+                                    maxRotation: 45,
+                                    minRotation: 0
+                                }
+                            }
+                        },
+                        interaction: {
+                            intersect: false,
+                            mode: 'index'
+                        }
+                    }
+                });
+                
+                console.log('🥈 Chart created successfully');
+            }
+
+            // Show skeleton loaders immediately on page load to prevent CLS
+            document.addEventListener('DOMContentLoaded', function() {
+                showGoldLoading();
+                showSilverLoading();
+            });
+
+            // Initial fetch for both metals
+            fetchGoldPrice();
+            fetchSilverPrice();
+            
+            // Check for updates every 5 minutes to catch scheduled updates
+            setInterval(fetchGoldPrice, 300000); // 5 minutes
+            setInterval(fetchSilverPrice, 300000); // 5 minutes
+            </script>
+            </p>
+        </div>
+        
+        <!-- Authorized Retailers Locator -->
+        <div style="background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(240,248,255,0.95)); margin: 60px 20px 40px; padding: 40px 30px; border-radius: 20px; box-shadow: 0 12px 35px rgba(0,0,0,0.15); max-width: 1200px; margin-left: auto; margin-right: auto;">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h2 style="color: #333; font-size: 2.2em; margin-bottom: 15px; font-weight: bold;">🏪 Find an Authorized Retailer</h2>
+                <p style="color: #666; font-size: 1.1em; line-height: 1.6; max-width: 700px; margin: 0 auto;">
+                    Discover Cadman Manufacturing jewelry at authorized retailers across Canada. Our trusted partners provide expert service and authentic Cadman products.
+                </p>
+            </div>
+            
+            <!-- Full-Width Interactive Map -->
+            <div style="background: rgba(255,255,255,0.9); padding: 25px; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.1); margin-bottom: 30px;">
+                
+                <!-- Leaflet Map Container with Zoom Toggle -->
+                <div style="position: relative; width: 100%; height: 500px; border-radius: 15px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.15);">
+                    <!-- Map placeholder prevents CLS; replaced once Leaflet loads -->
+                    <div id="map-placeholder" style="width:100%;height:500px;background:linear-gradient(135deg,#e8f0f8,#d0e4f7);display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:15px;">
+                        <div style="font-size:3em;">🗺️</div>
+                        <div style="color:#555;font-size:1em;margin-top:12px;">Map loading…</div>
+                    </div>
+                    <div id="canada-map" style="width:100%;height:500px;min-height:500px;display:none;"></div>
+                    
+                    <!-- Scroll Zoom Toggle Button -->
+                    <button id="scroll-zoom-toggle" onclick="toggleScrollZoom()" style="
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        z-index: 1000;
+                        background: rgba(255, 255, 255, 0.9);
+                        border: 2px solid #ccc;
+                        border-radius: 6px;
+                        padding: 8px 12px;
+                        cursor: pointer;
+                        font-size: 12px;
+                        font-weight: 500;
+                        color: #333;
+                        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+                        transition: all 0.3s ease;
+                        backdrop-filter: blur(5px);
+                    " onmouseover="this.style.background='rgba(255,255,255,1)'; this.style.borderColor='#0066CC';" onmouseout="this.style.background='rgba(255,255,255,0.9)'; this.style.borderColor='#ccc';">
+                        🖱️ Scroll Zoom: ON
+                    </button>
+                </div>
+                <div style="text-align: center; margin-top: 20px;">
+                    <p style="color: #666; font-size: 0.9em; margin-bottom: 15px;">
+                        📍 Interactive map showing all <strong><span id="retailer-count">loading...</span> authorized retailers</strong> across Canada<br>
+                        <small style="color: #999;">Click and drag to explore • Use zoom controls to find retailers near you</small>
+                    </p>
+                    <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                                <button id="view-all-btn" onclick="viewAllCanada()" style="background: linear-gradient(145deg, #0066CC, #004499); color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-size: 0.85em; font-weight: 500; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-1px)'" onmouseout="this.style.transform='translateY(0)'">
+                                    🇨🇦 View All Canada
+                                </button>
+                        <button id="find-nearest-btn" onclick="findnearme()" style="background: linear-gradient(145deg, #28a745, #1e7e34); color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-size: 0.85em; font-weight: 500; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-1px)'" onmouseout="this.style.transform='translateY(0)'">
+                            📍 Find Nearest
+                        </button>
+                        <button onclick="openSearchModal(); setTimeout(() => showAllRetailersList(), 100);" style="background: linear-gradient(145deg, #6c757d, #495057); color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-size: 0.85em; font-weight: 500; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-1px)'" onmouseout="this.style.transform='translateY(0)'">
+                            📋 View List
+                        </button>
+                        <a href="/retailers.php" style="display: inline-block; background: linear-gradient(145deg, #5a3e8c, #3d2a60); color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-size: 0.85em; font-weight: 500; transition: all 0.3s ease; text-decoration: none;" onmouseover="this.style.transform='translateY(-1px)'" onmouseout="this.style.transform='translateY(0)'">
+                            🗂️ All Retailers
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Become a Retailer Section -->
+            <div style="margin-top: 40px; padding: 25px; background: linear-gradient(135deg, rgba(0,102,204,0.1), rgba(0,102,204,0.05)); border-radius: 15px; border-left: 4px solid #0066CC; text-align: center;">
+                <h3 style="color: #0066CC; margin-bottom: 15px; font-size: 1.3em;">Interested in becoming an authorized retailer?</h3>
+                <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">Join our network of trusted partners and offer your customers exceptional Cadman Manufacturing jewelry. We provide comprehensive support, training, and marketing materials.</p>
+                <a href="javascript:void(0);" onclick="openContactModalWithTracking(&quot;Homepage&quot;, &quot;Become a Retailer CTA&quot;, &quot;I am interested in becoming an authorized Cadman Manufacturing retailer. Please provide information about partnership opportunities.&quot;);" style="display: inline-block; background: linear-gradient(145deg, #0066CC, #004499); color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,102,204,0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(0,102,204,0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,102,204,0.3)';"  >
+                    🤝 Partner With Us
+                </a>
+            </div>
+        </div>
+        
+        <!-- Enhanced Retailer Map JavaScript -->
+        <script>
+        console.log('🚀 Retailer Map JavaScript loading...');
+        
+        // Global variables for retailer map functionality (using var for true global scope)
+        var retailerMap;
+        var currentSearchResults = [];
+        var mapMarkers = [];
+        var allRetailersCluster; // Make cluster group globally accessible
+        var clusteringDisabled = false; // Track if clustering was manually disabled
+        
+        // Retailer locations data - Loaded dynamically from XML (using var for HTML onclick access)
+        var retailerLocations = [];
+        var retailerDataLoaded = false;
+        
+        console.log('🔧 Global variables declared with var for proper scope access');
+        
+        // Load retailer data from JSON/XML files
+        async function loadRetailerData() {
+            try {
+                console.log('Loading retailers from API...');
+                
+                // Try to load from retailers API first with cache-busting
+                const timestamp = Date.now();
+                let response = await fetch(`retailers_api.php?_t=${timestamp}&v=2025.11.28`);
+                if (!response.ok) {
+                    throw new Error('Failed to load retailers_api.php: ' + response.status);
+                }
+                
+                const data = await response.json();
+                console.log('Successfully loaded ' + data.length + ' retailers from database API');
+                
+                retailerLocations = data;
+                retailerDataLoaded = true;
+                
+                // Update the retailer count display
+                const countElement = document.getElementById('retailer-count');
+                if (countElement) {
+                    countElement.textContent = data.length;
+                    console.log('Updated retailer count display to:', data.length);
+                }
+                
+                // Initialize map with loaded data
+                if (typeof L !== 'undefined') {
+                    initializeLeafletMapWithData();
+                }
+                
+                return data;
+                
+            } catch (error) {
+                console.log('API failed, trying XML conversion:', error);
+                
+                // Fallback: try XML to JSON conversion with cache-busting
+                try {
+                    const xmlTimestamp = Date.now();
+                    const response = await fetch(`xml_to_json.php?_t=${xmlTimestamp}`);
+                    const data = await response.json();
+                    console.log('XML fallback successful: ' + data.length + ' retailers');
+                    
+                    retailerLocations = data;
+                    retailerDataLoaded = true;
+                    
+                    // Update the retailer count display
+                    const countElement = document.getElementById('retailer-count');
+                    if (countElement) {
+                        countElement.textContent = data.length;
+                    }
+                    
+                    if (typeof L !== 'undefined') {
+                        initializeLeafletMapWithData();
+                    }
+                    
+                    return data;
+                    
+                } catch (xmlError) {
+                    console.error('Both API and XML failed:', xmlError);
+                    
+                    // Final fallback to sample data
+                    retailerLocations = [
+                        {
+                            name: "Sample Retailer",
+                            address: "123 Main Street, Toronto, ON M5H 2M5",
+                            phone: "(416) 555-0123",
+                            lat: 43.6532,
+                            lng: -79.3832,
+                            city: "Toronto",
+                            province: "ON"
+                        }
+                    ];
+                    retailerDataLoaded = true;
+                    
+                    const countElement = document.getElementById('retailer-count');
+                    if (countElement) {
+                        countElement.textContent = retailerLocations.length;
+                    }
+                    
+                    if (typeof L !== 'undefined') {
+                        initializeLeafletMapWithData();
+                    }
+                    
+                    return retailerLocations;
+                }
+            }
+        }
+
+        // ================================
+        // MAP CONTROL FUNCTIONS  
+        // ================================
+        
+        // View All Canada - Toggles between clustered and individual marker views
+        function viewAllCanada() {
+            console.log('🇨🇦 View All Canada button clicked');
+            
+            try {
+                // Check if map exists
+                if (!retailerMap) {
+                    console.error('❌ Map not initialized yet');
+                    alert('Map is still loading, please wait a moment and try again.');
+                    return;
+                }
+                
+                console.log('✅ Map found, showing all of Canada');
+                
+                // Set view to show all of Canada  
+                retailerMap.setView([56.0, -96.0], 4);
+                console.log('✅ Map centered on Canada');
+                
+                if (!retailerDataLoaded || !mapMarkers || mapMarkers.length === 0) {
+                    console.log('⚠️ No retailer data yet, showing Canada center');
+                    return;
+                }
+                
+                // Toggle between clustered and individual views
+                if (clusteringDisabled) {
+                    // Currently showing individual markers - switch to clustered view
+                    console.log('🔄 Switching to clustered view');
+                    restoreClustering();
+                    
+                    // Fit bounds with clustering  
+                    if (allRetailersCluster && retailerMap.hasLayer(allRetailersCluster)) {
+                        const bounds = allRetailersCluster.getBounds();
+                        retailerMap.fitBounds(bounds, { 
+                            padding: [30, 30], 
+                            maxZoom: 5 
+                        });
+                        console.log('✅ Showing clustered view of Canada');
+                    }
+                    
+                } else {
+                    // Currently showing clustered view - switch to individual markers
+                    console.log('✅ Found', mapMarkers.length, 'retailers, switching to individual markers');
+                    
+                    // Remove clustered layer
+                    if (allRetailersCluster && retailerMap.hasLayer(allRetailersCluster)) {
+                        retailerMap.removeLayer(allRetailersCluster);
+                        console.log('✅ Removed clustering layer');
+                    }
+                    
+                    // Add individual markers directly to map
+                    let markerBounds = L.latLngBounds();
+                    mapMarkers.forEach(function(marker) {
+                        retailerMap.addLayer(marker);
+                        markerBounds.extend(marker.getLatLng());
+                    });
+                    
+                    console.log('✅ Added', mapMarkers.length, 'individual markers to map');
+                    
+                    // Fit bounds to show all markers
+                    if (markerBounds.isValid()) {
+                        retailerMap.fitBounds(markerBounds, { 
+                            padding: [30, 30], 
+                            maxZoom: 5 
+                        });
+                        console.log('✅ Fit bounds to show all individual markers');
+                    }
+                    
+                    // Mark clustering as disabled
+                    clusteringDisabled = true;
+                }
+                
+                console.log('🎉 View All Canada completed -', clusteringDisabled ? 'individual markers' : 'clustered view');
+                
+            } catch (error) {
+                console.error('❌ Error in viewAllCanada:', error);
+                alert('Error showing map. Please refresh and try again.');
+            }
+        }
+
+        // Function to restore clustering
+        function restoreClustering() {
+            if (!clusteringDisabled || !retailerMap || !allRetailersCluster) return;
+            
+            console.log('🔄 Restoring clustering at zoom level', retailerMap.getZoom());
+            
+            try {
+                // Remove individual markers
+                mapMarkers.forEach(function(marker) {
+                    if (retailerMap.hasLayer(marker)) {
+                        retailerMap.removeLayer(marker);
+                    }
+                });
+                
+                // Re-add the cluster layer
+                retailerMap.addLayer(allRetailersCluster);
+                clusteringDisabled = false;
+                
+                console.log('✅ Clustering restored successfully');
+            } catch (error) {
+                console.error('❌ Error restoring clustering:', error);
+            }
+        }
+        
+        // Legacy function name support
+        function viewAllRetailers() {
+            viewAllCanada();
+        }
+        
+        // ================================
+        // RETAILER MAP FUNCTIONS - LEAFLET IMPLEMENTATION
+        // ================================
+        
+        // Show loading overlay on map
+        function showMapLoading(message) {
+            const mapContainer = document.getElementById('canada-map');
+            if (!mapContainer) return;
+            
+            // Remove existing overlay if present
+            const existing = document.getElementById('map-loading-overlay');
+            if (existing) existing.remove();
+            
+            const overlay = document.createElement('div');
+            overlay.id = 'map-loading-overlay';
+            overlay.innerHTML = `
+                <div style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: rgba(0, 0, 0, 0.7);
+                    backdrop-filter: blur(5px);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 1000;
+                    border-radius: 15px;
+                ">
+                    <div style="
+                        background: white;
+                        padding: 30px 40px;
+                        border-radius: 15px;
+                        box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+                        text-align: center;
+                        max-width: 300px;
+                    ">
+                        <div class="loading-spinner" style="
+                            width: 50px;
+                            height: 50px;
+                            border: 4px solid #f3f3f3;
+                            border-top: 4px solid #28a745;
+                            border-radius: 50%;
+                            animation: spin 1s linear infinite;
+                            margin: 0 auto 20px;
+                        "></div>
+                        <div style="color: #333; font-size: 16px; font-weight: 600; margin-bottom: 10px;">
+                            ${message || 'Finding your location...'}
+                        </div>
+                        <div style="color: #666; font-size: 13px;">
+                            Please wait
+                        </div>
+                    </div>
+                </div>
+            `;
+            mapContainer.appendChild(overlay);
+        }
+        
+        // Hide loading overlay
+        function hideMapLoading() {
+            const overlay = document.getElementById('map-loading-overlay');
+            if (overlay) {
+                overlay.style.opacity = '0';
+                overlay.style.transition = 'opacity 0.3s ease';
+                setTimeout(() => overlay.remove(), 300);
+            }
+        }
+        
+        // Show toast notification on map
+        function showMapNotification(title, message, type = 'info') {
+            const mapContainer = document.getElementById('canada-map');
+            if (!mapContainer) return;
+            
+            const colors = {
+                success: { bg: '#28a745', border: '#1e7e34' },
+                error: { bg: '#dc3545', border: '#bd2130' },
+                info: { bg: '#0066CC', border: '#004499' }
+            };
+            
+            const color = colors[type] || colors.info;
+            
+            const notification = document.createElement('div');
+            notification.className = 'map-notification';
+            notification.innerHTML = `
+                <div style="
+                    position: absolute;
+                    top: 20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: ${color.bg};
+                    color: white;
+                    padding: 15px 25px;
+                    border-radius: 10px;
+                    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+                    z-index: 1001;
+                    max-width: 90%;
+                    text-align: center;
+                    animation: slideDown 0.3s ease;
+                    border: 2px solid ${color.border};
+                ">
+                    <div style="font-weight: bold; font-size: 15px; margin-bottom: 5px;">${title}</div>
+                    <div style="font-size: 13px; opacity: 0.95;">${message}</div>
+                </div>
+            `;
+            
+            mapContainer.appendChild(notification);
+            
+            // Auto-remove after 4 seconds
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                notification.style.transition = 'opacity 0.3s ease';
+                setTimeout(() => notification.remove(), 300);
+            }, 4000);
+        }
+        
+        // Find nearest retailers using geolocation
+        function findnearme() {
+            console.log('📍 Finding nearest retailer...');
+            
+            try {
+                // Check if we have retailer data first
+                if (!retailerDataLoaded || !retailerLocations || retailerLocations.length === 0) {
+                    alert('Retailer data is still loading. Please wait a moment and try again.');
+                    return;
+                }
+                
+                // Check if page is served over HTTPS (required for geolocation)
+                if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
+                    alert('🔒 Location services require a secure connection.\n\nPlease use our search to find retailers in your area.');
+                    return;
+                }
+                
+                // Check geolocation support
+                if (!navigator.geolocation) {
+                    alert('🚫 Your browser doesn\'t support location services.\n\nPlease use our search to find retailers in your area.');
+                    return;
+                }
+                
+                // Show loading overlay
+                showMapLoading('📍 Finding your location...');
+                
+                // Request geolocation
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const userLat = position.coords.latitude;
+                        const userLng = position.coords.longitude;
+                        console.log('✅ Got location:', userLat, userLng);
+                        
+                        // Calculate distances to all retailers
+                        const retailersWithDistance = retailerLocations.map(retailer => {
+                            const distance = calculateDistance(userLat, userLng, retailer.lat, retailer.lng);
+                            return {
+                                ...retailer,
+                                distance: distance
+                            };
+                        });
+                        
+                        // Sort by distance and get nearest
+                        retailersWithDistance.sort((a, b) => a.distance - b.distance);
+                        const nearest = retailersWithDistance[0];
+                        
+                        console.log('🎯 Nearest retailer:', nearest.name, 'Distance:', nearest.distance.toFixed(2), 'km');
+                        
+                        // Hide loading overlay
+                        hideMapLoading();
+                        
+                        // Center map on user's location
+                        if (retailerMap) {
+                            retailerMap.setView([userLat, userLng], 10);
+                            
+                            // Add a marker for user's location
+                            const userMarker = L.marker([userLat, userLng], {
+                                icon: L.divIcon({
+                                    className: 'user-location-marker',
+                                    html: '<div style="background: #4285F4; width: 20px; height: 20px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 6px rgba(0,0,0,0.3);"></div>',
+                                    iconSize: [20, 20],
+                                    iconAnchor: [10, 10]
+                                })
+                            }).addTo(retailerMap);
+                            
+                            userMarker.bindPopup('<div style="text-align: center; padding: 10px;"><strong>📍 Your Location</strong></div>');
+                            
+                            // Find and open the nearest retailer's popup
+                            mapMarkers.forEach(marker => {
+                                const markerPos = marker.getLatLng();
+                                if (Math.abs(markerPos.lat - nearest.lat) < 0.0001 && 
+                                    Math.abs(markerPos.lng - nearest.lng) < 0.0001) {
+                                    // Open popup with enhanced content showing distance
+                                    marker.openPopup();
+                                }
+                            });
+                            
+                            // Show success toast notification
+                            showMapNotification(
+                                '✅ Nearest Retailer Found!',
+                                `${nearest.name}<br>${nearest.distance.toFixed(2)} km away`,
+                                'success'
+                            );
+                        }
+                    },
+                    (error) => {
+                        console.error('❌ Geolocation error:', error);
+                        
+                        // Hide loading overlay
+                        hideMapLoading();
+                        
+                        let errorMsg = 'Location access failed. ';
+                        
+                        switch(error.code) {
+                            case error.PERMISSION_DENIED:
+                                errorMsg += 'You denied location access.';
+                                break;
+                            case error.POSITION_UNAVAILABLE:
+                                errorMsg += 'Location information unavailable.';
+                                break;
+                            case error.TIMEOUT:
+                                errorMsg += 'Location request timed out.';
+                                break;
+                            default:
+                                errorMsg += error.message;
+                        }
+                        
+                        alert(errorMsg + '\n\nPlease use the search to find retailers in your area.');
+                    },
+                    {
+                        enableHighAccuracy: true,
+                        timeout: 15000,
+                        maximumAge: 300000
+                    }
+                );
+                
+            } catch (error) {
+                console.error('Error finding nearest retailer:', error);
+                alert('An error occurred while finding the nearest retailer. Please try again or use the search function.');
+            }
+        }
+        
+        // Calculate distance between coordinates (Haversine formula)
+        function calculateDistance(lat1, lng1, lat2, lng2) {
+            const R = 6371; // Earth's radius in kilometers
+            const dLat = (lat2 - lat1) * Math.PI / 180;
+            const dLng = (lng2 - lng1) * Math.PI / 180;
+            const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+                     Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                     Math.sin(dLng/2) * Math.sin(dLng/2);
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+            return R * c;
+        }
+        
+        // ================================
+        // LEAFLET MAP IMPLEMENTATION (NO API KEY REQUIRED)
+        // ================================
+        
+        // Initialize Leaflet Map (No API Key Required) - Now loads data dynamically
+        function initializeLeafletMap() {
+            // Load retailer data first, map will be initialized from loadRetailerData
+            loadRetailerData();
+        }
+        
+        // Initialize Leaflet Map with loaded retailer data
+        function initializeLeafletMapWithData() {
+            if (!retailerDataLoaded) {
+                console.log('Waiting for retailer data to load...');
+                return;
+            }
+            
+            try {
+                // Initialize map centered on Canada with Cadman-inspired configuration
+                retailerMap = L.map('canada-map', {
+                    center: [56.0, -96.0], // Adjust center to better show all of Canada
+                    zoom: 4, // Zoom out to show all of Canada in frame
+                    zoomControl: true,
+                    scrollWheelZoom: true,  // Enable scroll zoom for better user experience
+                    attributionControl: false, // Remove attribution for cleaner appearance (like Cadman)
+                    doubleClickZoom: true,
+                    touchZoom: true,
+                    maxZoom: 18              // Prevent over-zooming (like Cadman)
+                });
+
+                // Add CartoDB tile layer (same as Cadman Manufacturing uses)
+                L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png', {
+                    maxZoom: 18,
+                    subdomains: 'abcd'
+                }).addTo(retailerMap);
+
+                // Add zoom event listener to restore clustering when zooming in
+                retailerMap.on('zoomend', function() {
+                    const currentZoom = retailerMap.getZoom();
+                    // If clustering was disabled by "View All Canada" and user zooms in beyond level 6, restore clustering
+                    if (clusteringDisabled && currentZoom > 6) {
+                        restoreClustering();
+                    }
+                });
+
+                // Create custom shield icon matching Cadman's logo crest design using SVG
+                // Create custom icon using logo.png as the map pin with enhanced styling
+                const customIcon = L.icon({
+                    iconUrl: 'PNG/logo.png',
+                    iconSize: [35, 50], // Slightly larger for better visibility
+                    iconAnchor: [17, 50], // Bottom center of the icon
+                    popupAnchor: [0, -50], // Position popup above the icon
+                    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
+                    shadowSize: [50, 64],
+                    shadowAnchor: [4, 62],
+                    className: 'cadman-marker' // Add custom class for styling
+                });
+
+                // Add markers for each retailer from loaded data
+                console.log('Adding', retailerLocations.length, 'retailer markers to map');
+                
+                // Create a single marker cluster group with province-aware clustering
+                allRetailersCluster = L.markerClusterGroup({
+                    disableClusteringAtZoom: 10, // Show individual markers at zoom 10 and higher (was 13)
+                    maxClusterRadius: function(zoom) {
+                        // Improved clustering radius for better "View All Canada" experience
+                        if (zoom <= 3) return 60;       // Very tight clustering at country level
+                        if (zoom <= 4) return 80;       // Small clusters to show more individual markers
+                        if (zoom <= 6) return 100;      // Regional clustering
+                        if (zoom <= 8) return 80;       // City-area clustering
+                        if (zoom <= 10) return 60;      // Town clustering
+                        return 40;                       // Tight clustering before individual markers
+                    },
+                    spiderfyOnMaxZoom: true,
+                    showCoverageOnHover: false,
+                    zoomToBoundsOnClick: true,
+                    spiderfyDistanceMultiplier: 1.2,
+                    iconCreateFunction: function(cluster) {
+                        const count = cluster.getChildCount();
+                        
+                        return L.divIcon({
+                            html: `<div class="cadman-cluster-icon" style="
+                                position: relative;
+                                width: 35px; 
+                                height: 50px;
+                                background-image: url('PNG/logo.png'); 
+                                background-size: contain; 
+                                background-repeat: no-repeat; 
+                                background-position: center;
+                                filter: drop-shadow(0 3px 6px rgba(0,0,0,0.3));
+                            ">
+                                <span style="
+                                    position: absolute;
+                                    top: -8px;
+                                    right: -8px;
+                                    background: #dc2626;
+                                    color: white;
+                                    border-radius: 50%;
+                                    width: 22px;
+                                    height: 22px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    font-size: 11px;
+                                    font-weight: bold;
+                                    border: 2px solid white;
+                                    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+                                ">${count}</span>
+                            </div>`,
+                            className: 'cadman-cluster-wrapper',
+                            iconSize: [35, 50],
+                            iconAnchor: [17, 50]
+                        });
+                    }
+                });
+                
+                // Add all retailers to the single cluster group
+                retailerLocations.forEach(retailer => {
+                    // Skip retailers with default coordinates (50, -100)
+                    if (retailer.lat == 50 && retailer.lng == -100) {
+                        console.log('Skipping retailer with default coordinates:', retailer.name);
+                        return;
+                    }
+                    
+                    const marker = L.marker([retailer.lat, retailer.lng], { icon: customIcon })
+                        .bindPopup(`
+                            <div style="padding: 15px; min-width: 280px; font-family: 'Segoe UI', sans-serif;">
+                                <h4 style="margin: 0 0 12px 0; color: #0066CC; font-size: 18px; font-weight: 600;">${retailer.name}</h4>
+                                <div style="margin-bottom: 8px;">
+                                    <span style="color: #666; font-size: 14px;">📍 ${retailer.address}</span>
+                                </div>
+                                ${retailer.phone ? `<div style="margin-bottom: 8px;">
+                                    <span style="color: #666; font-size: 14px;">📞 ${retailer.phone}</span>
+                                </div>` : ''}
+                                <div style="margin-bottom: 12px;">
+                                    <span style="color: #999; font-size: 13px; font-style: italic;">${retailer.city}, ${retailer.province}</span>
+                                </div>
+                                <div style="border-top: 1px solid #eee; padding-top: 12px; margin-top: 12px; display: flex; gap: 8px;">
+                                    <a href="https://www.google.com/maps/dir//${encodeURIComponent(retailer.address)}" 
+                                       target="_blank" 
+                                       style="background: linear-gradient(145deg, #0066CC, #004499); color: white; padding: 8px 15px; border-radius: 6px; text-decoration: none; font-size: 12px; font-weight: 600; display: inline-block; transition: all 0.3s ease; box-shadow: 0 2px 5px rgba(0,102,204,0.3);">
+                                        🗺️ Get Directions
+                                    </a>
+                                    ${retailer.phone ? `<a href="tel:${retailer.phone}" 
+                                       style="background: linear-gradient(145deg, #28a745, #1e7e34); color: white; padding: 8px 15px; border-radius: 6px; text-decoration: none; font-size: 12px; font-weight: 600; display: inline-block; transition: all 0.3s ease; box-shadow: 0 2px 5px rgba(40,167,69,0.3);">
+                                        📞 Call
+                                    </a>` : ''}
+                                </div>
+                            </div>
+                        `);
+                
+                    allRetailersCluster.addLayer(marker);
+                    mapMarkers.push(marker);
+                });
+                
+                // Add the cluster group to the map
+                retailerMap.addLayer(allRetailersCluster);
+                
+                console.log('Added', mapMarkers.length, 'valid retailers to map with dynamic zoom-based clustering');
+
+                // Set custom view instead of fitBounds to maintain our zoom settings
+                const canadaBounds = L.latLngBounds([
+                    [41.0, -141.001], // Southwest corner - extended to ensure all Maritime provinces are accessible
+                    [83.114, -52.648]   // Northeast corner
+                ]);
+                
+                // Use setView to maintain our custom zoom and center, but ensure all of Canada is accessible
+                retailerMap.setMaxBounds(canadaBounds);
+                retailerMap.setView([56.0, -96.0], 4); // Show all of Canada in frame
+                
+                // Initialize scroll zoom toggle button state
+                const toggleButton = document.getElementById('scroll-zoom-toggle');
+                if (toggleButton && retailerMap.scrollWheelZoom.enabled()) {
+                    toggleButton.style.background = 'rgba(200, 255, 200, 0.9)';
+                    toggleButton.style.borderColor = '#66cc66';
+                }
+                
+            } catch (error) {
+                showLeafletFallback();
+            }
+        }
+
+        // Fallback message if Leaflet map fails to load
+        function showLeafletFallback() {
+            const mapContainer = document.getElementById('canada-map');
+            if (mapContainer) {
+                mapContainer.innerHTML = `
+                    <div style="
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 100%;
+                        background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+                        border-radius: 15px;
+                        flex-direction: column;
+                        text-align: center;
+                        padding: 40px;
+                    ">
+                        <div style="font-size: 3em; margin-bottom: 20px;">🗺️</div>
+                        <p style="color: #666; margin-bottom: 20px;">Map temporarily unavailable</p>
+                        <a href="https://www.openstreetmap.org/#map=4/60/-95" target="_blank" 
+                           style="background: #0066CC; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none;">
+                            View on OpenStreetMap
+                        </a>
+                    </div>
+                `;
+            }
+        }
+
+        // Updated initialization to use Leaflet instead of Google Maps
+        function initMapWhenReady() {
+            // Wait a bit for Leaflet to be fully loaded
+            if (typeof L !== 'undefined') {
+                initializeLeafletMap();
+            } else {
+                setTimeout(() => {
+                    if (typeof L !== 'undefined') {
+                        initializeLeafletMap();
+                    } else {
+                        showLeafletFallback();
+                    }
+                }, 1000);
+            }
+        }
+        
+        // ---- Lazy-load Leaflet when the map section enters the viewport ----
+        (function() {
+            var mapSection = document.getElementById('map-placeholder') ||
+                             document.getElementById('canada-map');
+            if (!mapSection) return;
+
+            var leafletLoaded = false;
+
+            function loadLeafletAndInit() {
+                if (leafletLoaded) return;
+                leafletLoaded = true;
+
+                // Reveal the real map div, hide placeholder
+                var placeholder = document.getElementById('map-placeholder');
+                var mapDiv = document.getElementById('canada-map');
+                if (placeholder) placeholder.style.display = 'none';
+                if (mapDiv) mapDiv.style.display = '';
+
+                // Load Leaflet CSS
+                var lCSS = document.createElement('link');
+                lCSS.rel = 'stylesheet';
+                lCSS.href = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css';
+                document.head.appendChild(lCSS);
+
+                // Load MarkerCluster CSS
+                var mcCSS1 = document.createElement('link');
+                mcCSS1.rel = 'stylesheet';
+                mcCSS1.href = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css';
+                document.head.appendChild(mcCSS1);
+
+                var mcCSS2 = document.createElement('link');
+                mcCSS2.rel = 'stylesheet';
+                mcCSS2.href = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css';
+                document.head.appendChild(mcCSS2);
+
+                // Load Leaflet JS, then MarkerCluster JS, then init map
+                var lJS = document.createElement('script');
+                lJS.src = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js';
+                lJS.onload = function() {
+                    var mcJS = document.createElement('script');
+                    mcJS.src = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js';
+                    mcJS.onload = function() {
+                        initializeLeafletMap();
+                    };
+                    document.head.appendChild(mcJS);
+                };
+                document.head.appendChild(lJS);
+            }
+
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function(entries) {
+                    if (entries[0].isIntersecting) {
+                        observer.disconnect();
+                        loadLeafletAndInit();
+                    }
+                }, { rootMargin: '200px' });
+                observer.observe(mapSection);
+            } else {
+                // Fallback for old browsers: load after page load
+                window.addEventListener('load', loadLeafletAndInit);
+            }
+        })();
+        
+        // ================================
+        // SEARCH FUNCTIONALITY
+        // ================================
+        // Search modal functions are now loaded from js/search_modal.js
+        
+        // Toggle scroll zoom functionality
+        function toggleScrollZoom() {
+            const toggleButton = document.getElementById('scroll-zoom-toggle');
+            
+            if (retailerMap.scrollWheelZoom.enabled()) {
+                // Disable scroll zoom
+                retailerMap.scrollWheelZoom.disable();
+                toggleButton.innerHTML = '🖱️ Scroll Zoom: OFF';
+                toggleButton.style.background = 'rgba(255, 200, 200, 0.9)';
+                toggleButton.style.borderColor = '#ff6666';
+                console.log('Scroll zoom disabled');
+            } else {
+                // Enable scroll zoom
+                retailerMap.scrollWheelZoom.enable();
+                toggleButton.innerHTML = '🖱️ Scroll Zoom: ON';
+                toggleButton.style.background = 'rgba(200, 255, 200, 0.9)';
+                toggleButton.style.borderColor = '#66cc66';
+                console.log('Scroll zoom enabled');
+            }
+        }
+        
+        // Verify functions are loaded
+        console.log('✅ Retailer Map JavaScript loaded successfully');
+        console.log('✅ Available functions:', { 
+            viewAllCanada: typeof viewAllCanada, 
+            viewAllRetailers: typeof viewAllRetailers,
+            findnearme: typeof findnearme,
+            restoreClustering: typeof restoreClustering,
+            calculateDistance: typeof calculateDistance
+        });
+        
+        // Test function execution
+        console.log('🔧 Testing findnearme function availability...');
+        if (typeof findnearme === 'function') {
+            console.log('✅ findnearme is properly defined as a function');
+            
+            // Test manual execution
+            window.testFindNearest = function() {
+                console.log('🧪 MANUAL TEST: Calling findnearme directly');
+                findnearme();
+            };
+            console.log('🧪 Added window.testFindNearest() for manual testing');
+            
+        } else {
+            console.error('❌ findnearme is NOT defined as a function, type is:', typeof findnearme);
+        }
+        
+        // Make functions globally accessible BEFORE any potential calls
+        window.findnearme = findnearme;
+        window.viewAllCanada = viewAllCanada;
+        
+        // Also ensure they're accessible in global scope
+        if (typeof window !== 'undefined') {
+            window.retailerDataLoaded = function() { return retailerDataLoaded; };
+            window.getRetailerLocations = function() { return retailerLocations; };
+        }
+        
+        console.log('🌍 Functions and data accessors made globally accessible');
+        console.log('✅ Scope verification:', {
+            findnearme: typeof findnearme,
+            viewAllCanada: typeof viewAllCanada,
+            retailerDataLoaded: typeof retailerDataLoaded,
+            retailerLocations: typeof retailerLocations
+        });
+        </script>
+        
+        <!-- Custom CSS for Leaflet markers and animations -->
+        <style>
+        .custom-marker {
+            background: transparent !important;
+            border: none !important;
+        }
+        
+        .leaflet-popup-content-wrapper {
+            border-radius: 10px !important;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15) !important;
+        }
+        
+        .leaflet-popup-tip {
+            background: white !important;
+        }
+        
+        /* User location marker animation */
+        .user-location-marker {
+            animation: userLocationPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes userLocationPulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        /* Loading spinner animation */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Notification slide down animation */
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+        
+        /* Ensure Leaflet zoom controls are properly styled and positioned */
+        .leaflet-control-zoom {
+            border: none !important;
+            border-radius: 6px !important;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2) !important;
+        }
+        
+        .leaflet-control-zoom a {
+            background-color: white !important;
+            color: #333 !important;
+            border: none !important;
+            border-radius: 0 !important;
+            width: 30px !important;
+            height: 30px !important;
+            line-height: 30px !important;
+            text-align: center !important;
+            text-decoration: none !important;
+            font-size: 18px !important;
+            font-weight: bold !important;
+        }
+        
+        .leaflet-control-zoom a:hover {
+            background-color: #f0f0f0 !important;
+            color: #0066CC !important;
+        }
+        
+        .leaflet-control-zoom a:first-child {
+            border-top-left-radius: 6px !important;
+            border-top-right-radius: 6px !important;
+        }
+        
+        .leaflet-control-zoom a:last-child {
+            border-bottom-left-radius: 6px !important;
+            border-bottom-right-radius: 6px !important;
+        }
+        
+        /* Ensure map container has proper positioning */
+        #canada-map {
+            position: relative !important;
+            z-index: 1 !important;
+        }
+        
+        /* Continuous Scrolling Carousel Styles */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 200px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            background: linear-gradient(45deg, rgba(255,215,0,0.1), rgba(255,255,255,0.05));
+        }
+        
+        .carousel-track {
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            animation: scrollRight 60s linear infinite;
+            gap: 20px;
+            align-items: center;
+            padding: 20px 0;
+            will-change: transform;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            transform: translateZ(0);
+            -webkit-transform: translateZ(0);
+        }
+        
+        .carousel-track.paused {
+            animation-play-state: paused;
+        }
+        
+        .carousel-item {
+            flex: none;
+            width: 160px;
+            height: 160px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            border: 3px solid transparent;
+        }
+        
+        .carousel-item:hover {
+            transform: scale(1.15);
+            box-shadow: 0 15px 40px rgba(255,215,0,0.4);
+            border-color: #FFD700;
+            z-index: 5;
+        }
+        
+        .carousel-item.celtic {
+            border-color: rgba(34, 139, 34, 0.5);
+        }
+        
+        .carousel-item.regular {
+            border-color: rgba(70, 130, 180, 0.5);
+        }
+        
+        .carousel-item:hover.celtic {
+            border-color: #228B22;
+            box-shadow: 0 15px 40px rgba(34, 139, 34, 0.4);
+        }
+        
+        .carousel-item:hover.regular {
+            border-color: #4682B4;
+            box-shadow: 0 15px 40px rgba(70, 130, 180, 0.4);
+        }
+        
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        
+        .carousel-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .carousel-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 30%;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .carousel-item:hover::after {
+            opacity: 1;
+        }
+        
+        .item-label {
+            position: absolute;
+            bottom: 8px;
+            left: 8px;
+            right: 8px;
+            color: white;
+            font-size: 11px;
+            font-weight: bold;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+        }
+        
+        .carousel-item:hover .item-label {
+            opacity: 1;
+        }
+        
+        .pause-button {
+            background: rgba(0,0,0,0.7);
+            color: #FFD700;
+            border: 2px solid #FFD700;
+            border-radius: 25px;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+        
+        .pause-button:hover {
+            background: rgba(255,215,0,0.2);
+            transform: scale(1.05);
+        }
+        
+        .pause-button.playing {
+            color: #4CAF50;
+            border-color: #4CAF50;
+        }
+        
+        @keyframes scrollRight {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        
+        /* Mobile Responsive Carousel */
+        @media (max-width: 768px) {
+            .carousel-section {
+                padding: 20px 0 !important;
+                margin-top: 5px !important;
+            }
+            
+            .carousel-container {
+                height: 140px !important;
+                margin: 0 10px;
+                overflow: hidden;
+            }
+            
+            .carousel-track {
+                gap: 20px !important;
+                padding: 10px 0 !important;
+                animation: scrollRight 40s linear infinite !important;
+            }
+            
+            .carousel-item {
+                width: 120px !important;
+                height: 120px !important;
+                flex-shrink: 0;
+                min-width: 120px;
+            }
+            
+            .carousel-item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            
+            .item-label {
+                font-size: 0.7em !important;
+                padding: 2px 4px !important;
+            }
+            
+            .pause-button {
+                padding: 8px 12px !important;
+                font-size: 12px !important;
+            }
+            
+            /* Hide carousel section titles on mobile for more space */
+            .carousel-section h2 {
+                font-size: 1.8em !important;
+                margin-bottom: 15px !important;
+            }
+            
+            .carousel-section p {
+                font-size: 1em !important;
+                margin-bottom: 20px !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .carousel-section {
+                padding: 15px 0 !important;
+                margin: 5px !important;
+            }
+            
+            .carousel-container {
+                height: 120px !important;
+                margin: 0 5px;
+            }
+            
+            .carousel-track {
+                gap: 15px !important;
+                padding: 5px 0 !important;
+                animation: scrollRight 35s linear infinite !important;
+            }
+            
+            .carousel-item {
+                width: 100px !important;
+                height: 100px !important;
+                min-width: 100px;
+            }
+            
+            .carousel-section h2 {
+                font-size: 1.5em !important;
+                margin-bottom: 10px !important;
+            }
+            
+            .carousel-section p {
+                font-size: 0.9em !important;
+                margin-bottom: 15px !important;
+            }
+        }
+        
+        /* Enhanced Gallery Styles */
+        #prevThumbnail:hover img, #nextThumbnail:hover img {
+            opacity: 1 !important;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important;
+        }
+        
+        /* Responsive gallery adjustments */
+        @media (max-width: 768px) {
+            .midimg > div {
+                flex-direction: column !important;
+                gap: 15px !important;
+            }
+            
+            #prevThumbnail, #nextThumbnail {
+                display: none !important;
+            }
+            
+            #midimg {
+                max-width: 90% !important;
+            }
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+            50% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+            100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+        }
+        
+        /* Static map pin animations */
+        @keyframes pinPulse {
+            0% { box-shadow: 0 2px 8px rgba(0,102,204,0.4); }
+            50% { box-shadow: 0 4px 15px rgba(0,102,204,0.7); }
+            100% { box-shadow: 0 2px 8px rgba(0,102,204,0.4); }
+        }
+        
+        @keyframes pinHighlight {
+            0% { transform: translate(-50%, -50%) scale(1); background: linear-gradient(145deg, #0066CC, #004499); }
+            50% { transform: translate(-50%, -50%) scale(1.5); background: linear-gradient(145deg, #ff6b35, #e55100); }
+            100% { transform: translate(-50%, -50%) scale(1); background: linear-gradient(145deg, #0066CC, #004499); }
+        }
+        
+        /* Static pin hover effects */
+        .static-pin:hover .pin-tooltip {
+            opacity: 1 !important;
+        }
+        
+        .static-pin:hover div:first-child {
+            transform: scale(1.3) !important;
+            box-shadow: 0 4px 15px rgba(0,102,204,0.8) !important;
+        }
+        
+        /* Mobile Responsive Styles for Retailer Section */
+        @media (max-width: 768px) {
+            div[style*="grid-template-columns: 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+            
+            div[style*="grid-template-columns: 1fr auto"] {
+                grid-template-columns: 1fr !important;
+                gap: 10px !important;
+            }
+            
+            .retailer-item {
+                padding: 15px !important;
+            }
+            
+            /* Mobile map controls */
+            div[style*="flex-wrap: wrap"] {
+                flex-direction: column !important;
+                gap: 8px !important;
+            }
+            
+            div[style*="flex-wrap: wrap"] button,
+            div[style*="flex-wrap: wrap"] a {
+                width: 100% !important;
+                text-align: center !important;
+                margin: 0 !important;
+            }
+        }
+        
+        /* Button hover effects */
+        button[id$="-btn"]:hover {
+            box-shadow: 0 6px 20px rgba(0,102,204,0.4) !important;
+        }
+        
+        button[id="find-nearest-btn"]:hover {
+            box-shadow: 0 6px 20px rgba(40,167,69,0.4) !important;
+        }
+        
+        .collection-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+        </style>
+        
+        <!-- 3D Services Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 40px 20px; max-width: 1200px; margin: 0 auto;">
+            <div class="collection-card" style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); border-radius: 15px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.15); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                <a href="javascript:void(0);" style="text-decoration: none; color: inherit;" onclick="openContactModalWithTracking('Homepage', 'Corporate Services Card', 'I am interested in Corporate Services. Please provide more information about your corporate jewelry solutions.');">
+                    <div style="padding: 30px; text-align: center;">
+                        <div style="font-size: 3em; margin-bottom: 15px; color: #0066CC;">🏢</div>
+                        <h3 style="color: #333; margin-bottom: 15px; font-size: 1.5em;">Corporate Service</h3>
+                        <p style="color: #666; line-height: 1.6;">Professional corporate jewelry solutions for businesses, institutions, and organizations. Custom designs that represent your brand with excellence.</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="collection-card" style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); border-radius: 15px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.15); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                <a href="javascript:void(0);" style="text-decoration: none; color: inherit;" onclick="openContactModalWithTracking('Homepage', 'Custom Engagement Card', 'I am interested in Custom Engagement rings. Please help me create the perfect engagement ring for my special someone.');">
+                    <div style="padding: 30px; text-align: center;">
+                        <div style="font-size: 3em; margin-bottom: 15px; color: #DC143C;">💎</div>
+                        <h3 style="color: #333; margin-bottom: 15px; font-size: 1.5em;">Custom Engagement</h3>
+                        <p style="color: #666; line-height: 1.6;">Create the perfect engagement ring with our expert designers. From concept to completion, we'll help you design a ring as unique as your love story.</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="collection-card" style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); border-radius: 15px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.15); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                <a href="javascript:void(0);" style="text-decoration: none; color: inherit;" onclick="openContactModalWithTracking('Homepage', 'Special Request Card', 'I have a special request for custom jewelry. Please contact me to discuss my unique design requirements.');">
+                    <div style="padding: 30px; text-align: center;">
+                        <div style="font-size: 3em; margin-bottom: 15px; color: #FFD700;">⭐</div>
+                        <h3 style="color: #333; margin-bottom: 15px; font-size: 1.5em;">Special Request</h3>
+                        <p style="color: #666; line-height: 1.6;">Have something unique in mind? Our master craftsmen can bring any vision to life. From restoration to completely custom pieces, we handle special requests with care.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Preload Progress Indicator - Bottom Left -->
+    <div id="preload-indicator" style="position: fixed; bottom: 20px; left: 20px; z-index: 999; background: rgba(0,0,0,0.8); color: white; padding: 10px 15px; border-radius: 8px; font-size: 12px; backdrop-filter: blur(10px); box-shadow: 0 4px 15px rgba(0,0,0,0.3); max-width: 250px;">
+        <div style="margin-bottom: 5px; font-weight: bold;">Loading Images...</div>
+        <div class="progress-container" style="width: 200px; height: 4px; background: rgba(255,255,255,0.3); border-radius: 2px; overflow: hidden;">
+            <div id="preload-progress" style="height: 100%; background: linear-gradient(90deg, #FFD700, #FFA500); width: 0%; transition: width 0.3s ease;"></div>
+        </div>
+        <div id="preload-status" style="margin-top: 5px; font-size: 10px; color: rgba(255,255,255,0.8);">Preparing gallery images...</div>
+    </div>
+    
+    <!-- Footer -->
+    <?php 
+    include 'footer.php'; 
+    renderFooter('home');
+    ?>
+
+    <!-- Search Modal JavaScript -->
+    <script src="js/search_modal.js"></script>
+
+    <!-- Include ProductModal System for Product Search -->
+    <?php
+    require_once 'classes/ProductModal.php';
+    ProductModal::renderModalContainer();
+    ?>
+</body>
+</html>

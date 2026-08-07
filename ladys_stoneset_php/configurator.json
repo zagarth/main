@@ -1,0 +1,346 @@
+{
+  "version": "1.0",
+  "last_updated": "2025-12-03",
+  "collection": "ladys_stoneset",
+  "data": {
+    "name": "Lady's Stoneset Jewelry",
+    "base_price": 680,
+    "currency": "CAD",
+    "options": {
+      "metal_type": {
+        "label": "Metal Type",
+        "required": true,
+        "type": "single_select",
+        "default": "14k_gold",
+        "help_text": "Premium metals for fine jewelry",
+        "options": [
+          {
+            "id": "sterling_silver",
+            "name": "Sterling Silver",
+            "description": "92.5% pure silver",
+            "price_modifier": -200
+          },
+          {
+            "id": "10k_gold",
+            "name": "10K Gold",
+            "description": "41.7% pure gold",
+            "price_modifier": 0
+          },
+          {
+            "id": "14k_gold",
+            "name": "14K Gold",
+            "description": "58.5% pure gold - premium choice",
+            "price_modifier": 200
+          },
+          {
+            "id": "18k_gold",
+            "name": "18K Gold",
+            "description": "75% pure gold - luxury option",
+            "price_modifier": 450
+          },
+          {
+            "id": "platinum",
+            "name": "Platinum",
+            "description": "95% pure platinum - ultimate luxury",
+            "price_modifier": 800
+          }
+        ]
+      },
+      "metal_color": {
+        "label": "Metal Color",
+        "required": true,
+        "type": "single_select",
+        "default": "yellow",
+        "visible_when": {
+          "metal_type": ["10k_gold", "14k_gold", "18k_gold"]
+        },
+        "options": [
+          {
+            "id": "yellow",
+            "name": "Yellow Gold",
+            "description": "Classic warm gold tone",
+            "price_modifier": 0
+          },
+          {
+            "id": "white",
+            "name": "White Gold",
+            "description": "Platinum-like appearance",
+            "price_modifier": 50
+          },
+          {
+            "id": "rose",
+            "name": "Rose Gold",
+            "description": "Romantic pink-gold tone",
+            "price_modifier": 40
+          }
+        ]
+      },
+      "stone_type": {
+        "label": "Stone Type",
+        "required": true,
+        "type": "single_select",
+        "default": "gemstones",
+        "help_text": "Type of precious stones",
+        "options": [
+          {
+            "id": "gemstones",
+            "name": "Precious Gemstones",
+            "description": "Natural gems - sapphire, ruby, emerald",
+            "price_modifier": 0
+          },
+          {
+            "id": "pearls",
+            "name": "Cultured Pearls",
+            "description": "Fine quality cultured pearls",
+            "price_modifier": -100
+          },
+          {
+            "id": "semi_precious",
+            "name": "Semi-Precious Stones",
+            "description": "Amethyst, citrine, topaz, etc.",
+            "price_modifier": -150
+          },
+          {
+            "id": "diamonds",
+            "name": "Diamonds",
+            "description": "Premium quality diamonds",
+            "price_modifier": 300
+          },
+          {
+            "id": "mixed_stones",
+            "name": "Mixed Stone Setting",
+            "description": "Combination of different stones",
+            "price_modifier": 120
+          }
+        ]
+      },
+      "stone_quality": {
+        "label": "Stone Quality",
+        "required": true,
+        "type": "single_select",
+        "default": "standard",
+        "help_text": "Quality grade of stones",
+        "visible_when": {
+          "stone_type": ["gemstones", "diamonds", "semi_precious"]
+        },
+        "options": [
+          {
+            "id": "standard",
+            "name": "Standard Quality",
+            "description": "Good quality natural stones",
+            "price_modifier": 0
+          },
+          {
+            "id": "premium",
+            "name": "Premium Quality",
+            "description": "High quality, excellent clarity",
+            "price_modifier": 180
+          },
+          {
+            "id": "heirloom",
+            "name": "Heirloom Quality",
+            "description": "Exceptional stones, investment grade",
+            "price_modifier": 400
+          }
+        ]
+      },
+      "pearl_type": {
+        "label": "Pearl Type",
+        "required": true,
+        "type": "single_select",
+        "default": "cultured_freshwater",
+        "visible_when": {
+          "stone_type": ["pearls"]
+        },
+        "options": [
+          {
+            "id": "cultured_freshwater",
+            "name": "Cultured Freshwater",
+            "description": "High quality freshwater pearls",
+            "price_modifier": 0
+          },
+          {
+            "id": "cultured_saltwater",
+            "name": "Cultured Saltwater",
+            "description": "Premium saltwater cultured pearls",
+            "price_modifier": 150
+          },
+          {
+            "id": "akoya",
+            "name": "Akoya Pearls",
+            "description": "Classic Japanese Akoya pearls",
+            "price_modifier": 250
+          },
+          {
+            "id": "south_sea",
+            "name": "South Sea Pearls",
+            "description": "Luxury large South Sea pearls",
+            "price_modifier": 500
+          }
+        ]
+      },
+      "jewelry_type": {
+        "label": "Jewelry Type",
+        "required": true,
+        "type": "single_select",
+        "default": "ring",
+        "help_text": "Type of jewelry piece",
+        "options": [
+          {
+            "id": "ring",
+            "name": "Ring",
+            "description": "Elegant stoneset ring",
+            "price_modifier": 0
+          },
+          {
+            "id": "earrings",
+            "name": "Earrings",
+            "description": "Matching stoneset earrings",
+            "price_modifier": 80
+          },
+          {
+            "id": "pendant",
+            "name": "Pendant/Necklace",
+            "description": "Stoneset pendant with chain",
+            "price_modifier": 120
+          },
+          {
+            "id": "bracelet",
+            "name": "Bracelet",
+            "description": "Stoneset tennis bracelet style",
+            "price_modifier": 200
+          },
+          {
+            "id": "set",
+            "name": "Matching Set",
+            "description": "Coordinated ring and earrings",
+            "price_modifier": 350
+          }
+        ]
+      },
+      "setting_style": {
+        "label": "Setting Style",
+        "required": true,
+        "type": "single_select",
+        "default": "prong",
+        "help_text": "How stones are secured",
+        "options": [
+          {
+            "id": "prong",
+            "name": "Prong Setting",
+            "description": "Classic prongs secure stones",
+            "price_modifier": 0
+          },
+          {
+            "id": "bezel",
+            "name": "Bezel Setting",
+            "description": "Metal rim surrounds stones",
+            "price_modifier": 25
+          },
+          {
+            "id": "channel",
+            "name": "Channel Setting",
+            "description": "Stones set in metal channel",
+            "price_modifier": 45
+          },
+          {
+            "id": "pave",
+            "name": "Pavé Setting",
+            "description": "Multiple small stones close together",
+            "price_modifier": 80
+          },
+          {
+            "id": "halo",
+            "name": "Halo Setting",
+            "description": "Central stone surrounded by smaller stones",
+            "price_modifier": 120
+          }
+        ]
+      },
+      "size": {
+        "label": "Ring Size",
+        "required": true,
+        "type": "single_select",
+        "default": "6.5",
+        "help_text": "Ring size (only for rings) - request free ring sizer if unsure",
+        "visible_when": {
+          "jewelry_type": ["ring"]
+        },
+        "options": [
+          {"id": "4", "name": "4", "price_modifier": 0},
+          {"id": "4.5", "name": "4.5", "price_modifier": 0},
+          {"id": "5", "name": "5", "price_modifier": 0},
+          {"id": "5.5", "name": "5.5", "price_modifier": 0},
+          {"id": "6", "name": "6", "price_modifier": 0},
+          {"id": "6.5", "name": "6.5", "price_modifier": 0},
+          {"id": "7", "name": "7", "price_modifier": 0},
+          {"id": "7.5", "name": "7.5", "price_modifier": 0},
+          {"id": "8", "name": "8", "price_modifier": 0},
+          {"id": "8.5", "name": "8.5", "price_modifier": 0},
+          {"id": "9", "name": "9", "price_modifier": 0},
+          {"id": "9.5", "name": "9.5", "price_modifier": 0},
+          {"id": "10", "name": "10", "price_modifier": 0}
+        ]
+      },
+      "engraving": {
+        "label": "Engraving",
+        "required": false,
+        "type": "single_select",
+        "default": "none",
+        "help_text": "Personal engraving options",
+        "options": [
+          {
+            "id": "none",
+            "name": "No Engraving",
+            "description": "Plain finish",
+            "price_modifier": 0
+          },
+          {
+            "id": "initials",
+            "name": "Initials",
+            "description": "Personal initials engraving",
+            "price_modifier": 45
+          },
+          {
+            "id": "date",
+            "name": "Special Date",
+            "description": "Anniversary or special date",
+            "price_modifier": 50
+          },
+          {
+            "id": "message",
+            "name": "Personal Message",
+            "description": "Short personal message",
+            "price_modifier": 75
+          }
+        ]
+      },
+      "finish": {
+        "label": "Surface Finish",
+        "required": true,
+        "type": "single_select",
+        "default": "high_polish",
+        "options": [
+          {
+            "id": "high_polish",
+            "name": "High Polish",
+            "description": "Brilliant mirror finish",
+            "price_modifier": 0
+          },
+          {
+            "id": "satin",
+            "name": "Satin Finish",
+            "description": "Elegant soft lustre",
+            "price_modifier": 30
+          },
+          {
+            "id": "florentine",
+            "name": "Florentine Finish",
+            "description": "Textured cross-hatch pattern",
+            "price_modifier": 40
+          }
+        ]
+      }
+    }
+  }
+}

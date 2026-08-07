@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug ProductModal</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Debug ProductModal Request</h1>
+    <button onclick="testProductRequest()">Test Product Request for ID 1898</button>
+    <div id="result"></div>
+
+    <script>
+    async function testProductRequest() {
+        try {
+            console.log('Testing product request...');
+            const response = await fetch('get_product_modal_data.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'product_id=1898'
+            });
+            
+            console.log('Response status:', response.status);
+            console.log('Response headers:', response.headers);
+            
+            const data = await response.json();
+            console.log('Response data:', data);
+            
+            document.getElementById('result').innerHTML = '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
+            
+        } catch (error) {
+            console.error('Error:', error);
+            document.getElementById('result').innerHTML = '<pre>Error: ' + error.message + '</pre>';
+        }
+    }
+    </script>
+</body>
+</html>

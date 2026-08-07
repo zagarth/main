@@ -1,0 +1,395 @@
+{
+  "version": "1.0",
+  "last_updated": "2025-10-17",
+  "collection": "bands",
+  "name": "Wedding Bands",
+  "base_price": 450.00,
+  "currency": "CAD",
+  "options": {
+    "karat_level": {
+      "label": "Karat / Purity",
+      "required": true,
+      "type": "single_select",
+      "default": "950_silver",
+      "help_text": "Higher karat = more pure metal, softer & more expensive",
+      "options": [
+        {
+          "id": "950_silver",
+          "name": ".950 Silver",
+          "description": "95% pure silver",
+          "price_modifier": 0
+        },
+        {
+          "id": "10k",
+          "name": "10K Gold",
+          "description": "41.7% pure gold",
+          "price_modifier": 200
+        },
+        {
+          "id": "14k",
+          "name": "14K Gold",
+          "description": "58.5% pure gold",
+          "price_modifier": 400
+        },
+        {
+          "id": "18k",
+          "name": "18K Gold",
+          "description": "75% pure gold",
+          "price_modifier": 800
+        }
+      ]
+    },
+    "metal_color": {
+      "label": "Metal Color",
+      "required": true,
+      "type": "single_select",
+      "default": "yellow",
+      "visible_when": {
+        "karat_level": ["10k", "14k", "18k"]
+      },
+      "options": [
+        {
+          "id": "yellow",
+          "name": "Yellow",
+          "description": "Classic gold",
+          "price_modifier": 0
+        },
+        {
+          "id": "white",
+          "name": "White",
+          "description": "Platinum look",
+          "price_modifier": 20
+        },
+        {
+          "id": "rose",
+          "name": "Rose",
+          "description": "Pink gold",
+          "price_modifier": 10
+        }
+      ]
+    },
+    "width": {
+      "label": "Band Width",
+      "required": true,
+      "type": "single_select",
+      "default": "6mm",
+      "help_text": "Women typically 3-5mm, Men 6-8mm",
+      "options": [
+        {
+          "id": "3mm",
+          "name": "3mm",
+          "description": "Delicate & subtle",
+          "price_modifier": -50,
+          "image": "width_3mm.jpg"
+        },
+        {
+          "id": "4mm",
+          "name": "4mm",
+          "description": "Traditional feminine",
+          "price_modifier": -25,
+          "image": "width_4mm.jpg"
+        },
+        {
+          "id": "5mm",
+          "name": "5mm",
+          "description": "Classic unisex",
+          "price_modifier": 0,
+          "image": "width_5mm.jpg"
+        },
+        {
+          "id": "6mm",
+          "name": "6mm",
+          "description": "Standard masculine",
+          "price_modifier": 0,
+          "image": "width_6mm.jpg"
+        },
+        {
+          "id": "7mm",
+          "name": "7mm",
+          "description": "Bold statement",
+          "price_modifier": 50,
+          "image": "width_7mm.jpg"
+        },
+        {
+          "id": "8mm",
+          "name": "8mm",
+          "description": "Wide & substantial",
+          "price_modifier": 75,
+          "image": "width_8mm.jpg"
+        },
+        {
+          "id": "10mm",
+          "name": "10mm",
+          "description": "Extra wide",
+          "price_modifier": 125,
+          "image": "width_10mm.jpg"
+        }
+      ]
+    },
+    "finish": {
+      "label": "Surface Finish",
+      "required": true,
+      "type": "single_select",
+      "default": "polished",
+      "options": [
+        {
+          "id": "polished",
+          "name": "High Polish",
+          "description": "Mirror-like shine",
+          "price_modifier": 0,
+          "image": "finish_polished.jpg"
+        },
+        {
+          "id": "brushed",
+          "name": "Brushed/Matte",
+          "description": "Subtle texture, no glare",
+          "price_modifier": 35,
+          "image": "finish_brushed.jpg"
+        },
+        {
+          "id": "satin",
+          "name": "Satin",
+          "description": "Soft lustrous finish",
+          "price_modifier": 30,
+          "image": "finish_satin.jpg"
+        },
+        {
+          "id": "hammered",
+          "name": "Hammered",
+          "description": "Artisan hand-textured",
+          "price_modifier": 85,
+          "image": "finish_hammered.jpg"
+        }
+      ]
+    },
+    "profile": {
+      "label": "Band Profile",
+      "required": true,
+      "type": "single_select",
+      "default": "comfort_fit",
+      "help_text": "Interior shape affects comfort",
+      "options": [
+        {
+          "id": "comfort_fit",
+          "name": "Comfort Fit",
+          "description": "Rounded interior for all-day wear",
+          "price_modifier": 0
+        },
+        {
+          "id": "flat_fit",
+          "name": "Flat Fit",
+          "description": "Traditional flat interior",
+          "price_modifier": -25
+        },
+        {
+          "id": "euro_fit",
+          "name": "European Fit",
+          "description": "Slightly curved for premium comfort",
+          "price_modifier": 35
+        }
+      ]
+    },
+    "size": {
+      "label": "Ring Size",
+      "required": true,
+      "type": "single_select",
+      "default": "9",
+      "help_text": "Auto-sized based on gender (Ladies: 6.5, Mens: 10). Not sure? Request a free ring sizer.",
+      "options": [
+        {"id": "2", "name": "2", "price_modifier": 0},
+        {"id": "2.5", "name": "2.5", "price_modifier": 0},
+        {"id": "3", "name": "3", "price_modifier": 0},
+        {"id": "3.5", "name": "3.5", "price_modifier": 0},
+        {"id": "4", "name": "4", "price_modifier": 0},
+        {"id": "4.5", "name": "4.5", "price_modifier": 0},
+        {"id": "5", "name": "5", "price_modifier": 0},
+        {"id": "5.5", "name": "5.5", "price_modifier": 0},
+        {"id": "6", "name": "6", "price_modifier": 0},
+        {"id": "6.5", "name": "6.5", "price_modifier": 0},
+        {"id": "7", "name": "7", "price_modifier": 0},
+        {"id": "7.5", "name": "7.5", "price_modifier": 0},
+        {"id": "8", "name": "8", "price_modifier": 0},
+        {"id": "8.5", "name": "8.5", "price_modifier": 0},
+        {"id": "9", "name": "9", "price_modifier": 0},
+        {"id": "9.5", "name": "9.5", "price_modifier": 0},
+        {"id": "10", "name": "10", "price_modifier": 0},
+        {"id": "10.5", "name": "10.5", "price_modifier": 0},
+        {"id": "11", "name": "11", "price_modifier": 0},
+        {"id": "11.5", "name": "11.5", "price_modifier": 0},
+        {"id": "12", "name": "12", "price_modifier": 0},
+        {"id": "12.5", "name": "12.5", "price_modifier": 0},
+        {"id": "13", "name": "13", "price_modifier": 0},
+        {"id": "13.5", "name": "13.5", "price_modifier": 0},
+        {"id": "14", "name": "14", "price_modifier": 0},
+        {"id": "14.5", "name": "14.5", "price_modifier": 0},
+        {"id": "15", "name": "15", "price_modifier": 0},
+        {"id": "15.5", "name": "15.5", "price_modifier": 0},
+        {"id": "16", "name": "16", "price_modifier": 0}
+      ]
+    },
+    "engraving": {
+      "label": "Engraving",
+      "required": false,
+      "type": "text_input",
+      "price_modifier": 45,
+      "max_characters": 30,
+      "help_text": "Up to 30 characters. Names, dates, or messages.",
+      "font_options": [
+        {
+          "id": "script",
+          "name": "Script",
+          "description": "Elegant cursive",
+          "image": "font_script.jpg"
+        },
+        {
+          "id": "block",
+          "name": "Block",
+          "description": "Modern sans-serif",
+          "image": "font_block.jpg"
+        },
+        {
+          "id": "serif",
+          "name": "Classic Serif",
+          "description": "Traditional roman",
+          "image": "font_serif.jpg"
+        }
+      ]
+    },
+    "gift_packaging": {
+      "label": "Gift Packaging",
+      "required": false,
+      "type": "single_select",
+      "default": "standard",
+      "options": [
+        {
+          "id": "standard",
+          "name": "Standard Box",
+          "description": "Classic ring box",
+          "price_modifier": 0,
+          "image": "box_standard.jpg"
+        },
+        {
+          "id": "premium",
+          "name": "Premium Wood Box",
+          "description": "Handcrafted walnut box",
+          "price_modifier": 35,
+          "image": "box_premium.jpg"
+        },
+        {
+          "id": "luxury",
+          "name": "Luxury Display Case",
+          "description": "Leather presentation case",
+          "price_modifier": 85,
+          "image": "box_luxury.jpg"
+        }
+      ]
+    },
+    "stones": {
+      "label": "Stone Accents",
+      "required": false,
+      "type": "single_select",
+      "help_text": "Add gemstone accents to your band",
+      "options": [
+        {
+          "id": "none",
+          "name": "No Stones",
+          "price_modifier": 0
+        },
+        {
+          "id": "single_diamond",
+          "name": "Single Diamond Accent",
+          "description": "0.05ct round brilliant",
+          "price_modifier": 150,
+          "image": "stone_single_diamond.jpg"
+        },
+        {
+          "id": "three_diamonds",
+          "name": "Three Diamond Accents",
+          "description": "0.15ct total weight",
+          "price_modifier": 350,
+          "image": "stone_three_diamonds.jpg"
+        },
+        {
+          "id": "channel_set",
+          "name": "Channel-Set Diamonds",
+          "description": "Full or half eternity",
+          "price_modifier": 650,
+          "image": "stone_channel.jpg"
+        },
+        {
+          "id": "birthstone",
+          "name": "Birthstone Accent",
+          "description": "Choice of gemstone",
+          "price_modifier": 120,
+          "image": "stone_birthstone.jpg",
+          "sub_options": {
+            "label": "Select Birthstone",
+            "choices": [
+              {"id": "garnet", "name": "Garnet (January)"},
+              {"id": "amethyst", "name": "Amethyst (February)"},
+              {"id": "aquamarine", "name": "Aquamarine (March)"},
+              {"id": "diamond", "name": "Diamond (April)", "price_modifier": 30},
+              {"id": "emerald", "name": "Emerald (May)", "price_modifier": 50},
+              {"id": "pearl", "name": "Pearl (June)"},
+              {"id": "ruby", "name": "Ruby (July)", "price_modifier": 40},
+              {"id": "peridot", "name": "Peridot (August)"},
+              {"id": "sapphire", "name": "Sapphire (September)", "price_modifier": 45},
+              {"id": "opal", "name": "Opal (October)"},
+              {"id": "citrine", "name": "Citrine (November)"},
+              {"id": "turquoise", "name": "Turquoise (December)"}
+            ]
+          }
+        }
+      ]
+    },
+    "matching_set": {
+      "label": "Matching Set",
+      "required": false,
+      "type": "checkbox",
+      "price_modifier": 0,
+      "discount_percentage": 15,
+      "help_text": "Order matching his & hers rings and save 15%",
+      "dynamic_label": true,
+      "match_logic": "remove_last_letter"
+    }
+  },
+  "production_time": {
+    "standard": {
+      "label": "Standard Production",
+      "weeks": 4,
+      "price_modifier": 0
+    },
+    "rush": {
+      "label": "Rush Production (2 weeks)",
+      "weeks": 2,
+      "price_modifier": 200
+    }
+  },
+  "warranty": {
+    "included": "Lifetime warranty against manufacturing defects",
+    "details": "Includes one free resizing within first year"
+  },
+  "ui_config": {
+    "color_scheme": {
+      "primary": "#2c3e50",
+      "secondary": "#3498db",
+      "accent": "#e74c3c",
+      "success": "#27ae60",
+      "background": "#ecf0f1",
+      "text": "#2c3e50"
+    },
+    "animations": {
+      "option_select": "fadeIn 0.3s ease",
+      "price_update": "pulse 0.5s ease"
+    },
+    "mobile_breakpoint": "768px",
+    "bands_specific": {
+      "show_width_comparison": true,
+      "width_visual_guides": true,
+      "default_gender_sizing": {
+        "ladies": "6.5",
+        "mens": "10"
+      }
+    }
+  }
+}
