@@ -79,3 +79,4 @@ problematic_pdf_backups_*/
 
 # Login rate limiting
 admin/login_attempts.json
+*.zip
