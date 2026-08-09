@@ -52,28 +52,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $step === 'change' && $isLoggedIn) 
             throw new Exception('Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character');
         }
         
-        // Generate new password hash using the same method as the auth system
         $new_password_hash = generatePasswordHash($new_password);
-        
-        // Update the .env file with new password
-        $env_file = __DIR__ . '/.env';
-        $env_content = file_get_contents($env_file);
-        $env_content = preg_replace('/^ADMIN_PASSWORD_HASH=.*$/m', 'ADMIN_PASSWORD_HASH=' . $new_password_hash, $env_content);
-        if (!file_put_contents($env_file, $env_content)) {
-            throw new Exception('Failed to update password file');
+
+        // Update password in database (authoritative source for all users)
+        $pdo = getAdminConnection();
+        $stmt = $pdo->prepare('UPDATE users SET password_hash = :hash WHERE username = :username AND role = "admin"');
+        $stmt->execute([':hash' => $new_password_hash, ':username' => $currentUserName]);
+        if ($stmt->rowCount() === 0) {
+            throw new Exception('Failed to update password — user not found in database');
         }
-        
-        // Clear opcache to ensure new password is loaded
-        if (function_exists('opcache_reset')) {
-            opcache_reset();
-        }
-        
-        // Force reload the environment to ensure new password is active
-        unset($_ENV['ADMIN_PASSWORD_HASH']);
-        loadEnv(__DIR__ . '/.env');
-        
+
         // Verify the new password works immediately
-        if (!password_verify($new_password, $_ENV['ADMIN_PASSWORD_HASH'])) {
+        if (!password_verify($new_password, $new_password_hash)) {
             throw new Exception('Password update verification failed - please try again');
         }
         

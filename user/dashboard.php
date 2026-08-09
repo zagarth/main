@@ -104,6 +104,41 @@ if (isset($_POST['logout'])) {
             background: white;
             color: #667eea;
         }
+
+        /* Password change modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.55);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-overlay.active { display: flex; }
+        .modal-box {
+            background: white;
+            border-radius: 12px;
+            padding: 36px;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+        }
+        .modal-box h2 { color: #2c3e50; margin-bottom: 8px; font-size: 1.3rem; }
+        .modal-box p  { color: #7f8c8d; margin-bottom: 24px; font-size: 0.95rem; }
+        .modal-box input {
+            width: 100%; padding: 10px 14px; margin-bottom: 14px;
+            border: 1px solid #ddd; border-radius: 6px; font-size: 1rem; box-sizing: border-box;
+        }
+        .modal-box input:focus { outline: none; border-color: #667eea; }
+        .modal-btn {
+            width: 100%; padding: 11px; background: #667eea; color: white;
+            border: none; border-radius: 6px; font-size: 1rem; cursor: pointer; font-weight: 600;
+        }
+        .modal-btn:hover { background: #5a67d8; }
+        .modal-error { color: #c0392b; font-size: 0.9rem; margin-bottom: 10px; min-height: 1.2em; }
+        .modal-skip { display: block; text-align: center; margin-top: 12px; color: #95a5a6; font-size: 0.88rem; cursor: pointer; }
+        .modal-skip:hover { color: #7f8c8d; }
         
         .container {
             max-width: 1200px;
@@ -287,6 +322,7 @@ if (isset($_POST['logout'])) {
             <div style="display: flex; align-items: center; gap: 12px;">
                 <span id="sessionCountdown" style="font-size: 14px; color: rgba(255,255,255,0.95); background: rgba(255,255,255,0.15); padding: 7px 12px; border-radius: 20px; min-width: 54px; text-align: center;">60:00</span>
                 <a href="/" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 14px; border: 1px solid rgba(255,255,255,0.4); padding: 7px 16px; border-radius: 20px; transition: background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.background='transparent'">← Home</a>
+                <a href="#" onclick="document.getElementById('pwModal').classList.add('active'); return false;" style="color: rgba(255,255,255,0.85); text-decoration: none; font-size: 14px; border: 1px solid rgba(255,255,255,0.4); padding: 7px 16px; border-radius: 20px;">🔑 Change Password</a>
                 <form method="POST" style="display: inline;">
                     <button type="submit" name="logout" class="logout-btn">Logout</button>
                 </form>
@@ -418,7 +454,7 @@ if (isset($_POST['logout'])) {
                                         <?php if (($order['source'] ?? 'current') === 'legacy'): ?>
                                             <span class="status status-completed" style="background:#e0f2fe;color:#0369a1;">Legacy</span>
                                         <?php endif; ?>
-                                        <button type="button" class="invoice-btn" data-order-id="<?php echo (int)$order['order_id']; ?>">Reprint</button>
+                                        <button type="button" class="invoice-btn" data-order-id="<?php echo (int)$order['order_id']; ?>" data-source="<?php echo htmlspecialchars($order['source'] ?? 'current'); ?>" data-order-number="<?php echo htmlspecialchars($order['order_number'] ?? ''); ?>">Reprint</button>
                                     </div>
                                 </td>
                             </tr>
@@ -429,6 +465,23 @@ if (isset($_POST['logout'])) {
             <?php endif; ?>
         </div>
     </div>
+    <div id="pwModal" class="modal-overlay<?php echo ($user['force_password_change'] ?? 0) ? ' active' : ''; ?>">
+        <div class="modal-box">
+            <h2>🔑 <?php echo ($user['force_password_change'] ?? 0) ? 'Password Change Required' : 'Change Password'; ?></h2>
+            <p><?php echo ($user['force_password_change'] ?? 0) ? 'Your password has been reset. Please choose a new password to continue.' : 'Enter your current and new password below.'; ?></p>
+            <div id="pwError" class="modal-error"></div>
+            <form id="pwForm">
+                <input type="password" id="pwCurrent" placeholder="Current password" autocomplete="current-password" required>
+                <input type="password" id="pwNew" placeholder="New password (min 8 characters)" autocomplete="new-password" required minlength="8">
+                <input type="password" id="pwConfirm" placeholder="Confirm new password" autocomplete="new-password" required>
+                <button type="submit" class="modal-btn">Update Password</button>
+            </form>
+            <?php if (!($user['force_password_change'] ?? 0)): ?>
+            <span class="modal-skip" onclick="document.getElementById('pwModal').classList.remove('active')">Cancel</span>
+            <?php endif; ?>
+        </div>
+    </div>
+
     <script>
         const sessionTimeoutSeconds = 3600;
         let sessionTimeRemaining = sessionTimeoutSeconds;
@@ -466,6 +519,8 @@ if (isset($_POST['logout'])) {
 
             event.preventDefault();
             const orderId = button.getAttribute('data-order-id');
+            const source = button.getAttribute('data-source') || 'current';
+            const orderNumber = button.getAttribute('data-order-number') || '';
             const statusEl = document.getElementById('invoiceStatus');
             if (statusEl) {
                 statusEl.textContent = 'Opening invoice preview...';
@@ -473,7 +528,7 @@ if (isset($_POST['logout'])) {
 
             const token = Math.random().toString(36).slice(2) + Date.now().toString(36);
             window.__pendingInvoiceCleanup = { orderId, token };
-            window.open('reprint_invoice.php?order_id=' + encodeURIComponent(orderId) + '&token=' + encodeURIComponent(token), '_blank');
+            window.open('reprint_invoice.php?order_id=' + encodeURIComponent(orderId) + '&token=' + encodeURIComponent(token) + '&source=' + encodeURIComponent(source) + '&order_number=' + encodeURIComponent(orderNumber), '_blank');
         });
 
         window.addEventListener('beforeunload', function() {
@@ -485,6 +540,40 @@ if (isset($_POST['logout'])) {
             const url = 'reprint_invoice.php?cleanup=1&order_id=' + encodeURIComponent(cleanup.orderId) + '&token=' + encodeURIComponent(cleanup.token);
             if (navigator.sendBeacon) {
                 navigator.sendBeacon(url);
+            }
+        });
+
+        <?php if ($user['force_password_change'] ?? 0): ?>
+        // Block Escape and clicks outside modal until password is changed
+        const forceChange = true;
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && forceChange) e.stopImmediatePropagation();
+        }, true);
+        document.getElementById('pwModal').addEventListener('click', function(e) {
+            if (e.target === this && forceChange) e.stopPropagation();
+        });
+        <?php endif; ?>
+
+        document.getElementById('pwForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const errEl = document.getElementById('pwError');
+            errEl.textContent = '';
+            const current = document.getElementById('pwCurrent').value;
+            const next    = document.getElementById('pwNew').value;
+            const confirm = document.getElementById('pwConfirm').value;
+            if (next !== confirm) { errEl.textContent = 'New passwords do not match.'; return; }
+            if (next.length < 8)  { errEl.textContent = 'Password must be at least 8 characters.'; return; }
+            const res = await fetch('change_password.php', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({current_password: current, new_password: next})
+            });
+            const data = await res.json();
+            if (data.success) {
+                document.getElementById('pwModal').classList.remove('active');
+                document.getElementById('pwError').textContent = '';
+            } else {
+                errEl.textContent = data.error || 'Password update failed.';
             }
         });
     </script>

@@ -26,6 +26,8 @@ if (isset($_GET['cleanup'])) {
 }
 
 $orderId = isset($_GET['order_id']) ? (int)$_GET['order_id'] : 0;
+$source = trim((string)($_GET['source'] ?? 'current'));
+$orderNumber = trim((string)($_GET['order_number'] ?? ''));
 if ($orderId <= 0) {
     http_response_code(400);
     exit;
@@ -40,7 +42,61 @@ if (!$user) {
 
 $clientId = (int)($user['client_id'] ?? 0);
 $pdo = getDBConnection();
-$stmt = $pdo->prepare("
+
+// Legacy orders come from sales_history grouped by invoice_number
+if ($source === 'legacy') {
+    // Get invoice_number from the sale_id (order_id is MIN(sale_id) from getClientOrders)
+    $invStmt = $pdo->prepare("SELECT invoice_number, customer_code FROM sales_history WHERE sale_id = :sid AND (client_id = :cid OR customer_code = :code) LIMIT 1");
+    $invStmt->execute([':sid' => $orderId, ':cid' => $clientId, ':code' => $user['customer_code'] ?? '']);
+    $invRow = $invStmt->fetch(PDO::FETCH_ASSOC);
+
+    if (!$invRow && $orderNumber !== '') {
+        // Fallback: look up by invoice_number directly
+        $invStmt2 = $pdo->prepare("SELECT invoice_number, customer_code FROM sales_history WHERE invoice_number = :inv AND (client_id = :cid OR customer_code = :code) LIMIT 1");
+        $invStmt2->execute([':inv' => $orderNumber, ':cid' => $clientId, ':code' => $user['customer_code'] ?? '']);
+        $invRow = $invStmt2->fetch(PDO::FETCH_ASSOC);
+    }
+
+    if (!$invRow) {
+        http_response_code(404);
+        exit;
+    }
+
+    $invoiceNumber = $invRow['invoice_number'];
+    $lineStmt = $pdo->prepare("SELECT description, category_code, amount, transaction_date, salesman_code FROM sales_history WHERE invoice_number = :inv AND (client_id = :cid OR customer_code = :code) ORDER BY sale_id");
+    $lineStmt->execute([':inv' => $invoiceNumber, ':cid' => $clientId, ':code' => $user['customer_code'] ?? '']);
+    $lines = $lineStmt->fetchAll(PDO::FETCH_ASSOC);
+
+    $items = array_map(fn($l) => [
+        'description' => $l['description'],
+        'sku'         => $l['category_code'],
+        'quantity'    => 1,
+        'price'       => (float)$l['amount'],
+        'subtotal'    => (float)$l['amount'],
+    ], $lines);
+
+    $subtotal = array_sum(array_column($items, 'subtotal'));
+    $province = trim((string)($user['province'] ?? ''));
+    $breakdown = calculateOrderBreakdownFromProvince($subtotal, $province, 0);
+
+    $payload = [
+        'customerName'     => $user['business_name'] ?? '',
+        'customerPhone'    => $user['phone'] ?? '',
+        'customerLocation' => implode(', ', array_filter([$user['address'] ?? '', $user['city'] ?? '', $province, $user['postal_code'] ?? '', $user['country'] ?? ''])),
+        'accountNumber'    => $user['customer_code'] ?? $invRow['customer_code'] ?? 'N/A',
+        'salesRep'         => $lines[0]['salesman_code'] ?? 'WEB',
+        'orderNumber'      => $invoiceNumber,
+        'orderDate'        => $lines[0]['transaction_date'] ?? date('Y-m-d'),
+        'terms'            => $user['terms'] ?? 'NET30',
+        'items'            => $items,
+        'subtotal'         => $breakdown['subtotal'],
+        'discount'         => 0,
+        'tax'              => $breakdown['tax_amount'],
+        'total'            => $breakdown['total_amount'],
+        'outputFilename'   => 'legacy_' . $invoiceNumber . '_' . (isset($_GET['token']) ? trim((string)$_GET['token']) : 'reprint'),
+    ];
+} else {
+    $stmt = $pdo->prepare("
     SELECT *
     FROM orders
     WHERE order_id = :order_id
@@ -94,6 +150,7 @@ $payload = [
     'total' => $breakdown['total_amount'],
     'outputFilename' => 'order_' . $orderId . '_' . (isset($_GET['token']) ? trim((string)$_GET['token']) : 'reprint'),
 ];
+} // end else (current order)
 
 $generator = __DIR__ . '/../cadman-database/generate_invoice.php';
 $cmd = 'php ' . escapeshellarg($generator);

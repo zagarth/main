@@ -129,7 +129,7 @@ function getUserById($user_id) {
     $pdo = getViewerConnection();  // Read-only
     $stmt = $pdo->prepare("
         SELECT u.user_id, u.client_id, u.username, u.email, u.role, u.status, 
-               u.created_at, u.last_login, c.* 
+               u.created_at, u.last_login, u.force_password_change, c.* 
         FROM users u
         LEFT JOIN clients c ON u.client_id = c.client_id
         WHERE u.user_id = :user_id
